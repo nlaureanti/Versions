@@ -1,0 +1,32 @@
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/opt/ohpc/admin/lmod/lmod/init/bash)
+Shell debugging restarted
+/bin/rm -f  *.i *.lst *.o *.mod
+echo "Compiling MODULE_F77KINDS.f90"
+Compiling MODULE_F77KINDS.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ MODULE_F77KINDS.f90
+echo "Compiling MODULE_PARMCONF.f90"
+Compiling MODULE_PARMCONF.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ MODULE_PARMCONF.f90
+echo "Compiling MODULE_CONSTANTS.f90"
+Compiling MODULE_CONSTANTS.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ MODULE_CONSTANTS.f90
+echo "Compiling MODULE_DIAGNOSTIC.f90"
+Compiling MODULE_DIAGNOSTIC.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ MODULE_DIAGNOSTIC.f90
+echo "Compiling SST_FILL.f90"
+Compiling SST_FILL.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ SST_FILL.f90
+echo "Compiling Geographic.f90"
+Compiling Geographic.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ Geographic.f90
+echo "Compiling READ_SST.f90"
+Compiling READ_SST.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ READ_SST.f90
+echo "Compiling CED_IJ.f90"
+Compiling CED_IJ.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ CED_IJ.f90
+echo "Compiling SSTG2EGRD.f90"
+Compiling SSTG2EGRD.f90
+mpif90  -c -O0 -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -I./ SSTG2EGRD.f90
+mpif90    -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -o ../../../exe/sst.x MODULE_F77KINDS.o MODULE_PARMCONF.o MODULE_CONSTANTS.o MODULE_DIAGNOSTIC.o SST_FILL.o Geographic.o READ_SST.o CED_IJ.o SSTG2EGRD.o   
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/install

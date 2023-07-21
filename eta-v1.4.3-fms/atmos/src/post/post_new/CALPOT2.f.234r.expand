@@ -1,0 +1,2785 @@
+
+;; Function calpot2 (calpot2_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+calpot2 (real(kind=4)[0:D.3892] * restrict p1d, real(kind=4)[0:D.3886] * restrict t1d, real(kind=4)[0:D.3889] * restrict theta, integer(kind=4) & restrict im, integer(kind=4) & restrict jm)
+{
+  real(kind=4) D.3885;
+  logical(kind=4) D.3883;
+  integer(kind=4) D.3880;
+  logical(kind=4) D.3879;
+  integer(kind=4) D.3876;
+  integer(kind=4) D.3875;
+  sizetype D.3894;
+  bitsizetype D.3893;
+  integer(kind=8) D.3892;
+  sizetype D.3891;
+  bitsizetype D.3890;
+  integer(kind=8) D.3889;
+  sizetype D.3888;
+  bitsizetype D.3887;
+  integer(kind=8) D.3886;
+  integer(kind=8) size.14;
+  integer(kind=8) offset.13;
+  integer(kind=8) stride.12;
+  integer(kind=8) ubound.11;
+  integer(kind=8) ubound.10;
+  integer(kind=8) size.9;
+  integer(kind=8) offset.8;
+  integer(kind=8) stride.7;
+  integer(kind=8) ubound.6;
+  integer(kind=8) ubound.5;
+  integer(kind=8) size.4;
+  integer(kind=8) offset.3;
+  integer(kind=8) stride.2;
+  integer(kind=8) ubound.1;
+  integer(kind=8) ubound.0;
+  integer(kind=4) j;
+  integer(kind=4) i;
+  real(kind=4) fac;
+  static integer(kind=4) jend_2u [value-expr: parallel.jend_2u];
+  static integer(kind=4) jsta_2l [value-expr: parallel.jsta_2l];
+  static integer(kind=4) idsp[1024] [value-expr: parallel.idsp];
+  static integer(kind=4) icnt[1024] [value-expr: parallel.icnt];
+  static integer(kind=4) idn [value-expr: parallel.idn];
+  static integer(kind=4) iup [value-expr: parallel.iup];
+  static integer(kind=4) jend_m2 [value-expr: parallel.jend_m2];
+  static integer(kind=4) jsta_m2 [value-expr: parallel.jsta_m2];
+  static integer(kind=4) jend_m [value-expr: parallel.jend_m];
+  static integer(kind=4) jsta_m [value-expr: parallel.jsta_m];
+  static integer(kind=4) jend [value-expr: parallel.jend];
+  static integer(kind=4) jsta [value-expr: parallel.jsta];
+  static integer(kind=4) me [value-expr: parallel.me];
+  static integer(kind=4) num_procs [value-expr: parallel.num_procs];
+  static logical(kind=4) spline [value-expr: ctlblk.spline];
+  static integer(kind=4) nradl [value-expr: ctlblk.nradl];
+  static integer(kind=4) nrads [value-expr: ctlblk.nrads];
+  static integer(kind=4) nphs [value-expr: ctlblk.nphs];
+  static integer(kind=4) ncp [value-expr: ctlblk.ncp];
+  static integer(kind=4) nshde [value-expr: ctlblk.nshde];
+  static integer(kind=4) nboco [value-expr: ctlblk.nboco];
+  static integer(kind=4) idtad [value-expr: ctlblk.idtad];
+  static integer(kind=4) nprec [value-expr: ctlblk.nprec];
+  static integer(kind=4) nddamp [value-expr: ctlblk.nddamp];
+  static integer(kind=4) ntstm [value-expr: ctlblk.ntstm];
+  static integer(kind=4) ntsd [value-expr: ctlblk.ntsd];
+  static real(kind=4) dt [value-expr: ctlblk.dt];
+  static integer(kind=4) iout [value-expr: ctlblk.iout];
+  static integer(kind=4) list [value-expr: ctlblk.list];
+  static integer(kind=4) nbc [value-expr: ctlblk.nbc];
+  static integer(kind=4) nfcst [value-expr: ctlblk.nfcst];
+  static real(kind=4) restrt [value-expr: ctlblk.restrt];
+  static real(kind=4) first [value-expr: ctlblk.first];
+  static integer(kind=4) ihrst [value-expr: ctlblk.ihrst];
+  static integer(kind=4) idat[3] [value-expr: ctlblk.idat];
+  static real(kind=4) run [value-expr: ctlblk.run];
+  static real(kind=4) sigma [value-expr: ctlblk.sigma];
+  integer(kind=4) _1;
+  integer(kind=4) _2;
+  sizetype size.15_3;
+  bitsizetype _4;
+  sizetype size.16_5;
+  integer(kind=4) _6;
+  integer(kind=4) _7;
+  sizetype size.17_8;
+  bitsizetype _9;
+  sizetype size.18_10;
+  integer(kind=4) _11;
+  integer(kind=4) _12;
+  sizetype size.19_13;
+  bitsizetype _14;
+  sizetype size.20_15;
+  integer(kind=8) _16;
+  integer(kind=8) _17;
+  integer(kind=8) _18;
+  integer(kind=8) _19;
+  integer(kind=8) _20;
+  real(kind=4) _21;
+  real(kind=4) _22;
+  integer(kind=8) _23;
+  integer(kind=8) _24;
+  integer(kind=8) _25;
+  integer(kind=8) _26;
+  integer(kind=8) _27;
+  real(kind=4) _28;
+  real(kind=4) _29;
+  integer(kind=8) _30;
+  integer(kind=8) _31;
+  integer(kind=8) _32;
+  integer(kind=8) _33;
+  integer(kind=8) _34;
+  real(kind=4) _35;
+  integer(kind=8) _36;
+  integer(kind=8) _37;
+  integer(kind=8) _38;
+  integer(kind=8) _39;
+  integer(kind=8) _40;
+  real(kind=4) _41;
+  integer(kind=8) _42;
+  integer(kind=8) _43;
+  integer(kind=8) _44;
+  integer(kind=8) _45;
+  integer(kind=8) _46;
+  integer(kind=8) stride.2_55;
+  integer(kind=8) stride.2_56;
+  integer(kind=8) size.4_59;
+  integer(kind=8) size.4_60;
+  integer(kind=8) _61;
+  bitsizetype _62;
+  sizetype _63;
+  integer(kind=8) offset.3_64;
+  integer(kind=8) stride.12_66;
+  integer(kind=8) stride.12_67;
+  integer(kind=8) size.14_69;
+  integer(kind=8) size.14_70;
+  integer(kind=8) _71;
+  bitsizetype _72;
+  sizetype _73;
+  integer(kind=8) offset.13_74;
+  integer(kind=8) stride.7_76;
+  integer(kind=8) stride.7_77;
+  integer(kind=8) size.9_79;
+  integer(kind=8) size.9_80;
+  integer(kind=8) _81;
+  bitsizetype _82;
+  sizetype _83;
+  integer(kind=8) offset.8_84;
+  integer(kind=4) _85;
+  integer(kind=4) _86;
+  logical(kind=4) _88;
+  integer(kind=4) _89;
+  logical(kind=4) _91;
+  real(kind=4) _93;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = *im_53(D);
+  ubound.0_54 = (integer(kind=8)) _1;
+  stride.2_55 = ubound.0_54;
+  stride.2_56 = MAX_EXPR <stride.2_55, 0>;
+  _2 = *jm_57(D);
+  ubound.1_58 = (integer(kind=8)) _2;
+  size.4_59 = stride.2_56 * ubound.1_58;
+  size.4_60 = MAX_EXPR <size.4_59, 0>;
+  _61 = size.4_60 + -1;
+  size.15_3 = (sizetype) size.4_60;
+  _4 = (bitsizetype) size.15_3;
+  _62 = _4 * 32;
+  size.16_5 = (sizetype) size.4_60;
+  _63 = size.16_5 * 4;
+  offset.3_64 = ~stride.2_56;
+  _6 = *im_53(D);
+  ubound.10_65 = (integer(kind=8)) _6;
+  stride.12_66 = ubound.10_65;
+  stride.12_67 = MAX_EXPR <stride.12_66, 0>;
+  _7 = *jm_57(D);
+  ubound.11_68 = (integer(kind=8)) _7;
+  size.14_69 = stride.12_67 * ubound.11_68;
+  size.14_70 = MAX_EXPR <size.14_69, 0>;
+  _71 = size.14_70 + -1;
+  size.17_8 = (sizetype) size.14_70;
+  _9 = (bitsizetype) size.17_8;
+  _72 = _9 * 32;
+  size.18_10 = (sizetype) size.14_70;
+  _73 = size.18_10 * 4;
+  offset.13_74 = ~stride.12_67;
+  _11 = *im_53(D);
+  ubound.5_75 = (integer(kind=8)) _11;
+  stride.7_76 = ubound.5_75;
+  stride.7_77 = MAX_EXPR <stride.7_76, 0>;
+  _12 = *jm_57(D);
+  ubound.6_78 = (integer(kind=8)) _12;
+  size.9_79 = stride.7_77 * ubound.6_78;
+  size.9_80 = MAX_EXPR <size.9_79, 0>;
+  _81 = size.9_80 + -1;
+  size.19_13 = (sizetype) size.9_80;
+  _14 = (bitsizetype) size.19_13;
+  _82 = _14 * 32;
+  size.20_15 = (sizetype) size.9_80;
+  _83 = size.20_15 * 4;
+  offset.8_84 = ~stride.7_77;
+  _85 = parallel.jsta;
+  _86 = parallel.jend;
+  j_87 = _85;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                10
+  # j_48 = PHI <j_87(2), j_100(10)>
+  _88 = j_48 > _86;
+  if (_88 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       11
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _89 = *im_53(D);
+  i_90 = 1;
+;;    succ:       5
+
+;;   basic block 5, loop depth 2
+;;    pred:       4
+;;                9
+  # i_47 = PHI <i_90(4), i_99(9)>
+  _91 = i_47 > _89;
+  if (_91 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       10
+;;                6
+
+;;   basic block 6, loop depth 2
+;;    pred:       5
+  _16 = (integer(kind=8)) j_48;
+  _17 = stride.2_56 * _16;
+  _18 = offset.3_64 + _17;
+  _19 = (integer(kind=8)) i_47;
+  _20 = _18 + _19;
+  _21 = *p1d_92(D)[_20];
+  _22 = ABS_EXPR <_21>;
+  if (_22 > 1.0e+0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+;;    succ:       7
+;;                8
+
+;;   basic block 7, loop depth 2
+;;    pred:       6
+  _23 = (integer(kind=8)) j_48;
+  _24 = stride.2_56 * _23;
+  _25 = offset.3_64 + _24;
+  _26 = (integer(kind=8)) i_47;
+  _27 = _25 + _26;
+  _28 = *p1d_92(D)[_27];
+  _29 = 1.0e+5 / _28;
+  _93 = ((_29));
+  fac_94 = __builtin_powf (_93, 2.8589642047882080078125e-1);
+  _30 = (integer(kind=8)) j_48;
+  _31 = stride.7_77 * _30;
+  _32 = offset.8_84 + _31;
+  _33 = (integer(kind=8)) i_47;
+  _34 = _32 + _33;
+  _35 = *t1d_95(D)[_34];
+  _36 = (integer(kind=8)) j_48;
+  _37 = stride.12_67 * _36;
+  _38 = offset.13_74 + _37;
+  _39 = (integer(kind=8)) i_47;
+  _40 = _38 + _39;
+  _41 = fac_94 * _35;
+  *theta_96(D)[_40] = _41;
+  goto <bb 9>; [INV]
+;;    succ:       9
+
+;;   basic block 8, loop depth 2
+;;    pred:       6
+  _42 = (integer(kind=8)) j_48;
+  _43 = stride.12_67 * _42;
+  _44 = offset.13_74 + _43;
+  _45 = (integer(kind=8)) i_47;
+  _46 = _44 + _45;
+  *theta_96(D)[_46] = 0.0;
+;;    succ:       9
+
+;;   basic block 9, loop depth 2
+;;    pred:       7
+;;                8
+  i_99 = i_47 + 1;
+  goto <bb 5>; [INV]
+;;    succ:       5
+
+;;   basic block 10, loop depth 1
+;;    pred:       5
+  j_100 = j_48 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 11, loop depth 0
+;;    pred:       3
+;;    succ:       12
+
+;;   basic block 12, loop depth 0
+;;    pred:       11
+<L12>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (size.15_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (size.16_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (size.17_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (size.18_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (size.19_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (size.20_15 - 15 )
+Partition 16 (_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18 - 18 )
+Partition 19 (_19 - 19 )
+Partition 20 (_20 - 20 )
+Partition 21 (_21 - 21 )
+Partition 22 (_22 - 22 )
+Partition 23 (_23 - 23 )
+Partition 24 (_24 - 24 )
+Partition 25 (_25 - 25 )
+Partition 26 (_26 - 26 )
+Partition 27 (_27 - 27 )
+Partition 28 (_28 - 28 )
+Partition 29 (_29 - 29 )
+Partition 30 (_30 - 30 )
+Partition 31 (_31 - 31 )
+Partition 32 (_32 - 32 )
+Partition 33 (_33 - 33 )
+Partition 34 (_34 - 34 )
+Partition 35 (_35 - 35 )
+Partition 36 (_36 - 36 )
+Partition 37 (_37 - 37 )
+Partition 38 (_38 - 38 )
+Partition 39 (_39 - 39 )
+Partition 40 (_40 - 40 )
+Partition 41 (_41 - 41 )
+Partition 42 (_42 - 42 )
+Partition 43 (_43 - 43 )
+Partition 44 (_44 - 44 )
+Partition 45 (_45 - 45 )
+Partition 46 (_46 - 46 )
+Partition 47 (i_47 - 47 )
+Partition 48 (j_48 - 48 )
+Partition 53 (im_53(D) - 53 )
+Partition 54 (ubound.0_54 - 54 )
+Partition 55 (stride.2_55 - 55 )
+Partition 56 (stride.2_56 - 56 )
+Partition 57 (jm_57(D) - 57 )
+Partition 58 (ubound.1_58 - 58 )
+Partition 59 (size.4_59 - 59 )
+Partition 60 (size.4_60 - 60 )
+Partition 61 (_61 - 61 )
+Partition 62 (_62 - 62 )
+Partition 63 (_63 - 63 )
+Partition 64 (offset.3_64 - 64 )
+Partition 65 (ubound.10_65 - 65 )
+Partition 66 (stride.12_66 - 66 )
+Partition 67 (stride.12_67 - 67 )
+Partition 68 (ubound.11_68 - 68 )
+Partition 69 (size.14_69 - 69 )
+Partition 70 (size.14_70 - 70 )
+Partition 71 (_71 - 71 )
+Partition 72 (_72 - 72 )
+Partition 73 (_73 - 73 )
+Partition 74 (offset.13_74 - 74 )
+Partition 75 (ubound.5_75 - 75 )
+Partition 76 (stride.7_76 - 76 )
+Partition 77 (stride.7_77 - 77 )
+Partition 78 (ubound.6_78 - 78 )
+Partition 79 (size.9_79 - 79 )
+Partition 80 (size.9_80 - 80 )
+Partition 81 (_81 - 81 )
+Partition 82 (_82 - 82 )
+Partition 83 (_83 - 83 )
+Partition 84 (offset.8_84 - 84 )
+Partition 85 (_85 - 85 )
+Partition 86 (_86 - 86 )
+Partition 87 (j_87 - 87 )
+Partition 88 (_88 - 88 )
+Partition 89 (_89 - 89 )
+Partition 90 (i_90 - 90 )
+Partition 91 (_91 - 91 )
+Partition 92 (p1d_92(D) - 92 )
+Partition 93 (_93 - 93 )
+Partition 94 (fac_94 - 94 )
+Partition 95 (t1d_95(D) - 95 )
+Partition 96 (theta_96(D) - 96 )
+Partition 99 (i_99 - 99 )
+Partition 100 (j_100 - 100 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (i_47 - 47 90 99 )
+Partition 1, base 1 (j_48 - 48 87 100 )
+Partition 2, base 2 (im_53(D) - 53 )
+Partition 3, base 3 (jm_57(D) - 57 )
+Partition 6, base 4 (p1d_92(D) - 92 )
+Partition 7, base 5 (t1d_95(D) - 95 )
+Partition 8, base 6 (theta_96(D) - 96 )
+
+
+Partition map 
+
+Partition 0 (i_47 - 47 )
+Partition 1 (j_48 - 48 )
+Partition 2 (im_53(D) - 53 )
+Partition 3 (jm_57(D) - 57 )
+Partition 4 (j_87 - 87 )
+Partition 5 (i_90 - 90 )
+Partition 6 (p1d_92(D) - 92 )
+Partition 7 (t1d_95(D) - 95 )
+Partition 8 (theta_96(D) - 96 )
+Partition 9 (i_99 - 99 )
+Partition 10 (j_100 - 100 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) j_48 <-> j_87
+(2147483646, 0) j_48 <-> j_100
+(2147483646, 0) i_47 <-> i_90
+(2147483646, 0) i_47 <-> i_99
+
+Partition map 
+
+Partition 0 (i_47 - 47 )
+Partition 1 (j_48 - 48 )
+Partition 2 (im_53(D) - 53 )
+Partition 3 (jm_57(D) - 57 )
+Partition 4 (j_87 - 87 )
+Partition 5 (i_90 - 90 )
+Partition 6 (p1d_92(D) - 92 )
+Partition 7 (t1d_95(D) - 95 )
+Partition 8 (theta_96(D) - 96 )
+Partition 9 (i_99 - 99 )
+Partition 10 (j_100 - 100 )
+
+Coalesce list: (48)j_48 & (87)j_87 [map: 1, 4] : Success -> 1
+Coalesce list: (48)j_48 & (100)j_100 [map: 1, 10] : Success -> 1
+Coalesce list: (47)i_47 & (90)i_90 [map: 0, 5] : Success -> 0
+Coalesce list: (47)i_47 & (99)i_99 [map: 0, 9] : Success -> 0
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (size.15_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (size.16_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (size.17_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (size.18_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (size.19_13 - 13 )
+Partition 13 (_14 - 14 )
+Partition 14 (size.20_15 - 15 )
+Partition 15 (_16 - 16 )
+Partition 16 (_17 - 17 )
+Partition 17 (_18 - 18 )
+Partition 18 (_19 - 19 )
+Partition 19 (_20 - 20 )
+Partition 20 (_21 - 21 )
+Partition 21 (_22 - 22 )
+Partition 22 (_23 - 23 )
+Partition 23 (_24 - 24 )
+Partition 24 (_25 - 25 )
+Partition 25 (_26 - 26 )
+Partition 26 (_27 - 27 )
+Partition 27 (_28 - 28 )
+Partition 28 (_29 - 29 )
+Partition 29 (_30 - 30 )
+Partition 30 (_31 - 31 )
+Partition 31 (_32 - 32 )
+Partition 32 (_33 - 33 )
+Partition 33 (_34 - 34 )
+Partition 34 (_35 - 35 )
+Partition 35 (_36 - 36 )
+Partition 36 (_37 - 37 )
+Partition 37 (_38 - 38 )
+Partition 38 (_39 - 39 )
+Partition 39 (_40 - 40 )
+Partition 40 (_41 - 41 )
+Partition 41 (_42 - 42 )
+Partition 42 (_43 - 43 )
+Partition 43 (_44 - 44 )
+Partition 44 (_45 - 45 )
+Partition 45 (_46 - 46 )
+Partition 46 (i_47 - 47 90 99 )
+Partition 47 (j_48 - 48 87 100 )
+Partition 48 (im_53(D) - 53 )
+Partition 49 (ubound.0_54 - 54 )
+Partition 50 (stride.2_55 - 55 )
+Partition 51 (stride.2_56 - 56 )
+Partition 52 (jm_57(D) - 57 )
+Partition 53 (ubound.1_58 - 58 )
+Partition 54 (size.4_59 - 59 )
+Partition 55 (size.4_60 - 60 )
+Partition 56 (_61 - 61 )
+Partition 57 (_62 - 62 )
+Partition 58 (_63 - 63 )
+Partition 59 (offset.3_64 - 64 )
+Partition 60 (ubound.10_65 - 65 )
+Partition 61 (stride.12_66 - 66 )
+Partition 62 (stride.12_67 - 67 )
+Partition 63 (ubound.11_68 - 68 )
+Partition 64 (size.14_69 - 69 )
+Partition 65 (size.14_70 - 70 )
+Partition 66 (_71 - 71 )
+Partition 67 (_72 - 72 )
+Partition 68 (_73 - 73 )
+Partition 69 (offset.13_74 - 74 )
+Partition 70 (ubound.5_75 - 75 )
+Partition 71 (stride.7_76 - 76 )
+Partition 72 (stride.7_77 - 77 )
+Partition 73 (ubound.6_78 - 78 )
+Partition 74 (size.9_79 - 79 )
+Partition 75 (size.9_80 - 80 )
+Partition 76 (_81 - 81 )
+Partition 77 (_82 - 82 )
+Partition 78 (_83 - 83 )
+Partition 79 (offset.8_84 - 84 )
+Partition 80 (_85 - 85 )
+Partition 81 (_86 - 86 )
+Partition 82 (_88 - 88 )
+Partition 83 (_89 - 89 )
+Partition 84 (_91 - 91 )
+Partition 85 (p1d_92(D) - 92 )
+Partition 86 (_93 - 93 )
+Partition 87 (fac_94 - 94 )
+Partition 88 (t1d_95(D) - 95 )
+Partition 89 (theta_96(D) - 96 )
+
+calpot2 (real(kind=4)[0:D.3892] * restrict p1d, real(kind=4)[0:D.3886] * restrict t1d, real(kind=4)[0:D.3889] * restrict theta, integer(kind=4) & restrict im, integer(kind=4) & restrict jm)
+{
+  real(kind=4) D.3885;
+  logical(kind=4) D.3883;
+  integer(kind=4) D.3880;
+  logical(kind=4) D.3879;
+  integer(kind=4) D.3876;
+  integer(kind=4) D.3875;
+  sizetype D.3894;
+  bitsizetype D.3893;
+  integer(kind=8) D.3892;
+  sizetype D.3891;
+  bitsizetype D.3890;
+  integer(kind=8) D.3889;
+  sizetype D.3888;
+  bitsizetype D.3887;
+  integer(kind=8) D.3886;
+  integer(kind=8) size.14;
+  integer(kind=8) offset.13;
+  integer(kind=8) stride.12;
+  integer(kind=8) ubound.11;
+  integer(kind=8) ubound.10;
+  integer(kind=8) size.9;
+  integer(kind=8) offset.8;
+  integer(kind=8) stride.7;
+  integer(kind=8) ubound.6;
+  integer(kind=8) ubound.5;
+  integer(kind=8) size.4;
+  integer(kind=8) offset.3;
+  integer(kind=8) stride.2;
+  integer(kind=8) ubound.1;
+  integer(kind=8) ubound.0;
+  integer(kind=4) j;
+  integer(kind=4) i;
+  real(kind=4) fac;
+  static integer(kind=4) jend_2u [value-expr: parallel.jend_2u];
+  static integer(kind=4) jsta_2l [value-expr: parallel.jsta_2l];
+  static integer(kind=4) idsp[1024] [value-expr: parallel.idsp];
+  static integer(kind=4) icnt[1024] [value-expr: parallel.icnt];
+  static integer(kind=4) idn [value-expr: parallel.idn];
+  static integer(kind=4) iup [value-expr: parallel.iup];
+  static integer(kind=4) jend_m2 [value-expr: parallel.jend_m2];
+  static integer(kind=4) jsta_m2 [value-expr: parallel.jsta_m2];
+  static integer(kind=4) jend_m [value-expr: parallel.jend_m];
+  static integer(kind=4) jsta_m [value-expr: parallel.jsta_m];
+  static integer(kind=4) jend [value-expr: parallel.jend];
+  static integer(kind=4) jsta [value-expr: parallel.jsta];
+  static integer(kind=4) me [value-expr: parallel.me];
+  static integer(kind=4) num_procs [value-expr: parallel.num_procs];
+  static logical(kind=4) spline [value-expr: ctlblk.spline];
+  static integer(kind=4) nradl [value-expr: ctlblk.nradl];
+  static integer(kind=4) nrads [value-expr: ctlblk.nrads];
+  static integer(kind=4) nphs [value-expr: ctlblk.nphs];
+  static integer(kind=4) ncp [value-expr: ctlblk.ncp];
+  static integer(kind=4) nshde [value-expr: ctlblk.nshde];
+  static integer(kind=4) nboco [value-expr: ctlblk.nboco];
+  static integer(kind=4) idtad [value-expr: ctlblk.idtad];
+  static integer(kind=4) nprec [value-expr: ctlblk.nprec];
+  static integer(kind=4) nddamp [value-expr: ctlblk.nddamp];
+  static integer(kind=4) ntstm [value-expr: ctlblk.ntstm];
+  static integer(kind=4) ntsd [value-expr: ctlblk.ntsd];
+  static real(kind=4) dt [value-expr: ctlblk.dt];
+  static integer(kind=4) iout [value-expr: ctlblk.iout];
+  static integer(kind=4) list [value-expr: ctlblk.list];
+  static integer(kind=4) nbc [value-expr: ctlblk.nbc];
+  static integer(kind=4) nfcst [value-expr: ctlblk.nfcst];
+  static real(kind=4) restrt [value-expr: ctlblk.restrt];
+  static real(kind=4) first [value-expr: ctlblk.first];
+  static integer(kind=4) ihrst [value-expr: ctlblk.ihrst];
+  static integer(kind=4) idat[3] [value-expr: ctlblk.idat];
+  static real(kind=4) run [value-expr: ctlblk.run];
+  static real(kind=4) sigma [value-expr: ctlblk.sigma];
+  integer(kind=4) _1;
+  integer(kind=4) _2;
+  sizetype size.15_3;
+  bitsizetype _4;
+  sizetype size.16_5;
+  integer(kind=4) _6;
+  integer(kind=4) _7;
+  sizetype size.17_8;
+  bitsizetype _9;
+  sizetype size.18_10;
+  integer(kind=4) _11;
+  integer(kind=4) _12;
+  sizetype size.19_13;
+  bitsizetype _14;
+  sizetype size.20_15;
+  integer(kind=8) _16;
+  integer(kind=8) _17;
+  integer(kind=8) _18;
+  integer(kind=8) _19;
+  integer(kind=8) _20;
+  real(kind=4) _21;
+  real(kind=4) _22;
+  integer(kind=8) _23;
+  integer(kind=8) _24;
+  integer(kind=8) _25;
+  integer(kind=8) _26;
+  integer(kind=8) _27;
+  real(kind=4) _28;
+  real(kind=4) _29;
+  integer(kind=8) _30;
+  integer(kind=8) _31;
+  integer(kind=8) _32;
+  integer(kind=8) _33;
+  integer(kind=8) _34;
+  real(kind=4) _35;
+  integer(kind=8) _36;
+  integer(kind=8) _37;
+  integer(kind=8) _38;
+  integer(kind=8) _39;
+  integer(kind=8) _40;
+  real(kind=4) _41;
+  integer(kind=8) _42;
+  integer(kind=8) _43;
+  integer(kind=8) _44;
+  integer(kind=8) _45;
+  integer(kind=8) _46;
+  integer(kind=8) stride.2_55;
+  integer(kind=8) stride.2_56;
+  integer(kind=8) size.4_59;
+  integer(kind=8) size.4_60;
+  integer(kind=8) _61;
+  bitsizetype _62;
+  sizetype _63;
+  integer(kind=8) offset.3_64;
+  integer(kind=8) stride.12_66;
+  integer(kind=8) stride.12_67;
+  integer(kind=8) size.14_69;
+  integer(kind=8) size.14_70;
+  integer(kind=8) _71;
+  bitsizetype _72;
+  sizetype _73;
+  integer(kind=8) offset.13_74;
+  integer(kind=8) stride.7_76;
+  integer(kind=8) stride.7_77;
+  integer(kind=8) size.9_79;
+  integer(kind=8) size.9_80;
+  integer(kind=8) _81;
+  bitsizetype _82;
+  sizetype _83;
+  integer(kind=8) offset.8_84;
+  integer(kind=4) _85;
+  integer(kind=4) _86;
+  logical(kind=4) _88;
+  integer(kind=4) _89;
+  logical(kind=4) _91;
+  real(kind=4) _93;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = *im_53(D);
+  ubound.0_54 = (integer(kind=8)) _1;
+  stride.2_55 = ubound.0_54;
+  stride.2_56 = MAX_EXPR <stride.2_55, 0>;
+  _2 = *jm_57(D);
+  ubound.1_58 = (integer(kind=8)) _2;
+  size.4_59 = stride.2_56 * ubound.1_58;
+  size.4_60 = MAX_EXPR <size.4_59, 0>;
+  _61 = size.4_60 + -1;
+  size.15_3 = (sizetype) size.4_60;
+  _4 = (bitsizetype) size.15_3;
+  _62 = _4 * 32;
+  size.16_5 = (sizetype) size.4_60;
+  _63 = size.16_5 * 4;
+  offset.3_64 = ~stride.2_56;
+  _6 = *im_53(D);
+  ubound.10_65 = (integer(kind=8)) _6;
+  stride.12_66 = ubound.10_65;
+  stride.12_67 = MAX_EXPR <stride.12_66, 0>;
+  _7 = *jm_57(D);
+  ubound.11_68 = (integer(kind=8)) _7;
+  size.14_69 = stride.12_67 * ubound.11_68;
+  size.14_70 = MAX_EXPR <size.14_69, 0>;
+  _71 = size.14_70 + -1;
+  size.17_8 = (sizetype) size.14_70;
+  _9 = (bitsizetype) size.17_8;
+  _72 = _9 * 32;
+  size.18_10 = (sizetype) size.14_70;
+  _73 = size.18_10 * 4;
+  offset.13_74 = ~stride.12_67;
+  _11 = *im_53(D);
+  ubound.5_75 = (integer(kind=8)) _11;
+  stride.7_76 = ubound.5_75;
+  stride.7_77 = MAX_EXPR <stride.7_76, 0>;
+  _12 = *jm_57(D);
+  ubound.6_78 = (integer(kind=8)) _12;
+  size.9_79 = stride.7_77 * ubound.6_78;
+  size.9_80 = MAX_EXPR <size.9_79, 0>;
+  _81 = size.9_80 + -1;
+  size.19_13 = (sizetype) size.9_80;
+  _14 = (bitsizetype) size.19_13;
+  _82 = _14 * 32;
+  size.20_15 = (sizetype) size.9_80;
+  _83 = size.20_15 * 4;
+  offset.8_84 = ~stride.7_77;
+  _85 = parallel.jsta;
+  _86 = parallel.jend;
+  j_87 = _85;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                10
+  # j_48 = PHI <j_87(2), j_100(10)>
+  _88 = j_48 > _86;
+  if (_88 != 0)
+    goto <bb 11>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       11
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _89 = *im_53(D);
+  i_90 = 1;
+;;    succ:       5
+
+;;   basic block 5, loop depth 2
+;;    pred:       4
+;;                9
+  # i_47 = PHI <i_90(4), i_99(9)>
+  _91 = i_47 > _89;
+  if (_91 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       10
+;;                6
+
+;;   basic block 6, loop depth 2
+;;    pred:       5
+  _16 = (integer(kind=8)) j_48;
+  _17 = stride.2_56 * _16;
+  _18 = offset.3_64 + _17;
+  _19 = (integer(kind=8)) i_47;
+  _20 = _18 + _19;
+  _21 = *p1d_92(D)[_20];
+  _22 = ABS_EXPR <_21>;
+  if (_22 > 1.0e+0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+;;    succ:       7
+;;                8
+
+;;   basic block 7, loop depth 2
+;;    pred:       6
+  _23 = (integer(kind=8)) j_48;
+  _24 = stride.2_56 * _23;
+  _25 = offset.3_64 + _24;
+  _26 = (integer(kind=8)) i_47;
+  _27 = _25 + _26;
+  _28 = *p1d_92(D)[_27];
+  _29 = 1.0e+5 / _28;
+  _93 = ((_29));
+  fac_94 = __builtin_powf (_93, 2.8589642047882080078125e-1);
+  _30 = (integer(kind=8)) j_48;
+  _31 = stride.7_77 * _30;
+  _32 = offset.8_84 + _31;
+  _33 = (integer(kind=8)) i_47;
+  _34 = _32 + _33;
+  _35 = *t1d_95(D)[_34];
+  _36 = (integer(kind=8)) j_48;
+  _37 = stride.12_67 * _36;
+  _38 = offset.13_74 + _37;
+  _39 = (integer(kind=8)) i_47;
+  _40 = _38 + _39;
+  _41 = fac_94 * _35;
+  *theta_96(D)[_40] = _41;
+  goto <bb 9>; [INV]
+;;    succ:       9
+
+;;   basic block 8, loop depth 2
+;;    pred:       6
+  _42 = (integer(kind=8)) j_48;
+  _43 = stride.12_67 * _42;
+  _44 = offset.13_74 + _43;
+  _45 = (integer(kind=8)) i_47;
+  _46 = _44 + _45;
+  *theta_96(D)[_46] = 0.0;
+;;    succ:       9
+
+;;   basic block 9, loop depth 2
+;;    pred:       7
+;;                8
+  i_99 = i_47 + 1;
+  goto <bb 5>; [INV]
+;;    succ:       5
+
+;;   basic block 10, loop depth 1
+;;    pred:       5
+  j_100 = j_48 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 11, loop depth 0
+;;    pred:       3
+;;    succ:       12
+
+;;   basic block 12, loop depth 0
+;;    pred:       11
+<L12>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = *im_53(D);
+
+(insn 10 9 11 (set (reg/f:DI 163)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 11 10 0 (set (reg:SI 87 [ _1 ])
+        (mem:SI (reg/f:DI 163) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.0_54 = (integer(kind=8)) _1;
+
+(insn 12 11 13 (set (reg:DI 164)
+        (sign_extend:DI (reg:SI 87 [ _1 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 13 12 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])
+        (reg:DI 164)) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.2_55 = ubound.0_54;
+
+(insn 14 13 0 (set (reg:DI 133 [ stride.2_55 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.2_56 = MAX_EXPR <stride.2_55, 0>;
+
+(insn 16 14 15 (set (reg:DI 165)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 15 16 17 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 133 [ stride.2_55 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 17 15 0 (set (reg:DI 134 [ stride.2_56 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 133 [ stride.2_55 ])
+            (reg:DI 165))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _2 = *jm_57(D);
+
+(insn 18 17 19 (set (reg/f:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 19 18 0 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 166) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.1_58 = (integer(kind=8)) _2;
+
+(insn 20 19 21 (set (reg:DI 167)
+        (sign_extend:DI (reg:SI 88 [ _2 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 21 20 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])
+        (reg:DI 167)) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.4_59 = stride.2_56 * ubound.1_58;
+
+(insn 22 21 0 (parallel [
+            (set (reg:DI 135 [ size.4_59 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.4_60 = MAX_EXPR <size.4_59, 0>;
+
+(insn 24 22 23 (set (reg:DI 168)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 23 24 25 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 135 [ size.4_59 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 25 23 0 (set (reg:DI 136 [ size.4_60 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 135 [ size.4_59 ])
+            (reg:DI 168))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _61 = size.4_60 + -1;
+
+(insn 26 25 0 (parallel [
+            (set (reg:DI 137 [ _61 ])
+                (plus:DI (reg:DI 136 [ size.4_60 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.15_3 = (sizetype) size.4_60;
+
+(insn 27 26 0 (set (reg:DI 89 [ size.15_3 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _4 = (bitsizetype) size.15_3;
+
+(insn 28 27 29 (set (subreg:DI (reg:TI 90 [ _4 ]) 0)
+        (reg:DI 89 [ size.15_3 ])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 29 28 0 (set (subreg:DI (reg:TI 90 [ _4 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _62 = _4 * 32;
+
+(insn 30 29 0 (parallel [
+            (set (reg:TI 138 [ _62 ])
+                (ashift:TI (reg:TI 90 [ _4 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.16_5 = (sizetype) size.4_60;
+
+(insn 31 30 0 (set (reg:DI 91 [ size.16_5 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _63 = size.16_5 * 4;
+
+(insn 32 31 0 (parallel [
+            (set (reg:DI 139 [ _63 ])
+                (ashift:DI (reg:DI 91 [ size.16_5 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; offset.3_64 = ~stride.2_56;
+
+(insn 33 32 0 (set (reg:DI 140 [ offset.3_64 ])
+        (not:DI (reg:DI 134 [ stride.2_56 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _6 = *im_53(D);
+
+(insn 34 33 35 (set (reg/f:DI 169)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 35 34 0 (set (reg:SI 92 [ _6 ])
+        (mem:SI (reg/f:DI 169) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.10_65 = (integer(kind=8)) _6;
+
+(insn 36 35 37 (set (reg:DI 170)
+        (sign_extend:DI (reg:SI 92 [ _6 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 37 36 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])
+        (reg:DI 170)) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.12_66 = ubound.10_65;
+
+(insn 38 37 0 (set (reg:DI 141 [ stride.12_66 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.12_67 = MAX_EXPR <stride.12_66, 0>;
+
+(insn 40 38 39 (set (reg:DI 171)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 39 40 41 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 141 [ stride.12_66 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 41 39 0 (set (reg:DI 142 [ stride.12_67 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 141 [ stride.12_66 ])
+            (reg:DI 171))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _7 = *jm_57(D);
+
+(insn 42 41 43 (set (reg/f:DI 172)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 43 42 0 (set (reg:SI 93 [ _7 ])
+        (mem:SI (reg/f:DI 172) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.11_68 = (integer(kind=8)) _7;
+
+(insn 44 43 45 (set (reg:DI 173)
+        (sign_extend:DI (reg:SI 93 [ _7 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 45 44 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])
+        (reg:DI 173)) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.14_69 = stride.12_67 * ubound.11_68;
+
+(insn 46 45 0 (parallel [
+            (set (reg:DI 143 [ size.14_69 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.14_70 = MAX_EXPR <size.14_69, 0>;
+
+(insn 48 46 47 (set (reg:DI 174)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 47 48 49 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 143 [ size.14_69 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 49 47 0 (set (reg:DI 144 [ size.14_70 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 143 [ size.14_69 ])
+            (reg:DI 174))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _71 = size.14_70 + -1;
+
+(insn 50 49 0 (parallel [
+            (set (reg:DI 145 [ _71 ])
+                (plus:DI (reg:DI 144 [ size.14_70 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.17_8 = (sizetype) size.14_70;
+
+(insn 51 50 0 (set (reg:DI 94 [ size.17_8 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _9 = (bitsizetype) size.17_8;
+
+(insn 52 51 53 (set (subreg:DI (reg:TI 95 [ _9 ]) 0)
+        (reg:DI 94 [ size.17_8 ])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 53 52 0 (set (subreg:DI (reg:TI 95 [ _9 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _72 = _9 * 32;
+
+(insn 54 53 0 (parallel [
+            (set (reg:TI 146 [ _72 ])
+                (ashift:TI (reg:TI 95 [ _9 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.18_10 = (sizetype) size.14_70;
+
+(insn 55 54 0 (set (reg:DI 96 [ size.18_10 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _73 = size.18_10 * 4;
+
+(insn 56 55 0 (parallel [
+            (set (reg:DI 147 [ _73 ])
+                (ashift:DI (reg:DI 96 [ size.18_10 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; offset.13_74 = ~stride.12_67;
+
+(insn 57 56 0 (set (reg:DI 148 [ offset.13_74 ])
+        (not:DI (reg:DI 142 [ stride.12_67 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _11 = *im_53(D);
+
+(insn 58 57 59 (set (reg/f:DI 175)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 59 58 0 (set (reg:SI 97 [ _11 ])
+        (mem:SI (reg/f:DI 175) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.5_75 = (integer(kind=8)) _11;
+
+(insn 60 59 61 (set (reg:DI 176)
+        (sign_extend:DI (reg:SI 97 [ _11 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 61 60 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])
+        (reg:DI 176)) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.7_76 = ubound.5_75;
+
+(insn 62 61 0 (set (reg:DI 149 [ stride.7_76 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+;; stride.7_77 = MAX_EXPR <stride.7_76, 0>;
+
+(insn 64 62 63 (set (reg:DI 177)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 63 64 65 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 149 [ stride.7_76 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 65 63 0 (set (reg:DI 150 [ stride.7_77 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 149 [ stride.7_76 ])
+            (reg:DI 177))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _12 = *jm_57(D);
+
+(insn 66 65 67 (set (reg/f:DI 178)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 67 66 0 (set (reg:SI 98 [ _12 ])
+        (mem:SI (reg/f:DI 178) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+
+;; ubound.6_78 = (integer(kind=8)) _12;
+
+(insn 68 67 69 (set (reg:DI 179)
+        (sign_extend:DI (reg:SI 98 [ _12 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 69 68 0 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])
+        (reg:DI 179)) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.9_79 = stride.7_77 * ubound.6_78;
+
+(insn 70 69 0 (parallel [
+            (set (reg:DI 151 [ size.9_79 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.9_80 = MAX_EXPR <size.9_79, 0>;
+
+(insn 72 70 71 (set (reg:DI 180)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 71 72 73 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 151 [ size.9_79 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 73 71 0 (set (reg:DI 152 [ size.9_80 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 151 [ size.9_79 ])
+            (reg:DI 180))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _81 = size.9_80 + -1;
+
+(insn 74 73 0 (parallel [
+            (set (reg:DI 153 [ _81 ])
+                (plus:DI (reg:DI 152 [ size.9_80 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.19_13 = (sizetype) size.9_80;
+
+(insn 75 74 0 (set (reg:DI 99 [ size.19_13 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _14 = (bitsizetype) size.19_13;
+
+(insn 76 75 77 (set (subreg:DI (reg:TI 100 [ _14 ]) 0)
+        (reg:DI 99 [ size.19_13 ])) "CALPOT2.f":1 -1
+     (nil))
+
+(insn 77 76 0 (set (subreg:DI (reg:TI 100 [ _14 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _82 = _14 * 32;
+
+(insn 78 77 0 (parallel [
+            (set (reg:TI 154 [ _82 ])
+                (ashift:TI (reg:TI 100 [ _14 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; size.20_15 = (sizetype) size.9_80;
+
+(insn 79 78 0 (set (reg:DI 101 [ size.20_15 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 -1
+     (nil))
+
+;; _83 = size.20_15 * 4;
+
+(insn 80 79 0 (parallel [
+            (set (reg:DI 155 [ _83 ])
+                (ashift:DI (reg:DI 101 [ size.20_15 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+
+;; offset.8_84 = ~stride.7_77;
+
+(insn 81 80 0 (set (reg:DI 156 [ offset.8_84 ])
+        (not:DI (reg:DI 150 [ stride.7_77 ]))) "CALPOT2.f":1 -1
+     (nil))
+
+;; _85 = parallel.jsta;
+
+(insn 82 81 0 (set (reg:SI 157 [ _85 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALPOT2.f":55 -1
+     (nil))
+
+;; _86 = parallel.jend;
+
+(insn 83 82 0 (set (reg:SI 158 [ _86 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALPOT2.f":55 -1
+     (nil))
+
+;; j_87 = _85;
+
+(insn 84 83 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 157 [ _85 ])) "CALPOT2.f":55 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; _88 = j_48 > _86;
+
+(insn 86 85 87 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 158 [ _86 ]))) "CALPOT2.f":55 -1
+     (nil))
+
+(insn 87 86 88 (set (reg:QI 181)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":55 -1
+     (nil))
+
+(insn 88 87 0 (set (reg:SI 159 [ _88 ])
+        (zero_extend:SI (reg:QI 181))) "CALPOT2.f":55 -1
+     (nil))
+
+;; if (_88 != 0)
+
+(insn 89 88 90 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 159 [ _88 ])
+            (const_int 0 [0]))) "CALPOT2.f":55 -1
+     (nil))
+
+(jump_insn 90 89 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "CALPOT2.f":55 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _89 = *im_53(D);
+
+(insn 92 91 93 (set (reg/f:DI 182)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":56 -1
+     (nil))
+
+(insn 93 92 0 (set (reg:SI 160 [ _89 ])
+        (mem:SI (reg/f:DI 182) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":56 -1
+     (nil))
+
+;; i_90 = 1;
+
+(insn 94 93 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALPOT2.f":56 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _91 = i_47 > _89;
+
+(insn 96 95 97 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 160 [ _89 ]))) "CALPOT2.f":56 -1
+     (nil))
+
+(insn 97 96 98 (set (reg:QI 183)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":56 -1
+     (nil))
+
+(insn 98 97 0 (set (reg:SI 161 [ _91 ])
+        (zero_extend:SI (reg:QI 183))) "CALPOT2.f":56 -1
+     (nil))
+
+;; if (_91 != 0)
+
+(insn 99 98 100 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 161 [ _91 ])
+            (const_int 0 [0]))) "CALPOT2.f":56 -1
+     (nil))
+
+(jump_insn 100 99 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "CALPOT2.f":56 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; _16 = (integer(kind=8)) j_48;
+
+(insn 102 101 103 (set (reg:SI 184)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+
+(insn 103 102 0 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 184))) "CALPOT2.f":57 -1
+     (nil))
+
+;; _17 = stride.2_56 * _16;
+
+(insn 104 103 0 (parallel [
+            (set (reg:DI 103 [ _17 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+
+;; _18 = offset.3_64 + _17;
+
+(insn 105 104 0 (parallel [
+            (set (reg:DI 104 [ _18 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+
+;; _19 = (integer(kind=8)) i_47;
+
+(insn 106 105 107 (set (reg:SI 185)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+
+(insn 107 106 0 (set (reg:DI 105 [ _19 ])
+        (sign_extend:DI (reg:SI 185))) "CALPOT2.f":57 -1
+     (nil))
+
+;; _20 = _18 + _19;
+
+(insn 108 107 0 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (plus:DI (reg:DI 104 [ _18 ])
+                    (reg:DI 105 [ _19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+
+;; _21 = *p1d_92(D)[_20];
+
+(insn 109 108 110 (set (reg/f:DI 186)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":57 -1
+     (nil))
+
+(insn 110 109 0 (set (reg:SF 107 [ _21 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 106 [ _20 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 186)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+
+;; _22 = ABS_EXPR <_21>;
+
+(insn 111 110 112 (set (reg:V4SF 187)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+
+(insn 112 111 0 (parallel [
+            (set (reg:SF 108 [ _22 ])
+                (abs:SF (reg:SF 107 [ _21 ])))
+            (use (reg:V4SF 187))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 107 [ _21 ]))
+        (nil)))
+
+;; if (_22 > 1.0e+0)
+
+(insn 113 112 114 (set (reg:SF 188)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+
+(insn 114 113 115 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 108 [ _22 ])
+            (reg:SF 188))) "CALPOT2.f":57 -1
+     (nil))
+
+(jump_insn 115 114 116 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 118)
+            (pc))) "CALPOT2.f":57 -1
+     (nil))
+
+(jump_insn 116 115 117 (set (pc)
+        (label_ref 0)) "CALPOT2.f":57 -1
+     (nil))
+
+(barrier 117 116 118)
+
+(code_label 118 117 0 5 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 7
+
+;; _23 = (integer(kind=8)) j_48;
+
+(insn 120 119 121 (set (reg:SI 189)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+
+(insn 121 120 0 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 189))) "CALPOT2.f":58 -1
+     (nil))
+
+;; _24 = stride.2_56 * _23;
+
+(insn 122 121 0 (parallel [
+            (set (reg:DI 110 [ _24 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+
+;; _25 = offset.3_64 + _24;
+
+(insn 123 122 0 (parallel [
+            (set (reg:DI 111 [ _25 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+
+;; _26 = (integer(kind=8)) i_47;
+
+(insn 124 123 125 (set (reg:SI 190)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+
+(insn 125 124 0 (set (reg:DI 112 [ _26 ])
+        (sign_extend:DI (reg:SI 190))) "CALPOT2.f":58 -1
+     (nil))
+
+;; _27 = _25 + _26;
+
+(insn 126 125 0 (parallel [
+            (set (reg:DI 113 [ _27 ])
+                (plus:DI (reg:DI 111 [ _25 ])
+                    (reg:DI 112 [ _26 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+
+;; _28 = *p1d_92(D)[_27];
+
+(insn 127 126 128 (set (reg/f:DI 191)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":58 -1
+     (nil))
+
+(insn 128 127 0 (set (reg:SF 114 [ _28 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 113 [ _27 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 191)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+
+;; _29 = 1.0e+5 / _28;
+
+(insn 129 128 130 (set (reg:SF 192)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+5 [0x0.c35p+17])
+        (nil)))
+
+(insn 130 129 0 (set (reg:SF 115 [ _29 ])
+        (div:SF (reg:SF 192)
+            (reg:SF 114 [ _28 ]))) "CALPOT2.f":58 -1
+     (nil))
+
+;; _93 = ((_29));
+
+(insn 131 130 0 (set (reg:SF 162 [ _93 ])
+        (reg:SF 115 [ _29 ])) "CALPOT2.f":58 -1
+     (nil))
+
+;; fac_94 = __builtin_powf (_93, 2.8589642047882080078125e-1);
+
+(insn 132 131 133 (set (reg:SF 22 xmm1)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 -1
+     (expr_list:REG_EQUAL (const_double:SF 2.8589642047882080078125e-1 [0x0.926104p-1])
+        (nil)))
+
+(insn 133 132 134 (set (reg:SF 21 xmm0)
+        (reg:SF 162 [ _93 ])) "CALPOT2.f":58 -1
+     (nil))
+
+(call_insn/u 134 133 135 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("powf") [flags 0x41]  <function_decl 0x7f9ef4336100 __builtin_powf>) [0 __builtin_powf S1 A8])
+            (const_int 0 [0]))) "CALPOT2.f":58 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (expr_list:SF (use (reg:SF 22 xmm1))
+            (nil))))
+
+(insn 135 134 136 (set (reg:SF 193)
+        (reg:SF 21 xmm0)) "CALPOT2.f":58 -1
+     (nil))
+
+(insn 136 135 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32])
+        (reg:SF 193)) "CALPOT2.f":58 -1
+     (nil))
+
+;; _30 = (integer(kind=8)) j_48;
+
+(insn 137 136 138 (set (reg:SI 194)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 138 137 0 (set (reg:DI 116 [ _30 ])
+        (sign_extend:DI (reg:SI 194))) "CALPOT2.f":59 -1
+     (nil))
+
+;; _31 = stride.7_77 * _30;
+
+(insn 139 138 0 (parallel [
+            (set (reg:DI 117 [ _31 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (reg:DI 116 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _32 = offset.8_84 + _31;
+
+(insn 140 139 0 (parallel [
+            (set (reg:DI 118 [ _32 ])
+                (plus:DI (reg:DI 156 [ offset.8_84 ])
+                    (reg:DI 117 [ _31 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _33 = (integer(kind=8)) i_47;
+
+(insn 141 140 142 (set (reg:SI 195)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 142 141 0 (set (reg:DI 119 [ _33 ])
+        (sign_extend:DI (reg:SI 195))) "CALPOT2.f":59 -1
+     (nil))
+
+;; _34 = _32 + _33;
+
+(insn 143 142 0 (parallel [
+            (set (reg:DI 120 [ _34 ])
+                (plus:DI (reg:DI 118 [ _32 ])
+                    (reg:DI 119 [ _33 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _35 = *t1d_95(D)[_34];
+
+(insn 144 143 145 (set (reg/f:DI 196)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -80 [0xffffffffffffffb0])) [4 t1d+0 S8 A64])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 145 144 0 (set (reg:SF 121 [ _35 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 120 [ _34 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 196)) [3 *t1d_95(D) S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+
+;; _36 = (integer(kind=8)) j_48;
+
+(insn 146 145 147 (set (reg:SI 197)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 147 146 0 (set (reg:DI 122 [ _36 ])
+        (sign_extend:DI (reg:SI 197))) "CALPOT2.f":59 -1
+     (nil))
+
+;; _37 = stride.12_67 * _36;
+
+(insn 148 147 0 (parallel [
+            (set (reg:DI 123 [ _37 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 122 [ _36 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _38 = offset.13_74 + _37;
+
+(insn 149 148 0 (parallel [
+            (set (reg:DI 124 [ _38 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 123 [ _37 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _39 = (integer(kind=8)) i_47;
+
+(insn 150 149 151 (set (reg:SI 198)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 151 150 0 (set (reg:DI 125 [ _39 ])
+        (sign_extend:DI (reg:SI 198))) "CALPOT2.f":59 -1
+     (nil))
+
+;; _40 = _38 + _39;
+
+(insn 152 151 0 (parallel [
+            (set (reg:DI 126 [ _40 ])
+                (plus:DI (reg:DI 124 [ _38 ])
+                    (reg:DI 125 [ _39 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+
+;; _41 = fac_94 * _35;
+
+(insn 153 152 0 (set (reg:SF 127 [ _41 ])
+        (mult:SF (reg:SF 121 [ _35 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32]))) "CALPOT2.f":59 -1
+     (nil))
+
+;; *theta_96(D)[_40] = _41;
+
+(insn 154 153 155 (set (reg/f:DI 199)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":59 -1
+     (nil))
+
+(insn 155 154 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 126 [ _40 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 199)) [3 *theta_96(D) S4 A32])
+        (reg:SF 127 [ _41 ])) "CALPOT2.f":59 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 158 157 159 4 (nil) [0 uses])
+
+(note 159 158 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _42 = (integer(kind=8)) j_48;
+
+(insn 160 159 161 (set (reg:SI 200)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+
+(insn 161 160 0 (set (reg:DI 128 [ _42 ])
+        (sign_extend:DI (reg:SI 200))) "CALPOT2.f":61 -1
+     (nil))
+
+;; _43 = stride.12_67 * _42;
+
+(insn 162 161 0 (parallel [
+            (set (reg:DI 129 [ _43 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 128 [ _42 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+
+;; _44 = offset.13_74 + _43;
+
+(insn 163 162 0 (parallel [
+            (set (reg:DI 130 [ _44 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 129 [ _43 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+
+;; _45 = (integer(kind=8)) i_47;
+
+(insn 164 163 165 (set (reg:SI 201)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+
+(insn 165 164 0 (set (reg:DI 131 [ _45 ])
+        (sign_extend:DI (reg:SI 201))) "CALPOT2.f":61 -1
+     (nil))
+
+;; _46 = _44 + _45;
+
+(insn 166 165 0 (parallel [
+            (set (reg:DI 132 [ _46 ])
+                (plus:DI (reg:DI 130 [ _44 ])
+                    (reg:DI 131 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+
+;; *theta_96(D)[_46] = 0.0;
+
+(insn 167 166 168 (set (reg/f:DI 202)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":61 -1
+     (nil))
+
+(insn 168 167 169 (set (reg:SF 203)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+
+(insn 169 168 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 132 [ _46 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 202)) [3 *theta_96(D) S4 A32])
+        (reg:SF 203)) "CALPOT2.f":61 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; 
+
+(code_label 170 169 171 6 (nil) [0 uses])
+
+(note 171 170 0 NOTE_INSN_BASIC_BLOCK)
+
+;; i_99 = i_47 + 1;
+
+(insn 172 171 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":56 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 10
+
+;; 
+
+(code_label 176 175 177 3 (nil) [0 uses])
+
+(note 177 176 0 NOTE_INSN_BASIC_BLOCK)
+
+;; j_100 = j_48 + 1;
+
+(insn 178 177 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":55 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; 
+
+(code_label 182 181 183 2 (nil) [0 uses])
+
+(note 183 182 0 NOTE_INSN_BASIC_BLOCK)
+
+;; Generating RTL for gimple basic block 12
+
+;; <L12>:
+
+(code_label 184 183 185 9 (nil) [0 uses])
+
+(note 185 184 0 NOTE_INSN_BASIC_BLOCK)
+Purged non-fallthru edges from bb 16
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 7->9 redirected to 10
+Forwarding edge 7->8 to 11 failed.
+Forwarding edge 7->8 to 11 failed.
+deleting block 9
+Merging block 15 into block 14...
+Merged blocks 14 and 15.
+Merged 14 and 15 without moving.
+Merging block 16 into block 14...
+Merged blocks 14 and 16.
+Merged 14 and 16 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 7->8 to 11 failed.
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 8 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])
+        (reg:DI 5 di [ p1d ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -80 [0xffffffffffffffb0])) [4 t1d+0 S8 A64])
+        (reg:DI 4 si [ t1d ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])
+        (reg:DI 1 dx [ theta ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])
+        (reg:DI 2 cx [ im ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])
+        (reg:DI 37 r8 [ jm ])) "CALPOT2.f":1 -1
+     (nil))
+(note 7 6 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 7 11 2 (set (reg/f:DI 163)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 87 [ _1 ])
+        (mem:SI (reg/f:DI 163) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 164)
+        (sign_extend:DI (reg:SI 87 [ _1 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 13 12 14 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])
+        (reg:DI 164)) "CALPOT2.f":1 -1
+     (nil))
+(insn 14 13 16 2 (set (reg:DI 133 [ stride.2_55 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 16 14 15 2 (set (reg:DI 165)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 15 16 17 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 133 [ stride.2_55 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 17 15 18 2 (set (reg:DI 134 [ stride.2_56 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 133 [ stride.2_55 ])
+            (reg:DI 165))) "CALPOT2.f":1 -1
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 166) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 167)
+        (sign_extend:DI (reg:SI 88 [ _2 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 21 20 22 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])
+        (reg:DI 167)) "CALPOT2.f":1 -1
+     (nil))
+(insn 22 21 24 2 (parallel [
+            (set (reg:DI 135 [ size.4_59 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 24 22 23 2 (set (reg:DI 168)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 23 24 25 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 135 [ size.4_59 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 25 23 26 2 (set (reg:DI 136 [ size.4_60 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 135 [ size.4_59 ])
+            (reg:DI 168))) "CALPOT2.f":1 -1
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg:DI 137 [ _61 ])
+                (plus:DI (reg:DI 136 [ size.4_60 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 89 [ size.15_3 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 28 27 29 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 0)
+        (reg:DI 89 [ size.15_3 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 29 28 30 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 30 29 31 2 (parallel [
+            (set (reg:TI 138 [ _62 ])
+                (ashift:TI (reg:TI 90 [ _4 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 91 [ size.16_5 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 32 31 33 2 (parallel [
+            (set (reg:DI 139 [ _63 ])
+                (ashift:DI (reg:DI 91 [ size.16_5 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 140 [ offset.3_64 ])
+        (not:DI (reg:DI 134 [ stride.2_56 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 34 33 35 2 (set (reg/f:DI 169)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 92 [ _6 ])
+        (mem:SI (reg/f:DI 169) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 170)
+        (sign_extend:DI (reg:SI 92 [ _6 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 37 36 38 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])
+        (reg:DI 170)) "CALPOT2.f":1 -1
+     (nil))
+(insn 38 37 40 2 (set (reg:DI 141 [ stride.12_66 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 40 38 39 2 (set (reg:DI 171)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 39 40 41 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 141 [ stride.12_66 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 41 39 42 2 (set (reg:DI 142 [ stride.12_67 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 141 [ stride.12_66 ])
+            (reg:DI 171))) "CALPOT2.f":1 -1
+     (nil))
+(insn 42 41 43 2 (set (reg/f:DI 172)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 93 [ _7 ])
+        (mem:SI (reg/f:DI 172) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 173)
+        (sign_extend:DI (reg:SI 93 [ _7 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 45 44 46 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])
+        (reg:DI 173)) "CALPOT2.f":1 -1
+     (nil))
+(insn 46 45 48 2 (parallel [
+            (set (reg:DI 143 [ size.14_69 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 48 46 47 2 (set (reg:DI 174)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 47 48 49 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 143 [ size.14_69 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 49 47 50 2 (set (reg:DI 144 [ size.14_70 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 143 [ size.14_69 ])
+            (reg:DI 174))) "CALPOT2.f":1 -1
+     (nil))
+(insn 50 49 51 2 (parallel [
+            (set (reg:DI 145 [ _71 ])
+                (plus:DI (reg:DI 144 [ size.14_70 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 51 50 52 2 (set (reg:DI 94 [ size.17_8 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 52 51 53 2 (set (subreg:DI (reg:TI 95 [ _9 ]) 0)
+        (reg:DI 94 [ size.17_8 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 53 52 54 2 (set (subreg:DI (reg:TI 95 [ _9 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 54 53 55 2 (parallel [
+            (set (reg:TI 146 [ _72 ])
+                (ashift:TI (reg:TI 95 [ _9 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 55 54 56 2 (set (reg:DI 96 [ size.18_10 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 56 55 57 2 (parallel [
+            (set (reg:DI 147 [ _73 ])
+                (ashift:DI (reg:DI 96 [ size.18_10 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 57 56 58 2 (set (reg:DI 148 [ offset.13_74 ])
+        (not:DI (reg:DI 142 [ stride.12_67 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 58 57 59 2 (set (reg/f:DI 175)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 59 58 60 2 (set (reg:SI 97 [ _11 ])
+        (mem:SI (reg/f:DI 175) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 60 59 61 2 (set (reg:DI 176)
+        (sign_extend:DI (reg:SI 97 [ _11 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 61 60 62 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])
+        (reg:DI 176)) "CALPOT2.f":1 -1
+     (nil))
+(insn 62 61 64 2 (set (reg:DI 149 [ stride.7_76 ])
+        (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 64 62 63 2 (set (reg:DI 177)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 63 64 65 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 149 [ stride.7_76 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 65 63 66 2 (set (reg:DI 150 [ stride.7_77 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 149 [ stride.7_76 ])
+            (reg:DI 177))) "CALPOT2.f":1 -1
+     (nil))
+(insn 66 65 67 2 (set (reg/f:DI 178)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 -1
+     (nil))
+(insn 67 66 68 2 (set (reg:SI 98 [ _12 ])
+        (mem:SI (reg/f:DI 178) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 -1
+     (nil))
+(insn 68 67 69 2 (set (reg:DI 179)
+        (sign_extend:DI (reg:SI 98 [ _12 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 69 68 70 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])
+        (reg:DI 179)) "CALPOT2.f":1 -1
+     (nil))
+(insn 70 69 72 2 (parallel [
+            (set (reg:DI 151 [ size.9_79 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 72 70 71 2 (set (reg:DI 180)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 71 72 73 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 151 [ size.9_79 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 73 71 74 2 (set (reg:DI 152 [ size.9_80 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 151 [ size.9_79 ])
+            (reg:DI 180))) "CALPOT2.f":1 -1
+     (nil))
+(insn 74 73 75 2 (parallel [
+            (set (reg:DI 153 [ _81 ])
+                (plus:DI (reg:DI 152 [ size.9_80 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 75 74 76 2 (set (reg:DI 99 [ size.19_13 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 76 75 77 2 (set (subreg:DI (reg:TI 100 [ _14 ]) 0)
+        (reg:DI 99 [ size.19_13 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 77 76 78 2 (set (subreg:DI (reg:TI 100 [ _14 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 -1
+     (nil))
+(insn 78 77 79 2 (parallel [
+            (set (reg:TI 154 [ _82 ])
+                (ashift:TI (reg:TI 100 [ _14 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 79 78 80 2 (set (reg:DI 101 [ size.20_15 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 -1
+     (nil))
+(insn 80 79 81 2 (parallel [
+            (set (reg:DI 155 [ _83 ])
+                (ashift:DI (reg:DI 101 [ size.20_15 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 -1
+     (nil))
+(insn 81 80 82 2 (set (reg:DI 156 [ offset.8_84 ])
+        (not:DI (reg:DI 150 [ stride.7_77 ]))) "CALPOT2.f":1 -1
+     (nil))
+(insn 82 81 83 2 (set (reg:SI 157 [ _85 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALPOT2.f":55 -1
+     (nil))
+(insn 83 82 84 2 (set (reg:SI 158 [ _86 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALPOT2.f":55 -1
+     (nil))
+(insn 84 83 179 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 157 [ _85 ])) "CALPOT2.f":55 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              13 (DFS_BACK)
+(code_label 179 84 85 4 8 (nil) [1 uses])
+(note 85 179 86 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 158 [ _86 ]))) "CALPOT2.f":55 -1
+     (nil))
+(insn 87 86 88 4 (set (reg:QI 181)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":55 -1
+     (nil))
+(insn 88 87 89 4 (set (reg:SI 159 [ _88 ])
+        (zero_extend:SI (reg:QI 181))) "CALPOT2.f":55 -1
+     (nil))
+(insn 89 88 90 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 159 [ _88 ])
+            (const_int 0 [0]))) "CALPOT2.f":55 -1
+     (nil))
+(jump_insn 90 89 91 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 182)
+            (pc))) "CALPOT2.f":55 -1
+     (nil)
+ -> 182)
+;;  succ:       14
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 91 90 92 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 5 (set (reg/f:DI 182)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":56 -1
+     (nil))
+(insn 93 92 94 5 (set (reg:SI 160 [ _89 ])
+        (mem:SI (reg/f:DI 182) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":56 -1
+     (nil))
+(insn 94 93 173 5 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALPOT2.f":56 -1
+     (nil))
+;;  succ:       6 (FALLTHRU)
+
+;; basic block 6, loop depth 2, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+;;              12 (DFS_BACK)
+(code_label 173 94 95 6 7 (nil) [1 uses])
+(note 95 173 96 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 96 95 97 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 160 [ _89 ]))) "CALPOT2.f":56 -1
+     (nil))
+(insn 97 96 98 6 (set (reg:QI 183)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":56 -1
+     (nil))
+(insn 98 97 99 6 (set (reg:SI 161 [ _91 ])
+        (zero_extend:SI (reg:QI 183))) "CALPOT2.f":56 -1
+     (nil))
+(insn 99 98 100 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 161 [ _91 ])
+            (const_int 0 [0]))) "CALPOT2.f":56 -1
+     (nil))
+(jump_insn 100 99 101 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "CALPOT2.f":56 -1
+     (nil)
+ -> 176)
+;;  succ:       13
+;;              7 (FALLTHRU)
+
+;; basic block 7, loop depth 2, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+(note 101 100 102 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 7 (set (reg:SI 184)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+(insn 103 102 104 7 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 184))) "CALPOT2.f":57 -1
+     (nil))
+(insn 104 103 105 7 (parallel [
+            (set (reg:DI 103 [ _17 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+(insn 105 104 106 7 (parallel [
+            (set (reg:DI 104 [ _18 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+(insn 106 105 107 7 (set (reg:SI 185)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+(insn 107 106 108 7 (set (reg:DI 105 [ _19 ])
+        (sign_extend:DI (reg:SI 185))) "CALPOT2.f":57 -1
+     (nil))
+(insn 108 107 109 7 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (plus:DI (reg:DI 104 [ _18 ])
+                    (reg:DI 105 [ _19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (nil))
+(insn 109 108 110 7 (set (reg/f:DI 186)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":57 -1
+     (nil))
+(insn 110 109 111 7 (set (reg:SF 107 [ _21 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 106 [ _20 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 186)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":57 -1
+     (nil))
+(insn 111 110 112 7 (set (reg:V4SF 187)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 112 111 113 7 (parallel [
+            (set (reg:SF 108 [ _22 ])
+                (abs:SF (reg:SF 107 [ _21 ])))
+            (use (reg:V4SF 187))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 107 [ _21 ]))
+        (nil)))
+(insn 113 112 114 7 (set (reg:SF 188)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":57 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 114 113 115 7 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 108 [ _22 ])
+            (reg:SF 188))) "CALPOT2.f":57 -1
+     (nil))
+(jump_insn 115 114 188 7 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 190)
+            (pc))) "CALPOT2.f":57 682 {*jcc}
+     (nil)
+ -> 190)
+;;  succ:       10
+;;              8 (FALLTHRU)
+
+;; basic block 8, loop depth 2, maybe hot
+;;  prev block 7, next block 10, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+(note 188 115 116 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 116 188 117 8 (set (pc)
+        (label_ref 158)) "CALPOT2.f":57 -1
+     (nil)
+ -> 158)
+;;  succ:       11
+
+(barrier 117 116 190)
+;; basic block 10, loop depth 2, maybe hot
+;;  prev block 8, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7
+(code_label 190 117 119 10 10 (nil) [1 uses])
+(note 119 190 120 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 10 (set (reg:SI 189)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+(insn 121 120 122 10 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 189))) "CALPOT2.f":58 -1
+     (nil))
+(insn 122 121 123 10 (parallel [
+            (set (reg:DI 110 [ _24 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+(insn 123 122 124 10 (parallel [
+            (set (reg:DI 111 [ _25 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+(insn 124 123 125 10 (set (reg:SI 190)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+(insn 125 124 126 10 (set (reg:DI 112 [ _26 ])
+        (sign_extend:DI (reg:SI 190))) "CALPOT2.f":58 -1
+     (nil))
+(insn 126 125 127 10 (parallel [
+            (set (reg:DI 113 [ _27 ])
+                (plus:DI (reg:DI 111 [ _25 ])
+                    (reg:DI 112 [ _26 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 -1
+     (nil))
+(insn 127 126 128 10 (set (reg/f:DI 191)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":58 -1
+     (nil))
+(insn 128 127 129 10 (set (reg:SF 114 [ _28 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 113 [ _27 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 191)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":58 -1
+     (nil))
+(insn 129 128 130 10 (set (reg:SF 192)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+5 [0x0.c35p+17])
+        (nil)))
+(insn 130 129 131 10 (set (reg:SF 115 [ _29 ])
+        (div:SF (reg:SF 192)
+            (reg:SF 114 [ _28 ]))) "CALPOT2.f":58 -1
+     (nil))
+(insn 131 130 132 10 (set (reg:SF 162 [ _93 ])
+        (reg:SF 115 [ _29 ])) "CALPOT2.f":58 -1
+     (nil))
+(insn 132 131 133 10 (set (reg:SF 22 xmm1)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 -1
+     (expr_list:REG_EQUAL (const_double:SF 2.8589642047882080078125e-1 [0x0.926104p-1])
+        (nil)))
+(insn 133 132 134 10 (set (reg:SF 21 xmm0)
+        (reg:SF 162 [ _93 ])) "CALPOT2.f":58 -1
+     (nil))
+(call_insn/u 134 133 135 10 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("powf") [flags 0x41]  <function_decl 0x7f9ef4336100 __builtin_powf>) [0 __builtin_powf S1 A8])
+            (const_int 0 [0]))) "CALPOT2.f":58 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (expr_list:SF (use (reg:SF 22 xmm1))
+            (nil))))
+(insn 135 134 136 10 (set (reg:SF 193)
+        (reg:SF 21 xmm0)) "CALPOT2.f":58 -1
+     (nil))
+(insn 136 135 137 10 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32])
+        (reg:SF 193)) "CALPOT2.f":58 -1
+     (nil))
+(insn 137 136 138 10 (set (reg:SI 194)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+(insn 138 137 139 10 (set (reg:DI 116 [ _30 ])
+        (sign_extend:DI (reg:SI 194))) "CALPOT2.f":59 -1
+     (nil))
+(insn 139 138 140 10 (parallel [
+            (set (reg:DI 117 [ _31 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (reg:DI 116 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 140 139 141 10 (parallel [
+            (set (reg:DI 118 [ _32 ])
+                (plus:DI (reg:DI 156 [ offset.8_84 ])
+                    (reg:DI 117 [ _31 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 141 140 142 10 (set (reg:SI 195)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+(insn 142 141 143 10 (set (reg:DI 119 [ _33 ])
+        (sign_extend:DI (reg:SI 195))) "CALPOT2.f":59 -1
+     (nil))
+(insn 143 142 144 10 (parallel [
+            (set (reg:DI 120 [ _34 ])
+                (plus:DI (reg:DI 118 [ _32 ])
+                    (reg:DI 119 [ _33 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 144 143 145 10 (set (reg/f:DI 196)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -80 [0xffffffffffffffb0])) [4 t1d+0 S8 A64])) "CALPOT2.f":59 -1
+     (nil))
+(insn 145 144 146 10 (set (reg:SF 121 [ _35 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 120 [ _34 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 196)) [3 *t1d_95(D) S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+(insn 146 145 147 10 (set (reg:SI 197)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+(insn 147 146 148 10 (set (reg:DI 122 [ _36 ])
+        (sign_extend:DI (reg:SI 197))) "CALPOT2.f":59 -1
+     (nil))
+(insn 148 147 149 10 (parallel [
+            (set (reg:DI 123 [ _37 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 122 [ _36 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 149 148 150 10 (parallel [
+            (set (reg:DI 124 [ _38 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 123 [ _37 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 150 149 151 10 (set (reg:SI 198)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 -1
+     (nil))
+(insn 151 150 152 10 (set (reg:DI 125 [ _39 ])
+        (sign_extend:DI (reg:SI 198))) "CALPOT2.f":59 -1
+     (nil))
+(insn 152 151 153 10 (parallel [
+            (set (reg:DI 126 [ _40 ])
+                (plus:DI (reg:DI 124 [ _38 ])
+                    (reg:DI 125 [ _39 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 -1
+     (nil))
+(insn 153 152 154 10 (set (reg:SF 127 [ _41 ])
+        (mult:SF (reg:SF 121 [ _35 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32]))) "CALPOT2.f":59 -1
+     (nil))
+(insn 154 153 155 10 (set (reg/f:DI 199)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":59 -1
+     (nil))
+(insn 155 154 156 10 (set (mem:SF (plus:DI (mult:DI (reg:DI 126 [ _40 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 199)) [3 *theta_96(D) S4 A32])
+        (reg:SF 127 [ _41 ])) "CALPOT2.f":59 -1
+     (nil))
+(jump_insn 156 155 157 10 (set (pc)
+        (label_ref 170)) -1
+     (nil)
+ -> 170)
+;;  succ:       12
+
+(barrier 157 156 158)
+;; basic block 11, loop depth 2, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8
+(code_label 158 157 159 11 4 (nil) [1 uses])
+(note 159 158 160 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 160 159 161 11 (set (reg:SI 200)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+(insn 161 160 162 11 (set (reg:DI 128 [ _42 ])
+        (sign_extend:DI (reg:SI 200))) "CALPOT2.f":61 -1
+     (nil))
+(insn 162 161 163 11 (parallel [
+            (set (reg:DI 129 [ _43 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 128 [ _42 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+(insn 163 162 164 11 (parallel [
+            (set (reg:DI 130 [ _44 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 129 [ _43 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+(insn 164 163 165 11 (set (reg:SI 201)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+(insn 165 164 166 11 (set (reg:DI 131 [ _45 ])
+        (sign_extend:DI (reg:SI 201))) "CALPOT2.f":61 -1
+     (nil))
+(insn 166 165 167 11 (parallel [
+            (set (reg:DI 132 [ _46 ])
+                (plus:DI (reg:DI 130 [ _44 ])
+                    (reg:DI 131 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 -1
+     (nil))
+(insn 167 166 168 11 (set (reg/f:DI 202)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":61 -1
+     (nil))
+(insn 168 167 169 11 (set (reg:SF 203)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":61 -1
+     (nil))
+(insn 169 168 170 11 (set (mem:SF (plus:DI (mult:DI (reg:DI 132 [ _46 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 202)) [3 *theta_96(D) S4 A32])
+        (reg:SF 203)) "CALPOT2.f":61 -1
+     (nil))
+;;  succ:       12 (FALLTHRU)
+
+;; basic block 12, loop depth 2, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10
+;;              11 (FALLTHRU)
+(code_label 170 169 171 12 6 (nil) [1 uses])
+(note 171 170 172 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 172 171 174 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":56 -1
+     (nil))
+(jump_insn 174 172 175 12 (set (pc)
+        (label_ref 173)) "CALPOT2.f":56 -1
+     (nil)
+ -> 173)
+;;  succ:       6 (DFS_BACK)
+
+(barrier 175 174 176)
+;; basic block 13, loop depth 1, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+(code_label 176 175 177 13 3 (nil) [1 uses])
+(note 177 176 178 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 180 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":55 -1
+     (nil))
+(jump_insn 180 178 181 13 (set (pc)
+        (label_ref 179)) "CALPOT2.f":55 -1
+     (nil)
+ -> 179)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 181 180 182)
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 182 181 183 14 2 (nil) [1 uses])
+(note 183 182 191 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 191 183 0 14 (const_int 0 [0]) "CALPOT2.f":73 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

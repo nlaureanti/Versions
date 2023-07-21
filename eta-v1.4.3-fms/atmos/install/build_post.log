@@ -1,0 +1,156 @@
+Shell debugging temporarily silenced: export LMOD_SH_DBG_ON=1 for this output (/opt/ohpc/admin/lmod/lmod/init/bash)
+Shell debugging restarted
+Compiling ../src/post/quilt
+/bin/rm -f  ../../../exe/quilt.x *.lst *.o lm map *.i
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o QUILT.o QUILT.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o SLP.o SLP.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o SLPSIG.o SLPSIG.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o SLPSIGSPLINE.o SLPSIGSPLINE.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o PARA_RANGE.o PARA_RANGE.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o MPI_FIRST.o MPI_FIRST.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o MPI_LAST.o MPI_LAST.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o COLLECT.o COLLECT.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o DIST.o DIST.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o UPDATE.o UPDATE.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -o ../../../exe/quilt.x QUILT.o SLP.o SLPSIG.o SLPSIGSPLINE.o PARA_RANGE.o MPI_FIRST.o MPI_LAST.o COLLECT.o DIST.o UPDATE.o ../../../../libraries/dummyMPI/libmpi.a
+Compiling ../src/post/post_new
+/bin/rm -f  ../../../exe/etapost_new.x *.lst *.o *.i
+mpif90 -mcmodel=medium -Mlarge_arrays  -c BLOSFC2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c BNDLYR2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c BOUND.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c BOUNDL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALCAPE.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALDRG.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALDWP2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALEKM.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALEKM2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALHEL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALLCL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALMCVG.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALMXW.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALPOT2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALPW.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALRCH.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALRH2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALSTRM.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALTAU.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALTHTE.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALVIS.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALVOR.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALWXT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALCWI.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALQUV.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CALHPBL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CETLIH4.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CHR2INT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CLDRAD.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c CLMAX.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c COEFI.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c COEFJ.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c COLLECT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c DEWPOINT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c DIR.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c DIST.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c E2OUT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c E2TLL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EFILL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EFILT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c ETA2P.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c ETAFLD2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c ETAPOST.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EUVGUV.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EXCH.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EXCH2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EXTEND.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c EXTRACT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FDLVL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FILLH.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FILLV.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FILTER.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FIXED.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FRZLVL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c FRZLVL2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GD2EG.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GD2EGK.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GD2TLL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GENBIL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GETGDEF.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GENEUV.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GENLL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GET_BITS.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c GRIBIT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c H2V.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c INITPOST.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c INTERP3.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c LFMFLD.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c LL2EG.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c MINMAX.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c MISCLN.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c MIXLEN.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c MPI_FIRST.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c MPI_LAST.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c NETAL.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c NGMFLD2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c NGMSLP2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c NOPACK.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c OTLIFT2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c OTLFT2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c OUTPUT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c OUT_MASKS.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c PARA_RANGE.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c P2FILT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c P2FLTV.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c POSTDATA.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c PROCESS.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c RDRST2D.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c READCNTRL2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c SCLFLD.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c STAT.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c SURFCE2.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c TRNSEG.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c TRNSGD.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c TRPAUS.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c TTBLEX.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c WDIR.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c WETBULB.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c P2FILTF.f
+mpif90 -mcmodel=medium -Mlarge_arrays  -c P2FLTVF.f
+mpif90 -mcmodel=medium -Mlarge_arrays -o ../../../exe/etapost_new.x BLOSFC2.o    BNDLYR2.o   BOUND.o BOUNDL.o CALCAPE.o  CALDRG.o CALDWP2.o    CALEKM.o    CALEKM2.o  CALHEL.o    CALLCL.o CALMCVG.o    CALMXW.o    CALPOT2.o  CALPW.o     CALRCH.o CALRH2.o     CALSTRM.o   CALTAU.o   CALTHTE.o   CALVIS.o CALVOR.o     CALWXT.o    CALCWI.o   CALQUV.o    CALHPBL.o CETLIH4.o  CHR2INT.o   CLDRAD.o CLMAX.o      COEFI.o     COEFJ.o    COLLECT.o   DEWPOINT.o  DIR.o DIST.o       E2OUT.o     E2TLL.o    EFILL.o     EFILT.o     ETA2P.o ETAFLD2.o  ETAPOST.o EUVGUV.o EXCH.o EXCH2.o EXTEND.o EXTRACT.o FDLVL.o  FILLH.o  FILLV.o  FILTER.o FIXED.o     FRZLVL.o FRZLVL2.o    GD2EG.o     GD2EGK.o   GD2TLL.o    GENBIL.o GETGDEF.o GENEUV.o     GENLL.o      GET_BITS.o GRIBIT.o    H2V.o INITPOST.o   INTERP3.o    LFMFLD.o   LL2EG.o     MINMAX.o MISCLN.o     MIXLEN.o     MPI_FIRST.o MPI_LAST.o NETAL.o NGMFLD2.o NGMSLP2.o NOPACK.o     OTLIFT2.o    OTLFT2.o   OUTPUT.o  OUT_MASKS.o PARA_RANGE.o P2FILT.o P2FLTV.o     POSTDATA.o   PROCESS.o  RDRST2D.o READCNTRL2.o SCLFLD.o     STAT.o    SURFCE2.o  TRNSEG.o    TRNSGD.o TRPAUS.o     TTBLEX.o     WDIR.o WETBULB.o P2FILTF.o P2FLTVF.o  ../../../../libraries/w3lib 
+Compiling ../src/post/copygb
+rm -f copygb.o   *.lst *.i
+mpif90  -c -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess copygb.f
+mpif90  -o ../../../exe/copygb.x copygb.o   ../../../../libraries/w3lib  ../../../../libraries/iplib 
+Compiling ../src/post/post0
+/bin/rm -f  *.lst *.o *.i
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -c HORIZ.f	
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -c POST0.f90	
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -c PTETAE.f	
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess -c VRT_TSLP.f	
+mpif90   -o ../../../exe/post0.x HORIZ.o POST0.o PTETAE.o VRT_TSLP.o
+Compiling ../src/post/sndp
+rm -f BFRHDR.o BFRIZE.o CALHEL.o CALWXT.o SMIX.o SNDPST.o VAP.o WETBLB.o CALVIS.o  *.lst *.i
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o BFRHDR.o BFRHDR.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o BFRIZE.o BFRIZE.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o CALHEL.o CALHEL.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o CALWXT.o CALWXT.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o SMIX.o SMIX.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o SNDPST.o SNDPST.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o VAP.o VAP.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o WETBLB.o WETBLB.f
+mpif90  -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess  -c -o CALVIS.o CALVIS.f
+mpif90   -o ../../../exe/sndp.x BFRHDR.o BFRIZE.o CALHEL.o CALWXT.o SMIX.o SNDPST.o VAP.o WETBLB.o CALVIS.o  ../../../../libraries/w3lib ../../../../libraries/bufrlib 
+Compiling ../src/post/staids
+rm -f STALST.o *.lst *.i
+mpif90  -c -static-nvidia -mcmodel=medium -Mlarge_arrays -DLITTLE -Mpreprocess STALST.f
+mpif90  -o ../../../exe/staids.x STALST.o
+Compiling ../src/post/profile
+make: Nothing to be done for `clean'.
+mpif90  parmeta.f90 profile.f90 -o ../../../exe/profile.x
+rm -f  *.o *.mod
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/post/profile
+Compiling ../src/post/latlon2ll
+Compiling variables.f90
+Compiling constants.f90
+Compiling TQadj.f90
+Compiling thetae.f90
+Compiling reform_2d3d.f90

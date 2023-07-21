@@ -1,0 +1,2667 @@
+
+;; Function e2tll (e2tll_, funcdef_no=0, decl_uid=3772, cgraph_uid=0, symbol_order=0)
+
+e2tll (real(kind=4)[29631] * restrict htlat, real(kind=4)[29631] * restrict htlon, real(kind=4)[29631] * restrict vtlat, real(kind=4)[29631] * restrict vtlon)
+{
+  logical(kind=4) D.3828;
+  logical(kind=4) D.3825;
+  logical(kind=4) D.3822;
+  logical(kind=4) D.3819;
+  real(kind=4) wbd;
+  real(kind=4) sbd;
+  integer(kind=4) j;
+  integer(kind=4) i;
+  real(kind=4) elon;
+  real(kind=4) elat;
+  static real(kind=4) tanph0 [value-expr: egrid.tanph0];
+  static real(kind=4) sinph0 [value-expr: egrid.sinph0];
+  static real(kind=4) cosph0 [value-expr: egrid.cosph0];
+  static real(kind=4) lam0 [value-expr: egrid.lam0];
+  static real(kind=4) phi0 [value-expr: egrid.phi0];
+  static integer(kind=4) jdim [value-expr: egrid.jdim];
+  static integer(kind=4) idim [value-expr: egrid.idim];
+  static real(kind=4) xmeshl [value-expr: egrid.xmeshl];
+  static real(kind=4) dlam [value-expr: egrid.dlam];
+  static real(kind=4) polej [value-expr: egrid.polej];
+  static real(kind=4) wlonc [value-expr: egrid.wlonc];
+  static real(kind=4) polei [value-expr: egrid.polei];
+  static real(kind=4) dphi [value-expr: egrid.dphi];
+  static real(kind=4) alonvt [value-expr: egrid.alonvt];
+  static real(kind=4) ylatc [value-expr: egrid.ylatc];
+  static logical(kind=4) north [value-expr: egrid.north];
+  real(kind=4) _1;
+  real(kind=4) _2;
+  real(kind=4) _3;
+  real(kind=4) _4;
+  real(kind=4) _5;
+  real(kind=4) _6;
+  integer(kind=4) _7;
+  integer(kind=4) _8;
+  real(kind=4) _9;
+  real(kind=4) _10;
+  real(kind=4) _11;
+  real(kind=4) _12;
+  real(kind=4) _13;
+  real(kind=4) _14;
+  integer(kind=4) _15;
+  real(kind=4) _16;
+  real(kind=4) _17;
+  real(kind=4) _18;
+  real(kind=4) _19;
+  real(kind=4) _20;
+  integer(kind=8) _21;
+  integer(kind=8) _22;
+  integer(kind=8) _23;
+  integer(kind=8) _24;
+  integer(kind=8) _25;
+  integer(kind=8) _26;
+  integer(kind=8) _27;
+  integer(kind=8) _28;
+  integer(kind=8) _29;
+  integer(kind=8) _30;
+  integer(kind=4) _31;
+  real(kind=4) _32;
+  real(kind=4) _33;
+  real(kind=4) _34;
+  real(kind=4) _35;
+  real(kind=4) _36;
+  real(kind=4) _37;
+  integer(kind=4) _38;
+  real(kind=4) _39;
+  real(kind=4) _40;
+  real(kind=4) _41;
+  real(kind=4) _42;
+  real(kind=4) _43;
+  integer(kind=8) _44;
+  integer(kind=8) _45;
+  integer(kind=8) _46;
+  integer(kind=8) _47;
+  integer(kind=8) _48;
+  integer(kind=8) _49;
+  integer(kind=8) _50;
+  integer(kind=8) _51;
+  integer(kind=8) _52;
+  integer(kind=8) _53;
+  logical(kind=4) _68;
+  logical(kind=4) _72;
+  logical(kind=4) _81;
+  logical(kind=4) _85;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = egrid.dlam;
+  _2 = _1 * 1.18e+2;
+  _3 = ((_2));
+  wbd_65 = -_3;
+  _4 = egrid.dphi;
+  _5 = _4 * 1.24e+2;
+  _6 = ((_5));
+  sbd_66 = -_6;
+  j_67 = 1;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                7
+  # j_58 = PHI <j_67(2), j_79(7)>
+  _68 = j_58 > 249;
+  if (_68 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       8
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _7 = j_58 + 1;
+  _8 = _7 % 2;
+  _9 = (real(kind=4)) _8;
+  _10 = egrid.dlam;
+  _11 = _9 * _10;
+  _12 = wbd_65 + _11;
+  _13 = egrid.dlam;
+  _14 = _13 * 2.0e+0;
+  elon_69 = _12 - _14;
+  _15 = j_58 + -1;
+  _16 = (real(kind=4)) _15;
+  _17 = egrid.dphi;
+  _18 = _16 * _17;
+  elat_70 = sbd_66 + _18;
+  i_71 = 1;
+;;    succ:       5
+
+;;   basic block 5, loop depth 2
+;;    pred:       4
+;;                6
+  # elon_54 = PHI <elon_69(4), elon_73(6)>
+  # i_56 = PHI <i_71(4), i_78(6)>
+  _72 = i_56 > 119;
+  if (_72 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       7
+;;                6
+
+;;   basic block 6, loop depth 2
+;;    pred:       5
+  _19 = egrid.dlam;
+  _20 = _19 * 2.0e+0;
+  elon_73 = elon_54 + _20;
+  _21 = (integer(kind=8)) j_58;
+  _22 = _21 * 119;
+  _23 = (integer(kind=8)) i_56;
+  _24 = _22 + _23;
+  _25 = _24 + -120;
+  *htlon_74(D)[_25] = elon_73;
+  _26 = (integer(kind=8)) j_58;
+  _27 = _26 * 119;
+  _28 = (integer(kind=8)) i_56;
+  _29 = _27 + _28;
+  _30 = _29 + -120;
+  *htlat_76(D)[_30] = elat_70;
+  i_78 = i_56 + 1;
+  goto <bb 5>; [INV]
+;;    succ:       5
+
+;;   basic block 7, loop depth 1
+;;    pred:       5
+  j_79 = j_58 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 8, loop depth 0
+;;    pred:       3
+  j_80 = 1;
+;;    succ:       9
+
+;;   basic block 9, loop depth 1
+;;    pred:       8
+;;                13
+  # j_59 = PHI <j_80(8), j_92(13)>
+  _81 = j_59 > 249;
+  if (_81 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       14
+;;                10
+
+;;   basic block 10, loop depth 1
+;;    pred:       9
+  _31 = j_59 % 2;
+  _32 = (real(kind=4)) _31;
+  _33 = egrid.dlam;
+  _34 = _32 * _33;
+  _35 = wbd_65 + _34;
+  _36 = egrid.dlam;
+  _37 = _36 * 2.0e+0;
+  elon_82 = _35 - _37;
+  _38 = j_59 + -1;
+  _39 = (real(kind=4)) _38;
+  _40 = egrid.dphi;
+  _41 = _39 * _40;
+  elat_83 = sbd_66 + _41;
+  i_84 = 1;
+;;    succ:       11
+
+;;   basic block 11, loop depth 2
+;;    pred:       10
+;;                12
+  # elon_55 = PHI <elon_82(10), elon_86(12)>
+  # i_57 = PHI <i_84(10), i_91(12)>
+  _85 = i_57 > 119;
+  if (_85 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       13
+;;                12
+
+;;   basic block 12, loop depth 2
+;;    pred:       11
+  _42 = egrid.dlam;
+  _43 = _42 * 2.0e+0;
+  elon_86 = elon_55 + _43;
+  _44 = (integer(kind=8)) j_59;
+  _45 = _44 * 119;
+  _46 = (integer(kind=8)) i_57;
+  _47 = _45 + _46;
+  _48 = _47 + -120;
+  *vtlon_87(D)[_48] = elon_86;
+  _49 = (integer(kind=8)) j_59;
+  _50 = _49 * 119;
+  _51 = (integer(kind=8)) i_57;
+  _52 = _50 + _51;
+  _53 = _52 + -120;
+  *vtlat_89(D)[_53] = elat_83;
+  i_91 = i_57 + 1;
+  goto <bb 11>; [INV]
+;;    succ:       11
+
+;;   basic block 13, loop depth 1
+;;    pred:       11
+  j_92 = j_59 + 1;
+  goto <bb 9>; [INV]
+;;    succ:       9
+
+;;   basic block 14, loop depth 0
+;;    pred:       9
+;;    succ:       15
+
+;;   basic block 15, loop depth 0
+;;    pred:       14
+<L16>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 16 (_16 - 16 )
+Partition 17 (_17 - 17 )
+Partition 18 (_18 - 18 )
+Partition 19 (_19 - 19 )
+Partition 20 (_20 - 20 )
+Partition 21 (_21 - 21 )
+Partition 22 (_22 - 22 )
+Partition 23 (_23 - 23 )
+Partition 24 (_24 - 24 )
+Partition 25 (_25 - 25 )
+Partition 26 (_26 - 26 )
+Partition 27 (_27 - 27 )
+Partition 28 (_28 - 28 )
+Partition 29 (_29 - 29 )
+Partition 30 (_30 - 30 )
+Partition 31 (_31 - 31 )
+Partition 32 (_32 - 32 )
+Partition 33 (_33 - 33 )
+Partition 34 (_34 - 34 )
+Partition 35 (_35 - 35 )
+Partition 36 (_36 - 36 )
+Partition 37 (_37 - 37 )
+Partition 38 (_38 - 38 )
+Partition 39 (_39 - 39 )
+Partition 40 (_40 - 40 )
+Partition 41 (_41 - 41 )
+Partition 42 (_42 - 42 )
+Partition 43 (_43 - 43 )
+Partition 44 (_44 - 44 )
+Partition 45 (_45 - 45 )
+Partition 46 (_46 - 46 )
+Partition 47 (_47 - 47 )
+Partition 48 (_48 - 48 )
+Partition 49 (_49 - 49 )
+Partition 50 (_50 - 50 )
+Partition 51 (_51 - 51 )
+Partition 52 (_52 - 52 )
+Partition 53 (_53 - 53 )
+Partition 54 (elon_54 - 54 )
+Partition 55 (elon_55 - 55 )
+Partition 56 (i_56 - 56 )
+Partition 57 (i_57 - 57 )
+Partition 58 (j_58 - 58 )
+Partition 59 (j_59 - 59 )
+Partition 65 (wbd_65 - 65 )
+Partition 66 (sbd_66 - 66 )
+Partition 67 (j_67 - 67 )
+Partition 68 (_68 - 68 )
+Partition 69 (elon_69 - 69 )
+Partition 70 (elat_70 - 70 )
+Partition 71 (i_71 - 71 )
+Partition 72 (_72 - 72 )
+Partition 73 (elon_73 - 73 )
+Partition 74 (htlon_74(D) - 74 )
+Partition 76 (htlat_76(D) - 76 )
+Partition 78 (i_78 - 78 )
+Partition 79 (j_79 - 79 )
+Partition 80 (j_80 - 80 )
+Partition 81 (_81 - 81 )
+Partition 82 (elon_82 - 82 )
+Partition 83 (elat_83 - 83 )
+Partition 84 (i_84 - 84 )
+Partition 85 (_85 - 85 )
+Partition 86 (elon_86 - 86 )
+Partition 87 (vtlon_87(D) - 87 )
+Partition 89 (vtlat_89(D) - 89 )
+Partition 91 (i_91 - 91 )
+Partition 92 (j_92 - 92 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (elon_54 - 54 55 69 73 82 86 )
+Partition 2, base 1 (i_56 - 56 57 71 78 84 91 )
+Partition 4, base 2 (j_58 - 58 59 67 79 80 92 )
+Partition 8, base 3 (elat_70 - 70 83 )
+Partition 11, base 4 (htlon_74(D) - 74 )
+Partition 12, base 5 (htlat_76(D) - 76 )
+Partition 20, base 6 (vtlon_87(D) - 87 )
+Partition 21, base 7 (vtlat_89(D) - 89 )
+
+
+Partition map 
+
+Partition 0 (elon_54 - 54 )
+Partition 1 (elon_55 - 55 )
+Partition 2 (i_56 - 56 )
+Partition 3 (i_57 - 57 )
+Partition 4 (j_58 - 58 )
+Partition 5 (j_59 - 59 )
+Partition 6 (j_67 - 67 )
+Partition 7 (elon_69 - 69 )
+Partition 8 (elat_70 - 70 )
+Partition 9 (i_71 - 71 )
+Partition 10 (elon_73 - 73 )
+Partition 11 (htlon_74(D) - 74 )
+Partition 12 (htlat_76(D) - 76 )
+Partition 13 (i_78 - 78 )
+Partition 14 (j_79 - 79 )
+Partition 15 (j_80 - 80 )
+Partition 16 (elon_82 - 82 )
+Partition 17 (elat_83 - 83 )
+Partition 18 (i_84 - 84 )
+Partition 19 (elon_86 - 86 )
+Partition 20 (vtlon_87(D) - 87 )
+Partition 21 (vtlat_89(D) - 89 )
+Partition 22 (i_91 - 91 )
+Partition 23 (j_92 - 92 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) j_58 <-> j_67
+(2147483646, 0) j_58 <-> j_79
+(2147483646, 0) elon_54 <-> elon_69
+(2147483646, 0) elon_54 <-> elon_73
+(2147483646, 0) i_56 <-> i_71
+(2147483646, 0) i_56 <-> i_78
+(2147483646, 0) elon_54 <-> elon_55
+(2147483646, 0) i_56 <-> i_57
+(2147483646, 0) j_58 <-> j_59
+(2147483646, 0) j_58 <-> j_80
+(2147483646, 0) elon_54 <-> elon_82
+(2147483646, 0) elat_70 <-> elat_83
+(2147483646, 0) i_56 <-> i_84
+(2147483646, 0) elon_54 <-> elon_86
+(2147483646, 0) i_56 <-> i_91
+(2147483646, 0) j_58 <-> j_92
+(10000, 0) j_59 <-> j_80
+(10000, 0) j_59 <-> j_92
+(10000, 0) elon_55 <-> elon_82
+(10000, 0) elon_55 <-> elon_86
+(10000, 0) i_57 <-> i_84
+(10000, 0) i_57 <-> i_91
+
+Partition map 
+
+Partition 0 (elon_54 - 54 )
+Partition 1 (elon_55 - 55 )
+Partition 2 (i_56 - 56 )
+Partition 3 (i_57 - 57 )
+Partition 4 (j_58 - 58 )
+Partition 5 (j_59 - 59 )
+Partition 6 (j_67 - 67 )
+Partition 7 (elon_69 - 69 )
+Partition 8 (elat_70 - 70 )
+Partition 9 (i_71 - 71 )
+Partition 10 (elon_73 - 73 )
+Partition 11 (htlon_74(D) - 74 )
+Partition 12 (htlat_76(D) - 76 )
+Partition 13 (i_78 - 78 )
+Partition 14 (j_79 - 79 )
+Partition 15 (j_80 - 80 )
+Partition 16 (elon_82 - 82 )
+Partition 17 (elat_83 - 83 )
+Partition 18 (i_84 - 84 )
+Partition 19 (elon_86 - 86 )
+Partition 20 (vtlon_87(D) - 87 )
+Partition 21 (vtlat_89(D) - 89 )
+Partition 22 (i_91 - 91 )
+Partition 23 (j_92 - 92 )
+
+Coalesce list: (58)j_58 & (67)j_67 [map: 4, 6] : Success -> 4
+Coalesce list: (58)j_58 & (79)j_79 [map: 4, 14] : Success -> 4
+Coalesce list: (54)elon_54 & (69)elon_69 [map: 0, 7] : Success -> 0
+Coalesce list: (54)elon_54 & (73)elon_73 [map: 0, 10] : Success -> 0
+Coalesce list: (56)i_56 & (71)i_71 [map: 2, 9] : Success -> 2
+Coalesce list: (56)i_56 & (78)i_78 [map: 2, 13] : Success -> 2
+Coalesce list: (54)elon_54 & (55)elon_55 [map: 0, 1] : Success -> 0
+Coalesce list: (56)i_56 & (57)i_57 [map: 2, 3] : Success -> 2
+Coalesce list: (58)j_58 & (59)j_59 [map: 4, 5] : Success -> 4
+Coalesce list: (58)j_58 & (80)j_80 [map: 4, 15] : Success -> 4
+Coalesce list: (54)elon_54 & (82)elon_82 [map: 0, 16] : Success -> 0
+Coalesce list: (70)elat_70 & (83)elat_83 [map: 8, 17] : Success -> 8
+Coalesce list: (56)i_56 & (84)i_84 [map: 2, 18] : Success -> 2
+Coalesce list: (54)elon_54 & (86)elon_86 [map: 0, 19] : Success -> 0
+Coalesce list: (56)i_56 & (91)i_91 [map: 2, 22] : Success -> 2
+Coalesce list: (58)j_58 & (92)j_92 [map: 4, 23] : Success -> 4
+Coalesce list: (59)j_58 & (80)j_58: Already Coalesced.
+Coalesce list: (59)j_58 & (92)j_58: Already Coalesced.
+Coalesce list: (55)elon_54 & (82)elon_54: Already Coalesced.
+Coalesce list: (55)elon_54 & (86)elon_54: Already Coalesced.
+Coalesce list: (57)i_56 & (84)i_56: Already Coalesced.
+Coalesce list: (57)i_56 & (91)i_56: Already Coalesced.
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (_13 - 13 )
+Partition 13 (_14 - 14 )
+Partition 14 (_15 - 15 )
+Partition 15 (_16 - 16 )
+Partition 16 (_17 - 17 )
+Partition 17 (_18 - 18 )
+Partition 18 (_19 - 19 )
+Partition 19 (_20 - 20 )
+Partition 20 (_21 - 21 )
+Partition 21 (_22 - 22 )
+Partition 22 (_23 - 23 )
+Partition 23 (_24 - 24 )
+Partition 24 (_25 - 25 )
+Partition 25 (_26 - 26 )
+Partition 26 (_27 - 27 )
+Partition 27 (_28 - 28 )
+Partition 28 (_29 - 29 )
+Partition 29 (_30 - 30 )
+Partition 30 (_31 - 31 )
+Partition 31 (_32 - 32 )
+Partition 32 (_33 - 33 )
+Partition 33 (_34 - 34 )
+Partition 34 (_35 - 35 )
+Partition 35 (_36 - 36 )
+Partition 36 (_37 - 37 )
+Partition 37 (_38 - 38 )
+Partition 38 (_39 - 39 )
+Partition 39 (_40 - 40 )
+Partition 40 (_41 - 41 )
+Partition 41 (_42 - 42 )
+Partition 42 (_43 - 43 )
+Partition 43 (_44 - 44 )
+Partition 44 (_45 - 45 )
+Partition 45 (_46 - 46 )
+Partition 46 (_47 - 47 )
+Partition 47 (_48 - 48 )
+Partition 48 (_49 - 49 )
+Partition 49 (_50 - 50 )
+Partition 50 (_51 - 51 )
+Partition 51 (_52 - 52 )
+Partition 52 (_53 - 53 )
+Partition 53 (elon_54 - 54 55 69 73 82 86 )
+Partition 54 (i_56 - 56 57 71 78 84 91 )
+Partition 55 (j_58 - 58 59 67 79 80 92 )
+Partition 56 (wbd_65 - 65 )
+Partition 57 (sbd_66 - 66 )
+Partition 58 (_68 - 68 )
+Partition 59 (elat_70 - 70 83 )
+Partition 60 (_72 - 72 )
+Partition 61 (htlon_74(D) - 74 )
+Partition 62 (htlat_76(D) - 76 )
+Partition 63 (_81 - 81 )
+Partition 64 (_85 - 85 )
+Partition 65 (vtlon_87(D) - 87 )
+Partition 66 (vtlat_89(D) - 89 )
+
+e2tll (real(kind=4)[29631] * restrict htlat, real(kind=4)[29631] * restrict htlon, real(kind=4)[29631] * restrict vtlat, real(kind=4)[29631] * restrict vtlon)
+{
+  logical(kind=4) D.3828;
+  logical(kind=4) D.3825;
+  logical(kind=4) D.3822;
+  logical(kind=4) D.3819;
+  real(kind=4) wbd;
+  real(kind=4) sbd;
+  integer(kind=4) j;
+  integer(kind=4) i;
+  real(kind=4) elon;
+  real(kind=4) elat;
+  static real(kind=4) tanph0 [value-expr: egrid.tanph0];
+  static real(kind=4) sinph0 [value-expr: egrid.sinph0];
+  static real(kind=4) cosph0 [value-expr: egrid.cosph0];
+  static real(kind=4) lam0 [value-expr: egrid.lam0];
+  static real(kind=4) phi0 [value-expr: egrid.phi0];
+  static integer(kind=4) jdim [value-expr: egrid.jdim];
+  static integer(kind=4) idim [value-expr: egrid.idim];
+  static real(kind=4) xmeshl [value-expr: egrid.xmeshl];
+  static real(kind=4) dlam [value-expr: egrid.dlam];
+  static real(kind=4) polej [value-expr: egrid.polej];
+  static real(kind=4) wlonc [value-expr: egrid.wlonc];
+  static real(kind=4) polei [value-expr: egrid.polei];
+  static real(kind=4) dphi [value-expr: egrid.dphi];
+  static real(kind=4) alonvt [value-expr: egrid.alonvt];
+  static real(kind=4) ylatc [value-expr: egrid.ylatc];
+  static logical(kind=4) north [value-expr: egrid.north];
+  real(kind=4) _1;
+  real(kind=4) _2;
+  real(kind=4) _3;
+  real(kind=4) _4;
+  real(kind=4) _5;
+  real(kind=4) _6;
+  integer(kind=4) _7;
+  integer(kind=4) _8;
+  real(kind=4) _9;
+  real(kind=4) _10;
+  real(kind=4) _11;
+  real(kind=4) _12;
+  real(kind=4) _13;
+  real(kind=4) _14;
+  integer(kind=4) _15;
+  real(kind=4) _16;
+  real(kind=4) _17;
+  real(kind=4) _18;
+  real(kind=4) _19;
+  real(kind=4) _20;
+  integer(kind=8) _21;
+  integer(kind=8) _22;
+  integer(kind=8) _23;
+  integer(kind=8) _24;
+  integer(kind=8) _25;
+  integer(kind=8) _26;
+  integer(kind=8) _27;
+  integer(kind=8) _28;
+  integer(kind=8) _29;
+  integer(kind=8) _30;
+  integer(kind=4) _31;
+  real(kind=4) _32;
+  real(kind=4) _33;
+  real(kind=4) _34;
+  real(kind=4) _35;
+  real(kind=4) _36;
+  real(kind=4) _37;
+  integer(kind=4) _38;
+  real(kind=4) _39;
+  real(kind=4) _40;
+  real(kind=4) _41;
+  real(kind=4) _42;
+  real(kind=4) _43;
+  integer(kind=8) _44;
+  integer(kind=8) _45;
+  integer(kind=8) _46;
+  integer(kind=8) _47;
+  integer(kind=8) _48;
+  integer(kind=8) _49;
+  integer(kind=8) _50;
+  integer(kind=8) _51;
+  integer(kind=8) _52;
+  integer(kind=8) _53;
+  logical(kind=4) _68;
+  logical(kind=4) _72;
+  logical(kind=4) _81;
+  logical(kind=4) _85;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = egrid.dlam;
+  _2 = _1 * 1.18e+2;
+  _3 = ((_2));
+  wbd_65 = -_3;
+  _4 = egrid.dphi;
+  _5 = _4 * 1.24e+2;
+  _6 = ((_5));
+  sbd_66 = -_6;
+  j_67 = 1;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                7
+  # j_58 = PHI <j_67(2), j_79(7)>
+  _68 = j_58 > 249;
+  if (_68 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       8
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _7 = j_58 + 1;
+  _8 = _7 % 2;
+  _9 = (real(kind=4)) _8;
+  _10 = egrid.dlam;
+  _11 = _9 * _10;
+  _12 = wbd_65 + _11;
+  _13 = egrid.dlam;
+  _14 = _13 * 2.0e+0;
+  elon_69 = _12 - _14;
+  _15 = j_58 + -1;
+  _16 = (real(kind=4)) _15;
+  _17 = egrid.dphi;
+  _18 = _16 * _17;
+  elat_70 = sbd_66 + _18;
+  i_71 = 1;
+;;    succ:       5
+
+;;   basic block 5, loop depth 2
+;;    pred:       4
+;;                6
+  # elon_54 = PHI <elon_69(4), elon_73(6)>
+  # i_56 = PHI <i_71(4), i_78(6)>
+  _72 = i_56 > 119;
+  if (_72 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+;;    succ:       7
+;;                6
+
+;;   basic block 6, loop depth 2
+;;    pred:       5
+  _19 = egrid.dlam;
+  _20 = _19 * 2.0e+0;
+  elon_73 = elon_54 + _20;
+  _21 = (integer(kind=8)) j_58;
+  _22 = _21 * 119;
+  _23 = (integer(kind=8)) i_56;
+  _24 = _22 + _23;
+  _25 = _24 + -120;
+  *htlon_74(D)[_25] = elon_73;
+  _26 = (integer(kind=8)) j_58;
+  _27 = _26 * 119;
+  _28 = (integer(kind=8)) i_56;
+  _29 = _27 + _28;
+  _30 = _29 + -120;
+  *htlat_76(D)[_30] = elat_70;
+  i_78 = i_56 + 1;
+  goto <bb 5>; [INV]
+;;    succ:       5
+
+;;   basic block 7, loop depth 1
+;;    pred:       5
+  j_79 = j_58 + 1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 8, loop depth 0
+;;    pred:       3
+  j_80 = 1;
+;;    succ:       9
+
+;;   basic block 9, loop depth 1
+;;    pred:       8
+;;                13
+  # j_59 = PHI <j_80(8), j_92(13)>
+  _81 = j_59 > 249;
+  if (_81 != 0)
+    goto <bb 14>; [INV]
+  else
+    goto <bb 10>; [INV]
+;;    succ:       14
+;;                10
+
+;;   basic block 10, loop depth 1
+;;    pred:       9
+  _31 = j_59 % 2;
+  _32 = (real(kind=4)) _31;
+  _33 = egrid.dlam;
+  _34 = _32 * _33;
+  _35 = wbd_65 + _34;
+  _36 = egrid.dlam;
+  _37 = _36 * 2.0e+0;
+  elon_82 = _35 - _37;
+  _38 = j_59 + -1;
+  _39 = (real(kind=4)) _38;
+  _40 = egrid.dphi;
+  _41 = _39 * _40;
+  elat_83 = sbd_66 + _41;
+  i_84 = 1;
+;;    succ:       11
+
+;;   basic block 11, loop depth 2
+;;    pred:       10
+;;                12
+  # elon_55 = PHI <elon_82(10), elon_86(12)>
+  # i_57 = PHI <i_84(10), i_91(12)>
+  _85 = i_57 > 119;
+  if (_85 != 0)
+    goto <bb 13>; [INV]
+  else
+    goto <bb 12>; [INV]
+;;    succ:       13
+;;                12
+
+;;   basic block 12, loop depth 2
+;;    pred:       11
+  _42 = egrid.dlam;
+  _43 = _42 * 2.0e+0;
+  elon_86 = elon_55 + _43;
+  _44 = (integer(kind=8)) j_59;
+  _45 = _44 * 119;
+  _46 = (integer(kind=8)) i_57;
+  _47 = _45 + _46;
+  _48 = _47 + -120;
+  *vtlon_87(D)[_48] = elon_86;
+  _49 = (integer(kind=8)) j_59;
+  _50 = _49 * 119;
+  _51 = (integer(kind=8)) i_57;
+  _52 = _50 + _51;
+  _53 = _52 + -120;
+  *vtlat_89(D)[_53] = elat_83;
+  i_91 = i_57 + 1;
+  goto <bb 11>; [INV]
+;;    succ:       11
+
+;;   basic block 13, loop depth 1
+;;    pred:       11
+  j_92 = j_59 + 1;
+  goto <bb 9>; [INV]
+;;    succ:       9
+
+;;   basic block 14, loop depth 0
+;;    pred:       9
+;;    succ:       15
+
+;;   basic block 15, loop depth 0
+;;    pred:       14
+<L16>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = egrid.dlam;
+
+(insn 9 8 0 (set (reg:SF 87 [ _1 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _2 = _1 * 1.18e+2;
+
+(insn 10 9 11 (set (reg:SF 144)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.18e+2 [0x0.ecp+7])
+        (nil)))
+
+(insn 11 10 0 (set (reg:SF 88 [ _2 ])
+        (mult:SF (reg:SF 87 [ _1 ])
+            (reg:SF 144))) "E2TLL.f":66 -1
+     (nil))
+
+;; _3 = ((_2));
+
+(insn 12 11 0 (set (reg:SF 89 [ _3 ])
+        (reg:SF 88 [ _2 ])) "E2TLL.f":66 -1
+     (nil))
+
+;; wbd_65 = -_3;
+
+(insn 13 12 14 (set (reg:V4SF 146)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S16 A128])) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+
+(insn 14 13 15 (parallel [
+            (set (reg:SF 145)
+                (neg:SF (reg:SF 89 [ _3 ])))
+            (use (reg:V4SF 146))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (neg:SF (reg:SF 89 [ _3 ]))
+        (nil)))
+
+(insn 15 14 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32])
+        (reg:SF 145)) "E2TLL.f":66 -1
+     (nil))
+
+;; _4 = egrid.dphi;
+
+(insn 16 15 0 (set (reg:SF 90 [ _4 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+
+;; _5 = _4 * 1.24e+2;
+
+(insn 17 16 18 (set (reg:SF 147)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.24e+2 [0x0.f8p+7])
+        (nil)))
+
+(insn 18 17 0 (set (reg:SF 91 [ _5 ])
+        (mult:SF (reg:SF 90 [ _4 ])
+            (reg:SF 147))) "E2TLL.f":67 -1
+     (nil))
+
+;; _6 = ((_5));
+
+(insn 19 18 0 (set (reg:SF 92 [ _6 ])
+        (reg:SF 91 [ _5 ])) "E2TLL.f":67 -1
+     (nil))
+
+;; sbd_66 = -_6;
+
+(insn 20 19 21 (set (reg:V4SF 149)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S16 A128])) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+
+(insn 21 20 22 (parallel [
+            (set (reg:SF 148)
+                (neg:SF (reg:SF 92 [ _6 ])))
+            (use (reg:V4SF 149))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (neg:SF (reg:SF 92 [ _6 ]))
+        (nil)))
+
+(insn 22 21 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])
+        (reg:SF 148)) "E2TLL.f":67 -1
+     (nil))
+
+;; j_67 = 1;
+
+(insn 23 22 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":72 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; _68 = j_58 > 249;
+
+(insn 25 24 26 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":72 -1
+     (nil))
+
+(insn 26 25 27 (set (reg:QI 150)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":72 -1
+     (nil))
+
+(insn 27 26 0 (set (reg:SI 140 [ _68 ])
+        (zero_extend:SI (reg:QI 150))) "E2TLL.f":72 -1
+     (nil))
+
+;; if (_68 != 0)
+
+(insn 28 27 29 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 140 [ _68 ])
+            (const_int 0 [0]))) "E2TLL.f":72 -1
+     (nil))
+
+(jump_insn 29 28 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "E2TLL.f":72 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _7 = j_58 + 1;
+
+(insn 31 30 32 (set (reg:SI 151)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":73 -1
+     (nil))
+
+(insn 32 31 0 (parallel [
+            (set (reg:SI 93 [ _7 ])
+                (plus:SI (reg:SI 151)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+
+;; _8 = _7 % 2;
+
+(insn 33 32 34 (parallel [
+            (set (reg:SI 152)
+                (ashiftrt:SI (reg:SI 93 [ _7 ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+
+(insn 34 33 35 (parallel [
+            (set (reg:SI 153)
+                (lshiftrt:SI (reg:SI 152)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+
+(insn 35 34 36 (parallel [
+            (set (reg:SI 154)
+                (plus:SI (reg:SI 93 [ _7 ])
+                    (reg:SI 153)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+
+(insn 36 35 37 (parallel [
+            (set (reg:SI 155)
+                (and:SI (reg:SI 154)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+
+(insn 37 36 38 (parallel [
+            (set (reg:SI 156)
+                (minus:SI (reg:SI 155)
+                    (reg:SI 153)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+
+(insn 38 37 0 (set (reg:SI 94 [ _8 ])
+        (reg:SI 156)) "E2TLL.f":73 -1
+     (nil))
+
+;; _9 = (real(kind=4)) _8;
+
+(insn 39 38 0 (set (reg:SF 95 [ _9 ])
+        (float:SF (reg:SI 94 [ _8 ]))) "E2TLL.f":73 -1
+     (nil))
+
+;; _10 = egrid.dlam;
+
+(insn 40 39 0 (set (reg:SF 96 [ _10 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _11 = _9 * _10;
+
+(insn 41 40 0 (set (reg:SF 97 [ _11 ])
+        (mult:SF (reg:SF 95 [ _9 ])
+            (reg:SF 96 [ _10 ]))) "E2TLL.f":73 -1
+     (nil))
+
+;; _12 = wbd_65 + _11;
+
+(insn 42 41 0 (set (reg:SF 98 [ _12 ])
+        (plus:SF (reg:SF 97 [ _11 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":73 -1
+     (nil))
+
+;; _13 = egrid.dlam;
+
+(insn 43 42 0 (set (reg:SF 99 [ _13 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _14 = _13 * 2.0e+0;
+
+(insn 44 43 0 (set (reg:SF 100 [ _14 ])
+        (plus:SF (reg:SF 99 [ _13 ])
+            (reg:SF 99 [ _13 ]))) "E2TLL.f":73 -1
+     (nil))
+
+;; elon_69 = _12 - _14;
+
+(insn 45 44 46 (set (reg:SF 157)
+        (minus:SF (reg:SF 98 [ _12 ])
+            (reg:SF 100 [ _14 ]))) "E2TLL.f":73 -1
+     (nil))
+
+(insn 46 45 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 157)) "E2TLL.f":73 -1
+     (nil))
+
+;; _15 = j_58 + -1;
+
+(insn 47 46 48 (set (reg:SI 158)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":74 -1
+     (nil))
+
+(insn 48 47 0 (parallel [
+            (set (reg:SI 101 [ _15 ])
+                (plus:SI (reg:SI 158)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":74 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+
+;; _16 = (real(kind=4)) _15;
+
+(insn 49 48 0 (set (reg:SF 102 [ _16 ])
+        (float:SF (reg:SI 101 [ _15 ]))) "E2TLL.f":74 -1
+     (nil))
+
+;; _17 = egrid.dphi;
+
+(insn 50 49 0 (set (reg:SF 103 [ _17 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+
+;; _18 = _16 * _17;
+
+(insn 51 50 0 (set (reg:SF 104 [ _18 ])
+        (mult:SF (reg:SF 102 [ _16 ])
+            (reg:SF 103 [ _17 ]))) "E2TLL.f":74 -1
+     (nil))
+
+;; elat_70 = sbd_66 + _18;
+
+(insn 52 51 53 (set (reg:SF 160)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":74 -1
+     (nil))
+
+(insn 53 52 54 (set (reg:SF 159)
+        (plus:SF (reg:SF 160)
+            (reg:SF 104 [ _18 ]))) "E2TLL.f":74 -1
+     (nil))
+
+(insn 54 53 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 159)) "E2TLL.f":74 -1
+     (nil))
+
+;; i_71 = 1;
+
+(insn 55 54 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":75 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; _72 = i_56 > 119;
+
+(insn 57 56 58 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":75 -1
+     (nil))
+
+(insn 58 57 59 (set (reg:QI 161)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":75 -1
+     (nil))
+
+(insn 59 58 0 (set (reg:SI 141 [ _72 ])
+        (zero_extend:SI (reg:QI 161))) "E2TLL.f":75 -1
+     (nil))
+
+;; if (_72 != 0)
+
+(insn 60 59 61 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 141 [ _72 ])
+            (const_int 0 [0]))) "E2TLL.f":75 -1
+     (nil))
+
+(jump_insn 61 60 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "E2TLL.f":75 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; _19 = egrid.dlam;
+
+(insn 63 62 0 (set (reg:SF 105 [ _19 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _20 = _19 * 2.0e+0;
+
+(insn 64 63 0 (set (reg:SF 106 [ _20 ])
+        (plus:SF (reg:SF 105 [ _19 ])
+            (reg:SF 105 [ _19 ]))) "E2TLL.f":76 -1
+     (nil))
+
+;; elon_73 = elon_54 + _20;
+
+(insn 65 64 66 (set (reg:SF 163)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":76 -1
+     (nil))
+
+(insn 66 65 67 (set (reg:SF 162)
+        (plus:SF (reg:SF 163)
+            (reg:SF 106 [ _20 ]))) "E2TLL.f":76 -1
+     (nil))
+
+(insn 67 66 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 162)) "E2TLL.f":76 -1
+     (nil))
+
+;; _21 = (integer(kind=8)) j_58;
+
+(insn 68 67 69 (set (reg:SI 164)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+
+(insn 69 68 0 (set (reg:DI 107 [ _21 ])
+        (sign_extend:DI (reg:SI 164))) "E2TLL.f":77 -1
+     (nil))
+
+;; _22 = _21 * 119;
+
+(insn 70 69 0 (parallel [
+            (set (reg:DI 108 [ _22 ])
+                (mult:DI (reg:DI 107 [ _21 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+
+;; _23 = (integer(kind=8)) i_56;
+
+(insn 71 70 72 (set (reg:SI 165)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+
+(insn 72 71 0 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 165))) "E2TLL.f":77 -1
+     (nil))
+
+;; _24 = _22 + _23;
+
+(insn 73 72 0 (parallel [
+            (set (reg:DI 110 [ _24 ])
+                (plus:DI (reg:DI 108 [ _22 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+
+;; _25 = _24 + -120;
+
+(insn 74 73 0 (parallel [
+            (set (reg:DI 111 [ _25 ])
+                (plus:DI (reg:DI 110 [ _24 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+
+;; *htlon_74(D)[_25] = elon_73;
+
+(insn 75 74 76 (set (reg/f:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 htlon+0 S8 A64])) "E2TLL.f":77 -1
+     (nil))
+
+(insn 76 75 77 (set (reg:SF 167)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+
+(insn 77 76 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 111 [ _25 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 166)) [1 *htlon_74(D) S4 A32])
+        (reg:SF 167)) "E2TLL.f":77 -1
+     (nil))
+
+;; _26 = (integer(kind=8)) j_58;
+
+(insn 78 77 79 (set (reg:SI 168)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+
+(insn 79 78 0 (set (reg:DI 112 [ _26 ])
+        (sign_extend:DI (reg:SI 168))) "E2TLL.f":78 -1
+     (nil))
+
+;; _27 = _26 * 119;
+
+(insn 80 79 0 (parallel [
+            (set (reg:DI 113 [ _27 ])
+                (mult:DI (reg:DI 112 [ _26 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+
+;; _28 = (integer(kind=8)) i_56;
+
+(insn 81 80 82 (set (reg:SI 169)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+
+(insn 82 81 0 (set (reg:DI 114 [ _28 ])
+        (sign_extend:DI (reg:SI 169))) "E2TLL.f":78 -1
+     (nil))
+
+;; _29 = _27 + _28;
+
+(insn 83 82 0 (parallel [
+            (set (reg:DI 115 [ _29 ])
+                (plus:DI (reg:DI 113 [ _27 ])
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+
+;; _30 = _29 + -120;
+
+(insn 84 83 0 (parallel [
+            (set (reg:DI 116 [ _30 ])
+                (plus:DI (reg:DI 115 [ _29 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+
+;; *htlat_76(D)[_30] = elat_70;
+
+(insn 85 84 86 (set (reg/f:DI 170)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 htlat+0 S8 A64])) "E2TLL.f":78 -1
+     (nil))
+
+(insn 86 85 87 (set (reg:SF 171)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+
+(insn 87 86 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 116 [ _30 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 170)) [1 *htlat_76(D) S4 A32])
+        (reg:SF 171)) "E2TLL.f":78 -1
+     (nil))
+
+;; i_78 = i_56 + 1;
+
+(insn 88 87 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":75 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 92 91 93 3 (nil) [0 uses])
+
+(note 93 92 0 NOTE_INSN_BASIC_BLOCK)
+
+;; j_79 = j_58 + 1;
+
+(insn 94 93 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":72 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 98 97 99 2 (nil) [0 uses])
+
+(note 99 98 0 NOTE_INSN_BASIC_BLOCK)
+
+;; j_80 = 1;
+
+(insn 100 99 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":85 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; _81 = j_59 > 249;
+
+(insn 102 101 103 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":85 -1
+     (nil))
+
+(insn 103 102 104 (set (reg:QI 172)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":85 -1
+     (nil))
+
+(insn 104 103 0 (set (reg:SI 142 [ _81 ])
+        (zero_extend:SI (reg:QI 172))) "E2TLL.f":85 -1
+     (nil))
+
+;; if (_81 != 0)
+
+(insn 105 104 106 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 142 [ _81 ])
+            (const_int 0 [0]))) "E2TLL.f":85 -1
+     (nil))
+
+(jump_insn 106 105 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "E2TLL.f":85 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 10
+
+;; _31 = j_59 % 2;
+
+(insn 108 107 109 (set (reg:SI 173)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":86 -1
+     (nil))
+
+(insn 109 108 110 (parallel [
+            (set (reg:SI 174)
+                (ashiftrt:SI (reg:SI 173)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+
+(insn 110 109 111 (parallel [
+            (set (reg:SI 175)
+                (lshiftrt:SI (reg:SI 174)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+
+(insn 111 110 112 (parallel [
+            (set (reg:SI 176)
+                (plus:SI (reg:SI 173)
+                    (reg:SI 175)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+
+(insn 112 111 113 (parallel [
+            (set (reg:SI 177)
+                (and:SI (reg:SI 176)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+
+(insn 113 112 114 (parallel [
+            (set (reg:SI 178)
+                (minus:SI (reg:SI 177)
+                    (reg:SI 175)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+
+(insn 114 113 0 (set (reg:SI 117 [ _31 ])
+        (reg:SI 178)) "E2TLL.f":86 -1
+     (nil))
+
+;; _32 = (real(kind=4)) _31;
+
+(insn 115 114 0 (set (reg:SF 118 [ _32 ])
+        (float:SF (reg:SI 117 [ _31 ]))) "E2TLL.f":86 -1
+     (nil))
+
+;; _33 = egrid.dlam;
+
+(insn 116 115 0 (set (reg:SF 119 [ _33 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _34 = _32 * _33;
+
+(insn 117 116 0 (set (reg:SF 120 [ _34 ])
+        (mult:SF (reg:SF 118 [ _32 ])
+            (reg:SF 119 [ _33 ]))) "E2TLL.f":86 -1
+     (nil))
+
+;; _35 = wbd_65 + _34;
+
+(insn 118 117 0 (set (reg:SF 121 [ _35 ])
+        (plus:SF (reg:SF 120 [ _34 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":86 -1
+     (nil))
+
+;; _36 = egrid.dlam;
+
+(insn 119 118 0 (set (reg:SF 122 [ _36 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _37 = _36 * 2.0e+0;
+
+(insn 120 119 0 (set (reg:SF 123 [ _37 ])
+        (plus:SF (reg:SF 122 [ _36 ])
+            (reg:SF 122 [ _36 ]))) "E2TLL.f":86 -1
+     (nil))
+
+;; elon_82 = _35 - _37;
+
+(insn 121 120 122 (set (reg:SF 179)
+        (minus:SF (reg:SF 121 [ _35 ])
+            (reg:SF 123 [ _37 ]))) "E2TLL.f":86 -1
+     (nil))
+
+(insn 122 121 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 179)) "E2TLL.f":86 -1
+     (nil))
+
+;; _38 = j_59 + -1;
+
+(insn 123 122 124 (set (reg:SI 180)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":87 -1
+     (nil))
+
+(insn 124 123 0 (parallel [
+            (set (reg:SI 124 [ _38 ])
+                (plus:SI (reg:SI 180)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":87 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+
+;; _39 = (real(kind=4)) _38;
+
+(insn 125 124 0 (set (reg:SF 125 [ _39 ])
+        (float:SF (reg:SI 124 [ _38 ]))) "E2TLL.f":87 -1
+     (nil))
+
+;; _40 = egrid.dphi;
+
+(insn 126 125 0 (set (reg:SF 126 [ _40 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+
+;; _41 = _39 * _40;
+
+(insn 127 126 0 (set (reg:SF 127 [ _41 ])
+        (mult:SF (reg:SF 125 [ _39 ])
+            (reg:SF 126 [ _40 ]))) "E2TLL.f":87 -1
+     (nil))
+
+;; elat_83 = sbd_66 + _41;
+
+(insn 128 127 129 (set (reg:SF 182)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":87 -1
+     (nil))
+
+(insn 129 128 130 (set (reg:SF 181)
+        (plus:SF (reg:SF 182)
+            (reg:SF 127 [ _41 ]))) "E2TLL.f":87 -1
+     (nil))
+
+(insn 130 129 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 181)) "E2TLL.f":87 -1
+     (nil))
+
+;; i_84 = 1;
+
+(insn 131 130 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":88 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; _85 = i_57 > 119;
+
+(insn 133 132 134 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":88 -1
+     (nil))
+
+(insn 134 133 135 (set (reg:QI 183)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":88 -1
+     (nil))
+
+(insn 135 134 0 (set (reg:SI 143 [ _85 ])
+        (zero_extend:SI (reg:QI 183))) "E2TLL.f":88 -1
+     (nil))
+
+;; if (_85 != 0)
+
+(insn 136 135 137 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 143 [ _85 ])
+            (const_int 0 [0]))) "E2TLL.f":88 -1
+     (nil))
+
+(jump_insn 137 136 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "E2TLL.f":88 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 12
+
+;; _42 = egrid.dlam;
+
+(insn 139 138 0 (set (reg:SF 128 [ _42 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+
+;; _43 = _42 * 2.0e+0;
+
+(insn 140 139 0 (set (reg:SF 129 [ _43 ])
+        (plus:SF (reg:SF 128 [ _42 ])
+            (reg:SF 128 [ _42 ]))) "E2TLL.f":89 -1
+     (nil))
+
+;; elon_86 = elon_55 + _43;
+
+(insn 141 140 142 (set (reg:SF 185)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":89 -1
+     (nil))
+
+(insn 142 141 143 (set (reg:SF 184)
+        (plus:SF (reg:SF 185)
+            (reg:SF 129 [ _43 ]))) "E2TLL.f":89 -1
+     (nil))
+
+(insn 143 142 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 184)) "E2TLL.f":89 -1
+     (nil))
+
+;; _44 = (integer(kind=8)) j_59;
+
+(insn 144 143 145 (set (reg:SI 186)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+
+(insn 145 144 0 (set (reg:DI 130 [ _44 ])
+        (sign_extend:DI (reg:SI 186))) "E2TLL.f":90 -1
+     (nil))
+
+;; _45 = _44 * 119;
+
+(insn 146 145 0 (parallel [
+            (set (reg:DI 131 [ _45 ])
+                (mult:DI (reg:DI 130 [ _44 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+
+;; _46 = (integer(kind=8)) i_57;
+
+(insn 147 146 148 (set (reg:SI 187)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+
+(insn 148 147 0 (set (reg:DI 132 [ _46 ])
+        (sign_extend:DI (reg:SI 187))) "E2TLL.f":90 -1
+     (nil))
+
+;; _47 = _45 + _46;
+
+(insn 149 148 0 (parallel [
+            (set (reg:DI 133 [ _47 ])
+                (plus:DI (reg:DI 131 [ _45 ])
+                    (reg:DI 132 [ _46 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+
+;; _48 = _47 + -120;
+
+(insn 150 149 0 (parallel [
+            (set (reg:DI 134 [ _48 ])
+                (plus:DI (reg:DI 133 [ _47 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+
+;; *vtlon_87(D)[_48] = elon_86;
+
+(insn 151 150 152 (set (reg/f:DI 188)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [3 vtlon+0 S8 A64])) "E2TLL.f":90 -1
+     (nil))
+
+(insn 152 151 153 (set (reg:SF 189)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+
+(insn 153 152 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 134 [ _48 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 188)) [1 *vtlon_87(D) S4 A32])
+        (reg:SF 189)) "E2TLL.f":90 -1
+     (nil))
+
+;; _49 = (integer(kind=8)) j_59;
+
+(insn 154 153 155 (set (reg:SI 190)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+
+(insn 155 154 0 (set (reg:DI 135 [ _49 ])
+        (sign_extend:DI (reg:SI 190))) "E2TLL.f":91 -1
+     (nil))
+
+;; _50 = _49 * 119;
+
+(insn 156 155 0 (parallel [
+            (set (reg:DI 136 [ _50 ])
+                (mult:DI (reg:DI 135 [ _49 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+
+;; _51 = (integer(kind=8)) i_57;
+
+(insn 157 156 158 (set (reg:SI 191)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+
+(insn 158 157 0 (set (reg:DI 137 [ _51 ])
+        (sign_extend:DI (reg:SI 191))) "E2TLL.f":91 -1
+     (nil))
+
+;; _52 = _50 + _51;
+
+(insn 159 158 0 (parallel [
+            (set (reg:DI 138 [ _52 ])
+                (plus:DI (reg:DI 136 [ _50 ])
+                    (reg:DI 137 [ _51 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+
+;; _53 = _52 + -120;
+
+(insn 160 159 0 (parallel [
+            (set (reg:DI 139 [ _53 ])
+                (plus:DI (reg:DI 138 [ _52 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+
+;; *vtlat_89(D)[_53] = elat_83;
+
+(insn 161 160 162 (set (reg/f:DI 192)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 vtlat+0 S8 A64])) "E2TLL.f":91 -1
+     (nil))
+
+(insn 162 161 163 (set (reg:SF 193)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+
+(insn 163 162 0 (set (mem:SF (plus:DI (mult:DI (reg:DI 139 [ _53 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 192)) [1 *vtlat_89(D) S4 A32])
+        (reg:SF 193)) "E2TLL.f":91 -1
+     (nil))
+
+;; i_91 = i_57 + 1;
+
+(insn 164 163 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":88 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 13
+
+;; 
+
+(code_label 168 167 169 7 (nil) [0 uses])
+
+(note 169 168 0 NOTE_INSN_BASIC_BLOCK)
+
+;; j_92 = j_59 + 1;
+
+(insn 170 169 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":85 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 14
+
+;; 
+
+(code_label 174 173 175 6 (nil) [0 uses])
+
+(note 175 174 0 NOTE_INSN_BASIC_BLOCK)
+
+;; Generating RTL for gimple basic block 15
+
+;; <L16>:
+
+(code_label 176 175 177 10 (nil) [0 uses])
+
+(note 177 176 0 NOTE_INSN_BASIC_BLOCK)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 16 into block 15...
+Merged blocks 15 and 16.
+Merged 15 and 16 without moving.
+Merging block 17 into block 15...
+Merged blocks 15 and 17.
+Merged 15 and 17 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 htlat+0 S8 A64])
+        (reg:DI 5 di [ htlat ])) "E2TLL.f":1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 htlon+0 S8 A64])
+        (reg:DI 4 si [ htlon ])) "E2TLL.f":1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 vtlat+0 S8 A64])
+        (reg:DI 1 dx [ vtlat ])) "E2TLL.f":1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [3 vtlon+0 S8 A64])
+        (reg:DI 2 cx [ vtlon ])) "E2TLL.f":1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SF 87 [ _1 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 10 9 11 2 (set (reg:SF 144)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.18e+2 [0x0.ecp+7])
+        (nil)))
+(insn 11 10 12 2 (set (reg:SF 88 [ _2 ])
+        (mult:SF (reg:SF 87 [ _1 ])
+            (reg:SF 144))) "E2TLL.f":66 -1
+     (nil))
+(insn 12 11 13 2 (set (reg:SF 89 [ _3 ])
+        (reg:SF 88 [ _2 ])) "E2TLL.f":66 -1
+     (nil))
+(insn 13 12 14 2 (set (reg:V4SF 146)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S16 A128])) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 14 13 15 2 (parallel [
+            (set (reg:SF 145)
+                (neg:SF (reg:SF 89 [ _3 ])))
+            (use (reg:V4SF 146))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":66 -1
+     (expr_list:REG_EQUAL (neg:SF (reg:SF 89 [ _3 ]))
+        (nil)))
+(insn 15 14 16 2 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32])
+        (reg:SF 145)) "E2TLL.f":66 -1
+     (nil))
+(insn 16 15 17 2 (set (reg:SF 90 [ _4 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+(insn 17 16 18 2 (set (reg:SF 147)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.24e+2 [0x0.f8p+7])
+        (nil)))
+(insn 18 17 19 2 (set (reg:SF 91 [ _5 ])
+        (mult:SF (reg:SF 90 [ _4 ])
+            (reg:SF 147))) "E2TLL.f":67 -1
+     (nil))
+(insn 19 18 20 2 (set (reg:SF 92 [ _6 ])
+        (reg:SF 91 [ _5 ])) "E2TLL.f":67 -1
+     (nil))
+(insn 20 19 21 2 (set (reg:V4SF 149)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S16 A128])) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 21 20 22 2 (parallel [
+            (set (reg:SF 148)
+                (neg:SF (reg:SF 92 [ _6 ])))
+            (use (reg:V4SF 149))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":67 -1
+     (expr_list:REG_EQUAL (neg:SF (reg:SF 92 [ _6 ]))
+        (nil)))
+(insn 22 21 23 2 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])
+        (reg:SF 148)) "E2TLL.f":67 -1
+     (nil))
+(insn 23 22 95 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":72 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              8 (DFS_BACK)
+(code_label 95 23 24 4 5 (nil) [1 uses])
+(note 24 95 25 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":72 -1
+     (nil))
+(insn 26 25 27 4 (set (reg:QI 150)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":72 -1
+     (nil))
+(insn 27 26 28 4 (set (reg:SI 140 [ _68 ])
+        (zero_extend:SI (reg:QI 150))) "E2TLL.f":72 -1
+     (nil))
+(insn 28 27 29 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 140 [ _68 ])
+            (const_int 0 [0]))) "E2TLL.f":72 -1
+     (nil))
+(jump_insn 29 28 30 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 98)
+            (pc))) "E2TLL.f":72 -1
+     (nil)
+ -> 98)
+;;  succ:       9
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 30 29 31 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 32 5 (set (reg:SI 151)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":73 -1
+     (nil))
+(insn 32 31 33 5 (parallel [
+            (set (reg:SI 93 [ _7 ])
+                (plus:SI (reg:SI 151)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 33 32 34 5 (parallel [
+            (set (reg:SI 152)
+                (ashiftrt:SI (reg:SI 93 [ _7 ])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+(insn 34 33 35 5 (parallel [
+            (set (reg:SI 153)
+                (lshiftrt:SI (reg:SI 152)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+(insn 35 34 36 5 (parallel [
+            (set (reg:SI 154)
+                (plus:SI (reg:SI 93 [ _7 ])
+                    (reg:SI 153)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+(insn 36 35 37 5 (parallel [
+            (set (reg:SI 155)
+                (and:SI (reg:SI 154)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+(insn 37 36 38 5 (parallel [
+            (set (reg:SI 156)
+                (minus:SI (reg:SI 155)
+                    (reg:SI 153)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 -1
+     (nil))
+(insn 38 37 39 5 (set (reg:SI 94 [ _8 ])
+        (reg:SI 156)) "E2TLL.f":73 -1
+     (nil))
+(insn 39 38 40 5 (set (reg:SF 95 [ _9 ])
+        (float:SF (reg:SI 94 [ _8 ]))) "E2TLL.f":73 -1
+     (nil))
+(insn 40 39 41 5 (set (reg:SF 96 [ _10 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 41 40 42 5 (set (reg:SF 97 [ _11 ])
+        (mult:SF (reg:SF 95 [ _9 ])
+            (reg:SF 96 [ _10 ]))) "E2TLL.f":73 -1
+     (nil))
+(insn 42 41 43 5 (set (reg:SF 98 [ _12 ])
+        (plus:SF (reg:SF 97 [ _11 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":73 -1
+     (nil))
+(insn 43 42 44 5 (set (reg:SF 99 [ _13 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 44 43 45 5 (set (reg:SF 100 [ _14 ])
+        (plus:SF (reg:SF 99 [ _13 ])
+            (reg:SF 99 [ _13 ]))) "E2TLL.f":73 -1
+     (nil))
+(insn 45 44 46 5 (set (reg:SF 157)
+        (minus:SF (reg:SF 98 [ _12 ])
+            (reg:SF 100 [ _14 ]))) "E2TLL.f":73 -1
+     (nil))
+(insn 46 45 47 5 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 157)) "E2TLL.f":73 -1
+     (nil))
+(insn 47 46 48 5 (set (reg:SI 158)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":74 -1
+     (nil))
+(insn 48 47 49 5 (parallel [
+            (set (reg:SI 101 [ _15 ])
+                (plus:SI (reg:SI 158)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":74 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 49 48 50 5 (set (reg:SF 102 [ _16 ])
+        (float:SF (reg:SI 101 [ _15 ]))) "E2TLL.f":74 -1
+     (nil))
+(insn 50 49 51 5 (set (reg:SF 103 [ _17 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+(insn 51 50 52 5 (set (reg:SF 104 [ _18 ])
+        (mult:SF (reg:SF 102 [ _16 ])
+            (reg:SF 103 [ _17 ]))) "E2TLL.f":74 -1
+     (nil))
+(insn 52 51 53 5 (set (reg:SF 160)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":74 -1
+     (nil))
+(insn 53 52 54 5 (set (reg:SF 159)
+        (plus:SF (reg:SF 160)
+            (reg:SF 104 [ _18 ]))) "E2TLL.f":74 -1
+     (nil))
+(insn 54 53 55 5 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 159)) "E2TLL.f":74 -1
+     (nil))
+(insn 55 54 89 5 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":75 -1
+     (nil))
+;;  succ:       6 (FALLTHRU)
+
+;; basic block 6, loop depth 2, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+;;              7 (DFS_BACK)
+(code_label 89 55 56 6 4 (nil) [1 uses])
+(note 56 89 57 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":75 -1
+     (nil))
+(insn 58 57 59 6 (set (reg:QI 161)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":75 -1
+     (nil))
+(insn 59 58 60 6 (set (reg:SI 141 [ _72 ])
+        (zero_extend:SI (reg:QI 161))) "E2TLL.f":75 -1
+     (nil))
+(insn 60 59 61 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 141 [ _72 ])
+            (const_int 0 [0]))) "E2TLL.f":75 -1
+     (nil))
+(jump_insn 61 60 62 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 92)
+            (pc))) "E2TLL.f":75 -1
+     (nil)
+ -> 92)
+;;  succ:       8
+;;              7 (FALLTHRU)
+
+;; basic block 7, loop depth 2, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6 (FALLTHRU)
+(note 62 61 63 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 7 (set (reg:SF 105 [ _19 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 64 63 65 7 (set (reg:SF 106 [ _20 ])
+        (plus:SF (reg:SF 105 [ _19 ])
+            (reg:SF 105 [ _19 ]))) "E2TLL.f":76 -1
+     (nil))
+(insn 65 64 66 7 (set (reg:SF 163)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":76 -1
+     (nil))
+(insn 66 65 67 7 (set (reg:SF 162)
+        (plus:SF (reg:SF 163)
+            (reg:SF 106 [ _20 ]))) "E2TLL.f":76 -1
+     (nil))
+(insn 67 66 68 7 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 162)) "E2TLL.f":76 -1
+     (nil))
+(insn 68 67 69 7 (set (reg:SI 164)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+(insn 69 68 70 7 (set (reg:DI 107 [ _21 ])
+        (sign_extend:DI (reg:SI 164))) "E2TLL.f":77 -1
+     (nil))
+(insn 70 69 71 7 (parallel [
+            (set (reg:DI 108 [ _22 ])
+                (mult:DI (reg:DI 107 [ _21 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+(insn 71 70 72 7 (set (reg:SI 165)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+(insn 72 71 73 7 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 165))) "E2TLL.f":77 -1
+     (nil))
+(insn 73 72 74 7 (parallel [
+            (set (reg:DI 110 [ _24 ])
+                (plus:DI (reg:DI 108 [ _22 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+(insn 74 73 75 7 (parallel [
+            (set (reg:DI 111 [ _25 ])
+                (plus:DI (reg:DI 110 [ _24 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 -1
+     (nil))
+(insn 75 74 76 7 (set (reg/f:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 htlon+0 S8 A64])) "E2TLL.f":77 -1
+     (nil))
+(insn 76 75 77 7 (set (reg:SF 167)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":77 -1
+     (nil))
+(insn 77 76 78 7 (set (mem:SF (plus:DI (mult:DI (reg:DI 111 [ _25 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 166)) [1 *htlon_74(D) S4 A32])
+        (reg:SF 167)) "E2TLL.f":77 -1
+     (nil))
+(insn 78 77 79 7 (set (reg:SI 168)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+(insn 79 78 80 7 (set (reg:DI 112 [ _26 ])
+        (sign_extend:DI (reg:SI 168))) "E2TLL.f":78 -1
+     (nil))
+(insn 80 79 81 7 (parallel [
+            (set (reg:DI 113 [ _27 ])
+                (mult:DI (reg:DI 112 [ _26 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+(insn 81 80 82 7 (set (reg:SI 169)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+(insn 82 81 83 7 (set (reg:DI 114 [ _28 ])
+        (sign_extend:DI (reg:SI 169))) "E2TLL.f":78 -1
+     (nil))
+(insn 83 82 84 7 (parallel [
+            (set (reg:DI 115 [ _29 ])
+                (plus:DI (reg:DI 113 [ _27 ])
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+(insn 84 83 85 7 (parallel [
+            (set (reg:DI 116 [ _30 ])
+                (plus:DI (reg:DI 115 [ _29 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 -1
+     (nil))
+(insn 85 84 86 7 (set (reg/f:DI 170)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [3 htlat+0 S8 A64])) "E2TLL.f":78 -1
+     (nil))
+(insn 86 85 87 7 (set (reg:SF 171)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":78 -1
+     (nil))
+(insn 87 86 88 7 (set (mem:SF (plus:DI (mult:DI (reg:DI 116 [ _30 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 170)) [1 *htlat_76(D) S4 A32])
+        (reg:SF 171)) "E2TLL.f":78 -1
+     (nil))
+(insn 88 87 90 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":75 -1
+     (nil))
+(jump_insn 90 88 91 7 (set (pc)
+        (label_ref 89)) "E2TLL.f":75 -1
+     (nil)
+ -> 89)
+;;  succ:       6 (DFS_BACK)
+
+(barrier 91 90 92)
+;; basic block 8, loop depth 1, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+(code_label 92 91 93 8 3 (nil) [1 uses])
+(note 93 92 94 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 94 93 96 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":72 -1
+     (nil))
+(jump_insn 96 94 97 8 (set (pc)
+        (label_ref 95)) "E2TLL.f":72 -1
+     (nil)
+ -> 95)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 97 96 98)
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 98 97 99 9 2 (nil) [1 uses])
+(note 99 98 100 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 100 99 171 9 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":85 -1
+     (nil))
+;;  succ:       10 (FALLTHRU)
+
+;; basic block 10, loop depth 1, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9 (FALLTHRU)
+;;              14 (DFS_BACK)
+(code_label 171 100 101 10 9 (nil) [1 uses])
+(note 101 171 102 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 10 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":85 -1
+     (nil))
+(insn 103 102 104 10 (set (reg:QI 172)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":85 -1
+     (nil))
+(insn 104 103 105 10 (set (reg:SI 142 [ _81 ])
+        (zero_extend:SI (reg:QI 172))) "E2TLL.f":85 -1
+     (nil))
+(insn 105 104 106 10 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 142 [ _81 ])
+            (const_int 0 [0]))) "E2TLL.f":85 -1
+     (nil))
+(jump_insn 106 105 107 10 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 174)
+            (pc))) "E2TLL.f":85 -1
+     (nil)
+ -> 174)
+;;  succ:       15
+;;              11 (FALLTHRU)
+
+;; basic block 11, loop depth 1, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10 (FALLTHRU)
+(note 107 106 108 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 11 (set (reg:SI 173)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":86 -1
+     (nil))
+(insn 109 108 110 11 (parallel [
+            (set (reg:SI 174)
+                (ashiftrt:SI (reg:SI 173)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+(insn 110 109 111 11 (parallel [
+            (set (reg:SI 175)
+                (lshiftrt:SI (reg:SI 174)
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+(insn 111 110 112 11 (parallel [
+            (set (reg:SI 176)
+                (plus:SI (reg:SI 173)
+                    (reg:SI 175)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+(insn 112 111 113 11 (parallel [
+            (set (reg:SI 177)
+                (and:SI (reg:SI 176)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+(insn 113 112 114 11 (parallel [
+            (set (reg:SI 178)
+                (minus:SI (reg:SI 177)
+                    (reg:SI 175)))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 -1
+     (nil))
+(insn 114 113 115 11 (set (reg:SI 117 [ _31 ])
+        (reg:SI 178)) "E2TLL.f":86 -1
+     (nil))
+(insn 115 114 116 11 (set (reg:SF 118 [ _32 ])
+        (float:SF (reg:SI 117 [ _31 ]))) "E2TLL.f":86 -1
+     (nil))
+(insn 116 115 117 11 (set (reg:SF 119 [ _33 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 117 116 118 11 (set (reg:SF 120 [ _34 ])
+        (mult:SF (reg:SF 118 [ _32 ])
+            (reg:SF 119 [ _33 ]))) "E2TLL.f":86 -1
+     (nil))
+(insn 118 117 119 11 (set (reg:SF 121 [ _35 ])
+        (plus:SF (reg:SF 120 [ _34 ])
+            (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":86 -1
+     (nil))
+(insn 119 118 120 11 (set (reg:SF 122 [ _36 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 120 119 121 11 (set (reg:SF 123 [ _37 ])
+        (plus:SF (reg:SF 122 [ _36 ])
+            (reg:SF 122 [ _36 ]))) "E2TLL.f":86 -1
+     (nil))
+(insn 121 120 122 11 (set (reg:SF 179)
+        (minus:SF (reg:SF 121 [ _35 ])
+            (reg:SF 123 [ _37 ]))) "E2TLL.f":86 -1
+     (nil))
+(insn 122 121 123 11 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 179)) "E2TLL.f":86 -1
+     (nil))
+(insn 123 122 124 11 (set (reg:SI 180)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":87 -1
+     (nil))
+(insn 124 123 125 11 (parallel [
+            (set (reg:SI 124 [ _38 ])
+                (plus:SI (reg:SI 180)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":87 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 125 124 126 11 (set (reg:SF 125 [ _39 ])
+        (float:SF (reg:SI 124 [ _38 ]))) "E2TLL.f":87 -1
+     (nil))
+(insn 126 125 127 11 (set (reg:SF 126 [ _40 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 -1
+     (nil))
+(insn 127 126 128 11 (set (reg:SF 127 [ _41 ])
+        (mult:SF (reg:SF 125 [ _39 ])
+            (reg:SF 126 [ _40 ]))) "E2TLL.f":87 -1
+     (nil))
+(insn 128 127 129 11 (set (reg:SF 182)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":87 -1
+     (nil))
+(insn 129 128 130 11 (set (reg:SF 181)
+        (plus:SF (reg:SF 182)
+            (reg:SF 127 [ _41 ]))) "E2TLL.f":87 -1
+     (nil))
+(insn 130 129 131 11 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 181)) "E2TLL.f":87 -1
+     (nil))
+(insn 131 130 165 11 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":88 -1
+     (nil))
+;;  succ:       12 (FALLTHRU)
+
+;; basic block 12, loop depth 2, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL)
+;;  pred:       11 (FALLTHRU)
+;;              13 (DFS_BACK)
+(code_label 165 131 132 12 8 (nil) [1 uses])
+(note 132 165 133 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 133 132 134 12 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":88 -1
+     (nil))
+(insn 134 133 135 12 (set (reg:QI 183)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":88 -1
+     (nil))
+(insn 135 134 136 12 (set (reg:SI 143 [ _85 ])
+        (zero_extend:SI (reg:QI 183))) "E2TLL.f":88 -1
+     (nil))
+(insn 136 135 137 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 143 [ _85 ])
+            (const_int 0 [0]))) "E2TLL.f":88 -1
+     (nil))
+(jump_insn 137 136 138 12 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 168)
+            (pc))) "E2TLL.f":88 -1
+     (nil)
+ -> 168)
+;;  succ:       14
+;;              13 (FALLTHRU)
+
+;; basic block 13, loop depth 2, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12 (FALLTHRU)
+(note 138 137 139 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 13 (set (reg:SF 128 [ _42 ])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 -1
+     (nil))
+(insn 140 139 141 13 (set (reg:SF 129 [ _43 ])
+        (plus:SF (reg:SF 128 [ _42 ])
+            (reg:SF 128 [ _42 ]))) "E2TLL.f":89 -1
+     (nil))
+(insn 141 140 142 13 (set (reg:SF 185)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":89 -1
+     (nil))
+(insn 142 141 143 13 (set (reg:SF 184)
+        (plus:SF (reg:SF 185)
+            (reg:SF 129 [ _43 ]))) "E2TLL.f":89 -1
+     (nil))
+(insn 143 142 144 13 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 184)) "E2TLL.f":89 -1
+     (nil))
+(insn 144 143 145 13 (set (reg:SI 186)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+(insn 145 144 146 13 (set (reg:DI 130 [ _44 ])
+        (sign_extend:DI (reg:SI 186))) "E2TLL.f":90 -1
+     (nil))
+(insn 146 145 147 13 (parallel [
+            (set (reg:DI 131 [ _45 ])
+                (mult:DI (reg:DI 130 [ _44 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+(insn 147 146 148 13 (set (reg:SI 187)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+(insn 148 147 149 13 (set (reg:DI 132 [ _46 ])
+        (sign_extend:DI (reg:SI 187))) "E2TLL.f":90 -1
+     (nil))
+(insn 149 148 150 13 (parallel [
+            (set (reg:DI 133 [ _47 ])
+                (plus:DI (reg:DI 131 [ _45 ])
+                    (reg:DI 132 [ _46 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+(insn 150 149 151 13 (parallel [
+            (set (reg:DI 134 [ _48 ])
+                (plus:DI (reg:DI 133 [ _47 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 -1
+     (nil))
+(insn 151 150 152 13 (set (reg/f:DI 188)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [3 vtlon+0 S8 A64])) "E2TLL.f":90 -1
+     (nil))
+(insn 152 151 153 13 (set (reg:SF 189)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":90 -1
+     (nil))
+(insn 153 152 154 13 (set (mem:SF (plus:DI (mult:DI (reg:DI 134 [ _48 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 188)) [1 *vtlon_87(D) S4 A32])
+        (reg:SF 189)) "E2TLL.f":90 -1
+     (nil))
+(insn 154 153 155 13 (set (reg:SI 190)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+(insn 155 154 156 13 (set (reg:DI 135 [ _49 ])
+        (sign_extend:DI (reg:SI 190))) "E2TLL.f":91 -1
+     (nil))
+(insn 156 155 157 13 (parallel [
+            (set (reg:DI 136 [ _50 ])
+                (mult:DI (reg:DI 135 [ _49 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+(insn 157 156 158 13 (set (reg:SI 191)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+(insn 158 157 159 13 (set (reg:DI 137 [ _51 ])
+        (sign_extend:DI (reg:SI 191))) "E2TLL.f":91 -1
+     (nil))
+(insn 159 158 160 13 (parallel [
+            (set (reg:DI 138 [ _52 ])
+                (plus:DI (reg:DI 136 [ _50 ])
+                    (reg:DI 137 [ _51 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+(insn 160 159 161 13 (parallel [
+            (set (reg:DI 139 [ _53 ])
+                (plus:DI (reg:DI 138 [ _52 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 -1
+     (nil))
+(insn 161 160 162 13 (set (reg/f:DI 192)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 vtlat+0 S8 A64])) "E2TLL.f":91 -1
+     (nil))
+(insn 162 161 163 13 (set (reg:SF 193)
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":91 -1
+     (nil))
+(insn 163 162 164 13 (set (mem:SF (plus:DI (mult:DI (reg:DI 139 [ _53 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 192)) [1 *vtlat_89(D) S4 A32])
+        (reg:SF 193)) "E2TLL.f":91 -1
+     (nil))
+(insn 164 163 166 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":88 -1
+     (nil))
+(jump_insn 166 164 167 13 (set (pc)
+        (label_ref 165)) "E2TLL.f":88 -1
+     (nil)
+ -> 165)
+;;  succ:       12 (DFS_BACK)
+
+(barrier 167 166 168)
+;; basic block 14, loop depth 1, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12
+(code_label 168 167 169 14 7 (nil) [1 uses])
+(note 169 168 170 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 170 169 172 14 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":85 -1
+     (nil))
+(jump_insn 172 170 173 14 (set (pc)
+        (label_ref 171)) "E2TLL.f":85 -1
+     (nil)
+ -> 171)
+;;  succ:       10 (DFS_BACK)
+
+(barrier 173 172 174)
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 14, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10
+(code_label 174 173 175 15 6 (nil) [1 uses])
+(note 175 174 180 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 180 175 0 15 (const_int 0 [0]) "E2TLL.f":97 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

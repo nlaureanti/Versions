@@ -65,6 +65,7 @@ else
 fi
 if [ -s ../src/configure/make.inc_${Machine} ] ; then
   cp ../src/configure/make.inc_${Machine} ../src/configure/make.inc
+  set echo 
   ./configure
   make
   exit 0

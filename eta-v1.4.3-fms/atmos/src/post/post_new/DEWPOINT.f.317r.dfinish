@@ -1,0 +1,1178 @@
+
+;; Function dewpoint (dewpoint_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 344 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 344 7 345 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "DEWPOINT.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 345 344 346 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn/f 346 345 347 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 43 r14)) "DEWPOINT.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 347 346 348 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 42 r13)) "DEWPOINT.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 348 347 349 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 41 r12)) "DEWPOINT.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 349 348 350 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 3 bx)) "DEWPOINT.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 350 349 351 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -8176 [0xffffffffffffe010])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "DEWPOINT.f":1 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(note 351 350 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 351 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8184 [0xffffffffffffe008])) [4 vp+0 S8 A64])
+        (reg:DI 5 di [ vp ])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8192 [0xffffffffffffe000])) [4 td+0 S8 A64])
+        (reg:DI 4 si [ td ])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8200 [0xffffffffffffdff8])) [5 im+0 S8 A64])
+        (reg:DI 1 dx [ im ])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8208 [0xffffffffffffdff0])) [5 jm+0 S8 A64])
+        (reg:DI 2 cx [ jm ])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg/f:DI 0 ax [171])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8200 [0xffffffffffffdff8])) [5 im+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 0 ax [orig:87 _1 ] [87])
+        (mem:SI (reg/f:DI 0 ax [171]) [1 *im_74(D)+0 S4 A32])) "DEWPOINT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:DI 0 ax [172])
+        (sign_extend:DI (reg:SI 0 ax [orig:87 _1 ] [87]))) "DEWPOINT.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 12 11 13 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [3 ubound.5+0 S8 A64])
+        (reg:DI 0 ax [172])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 13 12 15 2 (set (reg:DI 0 ax [orig:149 stride.7_76 ] [149])
+        (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [3 ubound.5+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 15 13 14 2 (set (reg:DI 1 dx [173])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 14 15 319 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 0 ax [orig:149 stride.7_76 ] [149])
+            (const_int 0 [0]))) "DEWPOINT.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 319 14 16 2 (set (reg:DI 3 bx [173])
+        (reg:DI 1 dx [173])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 16 319 17 2 (set (reg:DI 3 bx [173])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 0 ax [orig:149 stride.7_76 ] [149])
+            (reg:DI 3 bx [173]))) "DEWPOINT.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 17 16 18 2 (set (reg/f:DI 0 ax [174])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8208 [0xffffffffffffdff0])) [5 jm+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 18 17 19 2 (set (reg:SI 0 ax [orig:88 _2 ] [88])
+        (mem:SI (reg/f:DI 0 ax [174]) [1 *jm_78(D)+0 S4 A32])) "DEWPOINT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg:DI 0 ax [175])
+        (sign_extend:DI (reg:SI 0 ax [orig:88 _2 ] [88]))) "DEWPOINT.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 20 19 321 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 ubound.6+0 S8 A64])
+        (reg:DI 0 ax [175])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 321 20 21 2 (set (reg:DI 0 ax [orig:151 size.9_80 ] [151])
+        (reg:DI 3 bx [orig:150 stride.7_77 ] [150])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 21 321 23 2 (parallel [
+            (set (reg:DI 0 ax [orig:151 size.9_80 ] [151])
+                (mult:DI (reg:DI 0 ax [orig:151 size.9_80 ] [151])
+                    (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -72 [0xffffffffffffffb8])) [3 ubound.6+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":1 349 {*muldi3_1}
+     (nil))
+(insn 23 21 22 2 (set (reg:DI 1 dx [176])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 22 23 24 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 0 ax [orig:151 size.9_80 ] [151])
+            (const_int 0 [0]))) "DEWPOINT.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 24 22 27 2 (set (reg:DI 0 ax [orig:152 size.9_81 ] [152])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 0 ax [orig:151 size.9_80 ] [151])
+            (reg:DI 1 dx [176]))) "DEWPOINT.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 27 24 28 2 (set (reg:DI 39 r10 [orig:90 _4 ] [90])
+        (reg:DI 0 ax [orig:89 size.12_3 ] [89])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 28 27 323 2 (set (reg:DI 40 r11 [ _4+8 ])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 323 28 32 2 (set (reg:DI 42 r13 [orig:156 offset.8_85 ] [156])
+        (reg:DI 3 bx [orig:150 stride.7_77 ] [150])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 32 323 33 2 (set (reg:DI 42 r13 [orig:156 offset.8_85 ] [156])
+        (not:DI (reg:DI 42 r13 [orig:156 offset.8_85 ] [156]))) "DEWPOINT.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 33 32 34 2 (set (reg/f:DI 0 ax [177])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8200 [0xffffffffffffdff8])) [5 im+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 34 33 35 2 (set (reg:SI 0 ax [orig:92 _6 ] [92])
+        (mem:SI (reg/f:DI 0 ax [177]) [1 *im_74(D)+0 S4 A32])) "DEWPOINT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 0 ax [178])
+        (sign_extend:DI (reg:SI 0 ax [orig:92 _6 ] [92]))) "DEWPOINT.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 36 35 37 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [3 ubound.0+0 S8 A64])
+        (reg:DI 0 ax [178])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 37 36 39 2 (set (reg:DI 0 ax [orig:157 stride.2_87 ] [157])
+        (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [3 ubound.0+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 39 37 38 2 (set (reg:DI 1 dx [179])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 38 39 40 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 0 ax [orig:157 stride.2_87 ] [157])
+            (const_int 0 [0]))) "DEWPOINT.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 40 38 326 2 (set (reg:DI 1 dx [179])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 0 ax [orig:157 stride.2_87 ] [157])
+            (reg:DI 1 dx [179]))) "DEWPOINT.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 326 40 41 2 (set (reg:DI 41 r12 [orig:158 stride.2_88 ] [158])
+        (reg:DI 1 dx [179])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 41 326 42 2 (set (reg/f:DI 0 ax [180])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8208 [0xffffffffffffdff0])) [5 jm+0 S8 A64])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 42 41 43 2 (set (reg:SI 0 ax [orig:93 _7 ] [93])
+        (mem:SI (reg/f:DI 0 ax [180]) [1 *jm_78(D)+0 S4 A32])) "DEWPOINT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 43 42 44 2 (set (reg:DI 0 ax [181])
+        (sign_extend:DI (reg:SI 0 ax [orig:93 _7 ] [93]))) "DEWPOINT.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 44 43 327 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -88 [0xffffffffffffffa8])) [3 ubound.1+0 S8 A64])
+        (reg:DI 0 ax [181])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 327 44 45 2 (set (reg:DI 0 ax [orig:159 size.4_90 ] [159])
+        (reg:DI 41 r12 [orig:158 stride.2_88 ] [158])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 45 327 47 2 (parallel [
+            (set (reg:DI 0 ax [orig:159 size.4_90 ] [159])
+                (mult:DI (reg:DI 0 ax [orig:159 size.4_90 ] [159])
+                    (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -88 [0xffffffffffffffa8])) [3 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":1 349 {*muldi3_1}
+     (nil))
+(insn 47 45 46 2 (set (reg:DI 1 dx [182])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 46 47 48 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 0 ax [orig:159 size.4_90 ] [159])
+            (const_int 0 [0]))) "DEWPOINT.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 48 46 51 2 (set (reg:DI 0 ax [orig:160 size.4_91 ] [160])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 0 ax [orig:159 size.4_90 ] [159])
+            (reg:DI 1 dx [182]))) "DEWPOINT.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 51 48 52 2 (set (reg:DI 37 r8 [orig:95 _9 ] [95])
+        (reg:DI 0 ax [orig:94 size.14_8 ] [94])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 52 51 329 2 (set (reg:DI 38 r9 [ _9+8 ])
+        (const_int 0 [0])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 329 52 56 2 (set (reg:DI 43 r14 [orig:164 offset.3_95 ] [164])
+        (reg:DI 41 r12 [orig:158 stride.2_88 ] [158])) "DEWPOINT.f":1 85 {*movdi_internal}
+     (nil))
+(insn 56 329 57 2 (set (reg:DI 43 r14 [orig:164 offset.3_95 ] [164])
+        (not:DI (reg:DI 43 r14 [orig:164 offset.3_95 ] [164]))) "DEWPOINT.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 57 56 58 2 (set (reg:SF 21 xmm0 [183])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":77 131 {*movsf_internal}
+     (nil))
+(insn 58 57 59 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -92 [0xffffffffffffffa4])) [2 rvp1+0 S4 A32])
+        (reg:SF 21 xmm0 [183])) "DEWPOINT.f":77 131 {*movsf_internal}
+     (nil))
+(insn 59 58 60 2 (set (reg:SF 21 xmm0 [184])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":78 131 {*movsf_internal}
+     (nil))
+(insn 60 59 61 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -96 [0xffffffffffffffa0])) [2 rvp2+0 S4 A32])
+        (reg:SF 21 xmm0 [184])) "DEWPOINT.f":78 131 {*movsf_internal}
+     (nil))
+(insn 61 60 62 2 (set (reg:SF 21 xmm0 [185])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":80 131 {*movsf_internal}
+     (nil))
+(insn 62 61 63 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -100 [0xffffffffffffff9c])) [2 rt3+0 S4 A32])
+        (reg:SF 21 xmm0 [185])) "DEWPOINT.f":80 131 {*movsf_internal}
+     (nil))
+(insn 63 62 64 2 (set (reg:SF 21 xmm0 [186])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":82 131 {*movsf_internal}
+     (nil))
+(insn 64 63 65 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [2 rvp3+0 S4 A32])
+        (reg:SF 21 xmm0 [186])) "DEWPOINT.f":82 131 {*movsf_internal}
+     (nil))
+(insn 65 64 67 2 (set (reg:SF 21 xmm0 [187])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [2 rvp3+0 S4 A32])) "DEWPOINT.f":83 131 {*movsf_internal}
+     (nil))
+(call_insn/u 67 65 68 2 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("logf") [flags 0x41]  <function_decl 0x7f4856421900 __builtin_logf>) [0 __builtin_logf S1 A8])
+            (const_int 0 [0]))) "DEWPOINT.f":83 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 68 67 69 2 (set (reg:SF 0 ax [188])
+        (reg:SF 21 xmm0)) "DEWPOINT.f":83 131 {*movsf_internal}
+     (nil))
+(insn 69 68 70 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -108 [0xffffffffffffff94])) [2 rlog3+0 S4 A32])
+        (reg:SF 0 ax [188])) "DEWPOINT.f":83 131 {*movsf_internal}
+     (nil))
+(insn 70 69 71 2 (set (reg:SF 21 xmm0 [189])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":85 131 {*movsf_internal}
+     (nil))
+(insn 71 70 72 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [2 ra+0 S4 A32])
+        (reg:SF 21 xmm0 [189])) "DEWPOINT.f":85 131 {*movsf_internal}
+     (nil))
+(insn 72 71 73 2 (set (reg:SF 21 xmm0 [190])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":87 131 {*movsf_internal}
+     (nil))
+(insn 73 72 74 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -116 [0xffffffffffffff8c])) [2 rb+0 S4 A32])
+        (reg:SF 21 xmm0 [190])) "DEWPOINT.f":87 131 {*movsf_internal}
+     (nil))
+(insn 74 73 75 2 (set (reg:SF 21 xmm0 [192])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [2 ra+0 S4 A32])) "DEWPOINT.f":88 131 {*movsf_internal}
+     (nil))
+(insn 75 74 76 2 (set (reg:SF 21 xmm0 [191])
+        (plus:SF (reg:SF 21 xmm0 [192])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -116 [0xffffffffffffff8c])) [2 rb+0 S4 A32]))) "DEWPOINT.f":88 838 {*fop_sf_comm}
+     (nil))
+(insn 76 75 77 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -120 [0xffffffffffffff88])) [2 rapb+0 S4 A32])
+        (reg:SF 21 xmm0 [191])) "DEWPOINT.f":88 131 {*movsf_internal}
+     (nil))
+(insn 77 76 78 2 (set (reg:SF 21 xmm0 [193])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC6") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":90 131 {*movsf_internal}
+     (nil))
+(insn 78 77 79 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -124 [0xffffffffffffff84])) [2 rtest+0 S4 A32])
+        (reg:SF 21 xmm0 [193])) "DEWPOINT.f":90 131 {*movsf_internal}
+     (nil))
+(insn 79 78 80 2 (set (reg:SF 21 xmm0 [194])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC7") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":93 131 {*movsf_internal}
+     (nil))
+(insn 80 79 81 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -128 [0xffffffffffffff80])) [2 rnt+0 S4 A32])
+        (reg:SF 21 xmm0 [194])) "DEWPOINT.f":93 131 {*movsf_internal}
+     (nil))
+(insn 81 80 82 2 (set (reg:SF 21 xmm0 [195])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -96 [0xffffffffffffffa0])) [2 rvp2+0 S4 A32])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (nil))
+(insn 82 81 83 2 (set (reg:SF 21 xmm0 [orig:97 _11 ] [97])
+        (minus:SF (reg:SF 21 xmm0 [195])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -92 [0xffffffffffffffa4])) [2 rvp1+0 S4 A32]))) "DEWPOINT.f":95 841 {*fop_sf_1}
+     (nil))
+(insn 83 82 84 2 (set (reg:SF 23 xmm2 [orig:98 _12 ] [98])
+        (reg:SF 21 xmm0 [orig:97 _11 ] [97])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (nil))
+(insn 84 83 85 2 (set (reg:SF 21 xmm0 [196])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -128 [0xffffffffffffff80])) [2 rnt+0 S4 A32])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (nil))
+(insn 85 84 86 2 (set (reg:SF 22 xmm1 [197])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 86 85 88 2 (set (reg:SF 21 xmm0 [orig:99 _13 ] [99])
+        (minus:SF (reg:SF 21 xmm0 [196])
+            (reg:SF 22 xmm1 [197]))) "DEWPOINT.f":95 841 {*fop_sf_1}
+     (nil))
+(insn 88 86 332 2 (set (reg:SF 23 xmm2 [orig:98 _12 ] [98])
+        (div:SF (reg:SF 23 xmm2 [orig:98 _12 ] [98])
+            (reg:SF 21 xmm0 [orig:100 _14 ] [100]))) "DEWPOINT.f":95 841 {*fop_sf_1}
+     (nil))
+(insn 332 88 89 2 (set (reg:SF 21 xmm0 [198])
+        (reg:SF 23 xmm2 [orig:98 _12 ] [98])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (nil))
+(insn 89 332 90 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -132 [0xffffffffffffff7c])) [2 rdvp+0 S4 A32])
+        (reg:SF 21 xmm0 [198])) "DEWPOINT.f":95 131 {*movsf_internal}
+     (nil))
+(insn 90 89 91 2 (set (reg:SF 21 xmm0 [199])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":97 131 {*movsf_internal}
+     (nil))
+(insn 91 90 92 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32])
+        (reg:SF 21 xmm0 [199])) "DEWPOINT.f":97 131 {*movsf_internal}
+     (nil))
+(insn 92 91 93 2 (set (reg:SF 21 xmm0 [201])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -92 [0xffffffffffffffa4])) [2 rvp1+0 S4 A32])) "DEWPOINT.f":98 131 {*movsf_internal}
+     (nil))
+(insn 93 92 94 2 (set (reg:SF 21 xmm0 [200])
+        (minus:SF (reg:SF 21 xmm0 [201])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -132 [0xffffffffffffff7c])) [2 rdvp+0 S4 A32]))) "DEWPOINT.f":98 841 {*fop_sf_1}
+     (nil))
+(insn 94 93 95 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 rvp+0 S4 A32])
+        (reg:SF 21 xmm0 [200])) "DEWPOINT.f":98 131 {*movsf_internal}
+     (nil))
+(insn 95 94 156 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [1 nn+0 S4 A32])
+        (const_int 1 [0x1])) "DEWPOINT.f":100 86 {*movsi_internal}
+     (nil))
+(code_label 156 95 96 3 5 (nil) [1 uses])
+(note 96 156 97 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 97 96 98 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -44 [0xffffffffffffffd4])) [1 nn+0 S4 A32])
+            (const_int 2000 [0x7d0]))) "DEWPOINT.f":100 11 {*cmpsi_1}
+     (nil))
+(insn 98 97 99 3 (set (reg:QI 0 ax [202])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":100 678 {*setcc_qi}
+     (nil))
+(insn 99 98 100 3 (set (reg:SI 0 ax [orig:165 _110 ] [165])
+        (zero_extend:SI (reg:QI 0 ax [202]))) "DEWPOINT.f":100 140 {*zero_extendqisi2}
+     (nil))
+(insn 100 99 101 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:165 _110 ] [165])
+            (const_int 0 [0]))) "DEWPOINT.f":100 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 101 100 102 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 307)
+            (pc))) "DEWPOINT.f":100 682 {*jcc}
+     (nil)
+ -> 307)
+(note 102 101 103 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 103 102 104 4 (set (reg:SF 21 xmm0 [204])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 rvp+0 S4 A32])) "DEWPOINT.f":101 131 {*movsf_internal}
+     (nil))
+(insn 104 103 105 4 (set (reg:SF 21 xmm0 [203])
+        (plus:SF (reg:SF 21 xmm0 [204])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -132 [0xffffffffffffff7c])) [2 rdvp+0 S4 A32]))) "DEWPOINT.f":101 838 {*fop_sf_comm}
+     (nil))
+(insn 105 104 106 4 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 rvp+0 S4 A32])
+        (reg:SF 21 xmm0 [203])) "DEWPOINT.f":101 131 {*movsf_internal}
+     (nil))
+(insn 106 105 108 4 (set (reg:SF 21 xmm0 [205])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 rvp+0 S4 A32])) "DEWPOINT.f":102 131 {*movsf_internal}
+     (nil))
+(call_insn/u 108 106 110 4 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("logf") [flags 0x41]  <function_decl 0x7f4856421900 __builtin_logf>) [0 __builtin_logf S1 A8])
+            (const_int 0 [0]))) "DEWPOINT.f":102 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 110 108 111 4 (set (reg:SF 21 xmm0 [orig:102 _16 ] [102])
+        (minus:SF (reg:SF 21 xmm0 [orig:101 _15 ] [101])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -108 [0xffffffffffffff94])) [2 rlog3+0 S4 A32]))) "DEWPOINT.f":102 841 {*fop_sf_1}
+     (nil))
+(insn 111 110 112 4 (set (reg:SF 21 xmm0 [206])
+        (minus:SF (reg:SF 21 xmm0 [orig:102 _16 ] [102])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -120 [0xffffffffffffff88])) [2 rapb+0 S4 A32]))) "DEWPOINT.f":102 841 {*fop_sf_1}
+     (nil))
+(insn 112 111 142 4 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -136 [0xffffffffffffff78])) [2 rlvp+0 S4 A32])
+        (reg:SF 21 xmm0 [206])) "DEWPOINT.f":102 131 {*movsf_internal}
+     (nil))
+(code_label 142 112 113 5 4 (nil) [1 uses])
+(note 113 142 114 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 114 113 116 5 (set (reg:SF 21 xmm0 [207])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32])) "DEWPOINT.f":104 131 {*movsf_internal}
+     (nil))
+(call_insn/u 116 114 118 5 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("logf") [flags 0x41]  <function_decl 0x7f4856421900 __builtin_logf>) [0 __builtin_logf S1 A8])
+            (const_int 0 [0]))) "DEWPOINT.f":104 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 118 116 119 5 (set (reg:SF 21 xmm0 [orig:104 _18 ] [104])
+        (mult:SF (reg:SF 21 xmm0 [orig:103 _17 ] [103])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -112 [0xffffffffffffff90])) [2 ra+0 S4 A32]))) "DEWPOINT.f":104 838 {*fop_sf_comm}
+     (nil))
+(insn 119 118 120 5 (set (reg:SF 22 xmm1 [208])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -120 [0xffffffffffffff88])) [2 rapb+0 S4 A32])) "DEWPOINT.f":104 131 {*movsf_internal}
+     (nil))
+(insn 120 119 121 5 (set (reg:SF 22 xmm1 [orig:105 _19 ] [105])
+        (mult:SF (reg:SF 22 xmm1 [208])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32]))) "DEWPOINT.f":104 838 {*fop_sf_comm}
+     (nil))
+(insn 121 120 122 5 (set (reg:SF 21 xmm0 [orig:106 _20 ] [106])
+        (minus:SF (reg:SF 21 xmm0 [orig:104 _18 ] [104])
+            (reg:SF 22 xmm1 [orig:105 _19 ] [105]))) "DEWPOINT.f":104 841 {*fop_sf_1}
+     (nil))
+(insn 122 121 123 5 (set (reg:SF 21 xmm0 [209])
+        (minus:SF (reg:SF 21 xmm0 [orig:106 _20 ] [106])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -136 [0xffffffffffffff78])) [2 rlvp+0 S4 A32]))) "DEWPOINT.f":104 841 {*fop_sf_1}
+     (nil))
+(insn 123 122 124 5 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -140 [0xffffffffffffff74])) [2 rn+0 S4 A32])
+        (reg:SF 21 xmm0 [209])) "DEWPOINT.f":104 131 {*movsf_internal}
+     (nil))
+(insn 124 123 125 5 (set (reg:SF 21 xmm0 [210])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [2 ra+0 S4 A32])) "DEWPOINT.f":107 131 {*movsf_internal}
+     (nil))
+(insn 125 124 127 5 (set (reg:SF 21 xmm0 [orig:107 _21 ] [107])
+        (div:SF (reg:SF 21 xmm0 [210])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32]))) "DEWPOINT.f":107 841 {*fop_sf_1}
+     (nil))
+(insn 127 125 128 5 (set (reg:SF 21 xmm0 [211])
+        (minus:SF (reg:SF 21 xmm0 [orig:108 _22 ] [108])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -120 [0xffffffffffffff88])) [2 rapb+0 S4 A32]))) "DEWPOINT.f":107 841 {*fop_sf_1}
+     (nil))
+(insn 128 127 129 5 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -144 [0xffffffffffffff70])) [2 rd+0 S4 A32])
+        (reg:SF 21 xmm0 [211])) "DEWPOINT.f":107 131 {*movsf_internal}
+     (nil))
+(insn 129 128 130 5 (set (reg:SF 21 xmm0 [213])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -140 [0xffffffffffffff74])) [2 rn+0 S4 A32])) "DEWPOINT.f":109 131 {*movsf_internal}
+     (nil))
+(insn 130 129 131 5 (set (reg:SF 21 xmm0 [212])
+        (div:SF (reg:SF 21 xmm0 [213])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -144 [0xffffffffffffff70])) [2 rd+0 S4 A32]))) "DEWPOINT.f":109 841 {*fop_sf_1}
+     (nil))
+(insn 131 130 132 5 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -148 [0xffffffffffffff6c])) [2 rch+0 S4 A32])
+        (reg:SF 21 xmm0 [212])) "DEWPOINT.f":109 131 {*movsf_internal}
+     (nil))
+(insn 132 131 342 5 (set (reg:SF 21 xmm0 [214])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -148 [0xffffffffffffff6c])) [2 rch+0 S4 A32])) "DEWPOINT.f":110 131 {*movsf_internal}
+     (nil))
+(insn 342 132 343 5 (set (reg:V4SF 22 xmm1 [215])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "DEWPOINT.f":110 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 343 342 135 5 (set (reg:V4SF 22 xmm1 [orig:109 _23 ] [109])
+        (and:V4SF (reg:V4SF 22 xmm1 [215])
+            (reg:V4SF 21 xmm0 [214]))) "DEWPOINT.f":110 1816 {*andv4sf3}
+     (nil))
+(insn 135 343 136 5 (set (reg:SF 21 xmm0 [216])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -124 [0xffffffffffffff84])) [2 rtest+0 S4 A32])) "DEWPOINT.f":110 131 {*movsf_internal}
+     (nil))
+(insn 136 135 137 5 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [216])
+            (reg:SF 22 xmm1 [orig:109 _23 ] [109]))) "DEWPOINT.f":110 53 {*cmpisf}
+     (nil))
+(jump_insn 137 136 138 5 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 310)
+            (pc))) "DEWPOINT.f":110 682 {*jcc}
+     (nil)
+ -> 310)
+(note 138 137 139 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 6 (set (reg:SF 21 xmm0 [218])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32])) "DEWPOINT.f":112 131 {*movsf_internal}
+     (nil))
+(insn 140 139 141 6 (set (reg:SF 21 xmm0 [217])
+        (minus:SF (reg:SF 21 xmm0 [218])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -148 [0xffffffffffffff6c])) [2 rch+0 S4 A32]))) "DEWPOINT.f":112 841 {*fop_sf_1}
+     (nil))
+(insn 141 140 298 6 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32])
+        (reg:SF 21 xmm0 [217])) "DEWPOINT.f":112 131 {*movsf_internal}
+     (nil))
+(jump_insn 298 141 299 6 (set (pc)
+        (label_ref 142)) "DEWPOINT.f":113 683 {jump}
+     (nil)
+ -> 142)
+(barrier 299 298 310)
+(code_label 310 299 309 7 15 (nil) [1 uses])
+(note 309 310 311 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 311 309 147 7 (const_int 0 [0]) "DEWPOINT.f":113 718 {nop}
+     (nil))
+(insn 147 311 148 7 (set (reg:SF 21 xmm0 [220])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -100 [0xffffffffffffff9c])) [2 rt3+0 S4 A32])) "DEWPOINT.f":116 131 {*movsf_internal}
+     (nil))
+(insn 148 147 149 7 (set (reg:SF 21 xmm0 [219])
+        (div:SF (reg:SF 21 xmm0 [220])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -48 [0xffffffffffffffd0])) [2 rgs+0 S4 A32]))) "DEWPOINT.f":116 841 {*fop_sf_1}
+     (nil))
+(insn 149 148 150 7 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -152 [0xffffffffffffff68])) [2 rt+0 S4 A32])
+        (reg:SF 21 xmm0 [219])) "DEWPOINT.f":116 131 {*movsf_internal}
+     (nil))
+(insn 150 149 151 7 (set (reg:SI 0 ax [221])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [1 nn+0 S4 A32])) "DEWPOINT.f":117 86 {*movsi_internal}
+     (nil))
+(insn 151 150 152 7 (set (reg:DI 0 ax [orig:110 _24 ] [110])
+        (sign_extend:DI (reg:SI 0 ax [221]))) "DEWPOINT.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 152 151 153 7 (parallel [
+            (set (reg:DI 0 ax [orig:111 _25 ] [111])
+                (plus:DI (reg:DI 0 ax [orig:110 _24 ] [110])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":117 222 {*adddi_1}
+     (nil))
+(insn 153 152 154 7 (set (reg:SF 21 xmm0 [222])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -152 [0xffffffffffffff68])) [2 rt+0 S4 A32])) "DEWPOINT.f":117 131 {*movsf_internal}
+     (nil))
+(insn 154 153 155 7 (set (mem:SF (plus:DI (plus:DI (mult:DI (reg:DI 0 ax [orig:111 _25 ] [111])
+                        (const_int 4 [0x4]))
+                    (reg/f:DI 6 bp))
+                (const_int -8176 [0xffffffffffffe010])) [2 tdp S4 A32])
+        (reg:SF 21 xmm0 [222])) "DEWPOINT.f":117 131 {*movsf_internal}
+     (nil))
+(insn 155 154 300 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -44 [0xffffffffffffffd4])) [1 nn+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -44 [0xffffffffffffffd4])) [1 nn+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":100 221 {*addsi_1}
+     (nil))
+(jump_insn 300 155 301 7 (set (pc)
+        (label_ref 156)) "DEWPOINT.f":100 683 {jump}
+     (nil)
+ -> 156)
+(barrier 301 300 307)
+(code_label 307 301 306 8 14 (nil) [1 uses])
+(note 306 307 308 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 308 306 161 8 (const_int 0 [0]) "DEWPOINT.f":119 718 {nop}
+     (nil))
+(insn 161 308 162 8 (set (reg:SF 21 xmm0 [224])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":126 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 162 161 163 8 (set (reg:SF 21 xmm0 [223])
+        (div:SF (reg:SF 21 xmm0 [224])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -132 [0xffffffffffffff7c])) [2 rdvp+0 S4 A32]))) "DEWPOINT.f":126 841 {*fop_sf_1}
+     (nil))
+(insn 163 162 164 8 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -156 [0xffffffffffffff64])) [2 a+0 S4 A32])
+        (reg:SF 21 xmm0 [223])) "DEWPOINT.f":126 131 {*movsf_internal}
+     (nil))
+(insn 164 163 333 8 (set (reg:SF 21 xmm0 [225])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -156 [0xffffffffffffff64])) [2 a+0 S4 A32])) "DEWPOINT.f":127 131 {*movsf_internal}
+     (nil))
+(insn 333 164 165 8 (set (reg:SF 22 xmm1 [225])
+        (reg:SF 21 xmm0 [225])) "DEWPOINT.f":127 131 {*movsf_internal}
+     (nil))
+(insn 165 333 166 8 (set (reg:SF 22 xmm1 [225])
+        (mult:SF (reg:SF 22 xmm1 [225])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -92 [0xffffffffffffffa4])) [2 rvp1+0 S4 A32]))) "DEWPOINT.f":127 838 {*fop_sf_comm}
+     (nil))
+(insn 166 165 167 8 (set (reg:SF 21 xmm0 [227])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":127 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 167 166 168 8 (set (reg:SF 21 xmm0 [226])
+        (minus:SF (reg:SF 21 xmm0 [227])
+            (reg:SF 22 xmm1 [orig:112 _26 ] [112]))) "DEWPOINT.f":127 841 {*fop_sf_1}
+     (nil))
+(insn 168 167 169 8 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -160 [0xffffffffffffff60])) [2 b+0 S4 A32])
+        (reg:SF 21 xmm0 [226])) "DEWPOINT.f":127 131 {*movsf_internal}
+     (nil))
+(insn 169 168 170 8 (set (reg:SF 21 xmm0 [228])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC10") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":128 131 {*movsf_internal}
+     (nil))
+(insn 170 169 171 8 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -164 [0xffffffffffffff5c])) [2 dntm1+0 S4 A32])
+        (reg:SF 21 xmm0 [228])) "DEWPOINT.f":128 131 {*movsf_internal}
+     (nil))
+(insn 171 170 172 8 (set (reg:SI 1 dx [orig:166 _123 ] [166])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f48565b0870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "DEWPOINT.f":134 86 {*movsi_internal}
+     (nil))
+(insn 172 171 173 8 (set (reg:SI 0 ax [orig:167 _124 ] [167])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f48565b0870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "DEWPOINT.f":134 86 {*movsi_internal}
+     (nil))
+(insn 173 172 285 8 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:166 _123 ] [166])) "DEWPOINT.f":134 86 {*movsi_internal}
+     (nil))
+(code_label 285 173 174 9 12 (nil) [1 uses])
+(note 174 285 175 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 176 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:167 _124 ] [167]))) "DEWPOINT.f":134 11 {*cmpsi_1}
+     (nil))
+(insn 176 175 177 9 (set (reg:QI 1 dx [229])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":134 678 {*setcc_qi}
+     (nil))
+(insn 177 176 178 9 (set (reg:SI 1 dx [orig:168 _126 ] [168])
+        (zero_extend:SI (reg:QI 1 dx [229]))) "DEWPOINT.f":134 140 {*zero_extendqisi2}
+     (nil))
+(insn 178 177 179 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:168 _126 ] [168])
+            (const_int 0 [0]))) "DEWPOINT.f":134 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 179 178 180 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 313)
+            (pc))) "DEWPOINT.f":134 682 {*jcc}
+     (nil)
+ -> 313)
+(note 180 179 181 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 181 180 182 10 (set (reg/f:DI 1 dx [230])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8200 [0xffffffffffffdff8])) [5 im+0 S8 A64])) "DEWPOINT.f":135 85 {*movdi_internal}
+     (nil))
+(insn 182 181 183 10 (set (reg:SI 2 cx [orig:169 _127 ] [169])
+        (mem:SI (reg/f:DI 1 dx [230]) [1 *im_74(D)+0 S4 A32])) "DEWPOINT.f":135 86 {*movsi_internal}
+     (nil))
+(insn 183 182 279 10 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "DEWPOINT.f":135 86 {*movsi_internal}
+     (nil))
+(code_label 279 183 184 11 11 (nil) [1 uses])
+(note 184 279 185 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 185 184 186 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])
+            (reg:SI 2 cx [orig:169 _127 ] [169]))) "DEWPOINT.f":135 11 {*cmpsi_1}
+     (nil))
+(insn 186 185 187 11 (set (reg:QI 1 dx [231])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":135 678 {*setcc_qi}
+     (nil))
+(insn 187 186 188 11 (set (reg:SI 1 dx [orig:170 _129 ] [170])
+        (zero_extend:SI (reg:QI 1 dx [231]))) "DEWPOINT.f":135 140 {*zero_extendqisi2}
+     (nil))
+(insn 188 187 189 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:170 _129 ] [170])
+            (const_int 0 [0]))) "DEWPOINT.f":135 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 189 188 190 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 316)
+            (pc))) "DEWPOINT.f":135 682 {*jcc}
+     (nil)
+ -> 316)
+(note 190 189 191 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 191 190 192 12 (set (reg:SI 1 dx [232])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])) "DEWPOINT.f":136 86 {*movsi_internal}
+     (nil))
+(insn 192 191 193 12 (set (reg:DI 1 dx [orig:113 _27 ] [113])
+        (sign_extend:DI (reg:SI 1 dx [232]))) "DEWPOINT.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 193 192 341 12 (parallel [
+            (set (reg:DI 1 dx [orig:114 _28 ] [114])
+                (mult:DI (reg:DI 1 dx [orig:113 _27 ] [113])
+                    (reg:DI 3 bx [orig:150 stride.7_77 ] [150])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":136 349 {*muldi3_1}
+     (nil))
+(insn 341 193 195 12 (set (reg:DI 4 si [orig:115 _29 ] [115])
+        (plus:DI (reg:DI 42 r13 [orig:156 offset.8_85 ] [156])
+            (reg:DI 1 dx [orig:114 _28 ] [114]))) "DEWPOINT.f":136 218 {*leadi}
+     (nil))
+(insn 195 341 196 12 (set (reg:SI 1 dx [233])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])) "DEWPOINT.f":136 86 {*movsi_internal}
+     (nil))
+(insn 196 195 197 12 (set (reg:DI 1 dx [orig:116 _30 ] [116])
+        (sign_extend:DI (reg:SI 1 dx [233]))) "DEWPOINT.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 197 196 198 12 (parallel [
+            (set (reg:DI 4 si [orig:117 _31 ] [117])
+                (plus:DI (reg:DI 4 si [orig:115 _29 ] [115])
+                    (reg:DI 1 dx [orig:116 _30 ] [116])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":136 222 {*adddi_1}
+     (nil))
+(insn 198 197 199 12 (set (reg/f:DI 1 dx [234])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8184 [0xffffffffffffe008])) [4 vp+0 S8 A64])) "DEWPOINT.f":136 85 {*movdi_internal}
+     (nil))
+(insn 199 198 200 12 (set (reg:SF 21 xmm0 [orig:118 _32 ] [118])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:117 _31 ] [117])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [234])) [2 *vp_130(D) S4 A32])) "DEWPOINT.f":136 131 {*movsf_internal}
+     (nil))
+(insn 200 199 201 12 (set (reg:SF 21 xmm0 [orig:119 _33 ] [119])
+        (mult:SF (reg:SF 21 xmm0 [orig:118 _32 ] [118])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -156 [0xffffffffffffff64])) [2 a+0 S4 A32]))) "DEWPOINT.f":136 838 {*fop_sf_comm}
+     (nil))
+(insn 201 200 203 12 (set (reg:SF 21 xmm0 [orig:120 _34 ] [120])
+        (plus:SF (reg:SF 21 xmm0 [orig:119 _33 ] [119])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -160 [0xffffffffffffff60])) [2 b+0 S4 A32]))) "DEWPOINT.f":136 838 {*fop_sf_comm}
+     (nil))
+(insn 203 201 204 12 (set (reg:SF 22 xmm1 [237])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":136 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 204 203 205 12 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 22 xmm1 [237])
+            (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148]))) "DEWPOINT.f":136 53 {*cmpisf}
+     (nil))
+(insn 205 204 206 12 (set (reg:QI 1 dx [236])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":136 678 {*setcc_qi}
+     (nil))
+(insn 206 205 207 12 (set (reg:SI 4 si [orig:121 _35 ] [121])
+        (zero_extend:SI (reg:QI 1 dx [236]))) "DEWPOINT.f":136 140 {*zero_extendqisi2}
+     (nil))
+(insn 207 206 208 12 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])
+                    (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148]))
+            ] UNSPEC_NOTRAP)) "DEWPOINT.f":136 54 {*cmpiusf}
+     (nil))
+(insn 208 207 209 12 (set (reg:QI 1 dx [238])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":136 678 {*setcc_qi}
+     (nil))
+(insn 209 208 210 12 (set (reg:SI 1 dx [orig:122 _36 ] [122])
+        (zero_extend:SI (reg:QI 1 dx [238]))) "DEWPOINT.f":136 140 {*zero_extendqisi2}
+     (nil))
+(insn 210 209 211 12 (parallel [
+            (set (reg:SI 1 dx [orig:123 _37 ] [123])
+                (ior:SI (reg:SI 1 dx [orig:122 _36 ] [122])
+                    (reg:SI 4 si [orig:121 _35 ] [121])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":136 450 {*iorsi_1}
+     (nil))
+(insn 211 210 212 12 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:123 _37 ] [123])
+            (const_int 0 [0]))) "DEWPOINT.f":136 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 212 211 213 12 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 215)
+            (pc))) "DEWPOINT.f":136 682 {*jcc}
+     (nil)
+ -> 215)
+(note 213 212 214 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 214 213 215 13 (set (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":136 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(code_label 215 214 216 14 8 (nil) [1 uses])
+(note 216 215 217 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 217 216 218 14 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -164 [0xffffffffffffff5c])) [2 dntm1+0 S4 A32]))) "DEWPOINT.f":136 53 {*cmpisf}
+     (nil))
+(insn 218 217 219 14 (set (reg:QI 1 dx [240])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":136 678 {*setcc_qi}
+     (nil))
+(insn 219 218 220 14 (set (reg:SI 4 si [orig:124 _38 ] [124])
+        (zero_extend:SI (reg:QI 1 dx [240]))) "DEWPOINT.f":136 140 {*zero_extendqisi2}
+     (nil))
+(insn 220 219 221 14 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])
+                    (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148]))
+            ] UNSPEC_NOTRAP)) "DEWPOINT.f":136 54 {*cmpiusf}
+     (nil))
+(insn 221 220 222 14 (set (reg:QI 1 dx [241])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "DEWPOINT.f":136 678 {*setcc_qi}
+     (nil))
+(insn 222 221 223 14 (set (reg:SI 1 dx [orig:125 _39 ] [125])
+        (zero_extend:SI (reg:QI 1 dx [241]))) "DEWPOINT.f":136 140 {*zero_extendqisi2}
+     (nil))
+(insn 223 222 224 14 (parallel [
+            (set (reg:SI 1 dx [orig:126 _40 ] [126])
+                (ior:SI (reg:SI 1 dx [orig:125 _39 ] [125])
+                    (reg:SI 4 si [orig:124 _38 ] [124])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":136 450 {*iorsi_1}
+     (nil))
+(insn 224 223 225 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:126 _40 ] [126])
+            (const_int 0 [0]))) "DEWPOINT.f":136 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 225 224 226 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 228)
+            (pc))) "DEWPOINT.f":136 682 {*jcc}
+     (nil)
+ -> 228)
+(note 226 225 227 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 227 226 228 15 (set (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -164 [0xffffffffffffff5c])) [2 dntm1+0 S4 A32])) "DEWPOINT.f":136 131 {*movsf_internal}
+     (nil))
+(code_label 228 227 229 16 9 (nil) [1 uses])
+(note 229 228 230 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 230 229 231 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -168 [0xffffffffffffff58])) [2 w1+0 S4 A32])
+        (reg:SF 21 xmm0 [orig:148 M.10_68 ] [148])) "DEWPOINT.f":136 131 {*movsf_internal}
+     (nil))
+(insn 231 230 232 16 (set (reg:SF 22 xmm1 [243])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -168 [0xffffffffffffff58])) [2 w1+0 S4 A32])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (nil))
+(insn 232 231 233 16 (set (reg:SF 24 xmm3 [244])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC11") [flags 0x2]) [0  S4 A32])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 8.388608e+6 [0x0.8p+24])
+        (nil)))
+(insn 233 232 340 16 (set (reg:SF 21 xmm0 [245])
+        (reg:SF 22 xmm1 [243])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (nil))
+(insn 340 233 335 16 (set (reg:V4SF 23 xmm2 [247])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "DEWPOINT.f":137 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 335 340 236 16 (set (reg:SF 25 xmm4 [246])
+        (reg:SF 21 xmm0 [245])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (nil))
+(insn 236 335 237 16 (set (reg:SF 25 xmm4 [246])
+        (and:SF (reg:SF 25 xmm4 [246])
+            (reg:SF 23 xmm2 [248]))) "DEWPOINT.f":137 1849 {*andsf3}
+     (nil))
+(insn 237 236 238 16 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 24 xmm3 [244])
+                    (reg:SF 25 xmm4 [246]))
+            ] UNSPEC_NOTRAP)) "DEWPOINT.f":137 54 {*cmpiusf}
+     (nil))
+(jump_insn 238 237 295 16 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 243)
+            (pc))) "DEWPOINT.f":137 682 {*jcc}
+     (nil)
+ -> 243)
+(note 295 238 239 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 239 295 240 17 (set (reg:SI 1 dx [249])
+        (fix:SI (reg:SF 21 xmm0 [245]))) "DEWPOINT.f":137 174 {fix_truncsfsi_sse}
+     (nil))
+(insn 240 239 241 17 (set (reg:SF 21 xmm0 [245])
+        (float:SF (reg:SI 1 dx [249]))) "DEWPOINT.f":137 203 {*floatsisf2_mixed}
+     (nil))
+(insn 241 240 338 17 (set (reg:SF 23 xmm2 [248])
+        (and:SF (not:SF (reg:SF 23 xmm2 [248]))
+            (reg:SF 22 xmm1 [243]))) "DEWPOINT.f":137 1846 {*andnotsf3}
+     (nil))
+(insn 338 241 242 17 (set (reg:SF 22 xmm1 [250])
+        (reg:SF 23 xmm2 [248])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (nil))
+(insn 242 338 243 17 (set (reg:SF 21 xmm0 [245])
+        (ior:SF (reg:SF 21 xmm0 [245])
+            (reg:SF 22 xmm1 [250]))) "DEWPOINT.f":137 1850 {*iorsf3}
+     (nil))
+(code_label 243 242 296 18 10 (nil) [1 uses])
+(note 296 243 245 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 245 296 246 18 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -172 [0xffffffffffffff54])) [2 w2+0 S4 A32])
+        (reg:SF 21 xmm0 [242])) "DEWPOINT.f":137 131 {*movsf_internal}
+     (nil))
+(insn 246 245 247 18 (set (reg:SF 21 xmm0 [251])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -172 [0xffffffffffffff54])) [2 w2+0 S4 A32])) "DEWPOINT.f":138 131 {*movsf_internal}
+     (nil))
+(insn 247 246 248 18 (set (reg:SI 1 dx [252])
+        (fix:SI (reg:SF 21 xmm0 [251]))) "DEWPOINT.f":138 174 {fix_truncsfsi_sse}
+     (nil))
+(insn 248 247 249 18 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -176 [0xffffffffffffff50])) [1 jnt+0 S4 A32])
+        (reg:SI 1 dx [252])) "DEWPOINT.f":138 86 {*movsi_internal}
+     (nil))
+(insn 249 248 250 18 (set (reg:SI 1 dx [253])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -176 [0xffffffffffffff50])) [1 jnt+0 S4 A32])) "DEWPOINT.f":139 86 {*movsi_internal}
+     (nil))
+(insn 250 249 251 18 (set (reg:DI 1 dx [orig:127 _41 ] [127])
+        (sign_extend:DI (reg:SI 1 dx [253]))) "DEWPOINT.f":139 149 {*extendsidi2_rex64}
+     (nil))
+(insn 251 250 252 18 (parallel [
+            (set (reg:DI 1 dx [orig:128 _42 ] [128])
+                (plus:DI (reg:DI 1 dx [orig:127 _41 ] [127])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 222 {*adddi_1}
+     (nil))
+(insn 252 251 253 18 (set (reg:SF 22 xmm1 [orig:129 _43 ] [129])
+        (mem:SF (plus:DI (plus:DI (mult:DI (reg:DI 1 dx [orig:128 _42 ] [128])
+                        (const_int 4 [0x4]))
+                    (reg/f:DI 6 bp))
+                (const_int -8176 [0xffffffffffffe010])) [2 tdp S4 A32])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 253 252 254 18 (set (reg:SF 21 xmm0 [254])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -168 [0xffffffffffffff58])) [2 w1+0 S4 A32])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 254 253 255 18 (set (reg:SF 21 xmm0 [orig:130 _44 ] [130])
+        (minus:SF (reg:SF 21 xmm0 [254])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -172 [0xffffffffffffff54])) [2 w2+0 S4 A32]))) "DEWPOINT.f":139 841 {*fop_sf_1}
+     (nil))
+(insn 255 254 256 18 (set (reg:SF 24 xmm3 [orig:131 _45 ] [131])
+        (reg:SF 21 xmm0 [orig:130 _44 ] [130])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 256 255 257 18 (set (reg:SI 1 dx [255])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -176 [0xffffffffffffff50])) [1 jnt+0 S4 A32])) "DEWPOINT.f":139 86 {*movsi_internal}
+     (nil))
+(insn 257 256 258 18 (parallel [
+            (set (reg:SI 1 dx [orig:132 _46 ] [132])
+                (plus:SI (reg:SI 1 dx [255])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -144 [0xffffffffffffff70])) [1 jnt+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 258 257 259 18 (set (reg:DI 1 dx [orig:133 _47 ] [133])
+        (sign_extend:DI (reg:SI 1 dx [orig:132 _46 ] [132]))) "DEWPOINT.f":139 149 {*extendsidi2_rex64}
+     (nil))
+(insn 259 258 260 18 (parallel [
+            (set (reg:DI 1 dx [orig:134 _48 ] [134])
+                (plus:DI (reg:DI 1 dx [orig:133 _47 ] [133])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 222 {*adddi_1}
+     (nil))
+(insn 260 259 261 18 (set (reg:SF 21 xmm0 [orig:135 _49 ] [135])
+        (mem:SF (plus:DI (plus:DI (mult:DI (reg:DI 1 dx [orig:134 _48 ] [134])
+                        (const_int 4 [0x4]))
+                    (reg/f:DI 6 bp))
+                (const_int -8176 [0xffffffffffffe010])) [2 tdp S4 A32])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 261 260 262 18 (set (reg:SI 1 dx [256])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -176 [0xffffffffffffff50])) [1 jnt+0 S4 A32])) "DEWPOINT.f":139 86 {*movsi_internal}
+     (nil))
+(insn 262 261 263 18 (set (reg:DI 1 dx [orig:136 _50 ] [136])
+        (sign_extend:DI (reg:SI 1 dx [256]))) "DEWPOINT.f":139 149 {*extendsidi2_rex64}
+     (nil))
+(insn 263 262 264 18 (parallel [
+            (set (reg:DI 1 dx [orig:137 _51 ] [137])
+                (plus:DI (reg:DI 1 dx [orig:136 _50 ] [136])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 222 {*adddi_1}
+     (nil))
+(insn 264 263 265 18 (set (reg:SF 23 xmm2 [orig:138 _52 ] [138])
+        (mem:SF (plus:DI (plus:DI (mult:DI (reg:DI 1 dx [orig:137 _51 ] [137])
+                        (const_int 4 [0x4]))
+                    (reg/f:DI 6 bp))
+                (const_int -8176 [0xffffffffffffe010])) [2 tdp S4 A32])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 265 264 267 18 (set (reg:SF 21 xmm0 [orig:139 _53 ] [139])
+        (minus:SF (reg:SF 21 xmm0 [orig:135 _49 ] [135])
+            (reg:SF 23 xmm2 [orig:138 _52 ] [138]))) "DEWPOINT.f":139 841 {*fop_sf_1}
+     (nil))
+(insn 267 265 268 18 (set (reg:SF 21 xmm0 [orig:141 _55 ] [141])
+        (mult:SF (reg:SF 21 xmm0 [orig:140 _54 ] [140])
+            (reg:SF 24 xmm3 [orig:131 _45 ] [131]))) "DEWPOINT.f":139 838 {*fop_sf_comm}
+     (nil))
+(insn 268 267 269 18 (set (reg:SI 1 dx [257])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])) "DEWPOINT.f":139 86 {*movsi_internal}
+     (nil))
+(insn 269 268 270 18 (set (reg:DI 1 dx [orig:142 _56 ] [142])
+        (sign_extend:DI (reg:SI 1 dx [257]))) "DEWPOINT.f":139 149 {*extendsidi2_rex64}
+     (nil))
+(insn 270 269 339 18 (parallel [
+            (set (reg:DI 1 dx [orig:143 _57 ] [143])
+                (mult:DI (reg:DI 1 dx [orig:142 _56 ] [142])
+                    (reg:DI 41 r12 [orig:158 stride.2_88 ] [158])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 349 {*muldi3_1}
+     (nil))
+(insn 339 270 272 18 (set (reg:DI 4 si [orig:144 _58 ] [144])
+        (plus:DI (reg:DI 43 r14 [orig:164 offset.3_95 ] [164])
+            (reg:DI 1 dx [orig:143 _57 ] [143]))) "DEWPOINT.f":139 218 {*leadi}
+     (nil))
+(insn 272 339 273 18 (set (reg:SI 1 dx [258])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])) "DEWPOINT.f":139 86 {*movsi_internal}
+     (nil))
+(insn 273 272 274 18 (set (reg:DI 1 dx [orig:145 _59 ] [145])
+        (sign_extend:DI (reg:SI 1 dx [258]))) "DEWPOINT.f":139 149 {*extendsidi2_rex64}
+     (nil))
+(insn 274 273 275 18 (parallel [
+            (set (reg:DI 4 si [orig:146 _60 ] [146])
+                (plus:DI (reg:DI 4 si [orig:144 _58 ] [144])
+                    (reg:DI 1 dx [orig:145 _59 ] [145])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":139 222 {*adddi_1}
+     (nil))
+(insn 275 274 276 18 (set (reg:SF 21 xmm0 [orig:147 _61 ] [147])
+        (plus:SF (reg:SF 21 xmm0 [orig:141 _55 ] [141])
+            (reg:SF 22 xmm1 [orig:129 _43 ] [129]))) "DEWPOINT.f":139 838 {*fop_sf_comm}
+     (nil))
+(insn 276 275 277 18 (set (reg/f:DI 1 dx [259])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8192 [0xffffffffffffe000])) [4 td+0 S8 A64])) "DEWPOINT.f":139 85 {*movdi_internal}
+     (nil))
+(insn 277 276 278 18 (set (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:146 _60 ] [146])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [259])) [2 *td_139(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:147 _61 ] [147])) "DEWPOINT.f":139 131 {*movsf_internal}
+     (nil))
+(insn 278 277 302 18 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -36 [0xffffffffffffffdc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":135 221 {*addsi_1}
+     (nil))
+(jump_insn 302 278 303 18 (set (pc)
+        (label_ref 279)) "DEWPOINT.f":135 683 {jump}
+     (nil)
+ -> 279)
+(barrier 303 302 316)
+(code_label 316 303 315 19 17 (nil) [1 uses])
+(note 315 316 317 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 317 315 284 19 (const_int 0 [0]) "DEWPOINT.f":139 718 {nop}
+     (nil))
+(insn 284 317 304 19 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -40 [0xffffffffffffffd8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "DEWPOINT.f":134 221 {*addsi_1}
+     (nil))
+(jump_insn 304 284 305 19 (set (pc)
+        (label_ref 285)) "DEWPOINT.f":134 683 {jump}
+     (nil)
+ -> 285)
+(barrier 305 304 313)
+(code_label 313 305 312 20 16 (nil) [1 uses])
+(note 312 313 314 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 314 312 297 20 (const_int 0 [0]) "DEWPOINT.f":135 718 {nop}
+     (nil))
+(insn 297 314 352 20 (const_int 0 [0]) "DEWPOINT.f":144 718 {nop}
+     (nil))
+(note 352 297 353 20 NOTE_INSN_EPILOGUE_BEG)
+(insn 353 352 354 20 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 8176 [0x1ff0])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "DEWPOINT.f":145 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(insn 354 353 355 20 (set (reg:DI 3 bx)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "DEWPOINT.f":145 71 {*popdi1}
+     (nil))
+(insn 355 354 356 20 (set (reg:DI 41 r12)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "DEWPOINT.f":145 71 {*popdi1}
+     (nil))
+(insn 356 355 357 20 (set (reg:DI 42 r13)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "DEWPOINT.f":145 71 {*popdi1}
+     (nil))
+(insn 357 356 358 20 (set (reg:DI 43 r14)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "DEWPOINT.f":145 71 {*popdi1}
+     (nil))
+(insn/f 358 357 359 20 (set (reg/f:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "DEWPOINT.f":145 71 {*popdi1}
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 359 358 360 20 (simple_return) "DEWPOINT.f":145 713 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 360 359 318)
+(note 318 360 0 NOTE_INSN_DELETED)

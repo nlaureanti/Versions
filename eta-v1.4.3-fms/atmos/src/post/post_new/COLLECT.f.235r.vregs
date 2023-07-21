@@ -1,0 +1,420 @@
+
+;; Function collect (collect_, funcdef_no=0, decl_uid=3769, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 4 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 4 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 4 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 a+0 S8 A64])
+        (reg:DI 5 di [ a ])) "COLLECT.f":1 85 {*movdi_internal}
+     (nil))
+(note 3 2 6 2 NOTE_INSN_FUNCTION_BEG)
+(insn 6 3 7 2 (set (reg:SI 87 [ _1 ])
+        (mem/c:SI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>) [1 parallel.num_procs+0 S4 A128])) "COLLECT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 7 6 8 2 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 87 [ _1 ])
+            (const_int 1 [0x1]))) "COLLECT.f":44 11 {*cmpsi_1}
+     (nil))
+(jump_insn 8 7 9 2 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 12)
+            (pc))) "COLLECT.f":44 682 {*jcc}
+     (nil)
+ -> 12)
+;;  succ:       4 (FALLTHRU)
+;;              5
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 9 8 10 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 10 9 11 4 (set (pc)
+        (label_ref:DI 94)) "COLLECT.f":44 683 {jump}
+     (nil)
+ -> 94)
+;;  succ:       15 [always] 
+
+(barrier 11 10 12)
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2
+(code_label 12 11 13 5 2 (nil) [1 uses])
+(note 13 12 14 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 5 (set (reg:SI 88 [ _2 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)
+                    (const_int 4 [0x4]))) [1 parallel.me+0 S4 A32])) "COLLECT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 15 14 16 5 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 88 [ _2 ]))) "COLLECT.f":47 149 {*extendsidi2_rex64}
+     (nil))
+(insn 16 15 17 5 (parallel [
+            (set (reg:DI 110)
+                (plus:DI (reg:DI 89 [ _3 ])
+                    (const_int 10 [0xa])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (nil))
+(insn 17 16 18 5 (parallel [
+            (set (reg:DI 111)
+                (ashift:DI (reg:DI 110)
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 551 {*ashldi3_1}
+     (nil))
+(insn 18 17 19 5 (parallel [
+            (set (reg/f:DI 90 [ _4 ])
+                (plus:DI (reg:DI 111)
+                    (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (nil))
+(insn 19 18 20 5 (set (reg:SI 91 [ _5 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "COLLECT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 20 19 21 5 (set (reg:DI 92 [ _6 ])
+        (sign_extend:DI (reg:SI 91 [ _5 ]))) "COLLECT.f":47 149 {*extendsidi2_rex64}
+     (nil))
+(insn 21 20 22 5 (parallel [
+            (set (reg:DI 93 [ _7 ])
+                (plus:DI (reg:DI 92 [ _6 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (nil))
+(insn 22 21 23 5 (parallel [
+            (set (reg:DI 94 [ _8 ])
+                (mult:DI (reg:DI 93 [ _7 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 349 {*muldi3_1}
+     (nil))
+(insn 23 22 24 5 (parallel [
+            (set (reg:DI 112)
+                (ashift:DI (reg:DI 94 [ _8 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 551 {*ashldi3_1}
+     (nil))
+(insn 24 23 25 5 (set (reg/f:DI 113)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 a+0 S8 A64])) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 25 24 26 5 (parallel [
+            (set (reg/f:DI 95 [ _9 ])
+                (plus:DI (reg:DI 112)
+                    (reg/f:DI 113)))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (expr_list:REG_EQUAL (plus:DI (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -24 [0xffffffffffffffe8])) [2 a+0 S8 A64])
+            (reg:DI 112))
+        (nil)))
+(insn 26 25 27 5 (parallel [
+            (set (reg:DI 114)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (nil))
+(insn 27 26 28 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (reg:DI 114)) "COLLECT.f":47 61 {*pushdi2_rex64}
+     (expr_list:REG_ARGS_SIZE (const_int 8 [0x8])
+        (nil)))
+(insn 28 27 29 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fe1b5f4c090 *.LC1>)) "COLLECT.f":47 61 {*pushdi2_rex64}
+     (expr_list:REG_ARGS_SIZE (const_int 16 [0x10])
+        (nil)))
+(insn 29 28 30 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (symbol_ref/f:DI ("*.LC1") [flags 0x2]  <var_decl 0x7fe1b5f4c090 *.LC1>)) "COLLECT.f":47 61 {*pushdi2_rex64}
+     (expr_list:REG_ARGS_SIZE (const_int 24 [0x18])
+        (nil)))
+(insn 30 29 31 5 (set (mem/f:DI (pre_dec:DI (reg/f:DI 7 sp)) [5  S8 A64])
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fe1b5f4c000 *.LC0>)) "COLLECT.f":47 61 {*pushdi2_rex64}
+     (expr_list:REG_ARGS_SIZE (const_int 32 [0x20])
+        (nil)))
+(insn 31 30 32 5 (set (reg:DI 38 r9)
+        (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)
+                (const_int 4136 [0x1028])))) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 32 31 33 5 (set (reg:DI 37 r8)
+        (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)
+                (const_int 40 [0x28])))) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 33 32 34 5 (set (reg:DI 2 cx)
+        (symbol_ref:DI ("b.3886") [flags 0x202]  <var_decl 0x7fe1b632cb40 b>)) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 34 33 35 5 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC0") [flags 0x2]  <var_decl 0x7fe1b5f4c000 *.LC0>)) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 35 34 36 5 (set (reg:DI 4 si)
+        (reg/f:DI 90 [ _4 ])) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 36 35 37 5 (set (reg:DI 5 di)
+        (reg/f:DI 95 [ _9 ])) "COLLECT.f":47 85 {*movdi_internal}
+     (nil))
+(insn 37 36 38 5 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "COLLECT.f":47 88 {*movqi_internal}
+     (nil))
+(call_insn 38 37 39 5 (call (mem:QI (symbol_ref:DI ("mpi_gatherv_") [flags 0x41]  <function_decl 0x7fe1b6302600 mpi_gatherv>) [0 mpi_gatherv S1 A8])
+        (const_int 32 [0x20])) "COLLECT.f":47 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 37 r8))
+                            (expr_list:DI (use (reg:DI 38 r9))
+                                (nil)))))))))
+(insn 39 38 40 5 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 32 [0x20])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":47 222 {*adddi_1}
+     (expr_list:REG_ARGS_SIZE (const_int 0 [0])
+        (nil)))
+(insn 40 39 41 5 (set (reg:SI 96 [ _10 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fe1b632c2d0 parallel>)
+                    (const_int 4 [0x4]))) [1 parallel.me+0 S4 A32])) "COLLECT.f":1 86 {*movsi_internal}
+     (nil))
+(insn 41 40 42 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 96 [ _10 ])
+            (const_int 0 [0]))) "COLLECT.f":48 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 42 41 43 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 94)
+            (pc))) "COLLECT.f":48 682 {*jcc}
+     (nil)
+ -> 94)
+;;  succ:       6 (FALLTHRU)
+;;              15
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 43 42 44 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 44 43 85 6 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (const_int 1 [0x1])) "COLLECT.f":49 86 {*movsi_internal}
+     (nil))
+;;  succ:       7 (FALLTHRU)
+
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+;;              11 (DFS_BACK)
+(code_label 85 44 45 7 8 (nil) [1 uses])
+(note 45 85 46 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 7 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "COLLECT.f":49 11 {*cmpsi_1}
+     (nil))
+(insn 47 46 48 7 (set (reg:QI 115)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "COLLECT.f":49 678 {*setcc_qi}
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 108 [ _33 ])
+        (zero_extend:SI (reg:QI 115))) "COLLECT.f":49 140 {*zero_extendqisi2}
+     (nil))
+(insn 49 48 50 7 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 108 [ _33 ])
+            (const_int 0 [0]))) "COLLECT.f":49 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 50 49 51 7 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 94)
+            (pc))) "COLLECT.f":49 682 {*jcc}
+     (nil)
+ -> 94)
+;;  succ:       15
+;;              8 (FALLTHRU)
+
+;; basic block 8, loop depth 1, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7 (FALLTHRU)
+(note 51 50 52 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 79 8 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "COLLECT.f":50 86 {*movsi_internal}
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 2, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8 (FALLTHRU)
+;;              10 (DFS_BACK)
+(code_label 79 52 53 9 7 (nil) [1 uses])
+(note 53 79 54 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 54 53 55 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "COLLECT.f":50 11 {*cmpsi_1}
+     (nil))
+(insn 55 54 56 9 (set (reg:QI 116)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "COLLECT.f":50 678 {*setcc_qi}
+     (nil))
+(insn 56 55 57 9 (set (reg:SI 109 [ _35 ])
+        (zero_extend:SI (reg:QI 116))) "COLLECT.f":50 140 {*zero_extendqisi2}
+     (nil))
+(insn 57 56 58 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 109 [ _35 ])
+            (const_int 0 [0]))) "COLLECT.f":50 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 58 57 59 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 82)
+            (pc))) "COLLECT.f":50 682 {*jcc}
+     (nil)
+ -> 82)
+;;  succ:       11
+;;              10 (FALLTHRU)
+
+;; basic block 10, loop depth 2, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9 (FALLTHRU)
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 10 (set (reg:SI 117)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "COLLECT.f":51 86 {*movsi_internal}
+     (nil))
+(insn 61 60 62 10 (set (reg:DI 97 [ _11 ])
+        (sign_extend:DI (reg:SI 117))) "COLLECT.f":51 149 {*extendsidi2_rex64}
+     (nil))
+(insn 62 61 63 10 (parallel [
+            (set (reg:DI 98 [ _12 ])
+                (mult:DI (reg:DI 97 [ _11 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 349 {*muldi3_1}
+     (nil))
+(insn 63 62 64 10 (set (reg:SI 118)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "COLLECT.f":51 86 {*movsi_internal}
+     (nil))
+(insn 64 63 65 10 (set (reg:DI 99 [ _13 ])
+        (sign_extend:DI (reg:SI 118))) "COLLECT.f":51 149 {*extendsidi2_rex64}
+     (nil))
+(insn 65 64 66 10 (parallel [
+            (set (reg:DI 100 [ _14 ])
+                (plus:DI (reg:DI 98 [ _12 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 222 {*adddi_1}
+     (nil))
+(insn 66 65 67 10 (parallel [
+            (set (reg:DI 101 [ _15 ])
+                (plus:DI (reg:DI 100 [ _14 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 222 {*adddi_1}
+     (nil))
+(insn 67 66 68 10 (set (reg:SI 119)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "COLLECT.f":51 86 {*movsi_internal}
+     (nil))
+(insn 68 67 69 10 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 119))) "COLLECT.f":51 149 {*extendsidi2_rex64}
+     (nil))
+(insn 69 68 70 10 (parallel [
+            (set (reg:DI 103 [ _17 ])
+                (mult:DI (reg:DI 102 [ _16 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 349 {*muldi3_1}
+     (nil))
+(insn 70 69 71 10 (set (reg:SI 120)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "COLLECT.f":51 86 {*movsi_internal}
+     (nil))
+(insn 71 70 72 10 (set (reg:DI 104 [ _18 ])
+        (sign_extend:DI (reg:SI 120))) "COLLECT.f":51 149 {*extendsidi2_rex64}
+     (nil))
+(insn 72 71 73 10 (parallel [
+            (set (reg:DI 105 [ _19 ])
+                (plus:DI (reg:DI 103 [ _17 ])
+                    (reg:DI 104 [ _18 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 222 {*adddi_1}
+     (nil))
+(insn 73 72 74 10 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (plus:DI (reg:DI 105 [ _19 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":51 222 {*adddi_1}
+     (nil))
+(insn 74 73 75 10 (set (reg/f:DI 121)
+        (symbol_ref:DI ("b.3886") [flags 0x202]  <var_decl 0x7fe1b632cb40 b>)) "COLLECT.f":51 85 {*movdi_internal}
+     (nil))
+(insn 75 74 76 10 (set (reg:SF 107 [ _21 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 101 [ _15 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 121)) [4 b S4 A32])) "COLLECT.f":51 131 {*movsf_internal}
+     (nil))
+(insn 76 75 77 10 (set (reg/f:DI 122)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 a+0 S8 A64])) "COLLECT.f":51 85 {*movdi_internal}
+     (nil))
+(insn 77 76 78 10 (set (mem:SF (plus:DI (mult:DI (reg:DI 106 [ _20 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 122)) [4 *a_30(D) S4 A32])
+        (reg:SF 107 [ _21 ])) "COLLECT.f":51 131 {*movsf_internal}
+     (nil))
+(insn 78 77 80 10 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":50 221 {*addsi_1}
+     (nil))
+(jump_insn 80 78 81 10 (set (pc)
+        (label_ref 79)) "COLLECT.f":50 683 {jump}
+     (nil)
+ -> 79)
+;;  succ:       9 (DFS_BACK)
+
+(barrier 81 80 82)
+;; basic block 11, loop depth 1, maybe hot
+;;  prev block 10, next block 15, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9
+(code_label 82 81 83 11 6 (nil) [1 uses])
+(note 83 82 84 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 84 83 86 11 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "COLLECT.f":49 221 {*addsi_1}
+     (nil))
+(jump_insn 86 84 87 11 (set (pc)
+        (label_ref 85)) "COLLECT.f":49 683 {jump}
+     (nil)
+ -> 85)
+;;  succ:       7 (DFS_BACK)
+
+(barrier 87 86 94)
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 11, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7
+;;              4 [always] 
+;;              5
+(code_label 94 87 95 15 1 (nil) [3 uses])
+(note 95 94 0 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+

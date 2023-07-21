@@ -1,0 +1,2819 @@
+
+;; Function calmcvg (calmcvg_, funcdef_no=0, decl_uid=3772, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 8 NOTE_INSN_DELETED)
+(note 8 1 717 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 717 8 718 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "CALMCVG.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 718 717 719 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn/f 719 718 720 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -80 [0xffffffffffffffb0])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALMCVG.f":1 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(note 720 719 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 720 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])
+        (reg:DI 5 di [ q1d ])) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])
+        (reg:DI 4 si [ u1d ])) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])
+        (reg:DI 1 dx [ v1d ])) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [4 ih+0 S8 A64])
+        (reg:DI 2 cx [ ih ])) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 qcnvg+0 S8 A64])
+        (reg:DI 37 r8 [ qcnvg ])) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(note 7 6 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 7 11 2 (set (reg:SI 1 dx [orig:391 _321 ] [391])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALMCVG.f":89 86 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 0 ax [orig:392 _322 ] [392])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALMCVG.f":89 86 {*movsi_internal}
+     (nil))
+(insn 12 11 151 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:391 _321 ] [391])) "CALMCVG.f":89 86 {*movsi_internal}
+     (nil))
+(code_label 151 12 13 3 9 (nil) [1 uses])
+(note 13 151 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:392 _322 ] [392]))) "CALMCVG.f":89 11 {*cmpsi_1}
+     (nil))
+(insn 15 14 16 3 (set (reg:QI 1 dx [404])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":89 678 {*setcc_qi}
+     (nil))
+(insn 16 15 17 3 (set (reg:SI 1 dx [orig:393 _324 ] [393])
+        (zero_extend:SI (reg:QI 1 dx [404]))) "CALMCVG.f":89 140 {*zero_extendqisi2}
+     (nil))
+(insn 17 16 18 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:393 _324 ] [393])
+            (const_int 0 [0]))) "CALMCVG.f":89 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 18 17 19 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 653)
+            (pc))) "CALMCVG.f":89 682 {*jcc}
+     (nil)
+ -> 653)
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 145 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALMCVG.f":90 86 {*movsi_internal}
+     (nil))
+(code_label 145 20 21 5 8 (nil) [1 uses])
+(note 21 145 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALMCVG.f":90 11 {*cmpsi_1}
+     (nil))
+(insn 23 22 24 5 (set (reg:QI 1 dx [405])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":90 678 {*setcc_qi}
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 1 dx [orig:394 _326 ] [394])
+        (zero_extend:SI (reg:QI 1 dx [405]))) "CALMCVG.f":90 140 {*zero_extendqisi2}
+     (nil))
+(insn 25 24 26 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:394 _326 ] [394])
+            (const_int 0 [0]))) "CALMCVG.f":90 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 656)
+            (pc))) "CALMCVG.f":90 682 {*jcc}
+     (nil)
+ -> 656)
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg:SI 1 dx [406])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":91 86 {*movsi_internal}
+     (nil))
+(insn 29 28 30 6 (set (reg:DI 1 dx [orig:87 _1 ] [87])
+        (sign_extend:DI (reg:SI 1 dx [406]))) "CALMCVG.f":91 149 {*extendsidi2_rex64}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:DI 2 cx [orig:88 _2 ] [88])
+                (mult:DI (reg:DI 1 dx [orig:87 _1 ] [87])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":91 349 {*muldi3_1}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 1 dx [407])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":91 86 {*movsi_internal}
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 1 dx [orig:89 _3 ] [89])
+        (sign_extend:DI (reg:SI 1 dx [407]))) "CALMCVG.f":91 149 {*extendsidi2_rex64}
+     (nil))
+(insn 33 32 708 6 (parallel [
+            (set (reg:DI 1 dx [orig:90 _4 ] [90])
+                (plus:DI (reg:DI 1 dx [orig:89 _3 ] [89])
+                    (reg:DI 2 cx [orig:88 _2 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":91 222 {*adddi_1}
+     (nil))
+(insn 708 33 35 6 (set (reg:DI 2 cx [orig:91 _5 ] [91])
+        (plus:DI (reg:DI 1 dx [orig:90 _4 ] [90])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":91 218 {*leadi}
+     (nil))
+(insn 35 708 709 6 (set (reg/f:DI 1 dx [408])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":91 85 {*movdi_internal}
+     (nil))
+(insn 709 35 37 6 (set (reg:SF 21 xmm0 [409])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALMCVG.f":91 131 {*movsf_internal}
+     (nil))
+(insn 37 709 38 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:91 _5 ] [91])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [408])) [2 qv S4 A32])
+        (reg:SF 21 xmm0 [409])) "CALMCVG.f":91 131 {*movsf_internal}
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 1 dx [410])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":92 86 {*movsi_internal}
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 1 dx [orig:92 _6 ] [92])
+        (sign_extend:DI (reg:SI 1 dx [410]))) "CALMCVG.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 40 39 41 6 (parallel [
+            (set (reg:DI 2 cx [orig:93 _7 ] [93])
+                (mult:DI (reg:DI 1 dx [orig:92 _6 ] [92])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":92 349 {*muldi3_1}
+     (nil))
+(insn 41 40 42 6 (set (reg:SI 1 dx [411])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":92 86 {*movsi_internal}
+     (nil))
+(insn 42 41 43 6 (set (reg:DI 1 dx [orig:94 _8 ] [94])
+        (sign_extend:DI (reg:SI 1 dx [411]))) "CALMCVG.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 43 42 710 6 (parallel [
+            (set (reg:DI 1 dx [orig:95 _9 ] [95])
+                (plus:DI (reg:DI 1 dx [orig:94 _8 ] [94])
+                    (reg:DI 2 cx [orig:93 _7 ] [93])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":92 222 {*adddi_1}
+     (nil))
+(insn 710 43 45 6 (set (reg:DI 2 cx [orig:96 _10 ] [96])
+        (plus:DI (reg:DI 1 dx [orig:95 _9 ] [95])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":92 218 {*leadi}
+     (nil))
+(insn 45 710 711 6 (set (reg/f:DI 1 dx [412])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 qcnvg+0 S8 A64])) "CALMCVG.f":92 85 {*movdi_internal}
+     (nil))
+(insn 711 45 47 6 (set (reg:SF 21 xmm0 [413])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALMCVG.f":92 131 {*movsf_internal}
+     (nil))
+(insn 47 711 48 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:96 _10 ] [96])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [412])) [2 *qcnvg_328(D) S4 A32])
+        (reg:SF 21 xmm0 [413])) "CALMCVG.f":92 131 {*movsf_internal}
+     (nil))
+(insn 48 47 49 6 (set (reg:SI 1 dx [414])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":93 86 {*movsi_internal}
+     (nil))
+(insn 49 48 50 6 (set (reg:DI 1 dx [orig:97 _11 ] [97])
+        (sign_extend:DI (reg:SI 1 dx [414]))) "CALMCVG.f":93 149 {*extendsidi2_rex64}
+     (nil))
+(insn 50 49 51 6 (parallel [
+            (set (reg:DI 2 cx [orig:98 _12 ] [98])
+                (mult:DI (reg:DI 1 dx [orig:97 _11 ] [97])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":93 349 {*muldi3_1}
+     (nil))
+(insn 51 50 52 6 (set (reg:SI 1 dx [415])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":93 86 {*movsi_internal}
+     (nil))
+(insn 52 51 53 6 (set (reg:DI 1 dx [orig:99 _13 ] [99])
+        (sign_extend:DI (reg:SI 1 dx [415]))) "CALMCVG.f":93 149 {*extendsidi2_rex64}
+     (nil))
+(insn 53 52 712 6 (parallel [
+            (set (reg:DI 1 dx [orig:100 _14 ] [100])
+                (plus:DI (reg:DI 1 dx [orig:99 _13 ] [99])
+                    (reg:DI 2 cx [orig:98 _12 ] [98])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":93 222 {*adddi_1}
+     (nil))
+(insn 712 53 55 6 (set (reg:DI 4 si [orig:101 _15 ] [101])
+        (plus:DI (reg:DI 1 dx [orig:100 _14 ] [100])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":93 218 {*leadi}
+     (nil))
+(insn 55 712 56 6 (set (reg:SI 1 dx [416])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":93 86 {*movsi_internal}
+     (nil))
+(insn 56 55 57 6 (set (reg:DI 1 dx [orig:102 _16 ] [102])
+        (sign_extend:DI (reg:SI 1 dx [416]))) "CALMCVG.f":93 149 {*extendsidi2_rex64}
+     (nil))
+(insn 57 56 58 6 (parallel [
+            (set (reg:DI 2 cx [orig:103 _17 ] [103])
+                (mult:DI (reg:DI 1 dx [orig:102 _16 ] [102])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":93 349 {*muldi3_1}
+     (nil))
+(insn 58 57 59 6 (set (reg:SI 1 dx [417])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":93 86 {*movsi_internal}
+     (nil))
+(insn 59 58 60 6 (set (reg:DI 1 dx [orig:104 _18 ] [104])
+        (sign_extend:DI (reg:SI 1 dx [417]))) "CALMCVG.f":93 149 {*extendsidi2_rex64}
+     (nil))
+(insn 60 59 713 6 (parallel [
+            (set (reg:DI 1 dx [orig:105 _19 ] [105])
+                (plus:DI (reg:DI 1 dx [orig:104 _18 ] [104])
+                    (reg:DI 2 cx [orig:103 _17 ] [103])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":93 222 {*adddi_1}
+     (nil))
+(insn 713 60 62 6 (set (reg:DI 2 cx [orig:106 _20 ] [106])
+        (plus:DI (reg:DI 1 dx [orig:105 _19 ] [105])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":93 218 {*leadi}
+     (nil))
+(insn 62 713 63 6 (set (reg/f:DI 1 dx [418])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":93 85 {*movdi_internal}
+     (nil))
+(insn 63 62 64 6 (set (reg:SF 21 xmm0 [orig:107 _21 ] [107])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:101 _15 ] [101])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [418])) [2 *u1d_330(D) S4 A32])) "CALMCVG.f":93 131 {*movsf_internal}
+     (nil))
+(insn 64 63 65 6 (set (reg/f:DI 1 dx [419])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":93 85 {*movdi_internal}
+     (nil))
+(insn 65 64 66 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:106 _20 ] [106])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [419])) [2 uwnd S4 A32])
+        (reg:SF 21 xmm0 [orig:107 _21 ] [107])) "CALMCVG.f":93 131 {*movsf_internal}
+     (nil))
+(insn 66 65 67 6 (set (reg:SI 1 dx [420])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":94 86 {*movsi_internal}
+     (nil))
+(insn 67 66 68 6 (set (reg:DI 1 dx [orig:108 _22 ] [108])
+        (sign_extend:DI (reg:SI 1 dx [420]))) "CALMCVG.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 68 67 69 6 (parallel [
+            (set (reg:DI 2 cx [orig:109 _23 ] [109])
+                (mult:DI (reg:DI 1 dx [orig:108 _22 ] [108])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":94 349 {*muldi3_1}
+     (nil))
+(insn 69 68 70 6 (set (reg:SI 1 dx [421])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":94 86 {*movsi_internal}
+     (nil))
+(insn 70 69 71 6 (set (reg:DI 1 dx [orig:110 _24 ] [110])
+        (sign_extend:DI (reg:SI 1 dx [421]))) "CALMCVG.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 71 70 714 6 (parallel [
+            (set (reg:DI 1 dx [orig:111 _25 ] [111])
+                (plus:DI (reg:DI 1 dx [orig:110 _24 ] [110])
+                    (reg:DI 2 cx [orig:109 _23 ] [109])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":94 222 {*adddi_1}
+     (nil))
+(insn 714 71 73 6 (set (reg:DI 4 si [orig:112 _26 ] [112])
+        (plus:DI (reg:DI 1 dx [orig:111 _25 ] [111])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":94 218 {*leadi}
+     (nil))
+(insn 73 714 74 6 (set (reg:SI 1 dx [422])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":94 86 {*movsi_internal}
+     (nil))
+(insn 74 73 75 6 (set (reg:DI 1 dx [orig:113 _27 ] [113])
+        (sign_extend:DI (reg:SI 1 dx [422]))) "CALMCVG.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 75 74 76 6 (parallel [
+            (set (reg:DI 2 cx [orig:114 _28 ] [114])
+                (mult:DI (reg:DI 1 dx [orig:113 _27 ] [113])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":94 349 {*muldi3_1}
+     (nil))
+(insn 76 75 77 6 (set (reg:SI 1 dx [423])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":94 86 {*movsi_internal}
+     (nil))
+(insn 77 76 78 6 (set (reg:DI 1 dx [orig:115 _29 ] [115])
+        (sign_extend:DI (reg:SI 1 dx [423]))) "CALMCVG.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 78 77 715 6 (parallel [
+            (set (reg:DI 1 dx [orig:116 _30 ] [116])
+                (plus:DI (reg:DI 1 dx [orig:115 _29 ] [115])
+                    (reg:DI 2 cx [orig:114 _28 ] [114])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":94 222 {*adddi_1}
+     (nil))
+(insn 715 78 80 6 (set (reg:DI 2 cx [orig:117 _31 ] [117])
+        (plus:DI (reg:DI 1 dx [orig:116 _30 ] [116])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":94 218 {*leadi}
+     (nil))
+(insn 80 715 81 6 (set (reg/f:DI 1 dx [424])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":94 85 {*movdi_internal}
+     (nil))
+(insn 81 80 82 6 (set (reg:SF 21 xmm0 [orig:118 _32 ] [118])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:112 _26 ] [112])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [424])) [2 *v1d_332(D) S4 A32])) "CALMCVG.f":94 131 {*movsf_internal}
+     (nil))
+(insn 82 81 83 6 (set (reg/f:DI 1 dx [425])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":94 85 {*movdi_internal}
+     (nil))
+(insn 83 82 84 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:117 _31 ] [117])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [425])) [2 vwnd S4 A32])
+        (reg:SF 21 xmm0 [orig:118 _32 ] [118])) "CALMCVG.f":94 131 {*movsf_internal}
+     (nil))
+(insn 84 83 85 6 (set (reg:SI 1 dx [426])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":95 86 {*movsi_internal}
+     (nil))
+(insn 85 84 86 6 (set (reg:DI 1 dx [orig:119 _33 ] [119])
+        (sign_extend:DI (reg:SI 1 dx [426]))) "CALMCVG.f":95 149 {*extendsidi2_rex64}
+     (nil))
+(insn 86 85 87 6 (parallel [
+            (set (reg:DI 2 cx [orig:120 _34 ] [120])
+                (mult:DI (reg:DI 1 dx [orig:119 _33 ] [119])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":95 349 {*muldi3_1}
+     (nil))
+(insn 87 86 88 6 (set (reg:SI 1 dx [427])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":95 86 {*movsi_internal}
+     (nil))
+(insn 88 87 89 6 (set (reg:DI 1 dx [orig:121 _35 ] [121])
+        (sign_extend:DI (reg:SI 1 dx [427]))) "CALMCVG.f":95 149 {*extendsidi2_rex64}
+     (nil))
+(insn 89 88 716 6 (parallel [
+            (set (reg:DI 1 dx [orig:122 _36 ] [122])
+                (plus:DI (reg:DI 1 dx [orig:121 _35 ] [121])
+                    (reg:DI 2 cx [orig:120 _34 ] [120])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":95 222 {*adddi_1}
+     (nil))
+(insn 716 89 91 6 (set (reg:DI 2 cx [orig:123 _37 ] [123])
+        (plus:DI (reg:DI 1 dx [orig:122 _36 ] [122])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":95 218 {*leadi}
+     (nil))
+(insn 91 716 92 6 (set (reg/f:DI 1 dx [428])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":95 85 {*movdi_internal}
+     (nil))
+(insn 92 91 93 6 (set (reg:SF 21 xmm0 [orig:124 _38 ] [124])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:123 _37 ] [123])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [428])) [2 uwnd S4 A32])) "CALMCVG.f":95 131 {*movsf_internal}
+     (nil))
+(insn 93 92 94 6 (set (reg:SF 22 xmm1 [orig:125 _39 ] [125])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f3e7cde4000 options>) [2 options.spval+0 S4 A128])) "CALMCVG.f":1 131 {*movsf_internal}
+     (nil))
+(insn 94 93 95 6 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:124 _38 ] [124])
+                    (reg:SF 22 xmm1 [orig:125 _39 ] [125]))
+            ] UNSPEC_NOTRAP)) "CALMCVG.f":95 54 {*cmpiusf}
+     (nil))
+(jump_insn 95 94 631 6 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 112)
+            (pc))) "CALMCVG.f":95 682 {*jcc}
+     (nil)
+ -> 112)
+(note 631 95 96 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 96 631 97 7 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:124 _38 ] [124])
+                    (reg:SF 22 xmm1 [orig:125 _39 ] [125]))
+            ] UNSPEC_NOTRAP)) "CALMCVG.f":95 54 {*cmpiusf}
+     (nil))
+(jump_insn 97 96 101 7 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 112)
+            (pc))) "CALMCVG.f":95 682 {*jcc}
+     (nil)
+ -> 112)
+(note 101 97 102 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 8 (set (reg:SI 1 dx [429])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":95 86 {*movsi_internal}
+     (nil))
+(insn 103 102 104 8 (set (reg:DI 1 dx [orig:126 _40 ] [126])
+        (sign_extend:DI (reg:SI 1 dx [429]))) "CALMCVG.f":95 149 {*extendsidi2_rex64}
+     (nil))
+(insn 104 103 105 8 (parallel [
+            (set (reg:DI 2 cx [orig:127 _41 ] [127])
+                (mult:DI (reg:DI 1 dx [orig:126 _40 ] [126])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":95 349 {*muldi3_1}
+     (nil))
+(insn 105 104 106 8 (set (reg:SI 1 dx [430])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":95 86 {*movsi_internal}
+     (nil))
+(insn 106 105 107 8 (set (reg:DI 1 dx [orig:128 _42 ] [128])
+        (sign_extend:DI (reg:SI 1 dx [430]))) "CALMCVG.f":95 149 {*extendsidi2_rex64}
+     (nil))
+(insn 107 106 706 8 (parallel [
+            (set (reg:DI 1 dx [orig:129 _43 ] [129])
+                (plus:DI (reg:DI 1 dx [orig:128 _42 ] [128])
+                    (reg:DI 2 cx [orig:127 _41 ] [127])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":95 222 {*adddi_1}
+     (nil))
+(insn 706 107 109 8 (set (reg:DI 2 cx [orig:130 _44 ] [130])
+        (plus:DI (reg:DI 1 dx [orig:129 _43 ] [129])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":95 218 {*leadi}
+     (nil))
+(insn 109 706 707 8 (set (reg/f:DI 1 dx [431])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":95 85 {*movdi_internal}
+     (nil))
+(insn 707 109 111 8 (set (reg:SF 21 xmm0 [432])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALMCVG.f":95 131 {*movsf_internal}
+     (nil))
+(insn 111 707 112 8 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:130 _44 ] [130])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [431])) [2 uwnd S4 A32])
+        (reg:SF 21 xmm0 [432])) "CALMCVG.f":95 131 {*movsf_internal}
+     (nil))
+(code_label 112 111 113 9 4 (nil) [2 uses])
+(note 113 112 114 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 114 113 115 9 (set (reg:SI 1 dx [433])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":96 86 {*movsi_internal}
+     (nil))
+(insn 115 114 116 9 (set (reg:DI 1 dx [orig:131 _45 ] [131])
+        (sign_extend:DI (reg:SI 1 dx [433]))) "CALMCVG.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 116 115 117 9 (parallel [
+            (set (reg:DI 2 cx [orig:132 _46 ] [132])
+                (mult:DI (reg:DI 1 dx [orig:131 _45 ] [131])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":96 349 {*muldi3_1}
+     (nil))
+(insn 117 116 118 9 (set (reg:SI 1 dx [434])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":96 86 {*movsi_internal}
+     (nil))
+(insn 118 117 119 9 (set (reg:DI 1 dx [orig:133 _47 ] [133])
+        (sign_extend:DI (reg:SI 1 dx [434]))) "CALMCVG.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 119 118 705 9 (parallel [
+            (set (reg:DI 1 dx [orig:134 _48 ] [134])
+                (plus:DI (reg:DI 1 dx [orig:133 _47 ] [133])
+                    (reg:DI 2 cx [orig:132 _46 ] [132])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":96 222 {*adddi_1}
+     (nil))
+(insn 705 119 121 9 (set (reg:DI 2 cx [orig:135 _49 ] [135])
+        (plus:DI (reg:DI 1 dx [orig:134 _48 ] [134])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":96 218 {*leadi}
+     (nil))
+(insn 121 705 122 9 (set (reg/f:DI 1 dx [435])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":96 85 {*movdi_internal}
+     (nil))
+(insn 122 121 123 9 (set (reg:SF 21 xmm0 [orig:136 _50 ] [136])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:135 _49 ] [135])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [435])) [2 vwnd S4 A32])) "CALMCVG.f":96 131 {*movsf_internal}
+     (nil))
+(insn 123 122 124 9 (set (reg:SF 22 xmm1 [orig:137 _51 ] [137])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f3e7cde4000 options>) [2 options.spval+0 S4 A128])) "CALMCVG.f":1 131 {*movsf_internal}
+     (nil))
+(insn 124 123 125 9 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:136 _50 ] [136])
+                    (reg:SF 22 xmm1 [orig:137 _51 ] [137]))
+            ] UNSPEC_NOTRAP)) "CALMCVG.f":96 54 {*cmpiusf}
+     (nil))
+(jump_insn 125 124 634 9 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 142)
+            (pc))) "CALMCVG.f":96 682 {*jcc}
+     (nil)
+ -> 142)
+(note 634 125 126 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 126 634 127 10 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:136 _50 ] [136])
+                    (reg:SF 22 xmm1 [orig:137 _51 ] [137]))
+            ] UNSPEC_NOTRAP)) "CALMCVG.f":96 54 {*cmpiusf}
+     (nil))
+(jump_insn 127 126 131 10 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 142)
+            (pc))) "CALMCVG.f":96 682 {*jcc}
+     (nil)
+ -> 142)
+(note 131 127 132 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 11 (set (reg:SI 1 dx [436])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":96 86 {*movsi_internal}
+     (nil))
+(insn 133 132 134 11 (set (reg:DI 1 dx [orig:138 _52 ] [138])
+        (sign_extend:DI (reg:SI 1 dx [436]))) "CALMCVG.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 134 133 135 11 (parallel [
+            (set (reg:DI 2 cx [orig:139 _53 ] [139])
+                (mult:DI (reg:DI 1 dx [orig:138 _52 ] [138])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":96 349 {*muldi3_1}
+     (nil))
+(insn 135 134 136 11 (set (reg:SI 1 dx [437])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":96 86 {*movsi_internal}
+     (nil))
+(insn 136 135 137 11 (set (reg:DI 1 dx [orig:140 _54 ] [140])
+        (sign_extend:DI (reg:SI 1 dx [437]))) "CALMCVG.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 137 136 703 11 (parallel [
+            (set (reg:DI 1 dx [orig:141 _55 ] [141])
+                (plus:DI (reg:DI 1 dx [orig:140 _54 ] [140])
+                    (reg:DI 2 cx [orig:139 _53 ] [139])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":96 222 {*adddi_1}
+     (nil))
+(insn 703 137 139 11 (set (reg:DI 2 cx [orig:142 _56 ] [142])
+        (plus:DI (reg:DI 1 dx [orig:141 _55 ] [141])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":96 218 {*leadi}
+     (nil))
+(insn 139 703 704 11 (set (reg/f:DI 1 dx [438])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":96 85 {*movdi_internal}
+     (nil))
+(insn 704 139 141 11 (set (reg:SF 21 xmm0 [439])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALMCVG.f":96 131 {*movsf_internal}
+     (nil))
+(insn 141 704 142 11 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:142 _56 ] [142])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [438])) [2 vwnd S4 A32])
+        (reg:SF 21 xmm0 [439])) "CALMCVG.f":96 131 {*movsf_internal}
+     (nil))
+(code_label 142 141 143 12 6 (nil) [2 uses])
+(note 143 142 144 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 144 143 640 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":90 221 {*addsi_1}
+     (nil))
+(jump_insn 640 144 641 12 (set (pc)
+        (label_ref 145)) "CALMCVG.f":90 683 {jump}
+     (nil)
+ -> 145)
+(barrier 641 640 656)
+(code_label 656 641 655 13 23 (nil) [1 uses])
+(note 655 656 657 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 657 655 150 13 (const_int 0 [0]) "CALMCVG.f":96 718 {nop}
+     (nil))
+(insn 150 657 642 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":89 221 {*addsi_1}
+     (nil))
+(jump_insn 642 150 643 13 (set (pc)
+        (label_ref 151)) "CALMCVG.f":89 683 {jump}
+     (nil)
+ -> 151)
+(barrier 643 642 653)
+(code_label 653 643 652 14 22 (nil) [1 uses])
+(note 652 653 654 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 654 652 156 14 (const_int 0 [0]) "CALMCVG.f":90 718 {nop}
+     (nil))
+(insn 156 654 157 14 (set (reg:DI 0 ax [440])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])) "CALMCVG.f":102 85 {*movdi_internal}
+     (nil))
+(insn 157 156 158 14 (set (reg:DI 5 di)
+        (reg:DI 0 ax [440])) "CALMCVG.f":102 85 {*movdi_internal}
+     (nil))
+(insn 158 157 159 14 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALMCVG.f":102 88 {*movqi_internal}
+     (nil))
+(call_insn 159 158 160 14 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f3e7cdd1600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALMCVG.f":102 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 160 159 161 14 (set (reg:DI 0 ax [441])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":103 85 {*movdi_internal}
+     (nil))
+(insn 161 160 162 14 (set (reg:DI 5 di)
+        (reg:DI 0 ax [441])) "CALMCVG.f":103 85 {*movdi_internal}
+     (nil))
+(insn 162 161 163 14 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALMCVG.f":103 88 {*movqi_internal}
+     (nil))
+(call_insn 163 162 164 14 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f3e7cdd1600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALMCVG.f":103 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 164 163 165 14 (set (reg:DI 0 ax [442])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":104 85 {*movdi_internal}
+     (nil))
+(insn 165 164 166 14 (set (reg:DI 5 di)
+        (reg:DI 0 ax [442])) "CALMCVG.f":104 85 {*movdi_internal}
+     (nil))
+(insn 166 165 167 14 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALMCVG.f":104 88 {*movqi_internal}
+     (nil))
+(call_insn 167 166 168 14 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f3e7cdd1600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALMCVG.f":104 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 168 167 169 14 (set (reg:SI 1 dx [orig:395 _342 ] [395])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 16 [0x10]))) [1 parallel.jsta_m+0 S4 A128])) "CALMCVG.f":107 86 {*movsi_internal}
+     (nil))
+(insn 169 168 170 14 (set (reg:SI 0 ax [orig:396 _343 ] [396])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 20 [0x14]))) [1 parallel.jend_m+0 S4 A32])) "CALMCVG.f":107 86 {*movsi_internal}
+     (nil))
+(insn 170 169 417 14 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:395 _342 ] [395])) "CALMCVG.f":107 86 {*movsi_internal}
+     (nil))
+(code_label 417 170 171 15 14 (nil) [1 uses])
+(note 171 417 172 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 172 171 173 15 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:396 _343 ] [396]))) "CALMCVG.f":107 11 {*cmpsi_1}
+     (nil))
+(insn 173 172 174 15 (set (reg:QI 1 dx [443])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":107 678 {*setcc_qi}
+     (nil))
+(insn 174 173 175 15 (set (reg:SI 1 dx [orig:397 _345 ] [397])
+        (zero_extend:SI (reg:QI 1 dx [443]))) "CALMCVG.f":107 140 {*zero_extendqisi2}
+     (nil))
+(insn 175 174 176 15 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:397 _345 ] [397])
+            (const_int 0 [0]))) "CALMCVG.f":107 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 176 175 177 15 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 659)
+            (pc))) "CALMCVG.f":107 682 {*jcc}
+     (nil)
+ -> 659)
+(note 177 176 178 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 411 16 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 2 [0x2])) "CALMCVG.f":108 86 {*movsi_internal}
+     (nil))
+(code_label 411 178 179 17 13 (nil) [1 uses])
+(note 179 411 180 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 180 179 181 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 118 [0x76]))) "CALMCVG.f":108 11 {*cmpsi_1}
+     (nil))
+(insn 181 180 182 17 (set (reg:QI 1 dx [444])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":108 678 {*setcc_qi}
+     (nil))
+(insn 182 181 183 17 (set (reg:SI 1 dx [orig:398 _347 ] [398])
+        (zero_extend:SI (reg:QI 1 dx [444]))) "CALMCVG.f":108 140 {*zero_extendqisi2}
+     (nil))
+(insn 183 182 184 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:398 _347 ] [398])
+            (const_int 0 [0]))) "CALMCVG.f":108 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 184 183 185 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 662)
+            (pc))) "CALMCVG.f":108 682 {*jcc}
+     (nil)
+ -> 662)
+(note 185 184 186 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 186 185 187 18 (set (reg:SI 1 dx [445])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 187 186 188 18 (parallel [
+            (set (reg:SI 1 dx [orig:143 _57 ] [143])
+                (plus:SI (reg:SI 1 dx [445])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 188 187 189 18 (set (reg:DI 1 dx [orig:144 _58 ] [144])
+        (sign_extend:DI (reg:SI 1 dx [orig:143 _57 ] [143]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 189 188 190 18 (parallel [
+            (set (reg:DI 2 cx [orig:145 _59 ] [145])
+                (mult:DI (reg:DI 1 dx [orig:144 _58 ] [144])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 349 {*muldi3_1}
+     (nil))
+(insn 190 189 191 18 (set (reg:SI 1 dx [446])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 191 190 192 18 (set (reg:DI 1 dx [orig:146 _60 ] [146])
+        (sign_extend:DI (reg:SI 1 dx [446]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 192 191 698 18 (parallel [
+            (set (reg:DI 1 dx [orig:147 _61 ] [147])
+                (plus:DI (reg:DI 1 dx [orig:146 _60 ] [146])
+                    (reg:DI 2 cx [orig:145 _59 ] [145])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 698 192 194 18 (set (reg:DI 2 cx [orig:148 _62 ] [148])
+        (plus:DI (reg:DI 1 dx [orig:147 _61 ] [147])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":110 218 {*leadi}
+     (nil))
+(insn 194 698 195 18 (set (reg/f:DI 1 dx [447])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])) "CALMCVG.f":110 85 {*movdi_internal}
+     (nil))
+(insn 195 194 196 18 (set (reg:SF 22 xmm1 [orig:149 _63 ] [149])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:148 _62 ] [148])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [447])) [2 *q1d_338(D) S4 A32])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 196 195 197 18 (set (reg:SI 1 dx [448])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 197 196 198 18 (set (reg:DI 1 dx [orig:150 _64 ] [150])
+        (sign_extend:DI (reg:SI 1 dx [448]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 198 197 199 18 (parallel [
+            (set (reg:DI 2 cx [orig:151 _65 ] [151])
+                (mult:DI (reg:DI 1 dx [orig:150 _64 ] [150])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 349 {*muldi3_1}
+     (nil))
+(insn 199 198 200 18 (set (reg:SI 1 dx [449])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 200 199 201 18 (set (reg:DI 1 dx [orig:152 _66 ] [152])
+        (sign_extend:DI (reg:SI 1 dx [449]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 201 200 202 18 (parallel [
+            (set (reg:DI 1 dx [orig:153 _67 ] [153])
+                (plus:DI (reg:DI 1 dx [orig:152 _66 ] [152])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 202 201 203 18 (parallel [
+            (set (reg:DI 1 dx [450])
+                (plus:DI (reg:DI 1 dx [orig:153 _67 ] [153])
+                    (const_int 747 [0x2eb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 203 202 204 18 (set (reg:SI 4 si [orig:154 _68 ] [154])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [450])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ivw S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 204 203 205 18 (set (reg:SI 1 dx [451])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 205 204 206 18 (parallel [
+            (set (reg:SI 1 dx [orig:155 _69 ] [155])
+                (plus:SI (reg:SI 1 dx [451])
+                    (reg:SI 4 si [orig:154 _68 ] [154])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:154 _68 ] [154])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 206 205 207 18 (set (reg:DI 1 dx [orig:156 _70 ] [156])
+        (sign_extend:DI (reg:SI 1 dx [orig:155 _69 ] [155]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 207 206 699 18 (parallel [
+            (set (reg:DI 1 dx [orig:157 _71 ] [157])
+                (plus:DI (reg:DI 1 dx [orig:156 _70 ] [156])
+                    (reg:DI 2 cx [orig:151 _65 ] [151])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 699 207 209 18 (set (reg:DI 2 cx [orig:158 _72 ] [158])
+        (plus:DI (reg:DI 1 dx [orig:157 _71 ] [157])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":110 218 {*leadi}
+     (nil))
+(insn 209 699 210 18 (set (reg/f:DI 1 dx [452])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])) "CALMCVG.f":110 85 {*movdi_internal}
+     (nil))
+(insn 210 209 211 18 (set (reg:SF 21 xmm0 [orig:159 _73 ] [159])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:158 _72 ] [158])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [452])) [2 *q1d_338(D) S4 A32])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 211 210 212 18 (set (reg:SF 22 xmm1 [orig:160 _74 ] [160])
+        (plus:SF (reg:SF 22 xmm1 [orig:149 _63 ] [149])
+            (reg:SF 21 xmm0 [orig:159 _73 ] [159]))) "CALMCVG.f":110 838 {*fop_sf_comm}
+     (nil))
+(insn 212 211 213 18 (set (reg:SI 1 dx [453])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 213 212 214 18 (set (reg:DI 1 dx [orig:161 _75 ] [161])
+        (sign_extend:DI (reg:SI 1 dx [453]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 214 213 215 18 (parallel [
+            (set (reg:DI 2 cx [orig:162 _76 ] [162])
+                (mult:DI (reg:DI 1 dx [orig:161 _75 ] [161])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 349 {*muldi3_1}
+     (nil))
+(insn 215 214 216 18 (set (reg:SI 1 dx [454])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 216 215 217 18 (set (reg:DI 1 dx [orig:163 _77 ] [163])
+        (sign_extend:DI (reg:SI 1 dx [454]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 217 216 218 18 (parallel [
+            (set (reg:DI 1 dx [orig:164 _78 ] [164])
+                (plus:DI (reg:DI 1 dx [orig:163 _77 ] [163])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 218 217 219 18 (parallel [
+            (set (reg:DI 1 dx [455])
+                (plus:DI (reg:DI 1 dx [orig:164 _78 ] [164])
+                    (const_int 498 [0x1f2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 219 218 220 18 (set (reg:SI 4 si [orig:165 _79 ] [165])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [455])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ive S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 220 219 221 18 (set (reg:SI 1 dx [456])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 221 220 222 18 (parallel [
+            (set (reg:SI 1 dx [orig:166 _80 ] [166])
+                (plus:SI (reg:SI 1 dx [456])
+                    (reg:SI 4 si [orig:165 _79 ] [165])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:165 _79 ] [165])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 222 221 223 18 (set (reg:DI 1 dx [orig:167 _81 ] [167])
+        (sign_extend:DI (reg:SI 1 dx [orig:166 _80 ] [166]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 223 222 700 18 (parallel [
+            (set (reg:DI 1 dx [orig:168 _82 ] [168])
+                (plus:DI (reg:DI 1 dx [orig:167 _81 ] [167])
+                    (reg:DI 2 cx [orig:162 _76 ] [162])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 700 223 225 18 (set (reg:DI 2 cx [orig:169 _83 ] [169])
+        (plus:DI (reg:DI 1 dx [orig:168 _82 ] [168])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":110 218 {*leadi}
+     (nil))
+(insn 225 700 226 18 (set (reg/f:DI 1 dx [457])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])) "CALMCVG.f":110 85 {*movdi_internal}
+     (nil))
+(insn 226 225 227 18 (set (reg:SF 21 xmm0 [orig:170 _84 ] [170])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:169 _83 ] [169])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [457])) [2 *q1d_338(D) S4 A32])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 227 226 228 18 (set (reg:SF 22 xmm1 [orig:171 _85 ] [171])
+        (plus:SF (reg:SF 22 xmm1 [orig:160 _74 ] [160])
+            (reg:SF 21 xmm0 [orig:170 _84 ] [170]))) "CALMCVG.f":110 838 {*fop_sf_comm}
+     (nil))
+(insn 228 227 229 18 (set (reg:SI 1 dx [458])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 229 228 230 18 (parallel [
+            (set (reg:SI 1 dx [orig:172 _86 ] [172])
+                (plus:SI (reg:SI 1 dx [458])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 230 229 231 18 (set (reg:DI 1 dx [orig:173 _87 ] [173])
+        (sign_extend:DI (reg:SI 1 dx [orig:172 _86 ] [172]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 231 230 232 18 (parallel [
+            (set (reg:DI 2 cx [orig:174 _88 ] [174])
+                (mult:DI (reg:DI 1 dx [orig:173 _87 ] [173])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 349 {*muldi3_1}
+     (nil))
+(insn 232 231 233 18 (set (reg:SI 1 dx [459])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 233 232 234 18 (set (reg:DI 1 dx [orig:175 _89 ] [175])
+        (sign_extend:DI (reg:SI 1 dx [459]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 234 233 701 18 (parallel [
+            (set (reg:DI 1 dx [orig:176 _90 ] [176])
+                (plus:DI (reg:DI 1 dx [orig:175 _89 ] [175])
+                    (reg:DI 2 cx [orig:174 _88 ] [174])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 701 234 236 18 (set (reg:DI 2 cx [orig:177 _91 ] [177])
+        (plus:DI (reg:DI 1 dx [orig:176 _90 ] [176])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":110 218 {*leadi}
+     (nil))
+(insn 236 701 237 18 (set (reg/f:DI 1 dx [460])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 q1d+0 S8 A64])) "CALMCVG.f":110 85 {*movdi_internal}
+     (nil))
+(insn 237 236 238 18 (set (reg:SF 21 xmm0 [orig:178 _92 ] [178])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:177 _91 ] [177])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [460])) [2 *q1d_338(D) S4 A32])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 238 237 239 18 (set (reg:SF 21 xmm0 [orig:179 _93 ] [179])
+        (plus:SF (reg:SF 21 xmm0 [orig:178 _92 ] [178])
+            (reg:SF 22 xmm1 [orig:171 _85 ] [171]))) "CALMCVG.f":110 838 {*fop_sf_comm}
+     (nil))
+(insn 239 238 240 18 (set (reg:SF 22 xmm1 [orig:180 _94 ] [180])
+        (reg:SF 21 xmm0 [orig:179 _93 ] [179])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 240 239 241 18 (set (reg:SI 1 dx [461])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 241 240 242 18 (set (reg:DI 1 dx [orig:181 _95 ] [181])
+        (sign_extend:DI (reg:SI 1 dx [461]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 242 241 243 18 (parallel [
+            (set (reg:DI 2 cx [orig:182 _96 ] [182])
+                (mult:DI (reg:DI 1 dx [orig:181 _95 ] [181])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 349 {*muldi3_1}
+     (nil))
+(insn 243 242 244 18 (set (reg:SI 1 dx [462])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":110 86 {*movsi_internal}
+     (nil))
+(insn 244 243 245 18 (set (reg:DI 1 dx [orig:183 _97 ] [183])
+        (sign_extend:DI (reg:SI 1 dx [462]))) "CALMCVG.f":110 149 {*extendsidi2_rex64}
+     (nil))
+(insn 245 244 702 18 (parallel [
+            (set (reg:DI 1 dx [orig:184 _98 ] [184])
+                (plus:DI (reg:DI 1 dx [orig:183 _97 ] [183])
+                    (reg:DI 2 cx [orig:182 _96 ] [182])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":110 222 {*adddi_1}
+     (nil))
+(insn 702 245 247 18 (set (reg:DI 2 cx [orig:185 _99 ] [185])
+        (plus:DI (reg:DI 1 dx [orig:184 _98 ] [184])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":110 218 {*leadi}
+     (nil))
+(insn 247 702 248 18 (set (reg:SF 21 xmm0 [463])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALMCVG.f":110 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.5e-1 [0x0.8p-1])
+        (nil)))
+(insn 248 247 249 18 (set (reg:SF 21 xmm0 [orig:186 _100 ] [186])
+        (mult:SF (reg:SF 21 xmm0 [463])
+            (reg:SF 22 xmm1 [orig:180 _94 ] [180]))) "CALMCVG.f":110 838 {*fop_sf_comm}
+     (nil))
+(insn 249 248 250 18 (set (reg/f:DI 1 dx [464])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":110 85 {*movdi_internal}
+     (nil))
+(insn 250 249 251 18 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:185 _99 ] [185])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [464])) [2 qv S4 A32])
+        (reg:SF 21 xmm0 [orig:186 _100 ] [186])) "CALMCVG.f":110 131 {*movsf_internal}
+     (nil))
+(insn 251 250 252 18 (set (reg/f:DI 1 dx [465])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [4 ih+0 S8 A64])) "CALMCVG.f":111 85 {*movdi_internal}
+     (nil))
+(insn 252 251 253 18 (set (reg:SI 1 dx [orig:187 _101 ] [187])
+        (mem:SI (reg/f:DI 1 dx [465]) [1 *ih_349(D)+0 S4 A32])) "CALMCVG.f":111 86 {*movsi_internal}
+     (nil))
+(insn 253 252 254 18 (set (reg:CCNO 17 flags)
+        (compare:CCNO (reg:SI 1 dx [orig:187 _101 ] [187])
+            (const_int 0 [0]))) "CALMCVG.f":111 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 254 253 255 18 (set (pc)
+        (if_then_else (le (reg:CCNO 17 flags)
+                (const_int 0 [0]))
+            (label_ref 408)
+            (pc))) "CALMCVG.f":111 682 {*jcc}
+     (nil)
+ -> 408)
+(note 255 254 256 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 256 255 257 19 (set (reg:SI 1 dx [466])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 257 256 258 19 (parallel [
+            (set (reg:SI 1 dx [orig:188 _102 ] [188])
+                (plus:SI (reg:SI 1 dx [466])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 258 257 259 19 (set (reg:DI 1 dx [orig:189 _103 ] [189])
+        (sign_extend:DI (reg:SI 1 dx [orig:188 _102 ] [188]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 259 258 260 19 (parallel [
+            (set (reg:DI 2 cx [orig:190 _104 ] [190])
+                (mult:DI (reg:DI 1 dx [orig:189 _103 ] [189])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 260 259 261 19 (set (reg:SI 1 dx [467])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 261 260 262 19 (set (reg:DI 1 dx [orig:191 _105 ] [191])
+        (sign_extend:DI (reg:SI 1 dx [467]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 262 261 686 19 (parallel [
+            (set (reg:DI 1 dx [orig:192 _106 ] [192])
+                (plus:DI (reg:DI 1 dx [orig:191 _105 ] [191])
+                    (reg:DI 2 cx [orig:190 _104 ] [190])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 686 262 264 19 (set (reg:DI 2 cx [orig:193 _107 ] [193])
+        (plus:DI (reg:DI 1 dx [orig:192 _106 ] [192])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 264 686 265 19 (set (reg/f:DI 1 dx [468])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 265 264 266 19 (set (reg:SF 22 xmm1 [orig:194 _108 ] [194])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:193 _107 ] [193])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [468])) [2 *u1d_330(D) S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 266 265 267 19 (set (reg:SI 1 dx [469])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 267 266 268 19 (set (reg:DI 1 dx [orig:195 _109 ] [195])
+        (sign_extend:DI (reg:SI 1 dx [469]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 268 267 269 19 (parallel [
+            (set (reg:DI 2 cx [orig:196 _110 ] [196])
+                (mult:DI (reg:DI 1 dx [orig:195 _109 ] [195])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 269 268 270 19 (set (reg:SI 1 dx [470])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 270 269 271 19 (set (reg:DI 1 dx [orig:197 _111 ] [197])
+        (sign_extend:DI (reg:SI 1 dx [470]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 271 270 272 19 (parallel [
+            (set (reg:DI 1 dx [orig:198 _112 ] [198])
+                (plus:DI (reg:DI 1 dx [orig:197 _111 ] [197])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 272 271 273 19 (parallel [
+            (set (reg:DI 1 dx [471])
+                (plus:DI (reg:DI 1 dx [orig:198 _112 ] [198])
+                    (const_int 747 [0x2eb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 273 272 274 19 (set (reg:SI 4 si [orig:199 _113 ] [199])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [471])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ivw S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 274 273 275 19 (set (reg:SI 1 dx [472])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 275 274 276 19 (parallel [
+            (set (reg:SI 1 dx [orig:200 _114 ] [200])
+                (plus:SI (reg:SI 1 dx [472])
+                    (reg:SI 4 si [orig:199 _113 ] [199])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:199 _113 ] [199])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 276 275 277 19 (set (reg:DI 1 dx [orig:201 _115 ] [201])
+        (sign_extend:DI (reg:SI 1 dx [orig:200 _114 ] [200]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 277 276 687 19 (parallel [
+            (set (reg:DI 1 dx [orig:202 _116 ] [202])
+                (plus:DI (reg:DI 1 dx [orig:201 _115 ] [201])
+                    (reg:DI 2 cx [orig:196 _110 ] [196])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 687 277 279 19 (set (reg:DI 2 cx [orig:203 _117 ] [203])
+        (plus:DI (reg:DI 1 dx [orig:202 _116 ] [202])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 279 687 280 19 (set (reg/f:DI 1 dx [473])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 280 279 281 19 (set (reg:SF 21 xmm0 [orig:204 _118 ] [204])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:203 _117 ] [203])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [473])) [2 *u1d_330(D) S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 281 280 282 19 (set (reg:SF 22 xmm1 [orig:205 _119 ] [205])
+        (plus:SF (reg:SF 22 xmm1 [orig:194 _108 ] [194])
+            (reg:SF 21 xmm0 [orig:204 _118 ] [204]))) "CALMCVG.f":114 838 {*fop_sf_comm}
+     (nil))
+(insn 282 281 283 19 (set (reg:SI 1 dx [474])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 283 282 284 19 (set (reg:DI 1 dx [orig:206 _120 ] [206])
+        (sign_extend:DI (reg:SI 1 dx [474]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 284 283 285 19 (parallel [
+            (set (reg:DI 2 cx [orig:207 _121 ] [207])
+                (mult:DI (reg:DI 1 dx [orig:206 _120 ] [206])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 285 284 286 19 (set (reg:SI 1 dx [475])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 286 285 287 19 (set (reg:DI 1 dx [orig:208 _122 ] [208])
+        (sign_extend:DI (reg:SI 1 dx [475]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 287 286 288 19 (parallel [
+            (set (reg:DI 1 dx [orig:209 _123 ] [209])
+                (plus:DI (reg:DI 1 dx [orig:208 _122 ] [208])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 288 287 289 19 (parallel [
+            (set (reg:DI 1 dx [476])
+                (plus:DI (reg:DI 1 dx [orig:209 _123 ] [209])
+                    (const_int 498 [0x1f2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 289 288 290 19 (set (reg:SI 4 si [orig:210 _124 ] [210])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [476])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ive S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 290 289 291 19 (set (reg:SI 1 dx [477])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 291 290 292 19 (parallel [
+            (set (reg:SI 1 dx [orig:211 _125 ] [211])
+                (plus:SI (reg:SI 1 dx [477])
+                    (reg:SI 4 si [orig:210 _124 ] [210])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:210 _124 ] [210])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 292 291 293 19 (set (reg:DI 1 dx [orig:212 _126 ] [212])
+        (sign_extend:DI (reg:SI 1 dx [orig:211 _125 ] [211]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 293 292 688 19 (parallel [
+            (set (reg:DI 1 dx [orig:213 _127 ] [213])
+                (plus:DI (reg:DI 1 dx [orig:212 _126 ] [212])
+                    (reg:DI 2 cx [orig:207 _121 ] [207])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 688 293 295 19 (set (reg:DI 2 cx [orig:214 _128 ] [214])
+        (plus:DI (reg:DI 1 dx [orig:213 _127 ] [213])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 295 688 296 19 (set (reg/f:DI 1 dx [478])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 296 295 297 19 (set (reg:SF 21 xmm0 [orig:215 _129 ] [215])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:214 _128 ] [214])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [478])) [2 *u1d_330(D) S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 297 296 298 19 (set (reg:SF 22 xmm1 [orig:216 _130 ] [216])
+        (plus:SF (reg:SF 22 xmm1 [orig:205 _119 ] [205])
+            (reg:SF 21 xmm0 [orig:215 _129 ] [215]))) "CALMCVG.f":114 838 {*fop_sf_comm}
+     (nil))
+(insn 298 297 299 19 (set (reg:SI 1 dx [479])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 299 298 300 19 (parallel [
+            (set (reg:SI 1 dx [orig:217 _131 ] [217])
+                (plus:SI (reg:SI 1 dx [479])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 300 299 301 19 (set (reg:DI 1 dx [orig:218 _132 ] [218])
+        (sign_extend:DI (reg:SI 1 dx [orig:217 _131 ] [217]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 301 300 302 19 (parallel [
+            (set (reg:DI 2 cx [orig:219 _133 ] [219])
+                (mult:DI (reg:DI 1 dx [orig:218 _132 ] [218])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 302 301 303 19 (set (reg:SI 1 dx [480])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 303 302 304 19 (set (reg:DI 1 dx [orig:220 _134 ] [220])
+        (sign_extend:DI (reg:SI 1 dx [480]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 304 303 689 19 (parallel [
+            (set (reg:DI 1 dx [orig:221 _135 ] [221])
+                (plus:DI (reg:DI 1 dx [orig:220 _134 ] [220])
+                    (reg:DI 2 cx [orig:219 _133 ] [219])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 689 304 306 19 (set (reg:DI 2 cx [orig:222 _136 ] [222])
+        (plus:DI (reg:DI 1 dx [orig:221 _135 ] [221])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 306 689 307 19 (set (reg/f:DI 1 dx [481])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 u1d+0 S8 A64])) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 307 306 308 19 (set (reg:SF 21 xmm0 [orig:223 _137 ] [223])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:222 _136 ] [222])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [481])) [2 *u1d_330(D) S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 308 307 309 19 (set (reg:SF 21 xmm0 [orig:224 _138 ] [224])
+        (plus:SF (reg:SF 21 xmm0 [orig:223 _137 ] [223])
+            (reg:SF 22 xmm1 [orig:216 _130 ] [216]))) "CALMCVG.f":114 838 {*fop_sf_comm}
+     (nil))
+(insn 309 308 310 19 (set (reg:SF 22 xmm1 [orig:225 _139 ] [225])
+        (reg:SF 21 xmm0 [orig:224 _138 ] [224])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 310 309 311 19 (set (reg:SF 21 xmm0 [482])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.5e-1 [0x0.8p-1])
+        (nil)))
+(insn 311 310 312 19 (set (reg:SF 22 xmm1 [orig:226 _140 ] [226])
+        (mult:SF (reg:SF 22 xmm1 [orig:225 _139 ] [225])
+            (reg:SF 21 xmm0 [482]))) "CALMCVG.f":114 838 {*fop_sf_comm}
+     (nil))
+(insn 312 311 313 19 (set (reg:SI 1 dx [483])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 313 312 314 19 (set (reg:DI 1 dx [orig:227 _141 ] [227])
+        (sign_extend:DI (reg:SI 1 dx [483]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 314 313 315 19 (parallel [
+            (set (reg:DI 2 cx [orig:228 _142 ] [228])
+                (mult:DI (reg:DI 1 dx [orig:227 _141 ] [227])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 315 314 316 19 (set (reg:SI 1 dx [484])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 316 315 317 19 (set (reg:DI 1 dx [orig:229 _143 ] [229])
+        (sign_extend:DI (reg:SI 1 dx [484]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 317 316 690 19 (parallel [
+            (set (reg:DI 1 dx [orig:230 _144 ] [230])
+                (plus:DI (reg:DI 1 dx [orig:229 _143 ] [229])
+                    (reg:DI 2 cx [orig:228 _142 ] [228])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 690 317 319 19 (set (reg:DI 2 cx [orig:231 _145 ] [231])
+        (plus:DI (reg:DI 1 dx [orig:230 _144 ] [230])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 319 690 320 19 (set (reg/f:DI 1 dx [485])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f3e7cde0b40 masks>)) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 320 319 321 19 (parallel [
+            (set (reg:DI 2 cx [486])
+                (plus:DI (reg:DI 2 cx [orig:231 _145 ] [231])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 321 320 322 19 (set (reg:SF 21 xmm0 [orig:232 _146 ] [232])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [486])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [485])) [2 masks.vbm2 S4 A32])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 322 321 323 19 (set (reg:SI 1 dx [487])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 323 322 324 19 (set (reg:DI 1 dx [orig:233 _147 ] [233])
+        (sign_extend:DI (reg:SI 1 dx [487]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 324 323 325 19 (parallel [
+            (set (reg:DI 2 cx [orig:234 _148 ] [234])
+                (mult:DI (reg:DI 1 dx [orig:233 _147 ] [233])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 349 {*muldi3_1}
+     (nil))
+(insn 325 324 326 19 (set (reg:SI 1 dx [488])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":114 86 {*movsi_internal}
+     (nil))
+(insn 326 325 327 19 (set (reg:DI 1 dx [orig:235 _149 ] [235])
+        (sign_extend:DI (reg:SI 1 dx [488]))) "CALMCVG.f":114 149 {*extendsidi2_rex64}
+     (nil))
+(insn 327 326 691 19 (parallel [
+            (set (reg:DI 1 dx [orig:236 _150 ] [236])
+                (plus:DI (reg:DI 1 dx [orig:235 _149 ] [235])
+                    (reg:DI 2 cx [orig:234 _148 ] [234])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":114 222 {*adddi_1}
+     (nil))
+(insn 691 327 329 19 (set (reg:DI 2 cx [orig:237 _151 ] [237])
+        (plus:DI (reg:DI 1 dx [orig:236 _150 ] [236])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":114 218 {*leadi}
+     (nil))
+(insn 329 691 330 19 (set (reg:SF 21 xmm0 [orig:238 _152 ] [238])
+        (mult:SF (reg:SF 21 xmm0 [orig:232 _146 ] [232])
+            (reg:SF 22 xmm1 [orig:226 _140 ] [226]))) "CALMCVG.f":114 838 {*fop_sf_comm}
+     (nil))
+(insn 330 329 331 19 (set (reg/f:DI 1 dx [489])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":114 85 {*movdi_internal}
+     (nil))
+(insn 331 330 332 19 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:237 _151 ] [237])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [489])) [2 uwnd S4 A32])
+        (reg:SF 21 xmm0 [orig:238 _152 ] [238])) "CALMCVG.f":114 131 {*movsf_internal}
+     (nil))
+(insn 332 331 333 19 (set (reg:SI 1 dx [490])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 333 332 334 19 (parallel [
+            (set (reg:SI 1 dx [orig:239 _153 ] [239])
+                (plus:SI (reg:SI 1 dx [490])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 334 333 335 19 (set (reg:DI 1 dx [orig:240 _154 ] [240])
+        (sign_extend:DI (reg:SI 1 dx [orig:239 _153 ] [239]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 335 334 336 19 (parallel [
+            (set (reg:DI 2 cx [orig:241 _155 ] [241])
+                (mult:DI (reg:DI 1 dx [orig:240 _154 ] [240])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 336 335 337 19 (set (reg:SI 1 dx [491])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 337 336 338 19 (set (reg:DI 1 dx [orig:242 _156 ] [242])
+        (sign_extend:DI (reg:SI 1 dx [491]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 338 337 692 19 (parallel [
+            (set (reg:DI 1 dx [orig:243 _157 ] [243])
+                (plus:DI (reg:DI 1 dx [orig:242 _156 ] [242])
+                    (reg:DI 2 cx [orig:241 _155 ] [241])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 692 338 340 19 (set (reg:DI 2 cx [orig:244 _158 ] [244])
+        (plus:DI (reg:DI 1 dx [orig:243 _157 ] [243])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 340 692 341 19 (set (reg/f:DI 1 dx [492])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 341 340 342 19 (set (reg:SF 22 xmm1 [orig:245 _159 ] [245])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:244 _158 ] [244])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [492])) [2 *v1d_332(D) S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 342 341 343 19 (set (reg:SI 1 dx [493])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 343 342 344 19 (set (reg:DI 1 dx [orig:246 _160 ] [246])
+        (sign_extend:DI (reg:SI 1 dx [493]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 344 343 345 19 (parallel [
+            (set (reg:DI 2 cx [orig:247 _161 ] [247])
+                (mult:DI (reg:DI 1 dx [orig:246 _160 ] [246])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 345 344 346 19 (set (reg:SI 1 dx [494])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 346 345 347 19 (set (reg:DI 1 dx [orig:248 _162 ] [248])
+        (sign_extend:DI (reg:SI 1 dx [494]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 347 346 348 19 (parallel [
+            (set (reg:DI 1 dx [orig:249 _163 ] [249])
+                (plus:DI (reg:DI 1 dx [orig:248 _162 ] [248])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 348 347 349 19 (parallel [
+            (set (reg:DI 1 dx [495])
+                (plus:DI (reg:DI 1 dx [orig:249 _163 ] [249])
+                    (const_int 747 [0x2eb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 349 348 350 19 (set (reg:SI 4 si [orig:250 _164 ] [250])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [495])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ivw S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 350 349 351 19 (set (reg:SI 1 dx [496])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 351 350 352 19 (parallel [
+            (set (reg:SI 1 dx [orig:251 _165 ] [251])
+                (plus:SI (reg:SI 1 dx [496])
+                    (reg:SI 4 si [orig:250 _164 ] [250])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:250 _164 ] [250])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 352 351 353 19 (set (reg:DI 1 dx [orig:252 _166 ] [252])
+        (sign_extend:DI (reg:SI 1 dx [orig:251 _165 ] [251]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 353 352 693 19 (parallel [
+            (set (reg:DI 1 dx [orig:253 _167 ] [253])
+                (plus:DI (reg:DI 1 dx [orig:252 _166 ] [252])
+                    (reg:DI 2 cx [orig:247 _161 ] [247])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 693 353 355 19 (set (reg:DI 2 cx [orig:254 _168 ] [254])
+        (plus:DI (reg:DI 1 dx [orig:253 _167 ] [253])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 355 693 356 19 (set (reg/f:DI 1 dx [497])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 356 355 357 19 (set (reg:SF 21 xmm0 [orig:255 _169 ] [255])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:254 _168 ] [254])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [497])) [2 *v1d_332(D) S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 357 356 358 19 (set (reg:SF 22 xmm1 [orig:256 _170 ] [256])
+        (plus:SF (reg:SF 22 xmm1 [orig:245 _159 ] [245])
+            (reg:SF 21 xmm0 [orig:255 _169 ] [255]))) "CALMCVG.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 358 357 359 19 (set (reg:SI 1 dx [498])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 359 358 360 19 (set (reg:DI 1 dx [orig:257 _171 ] [257])
+        (sign_extend:DI (reg:SI 1 dx [498]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 360 359 361 19 (parallel [
+            (set (reg:DI 2 cx [orig:258 _172 ] [258])
+                (mult:DI (reg:DI 1 dx [orig:257 _171 ] [257])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 361 360 362 19 (set (reg:SI 1 dx [499])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 362 361 363 19 (set (reg:DI 1 dx [orig:259 _173 ] [259])
+        (sign_extend:DI (reg:SI 1 dx [499]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 363 362 364 19 (parallel [
+            (set (reg:DI 1 dx [orig:260 _174 ] [260])
+                (plus:DI (reg:DI 1 dx [orig:259 _173 ] [259])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 364 363 365 19 (parallel [
+            (set (reg:DI 1 dx [500])
+                (plus:DI (reg:DI 1 dx [orig:260 _174 ] [260])
+                    (const_int 498 [0x1f2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 365 364 366 19 (set (reg:SI 4 si [orig:261 _175 ] [261])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [500])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ive S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 366 365 367 19 (set (reg:SI 1 dx [501])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 367 366 368 19 (parallel [
+            (set (reg:SI 1 dx [orig:262 _176 ] [262])
+                (plus:SI (reg:SI 1 dx [501])
+                    (reg:SI 4 si [orig:261 _175 ] [261])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 4 si [orig:261 _175 ] [261])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 368 367 369 19 (set (reg:DI 1 dx [orig:263 _177 ] [263])
+        (sign_extend:DI (reg:SI 1 dx [orig:262 _176 ] [262]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 369 368 694 19 (parallel [
+            (set (reg:DI 1 dx [orig:264 _178 ] [264])
+                (plus:DI (reg:DI 1 dx [orig:263 _177 ] [263])
+                    (reg:DI 2 cx [orig:258 _172 ] [258])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 694 369 371 19 (set (reg:DI 2 cx [orig:265 _179 ] [265])
+        (plus:DI (reg:DI 1 dx [orig:264 _178 ] [264])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 371 694 372 19 (set (reg/f:DI 1 dx [502])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 372 371 373 19 (set (reg:SF 21 xmm0 [orig:266 _180 ] [266])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:265 _179 ] [265])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [502])) [2 *v1d_332(D) S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 373 372 374 19 (set (reg:SF 22 xmm1 [orig:267 _181 ] [267])
+        (plus:SF (reg:SF 22 xmm1 [orig:256 _170 ] [256])
+            (reg:SF 21 xmm0 [orig:266 _180 ] [266]))) "CALMCVG.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 374 373 375 19 (set (reg:SI 1 dx [503])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 375 374 376 19 (parallel [
+            (set (reg:SI 1 dx [orig:268 _182 ] [268])
+                (plus:SI (reg:SI 1 dx [503])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 376 375 377 19 (set (reg:DI 1 dx [orig:269 _183 ] [269])
+        (sign_extend:DI (reg:SI 1 dx [orig:268 _182 ] [268]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 377 376 378 19 (parallel [
+            (set (reg:DI 2 cx [orig:270 _184 ] [270])
+                (mult:DI (reg:DI 1 dx [orig:269 _183 ] [269])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 378 377 379 19 (set (reg:SI 1 dx [504])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 379 378 380 19 (set (reg:DI 1 dx [orig:271 _185 ] [271])
+        (sign_extend:DI (reg:SI 1 dx [504]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 380 379 695 19 (parallel [
+            (set (reg:DI 1 dx [orig:272 _186 ] [272])
+                (plus:DI (reg:DI 1 dx [orig:271 _185 ] [271])
+                    (reg:DI 2 cx [orig:270 _184 ] [270])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 695 380 382 19 (set (reg:DI 2 cx [orig:273 _187 ] [273])
+        (plus:DI (reg:DI 1 dx [orig:272 _186 ] [272])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 382 695 383 19 (set (reg/f:DI 1 dx [505])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 v1d+0 S8 A64])) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 383 382 384 19 (set (reg:SF 21 xmm0 [orig:274 _188 ] [274])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:273 _187 ] [273])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [505])) [2 *v1d_332(D) S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 384 383 385 19 (set (reg:SF 21 xmm0 [orig:275 _189 ] [275])
+        (plus:SF (reg:SF 21 xmm0 [orig:274 _188 ] [274])
+            (reg:SF 22 xmm1 [orig:267 _181 ] [267]))) "CALMCVG.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 385 384 386 19 (set (reg:SF 22 xmm1 [orig:276 _190 ] [276])
+        (reg:SF 21 xmm0 [orig:275 _189 ] [275])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 386 385 387 19 (set (reg:SF 21 xmm0 [506])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.5e-1 [0x0.8p-1])
+        (nil)))
+(insn 387 386 388 19 (set (reg:SF 22 xmm1 [orig:277 _191 ] [277])
+        (mult:SF (reg:SF 22 xmm1 [orig:276 _190 ] [276])
+            (reg:SF 21 xmm0 [506]))) "CALMCVG.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 388 387 389 19 (set (reg:SI 1 dx [507])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 389 388 390 19 (set (reg:DI 1 dx [orig:278 _192 ] [278])
+        (sign_extend:DI (reg:SI 1 dx [507]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 390 389 391 19 (parallel [
+            (set (reg:DI 2 cx [orig:279 _193 ] [279])
+                (mult:DI (reg:DI 1 dx [orig:278 _192 ] [278])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 391 390 392 19 (set (reg:SI 1 dx [508])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 392 391 393 19 (set (reg:DI 1 dx [orig:280 _194 ] [280])
+        (sign_extend:DI (reg:SI 1 dx [508]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 393 392 696 19 (parallel [
+            (set (reg:DI 1 dx [orig:281 _195 ] [281])
+                (plus:DI (reg:DI 1 dx [orig:280 _194 ] [280])
+                    (reg:DI 2 cx [orig:279 _193 ] [279])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 696 393 395 19 (set (reg:DI 2 cx [orig:282 _196 ] [282])
+        (plus:DI (reg:DI 1 dx [orig:281 _195 ] [281])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 395 696 396 19 (set (reg/f:DI 1 dx [509])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f3e7cde0b40 masks>)) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 396 395 397 19 (parallel [
+            (set (reg:DI 2 cx [510])
+                (plus:DI (reg:DI 2 cx [orig:282 _196 ] [282])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 397 396 398 19 (set (reg:SF 21 xmm0 [orig:283 _197 ] [283])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [510])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [509])) [2 masks.vbm2 S4 A32])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(insn 398 397 399 19 (set (reg:SI 1 dx [511])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 399 398 400 19 (set (reg:DI 1 dx [orig:284 _198 ] [284])
+        (sign_extend:DI (reg:SI 1 dx [511]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 400 399 401 19 (parallel [
+            (set (reg:DI 2 cx [orig:285 _199 ] [285])
+                (mult:DI (reg:DI 1 dx [orig:284 _198 ] [284])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 349 {*muldi3_1}
+     (nil))
+(insn 401 400 402 19 (set (reg:SI 1 dx [512])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":117 86 {*movsi_internal}
+     (nil))
+(insn 402 401 403 19 (set (reg:DI 1 dx [orig:286 _200 ] [286])
+        (sign_extend:DI (reg:SI 1 dx [512]))) "CALMCVG.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 403 402 697 19 (parallel [
+            (set (reg:DI 1 dx [orig:287 _201 ] [287])
+                (plus:DI (reg:DI 1 dx [orig:286 _200 ] [286])
+                    (reg:DI 2 cx [orig:285 _199 ] [285])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":117 222 {*adddi_1}
+     (nil))
+(insn 697 403 405 19 (set (reg:DI 2 cx [orig:288 _202 ] [288])
+        (plus:DI (reg:DI 1 dx [orig:287 _201 ] [287])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":117 218 {*leadi}
+     (nil))
+(insn 405 697 406 19 (set (reg:SF 21 xmm0 [orig:289 _203 ] [289])
+        (mult:SF (reg:SF 21 xmm0 [orig:283 _197 ] [283])
+            (reg:SF 22 xmm1 [orig:277 _191 ] [277]))) "CALMCVG.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 406 405 407 19 (set (reg/f:DI 1 dx [513])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":117 85 {*movdi_internal}
+     (nil))
+(insn 407 406 408 19 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:288 _202 ] [288])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [513])) [2 vwnd S4 A32])
+        (reg:SF 21 xmm0 [orig:289 _203 ] [289])) "CALMCVG.f":117 131 {*movsf_internal}
+     (nil))
+(code_label 408 407 409 20 12 (nil) [1 uses])
+(note 409 408 410 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 410 409 644 20 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":108 221 {*addsi_1}
+     (nil))
+(jump_insn 644 410 645 20 (set (pc)
+        (label_ref 411)) "CALMCVG.f":108 683 {jump}
+     (nil)
+ -> 411)
+(barrier 645 644 662)
+(code_label 662 645 661 21 25 (nil) [1 uses])
+(note 661 662 663 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 663 661 416 21 (const_int 0 [0]) "CALMCVG.f":111 718 {nop}
+     (nil))
+(insn 416 663 646 21 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":107 221 {*addsi_1}
+     (nil))
+(jump_insn 646 416 647 21 (set (pc)
+        (label_ref 417)) "CALMCVG.f":107 683 {jump}
+     (nil)
+ -> 417)
+(barrier 647 646 659)
+(code_label 659 647 658 22 24 (nil) [1 uses])
+(note 658 659 660 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 660 658 422 22 (const_int 0 [0]) "CALMCVG.f":108 718 {nop}
+     (nil))
+(insn 422 660 423 22 (set (reg:DI 5 di)
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":124 85 {*movdi_internal}
+     (nil))
+(insn 423 422 424 22 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALMCVG.f":124 88 {*movqi_internal}
+     (nil))
+(call_insn 424 423 425 22 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f3e7cdd1600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALMCVG.f":124 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 425 424 426 22 (set (reg:DI 5 di)
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":125 85 {*movdi_internal}
+     (nil))
+(insn 426 425 427 22 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALMCVG.f":125 88 {*movqi_internal}
+     (nil))
+(call_insn 427 426 428 22 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f3e7cdd1600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALMCVG.f":125 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 428 427 429 22 (set (reg:SI 0 ax [orig:399 _356 ] [399])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 24 [0x18]))) [1 parallel.jsta_m2+0 S4 A64])) "CALMCVG.f":129 86 {*movsi_internal}
+     (nil))
+(insn 429 428 430 22 (set (reg:SI 2 cx [orig:400 _357 ] [400])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f3e7cde43f0 parallel>)
+                    (const_int 28 [0x1c]))) [1 parallel.jend_m2+0 S4 A32])) "CALMCVG.f":129 86 {*movsi_internal}
+     (nil))
+(insn 430 429 622 22 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 0 ax [orig:399 _356 ] [399])) "CALMCVG.f":129 86 {*movsi_internal}
+     (nil))
+(code_label 622 430 431 23 18 (nil) [1 uses])
+(note 431 622 432 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 432 431 433 23 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 2 cx [orig:400 _357 ] [400]))) "CALMCVG.f":129 11 {*cmpsi_1}
+     (nil))
+(insn 433 432 434 23 (set (reg:QI 0 ax [514])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":129 678 {*setcc_qi}
+     (nil))
+(insn 434 433 435 23 (set (reg:SI 0 ax [orig:401 _359 ] [401])
+        (zero_extend:SI (reg:QI 0 ax [514]))) "CALMCVG.f":129 140 {*zero_extendqisi2}
+     (nil))
+(insn 435 434 436 23 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:401 _359 ] [401])
+            (const_int 0 [0]))) "CALMCVG.f":129 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 436 435 437 23 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 665)
+            (pc))) "CALMCVG.f":129 682 {*jcc}
+     (nil)
+ -> 665)
+(note 437 436 438 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 438 437 439 24 (set (reg:SI 0 ax [515])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":130 86 {*movsi_internal}
+     (nil))
+(insn 439 438 440 24 (parallel [
+            (set (reg:SI 1 dx [516])
+                (ashiftrt:SI (reg:SI 0 ax [515])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 582 {ashrsi3_cvt}
+     (nil))
+(insn 440 439 441 24 (parallel [
+            (set (reg:SI 1 dx [517])
+                (lshiftrt:SI (reg:SI 1 dx [516])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 587 {*lshrsi3_1}
+     (nil))
+(insn 441 440 442 24 (parallel [
+            (set (reg:SI 0 ax [518])
+                (plus:SI (reg:SI 0 ax [515])
+                    (reg:SI 1 dx [517])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 221 {*addsi_1}
+     (nil))
+(insn 442 441 443 24 (parallel [
+            (set (reg:SI 0 ax [519])
+                (and:SI (reg:SI 0 ax [518])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 426 {*andsi_1}
+     (nil))
+(insn 443 442 445 24 (parallel [
+            (set (reg:SI 0 ax [520])
+                (minus:SI (reg:SI 0 ax [519])
+                    (reg:SI 1 dx [517])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 277 {*subsi_1}
+     (nil))
+(insn 445 443 446 24 (set (reg:SI 1 dx [521])
+        (const_int 118 [0x76])) "CALMCVG.f":130 86 {*movsi_internal}
+     (nil))
+(insn 446 445 672 24 (parallel [
+            (set (reg:SI 1 dx [521])
+                (minus:SI (reg:SI 1 dx [521])
+                    (reg:SI 0 ax [orig:290 _204 ] [290])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":130 277 {*subsi_1}
+     (nil))
+(insn 672 446 447 24 (set (reg:SI 0 ax [522])
+        (reg:SI 1 dx [521])) "CALMCVG.f":130 86 {*movsi_internal}
+     (nil))
+(insn 447 672 448 24 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [1 iend+0 S4 A32])
+        (reg:SI 0 ax [522])) "CALMCVG.f":130 86 {*movsi_internal}
+     (nil))
+(insn 448 447 449 24 (set (reg:SI 1 dx [orig:402 _361 ] [402])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [1 iend+0 S4 A32])) "CALMCVG.f":131 86 {*movsi_internal}
+     (nil))
+(insn 449 448 616 24 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 2 [0x2])) "CALMCVG.f":131 86 {*movsi_internal}
+     (nil))
+(code_label 616 449 450 25 17 (nil) [1 uses])
+(note 450 616 451 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 451 450 452 25 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 1 dx [orig:402 _361 ] [402]))) "CALMCVG.f":131 11 {*cmpsi_1}
+     (nil))
+(insn 452 451 453 25 (set (reg:QI 0 ax [523])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMCVG.f":131 678 {*setcc_qi}
+     (nil))
+(insn 453 452 454 25 (set (reg:SI 0 ax [orig:403 _363 ] [403])
+        (zero_extend:SI (reg:QI 0 ax [523]))) "CALMCVG.f":131 140 {*zero_extendqisi2}
+     (nil))
+(insn 454 453 455 25 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:403 _363 ] [403])
+            (const_int 0 [0]))) "CALMCVG.f":131 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 455 454 456 25 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 668)
+            (pc))) "CALMCVG.f":131 682 {*jcc}
+     (nil)
+ -> 668)
+(note 456 455 457 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 457 456 458 26 (set (reg:SI 0 ax [524])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":132 86 {*movsi_internal}
+     (nil))
+(insn 458 457 459 26 (set (reg:DI 0 ax [orig:291 _205 ] [291])
+        (sign_extend:DI (reg:SI 0 ax [524]))) "CALMCVG.f":132 149 {*extendsidi2_rex64}
+     (nil))
+(insn 459 458 460 26 (parallel [
+            (set (reg:DI 4 si [orig:292 _206 ] [292])
+                (mult:DI (reg:DI 0 ax [orig:291 _205 ] [291])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":132 349 {*muldi3_1}
+     (nil))
+(insn 460 459 461 26 (set (reg:SI 0 ax [525])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":132 86 {*movsi_internal}
+     (nil))
+(insn 461 460 462 26 (set (reg:DI 0 ax [orig:293 _207 ] [293])
+        (sign_extend:DI (reg:SI 0 ax [525]))) "CALMCVG.f":132 149 {*extendsidi2_rex64}
+     (nil))
+(insn 462 461 673 26 (parallel [
+            (set (reg:DI 0 ax [orig:294 _208 ] [294])
+                (plus:DI (reg:DI 0 ax [orig:293 _207 ] [293])
+                    (reg:DI 4 si [orig:292 _206 ] [292])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":132 222 {*adddi_1}
+     (nil))
+(insn 673 462 464 26 (set (reg:DI 4 si [orig:295 _209 ] [295])
+        (plus:DI (reg:DI 0 ax [orig:294 _208 ] [294])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":132 218 {*leadi}
+     (nil))
+(insn 464 673 465 26 (set (reg/f:DI 0 ax [526])
+        (symbol_ref:DI ("dynam_") [flags 0x202]  <var_decl 0x7f3e7cdd9870 dynam>)) "CALMCVG.f":132 85 {*movdi_internal}
+     (nil))
+(insn 465 464 466 26 (parallel [
+            (set (reg:DI 4 si [527])
+                (plus:DI (reg:DI 4 si [orig:295 _209 ] [295])
+                    (const_int 1207 [0x4b7])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":132 222 {*adddi_1}
+     (nil))
+(insn 466 465 467 26 (set (reg:SF 21 xmm0 [orig:296 _210 ] [296])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [527])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [526])) [2 dynam.dx S4 A32])) "CALMCVG.f":132 131 {*movsf_internal}
+     (nil))
+(insn 467 466 468 26 (set (reg:SF 21 xmm0 [orig:297 _211 ] [297])
+        (plus:SF (reg:SF 21 xmm0 [orig:296 _210 ] [296])
+            (reg:SF 21 xmm0 [orig:296 _210 ] [296]))) "CALMCVG.f":132 838 {*fop_sf_comm}
+     (nil))
+(insn 468 467 469 26 (set (reg:SF 22 xmm1 [orig:298 _212 ] [298])
+        (reg:SF 21 xmm0 [orig:297 _211 ] [297])) "CALMCVG.f":132 131 {*movsf_internal}
+     (nil))
+(insn 469 468 470 26 (set (reg:SF 21 xmm0 [529])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALMCVG.f":132 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 470 469 471 26 (set (reg:SF 21 xmm0 [528])
+        (div:SF (reg:SF 21 xmm0 [529])
+            (reg:SF 22 xmm1 [orig:298 _212 ] [298]))) "CALMCVG.f":132 841 {*fop_sf_1}
+     (nil))
+(insn 471 470 472 26 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 r2dx+0 S4 A32])
+        (reg:SF 21 xmm0 [528])) "CALMCVG.f":132 131 {*movsf_internal}
+     (nil))
+(insn 472 471 473 26 (set (reg/f:DI 0 ax [530])
+        (symbol_ref:DI ("dynam_") [flags 0x202]  <var_decl 0x7f3e7cdd9870 dynam>)) "CALMCVG.f":1 85 {*movdi_internal}
+     (nil))
+(insn 473 472 474 26 (set (reg:SF 21 xmm0 [orig:299 _213 ] [299])
+        (mem/c:SF (reg/f:DI 0 ax [530]) [2 dynam.dy+0 S4 A128])) "CALMCVG.f":1 131 {*movsf_internal}
+     (nil))
+(insn 474 473 475 26 (set (reg:SF 21 xmm0 [orig:300 _214 ] [300])
+        (plus:SF (reg:SF 21 xmm0 [orig:299 _213 ] [299])
+            (reg:SF 21 xmm0 [orig:299 _213 ] [299]))) "CALMCVG.f":133 838 {*fop_sf_comm}
+     (nil))
+(insn 475 474 476 26 (set (reg:SF 22 xmm1 [orig:301 _215 ] [301])
+        (reg:SF 21 xmm0 [orig:300 _214 ] [300])) "CALMCVG.f":133 131 {*movsf_internal}
+     (nil))
+(insn 476 475 477 26 (set (reg:SF 21 xmm0 [532])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALMCVG.f":133 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 477 476 478 26 (set (reg:SF 21 xmm0 [531])
+        (div:SF (reg:SF 21 xmm0 [532])
+            (reg:SF 22 xmm1 [orig:301 _215 ] [301]))) "CALMCVG.f":133 841 {*fop_sf_1}
+     (nil))
+(insn 478 477 479 26 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [2 r2dy+0 S4 A32])
+        (reg:SF 21 xmm0 [531])) "CALMCVG.f":133 131 {*movsf_internal}
+     (nil))
+(insn 479 478 480 26 (set (reg:SI 0 ax [533])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 480 479 481 26 (set (reg:DI 0 ax [orig:302 _216 ] [302])
+        (sign_extend:DI (reg:SI 0 ax [533]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 481 480 482 26 (parallel [
+            (set (reg:DI 4 si [orig:303 _217 ] [303])
+                (mult:DI (reg:DI 0 ax [orig:302 _216 ] [302])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 349 {*muldi3_1}
+     (nil))
+(insn 482 481 483 26 (set (reg:SI 0 ax [534])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 483 482 484 26 (set (reg:DI 0 ax [orig:304 _218 ] [304])
+        (sign_extend:DI (reg:SI 0 ax [534]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 484 483 485 26 (parallel [
+            (set (reg:DI 0 ax [orig:305 _219 ] [305])
+                (plus:DI (reg:DI 0 ax [orig:304 _218 ] [304])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 485 484 486 26 (set (reg:SI 5 di [orig:306 _220 ] [306])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [orig:305 _219 ] [305])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ihe S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 486 485 487 26 (set (reg:SI 0 ax [535])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 487 486 488 26 (parallel [
+            (set (reg:SI 0 ax [orig:307 _221 ] [307])
+                (plus:SI (reg:SI 0 ax [535])
+                    (reg:SI 5 di [orig:306 _220 ] [306])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 5 di [orig:306 _220 ] [306])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 488 487 489 26 (set (reg:DI 0 ax [orig:308 _222 ] [308])
+        (sign_extend:DI (reg:SI 0 ax [orig:307 _221 ] [307]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 489 488 674 26 (parallel [
+            (set (reg:DI 0 ax [orig:309 _223 ] [309])
+                (plus:DI (reg:DI 0 ax [orig:308 _222 ] [308])
+                    (reg:DI 4 si [orig:303 _217 ] [303])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 674 489 491 26 (set (reg:DI 4 si [orig:310 _224 ] [310])
+        (plus:DI (reg:DI 0 ax [orig:309 _223 ] [309])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":135 218 {*leadi}
+     (nil))
+(insn 491 674 492 26 (set (reg/f:DI 0 ax [536])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":135 85 {*movdi_internal}
+     (nil))
+(insn 492 491 493 26 (set (reg:SF 22 xmm1 [orig:311 _225 ] [311])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:310 _224 ] [310])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [536])) [2 qv S4 A32])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 493 492 494 26 (set (reg:SI 0 ax [537])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 494 493 495 26 (set (reg:DI 0 ax [orig:312 _226 ] [312])
+        (sign_extend:DI (reg:SI 0 ax [537]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 495 494 496 26 (parallel [
+            (set (reg:DI 4 si [orig:313 _227 ] [313])
+                (mult:DI (reg:DI 0 ax [orig:312 _226 ] [312])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 349 {*muldi3_1}
+     (nil))
+(insn 496 495 497 26 (set (reg:SI 0 ax [538])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 497 496 498 26 (set (reg:DI 0 ax [orig:314 _228 ] [314])
+        (sign_extend:DI (reg:SI 0 ax [538]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 498 497 499 26 (parallel [
+            (set (reg:DI 0 ax [orig:315 _229 ] [315])
+                (plus:DI (reg:DI 0 ax [orig:314 _228 ] [314])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 499 498 500 26 (set (reg:SI 5 di [orig:316 _230 ] [316])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [orig:315 _229 ] [315])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ihe S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 500 499 501 26 (set (reg:SI 0 ax [539])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 501 500 502 26 (parallel [
+            (set (reg:SI 0 ax [orig:317 _231 ] [317])
+                (plus:SI (reg:SI 0 ax [539])
+                    (reg:SI 5 di [orig:316 _230 ] [316])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 5 di [orig:316 _230 ] [316])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 502 501 503 26 (set (reg:DI 0 ax [orig:318 _232 ] [318])
+        (sign_extend:DI (reg:SI 0 ax [orig:317 _231 ] [317]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 503 502 675 26 (parallel [
+            (set (reg:DI 0 ax [orig:319 _233 ] [319])
+                (plus:DI (reg:DI 0 ax [orig:318 _232 ] [318])
+                    (reg:DI 4 si [orig:313 _227 ] [313])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 675 503 505 26 (set (reg:DI 4 si [orig:320 _234 ] [320])
+        (plus:DI (reg:DI 0 ax [orig:319 _233 ] [319])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":135 218 {*leadi}
+     (nil))
+(insn 505 675 506 26 (set (reg/f:DI 0 ax [540])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":135 85 {*movdi_internal}
+     (nil))
+(insn 506 505 507 26 (set (reg:SF 21 xmm0 [orig:321 _235 ] [321])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:320 _234 ] [320])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [540])) [2 uwnd S4 A32])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 507 506 508 26 (set (reg:SF 21 xmm0 [orig:322 _236 ] [322])
+        (mult:SF (reg:SF 21 xmm0 [orig:321 _235 ] [321])
+            (reg:SF 22 xmm1 [orig:311 _225 ] [311]))) "CALMCVG.f":135 838 {*fop_sf_comm}
+     (nil))
+(insn 508 507 509 26 (set (reg:SI 0 ax [541])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 509 508 510 26 (set (reg:DI 0 ax [orig:323 _237 ] [323])
+        (sign_extend:DI (reg:SI 0 ax [541]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 510 509 511 26 (parallel [
+            (set (reg:DI 4 si [orig:324 _238 ] [324])
+                (mult:DI (reg:DI 0 ax [orig:323 _237 ] [323])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 349 {*muldi3_1}
+     (nil))
+(insn 511 510 512 26 (set (reg:SI 0 ax [542])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 512 511 513 26 (set (reg:DI 0 ax [orig:325 _239 ] [325])
+        (sign_extend:DI (reg:SI 0 ax [542]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 513 512 514 26 (parallel [
+            (set (reg:DI 0 ax [orig:326 _240 ] [326])
+                (plus:DI (reg:DI 0 ax [orig:325 _239 ] [325])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 514 513 515 26 (parallel [
+            (set (reg:DI 0 ax [543])
+                (plus:DI (reg:DI 0 ax [orig:326 _240 ] [326])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 515 514 516 26 (set (reg:SI 5 di [orig:327 _241 ] [327])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [543])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ihw S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 516 515 517 26 (set (reg:SI 0 ax [544])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 517 516 518 26 (parallel [
+            (set (reg:SI 0 ax [orig:328 _242 ] [328])
+                (plus:SI (reg:SI 0 ax [544])
+                    (reg:SI 5 di [orig:327 _241 ] [327])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 5 di [orig:327 _241 ] [327])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 518 517 519 26 (set (reg:DI 0 ax [orig:329 _243 ] [329])
+        (sign_extend:DI (reg:SI 0 ax [orig:328 _242 ] [328]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 519 518 676 26 (parallel [
+            (set (reg:DI 0 ax [orig:330 _244 ] [330])
+                (plus:DI (reg:DI 0 ax [orig:329 _243 ] [329])
+                    (reg:DI 4 si [orig:324 _238 ] [324])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 676 519 521 26 (set (reg:DI 4 si [orig:331 _245 ] [331])
+        (plus:DI (reg:DI 0 ax [orig:330 _244 ] [330])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":135 218 {*leadi}
+     (nil))
+(insn 521 676 522 26 (set (reg/f:DI 0 ax [545])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":135 85 {*movdi_internal}
+     (nil))
+(insn 522 521 523 26 (set (reg:SF 23 xmm2 [orig:332 _246 ] [332])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:331 _245 ] [331])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [545])) [2 qv S4 A32])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 523 522 524 26 (set (reg:SI 0 ax [546])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 524 523 525 26 (set (reg:DI 0 ax [orig:333 _247 ] [333])
+        (sign_extend:DI (reg:SI 0 ax [546]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 525 524 526 26 (parallel [
+            (set (reg:DI 4 si [orig:334 _248 ] [334])
+                (mult:DI (reg:DI 0 ax [orig:333 _247 ] [333])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 349 {*muldi3_1}
+     (nil))
+(insn 526 525 527 26 (set (reg:SI 0 ax [547])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 527 526 528 26 (set (reg:DI 0 ax [orig:335 _249 ] [335])
+        (sign_extend:DI (reg:SI 0 ax [547]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 528 527 529 26 (parallel [
+            (set (reg:DI 0 ax [orig:336 _250 ] [336])
+                (plus:DI (reg:DI 0 ax [orig:335 _249 ] [335])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 529 528 530 26 (parallel [
+            (set (reg:DI 0 ax [548])
+                (plus:DI (reg:DI 0 ax [orig:336 _250 ] [336])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 530 529 531 26 (set (reg:SI 5 di [orig:337 _251 ] [337])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [548])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f3e7cde0870 indx>)) [1 indx.ihw S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 531 530 532 26 (set (reg:SI 0 ax [549])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":135 86 {*movsi_internal}
+     (nil))
+(insn 532 531 533 26 (parallel [
+            (set (reg:SI 0 ax [orig:338 _252 ] [338])
+                (plus:SI (reg:SI 0 ax [549])
+                    (reg:SI 5 di [orig:337 _251 ] [337])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 5 di [orig:337 _251 ] [337])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 533 532 534 26 (set (reg:DI 0 ax [orig:339 _253 ] [339])
+        (sign_extend:DI (reg:SI 0 ax [orig:338 _252 ] [338]))) "CALMCVG.f":135 149 {*extendsidi2_rex64}
+     (nil))
+(insn 534 533 677 26 (parallel [
+            (set (reg:DI 0 ax [orig:340 _254 ] [340])
+                (plus:DI (reg:DI 0 ax [orig:339 _253 ] [339])
+                    (reg:DI 4 si [orig:334 _248 ] [334])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":135 222 {*adddi_1}
+     (nil))
+(insn 677 534 536 26 (set (reg:DI 4 si [orig:341 _255 ] [341])
+        (plus:DI (reg:DI 0 ax [orig:340 _254 ] [340])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":135 218 {*leadi}
+     (nil))
+(insn 536 677 537 26 (set (reg/f:DI 0 ax [550])
+        (symbol_ref:DI ("uwnd.3990") [flags 0x202]  <var_decl 0x7f3e7cde81b0 uwnd>)) "CALMCVG.f":135 85 {*movdi_internal}
+     (nil))
+(insn 537 536 538 26 (set (reg:SF 22 xmm1 [orig:342 _256 ] [342])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:341 _255 ] [341])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [550])) [2 uwnd S4 A32])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 538 537 539 26 (set (reg:SF 22 xmm1 [orig:343 _257 ] [343])
+        (mult:SF (reg:SF 22 xmm1 [orig:342 _256 ] [342])
+            (reg:SF 23 xmm2 [orig:332 _246 ] [332]))) "CALMCVG.f":135 838 {*fop_sf_comm}
+     (nil))
+(insn 539 538 540 26 (set (reg:SF 21 xmm0 [orig:344 _258 ] [344])
+        (minus:SF (reg:SF 21 xmm0 [orig:322 _236 ] [322])
+            (reg:SF 22 xmm1 [orig:343 _257 ] [343]))) "CALMCVG.f":135 841 {*fop_sf_1}
+     (nil))
+(insn 540 539 541 26 (set (reg:SF 22 xmm1 [orig:345 _259 ] [345])
+        (reg:SF 21 xmm0 [orig:344 _258 ] [344])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 541 540 542 26 (set (reg:SF 21 xmm0 [552])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 r2dx+0 S4 A32])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 542 541 543 26 (set (reg:SF 21 xmm0 [551])
+        (mult:SF (reg:SF 21 xmm0 [552])
+            (reg:SF 22 xmm1 [orig:345 _259 ] [345]))) "CALMCVG.f":135 838 {*fop_sf_comm}
+     (nil))
+(insn 543 542 544 26 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [2 qudx+0 S4 A32])
+        (reg:SF 21 xmm0 [551])) "CALMCVG.f":135 131 {*movsf_internal}
+     (nil))
+(insn 544 543 545 26 (set (reg:SI 0 ax [553])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 545 544 546 26 (parallel [
+            (set (reg:SI 0 ax [orig:346 _260 ] [346])
+                (plus:SI (reg:SI 0 ax [553])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 546 545 547 26 (set (reg:DI 0 ax [orig:347 _261 ] [347])
+        (sign_extend:DI (reg:SI 0 ax [orig:346 _260 ] [346]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 547 546 548 26 (parallel [
+            (set (reg:DI 4 si [orig:348 _262 ] [348])
+                (mult:DI (reg:DI 0 ax [orig:347 _261 ] [347])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 349 {*muldi3_1}
+     (nil))
+(insn 548 547 549 26 (set (reg:SI 0 ax [554])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 549 548 550 26 (set (reg:DI 0 ax [orig:349 _263 ] [349])
+        (sign_extend:DI (reg:SI 0 ax [554]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 550 549 678 26 (parallel [
+            (set (reg:DI 0 ax [orig:350 _264 ] [350])
+                (plus:DI (reg:DI 0 ax [orig:349 _263 ] [349])
+                    (reg:DI 4 si [orig:348 _262 ] [348])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 222 {*adddi_1}
+     (nil))
+(insn 678 550 552 26 (set (reg:DI 4 si [orig:351 _265 ] [351])
+        (plus:DI (reg:DI 0 ax [orig:350 _264 ] [350])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":136 218 {*leadi}
+     (nil))
+(insn 552 678 553 26 (set (reg/f:DI 0 ax [555])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":136 85 {*movdi_internal}
+     (nil))
+(insn 553 552 554 26 (set (reg:SF 22 xmm1 [orig:352 _266 ] [352])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:351 _265 ] [351])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [555])) [2 qv S4 A32])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 554 553 555 26 (set (reg:SI 0 ax [556])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 555 554 556 26 (parallel [
+            (set (reg:SI 0 ax [orig:353 _267 ] [353])
+                (plus:SI (reg:SI 0 ax [556])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 556 555 557 26 (set (reg:DI 0 ax [orig:354 _268 ] [354])
+        (sign_extend:DI (reg:SI 0 ax [orig:353 _267 ] [353]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 557 556 558 26 (parallel [
+            (set (reg:DI 4 si [orig:355 _269 ] [355])
+                (mult:DI (reg:DI 0 ax [orig:354 _268 ] [354])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 349 {*muldi3_1}
+     (nil))
+(insn 558 557 559 26 (set (reg:SI 0 ax [557])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 559 558 560 26 (set (reg:DI 0 ax [orig:356 _270 ] [356])
+        (sign_extend:DI (reg:SI 0 ax [557]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 560 559 679 26 (parallel [
+            (set (reg:DI 0 ax [orig:357 _271 ] [357])
+                (plus:DI (reg:DI 0 ax [orig:356 _270 ] [356])
+                    (reg:DI 4 si [orig:355 _269 ] [355])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 222 {*adddi_1}
+     (nil))
+(insn 679 560 562 26 (set (reg:DI 4 si [orig:358 _272 ] [358])
+        (plus:DI (reg:DI 0 ax [orig:357 _271 ] [357])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":136 218 {*leadi}
+     (nil))
+(insn 562 679 563 26 (set (reg/f:DI 0 ax [558])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":136 85 {*movdi_internal}
+     (nil))
+(insn 563 562 564 26 (set (reg:SF 21 xmm0 [orig:359 _273 ] [359])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:358 _272 ] [358])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [558])) [2 vwnd S4 A32])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 564 563 565 26 (set (reg:SF 21 xmm0 [orig:360 _274 ] [360])
+        (mult:SF (reg:SF 21 xmm0 [orig:359 _273 ] [359])
+            (reg:SF 22 xmm1 [orig:352 _266 ] [352]))) "CALMCVG.f":136 838 {*fop_sf_comm}
+     (nil))
+(insn 565 564 566 26 (set (reg:SI 0 ax [559])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 566 565 567 26 (parallel [
+            (set (reg:SI 0 ax [orig:361 _275 ] [361])
+                (plus:SI (reg:SI 0 ax [559])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 567 566 568 26 (set (reg:DI 0 ax [orig:362 _276 ] [362])
+        (sign_extend:DI (reg:SI 0 ax [orig:361 _275 ] [361]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 568 567 569 26 (parallel [
+            (set (reg:DI 4 si [orig:363 _277 ] [363])
+                (mult:DI (reg:DI 0 ax [orig:362 _276 ] [362])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 349 {*muldi3_1}
+     (nil))
+(insn 569 568 570 26 (set (reg:SI 0 ax [560])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 570 569 571 26 (set (reg:DI 0 ax [orig:364 _278 ] [364])
+        (sign_extend:DI (reg:SI 0 ax [560]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 571 570 680 26 (parallel [
+            (set (reg:DI 0 ax [orig:365 _279 ] [365])
+                (plus:DI (reg:DI 0 ax [orig:364 _278 ] [364])
+                    (reg:DI 4 si [orig:363 _277 ] [363])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 222 {*adddi_1}
+     (nil))
+(insn 680 571 573 26 (set (reg:DI 4 si [orig:366 _280 ] [366])
+        (plus:DI (reg:DI 0 ax [orig:365 _279 ] [365])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":136 218 {*leadi}
+     (nil))
+(insn 573 680 574 26 (set (reg/f:DI 0 ax [561])
+        (symbol_ref:DI ("qv.3985") [flags 0x202]  <var_decl 0x7f3e7cde4f30 qv>)) "CALMCVG.f":136 85 {*movdi_internal}
+     (nil))
+(insn 574 573 575 26 (set (reg:SF 23 xmm2 [orig:367 _281 ] [367])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:366 _280 ] [366])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [561])) [2 qv S4 A32])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 575 574 576 26 (set (reg:SI 0 ax [562])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 576 575 577 26 (parallel [
+            (set (reg:SI 0 ax [orig:368 _282 ] [368])
+                (plus:SI (reg:SI 0 ax [562])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 577 576 578 26 (set (reg:DI 0 ax [orig:369 _283 ] [369])
+        (sign_extend:DI (reg:SI 0 ax [orig:368 _282 ] [368]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 578 577 579 26 (parallel [
+            (set (reg:DI 4 si [orig:370 _284 ] [370])
+                (mult:DI (reg:DI 0 ax [orig:369 _283 ] [369])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 349 {*muldi3_1}
+     (nil))
+(insn 579 578 580 26 (set (reg:SI 0 ax [563])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":136 86 {*movsi_internal}
+     (nil))
+(insn 580 579 581 26 (set (reg:DI 0 ax [orig:371 _285 ] [371])
+        (sign_extend:DI (reg:SI 0 ax [563]))) "CALMCVG.f":136 149 {*extendsidi2_rex64}
+     (nil))
+(insn 581 580 681 26 (parallel [
+            (set (reg:DI 0 ax [orig:372 _286 ] [372])
+                (plus:DI (reg:DI 0 ax [orig:371 _285 ] [371])
+                    (reg:DI 4 si [orig:370 _284 ] [370])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":136 222 {*adddi_1}
+     (nil))
+(insn 681 581 583 26 (set (reg:DI 4 si [orig:373 _287 ] [373])
+        (plus:DI (reg:DI 0 ax [orig:372 _286 ] [372])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":136 218 {*leadi}
+     (nil))
+(insn 583 681 584 26 (set (reg/f:DI 0 ax [564])
+        (symbol_ref:DI ("vwnd.3992") [flags 0x202]  <var_decl 0x7f3e7cde8240 vwnd>)) "CALMCVG.f":136 85 {*movdi_internal}
+     (nil))
+(insn 584 583 585 26 (set (reg:SF 22 xmm1 [orig:374 _288 ] [374])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:373 _287 ] [373])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [564])) [2 vwnd S4 A32])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 585 584 586 26 (set (reg:SF 22 xmm1 [orig:375 _289 ] [375])
+        (mult:SF (reg:SF 22 xmm1 [orig:374 _288 ] [374])
+            (reg:SF 23 xmm2 [orig:367 _281 ] [367]))) "CALMCVG.f":136 838 {*fop_sf_comm}
+     (nil))
+(insn 586 585 587 26 (set (reg:SF 21 xmm0 [orig:376 _290 ] [376])
+        (minus:SF (reg:SF 21 xmm0 [orig:360 _274 ] [360])
+            (reg:SF 22 xmm1 [orig:375 _289 ] [375]))) "CALMCVG.f":136 841 {*fop_sf_1}
+     (nil))
+(insn 587 586 588 26 (set (reg:SF 22 xmm1 [orig:377 _291 ] [377])
+        (reg:SF 21 xmm0 [orig:376 _290 ] [376])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 588 587 589 26 (set (reg:SF 21 xmm0 [566])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [2 r2dy+0 S4 A32])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 589 588 590 26 (set (reg:SF 21 xmm0 [565])
+        (mult:SF (reg:SF 21 xmm0 [566])
+            (reg:SF 22 xmm1 [orig:377 _291 ] [377]))) "CALMCVG.f":136 838 {*fop_sf_comm}
+     (nil))
+(insn 590 589 591 26 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [2 qvdy+0 S4 A32])
+        (reg:SF 21 xmm0 [565])) "CALMCVG.f":136 131 {*movsf_internal}
+     (nil))
+(insn 591 590 592 26 (set (reg:SF 21 xmm0 [568])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [2 qudx+0 S4 A32])) "CALMCVG.f":137 131 {*movsf_internal}
+     (nil))
+(insn 592 591 593 26 (set (reg:SF 21 xmm0 [567])
+        (plus:SF (reg:SF 21 xmm0 [568])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [2 qvdy+0 S4 A32]))) "CALMCVG.f":137 838 {*fop_sf_comm}
+     (nil))
+(insn 593 592 594 26 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 qdiv+0 S4 A32])
+        (reg:SF 21 xmm0 [567])) "CALMCVG.f":137 131 {*movsf_internal}
+     (nil))
+(insn 594 593 595 26 (set (reg:SI 0 ax [569])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":138 86 {*movsi_internal}
+     (nil))
+(insn 595 594 596 26 (set (reg:DI 0 ax [orig:378 _292 ] [378])
+        (sign_extend:DI (reg:SI 0 ax [569]))) "CALMCVG.f":138 149 {*extendsidi2_rex64}
+     (nil))
+(insn 596 595 597 26 (parallel [
+            (set (reg:DI 4 si [orig:379 _293 ] [379])
+                (mult:DI (reg:DI 0 ax [orig:378 _292 ] [378])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":138 349 {*muldi3_1}
+     (nil))
+(insn 597 596 598 26 (set (reg:SI 0 ax [570])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":138 86 {*movsi_internal}
+     (nil))
+(insn 598 597 599 26 (set (reg:DI 0 ax [orig:380 _294 ] [380])
+        (sign_extend:DI (reg:SI 0 ax [570]))) "CALMCVG.f":138 149 {*extendsidi2_rex64}
+     (nil))
+(insn 599 598 682 26 (parallel [
+            (set (reg:DI 0 ax [orig:381 _295 ] [381])
+                (plus:DI (reg:DI 0 ax [orig:380 _294 ] [380])
+                    (reg:DI 4 si [orig:379 _293 ] [379])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":138 222 {*adddi_1}
+     (nil))
+(insn 682 599 601 26 (set (reg:DI 4 si [orig:382 _296 ] [382])
+        (plus:DI (reg:DI 0 ax [orig:381 _295 ] [381])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":138 218 {*leadi}
+     (nil))
+(insn 601 682 602 26 (set (reg/f:DI 0 ax [571])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f3e7cde0b40 masks>)) "CALMCVG.f":138 85 {*movdi_internal}
+     (nil))
+(insn 602 601 603 26 (set (reg:SF 21 xmm0 [orig:383 _297 ] [383])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:382 _296 ] [382])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [571])) [2 masks.hbm2 S4 A32])) "CALMCVG.f":138 131 {*movsf_internal}
+     (nil))
+(insn 603 602 604 26 (set (reg:SF 21 xmm0 [orig:384 _298 ] [384])
+        (mult:SF (reg:SF 21 xmm0 [orig:383 _297 ] [383])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -32 [0xffffffffffffffe0])) [2 qdiv+0 S4 A32]))) "CALMCVG.f":138 838 {*fop_sf_comm}
+     (nil))
+(insn 604 603 605 26 (set (reg:SI 0 ax [572])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALMCVG.f":138 86 {*movsi_internal}
+     (nil))
+(insn 605 604 606 26 (set (reg:DI 0 ax [orig:385 _299 ] [385])
+        (sign_extend:DI (reg:SI 0 ax [572]))) "CALMCVG.f":138 149 {*extendsidi2_rex64}
+     (nil))
+(insn 606 605 607 26 (parallel [
+            (set (reg:DI 4 si [orig:386 _300 ] [386])
+                (mult:DI (reg:DI 0 ax [orig:385 _299 ] [385])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":138 349 {*muldi3_1}
+     (nil))
+(insn 607 606 608 26 (set (reg:SI 0 ax [573])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALMCVG.f":138 86 {*movsi_internal}
+     (nil))
+(insn 608 607 609 26 (set (reg:DI 0 ax [orig:387 _301 ] [387])
+        (sign_extend:DI (reg:SI 0 ax [573]))) "CALMCVG.f":138 149 {*extendsidi2_rex64}
+     (nil))
+(insn 609 608 683 26 (parallel [
+            (set (reg:DI 0 ax [orig:388 _302 ] [388])
+                (plus:DI (reg:DI 0 ax [orig:387 _301 ] [387])
+                    (reg:DI 4 si [orig:386 _300 ] [386])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":138 222 {*adddi_1}
+     (nil))
+(insn 683 609 684 26 (set (reg:DI 4 si [orig:389 _303 ] [389])
+        (plus:DI (reg:DI 0 ax [orig:388 _302 ] [388])
+            (const_int -120 [0xffffffffffffff88]))) "CALMCVG.f":138 218 {*leadi}
+     (nil))
+(insn 684 683 685 26 (set (reg:V4SF 22 xmm1 [574])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "CALMCVG.f":138 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 685 684 613 26 (set (reg:V4SF 21 xmm0 [orig:390 _304 ] [390])
+        (xor:V4SF (reg:V4SF 21 xmm0 [orig:384 _298 ] [384])
+            (reg:V4SF 22 xmm1 [574]))) "CALMCVG.f":138 1820 {*xorv4sf3}
+     (nil))
+(insn 613 685 614 26 (set (reg/f:DI 0 ax [575])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 qcnvg+0 S8 A64])) "CALMCVG.f":138 85 {*movdi_internal}
+     (nil))
+(insn 614 613 615 26 (set (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:389 _303 ] [389])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [575])) [2 *qcnvg_328(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:390 _304 ] [390])) "CALMCVG.f":138 131 {*movsf_internal}
+     (nil))
+(insn 615 614 648 26 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":131 221 {*addsi_1}
+     (nil))
+(jump_insn 648 615 649 26 (set (pc)
+        (label_ref 616)) "CALMCVG.f":131 683 {jump}
+     (nil)
+ -> 616)
+(barrier 649 648 668)
+(code_label 668 649 667 27 27 (nil) [1 uses])
+(note 667 668 669 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 669 667 621 27 (const_int 0 [0]) "CALMCVG.f":138 718 {nop}
+     (nil))
+(insn 621 669 650 27 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMCVG.f":129 221 {*addsi_1}
+     (nil))
+(jump_insn 650 621 651 27 (set (pc)
+        (label_ref 622)) "CALMCVG.f":129 683 {jump}
+     (nil)
+ -> 622)
+(barrier 651 650 665)
+(code_label 665 651 664 28 26 (nil) [1 uses])
+(note 664 665 666 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 666 664 639 28 (const_int 0 [0]) "CALMCVG.f":131 718 {nop}
+     (nil))
+(insn 639 666 721 28 (const_int 0 [0]) "CALMCVG.f":144 718 {nop}
+     (nil))
+(note 721 639 722 28 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 722 721 723 28 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 6 bp)
+                    (const_int 8 [0x8])))
+            (set (reg/f:DI 6 bp)
+                (mem:DI (reg/f:DI 6 bp) [0  S8 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALMCVG.f":145 728 {leave_rex64}
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 723 722 724 28 (simple_return) "CALMCVG.f":145 713 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 724 723 670)
+(note 670 724 0 NOTE_INSN_DELETED)

@@ -1,0 +1,303 @@
+
+;; Function calstrm (calstrm_, funcdef_no=0, decl_uid=3770, cgraph_uid=0, symbol_order=0)
+
+
+
+calstrm
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 21 [xmm0] 22 [xmm1]
+;;  ref usage 	r0={4d,2u} r1={19d,17u} r2={6d,4u} r4={2d,1u} r5={2d,1u} r6={3d,31u} r7={4d,14u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={12d,4u} r18={1d} r19={1d} r20={1d,1u} r21={10d,9u} r22={4d,2u} r23={2d} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={2d} r38={2d} r39={1d} r40={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 225{139d,86u,0e} in 59{58 regular + 1 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 87 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 87 5 88 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "CALSTRM.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 88 87 89 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "CALSTRM.f":1 85 {*movdi_internal}
+     (nil))
+(insn/f 89 88 90 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -32 [0xffffffffffffffe0])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALSTRM.f":1 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(note 90 89 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 90 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [3 z1d+0 S8 A64])
+        (reg:DI 5 di [ z1d ])) "CALSTRM.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [3 strm+0 S8 A64])
+        (reg:DI 4 si [ strm ])) "CALSTRM.f":1 85 {*movdi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 0 ax [106])
+        (symbol_ref:DI ("mapot_") [flags 0x202]  <var_decl 0x7fd0b9c63870 mapot>)) "CALSTRM.f":1 85 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:SF 22 xmm1 [orig:87 _1 ] [87])
+        (mem/c:SF (plus:DI (reg/f:DI 0 ax [106])
+                (const_int 4000032 [0x3d0920])) [2 mapot.tph0d+0 S4 A128])) "CALSTRM.f":1 131 {*movsf_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:SF 21 xmm0 [107])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALSTRM.f":66 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.7453290522098541259765625e-2 [0x0.8efa34p-5])
+        (nil)))
+(insn 10 9 12 2 (set (reg:SF 21 xmm0 [orig:88 _2 ] [88])
+        (mult:SF (reg:SF 21 xmm0 [107])
+            (reg:SF 22 xmm1 [orig:87 _1 ] [87]))) "CALSTRM.f":66 838 {*fop_sf_comm}
+     (nil))
+(call_insn/u 12 10 13 2 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("sinf") [flags 0x41]  <function_decl 0x7fd0b9ad4500 __builtin_sinf>) [0 __builtin_sinf S1 A8])
+            (const_int 0 [0]))) "CALSTRM.f":66 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 13 12 14 2 (set (reg:SF 22 xmm1 [orig:89 _3 ] [89])
+        (reg:SF 21 xmm0)) "CALSTRM.f":66 131 {*movsf_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg:SF 21 xmm0 [109])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALSTRM.f":66 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.458399929106235504150390625e-4 [0x0.98ecap-12])
+        (nil)))
+(insn 15 14 16 2 (set (reg:SF 21 xmm0 [108])
+        (mult:SF (reg:SF 21 xmm0 [109])
+            (reg:SF 22 xmm1 [orig:89 _3 ] [89]))) "CALSTRM.f":66 838 {*fop_sf_comm}
+     (nil))
+(insn 16 15 17 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 f0+0 S4 A32])
+        (reg:SF 21 xmm0 [108])) "CALSTRM.f":66 131 {*movsf_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:SF 21 xmm0 [111])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALSTRM.f":67 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 9.80000019073486328125e+0 [0x0.9ccccdp+4])
+        (nil)))
+(insn 18 17 19 2 (set (reg:SF 21 xmm0 [110])
+        (div:SF (reg:SF 21 xmm0 [111])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -12 [0xfffffffffffffff4])) [2 f0+0 S4 A32]))) "CALSTRM.f":67 841 {*fop_sf_1}
+     (nil))
+(insn 19 18 20 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 gof0+0 S4 A32])
+        (reg:SF 21 xmm0 [110])) "CALSTRM.f":67 131 {*movsf_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg:SI 1 dx [orig:102 _23 ] [102])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fd0b9c68bd0 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALSTRM.f":71 86 {*movsi_internal}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 0 ax [orig:103 _24 ] [103])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fd0b9c68bd0 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALSTRM.f":71 86 {*movsi_internal}
+     (nil))
+(insn 22 21 64 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:102 _23 ] [102])) "CALSTRM.f":71 86 {*movsi_internal}
+     (nil))
+(code_label 64 22 23 3 5 (nil) [1 uses])
+(note 23 64 24 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 24 23 25 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:103 _24 ] [103]))) "CALSTRM.f":71 11 {*cmpsi_1}
+     (nil))
+(insn 25 24 26 3 (set (reg:QI 1 dx [112])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALSTRM.f":71 678 {*setcc_qi}
+     (nil))
+(insn 26 25 27 3 (set (reg:SI 1 dx [orig:104 _26 ] [104])
+        (zero_extend:SI (reg:QI 1 dx [112]))) "CALSTRM.f":71 140 {*zero_extendqisi2}
+     (nil))
+(insn 27 26 28 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:104 _26 ] [104])
+            (const_int 0 [0]))) "CALSTRM.f":71 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 28 27 29 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 79)
+            (pc))) "CALSTRM.f":71 682 {*jcc}
+     (nil)
+ -> 79)
+(note 29 28 30 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 30 29 58 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALSTRM.f":72 86 {*movsi_internal}
+     (nil))
+(code_label 58 30 31 5 4 (nil) [1 uses])
+(note 31 58 32 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 32 31 33 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALSTRM.f":72 11 {*cmpsi_1}
+     (nil))
+(insn 33 32 34 5 (set (reg:QI 1 dx [113])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALSTRM.f":72 678 {*setcc_qi}
+     (nil))
+(insn 34 33 35 5 (set (reg:SI 1 dx [orig:105 _28 ] [105])
+        (zero_extend:SI (reg:QI 1 dx [113]))) "CALSTRM.f":72 140 {*zero_extendqisi2}
+     (nil))
+(insn 35 34 36 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:105 _28 ] [105])
+            (const_int 0 [0]))) "CALSTRM.f":72 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 36 35 37 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 82)
+            (pc))) "CALSTRM.f":72 682 {*jcc}
+     (nil)
+ -> 82)
+(note 37 36 38 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 38 37 39 6 (set (reg:SI 1 dx [114])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALSTRM.f":73 86 {*movsi_internal}
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 1 dx [orig:90 _4 ] [90])
+        (sign_extend:DI (reg:SI 1 dx [114]))) "CALSTRM.f":73 149 {*extendsidi2_rex64}
+     (nil))
+(insn 40 39 41 6 (parallel [
+            (set (reg:DI 2 cx [orig:91 _5 ] [91])
+                (mult:DI (reg:DI 1 dx [orig:90 _4 ] [90])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":73 349 {*muldi3_1}
+     (nil))
+(insn 41 40 42 6 (set (reg:SI 1 dx [115])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALSTRM.f":73 86 {*movsi_internal}
+     (nil))
+(insn 42 41 43 6 (set (reg:DI 1 dx [orig:92 _6 ] [92])
+        (sign_extend:DI (reg:SI 1 dx [115]))) "CALSTRM.f":73 149 {*extendsidi2_rex64}
+     (nil))
+(insn 43 42 85 6 (parallel [
+            (set (reg:DI 1 dx [orig:93 _7 ] [93])
+                (plus:DI (reg:DI 1 dx [orig:92 _6 ] [92])
+                    (reg:DI 2 cx [orig:91 _5 ] [91])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":73 222 {*adddi_1}
+     (nil))
+(insn 85 43 45 6 (set (reg:DI 2 cx [orig:94 _8 ] [94])
+        (plus:DI (reg:DI 1 dx [orig:93 _7 ] [93])
+            (const_int -120 [0xffffffffffffff88]))) "CALSTRM.f":73 218 {*leadi}
+     (nil))
+(insn 45 85 46 6 (set (reg/f:DI 1 dx [116])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [3 z1d+0 S8 A64])) "CALSTRM.f":73 85 {*movdi_internal}
+     (nil))
+(insn 46 45 47 6 (set (reg:SF 21 xmm0 [orig:95 _9 ] [95])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:94 _8 ] [94])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [116])) [2 *z1d_29(D) S4 A32])) "CALSTRM.f":73 131 {*movsf_internal}
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 1 dx [117])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALSTRM.f":73 86 {*movsi_internal}
+     (nil))
+(insn 48 47 49 6 (set (reg:DI 1 dx [orig:96 _10 ] [96])
+        (sign_extend:DI (reg:SI 1 dx [117]))) "CALSTRM.f":73 149 {*extendsidi2_rex64}
+     (nil))
+(insn 49 48 50 6 (parallel [
+            (set (reg:DI 2 cx [orig:97 _11 ] [97])
+                (mult:DI (reg:DI 1 dx [orig:96 _10 ] [96])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":73 349 {*muldi3_1}
+     (nil))
+(insn 50 49 51 6 (set (reg:SI 1 dx [118])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALSTRM.f":73 86 {*movsi_internal}
+     (nil))
+(insn 51 50 52 6 (set (reg:DI 1 dx [orig:98 _12 ] [98])
+        (sign_extend:DI (reg:SI 1 dx [118]))) "CALSTRM.f":73 149 {*extendsidi2_rex64}
+     (nil))
+(insn 52 51 86 6 (parallel [
+            (set (reg:DI 1 dx [orig:99 _13 ] [99])
+                (plus:DI (reg:DI 1 dx [orig:98 _12 ] [98])
+                    (reg:DI 2 cx [orig:97 _11 ] [97])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":73 222 {*adddi_1}
+     (nil))
+(insn 86 52 54 6 (set (reg:DI 2 cx [orig:100 _14 ] [100])
+        (plus:DI (reg:DI 1 dx [orig:99 _13 ] [99])
+            (const_int -120 [0xffffffffffffff88]))) "CALSTRM.f":73 218 {*leadi}
+     (nil))
+(insn 54 86 55 6 (set (reg:SF 21 xmm0 [orig:101 _15 ] [101])
+        (mult:SF (reg:SF 21 xmm0 [orig:95 _9 ] [95])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -16 [0xfffffffffffffff0])) [2 gof0+0 S4 A32]))) "CALSTRM.f":73 838 {*fop_sf_comm}
+     (nil))
+(insn 55 54 56 6 (set (reg/f:DI 1 dx [119])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [3 strm+0 S8 A64])) "CALSTRM.f":73 85 {*movdi_internal}
+     (nil))
+(insn 56 55 57 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:100 _14 ] [100])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [119])) [2 *strm_30(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:101 _15 ] [101])) "CALSTRM.f":73 131 {*movsf_internal}
+     (nil))
+(insn 57 56 74 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":72 221 {*addsi_1}
+     (nil))
+(jump_insn 74 57 75 6 (set (pc)
+        (label_ref 58)) "CALSTRM.f":72 683 {jump}
+     (nil)
+ -> 58)
+(barrier 75 74 82)
+(code_label 82 75 81 7 8 (nil) [1 uses])
+(note 81 82 83 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 83 81 63 7 (const_int 0 [0]) "CALSTRM.f":73 718 {nop}
+     (nil))
+(insn 63 83 76 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALSTRM.f":71 221 {*addsi_1}
+     (nil))
+(jump_insn 76 63 77 7 (set (pc)
+        (label_ref 64)) "CALSTRM.f":71 683 {jump}
+     (nil)
+ -> 64)
+(barrier 77 76 79)
+(code_label 79 77 78 8 7 (nil) [1 uses])
+(note 78 79 80 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 80 78 73 8 (const_int 0 [0]) "CALSTRM.f":72 718 {nop}
+     (nil))
+(insn 73 80 91 8 (const_int 0 [0]) "CALSTRM.f":78 718 {nop}
+     (nil))
+(note 91 73 92 8 NOTE_INSN_EPILOGUE_BEG)
+(insn/f 92 91 93 8 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 6 bp)
+                    (const_int 8 [0x8])))
+            (set (reg/f:DI 6 bp)
+                (mem:DI (reg/f:DI 6 bp) [0  S8 A8]))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALSTRM.f":79 728 {leave_rex64}
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 93 92 94 8 (simple_return) "CALSTRM.f":79 713 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 94 93 84)
+(note 84 94 0 NOTE_INSN_DELETED)

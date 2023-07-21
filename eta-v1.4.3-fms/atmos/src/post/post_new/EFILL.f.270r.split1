@@ -1,0 +1,966 @@
+
+;; Function efill (efill_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 6 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 6 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 6 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])
+        (reg:DI 5 di [ egrid ])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -608 [0xfffffffffffffda0])) [12 im+0 S8 A64])
+        (reg:DI 4 si [ im ])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -616 [0xfffffffffffffd98])) [12 jm+0 S8 A64])
+        (reg:DI 1 dx [ jm ])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(note 5 4 8 2 NOTE_INSN_FUNCTION_BEG)
+(insn 8 5 9 2 (set (reg/f:DI 145)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -608 [0xfffffffffffffda0])) [12 im+0 S8 A64])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 87 [ _1 ])
+        (mem:SI (reg/f:DI 145) [1 *im_58(D)+0 S4 A32])) "EFILL.f":1 86 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:DI 146)
+        (sign_extend:DI (reg:SI 87 [ _1 ]))) "EFILL.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 11 10 12 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [3 ubound.0+0 S8 A64])
+        (reg:DI 146)) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 12 11 14 2 (set (reg:DI 129 [ stride.2_60 ])
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [3 ubound.0+0 S8 A64])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 14 12 13 2 (set (reg:DI 147)
+        (const_int 0 [0])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 13 14 15 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 129 [ stride.2_60 ])
+            (const_int 0 [0]))) "EFILL.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 15 13 16 2 (set (reg:DI 130 [ stride.2_61 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 129 [ stride.2_60 ])
+            (reg:DI 147))) "EFILL.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 16 15 17 2 (set (reg/f:DI 148)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -616 [0xfffffffffffffd98])) [12 jm+0 S8 A64])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 148) [1 *jm_62(D)+0 S4 A32])) "EFILL.f":1 86 {*movsi_internal}
+     (nil))
+(insn 18 17 19 2 (set (reg:DI 149)
+        (sign_extend:DI (reg:SI 88 [ _2 ]))) "EFILL.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 19 18 20 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [3 ubound.1+0 S8 A64])
+        (reg:DI 149)) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 20 19 22 2 (parallel [
+            (set (reg:DI 131 [ size.4_64 ])
+                (mult:DI (reg:DI 130 [ stride.2_61 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -40 [0xffffffffffffffd8])) [3 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":1 349 {*muldi3_1}
+     (nil))
+(insn 22 20 21 2 (set (reg:DI 150)
+        (const_int 0 [0])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 21 22 23 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 131 [ size.4_64 ])
+            (const_int 0 [0]))) "EFILL.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 23 21 25 2 (set (reg:DI 132 [ size.4_65 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 131 [ size.4_64 ])
+            (reg:DI 150))) "EFILL.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 25 23 26 2 (set (reg:DI 89 [ size.6_3 ])
+        (reg:DI 132 [ size.4_65 ])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 26 25 27 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 0)
+        (reg:DI 89 [ size.6_3 ])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 27 26 31 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 8)
+        (const_int 0 [0])) "EFILL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 31 27 32 2 (set (reg:DI 136 [ offset.3_69 ])
+        (not:DI (reg:DI 130 [ stride.2_61 ]))) "EFILL.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 32 31 33 2 (parallel [
+            (set (reg:DI 151)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":60 222 {*adddi_1}
+     (nil))
+(insn 33 32 34 2 (parallel [
+            (set (reg:DI 152)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -52 [0xffffffffffffffcc])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":60 222 {*adddi_1}
+     (nil))
+(insn 34 33 35 2 (set (reg:DI 153)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -616 [0xfffffffffffffd98])) [12 jm+0 S8 A64])) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 35 34 36 2 (set (reg:DI 154)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -608 [0xfffffffffffffda0])) [12 im+0 S8 A64])) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 155)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 37 36 38 2 (set (reg:DI 37 r8)
+        (reg:DI 151)) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 38 37 39 2 (set (reg:DI 2 cx)
+        (reg:DI 152)) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 39 38 40 2 (set (reg:DI 1 dx)
+        (reg:DI 153)) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 40 39 41 2 (set (reg:DI 4 si)
+        (reg:DI 154)) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 41 40 42 2 (set (reg:DI 5 di)
+        (reg:DI 155)) "EFILL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 42 41 43 2 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "EFILL.f":60 88 {*movqi_internal}
+     (nil))
+(call_insn 43 42 44 2 (call (mem:QI (symbol_ref:DI ("minmax_") [flags 0x41]  <function_decl 0x7f09ef033600 minmax>) [0 minmax S1 A8])
+        (const_int 0 [0])) "EFILL.f":60 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (expr_list:DI (use (reg:DI 37 r8))
+                            (nil))))))))
+(insn 44 43 45 2 (set (reg:SF 92 [ fmax.8_6 ])
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [4 fmax+0 S4 A128])) "EFILL.f":61 131 {*movsf_internal}
+     (nil))
+(insn 45 44 46 2 (set (reg:SF 93 [ _7 ])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f09f60a6e10 options>) [4 options.spval+0 S4 A128])) "EFILL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 46 45 47 2 (set (reg:SF 94 [ _8 ])
+        (minus:SF (reg:SF 92 [ fmax.8_6 ])
+            (reg:SF 93 [ _7 ]))) "EFILL.f":61 841 {*fop_sf_1}
+     (nil))
+(insn 47 46 48 2 (set (reg:V4SF 156)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "EFILL.f":61 1282 {movv4sf_internal}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 48 47 49 2 (parallel [
+            (set (reg:SF 95 [ _9 ])
+                (abs:SF (reg:SF 94 [ _8 ])))
+            (use (reg:V4SF 156))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":61 507 {*absnegsf2}
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 94 [ _8 ]))
+        (nil)))
+(insn 49 48 50 2 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 95 [ _9 ])
+            (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32]))) "EFILL.f":61 53 {*cmpisf}
+     (nil))
+(jump_insn 50 49 226 2 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 224)
+            (pc))) "EFILL.f":61 682 {*jcc}
+     (nil)
+ -> 224)
+;;  succ:       22
+;;              3 (FALLTHRU)
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 226 50 59 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 59 226 60 3 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [1 npts+0 S4 A32])
+        (const_int 0 [0])) "EFILL.f":65 86 {*movsi_internal}
+     (nil))
+(insn 60 59 61 3 (set (reg:DF 157)
+        (mem/u/c:DF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S8 A64])) "EFILL.f":66 130 {*movdf_internal}
+     (nil))
+(insn 61 60 62 3 (set (mem/c:DF (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 sum+0 S8 A64])
+        (reg:DF 157)) "EFILL.f":66 130 {*movdf_internal}
+     (nil))
+(insn 62 61 63 3 (set (reg/f:DI 158)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -616 [0xfffffffffffffd98])) [12 jm+0 S8 A64])) "EFILL.f":68 85 {*movdi_internal}
+     (nil))
+(insn 63 62 64 3 (set (reg:SI 137 [ _74 ])
+        (mem:SI (reg/f:DI 158) [1 *jm_62(D)+0 S4 A32])) "EFILL.f":68 86 {*movsi_internal}
+     (nil))
+(insn 64 63 124 3 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (const_int 1 [0x1])) "EFILL.f":68 86 {*movsi_internal}
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;;              10 [always] 
+(code_label 124 64 65 4 10 (nil) [1 uses])
+(note 65 124 66 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 66 65 67 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 137 [ _74 ]))) "EFILL.f":68 11 {*cmpsi_1}
+     (nil))
+(insn 67 66 68 4 (set (reg:QI 159)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "EFILL.f":68 678 {*setcc_qi}
+     (nil))
+(insn 68 67 69 4 (set (reg:SI 138 [ _76 ])
+        (zero_extend:SI (reg:QI 159))) "EFILL.f":68 140 {*zero_extendqisi2}
+     (nil))
+(insn 69 68 70 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 138 [ _76 ])
+            (const_int 0 [0]))) "EFILL.f":68 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 70 69 71 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 246)
+            (pc))) "EFILL.f":68 682 {*jcc}
+     (nil)
+ -> 246)
+;;  succ:       23
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 71 70 72 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 72 71 73 5 (set (reg/f:DI 160)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -608 [0xfffffffffffffda0])) [12 im+0 S8 A64])) "EFILL.f":69 85 {*movdi_internal}
+     (nil))
+(insn 73 72 74 5 (set (reg:SI 139 [ _77 ])
+        (mem:SI (reg/f:DI 160) [1 *im_58(D)+0 S4 A32])) "EFILL.f":69 86 {*movsi_internal}
+     (nil))
+(insn 74 73 118 5 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "EFILL.f":69 86 {*movsi_internal}
+     (nil))
+;;  succ:       6 (FALLTHRU)
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       5 (FALLTHRU)
+;;              9 [always] 
+(code_label 118 74 75 6 9 (nil) [1 uses])
+(note 75 118 76 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 76 75 77 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 139 [ _77 ]))) "EFILL.f":69 11 {*cmpsi_1}
+     (nil))
+(insn 77 76 78 6 (set (reg:QI 161)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "EFILL.f":69 678 {*setcc_qi}
+     (nil))
+(insn 78 77 79 6 (set (reg:SI 140 [ _79 ])
+        (zero_extend:SI (reg:QI 161))) "EFILL.f":69 140 {*zero_extendqisi2}
+     (nil))
+(insn 79 78 80 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 140 [ _79 ])
+            (const_int 0 [0]))) "EFILL.f":69 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 80 79 81 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 249)
+            (pc))) "EFILL.f":69 682 {*jcc}
+     (nil)
+ -> 249)
+;;  succ:       24
+;;              7 (FALLTHRU)
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+(note 81 80 82 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 7 (set (reg:SI 162)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "EFILL.f":70 86 {*movsi_internal}
+     (nil))
+(insn 83 82 84 7 (set (reg:DI 96 [ _10 ])
+        (sign_extend:DI (reg:SI 162))) "EFILL.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 84 83 85 7 (parallel [
+            (set (reg:DI 97 [ _11 ])
+                (mult:DI (reg:DI 130 [ stride.2_61 ])
+                    (reg:DI 96 [ _10 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":70 349 {*muldi3_1}
+     (nil))
+(insn 85 84 86 7 (parallel [
+            (set (reg:DI 98 [ _12 ])
+                (plus:DI (reg:DI 136 [ offset.3_69 ])
+                    (reg:DI 97 [ _11 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":70 222 {*adddi_1}
+     (nil))
+(insn 86 85 87 7 (set (reg:SI 163)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "EFILL.f":70 86 {*movsi_internal}
+     (nil))
+(insn 87 86 88 7 (set (reg:DI 99 [ _13 ])
+        (sign_extend:DI (reg:SI 163))) "EFILL.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 88 87 89 7 (parallel [
+            (set (reg:DI 100 [ _14 ])
+                (plus:DI (reg:DI 98 [ _12 ])
+                    (reg:DI 99 [ _13 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":70 222 {*adddi_1}
+     (nil))
+(insn 89 88 90 7 (set (reg/f:DI 164)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])) "EFILL.f":70 85 {*movdi_internal}
+     (nil))
+(insn 90 89 91 7 (set (reg:SF 101 [ _15 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 100 [ _14 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 164)) [4 *egrid_70(D) S4 A32])) "EFILL.f":70 131 {*movsf_internal}
+     (nil))
+(insn 91 90 92 7 (set (reg:SF 102 [ _16 ])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f09f60a6e10 options>) [4 options.spval+0 S4 A128])) "EFILL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 92 91 93 7 (set (reg:SF 103 [ _17 ])
+        (minus:SF (reg:SF 101 [ _15 ])
+            (reg:SF 102 [ _16 ]))) "EFILL.f":70 841 {*fop_sf_1}
+     (nil))
+(insn 93 92 94 7 (set (reg:V4SF 165)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "EFILL.f":70 1282 {movv4sf_internal}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 94 93 95 7 (parallel [
+            (set (reg:SF 104 [ _18 ])
+                (abs:SF (reg:SF 103 [ _17 ])))
+            (use (reg:V4SF 165))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":70 507 {*absnegsf2}
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 103 [ _17 ]))
+        (nil)))
+(insn 95 94 96 7 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 104 [ _18 ])
+            (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32]))) "EFILL.f":70 53 {*cmpisf}
+     (nil))
+(jump_insn 96 95 100 7 (set (pc)
+        (if_then_else (unlt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 115)
+            (pc))) "EFILL.f":70 682 {*jcc}
+     (nil)
+ -> 115)
+;;  succ:       8 (FALLTHRU)
+;;              9
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7 (FALLTHRU)
+(note 100 96 101 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 101 100 102 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -12 [0xfffffffffffffff4])) [1 npts+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -12 [0xfffffffffffffff4])) [1 npts+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":71 221 {*addsi_1}
+     (nil))
+(insn 102 101 103 8 (set (reg:SI 166)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "EFILL.f":72 86 {*movsi_internal}
+     (nil))
+(insn 103 102 104 8 (set (reg:DI 105 [ _19 ])
+        (sign_extend:DI (reg:SI 166))) "EFILL.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 104 103 105 8 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (mult:DI (reg:DI 130 [ stride.2_61 ])
+                    (reg:DI 105 [ _19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":72 349 {*muldi3_1}
+     (nil))
+(insn 105 104 106 8 (parallel [
+            (set (reg:DI 107 [ _21 ])
+                (plus:DI (reg:DI 136 [ offset.3_69 ])
+                    (reg:DI 106 [ _20 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":72 222 {*adddi_1}
+     (nil))
+(insn 106 105 107 8 (set (reg:SI 167)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "EFILL.f":72 86 {*movsi_internal}
+     (nil))
+(insn 107 106 108 8 (set (reg:DI 108 [ _22 ])
+        (sign_extend:DI (reg:SI 167))) "EFILL.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 108 107 109 8 (parallel [
+            (set (reg:DI 109 [ _23 ])
+                (plus:DI (reg:DI 107 [ _21 ])
+                    (reg:DI 108 [ _22 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":72 222 {*adddi_1}
+     (nil))
+(insn 109 108 110 8 (set (reg/f:DI 168)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])) "EFILL.f":72 85 {*movdi_internal}
+     (nil))
+(insn 110 109 111 8 (set (reg:SF 110 [ _24 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 109 [ _23 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 168)) [4 *egrid_70(D) S4 A32])) "EFILL.f":72 131 {*movsf_internal}
+     (nil))
+(insn 111 110 112 8 (set (reg:DF 111 [ _25 ])
+        (float_extend:DF (reg:SF 110 [ _24 ]))) "EFILL.f":72 158 {*extendsfdf2}
+     (nil))
+(insn 112 111 113 8 (set (reg:DF 170)
+        (mem/c:DF (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 sum+0 S8 A64])) "EFILL.f":72 130 {*movdf_internal}
+     (nil))
+(insn 113 112 114 8 (set (reg:DF 169)
+        (plus:DF (reg:DF 170)
+            (reg:DF 111 [ _25 ]))) "EFILL.f":72 839 {*fop_df_comm}
+     (nil))
+(insn 114 113 115 8 (set (mem/c:DF (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 sum+0 S8 A64])
+        (reg:DF 169)) "EFILL.f":72 130 {*movdf_internal}
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 24, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       8 (FALLTHRU)
+;;              7
+(code_label 115 114 116 9 7 (nil) [1 uses])
+(note 116 115 117 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 117 116 235 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":69 221 {*addsi_1}
+     (nil))
+(jump_insn 235 117 236 9 (set (pc)
+        (label_ref 118)) "EFILL.f":69 -1
+     (nil)
+ -> 118)
+;;  succ:       6 [always] 
+
+(barrier 236 235 249)
+;; basic block 24, loop depth 0, maybe hot
+;;  prev block 9, next block 10, flags: (NEW, RTL)
+;;  pred:       6
+(code_label 249 236 248 24 22 (nil) [1 uses])
+(note 248 249 250 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 250 248 121 24 (const_int 0 [0]) "EFILL.f":70 -1
+     (nil))
+;;  succ:       10 [always]  (FALLTHRU)
+
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 24, next block 23, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       24 [always]  (FALLTHRU)
+(code_label 121 250 122 10 6 (nil) [0 uses])
+(note 122 121 123 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 123 122 237 10 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":68 221 {*addsi_1}
+     (nil))
+(jump_insn 237 123 238 10 (set (pc)
+        (label_ref 124)) "EFILL.f":68 -1
+     (nil)
+ -> 124)
+;;  succ:       4 [always] 
+
+(barrier 238 237 246)
+;; basic block 23, loop depth 0, maybe hot
+;;  prev block 10, next block 11, flags: (NEW, RTL)
+;;  pred:       4
+(code_label 246 238 245 23 21 (nil) [1 uses])
+(note 245 246 247 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 247 245 127 23 (const_int 0 [0]) "EFILL.f":69 -1
+     (nil))
+;;  succ:       11 [always]  (FALLTHRU)
+
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 23, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       23 [always]  (FALLTHRU)
+(code_label 127 247 128 11 5 (nil) [0 uses])
+(note 128 127 129 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 129 128 130 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 npts+0 S4 A32])
+            (const_int 0 [0]))) "EFILL.f":76 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 130 129 131 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 150)
+            (pc))) "EFILL.f":76 682 {*jcc}
+     (nil)
+ -> 150)
+;;  succ:       12 (FALLTHRU)
+;;              13
+
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       11 (FALLTHRU)
+(note 131 130 132 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 132 131 133 12 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -584 [0xfffffffffffffdb8])) [7 dt_parm.5.common.filename+0 S8 A64])
+        (symbol_ref/f:DI ("*.LC3") [flags 0x2]  <var_decl 0x7f09ef0432d0 *.LC3>)) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(insn 133 132 134 12 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -576 [0xfffffffffffffdc0])) [1 dt_parm.5.common.line+0 S4 A128])
+        (const_int 77 [0x4d])) "EFILL.f":77 86 {*movsi_internal}
+     (nil))
+(insn 134 133 135 12 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -592 [0xfffffffffffffdb0])) [1 dt_parm.5.common.flags+0 S4 A128])
+        (const_int 128 [0x80])) "EFILL.f":77 86 {*movsi_internal}
+     (nil))
+(insn 135 134 136 12 (set (reg:SI 112 [ _26 ])
+        (mem/c:SI (symbol_ref:DI ("iounit_") [flags 0x2]  <var_decl 0x7f09f60a6ab0 iounit>) [1 iounit.stdout+0 S4 A128])) "EFILL.f":1 86 {*movsi_internal}
+     (nil))
+(insn 136 135 137 12 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -588 [0xfffffffffffffdb4])) [1 dt_parm.5.common.unit+0 S4 A32])
+        (reg:SI 112 [ _26 ])) "EFILL.f":77 86 {*movsi_internal}
+     (nil))
+(insn 137 136 138 12 (parallel [
+            (set (reg:DI 171)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -592 [0xfffffffffffffdb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":77 222 {*adddi_1}
+     (nil))
+(insn 138 137 139 12 (set (reg:DI 5 di)
+        (reg:DI 171)) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(call_insn 139 138 140 12 (call (mem:QI (symbol_ref:DI ("_gfortran_st_write") [flags 0x41]  <function_decl 0x7f09ef030400 _gfortran_st_write>) [0 _gfortran_st_write S1 A8])
+        (const_int 0 [0])) "EFILL.f":77 689 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(insn 140 139 141 12 (parallel [
+            (set (reg:DI 172)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -592 [0xfffffffffffffdb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":77 222 {*adddi_1}
+     (nil))
+(insn 141 140 142 12 (set (reg:DI 1 dx)
+        (const_int 37 [0x25])) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(insn 142 141 143 12 (set (reg:DI 4 si)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7f09ef043360 *.LC4>)) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(insn 143 142 144 12 (set (reg:DI 5 di)
+        (reg:DI 172)) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(call_insn 144 143 145 12 (call (mem:QI (symbol_ref:DI ("_gfortran_transfer_character_write") [flags 0x41]  <function_decl 0x7f09ef02d500 _gfortran_transfer_character_write>) [0 _gfortran_transfer_character_write S1 A8])
+        (const_int 0 [0])) "EFILL.f":77 689 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (expr_list:DI (use (reg:DI 4 si))
+            (expr_list:DI (use (reg:DI 1 dx))
+                (nil)))))
+(insn 145 144 146 12 (parallel [
+            (set (reg:DI 173)
+                (plus:DI (reg/f:DI 20 frame)
+                    (const_int -592 [0xfffffffffffffdb0])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":77 222 {*adddi_1}
+     (nil))
+(insn 146 145 147 12 (set (reg:DI 5 di)
+        (reg:DI 173)) "EFILL.f":77 85 {*movdi_internal}
+     (nil))
+(call_insn 147 146 239 12 (call (mem:QI (symbol_ref:DI ("_gfortran_st_write_done") [flags 0x41]  <function_decl 0x7f09ef030f00 _gfortran_st_write_done>) [0 _gfortran_st_write_done S1 A8])
+        (const_int 0 [0])) "EFILL.f":77 689 {*call}
+     (nil)
+    (expr_list:DI (use (reg:DI 5 di))
+        (nil)))
+(jump_insn 239 147 240 12 (set (pc)
+        (label_ref 224)) "EFILL.f":78 -1
+     (nil)
+ -> 224)
+;;  succ:       22 [always] 
+
+(barrier 240 239 150)
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       11
+(code_label 150 240 151 13 11 (nil) [1 uses])
+(note 151 150 152 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 152 151 153 13 (set (reg:DF 113 [ _27 ])
+        (float:DF (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 npts+0 S4 A32]))) "EFILL.f":80 205 {*floatsidf2_mixed}
+     (nil))
+(insn 153 152 154 13 (set (reg:DF 174)
+        (mem/c:DF (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 sum+0 S8 A64])) "EFILL.f":80 130 {*movdf_internal}
+     (nil))
+(insn 154 153 155 13 (set (reg:DF 114 [ _28 ])
+        (div:DF (reg:DF 174)
+            (reg:DF 113 [ _27 ]))) "EFILL.f":80 842 {*fop_df_1}
+     (nil))
+(insn 155 154 156 13 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -44 [0xffffffffffffffd4])) [4 avg+0 S4 A32])
+        (float_truncate:SF (reg:DF 114 [ _28 ]))) "EFILL.f":80 161 {*truncdfsf_fast_mixed}
+     (nil))
+(insn 156 155 157 13 (set (reg/f:DI 175)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -616 [0xfffffffffffffd98])) [12 jm+0 S8 A64])) "EFILL.f":85 85 {*movdi_internal}
+     (nil))
+(insn 157 156 158 13 (set (reg:SI 141 [ _93 ])
+        (mem:SI (reg/f:DI 175) [1 *jm_62(D)+0 S4 A32])) "EFILL.f":85 86 {*movsi_internal}
+     (nil))
+(insn 158 157 215 13 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (const_int 1 [0x1])) "EFILL.f":85 86 {*movsi_internal}
+     (nil))
+;;  succ:       14 (FALLTHRU)
+
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       13 (FALLTHRU)
+;;              20 [always] 
+(code_label 215 158 159 14 17 (nil) [1 uses])
+(note 159 215 160 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 160 159 161 14 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 141 [ _93 ]))) "EFILL.f":85 11 {*cmpsi_1}
+     (nil))
+(insn 161 160 162 14 (set (reg:QI 176)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "EFILL.f":85 678 {*setcc_qi}
+     (nil))
+(insn 162 161 163 14 (set (reg:SI 142 [ _95 ])
+        (zero_extend:SI (reg:QI 176))) "EFILL.f":85 140 {*zero_extendqisi2}
+     (nil))
+(insn 163 162 164 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 142 [ _95 ])
+            (const_int 0 [0]))) "EFILL.f":85 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 164 163 165 14 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 252)
+            (pc))) "EFILL.f":85 682 {*jcc}
+     (nil)
+ -> 252)
+;;  succ:       25
+;;              15 (FALLTHRU)
+
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 14, next block 16, flags: (NEW, REACHABLE, RTL)
+;;  pred:       14 (FALLTHRU)
+(note 165 164 166 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 166 165 167 15 (set (reg/f:DI 177)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -608 [0xfffffffffffffda0])) [12 im+0 S8 A64])) "EFILL.f":86 85 {*movdi_internal}
+     (nil))
+(insn 167 166 168 15 (set (reg:SI 143 [ _96 ])
+        (mem:SI (reg/f:DI 177) [1 *im_58(D)+0 S4 A32])) "EFILL.f":86 86 {*movsi_internal}
+     (nil))
+(insn 168 167 209 15 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "EFILL.f":86 86 {*movsi_internal}
+     (nil))
+;;  succ:       16 (FALLTHRU)
+
+;; basic block 16, loop depth 0, maybe hot
+;;  prev block 15, next block 17, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       15 (FALLTHRU)
+;;              19 [always] 
+(code_label 209 168 169 16 16 (nil) [1 uses])
+(note 169 209 170 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 170 169 171 16 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 143 [ _96 ]))) "EFILL.f":86 11 {*cmpsi_1}
+     (nil))
+(insn 171 170 172 16 (set (reg:QI 178)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "EFILL.f":86 678 {*setcc_qi}
+     (nil))
+(insn 172 171 173 16 (set (reg:SI 144 [ _98 ])
+        (zero_extend:SI (reg:QI 178))) "EFILL.f":86 140 {*zero_extendqisi2}
+     (nil))
+(insn 173 172 174 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 144 [ _98 ])
+            (const_int 0 [0]))) "EFILL.f":86 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 174 173 175 16 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 255)
+            (pc))) "EFILL.f":86 682 {*jcc}
+     (nil)
+ -> 255)
+;;  succ:       26
+;;              17 (FALLTHRU)
+
+;; basic block 17, loop depth 0, maybe hot
+;;  prev block 16, next block 18, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       16 (FALLTHRU)
+(note 175 174 176 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 176 175 177 17 (set (reg:SI 179)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "EFILL.f":87 86 {*movsi_internal}
+     (nil))
+(insn 177 176 178 17 (set (reg:DI 115 [ _29 ])
+        (sign_extend:DI (reg:SI 179))) "EFILL.f":87 149 {*extendsidi2_rex64}
+     (nil))
+(insn 178 177 179 17 (parallel [
+            (set (reg:DI 116 [ _30 ])
+                (mult:DI (reg:DI 130 [ stride.2_61 ])
+                    (reg:DI 115 [ _29 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 349 {*muldi3_1}
+     (nil))
+(insn 179 178 180 17 (parallel [
+            (set (reg:DI 117 [ _31 ])
+                (plus:DI (reg:DI 136 [ offset.3_69 ])
+                    (reg:DI 116 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 222 {*adddi_1}
+     (nil))
+(insn 180 179 181 17 (set (reg:SI 180)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "EFILL.f":87 86 {*movsi_internal}
+     (nil))
+(insn 181 180 182 17 (set (reg:DI 118 [ _32 ])
+        (sign_extend:DI (reg:SI 180))) "EFILL.f":87 149 {*extendsidi2_rex64}
+     (nil))
+(insn 182 181 183 17 (parallel [
+            (set (reg:DI 119 [ _33 ])
+                (plus:DI (reg:DI 117 [ _31 ])
+                    (reg:DI 118 [ _32 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 222 {*adddi_1}
+     (nil))
+(insn 183 182 184 17 (set (reg/f:DI 181)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])) "EFILL.f":87 85 {*movdi_internal}
+     (nil))
+(insn 184 183 185 17 (set (reg:SF 120 [ _34 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 119 [ _33 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 181)) [4 *egrid_70(D) S4 A32])) "EFILL.f":87 131 {*movsf_internal}
+     (nil))
+(insn 185 184 186 17 (set (reg:SF 121 [ _35 ])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f09f60a6e10 options>) [4 options.spval+0 S4 A128])) "EFILL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 186 185 187 17 (set (reg:SF 122 [ _36 ])
+        (minus:SF (reg:SF 120 [ _34 ])
+            (reg:SF 121 [ _35 ]))) "EFILL.f":87 841 {*fop_sf_1}
+     (nil))
+(insn 187 186 188 17 (set (reg:V4SF 182)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "EFILL.f":87 1282 {movv4sf_internal}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 188 187 189 17 (parallel [
+            (set (reg:SF 123 [ _37 ])
+                (abs:SF (reg:SF 122 [ _36 ])))
+            (use (reg:V4SF 182))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 507 {*absnegsf2}
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 122 [ _36 ]))
+        (nil)))
+(insn 189 188 190 17 (set (reg:SF 183)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "EFILL.f":87 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 9.999999960041972002500187954865396022796630859375e-13 [0x0.8cbcccp-39])
+        (nil)))
+(insn 190 189 191 17 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 183)
+            (reg:SF 123 [ _37 ]))) "EFILL.f":87 53 {*cmpisf}
+     (nil))
+(jump_insn 191 190 195 17 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 206)
+            (pc))) "EFILL.f":87 682 {*jcc}
+     (nil)
+ -> 206)
+;;  succ:       18 (FALLTHRU)
+;;              19
+
+;; basic block 18, loop depth 0, maybe hot
+;;  prev block 17, next block 19, flags: (NEW, REACHABLE, RTL)
+;;  pred:       17 (FALLTHRU)
+(note 195 191 196 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 196 195 197 18 (set (reg:SI 184)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "EFILL.f":87 86 {*movsi_internal}
+     (nil))
+(insn 197 196 198 18 (set (reg:DI 124 [ _38 ])
+        (sign_extend:DI (reg:SI 184))) "EFILL.f":87 149 {*extendsidi2_rex64}
+     (nil))
+(insn 198 197 199 18 (parallel [
+            (set (reg:DI 125 [ _39 ])
+                (mult:DI (reg:DI 130 [ stride.2_61 ])
+                    (reg:DI 124 [ _38 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 349 {*muldi3_1}
+     (nil))
+(insn 199 198 200 18 (parallel [
+            (set (reg:DI 126 [ _40 ])
+                (plus:DI (reg:DI 136 [ offset.3_69 ])
+                    (reg:DI 125 [ _39 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 222 {*adddi_1}
+     (nil))
+(insn 200 199 201 18 (set (reg:SI 185)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "EFILL.f":87 86 {*movsi_internal}
+     (nil))
+(insn 201 200 202 18 (set (reg:DI 127 [ _41 ])
+        (sign_extend:DI (reg:SI 185))) "EFILL.f":87 149 {*extendsidi2_rex64}
+     (nil))
+(insn 202 201 203 18 (parallel [
+            (set (reg:DI 128 [ _42 ])
+                (plus:DI (reg:DI 126 [ _40 ])
+                    (reg:DI 127 [ _41 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":87 222 {*adddi_1}
+     (nil))
+(insn 203 202 204 18 (set (reg/f:DI 186)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -600 [0xfffffffffffffda8])) [11 egrid+0 S8 A64])) "EFILL.f":87 85 {*movdi_internal}
+     (nil))
+(insn 204 203 205 18 (set (reg:SF 187)
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -44 [0xffffffffffffffd4])) [4 avg+0 S4 A32])) "EFILL.f":87 131 {*movsf_internal}
+     (nil))
+(insn 205 204 206 18 (set (mem:SF (plus:DI (mult:DI (reg:DI 128 [ _42 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 186)) [4 *egrid_70(D) S4 A32])
+        (reg:SF 187)) "EFILL.f":87 131 {*movsf_internal}
+     (nil))
+;;  succ:       19 (FALLTHRU)
+
+;; basic block 19, loop depth 0, maybe hot
+;;  prev block 18, next block 26, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       18 (FALLTHRU)
+;;              17
+(code_label 206 205 207 19 14 (nil) [1 uses])
+(note 207 206 208 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 208 207 241 19 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":86 221 {*addsi_1}
+     (nil))
+(jump_insn 241 208 242 19 (set (pc)
+        (label_ref 209)) "EFILL.f":86 -1
+     (nil)
+ -> 209)
+;;  succ:       16 [always] 
+
+(barrier 242 241 255)
+;; basic block 26, loop depth 0, maybe hot
+;;  prev block 19, next block 20, flags: (NEW, RTL)
+;;  pred:       16
+(code_label 255 242 254 26 24 (nil) [1 uses])
+(note 254 255 256 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 256 254 212 26 (const_int 0 [0]) "EFILL.f":87 -1
+     (nil))
+;;  succ:       20 [always]  (FALLTHRU)
+
+;; basic block 20, loop depth 0, maybe hot
+;;  prev block 26, next block 25, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       26 [always]  (FALLTHRU)
+(code_label 212 256 213 20 13 (nil) [0 uses])
+(note 213 212 214 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 214 213 243 20 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "EFILL.f":85 221 {*addsi_1}
+     (nil))
+(jump_insn 243 214 244 20 (set (pc)
+        (label_ref 215)) "EFILL.f":85 -1
+     (nil)
+ -> 215)
+;;  succ:       14 [always] 
+
+(barrier 244 243 252)
+;; basic block 25, loop depth 0, maybe hot
+;;  prev block 20, next block 21, flags: (NEW, RTL)
+;;  pred:       14
+(code_label 252 244 251 25 23 (nil) [1 uses])
+(note 251 252 253 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 253 251 218 25 (const_int 0 [0]) "EFILL.f":86 -1
+     (nil))
+;;  succ:       21 [always]  (FALLTHRU)
+
+;; basic block 21, loop depth 0, maybe hot
+;;  prev block 25, next block 22, flags: (NEW, REACHABLE, RTL)
+;;  pred:       25 [always]  (FALLTHRU)
+(code_label 218 253 219 21 12 (nil) [0 uses])
+(note 219 218 234 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 234 219 224 21 (const_int 0 [0]) "EFILL.f":95 718 {nop}
+     (nil))
+;;  succ:       22 (FALLTHRU)
+
+;; basic block 22, loop depth 0, maybe hot
+;;  prev block 21, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       21 (FALLTHRU)
+;;              2
+;;              12 [always] 
+(code_label 224 234 225 22 1 (nil) [2 uses])
+(note 225 224 0 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+;;  succ:       EXIT [always]  (FALLTHRU)
+

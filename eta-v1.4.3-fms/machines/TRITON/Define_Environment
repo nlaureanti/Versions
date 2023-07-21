@@ -1,0 +1,20 @@
+QSB="/usr/bin/sbatch"
+#
+ExecCmd1P="mpiexec -np 1 "
+ExecCmdNPP="mpiexec -np NCPUS"
+ExecCmdNPF="mpiexec -np \${npr} --oversubscribe"
+# etapre 
+export QUE1="triton16"
+#
+# etafcst
+export QUE2="triton16"
+export NCpusNode=16
+#
+# etapost
+export QUE3="triton16"
+export NNodesPos=1
+export NCpusNodePos=1
+#
+export cdoPath="/home/nicole/anaconda3/envs/cdo_env/bin/"
+export gradsPath="/home/nicole/workdir/Eta_support_data/util/grads/2.0.a9/bin/"
+export DIRSUPPORT=/home/nicole/workdir/Eta_support_data

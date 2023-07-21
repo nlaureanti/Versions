@@ -1,0 +1,9 @@
+FC= nvfortran
+CC= /lib/cpp -traditional-cpp
+FFLAGS=  -dynamic -mcmodel=medium -large_arrays
+#CFLAGS= 
+CFLAGS= -mcmodel=medium -Mlarge_arrays
+CFLAGS= 
+CPP= pgcc -mcmodel=medium -Mlarge_arrays
+#CPP= mpicc -mcmodel=medium -Mlarge_arrays
+# ----------------------------------

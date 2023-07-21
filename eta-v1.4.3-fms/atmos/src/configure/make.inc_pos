@@ -1,4 +1,4 @@
-FC= mpif90 
+FC= mpif90
 CC= /lib/cpp -traditional-cpp
 FFLAGS=  -mcmodel=medium -Mlarge_arrays
 #CFLAGS= 

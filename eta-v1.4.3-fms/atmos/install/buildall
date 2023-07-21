@@ -489,7 +489,7 @@ else
   clr1=1
   msg1="Not Available"
 fi
-ftn  2> /dev/null
+mpif90  2> /dev/null
 if [ $? -eq 1 ] ; then
   clr2=2
   msg2=""
@@ -509,7 +509,7 @@ fi
 while [ ${ltest} = "true" ] ;do
 printf "%s\n" "Fortran Compiler"
 printf "%s\n" "$(clrd ${clr1})PGI    : 1 ${msg1}$(clrd)"
-printf "%s\n" "$(clrd ${clr2})CRAY   : 2 ${msg2}$(clrd)"
+printf "%s\n" "$(clrd ${clr2})MPIf90   : 2 ${msg2}$(clrd)"
 printf "%s\n" "$(clrd ${clr3})NVIDIA : 3 ${msg3}$(clrd)"
 printf "%s" "Choose [$(clrd ${clr1})1$(clrd)/$(clrd ${clr2})2$(clrd)/$(clrd ${clr3})3$(clrd)]: "
 read ans
@@ -522,9 +522,9 @@ if test -n "$ans" ; then
      ltest="false"
     ;;
   2 )
-     cp ${DIREtaSRC}/configure/make.inc_CRAY ${DIREtaSRC}/configure/make.inc
-     cp ${DIREtaSRC}/configure/make.inc_initbc_CRAY ${DIREtaSRC}/configure/make.inc_initbc
-     cp ${DIREtaSRC}/configure/make.inc_pos_CRAY ${DIREtaSRC}/configure/make.inc_pos
+     cp ${DIREtaSRC}/configure/make.inc_TRITON ${DIREtaSRC}/configure/make.inc
+     cp ${DIREtaSRC}/configure/make.inc_initbc_TRITON ${DIREtaSRC}/configure/make.inc_initbc
+     cp ${DIREtaSRC}/configure/make.inc_pos_TRITON ${DIREtaSRC}/configure/make.inc_pos
      ltest="false"
     ;;
   3 )
@@ -617,22 +617,26 @@ printf "%$width.${width}s\n" "$divider"
 ############################################################################################################
 #
 ./configure ${confin} ${Machine}
+echo "----------------------------------------------------------------------config"
 #
 ############################################################################################################
 ############################################################################################################
 #
-./build_pre
+./build_pre > ./build_pre.log
+echo "----------------------------------------------------------------------build_pre"
 #
 ############################################################################################################
 ############################################################################################################
 #
 cd ${DIRINSTALL}
-make
+make > ./make.log
+echo "----------------------------------------------------------------------make"
 #
 ############################################################################################################
 ############################################################################################################
 #
-./build_post
+./build_post > ./build_post.log
+echo "----------------------------------------------------------------------build_post"
 #
 ############################################################################################################
 ############################################################################################################
@@ -651,7 +655,7 @@ cp -p ${ArqSet_parmeta} ${Eta_home_conf}/scripts/.
 ############################################################################################################
 mkdir -p ${datain}
 #
-tput clear
+#tput clear #erase outputs/logs on terminal
 ##########################
 text="COMPILATION CHECK "
 ##########################

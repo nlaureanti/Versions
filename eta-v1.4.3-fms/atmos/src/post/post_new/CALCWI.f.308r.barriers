@@ -1,0 +1,3049 @@
+
+;; Function calcwi (calcwi_, funcdef_no=0, decl_uid=3770, cgraph_uid=0, symbol_order=0)
+
+
+
+calcwi
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4]
+;;  ref usage 	r0={165d,163u} r1={192d,190u} r2={42d,40u} r3={3d,3u} r4={2d,1u} r5={2d,1u} r6={3d,223u} r7={7d,59u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={165d,35u} r18={1d} r19={1d} r20={1d,1u,4e} r21={73d,77u} r22={26d,24u} r23={13d,11u} r24={4d,2u} r25={2d} r26={2d} r27={2d} r28={2d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={2d} r38={2d} r39={1d} r40={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 1600{766d,830u,4e} in 636{635 regular + 1 call} insns.
+(note 1 0 5 NOTE_INSN_DELETED)
+(note 5 1 875 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 875 5 876 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "CALCWI.f":1 -1
+     (nil))
+(insn/f 876 875 877 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "CALCWI.f":1 -1
+     (nil))
+(insn/f 877 876 878 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 3 bx)) "CALCWI.f":1 -1
+     (nil))
+(insn/f 878 877 879 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALCWI.f":1 -1
+     (nil))
+(note 879 878 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 879 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [3 clw+0 S8 A64])
+        (reg:DI 5 di [ clw ])) "CALCWI.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [3 cli+0 S8 A64])
+        (reg:DI 4 si [ cli ])) "CALCWI.f":1 85 {*movdi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SF 21 xmm0 [394])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALCWI.f":68 131 {*movsf_internal}
+     (nil))
+(insn 8 7 9 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 climit+0 S4 A32])
+        (reg:SF 21 xmm0 [394])) "CALCWI.f":68 131 {*movsf_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:SI 1 dx [orig:376 _316 ] [376])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALCWI.f":70 86 {*movsi_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SI 0 ax [orig:377 _317 ] [377])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALCWI.f":70 86 {*movsi_internal}
+     (nil))
+(insn 11 10 44 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:376 _316 ] [376])) "CALCWI.f":70 86 {*movsi_internal}
+     (nil))
+(code_label 44 11 12 3 5 (nil) [1 uses])
+(note 12 44 13 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 13 12 14 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:377 _317 ] [377]))) "CALCWI.f":70 11 {*cmpsi_1}
+     (nil))
+(insn 14 13 15 3 (set (reg:QI 1 dx [395])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":70 678 {*setcc_qi}
+     (nil))
+(insn 15 14 16 3 (set (reg:SI 1 dx [orig:378 _319 ] [378])
+        (zero_extend:SI (reg:QI 1 dx [395]))) "CALCWI.f":70 140 {*zero_extendqisi2}
+     (nil))
+(insn 16 15 17 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:378 _319 ] [378])
+            (const_int 0 [0]))) "CALCWI.f":70 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 17 16 18 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 784)
+            (pc))) "CALCWI.f":70 682 {*jcc}
+     (nil)
+ -> 784)
+(note 18 17 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 38 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALCWI.f":71 86 {*movsi_internal}
+     (nil))
+(code_label 38 19 20 5 4 (nil) [1 uses])
+(note 20 38 21 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 22 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALCWI.f":71 11 {*cmpsi_1}
+     (nil))
+(insn 22 21 23 5 (set (reg:QI 1 dx [396])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":71 678 {*setcc_qi}
+     (nil))
+(insn 23 22 24 5 (set (reg:SI 1 dx [orig:379 _321 ] [379])
+        (zero_extend:SI (reg:QI 1 dx [396]))) "CALCWI.f":71 140 {*zero_extendqisi2}
+     (nil))
+(insn 24 23 25 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:379 _321 ] [379])
+            (const_int 0 [0]))) "CALCWI.f":71 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 25 24 26 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 787)
+            (pc))) "CALCWI.f":71 682 {*jcc}
+     (nil)
+ -> 787)
+(note 26 25 27 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 27 26 28 6 (set (reg:SI 1 dx [397])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":72 86 {*movsi_internal}
+     (nil))
+(insn 28 27 29 6 (set (reg:DI 1 dx [orig:87 _1 ] [87])
+        (sign_extend:DI (reg:SI 1 dx [397]))) "CALCWI.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 29 28 30 6 (parallel [
+            (set (reg:DI 2 cx [orig:88 _2 ] [88])
+                (mult:DI (reg:DI 1 dx [orig:87 _1 ] [87])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":72 349 {*muldi3_1}
+     (nil))
+(insn 30 29 31 6 (set (reg:SI 1 dx [398])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":72 86 {*movsi_internal}
+     (nil))
+(insn 31 30 32 6 (set (reg:DI 1 dx [orig:89 _3 ] [89])
+        (sign_extend:DI (reg:SI 1 dx [398]))) "CALCWI.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 32 31 873 6 (parallel [
+            (set (reg:DI 1 dx [orig:90 _4 ] [90])
+                (plus:DI (reg:DI 1 dx [orig:89 _3 ] [89])
+                    (reg:DI 2 cx [orig:88 _2 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":72 222 {*adddi_1}
+     (nil))
+(insn 873 32 34 6 (set (reg:DI 2 cx [orig:91 _5 ] [91])
+        (plus:DI (reg:DI 1 dx [orig:90 _4 ] [90])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":72 218 {*leadi}
+     (nil))
+(insn 34 873 874 6 (set (reg/f:DI 1 dx [399])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":72 85 {*movdi_internal}
+     (nil))
+(insn 874 34 36 6 (set (reg:SF 21 xmm0 [400])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":72 131 {*movsf_internal}
+     (nil))
+(insn 36 874 37 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:91 _5 ] [91])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [399])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [400])) "CALCWI.f":72 131 {*movsf_internal}
+     (nil))
+(insn 37 36 760 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":71 221 {*addsi_1}
+     (nil))
+(jump_insn 760 37 761 6 (set (pc)
+        (label_ref 38)) "CALCWI.f":71 683 {jump}
+     (nil)
+ -> 38)
+(barrier 761 760 787)
+(code_label 787 761 786 7 46 (nil) [1 uses])
+(note 786 787 788 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 788 786 43 7 (const_int 0 [0]) "CALCWI.f":72 718 {nop}
+     (nil))
+(insn 43 788 762 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":70 221 {*addsi_1}
+     (nil))
+(jump_insn 762 43 763 7 (set (pc)
+        (label_ref 44)) "CALCWI.f":70 683 {jump}
+     (nil)
+ -> 44)
+(barrier 763 762 784)
+(code_label 784 763 783 8 45 (nil) [1 uses])
+(note 783 784 785 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 785 783 49 8 (const_int 0 [0]) "CALCWI.f":71 718 {nop}
+     (nil))
+(insn 49 785 469 8 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+        (const_int 2 [0x2])) "CALCWI.f":76 86 {*movsi_internal}
+     (nil))
+(code_label 469 49 50 9 26 (nil) [1 uses])
+(note 50 469 51 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 52 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+            (const_int 38 [0x26]))) "CALCWI.f":76 11 {*cmpsi_1}
+     (nil))
+(insn 52 51 53 9 (set (reg:QI 0 ax [401])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":76 678 {*setcc_qi}
+     (nil))
+(insn 53 52 54 9 (set (reg:SI 0 ax [orig:380 _326 ] [380])
+        (zero_extend:SI (reg:QI 0 ax [401]))) "CALCWI.f":76 140 {*zero_extendqisi2}
+     (nil))
+(insn 54 53 55 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:380 _326 ] [380])
+            (const_int 0 [0]))) "CALCWI.f":76 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 55 54 56 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 790)
+            (pc))) "CALCWI.f":76 682 {*jcc}
+     (nil)
+ -> 790)
+(note 56 55 57 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 10 (set (reg:SI 0 ax [orig:381 _327 ] [381])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALCWI.f":77 86 {*movsi_internal}
+     (nil))
+(insn 58 57 59 10 (set (reg:SI 3 bx [orig:382 _328 ] [382])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALCWI.f":77 86 {*movsi_internal}
+     (nil))
+(insn 59 58 463 10 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 0 ax [orig:381 _327 ] [381])) "CALCWI.f":77 86 {*movsi_internal}
+     (nil))
+(code_label 463 59 60 11 25 (nil) [1 uses])
+(note 60 463 61 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 3 bx [orig:382 _328 ] [382]))) "CALCWI.f":77 11 {*cmpsi_1}
+     (nil))
+(insn 62 61 63 11 (set (reg:QI 0 ax [402])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":77 678 {*setcc_qi}
+     (nil))
+(insn 63 62 64 11 (set (reg:SI 0 ax [orig:383 _330 ] [383])
+        (zero_extend:SI (reg:QI 0 ax [402]))) "CALCWI.f":77 140 {*zero_extendqisi2}
+     (nil))
+(insn 64 63 65 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:383 _330 ] [383])
+            (const_int 0 [0]))) "CALCWI.f":77 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 65 64 66 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 793)
+            (pc))) "CALCWI.f":77 682 {*jcc}
+     (nil)
+ -> 793)
+(note 66 65 67 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 67 66 457 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALCWI.f":78 86 {*movsi_internal}
+     (nil))
+(code_label 457 67 68 13 24 (nil) [1 uses])
+(note 68 457 69 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 13 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALCWI.f":78 11 {*cmpsi_1}
+     (nil))
+(insn 70 69 71 13 (set (reg:QI 0 ax [403])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":78 678 {*setcc_qi}
+     (nil))
+(insn 71 70 72 13 (set (reg:SI 0 ax [orig:384 _332 ] [384])
+        (zero_extend:SI (reg:QI 0 ax [403]))) "CALCWI.f":78 140 {*zero_extendqisi2}
+     (nil))
+(insn 72 71 73 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:384 _332 ] [384])
+            (const_int 0 [0]))) "CALCWI.f":78 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 73 72 74 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 796)
+            (pc))) "CALCWI.f":78 682 {*jcc}
+     (nil)
+ -> 796)
+(note 74 73 75 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 76 14 (set (reg:SI 0 ax [404])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 76 75 77 14 (set (reg:DI 0 ax [orig:92 _6 ] [92])
+        (sign_extend:DI (reg:SI 0 ax [404]))) "CALCWI.f":79 149 {*extendsidi2_rex64}
+     (nil))
+(insn 77 76 78 14 (parallel [
+            (set (reg:DI 1 dx [orig:93 _7 ] [93])
+                (mult:DI (reg:DI 0 ax [orig:92 _6 ] [92])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":79 349 {*muldi3_1}
+     (nil))
+(insn 78 77 79 14 (set (reg:SI 0 ax [405])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 79 78 80 14 (set (reg:DI 0 ax [orig:94 _8 ] [94])
+        (sign_extend:DI (reg:SI 0 ax [405]))) "CALCWI.f":79 149 {*extendsidi2_rex64}
+     (nil))
+(insn 80 79 867 14 (parallel [
+            (set (reg:DI 0 ax [orig:95 _9 ] [95])
+                (plus:DI (reg:DI 0 ax [orig:94 _8 ] [94])
+                    (reg:DI 1 dx [orig:93 _7 ] [93])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":79 222 {*adddi_1}
+     (nil))
+(insn 867 80 82 14 (set (reg:DI 1 dx [orig:96 _10 ] [96])
+        (plus:DI (reg:DI 0 ax [orig:95 _9 ] [95])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":79 218 {*leadi}
+     (nil))
+(insn 82 867 83 14 (set (reg/f:DI 0 ax [406])
+        (symbol_ref:DI ("loops_") [flags 0x202]  <var_decl 0x7f157d312c60 loops>)) "CALCWI.f":79 85 {*movdi_internal}
+     (nil))
+(insn 83 82 84 14 (parallel [
+            (set (reg:DI 1 dx [407])
+                (plus:DI (reg:DI 1 dx [orig:96 _10 ] [96])
+                    (const_int 2420 [0x974])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":79 222 {*adddi_1}
+     (nil))
+(insn 84 83 85 14 (set (reg:SI 0 ax [orig:97 _11 ] [97])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [407])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [406])) [1 loops.lmh S4 A32])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 85 84 86 14 (set (reg:SI 1 dx [408])
+        (const_int 38 [0x26])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 86 85 815 14 (parallel [
+            (set (reg:SI 1 dx [408])
+                (minus:SI (reg:SI 1 dx [408])
+                    (reg:SI 0 ax [orig:97 _11 ] [97])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":79 277 {*subsi_1}
+     (nil))
+(insn 815 86 87 14 (set (reg:SI 0 ax [409])
+        (reg:SI 1 dx [408])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 87 815 88 14 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [1 lml+0 S4 A32])
+        (reg:SI 0 ax [409])) "CALCWI.f":79 86 {*movsi_internal}
+     (nil))
+(insn 88 87 89 14 (set (reg:SI 0 ax [410])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":80 86 {*movsi_internal}
+     (nil))
+(insn 89 88 90 14 (set (reg:DI 0 ax [orig:98 _12 ] [98])
+        (sign_extend:DI (reg:SI 0 ax [410]))) "CALCWI.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 90 89 91 14 (parallel [
+            (set (reg:DI 1 dx [orig:99 _13 ] [99])
+                (mult:DI (reg:DI 0 ax [orig:98 _12 ] [98])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 349 {*muldi3_1}
+     (nil))
+(insn 91 90 92 14 (set (reg:SI 0 ax [411])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":80 86 {*movsi_internal}
+     (nil))
+(insn 92 91 93 14 (set (reg:DI 0 ax [orig:100 _14 ] [100])
+        (sign_extend:DI (reg:SI 0 ax [411]))) "CALCWI.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 93 92 94 14 (parallel [
+            (set (reg:DI 0 ax [orig:101 _15 ] [101])
+                (mult:DI (reg:DI 0 ax [orig:100 _14 ] [100])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 349 {*muldi3_1}
+     (nil))
+(insn 94 93 95 14 (parallel [
+            (set (reg:DI 1 dx [orig:102 _16 ] [102])
+                (plus:DI (reg:DI 1 dx [orig:99 _13 ] [99])
+                    (reg:DI 0 ax [orig:101 _15 ] [101])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 222 {*adddi_1}
+     (nil))
+(insn 95 94 96 14 (set (reg:SI 0 ax [412])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":80 86 {*movsi_internal}
+     (nil))
+(insn 96 95 97 14 (set (reg:DI 0 ax [orig:103 _17 ] [103])
+        (sign_extend:DI (reg:SI 0 ax [412]))) "CALCWI.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 97 96 868 14 (parallel [
+            (set (reg:DI 0 ax [orig:104 _18 ] [104])
+                (plus:DI (reg:DI 0 ax [orig:103 _17 ] [103])
+                    (reg:DI 1 dx [orig:102 _16 ] [102])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 222 {*adddi_1}
+     (nil))
+(insn 868 97 99 14 (set (reg:DI 1 dx [orig:105 _19 ] [105])
+        (plus:DI (reg:DI 0 ax [orig:104 _18 ] [104])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":80 218 {*leadi}
+     (nil))
+(insn 99 868 100 14 (set (reg/f:DI 0 ax [413])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f157d316120 masks>)) "CALCWI.f":80 85 {*movdi_internal}
+     (nil))
+(insn 100 99 101 14 (parallel [
+            (set (reg:DI 1 dx [414])
+                (plus:DI (reg:DI 1 dx [orig:105 _19 ] [105])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 222 {*adddi_1}
+     (nil))
+(insn 101 100 102 14 (set (reg:SF 22 xmm1 [orig:106 _20 ] [106])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [414])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [413])) [2 masks.htm S4 A32])) "CALCWI.f":80 131 {*movsf_internal}
+     (nil))
+(insn 102 101 103 14 (set (reg:SI 0 ax [415])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":80 86 {*movsi_internal}
+     (nil))
+(insn 103 102 104 14 (set (reg:DI 0 ax [orig:107 _21 ] [107])
+        (sign_extend:DI (reg:SI 0 ax [415]))) "CALCWI.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 104 103 105 14 (parallel [
+            (set (reg:DI 1 dx [orig:108 _22 ] [108])
+                (mult:DI (reg:DI 0 ax [orig:107 _21 ] [107])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 349 {*muldi3_1}
+     (nil))
+(insn 105 104 106 14 (set (reg:SI 0 ax [416])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":80 86 {*movsi_internal}
+     (nil))
+(insn 106 105 107 14 (set (reg:DI 0 ax [orig:109 _23 ] [109])
+        (sign_extend:DI (reg:SI 0 ax [416]))) "CALCWI.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 107 106 869 14 (parallel [
+            (set (reg:DI 0 ax [orig:110 _24 ] [110])
+                (plus:DI (reg:DI 0 ax [orig:109 _23 ] [109])
+                    (reg:DI 1 dx [orig:108 _22 ] [108])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":80 222 {*adddi_1}
+     (nil))
+(insn 869 107 109 14 (set (reg:DI 1 dx [orig:111 _25 ] [111])
+        (plus:DI (reg:DI 0 ax [orig:110 _24 ] [110])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":80 218 {*leadi}
+     (nil))
+(insn 109 869 110 14 (set (reg/f:DI 0 ax [417])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f157d316120 masks>)) "CALCWI.f":80 85 {*movdi_internal}
+     (nil))
+(insn 110 109 111 14 (set (reg:SF 21 xmm0 [orig:112 _26 ] [112])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:111 _25 ] [111])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [417])) [2 masks.hbm2 S4 A32])) "CALCWI.f":80 131 {*movsf_internal}
+     (nil))
+(insn 111 110 112 14 (set (reg:SF 21 xmm0 [418])
+        (mult:SF (reg:SF 21 xmm0 [orig:112 _26 ] [112])
+            (reg:SF 22 xmm1 [orig:106 _20 ] [106]))) "CALCWI.f":80 838 {*fop_sf_comm}
+     (nil))
+(insn 112 111 113 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 hh+0 S4 A32])
+        (reg:SF 21 xmm0 [418])) "CALCWI.f":80 131 {*movsf_internal}
+     (nil))
+(insn 113 112 114 14 (set (reg:SI 0 ax [419])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":81 86 {*movsi_internal}
+     (nil))
+(insn 114 113 115 14 (set (reg:DI 0 ax [orig:113 _27 ] [113])
+        (sign_extend:DI (reg:SI 0 ax [419]))) "CALCWI.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 115 114 116 14 (parallel [
+            (set (reg:DI 1 dx [orig:114 _28 ] [114])
+                (mult:DI (reg:DI 0 ax [orig:113 _27 ] [113])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":81 349 {*muldi3_1}
+     (nil))
+(insn 116 115 117 14 (set (reg:SI 0 ax [420])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":81 86 {*movsi_internal}
+     (nil))
+(insn 117 116 118 14 (set (reg:DI 0 ax [orig:115 _29 ] [115])
+        (sign_extend:DI (reg:SI 0 ax [420]))) "CALCWI.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 118 117 119 14 (parallel [
+            (set (reg:DI 0 ax [orig:116 _30 ] [116])
+                (mult:DI (reg:DI 0 ax [orig:115 _29 ] [115])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":81 349 {*muldi3_1}
+     (nil))
+(insn 119 118 120 14 (parallel [
+            (set (reg:DI 1 dx [orig:117 _31 ] [117])
+                (plus:DI (reg:DI 1 dx [orig:114 _28 ] [114])
+                    (reg:DI 0 ax [orig:116 _30 ] [116])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":81 222 {*adddi_1}
+     (nil))
+(insn 120 119 121 14 (set (reg:SI 0 ax [421])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":81 86 {*movsi_internal}
+     (nil))
+(insn 121 120 122 14 (set (reg:DI 0 ax [orig:118 _32 ] [118])
+        (sign_extend:DI (reg:SI 0 ax [421]))) "CALCWI.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 122 121 870 14 (parallel [
+            (set (reg:DI 0 ax [orig:119 _33 ] [119])
+                (plus:DI (reg:DI 0 ax [orig:118 _32 ] [118])
+                    (reg:DI 1 dx [orig:117 _31 ] [117])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":81 222 {*adddi_1}
+     (nil))
+(insn 870 122 124 14 (set (reg:DI 1 dx [orig:120 _34 ] [120])
+        (plus:DI (reg:DI 0 ax [orig:119 _33 ] [119])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":81 218 {*leadi}
+     (nil))
+(insn 124 870 125 14 (set (reg/f:DI 0 ax [422])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f157d31c240 vrbls>)) "CALCWI.f":81 85 {*movdi_internal}
+     (nil))
+(insn 125 124 126 14 (parallel [
+            (set (reg:DI 1 dx [423])
+                (plus:DI (reg:DI 1 dx [orig:120 _34 ] [120])
+                    (const_int 2340849 [0x23b7f1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":81 222 {*adddi_1}
+     (nil))
+(insn 126 125 127 14 (set (reg:SF 21 xmm0 [424])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [423])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [422])) [2 vrbls.t S4 A32])) "CALCWI.f":81 131 {*movsf_internal}
+     (nil))
+(insn 127 126 128 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 tkl+0 S4 A32])
+        (reg:SF 21 xmm0 [424])) "CALCWI.f":81 131 {*movsf_internal}
+     (nil))
+(insn 128 127 129 14 (set (reg:SI 0 ax [425])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":82 86 {*movsi_internal}
+     (nil))
+(insn 129 128 130 14 (set (reg:DI 0 ax [orig:121 _35 ] [121])
+        (sign_extend:DI (reg:SI 0 ax [425]))) "CALCWI.f":82 149 {*extendsidi2_rex64}
+     (nil))
+(insn 130 129 131 14 (parallel [
+            (set (reg:DI 1 dx [orig:122 _36 ] [122])
+                (mult:DI (reg:DI 0 ax [orig:121 _35 ] [121])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":82 349 {*muldi3_1}
+     (nil))
+(insn 131 130 132 14 (set (reg:SI 0 ax [426])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":82 86 {*movsi_internal}
+     (nil))
+(insn 132 131 133 14 (set (reg:DI 0 ax [orig:123 _37 ] [123])
+        (sign_extend:DI (reg:SI 0 ax [426]))) "CALCWI.f":82 149 {*extendsidi2_rex64}
+     (nil))
+(insn 133 132 134 14 (parallel [
+            (set (reg:DI 0 ax [orig:124 _38 ] [124])
+                (mult:DI (reg:DI 0 ax [orig:123 _37 ] [123])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":82 349 {*muldi3_1}
+     (nil))
+(insn 134 133 135 14 (parallel [
+            (set (reg:DI 1 dx [orig:125 _39 ] [125])
+                (plus:DI (reg:DI 1 dx [orig:122 _36 ] [122])
+                    (reg:DI 0 ax [orig:124 _38 ] [124])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":82 222 {*adddi_1}
+     (nil))
+(insn 135 134 136 14 (set (reg:SI 0 ax [427])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":82 86 {*movsi_internal}
+     (nil))
+(insn 136 135 137 14 (set (reg:DI 0 ax [orig:126 _40 ] [126])
+        (sign_extend:DI (reg:SI 0 ax [427]))) "CALCWI.f":82 149 {*extendsidi2_rex64}
+     (nil))
+(insn 137 136 871 14 (parallel [
+            (set (reg:DI 0 ax [orig:127 _41 ] [127])
+                (plus:DI (reg:DI 0 ax [orig:126 _40 ] [126])
+                    (reg:DI 1 dx [orig:125 _39 ] [125])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":82 222 {*adddi_1}
+     (nil))
+(insn 871 137 139 14 (set (reg:DI 1 dx [orig:128 _42 ] [128])
+        (plus:DI (reg:DI 0 ax [orig:127 _41 ] [127])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":82 218 {*leadi}
+     (nil))
+(insn 139 871 140 14 (set (reg/f:DI 0 ax [428])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f157d31c240 vrbls>)) "CALCWI.f":82 85 {*movdi_internal}
+     (nil))
+(insn 140 139 141 14 (parallel [
+            (set (reg:DI 1 dx [429])
+                (plus:DI (reg:DI 1 dx [orig:128 _42 ] [128])
+                    (const_int 3466827 [0x34e64b])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":82 222 {*adddi_1}
+     (nil))
+(insn 141 140 142 14 (set (reg:SF 21 xmm0 [430])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [429])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [428])) [2 vrbls.q S4 A32])) "CALCWI.f":82 131 {*movsf_internal}
+     (nil))
+(insn 142 141 143 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 qkl+0 S4 A32])
+        (reg:SF 21 xmm0 [430])) "CALCWI.f":82 131 {*movsf_internal}
+     (nil))
+(insn 143 142 144 14 (set (reg:SI 0 ax [431])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":83 86 {*movsi_internal}
+     (nil))
+(insn 144 143 145 14 (set (reg:DI 0 ax [orig:129 _43 ] [129])
+        (sign_extend:DI (reg:SI 0 ax [431]))) "CALCWI.f":83 149 {*extendsidi2_rex64}
+     (nil))
+(insn 145 144 146 14 (parallel [
+            (set (reg:DI 1 dx [orig:130 _44 ] [130])
+                (mult:DI (reg:DI 0 ax [orig:129 _43 ] [129])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":83 349 {*muldi3_1}
+     (nil))
+(insn 146 145 147 14 (set (reg:SI 0 ax [432])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":83 86 {*movsi_internal}
+     (nil))
+(insn 147 146 148 14 (set (reg:DI 0 ax [orig:131 _45 ] [131])
+        (sign_extend:DI (reg:SI 0 ax [432]))) "CALCWI.f":83 149 {*extendsidi2_rex64}
+     (nil))
+(insn 148 147 149 14 (parallel [
+            (set (reg:DI 0 ax [orig:132 _46 ] [132])
+                (mult:DI (reg:DI 0 ax [orig:131 _45 ] [131])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":83 349 {*muldi3_1}
+     (nil))
+(insn 149 148 150 14 (parallel [
+            (set (reg:DI 1 dx [orig:133 _47 ] [133])
+                (plus:DI (reg:DI 1 dx [orig:130 _44 ] [130])
+                    (reg:DI 0 ax [orig:132 _46 ] [132])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":83 222 {*adddi_1}
+     (nil))
+(insn 150 149 151 14 (set (reg:SI 0 ax [433])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":83 86 {*movsi_internal}
+     (nil))
+(insn 151 150 152 14 (set (reg:DI 0 ax [orig:134 _48 ] [134])
+        (sign_extend:DI (reg:SI 0 ax [433]))) "CALCWI.f":83 149 {*extendsidi2_rex64}
+     (nil))
+(insn 152 151 872 14 (parallel [
+            (set (reg:DI 0 ax [orig:135 _49 ] [135])
+                (plus:DI (reg:DI 0 ax [orig:134 _48 ] [134])
+                    (reg:DI 1 dx [orig:133 _47 ] [133])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":83 222 {*adddi_1}
+     (nil))
+(insn 872 152 154 14 (set (reg:DI 1 dx [orig:136 _50 ] [136])
+        (plus:DI (reg:DI 0 ax [orig:135 _49 ] [135])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":83 218 {*leadi}
+     (nil))
+(insn 154 872 155 14 (set (reg/f:DI 0 ax [434])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":83 85 {*movdi_internal}
+     (nil))
+(insn 155 154 156 14 (set (reg:SF 21 xmm0 [435])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:136 _50 ] [136])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [434])) [2 cldwtr.cwm S4 A32])) "CALCWI.f":83 131 {*movsf_internal}
+     (nil))
+(insn 156 155 157 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 cwmkl+0 S4 A32])
+        (reg:SF 21 xmm0 [435])) "CALCWI.f":83 131 {*movsf_internal}
+     (nil))
+(insn 157 156 158 14 (set (reg:SF 21 xmm0 [436])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 tkl+0 S4 A32])) "CALCWI.f":84 131 {*movsf_internal}
+     (nil))
+(insn 158 157 159 14 (set (reg:SF 22 xmm1 [437])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALCWI.f":84 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.73149993896484375e+2 [0x0.889333p+9])
+        (nil)))
+(insn 159 158 160 14 (set (reg:SF 21 xmm0 [orig:137 _51 ] [137])
+        (minus:SF (reg:SF 21 xmm0 [436])
+            (reg:SF 22 xmm1 [437]))) "CALCWI.f":84 841 {*fop_sf_1}
+     (nil))
+(insn 160 159 161 14 (set (reg:SF 22 xmm1 [orig:138 _52 ] [138])
+        (reg:SF 21 xmm0 [orig:137 _51 ] [137])) "CALCWI.f":84 131 {*movsf_internal}
+     (nil))
+(insn 161 160 162 14 (set (reg:SF 21 xmm0 [439])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 hh+0 S4 A32])) "CALCWI.f":84 131 {*movsf_internal}
+     (nil))
+(insn 162 161 163 14 (set (reg:SF 21 xmm0 [438])
+        (mult:SF (reg:SF 21 xmm0 [439])
+            (reg:SF 22 xmm1 [orig:138 _52 ] [138]))) "CALCWI.f":84 838 {*fop_sf_comm}
+     (nil))
+(insn 163 162 164 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32])
+        (reg:SF 21 xmm0 [438])) "CALCWI.f":84 131 {*movsf_internal}
+     (nil))
+(insn 164 163 165 14 (set (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32])) "CALCWI.f":85 131 {*movsf_internal}
+     (nil))
+(insn 165 164 166 14 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374])
+            (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32]))) "CALCWI.f":85 53 {*cmpisf}
+     (nil))
+(insn 166 165 167 14 (set (reg:QI 0 ax [440])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":85 678 {*setcc_qi}
+     (nil))
+(insn 167 166 168 14 (set (reg:SI 1 dx [orig:139 _53 ] [139])
+        (zero_extend:SI (reg:QI 0 ax [440]))) "CALCWI.f":85 140 {*zero_extendqisi2}
+     (nil))
+(insn 168 167 169 14 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374])
+                    (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374]))
+            ] UNSPEC_NOTRAP)) "CALCWI.f":85 54 {*cmpiusf}
+     (nil))
+(insn 169 168 170 14 (set (reg:QI 0 ax [441])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":85 678 {*setcc_qi}
+     (nil))
+(insn 170 169 171 14 (set (reg:SI 0 ax [orig:140 _54 ] [140])
+        (zero_extend:SI (reg:QI 0 ax [441]))) "CALCWI.f":85 140 {*zero_extendqisi2}
+     (nil))
+(insn 171 170 172 14 (parallel [
+            (set (reg:SI 0 ax [orig:141 _55 ] [141])
+                (ior:SI (reg:SI 0 ax [orig:140 _54 ] [140])
+                    (reg:SI 1 dx [orig:139 _53 ] [139])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":85 450 {*iorsi_1}
+     (nil))
+(insn 172 171 173 14 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:141 _55 ] [141])
+            (const_int 0 [0]))) "CALCWI.f":85 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 173 172 174 14 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "CALCWI.f":85 682 {*jcc}
+     (nil)
+ -> 176)
+(note 174 173 175 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 175 174 176 15 (set (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALCWI.f":85 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF -1.5e+1 [-0x0.fp+4])
+        (nil)))
+(code_label 176 175 177 16 9 (nil) [1 uses])
+(note 177 176 178 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 179 16 (set (reg:SF 21 xmm0 [442])
+        (mult:SF (reg:SF 21 xmm0 [orig:374 M.0_298 ] [374])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -40 [0xffffffffffffffd8])) [2 hh+0 S4 A32]))) "CALCWI.f":85 838 {*fop_sf_comm}
+     (nil))
+(insn 179 178 180 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [2 tmt15+0 S4 A32])
+        (reg:SF 21 xmm0 [442])) "CALCWI.f":85 131 {*movsf_internal}
+     (nil))
+(insn 180 179 181 16 (set (reg:SI 0 ax [443])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":86 86 {*movsi_internal}
+     (nil))
+(insn 181 180 182 16 (set (reg:DI 0 ax [orig:142 _56 ] [142])
+        (sign_extend:DI (reg:SI 0 ax [443]))) "CALCWI.f":86 149 {*extendsidi2_rex64}
+     (nil))
+(insn 182 181 183 16 (parallel [
+            (set (reg:DI 1 dx [orig:143 _57 ] [143])
+                (mult:DI (reg:DI 0 ax [orig:142 _56 ] [142])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":86 349 {*muldi3_1}
+     (nil))
+(insn 183 182 184 16 (set (reg:SI 0 ax [444])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":86 86 {*movsi_internal}
+     (nil))
+(insn 184 183 185 16 (set (reg:DI 0 ax [orig:144 _58 ] [144])
+        (sign_extend:DI (reg:SI 0 ax [444]))) "CALCWI.f":86 149 {*extendsidi2_rex64}
+     (nil))
+(insn 185 184 864 16 (parallel [
+            (set (reg:DI 0 ax [orig:145 _59 ] [145])
+                (plus:DI (reg:DI 0 ax [orig:144 _58 ] [144])
+                    (reg:DI 1 dx [orig:143 _57 ] [143])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":86 222 {*adddi_1}
+     (nil))
+(insn 864 185 187 16 (set (reg:DI 1 dx [orig:146 _60 ] [146])
+        (plus:DI (reg:DI 0 ax [orig:145 _59 ] [145])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":86 218 {*leadi}
+     (nil))
+(insn 187 864 188 16 (set (reg/f:DI 0 ax [445])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f157d30cbd0 extra>)) "CALCWI.f":86 85 {*movdi_internal}
+     (nil))
+(insn 188 187 189 16 (parallel [
+            (set (reg:DI 1 dx [446])
+                (plus:DI (reg:DI 1 dx [orig:146 _60 ] [146])
+                    (const_int 4647393 [0x46e9e1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":86 222 {*adddi_1}
+     (nil))
+(insn 189 188 190 16 (set (reg:SF 22 xmm1 [orig:147 _61 ] [147])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [446])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [445])) [2 extra.pdsl S4 A32])) "CALCWI.f":86 131 {*movsf_internal}
+     (nil))
+(insn 190 189 191 16 (set (reg:SI 0 ax [447])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":86 86 {*movsi_internal}
+     (nil))
+(insn 191 190 865 16 (set (reg:DI 0 ax [orig:148 _62 ] [148])
+        (sign_extend:DI (reg:SI 0 ax [447]))) "CALCWI.f":86 149 {*extendsidi2_rex64}
+     (nil))
+(insn 865 191 193 16 (set (reg:DI 1 dx [orig:149 _63 ] [149])
+        (plus:DI (reg:DI 0 ax [orig:148 _62 ] [148])
+            (const_int -1 [0xffffffffffffffff]))) "CALCWI.f":86 218 {*leadi}
+     (nil))
+(insn 193 865 194 16 (set (reg/f:DI 0 ax [448])
+        (symbol_ref:DI ("dynam_") [flags 0x202]  <var_decl 0x7f157d305bd0 dynam>)) "CALCWI.f":86 85 {*movdi_internal}
+     (nil))
+(insn 194 193 195 16 (parallel [
+            (set (reg:DI 1 dx [449])
+                (plus:DI (reg:DI 1 dx [orig:149 _63 ] [149])
+                    (const_int 85 [0x55])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":86 222 {*adddi_1}
+     (nil))
+(insn 195 194 196 16 (set (reg:SF 21 xmm0 [orig:150 _64 ] [150])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [449])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [448])) [2 dynam.aeta S4 A32])) "CALCWI.f":86 131 {*movsf_internal}
+     (nil))
+(insn 196 195 197 16 (set (reg:SF 22 xmm1 [orig:151 _65 ] [151])
+        (mult:SF (reg:SF 22 xmm1 [orig:147 _61 ] [147])
+            (reg:SF 21 xmm0 [orig:150 _64 ] [150]))) "CALCWI.f":86 838 {*fop_sf_comm}
+     (nil))
+(insn 197 196 198 16 (set (reg/f:DI 0 ax [450])
+        (symbol_ref:DI ("dynam_") [flags 0x202]  <var_decl 0x7f157d305bd0 dynam>)) "CALCWI.f":1 85 {*movdi_internal}
+     (nil))
+(insn 198 197 199 16 (set (reg:SF 21 xmm0 [orig:152 _66 ] [152])
+        (mem/c:SF (plus:DI (reg/f:DI 0 ax [450])
+                (const_int 20 [0x14])) [2 dynam.pt+0 S4 A32])) "CALCWI.f":1 131 {*movsf_internal}
+     (nil))
+(insn 199 198 200 16 (set (reg:SF 21 xmm0 [451])
+        (plus:SF (reg:SF 21 xmm0 [orig:152 _66 ] [152])
+            (reg:SF 22 xmm1 [orig:151 _65 ] [151]))) "CALCWI.f":86 838 {*fop_sf_comm}
+     (nil))
+(insn 200 199 201 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [2 pp+0 S4 A32])
+        (reg:SF 21 xmm0 [451])) "CALCWI.f":86 131 {*movsf_internal}
+     (nil))
+(insn 201 200 202 16 (set (reg:SF 22 xmm1 [452])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 hh+0 S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(insn 202 201 203 16 (set (reg:SF 21 xmm0 [453])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 3.799051513671875e+2 [0x0.bdf3dcp+9])
+        (nil)))
+(insn 203 202 204 16 (set (reg:SF 21 xmm0 [orig:153 _67 ] [153])
+        (mult:SF (reg:SF 21 xmm0 [453])
+            (reg:SF 22 xmm1 [452]))) "CALCWI.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 204 203 817 16 (set (reg:SF 21 xmm0 [orig:153 _67 ] [153])
+        (div:SF (reg:SF 21 xmm0 [orig:153 _67 ] [153])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -64 [0xffffffffffffffc0])) [2 pp+0 S4 A32]))) "CALCWI.f":87 841 {*fop_sf_1}
+     (nil))
+(insn 817 204 827 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -116 [0xffffffffffffff8c])) [11 %sfp+-100 S4 A32])
+        (reg:SF 21 xmm0 [orig:153 _67 ] [153])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(note 827 817 825 16 NOTE_INSN_DELETED)
+(note 825 827 205 16 NOTE_INSN_DELETED)
+(insn 205 825 206 16 (set (reg:SF 22 xmm1 [454])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 hh+0 S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(insn 206 205 207 16 (set (reg:SF 21 xmm0 [455])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.72693881988525390625e+1 [0x0.8a27b5p+5])
+        (nil)))
+(insn 207 206 208 16 (set (reg:SF 22 xmm1 [orig:155 _69 ] [155])
+        (mult:SF (reg:SF 22 xmm1 [454])
+            (reg:SF 21 xmm0 [455]))) "CALCWI.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 208 207 209 16 (set (reg:SF 21 xmm0 [456])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 tkl+0 S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(insn 209 208 210 16 (set (reg:SF 23 xmm2 [457])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC6") [flags 0x2]) [0  S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.73160003662109375e+2 [0x0.88947bp+9])
+        (nil)))
+(insn 210 209 212 16 (set (reg:SF 21 xmm0 [orig:156 _70 ] [156])
+        (minus:SF (reg:SF 21 xmm0 [456])
+            (reg:SF 23 xmm2 [457]))) "CALCWI.f":87 841 {*fop_sf_1}
+     (nil))
+(insn 212 210 213 16 (set (reg:SF 21 xmm0 [orig:158 _72 ] [158])
+        (mult:SF (reg:SF 21 xmm0 [orig:157 _71 ] [157])
+            (reg:SF 22 xmm1 [orig:155 _69 ] [155]))) "CALCWI.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 213 212 214 16 (set (reg:SF 22 xmm1 [458])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [2 tkl+0 S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(insn 214 213 215 16 (set (reg:SF 23 xmm2 [459])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC7") [flags 0x2]) [0  S4 A32])) "CALCWI.f":87 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 3.58600006103515625e+1 [0x0.8f70a4p+6])
+        (nil)))
+(insn 215 214 217 16 (set (reg:SF 22 xmm1 [orig:159 _73 ] [159])
+        (minus:SF (reg:SF 22 xmm1 [458])
+            (reg:SF 23 xmm2 [459]))) "CALCWI.f":87 841 {*fop_sf_1}
+     (nil))
+(insn 217 215 219 16 (set (reg:SF 21 xmm0 [orig:161 _75 ] [161])
+        (div:SF (reg:SF 21 xmm0 [orig:158 _72 ] [158])
+            (reg:SF 22 xmm1 [orig:160 _74 ] [160]))) "CALCWI.f":87 841 {*fop_sf_1}
+     (nil))
+(call_insn/u 219 217 818 16 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("expf") [flags 0x41]  <function_decl 0x7f157d172300 __builtin_expf>) [0 __builtin_expf S1 A8])
+            (const_int 0 [0]))) "CALCWI.f":87 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(note 818 219 826 16 NOTE_INSN_DELETED)
+(note 826 818 221 16 NOTE_INSN_DELETED)
+(insn 221 826 222 16 (set (reg:SF 21 xmm0 [460])
+        (mult:SF (reg:SF 21 xmm0 [orig:162 _76 ] [162])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -116 [0xffffffffffffff8c])) [11 %sfp+-100 S4 A32]))) "CALCWI.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 222 221 223 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -68 [0xffffffffffffffbc])) [2 qw+0 S4 A32])
+        (reg:SF 21 xmm0 [460])) "CALCWI.f":87 131 {*movsf_internal}
+     (nil))
+(insn 223 222 866 16 (set (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32])) "CALCWI.f":88 131 {*movsf_internal}
+     (nil))
+(insn 866 223 225 16 (set (reg:SF 22 xmm1 [462])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":88 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 225 866 226 16 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375])
+            (reg:SF 22 xmm1 [462]))) "CALCWI.f":88 53 {*cmpisf}
+     (nil))
+(insn 226 225 227 16 (set (reg:QI 0 ax [461])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":88 678 {*setcc_qi}
+     (nil))
+(insn 227 226 228 16 (set (reg:SI 1 dx [orig:163 _77 ] [163])
+        (zero_extend:SI (reg:QI 0 ax [461]))) "CALCWI.f":88 140 {*zero_extendqisi2}
+     (nil))
+(insn 228 227 229 16 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375])
+                    (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375]))
+            ] UNSPEC_NOTRAP)) "CALCWI.f":88 54 {*cmpiusf}
+     (nil))
+(insn 229 228 230 16 (set (reg:QI 0 ax [463])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":88 678 {*setcc_qi}
+     (nil))
+(insn 230 229 231 16 (set (reg:SI 0 ax [orig:164 _78 ] [164])
+        (zero_extend:SI (reg:QI 0 ax [463]))) "CALCWI.f":88 140 {*zero_extendqisi2}
+     (nil))
+(insn 231 230 232 16 (parallel [
+            (set (reg:SI 0 ax [orig:165 _79 ] [165])
+                (ior:SI (reg:SI 0 ax [orig:164 _78 ] [164])
+                    (reg:SI 1 dx [orig:163 _77 ] [163])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":88 450 {*iorsi_1}
+     (nil))
+(insn 232 231 233 16 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:165 _79 ] [165])
+            (const_int 0 [0]))) "CALCWI.f":88 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 233 232 234 16 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 236)
+            (pc))) "CALCWI.f":88 682 {*jcc}
+     (nil)
+ -> 236)
+(note 234 233 863 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 863 234 236 17 (set (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":88 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(code_label 236 863 237 18 10 (nil) [1 uses])
+(note 237 236 238 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 238 237 239 18 (set (reg:SF 22 xmm1 [464])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC8") [flags 0x2]) [0  S4 A32])) "CALCWI.f":88 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 9.99999977648258209228515625e-3 [0x0.a3d70ap-6])
+        (nil)))
+(insn 239 238 240 18 (set (reg:SF 22 xmm1 [orig:166 _80 ] [166])
+        (mult:SF (reg:SF 22 xmm1 [464])
+            (reg:SF 21 xmm0 [orig:375 M.1_299 ] [375]))) "CALCWI.f":88 838 {*fop_sf_comm}
+     (nil))
+(insn 240 239 241 18 (set (reg:SF 21 xmm0 [465])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":88 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 241 240 243 18 (set (reg:SF 21 xmm0 [orig:167 _81 ] [167])
+        (plus:SF (reg:SF 21 xmm0 [465])
+            (reg:SF 22 xmm1 [orig:166 _80 ] [166]))) "CALCWI.f":88 838 {*fop_sf_comm}
+     (nil))
+(insn 243 241 244 18 (set (reg:SI 0 ax [466])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":88 86 {*movsi_internal}
+     (nil))
+(insn 244 243 245 18 (set (reg:DI 0 ax [orig:169 _83 ] [169])
+        (sign_extend:DI (reg:SI 0 ax [466]))) "CALCWI.f":88 149 {*extendsidi2_rex64}
+     (nil))
+(insn 245 244 246 18 (parallel [
+            (set (reg:DI 1 dx [orig:170 _84 ] [170])
+                (mult:DI (reg:DI 0 ax [orig:169 _83 ] [169])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":88 349 {*muldi3_1}
+     (nil))
+(insn 246 245 247 18 (set (reg:SI 0 ax [467])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":88 86 {*movsi_internal}
+     (nil))
+(insn 247 246 248 18 (set (reg:DI 0 ax [orig:171 _85 ] [171])
+        (sign_extend:DI (reg:SI 0 ax [467]))) "CALCWI.f":88 149 {*extendsidi2_rex64}
+     (nil))
+(insn 248 247 859 18 (parallel [
+            (set (reg:DI 0 ax [orig:172 _86 ] [172])
+                (plus:DI (reg:DI 0 ax [orig:171 _85 ] [171])
+                    (reg:DI 1 dx [orig:170 _84 ] [170])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":88 222 {*adddi_1}
+     (nil))
+(insn 859 248 250 18 (set (reg:DI 1 dx [orig:173 _87 ] [173])
+        (plus:DI (reg:DI 0 ax [orig:172 _86 ] [172])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":88 218 {*leadi}
+     (nil))
+(insn 250 859 251 18 (set (reg:SF 21 xmm0 [orig:174 _88 ] [174])
+        (mult:SF (reg:SF 21 xmm0 [orig:168 _82 ] [168])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -68 [0xffffffffffffffbc])) [2 qw+0 S4 A32]))) "CALCWI.f":88 838 {*fop_sf_comm}
+     (nil))
+(insn 251 250 252 18 (set (reg/f:DI 0 ax [468])
+        (symbol_ref:DI ("qi.4115") [flags 0x202]  <var_decl 0x7f157d31ccf0 qi>)) "CALCWI.f":88 85 {*movdi_internal}
+     (nil))
+(insn 252 251 253 18 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:173 _87 ] [173])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [468])) [2 qi S4 A32])
+        (reg:SF 21 xmm0 [orig:174 _88 ] [174])) "CALCWI.f":88 131 {*movsf_internal}
+     (nil))
+(insn 253 252 254 18 (set (reg:SI 0 ax [469])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 254 253 255 18 (set (reg:DI 0 ax [orig:175 _89 ] [175])
+        (sign_extend:DI (reg:SI 0 ax [469]))) "CALCWI.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 255 254 256 18 (parallel [
+            (set (reg:DI 1 dx [orig:176 _90 ] [176])
+                (mult:DI (reg:DI 0 ax [orig:175 _89 ] [175])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 349 {*muldi3_1}
+     (nil))
+(insn 256 255 257 18 (set (reg:SI 0 ax [470])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 257 256 258 18 (set (reg:DI 0 ax [orig:177 _91 ] [177])
+        (sign_extend:DI (reg:SI 0 ax [470]))) "CALCWI.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 258 257 860 18 (parallel [
+            (set (reg:DI 0 ax [orig:178 _92 ] [178])
+                (plus:DI (reg:DI 0 ax [orig:177 _91 ] [177])
+                    (reg:DI 1 dx [orig:176 _90 ] [176])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 222 {*adddi_1}
+     (nil))
+(insn 860 258 260 18 (set (reg:DI 1 dx [orig:179 _93 ] [179])
+        (plus:DI (reg:DI 0 ax [orig:178 _92 ] [178])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":90 218 {*leadi}
+     (nil))
+(insn 260 860 261 18 (set (reg/f:DI 0 ax [471])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":90 85 {*movdi_internal}
+     (nil))
+(insn 261 260 262 18 (parallel [
+            (set (reg:DI 1 dx [472])
+                (plus:DI (reg:DI 1 dx [orig:179 _93 ] [179])
+                    (const_int 1125978 [0x112e5a])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 222 {*adddi_1}
+     (nil))
+(insn 262 261 263 18 (set (reg:SF 22 xmm1 [orig:180 _94 ] [180])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [472])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [471])) [2 cldwtr.u00 S4 A32])) "CALCWI.f":90 131 {*movsf_internal}
+     (nil))
+(insn 263 262 264 18 (set (reg:SI 1 dx [473])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 264 263 265 18 (set (reg:SI 0 ax [474])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [1 lml+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 265 264 266 18 (parallel [
+            (set (reg:SI 0 ax [orig:181 _95 ] [181])
+                (plus:SI (reg:SI 0 ax [474])
+                    (reg:SI 1 dx [473])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -20 [0xffffffffffffffec])) [1 lml+0 S4 A32]))
+        (nil)))
+(insn 266 265 861 18 (set (reg:DI 0 ax [orig:182 _96 ] [182])
+        (sign_extend:DI (reg:SI 0 ax [orig:181 _95 ] [181]))) "CALCWI.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 861 266 268 18 (set (reg:DI 1 dx [orig:183 _97 ] [183])
+        (plus:DI (reg:DI 0 ax [orig:182 _96 ] [182])
+            (const_int -1 [0xffffffffffffffff]))) "CALCWI.f":90 218 {*leadi}
+     (nil))
+(insn 268 861 269 18 (set (reg/f:DI 0 ax [475])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":90 85 {*movdi_internal}
+     (nil))
+(insn 269 268 270 18 (parallel [
+            (set (reg:DI 1 dx [476])
+                (plus:DI (reg:DI 1 dx [orig:183 _97 ] [183])
+                    (const_int 1155609 [0x11a219])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 222 {*adddi_1}
+     (nil))
+(insn 270 269 271 18 (set (reg:SF 23 xmm2 [orig:184 _98 ] [184])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [476])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [475])) [2 cldwtr.ul S4 A32])) "CALCWI.f":90 131 {*movsf_internal}
+     (nil))
+(insn 271 270 272 18 (set (reg:SI 0 ax [477])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 272 271 273 18 (set (reg:DI 0 ax [orig:185 _99 ] [185])
+        (sign_extend:DI (reg:SI 0 ax [477]))) "CALCWI.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 273 272 274 18 (parallel [
+            (set (reg:DI 1 dx [orig:186 _100 ] [186])
+                (mult:DI (reg:DI 0 ax [orig:185 _99 ] [185])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 349 {*muldi3_1}
+     (nil))
+(insn 274 273 275 18 (set (reg:SI 0 ax [478])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":90 86 {*movsi_internal}
+     (nil))
+(insn 275 274 276 18 (set (reg:DI 0 ax [orig:187 _101 ] [187])
+        (sign_extend:DI (reg:SI 0 ax [478]))) "CALCWI.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 276 275 862 18 (parallel [
+            (set (reg:DI 0 ax [orig:188 _102 ] [188])
+                (plus:DI (reg:DI 0 ax [orig:187 _101 ] [187])
+                    (reg:DI 1 dx [orig:186 _100 ] [186])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 222 {*adddi_1}
+     (nil))
+(insn 862 276 278 18 (set (reg:DI 1 dx [orig:189 _103 ] [189])
+        (plus:DI (reg:DI 0 ax [orig:188 _102 ] [188])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":90 218 {*leadi}
+     (nil))
+(insn 278 862 279 18 (set (reg/f:DI 0 ax [479])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":90 85 {*movdi_internal}
+     (nil))
+(insn 279 278 280 18 (parallel [
+            (set (reg:DI 1 dx [480])
+                (plus:DI (reg:DI 1 dx [orig:189 _103 ] [189])
+                    (const_int 1125978 [0x112e5a])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":90 222 {*adddi_1}
+     (nil))
+(insn 280 279 281 18 (set (reg:SF 24 xmm3 [orig:190 _104 ] [190])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [480])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [479])) [2 cldwtr.u00 S4 A32])) "CALCWI.f":90 131 {*movsf_internal}
+     (nil))
+(insn 281 280 282 18 (set (reg:SF 21 xmm0 [481])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC10") [flags 0x2]) [0  S4 A32])) "CALCWI.f":90 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 9.49999988079071044921875e-1 [0x0.f33333p+0])
+        (nil)))
+(insn 282 281 284 18 (set (reg:SF 21 xmm0 [orig:191 _105 ] [191])
+        (minus:SF (reg:SF 21 xmm0 [481])
+            (reg:SF 24 xmm3 [orig:190 _104 ] [190]))) "CALCWI.f":90 841 {*fop_sf_1}
+     (nil))
+(insn 284 282 285 18 (set (reg:SF 21 xmm0 [orig:193 _107 ] [193])
+        (mult:SF (reg:SF 21 xmm0 [orig:192 _106 ] [192])
+            (reg:SF 23 xmm2 [orig:184 _98 ] [184]))) "CALCWI.f":90 838 {*fop_sf_comm}
+     (nil))
+(insn 285 284 286 18 (set (reg:SF 21 xmm0 [orig:194 _108 ] [194])
+        (mult:SF (reg:SF 21 xmm0 [orig:193 _107 ] [193])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -72 [0xffffffffffffffb8])) [2 utim+0 S4 A32]))) "CALCWI.f":90 838 {*fop_sf_comm}
+     (nil))
+(insn 286 285 287 18 (set (reg:SF 21 xmm0 [482])
+        (plus:SF (reg:SF 21 xmm0 [orig:194 _108 ] [194])
+            (reg:SF 22 xmm1 [orig:180 _94 ] [180]))) "CALCWI.f":90 838 {*fop_sf_comm}
+     (nil))
+(insn 287 286 288 18 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -76 [0xffffffffffffffb4])) [2 u00kl+0 S4 A32])
+        (reg:SF 21 xmm0 [482])) "CALCWI.f":90 131 {*movsf_internal}
+     (nil))
+(insn 288 287 289 18 (set (reg:SF 21 xmm0 [483])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALCWI.f":91 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF -1.5e+1 [-0x0.fp+4])
+        (nil)))
+(insn 289 288 290 18 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [483])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32]))) "CALCWI.f":91 53 {*cmpisf}
+     (nil))
+(jump_insn 290 289 294 18 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 355)
+            (pc))) "CALCWI.f":91 682 {*jcc}
+     (nil)
+ -> 355)
+(note 294 290 295 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 295 294 296 19 (set (reg:SI 0 ax [484])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":92 86 {*movsi_internal}
+     (nil))
+(insn 296 295 297 19 (set (reg:DI 0 ax [orig:195 _109 ] [195])
+        (sign_extend:DI (reg:SI 0 ax [484]))) "CALCWI.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 297 296 298 19 (parallel [
+            (set (reg:DI 1 dx [orig:196 _110 ] [196])
+                (mult:DI (reg:DI 0 ax [orig:195 _109 ] [195])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":92 349 {*muldi3_1}
+     (nil))
+(insn 298 297 299 19 (set (reg:SI 0 ax [485])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":92 86 {*movsi_internal}
+     (nil))
+(insn 299 298 300 19 (set (reg:DI 0 ax [orig:197 _111 ] [197])
+        (sign_extend:DI (reg:SI 0 ax [485]))) "CALCWI.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 300 299 857 19 (parallel [
+            (set (reg:DI 0 ax [orig:198 _112 ] [198])
+                (plus:DI (reg:DI 0 ax [orig:197 _111 ] [197])
+                    (reg:DI 1 dx [orig:196 _110 ] [196])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":92 222 {*adddi_1}
+     (nil))
+(insn 857 300 302 19 (set (reg:DI 1 dx [orig:199 _113 ] [199])
+        (plus:DI (reg:DI 0 ax [orig:198 _112 ] [198])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":92 218 {*leadi}
+     (nil))
+(insn 302 857 303 19 (set (reg/f:DI 0 ax [486])
+        (symbol_ref:DI ("qi.4115") [flags 0x202]  <var_decl 0x7f157d31ccf0 qi>)) "CALCWI.f":92 85 {*movdi_internal}
+     (nil))
+(insn 303 302 819 19 (set (reg:SF 21 xmm0 [orig:200 _114 ] [200])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:199 _113 ] [199])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [486])) [2 qi S4 A32])) "CALCWI.f":92 131 {*movsf_internal}
+     (nil))
+(insn 819 303 304 19 (set (reg:SF 22 xmm1 [orig:200 _114 ] [200])
+        (reg:SF 21 xmm0 [orig:200 _114 ] [200])) "CALCWI.f":92 131 {*movsf_internal}
+     (nil))
+(insn 304 819 305 19 (set (reg:SF 22 xmm1 [orig:200 _114 ] [200])
+        (mult:SF (reg:SF 22 xmm1 [orig:200 _114 ] [200])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -76 [0xffffffffffffffb4])) [2 u00kl+0 S4 A32]))) "CALCWI.f":92 838 {*fop_sf_comm}
+     (nil))
+(insn 305 304 306 19 (set (reg:SF 21 xmm0 [488])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 qkl+0 S4 A32])) "CALCWI.f":92 131 {*movsf_internal}
+     (nil))
+(insn 306 305 307 19 (set (reg:SF 21 xmm0 [487])
+        (minus:SF (reg:SF 21 xmm0 [488])
+            (reg:SF 22 xmm1 [orig:201 _115 ] [201]))) "CALCWI.f":92 841 {*fop_sf_1}
+     (nil))
+(insn 307 306 308 19 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [2 fiq+0 S4 A32])
+        (reg:SF 21 xmm0 [487])) "CALCWI.f":92 131 {*movsf_internal}
+     (nil))
+(insn 308 307 858 19 (set (reg:SF 21 xmm0 [489])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [2 fiq+0 S4 A32])) "CALCWI.f":93 131 {*movsf_internal}
+     (nil))
+(insn 858 308 310 19 (set (reg:SF 22 xmm1 [490])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":93 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 310 858 311 19 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [489])
+            (reg:SF 22 xmm1 [490]))) "CALCWI.f":93 53 {*cmpisf}
+     (nil))
+(jump_insn 311 310 312 19 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 319)
+            (pc))) "CALCWI.f":93 682 {*jcc}
+     (nil)
+ -> 319)
+(note 312 311 313 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 313 312 314 20 (set (reg:SF 21 xmm0 [491])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 cwmkl+0 S4 A32])) "CALCWI.f":93 131 {*movsf_internal}
+     (nil))
+(insn 314 313 315 20 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [491])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -32 [0xffffffffffffffe0])) [2 climit+0 S4 A32]))) "CALCWI.f":93 53 {*cmpisf}
+     (nil))
+(jump_insn 315 314 319 20 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 764)
+            (pc))) "CALCWI.f":93 682 {*jcc}
+     (nil)
+ -> 764)
+(code_label 319 315 320 21 13 (nil) [1 uses])
+(note 320 319 321 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 321 320 322 21 (set (reg:SI 0 ax [492])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":94 86 {*movsi_internal}
+     (nil))
+(insn 322 321 323 21 (set (reg:DI 0 ax [orig:202 _116 ] [202])
+        (sign_extend:DI (reg:SI 0 ax [492]))) "CALCWI.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 323 322 324 21 (parallel [
+            (set (reg:DI 1 dx [orig:203 _117 ] [203])
+                (mult:DI (reg:DI 0 ax [orig:202 _116 ] [202])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":94 349 {*muldi3_1}
+     (nil))
+(insn 324 323 325 21 (set (reg:SI 0 ax [493])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":94 86 {*movsi_internal}
+     (nil))
+(insn 325 324 326 21 (set (reg:DI 0 ax [orig:204 _118 ] [204])
+        (sign_extend:DI (reg:SI 0 ax [493]))) "CALCWI.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 326 325 327 21 (parallel [
+            (set (reg:DI 0 ax [orig:205 _119 ] [205])
+                (mult:DI (reg:DI 0 ax [orig:204 _118 ] [204])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":94 349 {*muldi3_1}
+     (nil))
+(insn 327 326 328 21 (parallel [
+            (set (reg:DI 1 dx [orig:206 _120 ] [206])
+                (plus:DI (reg:DI 1 dx [orig:203 _117 ] [203])
+                    (reg:DI 0 ax [orig:205 _119 ] [205])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":94 222 {*adddi_1}
+     (nil))
+(insn 328 327 329 21 (set (reg:SI 0 ax [494])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":94 86 {*movsi_internal}
+     (nil))
+(insn 329 328 330 21 (set (reg:DI 0 ax [orig:207 _121 ] [207])
+        (sign_extend:DI (reg:SI 0 ax [494]))) "CALCWI.f":94 149 {*extendsidi2_rex64}
+     (nil))
+(insn 330 329 856 21 (parallel [
+            (set (reg:DI 0 ax [orig:208 _122 ] [208])
+                (plus:DI (reg:DI 0 ax [orig:207 _121 ] [207])
+                    (reg:DI 1 dx [orig:206 _120 ] [206])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":94 222 {*adddi_1}
+     (nil))
+(insn 856 330 332 21 (set (reg:DI 1 dx [orig:209 _123 ] [209])
+        (plus:DI (reg:DI 0 ax [orig:208 _122 ] [208])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":94 218 {*leadi}
+     (nil))
+(insn 332 856 333 21 (set (reg/f:DI 0 ax [495])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":94 85 {*movdi_internal}
+     (nil))
+(insn 333 332 334 21 (set (reg:SF 21 xmm0 [496])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":94 131 {*movsf_internal}
+     (nil))
+(insn 334 333 765 21 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:209 _123 ] [209])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [495])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [496])) "CALCWI.f":94 131 {*movsf_internal}
+     (nil))
+(jump_insn 765 334 766 21 (set (pc)
+        (label_ref 355)) "CALCWI.f":94 683 {jump}
+     (nil)
+ -> 355)
+(barrier 766 765 764)
+(code_label 764 766 338 22 44 (nil) [1 uses])
+(note 338 764 339 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 339 338 340 22 (set (reg:SI 0 ax [497])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":96 86 {*movsi_internal}
+     (nil))
+(insn 340 339 341 22 (set (reg:DI 0 ax [orig:210 _124 ] [210])
+        (sign_extend:DI (reg:SI 0 ax [497]))) "CALCWI.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 341 340 342 22 (parallel [
+            (set (reg:DI 1 dx [orig:211 _125 ] [211])
+                (mult:DI (reg:DI 0 ax [orig:210 _124 ] [210])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":96 349 {*muldi3_1}
+     (nil))
+(insn 342 341 343 22 (set (reg:SI 0 ax [498])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":96 86 {*movsi_internal}
+     (nil))
+(insn 343 342 344 22 (set (reg:DI 0 ax [orig:212 _126 ] [212])
+        (sign_extend:DI (reg:SI 0 ax [498]))) "CALCWI.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 344 343 345 22 (parallel [
+            (set (reg:DI 0 ax [orig:213 _127 ] [213])
+                (mult:DI (reg:DI 0 ax [orig:212 _126 ] [212])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":96 349 {*muldi3_1}
+     (nil))
+(insn 345 344 346 22 (parallel [
+            (set (reg:DI 1 dx [orig:214 _128 ] [214])
+                (plus:DI (reg:DI 1 dx [orig:211 _125 ] [211])
+                    (reg:DI 0 ax [orig:213 _127 ] [213])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":96 222 {*adddi_1}
+     (nil))
+(insn 346 345 347 22 (set (reg:SI 0 ax [499])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":96 86 {*movsi_internal}
+     (nil))
+(insn 347 346 348 22 (set (reg:DI 0 ax [orig:215 _129 ] [215])
+        (sign_extend:DI (reg:SI 0 ax [499]))) "CALCWI.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 348 347 854 22 (parallel [
+            (set (reg:DI 0 ax [orig:216 _130 ] [216])
+                (plus:DI (reg:DI 0 ax [orig:215 _129 ] [215])
+                    (reg:DI 1 dx [orig:214 _128 ] [214])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":96 222 {*adddi_1}
+     (nil))
+(insn 854 348 350 22 (set (reg:DI 1 dx [orig:217 _131 ] [217])
+        (plus:DI (reg:DI 0 ax [orig:216 _130 ] [216])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":96 218 {*leadi}
+     (nil))
+(insn 350 854 855 22 (set (reg/f:DI 0 ax [500])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":96 85 {*movdi_internal}
+     (nil))
+(insn 855 350 352 22 (set (reg:SF 21 xmm0 [501])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":96 131 {*movsf_internal}
+     (nil))
+(insn 352 855 355 22 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:217 _131 ] [217])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [500])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [501])) "CALCWI.f":96 131 {*movsf_internal}
+     (nil))
+(code_label 355 352 356 23 11 (nil) [2 uses])
+(note 356 355 357 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 357 356 853 23 (set (reg:SF 21 xmm0 [502])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32])) "CALCWI.f":99 131 {*movsf_internal}
+     (nil))
+(insn 853 357 359 23 (set (reg:SF 22 xmm1 [503])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":99 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 359 853 360 23 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [502])
+            (reg:SF 22 xmm1 [503]))) "CALCWI.f":99 53 {*cmpisf}
+     (nil))
+(jump_insn 360 359 364 23 (set (pc)
+        (if_then_else (unlt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 379)
+            (pc))) "CALCWI.f":99 682 {*jcc}
+     (nil)
+ -> 379)
+(note 364 360 365 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 365 364 366 24 (set (reg:SI 0 ax [504])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":99 86 {*movsi_internal}
+     (nil))
+(insn 366 365 367 24 (set (reg:DI 0 ax [orig:218 _132 ] [218])
+        (sign_extend:DI (reg:SI 0 ax [504]))) "CALCWI.f":99 149 {*extendsidi2_rex64}
+     (nil))
+(insn 367 366 368 24 (parallel [
+            (set (reg:DI 1 dx [orig:219 _133 ] [219])
+                (mult:DI (reg:DI 0 ax [orig:218 _132 ] [218])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":99 349 {*muldi3_1}
+     (nil))
+(insn 368 367 369 24 (set (reg:SI 0 ax [505])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":99 86 {*movsi_internal}
+     (nil))
+(insn 369 368 370 24 (set (reg:DI 0 ax [orig:220 _134 ] [220])
+        (sign_extend:DI (reg:SI 0 ax [505]))) "CALCWI.f":99 149 {*extendsidi2_rex64}
+     (nil))
+(insn 370 369 371 24 (parallel [
+            (set (reg:DI 0 ax [orig:221 _135 ] [221])
+                (mult:DI (reg:DI 0 ax [orig:220 _134 ] [220])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":99 349 {*muldi3_1}
+     (nil))
+(insn 371 370 372 24 (parallel [
+            (set (reg:DI 1 dx [orig:222 _136 ] [222])
+                (plus:DI (reg:DI 1 dx [orig:219 _133 ] [219])
+                    (reg:DI 0 ax [orig:221 _135 ] [221])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":99 222 {*adddi_1}
+     (nil))
+(insn 372 371 373 24 (set (reg:SI 0 ax [506])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":99 86 {*movsi_internal}
+     (nil))
+(insn 373 372 374 24 (set (reg:DI 0 ax [orig:223 _137 ] [223])
+        (sign_extend:DI (reg:SI 0 ax [506]))) "CALCWI.f":99 149 {*extendsidi2_rex64}
+     (nil))
+(insn 374 373 851 24 (parallel [
+            (set (reg:DI 0 ax [orig:224 _138 ] [224])
+                (plus:DI (reg:DI 0 ax [orig:223 _137 ] [223])
+                    (reg:DI 1 dx [orig:222 _136 ] [222])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":99 222 {*adddi_1}
+     (nil))
+(insn 851 374 376 24 (set (reg:DI 1 dx [orig:225 _139 ] [225])
+        (plus:DI (reg:DI 0 ax [orig:224 _138 ] [224])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":99 218 {*leadi}
+     (nil))
+(insn 376 851 852 24 (set (reg/f:DI 0 ax [507])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":99 85 {*movdi_internal}
+     (nil))
+(insn 852 376 378 24 (set (reg:SF 21 xmm0 [508])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":99 131 {*movsf_internal}
+     (nil))
+(insn 378 852 379 24 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:225 _139 ] [225])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [507])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [508])) "CALCWI.f":99 131 {*movsf_internal}
+     (nil))
+(code_label 379 378 380 25 17 (nil) [1 uses])
+(note 380 379 850 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 850 380 382 25 (set (reg:SF 21 xmm0 [509])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":100 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 382 850 383 25 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [509])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32]))) "CALCWI.f":100 53 {*cmpisf}
+     (nil))
+(jump_insn 383 382 387 25 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 454)
+            (pc))) "CALCWI.f":100 682 {*jcc}
+     (nil)
+ -> 454)
+(note 387 383 388 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 388 387 389 26 (set (reg:SF 21 xmm0 [510])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 tmt0+0 S4 A32])) "CALCWI.f":100 131 {*movsf_internal}
+     (nil))
+(insn 389 388 390 26 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [510])
+            (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32]))) "CALCWI.f":100 53 {*cmpisf}
+     (nil))
+(jump_insn 390 389 394 26 (set (pc)
+        (if_then_else (unlt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 454)
+            (pc))) "CALCWI.f":100 682 {*jcc}
+     (nil)
+ -> 454)
+(note 394 390 395 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 395 394 396 27 (set (reg:SI 0 ax [511])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":101 86 {*movsi_internal}
+     (nil))
+(insn 396 395 397 27 (set (reg:DI 0 ax [orig:226 _140 ] [226])
+        (sign_extend:DI (reg:SI 0 ax [511]))) "CALCWI.f":101 149 {*extendsidi2_rex64}
+     (nil))
+(insn 397 396 398 27 (parallel [
+            (set (reg:DI 1 dx [orig:227 _141 ] [227])
+                (mult:DI (reg:DI 0 ax [orig:226 _140 ] [226])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":101 349 {*muldi3_1}
+     (nil))
+(insn 398 397 399 27 (set (reg:SI 0 ax [512])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":101 86 {*movsi_internal}
+     (nil))
+(insn 399 398 400 27 (set (reg:DI 0 ax [orig:228 _142 ] [228])
+        (sign_extend:DI (reg:SI 0 ax [512]))) "CALCWI.f":101 149 {*extendsidi2_rex64}
+     (nil))
+(insn 400 399 401 27 (parallel [
+            (set (reg:DI 0 ax [orig:229 _143 ] [229])
+                (mult:DI (reg:DI 0 ax [orig:228 _142 ] [228])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":101 349 {*muldi3_1}
+     (nil))
+(insn 401 400 402 27 (parallel [
+            (set (reg:DI 1 dx [orig:230 _144 ] [230])
+                (plus:DI (reg:DI 1 dx [orig:227 _141 ] [227])
+                    (reg:DI 0 ax [orig:229 _143 ] [229])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":101 222 {*adddi_1}
+     (nil))
+(insn 402 401 403 27 (set (reg:SI 0 ax [513])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":101 86 {*movsi_internal}
+     (nil))
+(insn 403 402 404 27 (set (reg:DI 0 ax [orig:231 _145 ] [231])
+        (sign_extend:DI (reg:SI 0 ax [513]))) "CALCWI.f":101 149 {*extendsidi2_rex64}
+     (nil))
+(insn 404 403 847 27 (parallel [
+            (set (reg:DI 0 ax [orig:232 _146 ] [232])
+                (plus:DI (reg:DI 0 ax [orig:231 _145 ] [231])
+                    (reg:DI 1 dx [orig:230 _144 ] [230])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":101 222 {*adddi_1}
+     (nil))
+(insn 847 404 406 27 (set (reg:DI 1 dx [orig:233 _147 ] [233])
+        (plus:DI (reg:DI 0 ax [orig:232 _146 ] [232])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":101 218 {*leadi}
+     (nil))
+(insn 406 847 848 27 (set (reg/f:DI 0 ax [514])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":101 85 {*movdi_internal}
+     (nil))
+(insn 848 406 408 27 (set (reg:SF 21 xmm0 [515])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":101 131 {*movsf_internal}
+     (nil))
+(insn 408 848 409 27 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:233 _147 ] [233])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [514])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [515])) "CALCWI.f":101 131 {*movsf_internal}
+     (nil))
+(insn 409 408 410 27 (set (reg:SI 0 ax [516])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 410 409 411 27 (parallel [
+            (set (reg:SI 0 ax [orig:234 _148 ] [234])
+                (plus:SI (reg:SI 0 ax [516])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 411 410 412 27 (set (reg:DI 0 ax [orig:235 _149 ] [235])
+        (sign_extend:DI (reg:SI 0 ax [orig:234 _148 ] [234]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 412 411 413 27 (parallel [
+            (set (reg:DI 1 dx [orig:236 _150 ] [236])
+                (mult:DI (reg:DI 0 ax [orig:235 _149 ] [235])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 349 {*muldi3_1}
+     (nil))
+(insn 413 412 414 27 (set (reg:SI 0 ax [517])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 414 413 415 27 (set (reg:DI 0 ax [orig:237 _151 ] [237])
+        (sign_extend:DI (reg:SI 0 ax [517]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 415 414 416 27 (parallel [
+            (set (reg:DI 0 ax [orig:238 _152 ] [238])
+                (mult:DI (reg:DI 0 ax [orig:237 _151 ] [237])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 349 {*muldi3_1}
+     (nil))
+(insn 416 415 417 27 (parallel [
+            (set (reg:DI 1 dx [orig:239 _153 ] [239])
+                (plus:DI (reg:DI 1 dx [orig:236 _150 ] [236])
+                    (reg:DI 0 ax [orig:238 _152 ] [238])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 222 {*adddi_1}
+     (nil))
+(insn 417 416 418 27 (set (reg:SI 0 ax [518])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 418 417 419 27 (set (reg:DI 0 ax [orig:240 _154 ] [240])
+        (sign_extend:DI (reg:SI 0 ax [518]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 419 418 849 27 (parallel [
+            (set (reg:DI 0 ax [orig:241 _155 ] [241])
+                (plus:DI (reg:DI 0 ax [orig:240 _154 ] [240])
+                    (reg:DI 1 dx [orig:239 _153 ] [239])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 222 {*adddi_1}
+     (nil))
+(insn 849 419 421 27 (set (reg:DI 1 dx [orig:242 _156 ] [242])
+        (plus:DI (reg:DI 0 ax [orig:241 _155 ] [241])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":102 218 {*leadi}
+     (nil))
+(insn 421 849 422 27 (set (reg/f:DI 0 ax [519])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":102 85 {*movdi_internal}
+     (nil))
+(insn 422 421 423 27 (set (reg:SF 21 xmm0 [orig:243 _157 ] [243])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:242 _156 ] [242])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [519])) [2 iw S4 A32])) "CALCWI.f":102 131 {*movsf_internal}
+     (nil))
+(insn 423 422 424 27 (set (reg:SF 22 xmm1 [520])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":102 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 424 423 425 27 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:243 _157 ] [243])
+                    (reg:SF 22 xmm1 [520]))
+            ] UNSPEC_NOTRAP)) "CALCWI.f":102 54 {*cmpiusf}
+     (nil))
+(jump_insn 425 424 748 27 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 454)
+            (pc))) "CALCWI.f":102 682 {*jcc}
+     (nil)
+ -> 454)
+(note 748 425 426 28 [bb 28] NOTE_INSN_BASIC_BLOCK)
+(insn 426 748 427 28 (set (reg:SF 22 xmm1 [521])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":102 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 427 426 428 28 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:243 _157 ] [243])
+                    (reg:SF 22 xmm1 [521]))
+            ] UNSPEC_NOTRAP)) "CALCWI.f":102 54 {*cmpiusf}
+     (nil))
+(jump_insn 428 427 432 28 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 454)
+            (pc))) "CALCWI.f":102 682 {*jcc}
+     (nil)
+ -> 454)
+(note 432 428 433 29 [bb 29] NOTE_INSN_BASIC_BLOCK)
+(insn 433 432 434 29 (set (reg:SF 21 xmm0 [522])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 cwmkl+0 S4 A32])) "CALCWI.f":102 131 {*movsf_internal}
+     (nil))
+(insn 434 433 435 29 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [522])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -32 [0xffffffffffffffe0])) [2 climit+0 S4 A32]))) "CALCWI.f":102 53 {*cmpisf}
+     (nil))
+(jump_insn 435 434 439 29 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 454)
+            (pc))) "CALCWI.f":102 682 {*jcc}
+     (nil)
+ -> 454)
+(note 439 435 440 30 [bb 30] NOTE_INSN_BASIC_BLOCK)
+(insn 440 439 441 30 (set (reg:SI 0 ax [523])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 441 440 442 30 (set (reg:DI 0 ax [orig:244 _158 ] [244])
+        (sign_extend:DI (reg:SI 0 ax [523]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 442 441 443 30 (parallel [
+            (set (reg:DI 1 dx [orig:245 _159 ] [245])
+                (mult:DI (reg:DI 0 ax [orig:244 _158 ] [244])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 349 {*muldi3_1}
+     (nil))
+(insn 443 442 444 30 (set (reg:SI 0 ax [524])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 444 443 445 30 (set (reg:DI 0 ax [orig:246 _160 ] [246])
+        (sign_extend:DI (reg:SI 0 ax [524]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 445 444 446 30 (parallel [
+            (set (reg:DI 0 ax [orig:247 _161 ] [247])
+                (mult:DI (reg:DI 0 ax [orig:246 _160 ] [246])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 349 {*muldi3_1}
+     (nil))
+(insn 446 445 447 30 (parallel [
+            (set (reg:DI 1 dx [orig:248 _162 ] [248])
+                (plus:DI (reg:DI 1 dx [orig:245 _159 ] [245])
+                    (reg:DI 0 ax [orig:247 _161 ] [247])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 222 {*adddi_1}
+     (nil))
+(insn 447 446 448 30 (set (reg:SI 0 ax [525])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":102 86 {*movsi_internal}
+     (nil))
+(insn 448 447 449 30 (set (reg:DI 0 ax [orig:249 _163 ] [249])
+        (sign_extend:DI (reg:SI 0 ax [525]))) "CALCWI.f":102 149 {*extendsidi2_rex64}
+     (nil))
+(insn 449 448 846 30 (parallel [
+            (set (reg:DI 0 ax [orig:250 _164 ] [250])
+                (plus:DI (reg:DI 0 ax [orig:249 _163 ] [249])
+                    (reg:DI 1 dx [orig:248 _162 ] [248])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":102 222 {*adddi_1}
+     (nil))
+(insn 846 449 451 30 (set (reg:DI 1 dx [orig:251 _165 ] [251])
+        (plus:DI (reg:DI 0 ax [orig:250 _164 ] [250])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":102 218 {*leadi}
+     (nil))
+(insn 451 846 452 30 (set (reg/f:DI 0 ax [526])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":102 85 {*movdi_internal}
+     (nil))
+(insn 452 451 453 30 (set (reg:SF 21 xmm0 [527])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":102 131 {*movsf_internal}
+     (nil))
+(insn 453 452 454 30 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:251 _165 ] [251])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [526])) [2 iw S4 A32])
+        (reg:SF 21 xmm0 [527])) "CALCWI.f":102 131 {*movsf_internal}
+     (nil))
+(code_label 454 453 455 31 19 (nil) [5 uses])
+(note 455 454 456 31 [bb 31] NOTE_INSN_BASIC_BLOCK)
+(insn 456 455 767 31 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":78 221 {*addsi_1}
+     (nil))
+(jump_insn 767 456 768 31 (set (pc)
+        (label_ref 457)) "CALCWI.f":78 683 {jump}
+     (nil)
+ -> 457)
+(barrier 768 767 796)
+(code_label 796 768 795 32 49 (nil) [1 uses])
+(note 795 796 797 32 [bb 32] NOTE_INSN_BASIC_BLOCK)
+(insn 797 795 462 32 (const_int 0 [0]) "CALCWI.f":100 718 {nop}
+     (nil))
+(insn 462 797 769 32 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":77 221 {*addsi_1}
+     (nil))
+(jump_insn 769 462 770 32 (set (pc)
+        (label_ref 463)) "CALCWI.f":77 683 {jump}
+     (nil)
+ -> 463)
+(barrier 770 769 793)
+(code_label 793 770 792 33 48 (nil) [1 uses])
+(note 792 793 794 33 [bb 33] NOTE_INSN_BASIC_BLOCK)
+(insn 794 792 468 33 (const_int 0 [0]) "CALCWI.f":78 718 {nop}
+     (nil))
+(insn 468 794 771 33 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":76 221 {*addsi_1}
+     (nil))
+(jump_insn 771 468 772 33 (set (pc)
+        (label_ref 469)) "CALCWI.f":76 683 {jump}
+     (nil)
+ -> 469)
+(barrier 772 771 790)
+(code_label 790 772 789 34 47 (nil) [1 uses])
+(note 789 790 791 34 [bb 34] NOTE_INSN_BASIC_BLOCK)
+(insn 791 789 474 34 (const_int 0 [0]) "CALCWI.f":106 718 {nop}
+     (nil))
+(insn 474 791 475 34 (set (reg:SI 1 dx [orig:385 _358 ] [385])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALCWI.f":109 86 {*movsi_internal}
+     (nil))
+(insn 475 474 476 34 (set (reg:SI 0 ax [orig:386 _359 ] [386])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALCWI.f":109 86 {*movsi_internal}
+     (nil))
+(insn 476 475 519 34 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:385 _358 ] [385])) "CALCWI.f":109 86 {*movsi_internal}
+     (nil))
+(code_label 519 476 477 35 30 (nil) [1 uses])
+(note 477 519 478 35 [bb 35] NOTE_INSN_BASIC_BLOCK)
+(insn 478 477 479 35 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:386 _359 ] [386]))) "CALCWI.f":109 11 {*cmpsi_1}
+     (nil))
+(insn 479 478 480 35 (set (reg:QI 1 dx [528])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":109 678 {*setcc_qi}
+     (nil))
+(insn 480 479 481 35 (set (reg:SI 1 dx [orig:387 _361 ] [387])
+        (zero_extend:SI (reg:QI 1 dx [528]))) "CALCWI.f":109 140 {*zero_extendqisi2}
+     (nil))
+(insn 481 480 482 35 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:387 _361 ] [387])
+            (const_int 0 [0]))) "CALCWI.f":109 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 482 481 483 35 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 799)
+            (pc))) "CALCWI.f":109 682 {*jcc}
+     (nil)
+ -> 799)
+(note 483 482 484 36 [bb 36] NOTE_INSN_BASIC_BLOCK)
+(insn 484 483 513 36 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALCWI.f":110 86 {*movsi_internal}
+     (nil))
+(code_label 513 484 485 37 29 (nil) [1 uses])
+(note 485 513 486 37 [bb 37] NOTE_INSN_BASIC_BLOCK)
+(insn 486 485 487 37 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALCWI.f":110 11 {*cmpsi_1}
+     (nil))
+(insn 487 486 488 37 (set (reg:QI 1 dx [529])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":110 678 {*setcc_qi}
+     (nil))
+(insn 488 487 489 37 (set (reg:SI 1 dx [orig:388 _363 ] [388])
+        (zero_extend:SI (reg:QI 1 dx [529]))) "CALCWI.f":110 140 {*zero_extendqisi2}
+     (nil))
+(insn 489 488 490 37 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:388 _363 ] [388])
+            (const_int 0 [0]))) "CALCWI.f":110 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 490 489 491 37 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 802)
+            (pc))) "CALCWI.f":110 682 {*jcc}
+     (nil)
+ -> 802)
+(note 491 490 492 38 [bb 38] NOTE_INSN_BASIC_BLOCK)
+(insn 492 491 493 38 (set (reg:SI 1 dx [530])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":111 86 {*movsi_internal}
+     (nil))
+(insn 493 492 494 38 (set (reg:DI 1 dx [orig:252 _166 ] [252])
+        (sign_extend:DI (reg:SI 1 dx [530]))) "CALCWI.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 494 493 495 38 (parallel [
+            (set (reg:DI 2 cx [orig:253 _167 ] [253])
+                (mult:DI (reg:DI 1 dx [orig:252 _166 ] [252])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":111 349 {*muldi3_1}
+     (nil))
+(insn 495 494 496 38 (set (reg:SI 1 dx [531])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":111 86 {*movsi_internal}
+     (nil))
+(insn 496 495 497 38 (set (reg:DI 1 dx [orig:254 _168 ] [254])
+        (sign_extend:DI (reg:SI 1 dx [531]))) "CALCWI.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 497 496 842 38 (parallel [
+            (set (reg:DI 1 dx [orig:255 _169 ] [255])
+                (plus:DI (reg:DI 1 dx [orig:254 _168 ] [254])
+                    (reg:DI 2 cx [orig:253 _167 ] [253])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":111 222 {*adddi_1}
+     (nil))
+(insn 842 497 499 38 (set (reg:DI 2 cx [orig:256 _170 ] [256])
+        (plus:DI (reg:DI 1 dx [orig:255 _169 ] [255])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":111 218 {*leadi}
+     (nil))
+(insn 499 842 843 38 (set (reg/f:DI 1 dx [532])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [3 clw+0 S8 A64])) "CALCWI.f":111 85 {*movdi_internal}
+     (nil))
+(insn 843 499 501 38 (set (reg:SF 21 xmm0 [533])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":111 131 {*movsf_internal}
+     (nil))
+(insn 501 843 502 38 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:256 _170 ] [256])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [532])) [2 *clw_364(D) S4 A32])
+        (reg:SF 21 xmm0 [533])) "CALCWI.f":111 131 {*movsf_internal}
+     (nil))
+(insn 502 501 503 38 (set (reg:SI 1 dx [534])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":112 86 {*movsi_internal}
+     (nil))
+(insn 503 502 504 38 (set (reg:DI 1 dx [orig:257 _171 ] [257])
+        (sign_extend:DI (reg:SI 1 dx [534]))) "CALCWI.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 504 503 505 38 (parallel [
+            (set (reg:DI 2 cx [orig:258 _172 ] [258])
+                (mult:DI (reg:DI 1 dx [orig:257 _171 ] [257])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":112 349 {*muldi3_1}
+     (nil))
+(insn 505 504 506 38 (set (reg:SI 1 dx [535])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":112 86 {*movsi_internal}
+     (nil))
+(insn 506 505 507 38 (set (reg:DI 1 dx [orig:259 _173 ] [259])
+        (sign_extend:DI (reg:SI 1 dx [535]))) "CALCWI.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 507 506 844 38 (parallel [
+            (set (reg:DI 1 dx [orig:260 _174 ] [260])
+                (plus:DI (reg:DI 1 dx [orig:259 _173 ] [259])
+                    (reg:DI 2 cx [orig:258 _172 ] [258])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":112 222 {*adddi_1}
+     (nil))
+(insn 844 507 509 38 (set (reg:DI 2 cx [orig:261 _175 ] [261])
+        (plus:DI (reg:DI 1 dx [orig:260 _174 ] [260])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":112 218 {*leadi}
+     (nil))
+(insn 509 844 845 38 (set (reg/f:DI 1 dx [536])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [3 cli+0 S8 A64])) "CALCWI.f":112 85 {*movdi_internal}
+     (nil))
+(insn 845 509 511 38 (set (reg:SF 21 xmm0 [537])
+        (const_double:SF 0.0 [0x0.0p+0])) "CALCWI.f":112 131 {*movsf_internal}
+     (nil))
+(insn 511 845 512 38 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:261 _175 ] [261])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [536])) [2 *cli_366(D) S4 A32])
+        (reg:SF 21 xmm0 [537])) "CALCWI.f":112 131 {*movsf_internal}
+     (nil))
+(insn 512 511 773 38 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":110 221 {*addsi_1}
+     (nil))
+(jump_insn 773 512 774 38 (set (pc)
+        (label_ref 513)) "CALCWI.f":110 683 {jump}
+     (nil)
+ -> 513)
+(barrier 774 773 802)
+(code_label 802 774 801 39 51 (nil) [1 uses])
+(note 801 802 803 39 [bb 39] NOTE_INSN_BASIC_BLOCK)
+(insn 803 801 518 39 (const_int 0 [0]) "CALCWI.f":112 718 {nop}
+     (nil))
+(insn 518 803 775 39 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":109 221 {*addsi_1}
+     (nil))
+(jump_insn 775 518 776 39 (set (pc)
+        (label_ref 519)) "CALCWI.f":109 683 {jump}
+     (nil)
+ -> 519)
+(barrier 776 775 799)
+(code_label 799 776 798 40 50 (nil) [1 uses])
+(note 798 799 800 40 [bb 40] NOTE_INSN_BASIC_BLOCK)
+(insn 800 798 524 40 (const_int 0 [0]) "CALCWI.f":110 718 {nop}
+     (nil))
+(insn 524 800 729 40 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+        (const_int 1 [0x1])) "CALCWI.f":116 86 {*movsi_internal}
+     (nil))
+(code_label 729 524 525 41 36 (nil) [1 uses])
+(note 525 729 526 41 [bb 41] NOTE_INSN_BASIC_BLOCK)
+(insn 526 525 527 41 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+            (const_int 38 [0x26]))) "CALCWI.f":116 11 {*cmpsi_1}
+     (nil))
+(insn 527 526 528 41 (set (reg:QI 0 ax [538])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":116 678 {*setcc_qi}
+     (nil))
+(insn 528 527 529 41 (set (reg:SI 0 ax [orig:389 _371 ] [389])
+        (zero_extend:SI (reg:QI 0 ax [538]))) "CALCWI.f":116 140 {*zero_extendqisi2}
+     (nil))
+(insn 529 528 530 41 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:389 _371 ] [389])
+            (const_int 0 [0]))) "CALCWI.f":116 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 530 529 531 41 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 805)
+            (pc))) "CALCWI.f":116 682 {*jcc}
+     (nil)
+ -> 805)
+(note 531 530 532 42 [bb 42] NOTE_INSN_BASIC_BLOCK)
+(insn 532 531 533 42 (set (reg:SI 1 dx [orig:390 _372 ] [390])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 16 [0x10]))) [1 parallel.jsta_m+0 S4 A128])) "CALCWI.f":119 86 {*movsi_internal}
+     (nil))
+(insn 533 532 534 42 (set (reg:SI 0 ax [orig:391 _373 ] [391])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f157d316990 parallel>)
+                    (const_int 20 [0x14]))) [1 parallel.jend_m+0 S4 A32])) "CALCWI.f":119 86 {*movsi_internal}
+     (nil))
+(insn 534 533 723 42 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:390 _372 ] [390])) "CALCWI.f":119 86 {*movsi_internal}
+     (nil))
+(code_label 723 534 535 43 35 (nil) [1 uses])
+(note 535 723 536 43 [bb 43] NOTE_INSN_BASIC_BLOCK)
+(insn 536 535 537 43 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:391 _373 ] [391]))) "CALCWI.f":119 11 {*cmpsi_1}
+     (nil))
+(insn 537 536 538 43 (set (reg:QI 1 dx [539])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":119 678 {*setcc_qi}
+     (nil))
+(insn 538 537 539 43 (set (reg:SI 1 dx [orig:392 _375 ] [392])
+        (zero_extend:SI (reg:QI 1 dx [539]))) "CALCWI.f":119 140 {*zero_extendqisi2}
+     (nil))
+(insn 539 538 540 43 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:392 _375 ] [392])
+            (const_int 0 [0]))) "CALCWI.f":119 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 540 539 541 43 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 808)
+            (pc))) "CALCWI.f":119 682 {*jcc}
+     (nil)
+ -> 808)
+(note 541 540 542 44 [bb 44] NOTE_INSN_BASIC_BLOCK)
+(insn 542 541 717 44 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 2 [0x2])) "CALCWI.f":120 86 {*movsi_internal}
+     (nil))
+(code_label 717 542 543 45 34 (nil) [1 uses])
+(note 543 717 544 45 [bb 45] NOTE_INSN_BASIC_BLOCK)
+(insn 544 543 545 45 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 118 [0x76]))) "CALCWI.f":120 11 {*cmpsi_1}
+     (nil))
+(insn 545 544 546 45 (set (reg:QI 1 dx [540])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALCWI.f":120 678 {*setcc_qi}
+     (nil))
+(insn 546 545 547 45 (set (reg:SI 1 dx [orig:393 _377 ] [393])
+        (zero_extend:SI (reg:QI 1 dx [540]))) "CALCWI.f":120 140 {*zero_extendqisi2}
+     (nil))
+(insn 547 546 548 45 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:393 _377 ] [393])
+            (const_int 0 [0]))) "CALCWI.f":120 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 548 547 549 45 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 811)
+            (pc))) "CALCWI.f":120 682 {*jcc}
+     (nil)
+ -> 811)
+(note 549 548 550 46 [bb 46] NOTE_INSN_BASIC_BLOCK)
+(insn 550 549 551 46 (set (reg:SI 1 dx [541])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 551 550 552 46 (set (reg:DI 1 dx [orig:262 _176 ] [262])
+        (sign_extend:DI (reg:SI 1 dx [541]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 552 551 553 46 (parallel [
+            (set (reg:DI 2 cx [orig:263 _177 ] [263])
+                (mult:DI (reg:DI 1 dx [orig:262 _176 ] [262])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 349 {*muldi3_1}
+     (nil))
+(insn 553 552 554 46 (set (reg:SI 1 dx [542])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 554 553 555 46 (set (reg:DI 1 dx [orig:264 _178 ] [264])
+        (sign_extend:DI (reg:SI 1 dx [542]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 555 554 556 46 (parallel [
+            (set (reg:DI 1 dx [orig:265 _179 ] [265])
+                (mult:DI (reg:DI 1 dx [orig:264 _178 ] [264])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 349 {*muldi3_1}
+     (nil))
+(insn 556 555 557 46 (parallel [
+            (set (reg:DI 2 cx [orig:266 _180 ] [266])
+                (plus:DI (reg:DI 2 cx [orig:263 _177 ] [263])
+                    (reg:DI 1 dx [orig:265 _179 ] [265])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 222 {*adddi_1}
+     (nil))
+(insn 557 556 558 46 (set (reg:SI 1 dx [543])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 558 557 559 46 (set (reg:DI 1 dx [orig:267 _181 ] [267])
+        (sign_extend:DI (reg:SI 1 dx [543]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 559 558 828 46 (parallel [
+            (set (reg:DI 1 dx [orig:268 _182 ] [268])
+                (plus:DI (reg:DI 1 dx [orig:267 _181 ] [267])
+                    (reg:DI 2 cx [orig:266 _180 ] [266])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 222 {*adddi_1}
+     (nil))
+(insn 828 559 561 46 (set (reg:DI 2 cx [orig:269 _183 ] [269])
+        (plus:DI (reg:DI 1 dx [orig:268 _182 ] [268])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":121 218 {*leadi}
+     (nil))
+(insn 561 828 562 46 (set (reg/f:DI 1 dx [544])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f157d30cbd0 extra>)) "CALCWI.f":121 85 {*movdi_internal}
+     (nil))
+(insn 562 561 563 46 (set (reg:SF 21 xmm0 [orig:270 _184 ] [270])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:269 _183 ] [269])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [544])) [2 extra.pint S4 A32])) "CALCWI.f":121 131 {*movsf_internal}
+     (nil))
+(insn 563 562 564 46 (set (reg:SI 1 dx [545])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 564 563 565 46 (parallel [
+            (set (reg:SI 1 dx [orig:271 _185 ] [271])
+                (plus:SI (reg:SI 1 dx [545])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 565 564 566 46 (set (reg:DI 1 dx [orig:272 _186 ] [272])
+        (sign_extend:DI (reg:SI 1 dx [orig:271 _185 ] [271]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 566 565 567 46 (parallel [
+            (set (reg:DI 2 cx [orig:273 _187 ] [273])
+                (mult:DI (reg:DI 1 dx [orig:272 _186 ] [272])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 349 {*muldi3_1}
+     (nil))
+(insn 567 566 568 46 (set (reg:SI 1 dx [546])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 568 567 569 46 (set (reg:DI 1 dx [orig:274 _188 ] [274])
+        (sign_extend:DI (reg:SI 1 dx [546]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 569 568 570 46 (parallel [
+            (set (reg:DI 1 dx [orig:275 _189 ] [275])
+                (mult:DI (reg:DI 1 dx [orig:274 _188 ] [274])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 349 {*muldi3_1}
+     (nil))
+(insn 570 569 571 46 (parallel [
+            (set (reg:DI 2 cx [orig:276 _190 ] [276])
+                (plus:DI (reg:DI 2 cx [orig:273 _187 ] [273])
+                    (reg:DI 1 dx [orig:275 _189 ] [275])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 222 {*adddi_1}
+     (nil))
+(insn 571 570 572 46 (set (reg:SI 1 dx [547])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":121 86 {*movsi_internal}
+     (nil))
+(insn 572 571 573 46 (set (reg:DI 1 dx [orig:277 _191 ] [277])
+        (sign_extend:DI (reg:SI 1 dx [547]))) "CALCWI.f":121 149 {*extendsidi2_rex64}
+     (nil))
+(insn 573 572 829 46 (parallel [
+            (set (reg:DI 1 dx [orig:278 _192 ] [278])
+                (plus:DI (reg:DI 1 dx [orig:277 _191 ] [277])
+                    (reg:DI 2 cx [orig:276 _190 ] [276])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":121 222 {*adddi_1}
+     (nil))
+(insn 829 573 575 46 (set (reg:DI 2 cx [orig:279 _193 ] [279])
+        (plus:DI (reg:DI 1 dx [orig:278 _192 ] [278])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":121 218 {*leadi}
+     (nil))
+(insn 575 829 576 46 (set (reg/f:DI 1 dx [548])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f157d30cbd0 extra>)) "CALCWI.f":121 85 {*movdi_internal}
+     (nil))
+(insn 576 575 577 46 (set (reg:SF 22 xmm1 [orig:280 _194 ] [280])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:279 _193 ] [279])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [548])) [2 extra.pint S4 A32])) "CALCWI.f":121 131 {*movsf_internal}
+     (nil))
+(insn 577 576 578 46 (set (reg:SF 21 xmm0 [orig:281 _195 ] [281])
+        (minus:SF (reg:SF 21 xmm0 [orig:270 _184 ] [270])
+            (reg:SF 22 xmm1 [orig:280 _194 ] [280]))) "CALCWI.f":121 841 {*fop_sf_1}
+     (nil))
+(insn 578 577 830 46 (set (reg:SF 22 xmm1 [orig:282 _196 ] [282])
+        (reg:SF 21 xmm0 [orig:281 _195 ] [281])) "CALCWI.f":121 131 {*movsf_internal}
+     (nil))
+(insn 830 578 831 46 (set (reg:V4SF 21 xmm0 [550])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC11") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "CALCWI.f":121 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 831 830 581 46 (set (reg:V4SF 21 xmm0 [549])
+        (xor:V4SF (reg:V4SF 21 xmm0 [550])
+            (reg:V4SF 22 xmm1 [orig:282 _196 ] [282]))) "CALCWI.f":121 1820 {*xorv4sf3}
+     (nil))
+(insn 581 831 582 46 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -84 [0xffffffffffffffac])) [2 dp+0 S4 A32])
+        (reg:SF 21 xmm0 [549])) "CALCWI.f":121 131 {*movsf_internal}
+     (nil))
+(insn 582 581 583 46 (set (reg:SI 1 dx [551])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 583 582 584 46 (set (reg:DI 1 dx [orig:283 _197 ] [283])
+        (sign_extend:DI (reg:SI 1 dx [551]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 584 583 585 46 (parallel [
+            (set (reg:DI 2 cx [orig:284 _198 ] [284])
+                (mult:DI (reg:DI 1 dx [orig:283 _197 ] [283])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 585 584 586 46 (set (reg:SI 1 dx [552])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 586 585 587 46 (set (reg:DI 1 dx [orig:285 _199 ] [285])
+        (sign_extend:DI (reg:SI 1 dx [552]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 587 586 832 46 (parallel [
+            (set (reg:DI 1 dx [orig:286 _200 ] [286])
+                (plus:DI (reg:DI 1 dx [orig:285 _199 ] [285])
+                    (reg:DI 2 cx [orig:284 _198 ] [284])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 832 587 589 46 (set (reg:DI 2 cx [orig:287 _201 ] [287])
+        (plus:DI (reg:DI 1 dx [orig:286 _200 ] [286])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":122 218 {*leadi}
+     (nil))
+(insn 589 832 590 46 (set (reg/f:DI 1 dx [553])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [3 clw+0 S8 A64])) "CALCWI.f":122 85 {*movdi_internal}
+     (nil))
+(insn 590 589 591 46 (set (reg:SF 22 xmm1 [orig:288 _202 ] [288])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:287 _201 ] [287])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [553])) [2 *clw_364(D) S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 591 590 592 46 (set (reg:SI 1 dx [554])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 592 591 593 46 (set (reg:DI 1 dx [orig:289 _203 ] [289])
+        (sign_extend:DI (reg:SI 1 dx [554]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 593 592 594 46 (parallel [
+            (set (reg:DI 2 cx [orig:290 _204 ] [290])
+                (mult:DI (reg:DI 1 dx [orig:289 _203 ] [289])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 594 593 595 46 (set (reg:SI 1 dx [555])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 595 594 596 46 (set (reg:DI 1 dx [orig:291 _205 ] [291])
+        (sign_extend:DI (reg:SI 1 dx [555]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 596 595 597 46 (parallel [
+            (set (reg:DI 1 dx [orig:292 _206 ] [292])
+                (mult:DI (reg:DI 1 dx [orig:291 _205 ] [291])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 597 596 598 46 (parallel [
+            (set (reg:DI 2 cx [orig:293 _207 ] [293])
+                (plus:DI (reg:DI 2 cx [orig:290 _204 ] [290])
+                    (reg:DI 1 dx [orig:292 _206 ] [292])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 598 597 599 46 (set (reg:SI 1 dx [556])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 599 598 600 46 (set (reg:DI 1 dx [orig:294 _208 ] [294])
+        (sign_extend:DI (reg:SI 1 dx [556]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 600 599 833 46 (parallel [
+            (set (reg:DI 1 dx [orig:295 _209 ] [295])
+                (plus:DI (reg:DI 1 dx [orig:294 _208 ] [294])
+                    (reg:DI 2 cx [orig:293 _207 ] [293])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 833 600 602 46 (set (reg:DI 2 cx [orig:296 _210 ] [296])
+        (plus:DI (reg:DI 1 dx [orig:295 _209 ] [295])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":122 218 {*leadi}
+     (nil))
+(insn 602 833 603 46 (set (reg/f:DI 1 dx [557])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":122 85 {*movdi_internal}
+     (nil))
+(insn 603 602 604 46 (set (reg:SF 23 xmm2 [orig:297 _211 ] [297])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:296 _210 ] [296])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [557])) [2 cldwtr.cwm S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 604 603 605 46 (set (reg:SI 1 dx [558])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 605 604 606 46 (set (reg:DI 1 dx [orig:298 _212 ] [298])
+        (sign_extend:DI (reg:SI 1 dx [558]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 606 605 607 46 (parallel [
+            (set (reg:DI 2 cx [orig:299 _213 ] [299])
+                (mult:DI (reg:DI 1 dx [orig:298 _212 ] [298])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 607 606 608 46 (set (reg:SI 1 dx [559])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 608 607 609 46 (set (reg:DI 1 dx [orig:300 _214 ] [300])
+        (sign_extend:DI (reg:SI 1 dx [559]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 609 608 610 46 (parallel [
+            (set (reg:DI 1 dx [orig:301 _215 ] [301])
+                (mult:DI (reg:DI 1 dx [orig:300 _214 ] [300])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 610 609 611 46 (parallel [
+            (set (reg:DI 2 cx [orig:302 _216 ] [302])
+                (plus:DI (reg:DI 2 cx [orig:299 _213 ] [299])
+                    (reg:DI 1 dx [orig:301 _215 ] [301])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 611 610 612 46 (set (reg:SI 1 dx [560])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 612 611 613 46 (set (reg:DI 1 dx [orig:303 _217 ] [303])
+        (sign_extend:DI (reg:SI 1 dx [560]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 613 612 834 46 (parallel [
+            (set (reg:DI 1 dx [orig:304 _218 ] [304])
+                (plus:DI (reg:DI 1 dx [orig:303 _217 ] [303])
+                    (reg:DI 2 cx [orig:302 _216 ] [302])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 834 613 615 46 (set (reg:DI 2 cx [orig:305 _219 ] [305])
+        (plus:DI (reg:DI 1 dx [orig:304 _218 ] [304])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":122 218 {*leadi}
+     (nil))
+(insn 615 834 616 46 (set (reg/f:DI 1 dx [561])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":122 85 {*movdi_internal}
+     (nil))
+(insn 616 615 617 46 (set (reg:SF 24 xmm3 [orig:306 _220 ] [306])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:305 _219 ] [305])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [561])) [2 iw S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 617 616 618 46 (set (reg:SF 21 xmm0 [562])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC9") [flags 0x2]) [0  S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 618 617 620 46 (set (reg:SF 21 xmm0 [orig:307 _221 ] [307])
+        (minus:SF (reg:SF 21 xmm0 [562])
+            (reg:SF 24 xmm3 [orig:306 _220 ] [306]))) "CALCWI.f":122 841 {*fop_sf_1}
+     (nil))
+(insn 620 618 621 46 (set (reg:SF 23 xmm2 [orig:309 _223 ] [309])
+        (mult:SF (reg:SF 23 xmm2 [orig:297 _211 ] [297])
+            (reg:SF 21 xmm0 [orig:308 _222 ] [308]))) "CALCWI.f":122 838 {*fop_sf_comm}
+     (nil))
+(insn 621 620 622 46 (set (reg:SI 1 dx [563])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 622 621 623 46 (set (reg:DI 1 dx [orig:310 _224 ] [310])
+        (sign_extend:DI (reg:SI 1 dx [563]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 623 622 624 46 (parallel [
+            (set (reg:DI 2 cx [orig:311 _225 ] [311])
+                (mult:DI (reg:DI 1 dx [orig:310 _224 ] [310])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 624 623 625 46 (set (reg:SI 1 dx [564])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 625 624 626 46 (set (reg:DI 1 dx [orig:312 _226 ] [312])
+        (sign_extend:DI (reg:SI 1 dx [564]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 626 625 627 46 (parallel [
+            (set (reg:DI 1 dx [orig:313 _227 ] [313])
+                (mult:DI (reg:DI 1 dx [orig:312 _226 ] [312])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 627 626 628 46 (parallel [
+            (set (reg:DI 2 cx [orig:314 _228 ] [314])
+                (plus:DI (reg:DI 2 cx [orig:311 _225 ] [311])
+                    (reg:DI 1 dx [orig:313 _227 ] [313])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 628 627 629 46 (set (reg:SI 1 dx [565])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 629 628 630 46 (set (reg:DI 1 dx [orig:315 _229 ] [315])
+        (sign_extend:DI (reg:SI 1 dx [565]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 630 629 835 46 (parallel [
+            (set (reg:DI 1 dx [orig:316 _230 ] [316])
+                (plus:DI (reg:DI 1 dx [orig:315 _229 ] [315])
+                    (reg:DI 2 cx [orig:314 _228 ] [314])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 835 630 632 46 (set (reg:DI 2 cx [orig:317 _231 ] [317])
+        (plus:DI (reg:DI 1 dx [orig:316 _230 ] [316])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":122 218 {*leadi}
+     (nil))
+(insn 632 835 633 46 (set (reg/f:DI 1 dx [566])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f157d316120 masks>)) "CALCWI.f":122 85 {*movdi_internal}
+     (nil))
+(insn 633 632 634 46 (parallel [
+            (set (reg:DI 2 cx [567])
+                (plus:DI (reg:DI 2 cx [orig:317 _231 ] [317])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 634 633 635 46 (set (reg:SF 21 xmm0 [orig:318 _232 ] [318])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [567])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [566])) [2 masks.htm S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 635 634 821 46 (set (reg:SF 21 xmm0 [orig:319 _233 ] [319])
+        (mult:SF (reg:SF 21 xmm0 [orig:318 _232 ] [318])
+            (reg:SF 23 xmm2 [orig:309 _223 ] [309]))) "CALCWI.f":122 838 {*fop_sf_comm}
+     (nil))
+(insn 821 635 637 46 (set (reg:SF 23 xmm2 [orig:320 _234 ] [320])
+        (reg:SF 21 xmm0 [orig:320 _234 ] [320])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 637 821 638 46 (set (reg:SF 23 xmm2 [orig:320 _234 ] [320])
+        (mult:SF (reg:SF 23 xmm2 [orig:320 _234 ] [320])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -84 [0xffffffffffffffac])) [2 dp+0 S4 A32]))) "CALCWI.f":122 838 {*fop_sf_comm}
+     (nil))
+(insn 638 637 639 46 (set (reg:SF 21 xmm0 [568])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC12") [flags 0x2]) [0  S4 A32])) "CALCWI.f":122 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0204081237316131591796875e-1 [0x0.d0fac6p-3])
+        (nil)))
+(insn 639 638 640 46 (set (reg:SF 21 xmm0 [orig:322 _236 ] [322])
+        (mult:SF (reg:SF 21 xmm0 [568])
+            (reg:SF 23 xmm2 [orig:321 _235 ] [321]))) "CALCWI.f":122 838 {*fop_sf_comm}
+     (nil))
+(insn 640 639 641 46 (set (reg:SI 1 dx [569])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 641 640 642 46 (set (reg:DI 1 dx [orig:323 _237 ] [323])
+        (sign_extend:DI (reg:SI 1 dx [569]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 642 641 643 46 (parallel [
+            (set (reg:DI 2 cx [orig:324 _238 ] [324])
+                (mult:DI (reg:DI 1 dx [orig:323 _237 ] [323])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 349 {*muldi3_1}
+     (nil))
+(insn 643 642 644 46 (set (reg:SI 1 dx [570])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":122 86 {*movsi_internal}
+     (nil))
+(insn 644 643 645 46 (set (reg:DI 1 dx [orig:325 _239 ] [325])
+        (sign_extend:DI (reg:SI 1 dx [570]))) "CALCWI.f":122 149 {*extendsidi2_rex64}
+     (nil))
+(insn 645 644 836 46 (parallel [
+            (set (reg:DI 1 dx [orig:326 _240 ] [326])
+                (plus:DI (reg:DI 1 dx [orig:325 _239 ] [325])
+                    (reg:DI 2 cx [orig:324 _238 ] [324])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":122 222 {*adddi_1}
+     (nil))
+(insn 836 645 647 46 (set (reg:DI 2 cx [orig:327 _241 ] [327])
+        (plus:DI (reg:DI 1 dx [orig:326 _240 ] [326])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":122 218 {*leadi}
+     (nil))
+(insn 647 836 648 46 (set (reg:SF 21 xmm0 [orig:328 _242 ] [328])
+        (plus:SF (reg:SF 21 xmm0 [orig:322 _236 ] [322])
+            (reg:SF 22 xmm1 [orig:288 _202 ] [288]))) "CALCWI.f":122 838 {*fop_sf_comm}
+     (nil))
+(insn 648 647 649 46 (set (reg/f:DI 1 dx [571])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [3 clw+0 S8 A64])) "CALCWI.f":122 85 {*movdi_internal}
+     (nil))
+(insn 649 648 650 46 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:327 _241 ] [327])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [571])) [2 *clw_364(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:328 _242 ] [328])) "CALCWI.f":122 131 {*movsf_internal}
+     (nil))
+(insn 650 649 651 46 (set (reg:SI 1 dx [572])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 651 650 652 46 (set (reg:DI 1 dx [orig:329 _243 ] [329])
+        (sign_extend:DI (reg:SI 1 dx [572]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 652 651 653 46 (parallel [
+            (set (reg:DI 2 cx [orig:330 _244 ] [330])
+                (mult:DI (reg:DI 1 dx [orig:329 _243 ] [329])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 653 652 654 46 (set (reg:SI 1 dx [573])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 654 653 655 46 (set (reg:DI 1 dx [orig:331 _245 ] [331])
+        (sign_extend:DI (reg:SI 1 dx [573]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 655 654 837 46 (parallel [
+            (set (reg:DI 1 dx [orig:332 _246 ] [332])
+                (plus:DI (reg:DI 1 dx [orig:331 _245 ] [331])
+                    (reg:DI 2 cx [orig:330 _244 ] [330])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 837 655 657 46 (set (reg:DI 2 cx [orig:333 _247 ] [333])
+        (plus:DI (reg:DI 1 dx [orig:332 _246 ] [332])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":123 218 {*leadi}
+     (nil))
+(insn 657 837 658 46 (set (reg/f:DI 1 dx [574])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [3 cli+0 S8 A64])) "CALCWI.f":123 85 {*movdi_internal}
+     (nil))
+(insn 658 657 659 46 (set (reg:SF 22 xmm1 [orig:334 _248 ] [334])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:333 _247 ] [333])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [574])) [2 *cli_366(D) S4 A32])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 659 658 660 46 (set (reg:SI 1 dx [575])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 660 659 661 46 (set (reg:DI 1 dx [orig:335 _249 ] [335])
+        (sign_extend:DI (reg:SI 1 dx [575]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 661 660 662 46 (parallel [
+            (set (reg:DI 2 cx [orig:336 _250 ] [336])
+                (mult:DI (reg:DI 1 dx [orig:335 _249 ] [335])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 662 661 663 46 (set (reg:SI 1 dx [576])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 663 662 664 46 (set (reg:DI 1 dx [orig:337 _251 ] [337])
+        (sign_extend:DI (reg:SI 1 dx [576]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 664 663 665 46 (parallel [
+            (set (reg:DI 1 dx [orig:338 _252 ] [338])
+                (mult:DI (reg:DI 1 dx [orig:337 _251 ] [337])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 665 664 666 46 (parallel [
+            (set (reg:DI 2 cx [orig:339 _253 ] [339])
+                (plus:DI (reg:DI 2 cx [orig:336 _250 ] [336])
+                    (reg:DI 1 dx [orig:338 _252 ] [338])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 666 665 667 46 (set (reg:SI 1 dx [577])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 667 666 668 46 (set (reg:DI 1 dx [orig:340 _254 ] [340])
+        (sign_extend:DI (reg:SI 1 dx [577]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 668 667 838 46 (parallel [
+            (set (reg:DI 1 dx [orig:341 _255 ] [341])
+                (plus:DI (reg:DI 1 dx [orig:340 _254 ] [340])
+                    (reg:DI 2 cx [orig:339 _253 ] [339])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 838 668 670 46 (set (reg:DI 2 cx [orig:342 _256 ] [342])
+        (plus:DI (reg:DI 1 dx [orig:341 _255 ] [341])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":123 218 {*leadi}
+     (nil))
+(insn 670 838 671 46 (set (reg/f:DI 1 dx [578])
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f158436dab0 cldwtr>)) "CALCWI.f":123 85 {*movdi_internal}
+     (nil))
+(insn 671 670 672 46 (set (reg:SF 21 xmm0 [orig:343 _257 ] [343])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:342 _256 ] [342])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [578])) [2 cldwtr.cwm S4 A32])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 672 671 673 46 (set (reg:SI 1 dx [579])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 673 672 674 46 (set (reg:DI 1 dx [orig:344 _258 ] [344])
+        (sign_extend:DI (reg:SI 1 dx [579]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 674 673 675 46 (parallel [
+            (set (reg:DI 2 cx [orig:345 _259 ] [345])
+                (mult:DI (reg:DI 1 dx [orig:344 _258 ] [344])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 675 674 676 46 (set (reg:SI 1 dx [580])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 676 675 677 46 (set (reg:DI 1 dx [orig:346 _260 ] [346])
+        (sign_extend:DI (reg:SI 1 dx [580]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 677 676 678 46 (parallel [
+            (set (reg:DI 1 dx [orig:347 _261 ] [347])
+                (mult:DI (reg:DI 1 dx [orig:346 _260 ] [346])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 678 677 679 46 (parallel [
+            (set (reg:DI 2 cx [orig:348 _262 ] [348])
+                (plus:DI (reg:DI 2 cx [orig:345 _259 ] [345])
+                    (reg:DI 1 dx [orig:347 _261 ] [347])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 679 678 680 46 (set (reg:SI 1 dx [581])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 680 679 681 46 (set (reg:DI 1 dx [orig:349 _263 ] [349])
+        (sign_extend:DI (reg:SI 1 dx [581]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 681 680 839 46 (parallel [
+            (set (reg:DI 1 dx [orig:350 _264 ] [350])
+                (plus:DI (reg:DI 1 dx [orig:349 _263 ] [349])
+                    (reg:DI 2 cx [orig:348 _262 ] [348])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 839 681 683 46 (set (reg:DI 2 cx [orig:351 _265 ] [351])
+        (plus:DI (reg:DI 1 dx [orig:350 _264 ] [350])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":123 218 {*leadi}
+     (nil))
+(insn 683 839 684 46 (set (reg/f:DI 1 dx [582])
+        (symbol_ref:DI ("iw.4109") [flags 0x202]  <var_decl 0x7f157d31ca20 iw>)) "CALCWI.f":123 85 {*movdi_internal}
+     (nil))
+(insn 684 683 686 46 (set (reg:SF 23 xmm2 [orig:352 _266 ] [352])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:351 _265 ] [351])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [582])) [2 iw S4 A32])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 686 684 687 46 (set (reg:SF 23 xmm2 [orig:354 _268 ] [354])
+        (mult:SF (reg:SF 23 xmm2 [orig:353 _267 ] [353])
+            (reg:SF 21 xmm0 [orig:343 _257 ] [343]))) "CALCWI.f":123 838 {*fop_sf_comm}
+     (nil))
+(insn 687 686 688 46 (set (reg:SI 1 dx [583])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 688 687 689 46 (set (reg:DI 1 dx [orig:355 _269 ] [355])
+        (sign_extend:DI (reg:SI 1 dx [583]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 689 688 690 46 (parallel [
+            (set (reg:DI 2 cx [orig:356 _270 ] [356])
+                (mult:DI (reg:DI 1 dx [orig:355 _269 ] [355])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 690 689 691 46 (set (reg:SI 1 dx [584])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 691 690 692 46 (set (reg:DI 1 dx [orig:357 _271 ] [357])
+        (sign_extend:DI (reg:SI 1 dx [584]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 692 691 693 46 (parallel [
+            (set (reg:DI 1 dx [orig:358 _272 ] [358])
+                (mult:DI (reg:DI 1 dx [orig:357 _271 ] [357])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 693 692 694 46 (parallel [
+            (set (reg:DI 2 cx [orig:359 _273 ] [359])
+                (plus:DI (reg:DI 2 cx [orig:356 _270 ] [356])
+                    (reg:DI 1 dx [orig:358 _272 ] [358])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 694 693 695 46 (set (reg:SI 1 dx [585])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 695 694 696 46 (set (reg:DI 1 dx [orig:360 _274 ] [360])
+        (sign_extend:DI (reg:SI 1 dx [585]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 696 695 840 46 (parallel [
+            (set (reg:DI 1 dx [orig:361 _275 ] [361])
+                (plus:DI (reg:DI 1 dx [orig:360 _274 ] [360])
+                    (reg:DI 2 cx [orig:359 _273 ] [359])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 840 696 698 46 (set (reg:DI 2 cx [orig:362 _276 ] [362])
+        (plus:DI (reg:DI 1 dx [orig:361 _275 ] [361])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALCWI.f":123 218 {*leadi}
+     (nil))
+(insn 698 840 699 46 (set (reg/f:DI 1 dx [586])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f157d316120 masks>)) "CALCWI.f":123 85 {*movdi_internal}
+     (nil))
+(insn 699 698 700 46 (parallel [
+            (set (reg:DI 2 cx [587])
+                (plus:DI (reg:DI 2 cx [orig:362 _276 ] [362])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 700 699 701 46 (set (reg:SF 21 xmm0 [orig:363 _277 ] [363])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [587])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [586])) [2 masks.htm S4 A32])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 701 700 823 46 (set (reg:SF 21 xmm0 [orig:364 _278 ] [364])
+        (mult:SF (reg:SF 21 xmm0 [orig:363 _277 ] [363])
+            (reg:SF 23 xmm2 [orig:354 _268 ] [354]))) "CALCWI.f":123 838 {*fop_sf_comm}
+     (nil))
+(insn 823 701 703 46 (set (reg:SF 23 xmm2 [orig:365 _279 ] [365])
+        (reg:SF 21 xmm0 [orig:365 _279 ] [365])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 703 823 704 46 (set (reg:SF 23 xmm2 [orig:365 _279 ] [365])
+        (mult:SF (reg:SF 23 xmm2 [orig:365 _279 ] [365])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -84 [0xffffffffffffffac])) [2 dp+0 S4 A32]))) "CALCWI.f":123 838 {*fop_sf_comm}
+     (nil))
+(insn 704 703 705 46 (set (reg:SF 21 xmm0 [588])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC12") [flags 0x2]) [0  S4 A32])) "CALCWI.f":123 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0204081237316131591796875e-1 [0x0.d0fac6p-3])
+        (nil)))
+(insn 705 704 706 46 (set (reg:SF 21 xmm0 [orig:367 _281 ] [367])
+        (mult:SF (reg:SF 21 xmm0 [588])
+            (reg:SF 23 xmm2 [orig:366 _280 ] [366]))) "CALCWI.f":123 838 {*fop_sf_comm}
+     (nil))
+(insn 706 705 707 46 (set (reg:SI 1 dx [589])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 707 706 708 46 (set (reg:DI 1 dx [orig:368 _282 ] [368])
+        (sign_extend:DI (reg:SI 1 dx [589]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 708 707 709 46 (parallel [
+            (set (reg:DI 2 cx [orig:369 _283 ] [369])
+                (mult:DI (reg:DI 1 dx [orig:368 _282 ] [368])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 349 {*muldi3_1}
+     (nil))
+(insn 709 708 710 46 (set (reg:SI 1 dx [590])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALCWI.f":123 86 {*movsi_internal}
+     (nil))
+(insn 710 709 711 46 (set (reg:DI 1 dx [orig:370 _284 ] [370])
+        (sign_extend:DI (reg:SI 1 dx [590]))) "CALCWI.f":123 149 {*extendsidi2_rex64}
+     (nil))
+(insn 711 710 841 46 (parallel [
+            (set (reg:DI 1 dx [orig:371 _285 ] [371])
+                (plus:DI (reg:DI 1 dx [orig:370 _284 ] [370])
+                    (reg:DI 2 cx [orig:369 _283 ] [369])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":123 222 {*adddi_1}
+     (nil))
+(insn 841 711 713 46 (set (reg:DI 2 cx [orig:372 _286 ] [372])
+        (plus:DI (reg:DI 1 dx [orig:371 _285 ] [371])
+            (const_int -120 [0xffffffffffffff88]))) "CALCWI.f":123 218 {*leadi}
+     (nil))
+(insn 713 841 714 46 (set (reg:SF 21 xmm0 [orig:373 _287 ] [373])
+        (plus:SF (reg:SF 21 xmm0 [orig:367 _281 ] [367])
+            (reg:SF 22 xmm1 [orig:334 _248 ] [334]))) "CALCWI.f":123 838 {*fop_sf_comm}
+     (nil))
+(insn 714 713 715 46 (set (reg/f:DI 1 dx [591])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -112 [0xffffffffffffff90])) [3 cli+0 S8 A64])) "CALCWI.f":123 85 {*movdi_internal}
+     (nil))
+(insn 715 714 716 46 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:372 _286 ] [372])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [591])) [2 *cli_366(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:373 _287 ] [373])) "CALCWI.f":123 131 {*movsf_internal}
+     (nil))
+(insn 716 715 777 46 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":120 221 {*addsi_1}
+     (nil))
+(jump_insn 777 716 778 46 (set (pc)
+        (label_ref 717)) "CALCWI.f":120 683 {jump}
+     (nil)
+ -> 717)
+(barrier 778 777 811)
+(code_label 811 778 810 47 54 (nil) [1 uses])
+(note 810 811 812 47 [bb 47] NOTE_INSN_BASIC_BLOCK)
+(insn 812 810 722 47 (const_int 0 [0]) "CALCWI.f":123 718 {nop}
+     (nil))
+(insn 722 812 779 47 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":119 221 {*addsi_1}
+     (nil))
+(jump_insn 779 722 780 47 (set (pc)
+        (label_ref 723)) "CALCWI.f":119 683 {jump}
+     (nil)
+ -> 723)
+(barrier 780 779 808)
+(code_label 808 780 807 48 53 (nil) [1 uses])
+(note 807 808 809 48 [bb 48] NOTE_INSN_BASIC_BLOCK)
+(insn 809 807 728 48 (const_int 0 [0]) "CALCWI.f":120 718 {nop}
+     (nil))
+(insn 728 809 781 48 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALCWI.f":116 221 {*addsi_1}
+     (nil))
+(jump_insn 781 728 782 48 (set (pc)
+        (label_ref 729)) "CALCWI.f":116 683 {jump}
+     (nil)
+ -> 729)
+(barrier 782 781 805)
+(code_label 805 782 804 49 52 (nil) [1 uses])
+(note 804 805 806 49 [bb 49] NOTE_INSN_BASIC_BLOCK)
+(insn 806 804 759 49 (const_int 0 [0]) "CALCWI.f":119 718 {nop}
+     (nil))
+(insn 759 806 880 49 (const_int 0 [0]) "CALCWI.f":134 718 {nop}
+     (nil))
+(note 880 759 881 49 NOTE_INSN_EPILOGUE_BEG)
+(insn 881 880 882 49 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 120 [0x78])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALCWI.f":135 -1
+     (nil))
+(insn 882 881 883 49 (set (reg:DI 3 bx)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "CALCWI.f":135 -1
+     (nil))
+(insn/f 883 882 884 49 (set (reg/f:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "CALCWI.f":135 -1
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 884 883 885 49 (simple_return) "CALCWI.f":135 -1
+     (nil)
+ -> simple_return)
+(barrier 885 884 813)
+(note 813 885 0 NOTE_INSN_DELETED)

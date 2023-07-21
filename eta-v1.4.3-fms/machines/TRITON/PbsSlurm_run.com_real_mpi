@@ -1,0 +1,10 @@
+##########################
+#SBATCH -o EtaFcst.out
+#SBATCH -e EtaFcst.err
+#SBATCH --nodes=NNodes
+#SBATCH --ntasks-per-node=NCpusNode
+#SBATCH -l walltime=12:00:00
+#SBATCH -p triton16
+#SBATCH -J FQNAME
+##########################
+

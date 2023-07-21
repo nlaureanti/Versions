@@ -1,0 +1,709 @@
+
+;; Function boundl (boundl_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+df_analyze called
+df_worklist_dataflow_doublequeue: n_basic_blocks 15 n_edges 18 count 31 (  2.1)
+scanning new insn with uid = 161.
+scanning new insn with uid = 162.
+scanning new insn with uid = 163.
+scanning new insn with uid = 156.
+scanning new insn with uid = 157.
+scanning new insn with uid = 158.
+
+
+try_optimize_cfg iteration 1
+
+Merging block 12 into block 11...
+changing bb of uid 126
+  from 12 to 11
+changing bb of uid 139
+  from 12 to 11
+Merged blocks 11 and 12.
+Merged 11 and 12 without moving.
+Merging block 14 into block 13...
+changing bb of uid 136
+  from 14 to 13
+changing bb of uid 160
+  unscanned insn
+changing bb of uid 161
+  from 14 to 13
+changing bb of uid 162
+  from 14 to 13
+changing bb of uid 163
+  from 14 to 13
+Merged blocks 13 and 14.
+Merged 13 and 14 without moving.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+starting the processing of deferred insns
+ending the processing of deferred insns
+
+
+boundl
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 17 [flags] 21 [xmm0] 22 [xmm1] 37 [r8] 38 [r9] 39 [r10]
+;;  ref usage 	r0={6d,11u} r1={10d,14u} r2={3d,3u} r4={41d,41u} r5={2d,2u} r6={3d,47u} r7={3d,15u} r17={25d,12u} r20={1d,1u} r21={5d,8u} r22={3d,4u} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r37={11d,11u} r38={2d} r39={1d} 
+;;    total ref usage 291{122d,169u,0e} in 115{115 regular + 0 call} insns.
+(note 1 0 10 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 37 [r8]
+;; lr  use 	 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 37 [r8]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 17 [flags] 38 [r9] 39 [r10]
+(note 10 1 156 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 156 10 157 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "BOUNDL.f":1 -1
+     (nil))
+(insn/f 157 156 158 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "BOUNDL.f":1 -1
+     (nil))
+(insn 158 157 159 2 (set (mem/v:BLK (scratch:DI) [0  A8])
+        (unspec:BLK [
+                (mem/v:BLK (scratch:DI) [0  A8])
+            ] UNSPEC_MEMORY_BLOCKAGE)) "BOUNDL.f":1 -1
+     (nil))
+(note 159 158 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 159 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 fld+0 S8 A64])
+        (reg:DI 5 di [ fld ])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [4 fmin+0 S8 A64])
+        (reg:DI 4 si [ fmin ])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [4 fmax+0 S8 A64])
+        (reg:DI 1 dx [ fmax ])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [5 im+0 S8 A64])
+        (reg:DI 2 cx [ im ])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [5 jm+0 S8 A64])
+        (reg:DI 37 r8 [ jm ])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(note 7 6 12 2 NOTE_INSN_FUNCTION_BEG)
+(insn 12 7 13 2 (set (reg/f:DI 0 ax [135])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [5 im+0 S8 A64])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 13 12 14 2 (set (reg:SI 0 ax [orig:87 _1 ] [87])
+        (mem:SI (reg/f:DI 0 ax [135]) [1 *im_39(D)+0 S4 A32])) "BOUNDL.f":1 86 {*movsi_internal}
+     (nil))
+(insn 14 13 15 2 (set (reg:DI 0 ax [136])
+        (sign_extend:DI (reg:SI 0 ax [orig:87 _1 ] [87]))) "BOUNDL.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 15 14 16 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])
+        (reg:DI 0 ax [136])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 16 15 18 2 (set (reg:DI 0 ax [orig:120 stride.2_41 ] [120])
+        (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 18 16 17 2 (set (reg:DI 1 dx [137])
+        (const_int 0 [0])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 17 18 19 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 0 ax [orig:120 stride.2_41 ] [120])
+            (const_int 0 [0]))) "BOUNDL.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 19 17 20 2 (set (reg:DI 0 ax [orig:121 stride.2_42 ] [121])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 0 ax [orig:120 stride.2_41 ] [120])
+            (reg:DI 1 dx [137]))) "BOUNDL.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 20 19 21 2 (set (reg/f:DI 1 dx [138])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [5 jm+0 S8 A64])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 21 20 22 2 (set (reg:SI 1 dx [orig:88 _2 ] [88])
+        (mem:SI (reg/f:DI 1 dx [138]) [1 *jm_43(D)+0 S4 A32])) "BOUNDL.f":1 86 {*movsi_internal}
+     (nil))
+(insn 22 21 23 2 (set (reg:DI 1 dx [139])
+        (sign_extend:DI (reg:SI 1 dx [orig:88 _2 ] [88]))) "BOUNDL.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 23 22 148 2 (set (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])
+        (reg:DI 1 dx [139])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 148 23 24 2 (set (reg:DI 1 dx [orig:122 size.4_45 ] [122])
+        (reg:DI 0 ax [orig:121 stride.2_42 ] [121])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 24 148 26 2 (parallel [
+            (set (reg:DI 1 dx [orig:122 size.4_45 ] [122])
+                (mult:DI (reg:DI 1 dx [orig:122 size.4_45 ] [122])
+                    (mem/c:DI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":1 349 {*muldi3_1}
+     (nil))
+(insn 26 24 25 2 (set (reg:DI 2 cx [140])
+        (const_int 0 [0])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 25 26 27 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 1 dx [orig:122 size.4_45 ] [122])
+            (const_int 0 [0]))) "BOUNDL.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 27 25 30 2 (set (reg:DI 1 dx [orig:123 size.4_46 ] [123])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 1 dx [orig:122 size.4_45 ] [122])
+            (reg:DI 2 cx [140]))) "BOUNDL.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 30 27 31 2 (set (reg:DI 38 r9 [orig:90 _4 ] [90])
+        (reg:DI 1 dx [orig:89 size.7_3 ] [89])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 31 30 150 2 (set (reg:DI 39 r10 [ _4+8 ])
+        (const_int 0 [0])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 150 31 35 2 (set (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+        (reg:DI 0 ax [orig:121 stride.2_42 ] [121])) "BOUNDL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 35 150 36 2 (set (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+        (not:DI (reg:DI 1 dx [orig:127 offset.3_50 ] [127]))) "BOUNDL.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 36 35 37 2 (set (reg:SI 4 si [orig:128 _51 ] [128])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f065e850870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "BOUNDL.f":57 86 {*movsi_internal}
+     (nil))
+(insn 37 36 38 2 (set (reg:SI 2 cx [orig:129 _52 ] [129])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f065e850870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "BOUNDL.f":57 86 {*movsi_internal}
+     (nil))
+(insn 38 37 127 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 4 si [orig:128 _51 ] [128])) "BOUNDL.f":57 86 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;;              11 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 2 [cx] 6 [bp] 7 [sp]
+;; lr  def 	 4 [si] 17 [flags]
+(code_label 127 38 39 3 7 (nil) [1 uses])
+(note 39 127 40 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 40 39 41 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 2 cx [orig:129 _52 ] [129]))) "BOUNDL.f":57 11 {*cmpsi_1}
+     (nil))
+(insn 41 40 42 3 (set (reg:QI 4 si [141])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":57 678 {*setcc_qi}
+     (nil))
+(insn 42 41 43 3 (set (reg:SI 4 si [orig:130 _54 ] [130])
+        (zero_extend:SI (reg:QI 4 si [141]))) "BOUNDL.f":57 140 {*zero_extendqisi2}
+     (nil))
+(insn 43 42 44 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 4 si [orig:130 _54 ] [130])
+            (const_int 0 [0]))) "BOUNDL.f":57 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 44 43 45 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 142)
+            (pc))) "BOUNDL.f":57 682 {*jcc}
+     (nil)
+ -> 142)
+;;  succ:       13
+;;              4 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp]
+;; lr  def 	 4 [si] 5 [di]
+(note 45 44 46 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 4 (set (reg/f:DI 4 si [142])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [5 im+0 S8 A64])) "BOUNDL.f":58 85 {*movdi_internal}
+     (nil))
+(insn 47 46 48 4 (set (reg:SI 5 di [orig:131 _55 ] [131])
+        (mem:SI (reg/f:DI 4 si [142]) [1 *im_39(D)+0 S4 A32])) "BOUNDL.f":58 86 {*movsi_internal}
+     (nil))
+(insn 48 47 121 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "BOUNDL.f":58 86 {*movsi_internal}
+     (nil))
+;;  succ:       5 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame]
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;;              10 [always] 
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 5 [di] 6 [bp] 7 [sp]
+;; lr  def 	 4 [si] 17 [flags]
+(code_label 121 48 49 5 6 (nil) [1 uses])
+(note 49 121 50 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 50 49 51 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 5 di [orig:131 _55 ] [131]))) "BOUNDL.f":58 11 {*cmpsi_1}
+     (nil))
+(insn 51 50 52 5 (set (reg:QI 4 si [143])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":58 678 {*setcc_qi}
+     (nil))
+(insn 52 51 53 5 (set (reg:SI 4 si [orig:132 _57 ] [132])
+        (zero_extend:SI (reg:QI 4 si [143]))) "BOUNDL.f":58 140 {*zero_extendqisi2}
+     (nil))
+(insn 53 52 54 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 4 si [orig:132 _57 ] [132])
+            (const_int 0 [0]))) "BOUNDL.f":58 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 54 53 55 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 145)
+            (pc))) "BOUNDL.f":58 682 {*jcc}
+     (nil)
+ -> 145)
+;;  succ:       11
+;;              6 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame]
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       5 (FALLTHRU)
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 0 [ax] 1 [dx] 6 [bp] 7 [sp]
+;; lr  def 	 4 [si] 17 [flags] 21 [xmm0] 22 [xmm1] 37 [r8]
+(note 55 54 56 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 56 55 57 6 (set (reg/f:DI 4 si [144])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [4 fmin+0 S8 A64])) "BOUNDL.f":59 85 {*movdi_internal}
+     (nil))
+(insn 57 56 58 6 (set (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118])
+        (mem:SF (reg/f:DI 4 si [144]) [7 *fmin_58(D)+0 S4 A32])) "BOUNDL.f":59 131 {*movsf_internal}
+     (nil))
+(insn 58 57 59 6 (set (reg:SI 4 si [145])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "BOUNDL.f":59 86 {*movsi_internal}
+     (nil))
+(insn 59 58 60 6 (set (reg:DI 4 si [orig:92 _6 ] [92])
+        (sign_extend:DI (reg:SI 4 si [145]))) "BOUNDL.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 60 59 155 6 (parallel [
+            (set (reg:DI 4 si [orig:93 _7 ] [93])
+                (mult:DI (reg:DI 4 si [orig:92 _6 ] [92])
+                    (reg:DI 0 ax [orig:121 stride.2_42 ] [121])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":59 349 {*muldi3_1}
+     (nil))
+(insn 155 60 62 6 (set (reg:DI 37 r8 [orig:94 _8 ] [94])
+        (plus:DI (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+            (reg:DI 4 si [orig:93 _7 ] [93]))) "BOUNDL.f":59 218 {*leadi}
+     (nil))
+(insn 62 155 63 6 (set (reg:SI 4 si [146])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "BOUNDL.f":59 86 {*movsi_internal}
+     (nil))
+(insn 63 62 64 6 (set (reg:DI 4 si [orig:95 _9 ] [95])
+        (sign_extend:DI (reg:SI 4 si [146]))) "BOUNDL.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 64 63 65 6 (parallel [
+            (set (reg:DI 37 r8 [orig:96 _10 ] [96])
+                (plus:DI (reg:DI 37 r8 [orig:94 _8 ] [94])
+                    (reg:DI 4 si [orig:95 _9 ] [95])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":59 222 {*adddi_1}
+     (nil))
+(insn 65 64 66 6 (set (reg/f:DI 4 si [147])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 fld+0 S8 A64])) "BOUNDL.f":59 85 {*movdi_internal}
+     (nil))
+(insn 66 65 67 6 (set (reg:SF 22 xmm1 [orig:133 _62 ] [133])
+        (mem:SF (plus:DI (mult:DI (reg:DI 37 r8 [orig:96 _10 ] [96])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 4 si [147])) [7 *fld_61(D) S4 A32])) "BOUNDL.f":59 131 {*movsf_internal}
+     (nil))
+(insn 67 66 68 6 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 22 xmm1 [orig:133 _62 ] [133])
+            (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118]))) "BOUNDL.f":59 53 {*cmpisf}
+     (nil))
+(insn 68 67 69 6 (set (reg:QI 4 si [148])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":59 678 {*setcc_qi}
+     (nil))
+(insn 69 68 70 6 (set (reg:SI 37 r8 [orig:97 _11 ] [97])
+        (zero_extend:SI (reg:QI 4 si [148]))) "BOUNDL.f":59 140 {*zero_extendqisi2}
+     (nil))
+(insn 70 69 71 6 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118])
+                    (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118]))
+            ] UNSPEC_NOTRAP)) "BOUNDL.f":59 54 {*cmpiusf}
+     (nil))
+(insn 71 70 72 6 (set (reg:QI 4 si [149])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":59 678 {*setcc_qi}
+     (nil))
+(insn 72 71 73 6 (set (reg:SI 4 si [orig:98 _12 ] [98])
+        (zero_extend:SI (reg:QI 4 si [149]))) "BOUNDL.f":59 140 {*zero_extendqisi2}
+     (nil))
+(insn 73 72 74 6 (parallel [
+            (set (reg:SI 4 si [orig:99 _13 ] [99])
+                (ior:SI (reg:SI 4 si [orig:98 _12 ] [98])
+                    (reg:SI 37 r8 [orig:97 _11 ] [97])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":59 450 {*iorsi_1}
+     (nil))
+(insn 74 73 75 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 4 si [orig:99 _13 ] [99])
+            (const_int 0 [0]))) "BOUNDL.f":59 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 75 74 76 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 77)
+            (pc))) "BOUNDL.f":59 682 {*jcc}
+     (nil)
+ -> 77)
+;;  succ:       7 (FALLTHRU)
+;;              8
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1]
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 22 [xmm1]
+;; lr  use 	 6 [bp] 7 [sp] 22 [xmm1]
+;; lr  def 	 21 [xmm0]
+(note 76 75 8 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 8 76 77 7 (set (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118])
+        (reg:SF 22 xmm1 [orig:133 _62 ] [133])) "BOUNDL.f":59 131 {*movsf_internal}
+     (nil))
+;;  succ:       8 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0]
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       6
+;;              7 (FALLTHRU)
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0]
+;; lr  use 	 0 [ax] 1 [dx] 6 [bp] 7 [sp] 21 [xmm0]
+;; lr  def 	 4 [si] 17 [flags] 21 [xmm0] 22 [xmm1] 37 [r8]
+(code_label 77 8 78 8 4 (nil) [1 uses])
+(note 78 77 79 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 79 78 80 8 (set (reg:SI 4 si [150])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "BOUNDL.f":59 86 {*movsi_internal}
+     (nil))
+(insn 80 79 81 8 (set (reg:DI 4 si [orig:100 _14 ] [100])
+        (sign_extend:DI (reg:SI 4 si [150]))) "BOUNDL.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 81 80 153 8 (parallel [
+            (set (reg:DI 4 si [orig:101 _15 ] [101])
+                (mult:DI (reg:DI 4 si [orig:100 _14 ] [100])
+                    (reg:DI 0 ax [orig:121 stride.2_42 ] [121])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":59 349 {*muldi3_1}
+     (nil))
+(insn 153 81 83 8 (set (reg:DI 37 r8 [orig:102 _16 ] [102])
+        (plus:DI (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+            (reg:DI 4 si [orig:101 _15 ] [101]))) "BOUNDL.f":59 218 {*leadi}
+     (nil))
+(insn 83 153 84 8 (set (reg:SI 4 si [151])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "BOUNDL.f":59 86 {*movsi_internal}
+     (nil))
+(insn 84 83 85 8 (set (reg:DI 4 si [orig:103 _17 ] [103])
+        (sign_extend:DI (reg:SI 4 si [151]))) "BOUNDL.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 85 84 86 8 (parallel [
+            (set (reg:DI 37 r8 [orig:104 _18 ] [104])
+                (plus:DI (reg:DI 37 r8 [orig:102 _16 ] [102])
+                    (reg:DI 4 si [orig:103 _17 ] [103])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":59 222 {*adddi_1}
+     (nil))
+(insn 86 85 87 8 (set (reg/f:DI 4 si [152])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 fld+0 S8 A64])) "BOUNDL.f":59 85 {*movdi_internal}
+     (nil))
+(insn 87 86 88 8 (set (mem:SF (plus:DI (mult:DI (reg:DI 37 r8 [orig:104 _18 ] [104])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 4 si [152])) [7 *fld_61(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:118 M.5_34 ] [118])) "BOUNDL.f":59 131 {*movsf_internal}
+     (nil))
+(insn 88 87 89 8 (set (reg:SI 4 si [153])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "BOUNDL.f":60 86 {*movsi_internal}
+     (nil))
+(insn 89 88 90 8 (set (reg:DI 4 si [orig:105 _19 ] [105])
+        (sign_extend:DI (reg:SI 4 si [153]))) "BOUNDL.f":60 149 {*extendsidi2_rex64}
+     (nil))
+(insn 90 89 154 8 (parallel [
+            (set (reg:DI 4 si [orig:106 _20 ] [106])
+                (mult:DI (reg:DI 4 si [orig:105 _19 ] [105])
+                    (reg:DI 0 ax [orig:121 stride.2_42 ] [121])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":60 349 {*muldi3_1}
+     (nil))
+(insn 154 90 92 8 (set (reg:DI 37 r8 [orig:107 _21 ] [107])
+        (plus:DI (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+            (reg:DI 4 si [orig:106 _20 ] [106]))) "BOUNDL.f":60 218 {*leadi}
+     (nil))
+(insn 92 154 93 8 (set (reg:SI 4 si [154])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "BOUNDL.f":60 86 {*movsi_internal}
+     (nil))
+(insn 93 92 94 8 (set (reg:DI 4 si [orig:108 _22 ] [108])
+        (sign_extend:DI (reg:SI 4 si [154]))) "BOUNDL.f":60 149 {*extendsidi2_rex64}
+     (nil))
+(insn 94 93 95 8 (parallel [
+            (set (reg:DI 37 r8 [orig:109 _23 ] [109])
+                (plus:DI (reg:DI 37 r8 [orig:107 _21 ] [107])
+                    (reg:DI 4 si [orig:108 _22 ] [108])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":60 222 {*adddi_1}
+     (nil))
+(insn 95 94 96 8 (set (reg/f:DI 4 si [155])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 fld+0 S8 A64])) "BOUNDL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 96 95 97 8 (set (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119])
+        (mem:SF (plus:DI (mult:DI (reg:DI 37 r8 [orig:109 _23 ] [109])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 4 si [155])) [7 *fld_61(D) S4 A32])) "BOUNDL.f":60 131 {*movsf_internal}
+     (nil))
+(insn 97 96 98 8 (set (reg/f:DI 4 si [156])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [4 fmax+0 S8 A64])) "BOUNDL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 98 97 99 8 (set (reg:SF 22 xmm1 [orig:134 _68 ] [134])
+        (mem:SF (reg/f:DI 4 si [156]) [7 *fmax_67(D)+0 S4 A32])) "BOUNDL.f":60 131 {*movsf_internal}
+     (nil))
+(insn 99 98 100 8 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119])
+            (reg:SF 22 xmm1 [orig:134 _68 ] [134]))) "BOUNDL.f":60 53 {*cmpisf}
+     (nil))
+(insn 100 99 101 8 (set (reg:QI 4 si [158])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":60 678 {*setcc_qi}
+     (nil))
+(insn 101 100 102 8 (set (reg:SI 37 r8 [orig:110 _24 ] [110])
+        (zero_extend:SI (reg:QI 4 si [158]))) "BOUNDL.f":60 140 {*zero_extendqisi2}
+     (nil))
+(insn 102 101 103 8 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119])
+                    (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119]))
+            ] UNSPEC_NOTRAP)) "BOUNDL.f":60 54 {*cmpiusf}
+     (nil))
+(insn 103 102 104 8 (set (reg:QI 4 si [159])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "BOUNDL.f":60 678 {*setcc_qi}
+     (nil))
+(insn 104 103 105 8 (set (reg:SI 4 si [orig:111 _25 ] [111])
+        (zero_extend:SI (reg:QI 4 si [159]))) "BOUNDL.f":60 140 {*zero_extendqisi2}
+     (nil))
+(insn 105 104 106 8 (parallel [
+            (set (reg:SI 4 si [orig:112 _26 ] [112])
+                (ior:SI (reg:SI 4 si [orig:111 _25 ] [111])
+                    (reg:SI 37 r8 [orig:110 _24 ] [110])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":60 450 {*iorsi_1}
+     (nil))
+(insn 106 105 107 8 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 4 si [orig:112 _26 ] [112])
+            (const_int 0 [0]))) "BOUNDL.f":60 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 107 106 108 8 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 109)
+            (pc))) "BOUNDL.f":60 682 {*jcc}
+     (nil)
+ -> 109)
+;;  succ:       9 (FALLTHRU)
+;;              10
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1]
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 10, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       8 (FALLTHRU)
+;; bb 9 artificial_defs: { }
+;; bb 9 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 22 [xmm1]
+;; lr  use 	 6 [bp] 7 [sp] 22 [xmm1]
+;; lr  def 	 21 [xmm0]
+(note 108 107 9 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 9 108 109 9 (set (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119])
+        (reg:SF 22 xmm1 [orig:134 _68 ] [134])) "BOUNDL.f":60 131 {*movsf_internal}
+     (nil))
+;;  succ:       10 (FALLTHRU)
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0]
+
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 9, next block 11, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       8
+;;              9 (FALLTHRU)
+;; bb 10 artificial_defs: { }
+;; bb 10 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0]
+;; lr  use 	 0 [ax] 1 [dx] 6 [bp] 7 [sp] 21 [xmm0]
+;; lr  def 	 4 [si] 17 [flags] 37 [r8]
+(code_label 109 9 110 10 5 (nil) [1 uses])
+(note 110 109 111 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 111 110 112 10 (set (reg:SI 4 si [160])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "BOUNDL.f":60 86 {*movsi_internal}
+     (nil))
+(insn 112 111 113 10 (set (reg:DI 4 si [orig:113 _27 ] [113])
+        (sign_extend:DI (reg:SI 4 si [160]))) "BOUNDL.f":60 149 {*extendsidi2_rex64}
+     (nil))
+(insn 113 112 152 10 (parallel [
+            (set (reg:DI 4 si [orig:114 _28 ] [114])
+                (mult:DI (reg:DI 4 si [orig:113 _27 ] [113])
+                    (reg:DI 0 ax [orig:121 stride.2_42 ] [121])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":60 349 {*muldi3_1}
+     (nil))
+(insn 152 113 115 10 (set (reg:DI 37 r8 [orig:115 _29 ] [115])
+        (plus:DI (reg:DI 1 dx [orig:127 offset.3_50 ] [127])
+            (reg:DI 4 si [orig:114 _28 ] [114]))) "BOUNDL.f":60 218 {*leadi}
+     (nil))
+(insn 115 152 116 10 (set (reg:SI 4 si [161])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "BOUNDL.f":60 86 {*movsi_internal}
+     (nil))
+(insn 116 115 117 10 (set (reg:DI 4 si [orig:116 _30 ] [116])
+        (sign_extend:DI (reg:SI 4 si [161]))) "BOUNDL.f":60 149 {*extendsidi2_rex64}
+     (nil))
+(insn 117 116 118 10 (parallel [
+            (set (reg:DI 37 r8 [orig:117 _31 ] [117])
+                (plus:DI (reg:DI 37 r8 [orig:115 _29 ] [115])
+                    (reg:DI 4 si [orig:116 _30 ] [116])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":60 222 {*adddi_1}
+     (nil))
+(insn 118 117 119 10 (set (reg/f:DI 4 si [162])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 fld+0 S8 A64])) "BOUNDL.f":60 85 {*movdi_internal}
+     (nil))
+(insn 119 118 120 10 (set (mem:SF (plus:DI (mult:DI (reg:DI 37 r8 [orig:117 _31 ] [117])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 4 si [162])) [7 *fld_61(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:119 M.6_35 ] [119])) "BOUNDL.f":60 131 {*movsf_internal}
+     (nil))
+(insn 120 119 137 10 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":58 221 {*addsi_1}
+     (nil))
+(jump_insn 137 120 138 10 (set (pc)
+        (label_ref 121)) "BOUNDL.f":58 683 {jump}
+     (nil)
+ -> 121)
+;;  succ:       5 [always] 
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 5 [di] 6 [bp] 7 [sp] 20 [frame]
+
+(barrier 138 137 145)
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 13, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       5
+;; bb 11 artificial_defs: { }
+;; bb 11 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp]
+;; lr  def 	
+(code_label 145 138 144 11 10 (nil) [1 uses])
+(note 144 145 146 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 146 144 126 11 (const_int 0 [0]) "BOUNDL.f":60 718 {nop}
+     (nil))
+(insn 126 146 139 11 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "BOUNDL.f":57 221 {*addsi_1}
+     (nil))
+(jump_insn 139 126 140 11 (set (pc)
+        (label_ref 127)) "BOUNDL.f":57 683 {jump}
+     (nil)
+ -> 127)
+;;  succ:       3 [always] 
+;; lr  out 	 0 [ax] 1 [dx] 2 [cx] 6 [bp] 7 [sp] 20 [frame]
+
+(barrier 140 139 142)
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 11, next block 1, flags: (REACHABLE, RTL, MODIFIED)
+;;  pred:       3
+;; bb 13 artificial_defs: { }
+;; bb 13 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp]
+;; lr  def 	
+(code_label 142 140 141 13 9 (nil) [1 uses])
+(note 141 142 143 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 143 141 136 13 (const_int 0 [0]) "BOUNDL.f":58 718 {nop}
+     (nil))
+(insn 136 143 160 13 (const_int 0 [0]) "BOUNDL.f":66 718 {nop}
+     (nil))
+(note 160 136 161 13 NOTE_INSN_EPILOGUE_BEG)
+(insn 161 160 162 13 (set (mem/v:BLK (scratch:DI) [0  A8])
+        (unspec:BLK [
+                (mem/v:BLK (scratch:DI) [0  A8])
+            ] UNSPEC_MEMORY_BLOCKAGE)) "BOUNDL.f":67 -1
+     (nil))
+(insn/f 162 161 163 13 (set (reg/f:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "BOUNDL.f":67 -1
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 163 162 164 13 (simple_return) "BOUNDL.f":67 -1
+     (nil)
+ -> simple_return)
+;;  succ:       EXIT [always] 
+;; lr  out 	 6 [bp] 7 [sp] 20 [frame]
+
+(barrier 164 163 147)
+(note 147 164 0 NOTE_INSN_DELETED)

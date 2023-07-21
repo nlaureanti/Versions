@@ -1,0 +1,3482 @@
+
+;; Function caldwp2 (caldwp2_, funcdef_no=0, decl_uid=3772, cgraph_uid=0, symbol_order=0)
+
+
+********** Local #1: **********
+
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=16, prev_offset=0)
+Can't eliminate 20 to 7 (offset=48, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 2:  (0) m  (1) re {*movdi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 3:  (0) m  (1) re {*movdi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 4:  (0) m  (1) re {*movdi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=4: Bad operand -- refuse
+          alt=5,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 5 in insn 5:  (0) m  (1) re {*movdi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 10:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 11:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 12:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 14:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 15:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 16:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 17:  (0) r {*cmpsi_ccno_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 20:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 22:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 23:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 24:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 25:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 28:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 29:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 30:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 31:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 32:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 33
+	 Choosing alt 0 in insn 33:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 34:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 35:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 36:  (0) v  (1) m {*movsf_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 37:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 38:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 39:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 40:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 41:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 42
+	 Choosing alt 0 in insn 42:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 43:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 44:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 45:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 46
+	 Choosing alt 1 in insn 46:  (0) x  (1) 0  (2) xm {*fop_sf_comm}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 47:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 48:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 49:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 50:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 51:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 52
+	 Choosing alt 0 in insn 52:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 53:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 54:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 55:  (0) v  (1) m {*movsf_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 56:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=0,losers=0,rld_nregs=0
+            alt=1,overall=6,losers=1 -- refuse
+	 Choosing alt 1 in insn 57:  (0) x  (1) 0  (2) xm {*fop_sf_comm}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 58:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 59
+	 Choosing alt 1 in insn 59:  (0) x  (1) 0  (2) xm {*fop_sf_comm}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 61:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 62:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 63:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 64:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 65:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 66
+	 Choosing alt 0 in insn 66:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 67:  (0) r  (1) r  (2) le {*adddi_1}
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 2 in insn 68:  (0) x  (1) 0  (2) xm {*fop_sf_1}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 69:  (0) r  (1) i {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=0,overall=1223,losers=3,rld_nregs=2
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=1,overall=613,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=615,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            1 Non-prefered reload: reject+=600
+          alt=4,overall=612,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=5: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=7,overall=21,losers=2,rld_nregs=1
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 70:  (0) m  (1) v {*movsf_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 71:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 72:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 73:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 74:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 75:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 76
+	 Choosing alt 0 in insn 76:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 77:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 78:  (0) r  (1) i {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 79:  (0) v  (1) m {*movsf_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 80:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 81:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 82:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 83:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 84:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 85
+	 Choosing alt 0 in insn 85:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 86:  (0) r  (1) r  (2) le {*adddi_1}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 87:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 88
+	 Choosing alt 1 in insn 88:  (0) x  (1) 0  (2) xm {*fop_sf_comm}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 89:  (0) r  (1) i {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=0,overall=1223,losers=3,rld_nregs=2
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=1,overall=613,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=615,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            1 Non-prefered reload: reject+=600
+          alt=4,overall=612,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=5: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=7,overall=21,losers=2,rld_nregs=1
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 90:  (0) m  (1) v {*movsf_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 91:  (0) v  (1) m {*movsf_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 92:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 93:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 94:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 95:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 96:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 97
+	 Choosing alt 0 in insn 97:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 98:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 99:  (0) r  (1) i {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 100:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 101:  (0) v  (1) vm {*cmpisf}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 102:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 103:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 104:  (0) v  (1) vm {*cmpiusf}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 105:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 106:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 107
+	 Choosing alt 0 in insn 107:  (0) =r  (1) %0  (2) rme {*iorsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 108:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 113:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 114:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 115:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 116:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 117:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 118
+	 Choosing alt 0 in insn 118:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 119:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 120:  (0) r  (1) i {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=0,overall=1223,losers=3,rld_nregs=2
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=1,overall=613,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=615,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            1 Non-prefered reload: reject+=600
+          alt=4,overall=612,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=5: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=7,overall=21,losers=2,rld_nregs=1
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 121:  (0) m  (1) v {*movsf_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 122:  (0) rm  (1) 0  (2) re {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 128:  (0) rm  (1) 0  (2) re {*addsi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 134:  (0) r  (1) rem {*movdi_internal}
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 2 in insn 135:  (0) r  (1) Z {*movdi_internal}
+          alt=2,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 2 in insn 136:  (0) r  (1) Z {*movdi_internal}
+            alt=2: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=3,overall=609,losers=1,rld_nregs=1
+          alt=4,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 4 in insn 138:  (0) r  (1) i {*movdi_internal}
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=1,overall=609,losers=1,rld_nregs=1
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=2,overall=609,losers=1,rld_nregs=1
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 139:  (0) q  (1) n {*movqi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 140:  (0) rBwBz {*call}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 141:  (0) =r  (1) g {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 142:  (0) =r  (1) g {*movsi_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=0,overall=609,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 143:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 145:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 146:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 147:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 148:  (0) r {*cmpsi_ccno_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+          alt=0,overall=9,losers=1,rld_nregs=1
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 151:  (0) m  (1) re {*movsi_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 153:  (0) rm  (1) re {*cmpsi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 154:  (0) =qm {*setcc_qi}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 155:  (0) =r  (1) qm {*zero_extendqisi2}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 156:  (0) r {*cmpsi_ccno_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 159:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 160:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 161:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 162:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 163:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 164
+	 Choosing alt 0 in insn 164:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 165:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 166:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 167:  (0) v  (1) m {*movsf_internal}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 168:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 169:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 170:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 171:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 172:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 173
+	 Choosing alt 0 in insn 173:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 174:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 175:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 176:  (0) v  (1) m {*movsf_internal}
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 177:  (0) v  (1) vm {*cmpisf}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 183:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 184:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 185:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 186:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 187:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 188
+	 Choosing alt 0 in insn 188:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 189:  (0) r  (1) r  (2) le {*adddi_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 190:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 191:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=0,losers=0,rld_nregs=0
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+	 Choosing alt 0 in insn 192:  (0) =r  (1) %rm  (2) K {*muldi3_1}
+          alt=0,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 0 in insn 193:  (0) =r  (1) g {*movsi_internal}
+            0 Costly loser: reject++
+            0 Small class reload: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Small class reload: reject+=3
+          alt=0,overall=20,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 1 in insn 194:  (0) r  (1) rm {*extendsidi2_rex64}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+          alt=2,overall=0,losers=0,rld_nregs=0
+          alt=0,overall=0,losers=0,rld_nregs=0
+  Commutative operand exchange in insn 195
+	 Choosing alt 0 in insn 195:  (0) =r  (1) %0  (2) rme {*adddi_1}
+          alt=0,overall=6,losers=1,rld_nregs=1
+          alt=1,overall=6,losers=1,rld_nregs=1
+            2 Matching alt: reject+=2
+            2 Non-pseudo reload: reject+=2
+            2 Non input pseudo reload: reject++
+            alt=2,overall=11,losers=1 -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=0,overall=11,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=11,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 3 in insn 196:  (0) r  (1) r  (2) le {*adddi_1}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 197:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+          alt=0,overall=614,losers=2,rld_nregs=1
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=623,losers=2 -- refuse
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non input pseudo reload: reject++
+            alt=3,overall=619,losers=2 -- refuse
+            Staticly defined alt reject+=6
+            0 Spill pseudo into memory: reject+=3
+            Using memory insn operand 0: reject+=3
+            0 Non input pseudo reload: reject++
+            1 Non-prefered reload: reject+=600
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=4,overall=628,losers=2 -- refuse
+            alt=5: Bad operand -- refuse
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+          alt=7,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 7 in insn 198:  (0) v  (1) m {*movsf_internal}
+            alt=2: Bad operand -- refuse
+          alt=3,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 3 in insn 199:  (0) r  (1) rem {*movdi_internal}
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=0,overall=1223,losers=3,rld_nregs=2
+            1 Costly loser: reject++
+            1 Non-prefered reload: reject+=600
+          alt=1,overall=613,losers=2,rld_nregs=1
+            0 Costly loser: reject++
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2: Bad operand -- refuse
+            Staticly defined alt reject+=6
+            0 Non-prefered reload: reject+=600
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=615,losers=1 -- refuse
+            Staticly defined alt reject+=6
+            1 Non-prefered reload: reject+=600
+          alt=4,overall=612,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=5: Bad operand -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            Cycle danger: overall += LRA_MAX_REJECT
+          alt=6,overall=609,losers=1,rld_nregs=1
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Spill pseudo into memory: reject+=3
+            Using memory insn operand 1: reject+=3
+          alt=7,overall=21,losers=2,rld_nregs=1
+          alt=8,overall=0,losers=0,rld_nregs=0
+	 Choosing alt 8 in insn 200:  (0) m  (1) v {*movsf_internal}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 203:  (0) rm  (1) 0  (2) re {*addsi_1}
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+          alt=0,overall=18,losers=2,rld_nregs=2
+          alt=1,overall=0,losers=0,rld_nregs=0
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=0,overall=9,losers=1 -- refuse
+            1 Matching alt: reject+=2
+            1 Non-pseudo reload: reject+=2
+            1 Non input pseudo reload: reject++
+            alt=1,overall=17,losers=2 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=2,overall=9,losers=1 -- refuse
+            0 Non-pseudo reload: reject+=2
+            0 Non input pseudo reload: reject++
+            alt=3,overall=9,losers=1 -- refuse
+	 Choosing alt 1 in insn 209:  (0) rm  (1) 0  (2) re {*addsi_1}
+	   Spilling non-eliminable hard regs: 6
+
+********** Inheritance #1: **********
+
+EBB 2
+EBB 3 4
+EBB 5 6 7
+EBB 8
+EBB 20
+EBB 9
+EBB 19
+EBB 10
+EBB 11 12
+EBB 13 14 15
+EBB 16
+EBB 22
+EBB 17
+EBB 21
+EBB 18
+
+********** Pseudo live ranges #1: **********
+
+  BB 18
+   Insn 222: point = 0, n_alt = -1
+  BB 21
+   Insn 239: point = 0, n_alt = -1
+  BB 11
+   Insn 149: point = 0, n_alt = -1
+   Insn 148: point = 0, n_alt = 0
+   Insn 147: point = 1, n_alt = 0
+   Insn 146: point = 3, n_alt = 0
+   Insn 145: point = 4, n_alt = 0
+  BB 17
+   Insn 229: point = 5, n_alt = -1
+   Insn 209: point = 5, n_alt = 1
+  BB 22
+   Insn 242: point = 6, n_alt = -1
+  BB 13
+   Insn 157: point = 7, n_alt = -1
+   Insn 156: point = 7, n_alt = 0
+   Insn 155: point = 8, n_alt = 0
+   Insn 154: point = 10, n_alt = 0
+   Insn 153: point = 11, n_alt = 0
+  BB 16
+   Insn 227: point = 12, n_alt = -1
+   Insn 203: point = 12, n_alt = 1
+  BB 15
+   Insn 200: point = 13, n_alt = 8
+   Insn 199: point = 14, n_alt = 3
+   Insn 198: point = 15, n_alt = 7
+   Insn 197: point = 17, n_alt = 3
+   Insn 196: point = 18, n_alt = 3
+   Insn 195: point = 20, n_alt = 0
+   Insn 194: point = 22, n_alt = 1
+   Insn 193: point = 24, n_alt = 0
+   Insn 192: point = 25, n_alt = 0
+   Insn 191: point = 27, n_alt = 1
+   Insn 190: point = 29, n_alt = 0
+   Insn 189: point = 30, n_alt = 3
+   Insn 188: point = 32, n_alt = 0
+   Insn 187: point = 34, n_alt = 1
+   Insn 186: point = 36, n_alt = 0
+   Insn 185: point = 37, n_alt = 0
+   Insn 184: point = 39, n_alt = 1
+   Insn 183: point = 41, n_alt = 0
+  BB 14
+   Insn 178: point = 43, n_alt = -1
+   Insn 177: point = 43, n_alt = 1
+   Insn 176: point = 44, n_alt = 7
+   Insn 175: point = 46, n_alt = 3
+   Insn 174: point = 47, n_alt = 3
+   Insn 173: point = 49, n_alt = 0
+   Insn 172: point = 51, n_alt = 1
+   Insn 171: point = 53, n_alt = 0
+   Insn 170: point = 54, n_alt = 0
+   Insn 169: point = 56, n_alt = 1
+   Insn 168: point = 58, n_alt = 0
+   Insn 167: point = 59, n_alt = 7
+   Insn 166: point = 61, n_alt = 3
+   Insn 165: point = 62, n_alt = 3
+   Insn 164: point = 64, n_alt = 0
+   Insn 163: point = 66, n_alt = 1
+   Insn 162: point = 68, n_alt = 0
+   Insn 161: point = 69, n_alt = 0
+   Insn 160: point = 71, n_alt = 1
+   Insn 159: point = 73, n_alt = 0
+  BB 12
+   Insn 151: point = 75, n_alt = 1
+  BB 10
+   Insn 143: point = 76, n_alt = 1
+   Insn 142: point = 77, n_alt = 0
+   Insn 141: point = 78, n_alt = 0
+   Insn 140: point = 79, n_alt = 0
+   Insn 139: point = 79, n_alt = 3
+   Insn 138: point = 79, n_alt = 4
+   Insn 137: point = 79, n_alt = -2
+   Insn 136: point = 80, n_alt = 2
+   Insn 135: point = 80, n_alt = 2
+   Insn 134: point = 80, n_alt = 3
+  BB 19
+   Insn 233: point = 81, n_alt = -1
+  BB 3
+   Insn 18: point = 81, n_alt = -1
+   Insn 17: point = 81, n_alt = 0
+   Insn 16: point = 82, n_alt = 0
+   Insn 15: point = 84, n_alt = 0
+   Insn 14: point = 85, n_alt = 0
+  BB 9
+   Insn 225: point = 86, n_alt = -1
+   Insn 128: point = 86, n_alt = 1
+  BB 20
+   Insn 236: point = 87, n_alt = -1
+  BB 5
+   Insn 26: point = 88, n_alt = -1
+   Insn 25: point = 88, n_alt = 0
+   Insn 24: point = 89, n_alt = 0
+   Insn 23: point = 91, n_alt = 0
+   Insn 22: point = 92, n_alt = 0
+  BB 8
+   Insn 223: point = 93, n_alt = -1
+   Insn 122: point = 93, n_alt = 1
+   Insn 121: point = 93, n_alt = 8
+   Insn 120: point = 94, n_alt = 4
+   Insn 119: point = 95, n_alt = 3
+   Insn 118: point = 97, n_alt = 0
+   Insn 117: point = 99, n_alt = 1
+   Insn 116: point = 101, n_alt = 0
+   Insn 115: point = 102, n_alt = 0
+   Insn 114: point = 104, n_alt = 1
+   Insn 113: point = 106, n_alt = 0
+  BB 7
+   Insn 7: point = 108, n_alt = -2
+  BB 6
+   Insn 109: point = 111, n_alt = -1
+   Insn 108: point = 111, n_alt = 0
+   Insn 107: point = 112, n_alt = 0
+   Insn 106: point = 114, n_alt = 0
+   Insn 105: point = 116, n_alt = 0
+   Insn 104: point = 117, n_alt = 1
+   Insn 103: point = 117, n_alt = 0
+   Insn 102: point = 119, n_alt = 0
+   Insn 101: point = 120, n_alt = 1
+   Insn 100: point = 120, n_alt = 7
+   Insn 99: point = 122, n_alt = 4
+   Insn 98: point = 123, n_alt = 3
+   Insn 97: point = 125, n_alt = 0
+   Insn 96: point = 127, n_alt = 1
+   Insn 95: point = 129, n_alt = 0
+   Insn 94: point = 130, n_alt = 0
+   Insn 93: point = 132, n_alt = 1
+   Insn 92: point = 134, n_alt = 0
+   Insn 91: point = 135, n_alt = 7
+   Insn 90: point = 136, n_alt = 8
+   Insn 89: point = 137, n_alt = 4
+   Insn 88: point = 138, n_alt = 1
+   Insn 87: point = 140, n_alt = 7
+   Insn 86: point = 141, n_alt = 3
+   Insn 85: point = 143, n_alt = 0
+   Insn 84: point = 145, n_alt = 1
+   Insn 83: point = 147, n_alt = 0
+   Insn 82: point = 148, n_alt = 0
+   Insn 81: point = 150, n_alt = 1
+   Insn 80: point = 152, n_alt = 0
+   Insn 79: point = 153, n_alt = 7
+   Insn 78: point = 155, n_alt = 4
+   Insn 77: point = 156, n_alt = 3
+   Insn 76: point = 158, n_alt = 0
+   Insn 75: point = 160, n_alt = 1
+   Insn 74: point = 162, n_alt = 0
+   Insn 73: point = 163, n_alt = 0
+   Insn 72: point = 165, n_alt = 1
+   Insn 71: point = 167, n_alt = 0
+   Insn 70: point = 168, n_alt = 8
+   Insn 69: point = 169, n_alt = 4
+   Insn 68: point = 170, n_alt = 2
+   Insn 67: point = 172, n_alt = 3
+   Insn 66: point = 174, n_alt = 0
+   Insn 65: point = 176, n_alt = 1
+   Insn 64: point = 178, n_alt = 0
+   Insn 63: point = 179, n_alt = 0
+   Insn 62: point = 181, n_alt = 1
+   Insn 61: point = 183, n_alt = 0
+   Insn 60: point = 184, n_alt = -2
+   Insn 59: point = 186, n_alt = 1
+   Insn 58: point = 188, n_alt = 7
+   Insn 57: point = 189, n_alt = 1
+   Insn 56: point = 191, n_alt = 7
+   Insn 55: point = 192, n_alt = 7
+   Insn 54: point = 194, n_alt = 3
+   Insn 53: point = 195, n_alt = 3
+   Insn 52: point = 197, n_alt = 0
+   Insn 51: point = 199, n_alt = 1
+   Insn 50: point = 201, n_alt = 0
+   Insn 49: point = 202, n_alt = 0
+   Insn 48: point = 204, n_alt = 1
+   Insn 47: point = 206, n_alt = 0
+   Insn 46: point = 207, n_alt = 1
+   Insn 45: point = 209, n_alt = 7
+   Insn 44: point = 211, n_alt = 3
+   Insn 43: point = 212, n_alt = 3
+   Insn 42: point = 214, n_alt = 0
+   Insn 41: point = 216, n_alt = 1
+   Insn 40: point = 218, n_alt = 0
+   Insn 39: point = 219, n_alt = 0
+   Insn 38: point = 221, n_alt = 1
+   Insn 37: point = 223, n_alt = 0
+   Insn 36: point = 224, n_alt = 7
+   Insn 35: point = 226, n_alt = 3
+   Insn 34: point = 227, n_alt = 3
+   Insn 33: point = 229, n_alt = 0
+   Insn 32: point = 231, n_alt = 1
+   Insn 31: point = 233, n_alt = 0
+   Insn 30: point = 234, n_alt = 0
+   Insn 29: point = 236, n_alt = 1
+   Insn 28: point = 238, n_alt = 0
+  BB 4
+   Insn 20: point = 240, n_alt = 1
+  BB 2
+   Insn 12: point = 241, n_alt = 1
+   Insn 11: point = 242, n_alt = 0
+   Insn 10: point = 243, n_alt = 0
+   Insn 5: point = 244, n_alt = 5
+   Insn 4: point = 244, n_alt = 5
+   Insn 3: point = 244, n_alt = 5
+   Insn 2: point = 244, n_alt = 5
+ r87: [235..236]
+ r88: [230..234]
+ r89: [230..231]
+ r90: [228..229]
+ r91: [225..227]
+ r92: [208..224]
+ r93: [220..221]
+ r94: [215..219]
+ r95: [215..216]
+ r96: [213..214]
+ r97: [210..212]
+ r98: [208..209]
+ r99: [171..207]
+ r100: [203..204]
+ r101: [198..202]
+ r102: [198..199]
+ r103: [196..197]
+ r104: [193..195]
+ r105: [190..192]
+ r106: [187..189]
+ r107: [185..186]
+ r108: [171..184]
+ r109: [180..181]
+ r110: [175..179]
+ r111: [175..176]
+ r112: [173..174]
+ r113: [168..172]
+ r114: [168..170]
+ r115: [164..165]
+ r116: [159..163]
+ r117: [159..160]
+ r118: [157..158]
+ r119: [154..156]
+ r120: [139..153]
+ r121: [149..150]
+ r122: [144..148]
+ r123: [144..145]
+ r124: [142..143]
+ r125: [136..141]
+ r126: [136..138]
+ r127: [131..132]
+ r128: [126..130]
+ r129: [126..127]
+ r130: [124..125]
+ r131: [121..123]
+ r132: [113..117]
+ r133: [113..114]
+ r134: [111..112]
+ r135: [103..104]
+ r136: [98..102]
+ r137: [98..99]
+ r138: [96..97]
+ r139: [93..95]
+ r140: [70..71]
+ r141: [65..69]
+ r142: [65..66]
+ r143: [63..64]
+ r144: [60..62]
+ r145: [43..59]
+ r146: [55..56]
+ r147: [50..54]
+ r148: [50..51]
+ r149: [48..49]
+ r150: [45..47]
+ r151: [43..44]
+ r152: [38..39]
+ r153: [33..37]
+ r154: [33..34]
+ r155: [31..32]
+ r156: [16..30]
+ r157: [26..27]
+ r158: [21..25]
+ r159: [21..22]
+ r160: [19..20]
+ r161: [13..18]
+ r162: [13..15]
+ r163: [111..135] [93..108]
+ r164: [241..243]
+ r165: [81..242]
+ r166: [81..82]
+ r167: [88..89]
+ r168: [109..120]
+ r169: [76..78]
+ r170: [0..77]
+ r171: [0..1]
+ r172: [7..8]
+ r173: [83..84]
+ r174: [90..91]
+ r175: [237..238]
+ r176: [232..233]
+ r177: [225..226]
+ r178: [222..223]
+ r179: [217..218]
+ r180: [210..211]
+ r181: [205..206]
+ r182: [200..201]
+ r183: [193..194]
+ r184: [190..191]
+ r185: [187..188]
+ r186: [182..183]
+ r187: [177..178]
+ r188: [168..169]
+ r189: [166..167]
+ r190: [161..162]
+ r191: [154..155]
+ r192: [151..152]
+ r193: [146..147]
+ r194: [139..140]
+ r195: [136..137]
+ r196: [133..134]
+ r197: [128..129]
+ r198: [121..122]
+ r199: [118..119]
+ r200: [115..116]
+ r201: [105..106]
+ r202: [100..101]
+ r203: [93..94]
+ r204: [79..80]
+ r205: [2..3]
+ r206: [9..10]
+ r207: [72..73]
+ r208: [67..68]
+ r209: [60..61]
+ r210: [57..58]
+ r211: [52..53]
+ r212: [45..46]
+ r213: [40..41]
+ r214: [35..36]
+ r215: [28..29]
+ r216: [23..24]
+ r217: [16..17]
+ r218: [13..14]
+Compressing live ranges: from 244 to 188 - 77%
+Ranges after the compression:
+ r87: [182..183]
+ r88: [178..181]
+ r89: [178..179]
+ r90: [176..177]
+ r91: [174..175]
+ r92: [160..173]
+ r93: [170..171]
+ r94: [166..169]
+ r95: [166..167]
+ r96: [164..165]
+ r97: [162..163]
+ r98: [160..161]
+ r99: [130..159]
+ r100: [156..157]
+ r101: [152..155]
+ r102: [152..153]
+ r103: [150..151]
+ r104: [148..149]
+ r105: [146..147]
+ r106: [144..145]
+ r107: [142..143]
+ r108: [130..141]
+ r109: [138..139]
+ r110: [134..137]
+ r111: [134..135]
+ r112: [132..133]
+ r113: [128..131]
+ r114: [128..129]
+ r115: [124..125]
+ r116: [120..123]
+ r117: [120..121]
+ r118: [118..119]
+ r119: [116..117]
+ r120: [104..115]
+ r121: [112..113]
+ r122: [108..111]
+ r123: [108..109]
+ r124: [106..107]
+ r125: [102..105]
+ r126: [102..103]
+ r127: [98..99]
+ r128: [94..97]
+ r129: [94..95]
+ r130: [92..93]
+ r131: [90..91]
+ r132: [84..87]
+ r133: [84..85]
+ r134: [82..83]
+ r135: [78..79]
+ r136: [74..77]
+ r137: [74..75]
+ r138: [72..73]
+ r139: [70..71]
+ r140: [54..55]
+ r141: [50..53]
+ r142: [50..51]
+ r143: [48..49]
+ r144: [46..47]
+ r145: [32..45]
+ r146: [42..43]
+ r147: [38..41]
+ r148: [38..39]
+ r149: [36..37]
+ r150: [34..35]
+ r151: [32..33]
+ r152: [28..29]
+ r153: [24..27]
+ r154: [24..25]
+ r155: [22..23]
+ r156: [10..21]
+ r157: [18..19]
+ r158: [14..17]
+ r159: [14..15]
+ r160: [12..13]
+ r161: [8..11]
+ r162: [8..9]
+ r163: [70..101]
+ r164: [186..187]
+ r165: [62..187]
+ r166: [62..63]
+ r167: [66..67]
+ r168: [82..89]
+ r169: [58..59]
+ r170: [0..59]
+ r171: [0..1]
+ r172: [4..5]
+ r173: [64..65]
+ r174: [68..69]
+ r175: [184..185]
+ r176: [180..181]
+ r177: [174..175]
+ r178: [172..173]
+ r179: [168..169]
+ r180: [162..163]
+ r181: [158..159]
+ r182: [154..155]
+ r183: [148..149]
+ r184: [146..147]
+ r185: [144..145]
+ r186: [140..141]
+ r187: [136..137]
+ r188: [128..129]
+ r189: [126..127]
+ r190: [122..123]
+ r191: [116..117]
+ r192: [114..115]
+ r193: [110..111]
+ r194: [104..105]
+ r195: [102..103]
+ r196: [100..101]
+ r197: [96..97]
+ r198: [90..91]
+ r199: [88..89]
+ r200: [86..87]
+ r201: [80..81]
+ r202: [76..77]
+ r203: [70..71]
+ r204: [60..61]
+ r205: [2..3]
+ r206: [6..7]
+ r207: [56..57]
+ r208: [52..53]
+ r209: [46..47]
+ r210: [44..45]
+ r211: [40..41]
+ r212: [34..35]
+ r213: [30..31]
+ r214: [26..27]
+ r215: [20..21]
+ r216: [16..17]
+ r217: [10..11]
+ r218: [8..9]
+
+********** Assignment #1: **********
+
+
+********** Undoing inheritance #1: **********
+
+
+********** Local #2: **********
+
+	   Spilling non-eliminable hard regs: 6
+	   Spilling non-eliminable hard regs: 6
+New elimination table:
+Can't eliminate 16 to 7 (offset=64, prev_offset=0)
+Can eliminate 16 to 6 (offset=16, prev_offset=16)
+Can't eliminate 20 to 7 (offset=48, prev_offset=0)
+Can eliminate 20 to 6 (offset=0, prev_offset=0)
+changing reg in insn 29
+changing reg in insn 30
+changing reg in insn 30
+changing reg in insn 32
+changing reg in insn 33
+changing reg in insn 34
+changing reg in insn 34
+changing reg in insn 36
+changing reg in insn 36
+changing reg in insn 38
+changing reg in insn 39
+changing reg in insn 39
+changing reg in insn 41
+changing reg in insn 42
+changing reg in insn 43
+changing reg in insn 43
+changing reg in insn 45
+changing reg in insn 45
+changing reg in insn 46
+changing reg in insn 68
+changing reg in insn 48
+changing reg in insn 49
+changing reg in insn 49
+changing reg in insn 51
+changing reg in insn 52
+changing reg in insn 53
+changing reg in insn 53
+changing reg in insn 55
+changing reg in insn 55
+changing reg in insn 57
+changing reg in insn 57
+changing reg in insn 59
+changing reg in insn 60
+changing reg in insn 60
+changing reg in insn 68
+changing reg in insn 62
+changing reg in insn 63
+changing reg in insn 63
+changing reg in insn 65
+changing reg in insn 66
+changing reg in insn 67
+changing reg in insn 67
+changing reg in insn 70
+changing reg in insn 68
+changing reg in insn 70
+changing reg in insn 72
+changing reg in insn 73
+changing reg in insn 73
+changing reg in insn 75
+changing reg in insn 76
+changing reg in insn 77
+changing reg in insn 77
+changing reg in insn 79
+changing reg in insn 79
+changing reg in insn 81
+changing reg in insn 82
+changing reg in insn 82
+changing reg in insn 84
+changing reg in insn 85
+changing reg in insn 86
+changing reg in insn 86
+changing reg in insn 90
+changing reg in insn 88
+changing reg in insn 90
+changing reg in insn 93
+changing reg in insn 94
+changing reg in insn 94
+changing reg in insn 96
+changing reg in insn 97
+changing reg in insn 98
+changing reg in insn 98
+changing reg in insn 100
+changing reg in insn 103
+changing reg in insn 106
+changing reg in insn 107
+changing reg in insn 108
+changing reg in insn 114
+changing reg in insn 115
+changing reg in insn 115
+changing reg in insn 117
+changing reg in insn 118
+changing reg in insn 119
+changing reg in insn 119
+changing reg in insn 121
+changing reg in insn 160
+changing reg in insn 161
+changing reg in insn 161
+changing reg in insn 163
+changing reg in insn 164
+changing reg in insn 165
+changing reg in insn 165
+changing reg in insn 167
+changing reg in insn 167
+changing reg in insn 177
+changing reg in insn 169
+changing reg in insn 170
+changing reg in insn 170
+changing reg in insn 172
+changing reg in insn 173
+changing reg in insn 174
+changing reg in insn 174
+changing reg in insn 176
+changing reg in insn 176
+changing reg in insn 177
+changing reg in insn 184
+changing reg in insn 185
+changing reg in insn 185
+changing reg in insn 187
+changing reg in insn 188
+changing reg in insn 189
+changing reg in insn 189
+changing reg in insn 198
+changing reg in insn 191
+changing reg in insn 192
+changing reg in insn 192
+changing reg in insn 194
+changing reg in insn 195
+changing reg in insn 196
+changing reg in insn 196
+changing reg in insn 200
+changing reg in insn 198
+changing reg in insn 200
+changing reg in insn 7
+changing reg in insn 91
+changing reg in insn 121
+changing reg in insn 104
+changing reg in insn 104
+changing reg in insn 101
+changing reg in insn 10
+changing reg in insn 12
+changing reg in insn 11
+changing reg in insn 14
+changing reg in insn 16
+changing reg in insn 17
+changing reg in insn 24
+changing reg in insn 25
+changing reg in insn 100
+changing reg in insn 7
+changing reg in insn 101
+changing reg in insn 141
+changing reg in insn 143
+changing reg in insn 142
+changing reg in insn 145
+changing reg in insn 147
+changing reg in insn 148
+changing reg in insn 155
+changing reg in insn 156
+changing reg in insn 15
+changing reg in insn 16
+changing reg in insn 23
+changing reg in insn 24
+changing reg in insn 28
+changing reg in insn 29
+changing reg in insn 31
+changing reg in insn 32
+changing reg in insn 35
+changing reg in insn 36
+changing reg in insn 37
+changing reg in insn 38
+changing reg in insn 40
+changing reg in insn 41
+changing reg in insn 44
+changing reg in insn 45
+changing reg in insn 47
+changing reg in insn 48
+changing reg in insn 50
+changing reg in insn 51
+changing reg in insn 54
+changing reg in insn 55
+changing reg in insn 56
+changing reg in insn 57
+changing reg in insn 58
+changing reg in insn 61
+changing reg in insn 62
+changing reg in insn 64
+changing reg in insn 65
+changing reg in insn 69
+changing reg in insn 70
+changing reg in insn 71
+changing reg in insn 72
+changing reg in insn 74
+changing reg in insn 75
+changing reg in insn 78
+changing reg in insn 79
+changing reg in insn 80
+changing reg in insn 81
+changing reg in insn 83
+changing reg in insn 84
+changing reg in insn 87
+changing reg in insn 89
+changing reg in insn 90
+changing reg in insn 92
+changing reg in insn 93
+changing reg in insn 95
+changing reg in insn 96
+changing reg in insn 99
+changing reg in insn 100
+changing reg in insn 102
+changing reg in insn 103
+changing reg in insn 105
+changing reg in insn 106
+changing reg in insn 113
+changing reg in insn 114
+changing reg in insn 116
+changing reg in insn 117
+changing reg in insn 120
+changing reg in insn 121
+changing reg in insn 134
+changing reg in insn 137
+changing reg in insn 146
+changing reg in insn 147
+changing reg in insn 154
+changing reg in insn 155
+changing reg in insn 159
+changing reg in insn 160
+changing reg in insn 162
+changing reg in insn 163
+changing reg in insn 166
+changing reg in insn 167
+changing reg in insn 168
+changing reg in insn 169
+changing reg in insn 171
+changing reg in insn 172
+changing reg in insn 175
+changing reg in insn 176
+changing reg in insn 183
+changing reg in insn 184
+changing reg in insn 186
+changing reg in insn 187
+changing reg in insn 190
+changing reg in insn 191
+changing reg in insn 193
+changing reg in insn 194
+changing reg in insn 197
+changing reg in insn 198
+changing reg in insn 199
+changing reg in insn 200
+deleting insn with uid = 60.
+starting the processing of deferred insns
+ending the processing of deferred insns
+verify found no changes in insn with uid = 140.
+
+
+caldwp2
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 21 [xmm0] 22 [xmm1] 23 [xmm2]
+;;  ref usage 	r0={6d,4u} r1={89d,88u} r2={27d,26u} r4={4d,3u} r5={3d,2u} r6={1d,74u} r7={1d,23u} r8={1d} r9={1d} r10={1d} r11={1d} r12={1d} r13={1d} r14={1d} r15={1d} r17={54d,12u} r18={1d} r19={1d} r20={1d,1u} r21={11d,11u} r22={9d,8u} r23={4d,2u} r24={2d} r25={2d} r26={2d} r27={2d} r28={2d} r29={1d} r30={1d} r31={1d} r32={1d} r33={1d} r34={1d} r35={1d} r36={1d} r37={2d} r38={2d} r39={1d} r40={1d} r45={1d} r46={1d} r47={1d} r48={1d} r49={1d} r50={1d} r51={1d} r52={1d} r53={1d} r54={1d} r55={1d} r56={1d} r57={1d} r58={1d} r59={1d} r60={1d} r61={1d} r62={1d} r63={1d} r64={1d} r65={1d} r66={1d} r67={1d} r68={1d} r69={1d} r70={1d} r71={1d} r72={1d} r73={1d} r74={1d} r75={1d} r76={1d} r77={1d} r78={1d} r79={1d} r80={1d} 
+;;    total ref usage 534{280d,254u,0e} in 181{180 regular + 1 call} insns.
+(note 1 0 8 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+;; bb 2 artificial_defs: { }
+;; bb 2 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 164 165
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [2 p1d+0 S8 A64])
+        (reg:DI 5 di [ p1d ])) "CALDWP2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 q1d+0 S8 A64])
+        (reg:DI 4 si [ q1d ])) "CALDWP2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 tdwp+0 S8 A64])
+        (reg:DI 1 dx [ tdwp ])) "CALDWP2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 t1d+0 S8 A64])
+        (reg:DI 2 cx [ t1d ])) "CALDWP2.f":1 85 {*movdi_internal}
+     (nil))
+(note 6 5 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 6 11 2 (set (reg:SI 1 dx [orig:164 _88 ] [164])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fc679a00870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALDWP2.f":68 86 {*movsi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 0 ax [orig:165 _89 ] [165])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fc679a00870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALDWP2.f":68 86 {*movsi_internal}
+     (nil))
+(insn 12 11 129 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:164 _88 ] [164])) "CALDWP2.f":68 86 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+;;              9 [always] 
+;; bb 3 artificial_defs: { }
+;; bb 3 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  def 	 17 [flags] 166 173
+(code_label 129 12 13 3 6 (nil) [1 uses])
+(note 13 129 14 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:165 _89 ] [165]))) "CALDWP2.f":68 11 {*cmpsi_1}
+     (nil))
+(insn 15 14 16 3 (set (reg:QI 1 dx [173])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":68 678 {*setcc_qi}
+     (nil))
+(insn 16 15 17 3 (set (reg:SI 1 dx [orig:166 _91 ] [166])
+        (zero_extend:SI (reg:QI 1 dx [173]))) "CALDWP2.f":68 140 {*zero_extendqisi2}
+     (nil))
+(insn 17 16 18 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:166 _91 ] [166])
+            (const_int 0 [0]))) "CALDWP2.f":68 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 18 17 19 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 232)
+            (pc))) "CALDWP2.f":68 682 {*jcc}
+     (nil)
+ -> 232)
+;;  succ:       19
+;;              4 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+;; bb 4 artificial_defs: { }
+;; bb 4 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(note 19 18 20 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 123 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALDWP2.f":69 86 {*movsi_internal}
+     (nil))
+;;  succ:       5 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+;;              8 [always] 
+;; bb 5 artificial_defs: { }
+;; bb 5 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 167 174
+(code_label 123 20 21 5 5 (nil) [1 uses])
+(note 21 123 22 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 22 21 23 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALDWP2.f":69 11 {*cmpsi_1}
+     (nil))
+(insn 23 22 24 5 (set (reg:QI 1 dx [174])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":69 678 {*setcc_qi}
+     (nil))
+(insn 24 23 25 5 (set (reg:SI 1 dx [orig:167 _93 ] [167])
+        (zero_extend:SI (reg:QI 1 dx [174]))) "CALDWP2.f":69 140 {*zero_extendqisi2}
+     (nil))
+(insn 25 24 26 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:167 _93 ] [167])
+            (const_int 0 [0]))) "CALDWP2.f":69 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 26 25 27 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 235)
+            (pc))) "CALDWP2.f":69 682 {*jcc}
+     (nil)
+ -> 235)
+;;  succ:       20
+;;              6 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (RTL, MODIFIED)
+;;  pred:       5 (FALLTHRU)
+;; bb 6 artificial_defs: { }
+;; bb 6 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 163 168 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200
+(note 27 26 28 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 6 (set (reg:SI 1 dx [175])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 29 28 30 6 (set (reg:DI 1 dx [orig:87 _1 ] [87])
+        (sign_extend:DI (reg:SI 1 dx [175]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:DI 2 cx [orig:88 _2 ] [88])
+                (mult:DI (reg:DI 1 dx [orig:87 _1 ] [87])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 349 {*muldi3_1}
+     (nil))
+(insn 31 30 32 6 (set (reg:SI 1 dx [176])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 32 31 33 6 (set (reg:DI 1 dx [orig:89 _3 ] [89])
+        (sign_extend:DI (reg:SI 1 dx [176]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 33 32 34 6 (parallel [
+            (set (reg:DI 1 dx [orig:90 _4 ] [90])
+                (plus:DI (reg:DI 1 dx [orig:89 _3 ] [89])
+                    (reg:DI 2 cx [orig:88 _2 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 34 33 35 6 (parallel [
+            (set (reg:DI 2 cx [orig:91 _5 ] [91])
+                (plus:DI (reg:DI 1 dx [orig:90 _4 ] [90])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 35 34 36 6 (set (reg/f:DI 1 dx [177])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [2 p1d+0 S8 A64])) "CALDWP2.f":70 85 {*movdi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:SF 22 xmm1 [orig:92 _6 ] [92])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:91 _5 ] [91])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [177])) [4 *p1d_94(D) S4 A32])) "CALDWP2.f":70 131 {*movsf_internal}
+     (nil))
+(insn 37 36 38 6 (set (reg:SI 1 dx [178])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 38 37 39 6 (set (reg:DI 1 dx [orig:93 _7 ] [93])
+        (sign_extend:DI (reg:SI 1 dx [178]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 39 38 40 6 (parallel [
+            (set (reg:DI 2 cx [orig:94 _8 ] [94])
+                (mult:DI (reg:DI 1 dx [orig:93 _7 ] [93])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 349 {*muldi3_1}
+     (nil))
+(insn 40 39 41 6 (set (reg:SI 1 dx [179])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 41 40 42 6 (set (reg:DI 1 dx [orig:95 _9 ] [95])
+        (sign_extend:DI (reg:SI 1 dx [179]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 42 41 43 6 (parallel [
+            (set (reg:DI 1 dx [orig:96 _10 ] [96])
+                (plus:DI (reg:DI 1 dx [orig:95 _9 ] [95])
+                    (reg:DI 2 cx [orig:94 _8 ] [94])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 43 42 44 6 (parallel [
+            (set (reg:DI 2 cx [orig:97 _11 ] [97])
+                (plus:DI (reg:DI 1 dx [orig:96 _10 ] [96])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 44 43 45 6 (set (reg/f:DI 1 dx [180])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 q1d+0 S8 A64])) "CALDWP2.f":70 85 {*movdi_internal}
+     (nil))
+(insn 45 44 46 6 (set (reg:SF 21 xmm0 [orig:98 _12 ] [98])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:97 _11 ] [97])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [180])) [4 *q1d_95(D) S4 A32])) "CALDWP2.f":70 131 {*movsf_internal}
+     (nil))
+(insn 46 45 47 6 (set (reg:SF 21 xmm0 [orig:99 _13 ] [99])
+        (mult:SF (reg:SF 21 xmm0 [orig:98 _12 ] [98])
+            (reg:SF 22 xmm1 [orig:92 _6 ] [92]))) "CALDWP2.f":70 838 {*fop_sf_comm}
+     (nil))
+(insn 47 46 48 6 (set (reg:SI 1 dx [181])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 48 47 49 6 (set (reg:DI 1 dx [orig:100 _14 ] [100])
+        (sign_extend:DI (reg:SI 1 dx [181]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 49 48 50 6 (parallel [
+            (set (reg:DI 2 cx [orig:101 _15 ] [101])
+                (mult:DI (reg:DI 1 dx [orig:100 _14 ] [100])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 349 {*muldi3_1}
+     (nil))
+(insn 50 49 51 6 (set (reg:SI 1 dx [182])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 51 50 52 6 (set (reg:DI 1 dx [orig:102 _16 ] [102])
+        (sign_extend:DI (reg:SI 1 dx [182]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 52 51 53 6 (parallel [
+            (set (reg:DI 1 dx [orig:103 _17 ] [103])
+                (plus:DI (reg:DI 1 dx [orig:102 _16 ] [102])
+                    (reg:DI 2 cx [orig:101 _15 ] [101])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 53 52 54 6 (parallel [
+            (set (reg:DI 2 cx [orig:104 _18 ] [104])
+                (plus:DI (reg:DI 1 dx [orig:103 _17 ] [103])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 54 53 55 6 (set (reg/f:DI 1 dx [183])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 q1d+0 S8 A64])) "CALDWP2.f":70 85 {*movdi_internal}
+     (nil))
+(insn 55 54 56 6 (set (reg:SF 23 xmm2 [orig:105 _19 ] [105])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:104 _18 ] [104])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [183])) [4 *q1d_95(D) S4 A32])) "CALDWP2.f":70 131 {*movsf_internal}
+     (nil))
+(insn 56 55 57 6 (set (reg:SF 22 xmm1 [184])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALDWP2.f":70 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 3.780210018157958984375e-1 [0x0.c18bf8p-1])
+        (nil)))
+(insn 57 56 58 6 (set (reg:SF 23 xmm2 [orig:106 _20 ] [106])
+        (mult:SF (reg:SF 23 xmm2 [orig:105 _19 ] [105])
+            (reg:SF 22 xmm1 [184]))) "CALDWP2.f":70 838 {*fop_sf_comm}
+     (nil))
+(insn 58 57 59 6 (set (reg:SF 22 xmm1 [185])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALDWP2.f":70 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 6.219789981842041015625e-1 [0x0.9f3a04p+0])
+        (nil)))
+(insn 59 58 61 6 (set (reg:SF 22 xmm1 [orig:107 _21 ] [107])
+        (plus:SF (reg:SF 22 xmm1 [185])
+            (reg:SF 23 xmm2 [orig:106 _20 ] [106]))) "CALDWP2.f":70 838 {*fop_sf_comm}
+     (nil))
+(insn 61 59 62 6 (set (reg:SI 1 dx [186])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 62 61 63 6 (set (reg:DI 1 dx [orig:109 _23 ] [109])
+        (sign_extend:DI (reg:SI 1 dx [186]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 63 62 64 6 (parallel [
+            (set (reg:DI 2 cx [orig:110 _24 ] [110])
+                (mult:DI (reg:DI 1 dx [orig:109 _23 ] [109])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 349 {*muldi3_1}
+     (nil))
+(insn 64 63 65 6 (set (reg:SI 1 dx [187])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":70 86 {*movsi_internal}
+     (nil))
+(insn 65 64 66 6 (set (reg:DI 1 dx [orig:111 _25 ] [111])
+        (sign_extend:DI (reg:SI 1 dx [187]))) "CALDWP2.f":70 149 {*extendsidi2_rex64}
+     (nil))
+(insn 66 65 67 6 (parallel [
+            (set (reg:DI 1 dx [orig:112 _26 ] [112])
+                (plus:DI (reg:DI 1 dx [orig:111 _25 ] [111])
+                    (reg:DI 2 cx [orig:110 _24 ] [110])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 67 66 68 6 (parallel [
+            (set (reg:DI 2 cx [orig:113 _27 ] [113])
+                (plus:DI (reg:DI 1 dx [orig:112 _26 ] [112])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":70 222 {*adddi_1}
+     (nil))
+(insn 68 67 69 6 (set (reg:SF 21 xmm0 [orig:114 _28 ] [114])
+        (div:SF (reg:SF 21 xmm0 [orig:99 _13 ] [99])
+            (reg:SF 22 xmm1 [orig:108 _22 ] [108]))) "CALDWP2.f":70 841 {*fop_sf_1}
+     (nil))
+(insn 69 68 70 6 (set (reg/f:DI 1 dx [188])
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":70 85 {*movdi_internal}
+     (nil))
+(insn 70 69 71 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:113 _27 ] [113])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [188])) [4 evp S4 A32])
+        (reg:SF 21 xmm0 [orig:114 _28 ] [114])) "CALDWP2.f":70 131 {*movsf_internal}
+     (nil))
+(insn 71 70 72 6 (set (reg:SI 1 dx [189])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":71 86 {*movsi_internal}
+     (nil))
+(insn 72 71 73 6 (set (reg:DI 1 dx [orig:115 _29 ] [115])
+        (sign_extend:DI (reg:SI 1 dx [189]))) "CALDWP2.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 73 72 74 6 (parallel [
+            (set (reg:DI 2 cx [orig:116 _30 ] [116])
+                (mult:DI (reg:DI 1 dx [orig:115 _29 ] [115])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 349 {*muldi3_1}
+     (nil))
+(insn 74 73 75 6 (set (reg:SI 1 dx [190])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":71 86 {*movsi_internal}
+     (nil))
+(insn 75 74 76 6 (set (reg:DI 1 dx [orig:117 _31 ] [117])
+        (sign_extend:DI (reg:SI 1 dx [190]))) "CALDWP2.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 76 75 77 6 (parallel [
+            (set (reg:DI 1 dx [orig:118 _32 ] [118])
+                (plus:DI (reg:DI 1 dx [orig:117 _31 ] [117])
+                    (reg:DI 2 cx [orig:116 _30 ] [116])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 222 {*adddi_1}
+     (nil))
+(insn 77 76 78 6 (parallel [
+            (set (reg:DI 2 cx [orig:119 _33 ] [119])
+                (plus:DI (reg:DI 1 dx [orig:118 _32 ] [118])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 222 {*adddi_1}
+     (nil))
+(insn 78 77 79 6 (set (reg/f:DI 1 dx [191])
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":71 85 {*movdi_internal}
+     (nil))
+(insn 79 78 80 6 (set (reg:SF 22 xmm1 [orig:120 _34 ] [120])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:119 _33 ] [119])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [191])) [4 evp S4 A32])) "CALDWP2.f":71 131 {*movsf_internal}
+     (nil))
+(insn 80 79 81 6 (set (reg:SI 1 dx [192])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":71 86 {*movsi_internal}
+     (nil))
+(insn 81 80 82 6 (set (reg:DI 1 dx [orig:121 _35 ] [121])
+        (sign_extend:DI (reg:SI 1 dx [192]))) "CALDWP2.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 82 81 83 6 (parallel [
+            (set (reg:DI 2 cx [orig:122 _36 ] [122])
+                (mult:DI (reg:DI 1 dx [orig:121 _35 ] [121])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 349 {*muldi3_1}
+     (nil))
+(insn 83 82 84 6 (set (reg:SI 1 dx [193])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":71 86 {*movsi_internal}
+     (nil))
+(insn 84 83 85 6 (set (reg:DI 1 dx [orig:123 _37 ] [123])
+        (sign_extend:DI (reg:SI 1 dx [193]))) "CALDWP2.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 85 84 86 6 (parallel [
+            (set (reg:DI 1 dx [orig:124 _38 ] [124])
+                (plus:DI (reg:DI 1 dx [orig:123 _37 ] [123])
+                    (reg:DI 2 cx [orig:122 _36 ] [122])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 222 {*adddi_1}
+     (nil))
+(insn 86 85 87 6 (parallel [
+            (set (reg:DI 2 cx [orig:125 _39 ] [125])
+                (plus:DI (reg:DI 1 dx [orig:124 _38 ] [124])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":71 222 {*adddi_1}
+     (nil))
+(insn 87 86 88 6 (set (reg:SF 21 xmm0 [194])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALDWP2.f":71 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.000000047497451305389404296875e-3 [0x0.83126fp-9])
+        (nil)))
+(insn 88 87 89 6 (set (reg:SF 21 xmm0 [orig:126 _40 ] [126])
+        (mult:SF (reg:SF 21 xmm0 [194])
+            (reg:SF 22 xmm1 [orig:120 _34 ] [120]))) "CALDWP2.f":71 838 {*fop_sf_comm}
+     (nil))
+(insn 89 88 90 6 (set (reg/f:DI 1 dx [195])
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":71 85 {*movdi_internal}
+     (nil))
+(insn 90 89 91 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:125 _39 ] [125])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [195])) [4 evp S4 A32])
+        (reg:SF 21 xmm0 [orig:126 _40 ] [126])) "CALDWP2.f":71 131 {*movsf_internal}
+     (nil))
+(insn 91 90 92 6 (set (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALDWP2.f":72 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 9.999999960041972002500187954865396022796630859375e-13 [0x0.8cbcccp-39])
+        (nil)))
+(insn 92 91 93 6 (set (reg:SI 1 dx [196])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":72 86 {*movsi_internal}
+     (nil))
+(insn 93 92 94 6 (set (reg:DI 1 dx [orig:127 _41 ] [127])
+        (sign_extend:DI (reg:SI 1 dx [196]))) "CALDWP2.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 94 93 95 6 (parallel [
+            (set (reg:DI 2 cx [orig:128 _42 ] [128])
+                (mult:DI (reg:DI 1 dx [orig:127 _41 ] [127])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 349 {*muldi3_1}
+     (nil))
+(insn 95 94 96 6 (set (reg:SI 1 dx [197])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":72 86 {*movsi_internal}
+     (nil))
+(insn 96 95 97 6 (set (reg:DI 1 dx [orig:129 _43 ] [129])
+        (sign_extend:DI (reg:SI 1 dx [197]))) "CALDWP2.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 97 96 98 6 (parallel [
+            (set (reg:DI 1 dx [orig:130 _44 ] [130])
+                (plus:DI (reg:DI 1 dx [orig:129 _43 ] [129])
+                    (reg:DI 2 cx [orig:128 _42 ] [128])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 222 {*adddi_1}
+     (nil))
+(insn 98 97 99 6 (parallel [
+            (set (reg:DI 2 cx [orig:131 _45 ] [131])
+                (plus:DI (reg:DI 1 dx [orig:130 _44 ] [130])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 222 {*adddi_1}
+     (nil))
+(insn 99 98 100 6 (set (reg/f:DI 1 dx [198])
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":72 85 {*movdi_internal}
+     (nil))
+(insn 100 99 101 6 (set (reg:SF 22 xmm1 [orig:168 _99 ] [168])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:131 _45 ] [131])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [198])) [4 evp S4 A32])) "CALDWP2.f":72 131 {*movsf_internal}
+     (nil))
+(insn 101 100 102 6 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 22 xmm1 [orig:168 _99 ] [168])
+            (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163]))) "CALDWP2.f":72 53 {*cmpisf}
+     (nil))
+(insn 102 101 103 6 (set (reg:QI 1 dx [199])
+        (gt:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":72 678 {*setcc_qi}
+     (nil))
+(insn 103 102 104 6 (set (reg:SI 2 cx [orig:132 _46 ] [132])
+        (zero_extend:SI (reg:QI 1 dx [199]))) "CALDWP2.f":72 140 {*zero_extendqisi2}
+     (nil))
+(insn 104 103 105 6 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163])
+                    (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163]))
+            ] UNSPEC_NOTRAP)) "CALDWP2.f":72 54 {*cmpiusf}
+     (nil))
+(insn 105 104 106 6 (set (reg:QI 1 dx [200])
+        (unordered:QI (reg:CCFP 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":72 678 {*setcc_qi}
+     (nil))
+(insn 106 105 107 6 (set (reg:SI 1 dx [orig:133 _47 ] [133])
+        (zero_extend:SI (reg:QI 1 dx [200]))) "CALDWP2.f":72 140 {*zero_extendqisi2}
+     (nil))
+(insn 107 106 108 6 (parallel [
+            (set (reg:SI 1 dx [orig:134 _48 ] [134])
+                (ior:SI (reg:SI 1 dx [orig:133 _47 ] [133])
+                    (reg:SI 2 cx [orig:132 _46 ] [132])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 450 {*iorsi_1}
+     (nil))
+(insn 108 107 109 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:134 _48 ] [134])
+            (const_int 0 [0]))) "CALDWP2.f":72 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 109 108 110 6 (set (pc)
+        (if_then_else (eq (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 111)
+            (pc))) "CALDWP2.f":72 682 {*jcc}
+     (nil)
+ -> 111)
+;;  succ:       7 (FALLTHRU)
+;;              8
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 163 165 168
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+;; bb 7 artificial_defs: { }
+;; bb 7 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165 168
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 168
+;; lr  def 	 163
+(note 110 109 7 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 7 110 111 7 (set (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163])
+        (reg:SF 22 xmm1 [orig:168 _99 ] [168])) "CALDWP2.f":72 131 {*movsf_internal}
+     (nil))
+;;  succ:       8 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 163 165
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 20, flags: (RTL, MODIFIED)
+;;  pred:       6
+;;              7 (FALLTHRU)
+;; bb 8 artificial_defs: { }
+;; bb 8 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 163 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 163
+;; lr  def 	 17 [flags] 135 136 137 138 139 201 202 203
+(code_label 111 7 112 8 4 (nil) [1 uses])
+(note 112 111 113 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 113 112 114 8 (set (reg:SI 1 dx [201])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":72 86 {*movsi_internal}
+     (nil))
+(insn 114 113 115 8 (set (reg:DI 1 dx [orig:135 _49 ] [135])
+        (sign_extend:DI (reg:SI 1 dx [201]))) "CALDWP2.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 115 114 116 8 (parallel [
+            (set (reg:DI 2 cx [orig:136 _50 ] [136])
+                (mult:DI (reg:DI 1 dx [orig:135 _49 ] [135])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 349 {*muldi3_1}
+     (nil))
+(insn 116 115 117 8 (set (reg:SI 1 dx [202])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":72 86 {*movsi_internal}
+     (nil))
+(insn 117 116 118 8 (set (reg:DI 1 dx [orig:137 _51 ] [137])
+        (sign_extend:DI (reg:SI 1 dx [202]))) "CALDWP2.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 118 117 119 8 (parallel [
+            (set (reg:DI 1 dx [orig:138 _52 ] [138])
+                (plus:DI (reg:DI 1 dx [orig:137 _51 ] [137])
+                    (reg:DI 2 cx [orig:136 _50 ] [136])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 222 {*adddi_1}
+     (nil))
+(insn 119 118 120 8 (parallel [
+            (set (reg:DI 2 cx [orig:139 _53 ] [139])
+                (plus:DI (reg:DI 1 dx [orig:138 _52 ] [138])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":72 222 {*adddi_1}
+     (nil))
+(insn 120 119 121 8 (set (reg/f:DI 1 dx [203])
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":72 85 {*movdi_internal}
+     (nil))
+(insn 121 120 122 8 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:139 _53 ] [139])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [203])) [4 evp S4 A32])
+        (reg:SF 21 xmm0 [orig:163 M.0_81 ] [163])) "CALDWP2.f":72 131 {*movsf_internal}
+     (nil))
+(insn 122 121 223 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":69 221 {*addsi_1}
+     (nil))
+(jump_insn 223 122 224 8 (set (pc)
+        (label_ref 123)) "CALDWP2.f":69 683 {jump}
+     (nil)
+ -> 123)
+;;  succ:       5 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+(barrier 224 223 235)
+;; basic block 20, loop depth 0, maybe hot
+;;  prev block 8, next block 9, flags: (RTL, MODIFIED)
+;;  pred:       5
+;; bb 20 artificial_defs: { }
+;; bb 20 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 235 224 234 20 16 (nil) [1 uses])
+(note 234 235 236 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 236 234 126 20 (const_int 0 [0]) "CALDWP2.f":72 718 {nop}
+     (nil))
+;;  succ:       9 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 20, next block 19, flags: (RTL, MODIFIED)
+;;  pred:       20 [always]  (FALLTHRU)
+;; bb 9 artificial_defs: { }
+;; bb 9 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags]
+(code_label 126 236 127 9 3 (nil) [0 uses])
+(note 127 126 128 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 128 127 225 9 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":68 221 {*addsi_1}
+     (nil))
+(jump_insn 225 128 226 9 (set (pc)
+        (label_ref 129)) "CALDWP2.f":68 683 {jump}
+     (nil)
+ -> 129)
+;;  succ:       3 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 165
+
+(barrier 226 225 232)
+;; basic block 19, loop depth 0, maybe hot
+;;  prev block 9, next block 10, flags: (RTL, MODIFIED)
+;;  pred:       3
+;; bb 19 artificial_defs: { }
+;; bb 19 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 232 226 231 19 15 (nil) [1 uses])
+(note 231 232 233 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 233 231 132 19 (const_int 0 [0]) "CALDWP2.f":69 718 {nop}
+     (nil))
+;;  succ:       10 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 19, next block 11, flags: (RTL, MODIFIED)
+;;  pred:       19 [always]  (FALLTHRU)
+;; bb 10 artificial_defs: { }
+;; bb 10 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 [] 169 170 204
+(code_label 132 233 133 10 2 (nil) [0 uses])
+(note 133 132 134 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 134 133 135 10 (set (reg:DI 0 ax [204])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 tdwp+0 S8 A64])) "CALDWP2.f":78 85 {*movdi_internal}
+     (nil))
+(insn 135 134 136 10 (set (reg:DI 2 cx)
+        (symbol_ref/f:DI ("*.LC4") [flags 0x2]  <var_decl 0x7fc679a02990 *.LC4>)) "CALDWP2.f":78 85 {*movdi_internal}
+     (nil))
+(insn 136 135 137 10 (set (reg:DI 1 dx)
+        (symbol_ref/f:DI ("*.LC5") [flags 0x2]  <var_decl 0x7fc679a02a20 *.LC5>)) "CALDWP2.f":78 85 {*movdi_internal}
+     (nil))
+(insn 137 136 138 10 (set (reg:DI 4 si)
+        (reg:DI 0 ax [204])) "CALDWP2.f":78 85 {*movdi_internal}
+     (nil))
+(insn 138 137 139 10 (set (reg:DI 5 di)
+        (symbol_ref:DI ("evp.3858") [flags 0x202]  <var_decl 0x7fc679a02120 evp>)) "CALDWP2.f":78 85 {*movdi_internal}
+     (nil))
+(insn 139 138 140 10 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALDWP2.f":78 88 {*movqi_internal}
+     (nil))
+(call_insn 140 139 141 10 (call (mem:QI (symbol_ref:DI ("dewpoint_") [flags 0x41]  <function_decl 0x7fc6799f8600 dewpoint>) [0 dewpoint S1 A8])
+        (const_int 0 [0])) "CALDWP2.f":78 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (expr_list:DI (use (reg:DI 4 si))
+                (expr_list:DI (use (reg:DI 1 dx))
+                    (expr_list:DI (use (reg:DI 2 cx))
+                        (nil)))))))
+(insn 141 140 142 10 (set (reg:SI 1 dx [orig:169 _106 ] [169])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fc679a00870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALDWP2.f":82 86 {*movsi_internal}
+     (nil))
+(insn 142 141 143 10 (set (reg:SI 0 ax [orig:170 _107 ] [170])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7fc679a00870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALDWP2.f":82 86 {*movsi_internal}
+     (nil))
+(insn 143 142 210 10 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:169 _106 ] [169])) "CALDWP2.f":82 86 {*movsi_internal}
+     (nil))
+;;  succ:       11 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 12, flags: (RTL, MODIFIED)
+;;  pred:       10 (FALLTHRU)
+;;              17 [always] 
+;; bb 11 artificial_defs: { }
+;; bb 11 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  def 	 17 [flags] 171 205
+(code_label 210 143 144 11 12 (nil) [1 uses])
+(note 144 210 145 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 145 144 146 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:170 _107 ] [170]))) "CALDWP2.f":82 11 {*cmpsi_1}
+     (nil))
+(insn 146 145 147 11 (set (reg:QI 1 dx [205])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":82 678 {*setcc_qi}
+     (nil))
+(insn 147 146 148 11 (set (reg:SI 1 dx [orig:171 _109 ] [171])
+        (zero_extend:SI (reg:QI 1 dx [205]))) "CALDWP2.f":82 140 {*zero_extendqisi2}
+     (nil))
+(insn 148 147 149 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:171 _109 ] [171])
+            (const_int 0 [0]))) "CALDWP2.f":82 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 149 148 150 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 238)
+            (pc))) "CALDWP2.f":82 682 {*jcc}
+     (nil)
+ -> 238)
+;;  succ:       21
+;;              12 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (RTL, MODIFIED)
+;;  pred:       11 (FALLTHRU)
+;; bb 12 artificial_defs: { }
+;; bb 12 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(note 150 149 151 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 151 150 204 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALDWP2.f":83 86 {*movsi_internal}
+     (nil))
+;;  succ:       13 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 14, flags: (RTL, MODIFIED)
+;;  pred:       12 (FALLTHRU)
+;;              16 [always] 
+;; bb 13 artificial_defs: { }
+;; bb 13 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 172 206
+(code_label 204 151 152 13 11 (nil) [1 uses])
+(note 152 204 153 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 153 152 154 13 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALDWP2.f":83 11 {*cmpsi_1}
+     (nil))
+(insn 154 153 155 13 (set (reg:QI 1 dx [206])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALDWP2.f":83 678 {*setcc_qi}
+     (nil))
+(insn 155 154 156 13 (set (reg:SI 1 dx [orig:172 _111 ] [172])
+        (zero_extend:SI (reg:QI 1 dx [206]))) "CALDWP2.f":83 140 {*zero_extendqisi2}
+     (nil))
+(insn 156 155 157 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:172 _111 ] [172])
+            (const_int 0 [0]))) "CALDWP2.f":83 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 157 156 158 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 241)
+            (pc))) "CALDWP2.f":83 682 {*jcc}
+     (nil)
+ -> 241)
+;;  succ:       22
+;;              14 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 15, flags: (RTL, MODIFIED)
+;;  pred:       13 (FALLTHRU)
+;; bb 14 artificial_defs: { }
+;; bb 14 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 140 141 142 143 144 145 146 147 148 149 150 151 207 208 209 210 211 212
+(note 158 157 159 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 159 158 160 14 (set (reg:SI 1 dx [207])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 160 159 161 14 (set (reg:DI 1 dx [orig:140 _54 ] [140])
+        (sign_extend:DI (reg:SI 1 dx [207]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 161 160 162 14 (parallel [
+            (set (reg:DI 2 cx [orig:141 _55 ] [141])
+                (mult:DI (reg:DI 1 dx [orig:140 _54 ] [140])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 349 {*muldi3_1}
+     (nil))
+(insn 162 161 163 14 (set (reg:SI 1 dx [208])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 163 162 164 14 (set (reg:DI 1 dx [orig:142 _56 ] [142])
+        (sign_extend:DI (reg:SI 1 dx [208]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 164 163 165 14 (parallel [
+            (set (reg:DI 1 dx [orig:143 _57 ] [143])
+                (plus:DI (reg:DI 1 dx [orig:142 _56 ] [142])
+                    (reg:DI 2 cx [orig:141 _55 ] [141])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 165 164 166 14 (parallel [
+            (set (reg:DI 2 cx [orig:144 _58 ] [144])
+                (plus:DI (reg:DI 1 dx [orig:143 _57 ] [143])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 166 165 167 14 (set (reg/f:DI 1 dx [209])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 tdwp+0 S8 A64])) "CALDWP2.f":84 85 {*movdi_internal}
+     (nil))
+(insn 167 166 168 14 (set (reg:SF 21 xmm0 [orig:145 _59 ] [145])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:144 _58 ] [144])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [209])) [4 *tdwp_104(D) S4 A32])) "CALDWP2.f":84 131 {*movsf_internal}
+     (nil))
+(insn 168 167 169 14 (set (reg:SI 1 dx [210])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 169 168 170 14 (set (reg:DI 1 dx [orig:146 _60 ] [146])
+        (sign_extend:DI (reg:SI 1 dx [210]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 170 169 171 14 (parallel [
+            (set (reg:DI 2 cx [orig:147 _61 ] [147])
+                (mult:DI (reg:DI 1 dx [orig:146 _60 ] [146])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 349 {*muldi3_1}
+     (nil))
+(insn 171 170 172 14 (set (reg:SI 1 dx [211])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 172 171 173 14 (set (reg:DI 1 dx [orig:148 _62 ] [148])
+        (sign_extend:DI (reg:SI 1 dx [211]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 173 172 174 14 (parallel [
+            (set (reg:DI 1 dx [orig:149 _63 ] [149])
+                (plus:DI (reg:DI 1 dx [orig:148 _62 ] [148])
+                    (reg:DI 2 cx [orig:147 _61 ] [147])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 174 173 175 14 (parallel [
+            (set (reg:DI 2 cx [orig:150 _64 ] [150])
+                (plus:DI (reg:DI 1 dx [orig:149 _63 ] [149])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 175 174 176 14 (set (reg/f:DI 1 dx [212])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 t1d+0 S8 A64])) "CALDWP2.f":84 85 {*movdi_internal}
+     (nil))
+(insn 176 175 177 14 (set (reg:SF 22 xmm1 [orig:151 _65 ] [151])
+        (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:150 _64 ] [150])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [212])) [4 *t1d_112(D) S4 A32])) "CALDWP2.f":84 131 {*movsf_internal}
+     (nil))
+(insn 177 176 178 14 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [orig:145 _59 ] [145])
+            (reg:SF 22 xmm1 [orig:151 _65 ] [151]))) "CALDWP2.f":84 53 {*cmpisf}
+     (nil))
+(jump_insn 178 177 182 14 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 201)
+            (pc))) "CALDWP2.f":84 682 {*jcc}
+     (nil)
+ -> 201)
+;;  succ:       15 (FALLTHRU)
+;;              16
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 14, next block 16, flags: (RTL, MODIFIED)
+;;  pred:       14 (FALLTHRU)
+;; bb 15 artificial_defs: { }
+;; bb 15 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags] 152 153 154 155 156 157 158 159 160 161 162 213 214 215 216 217 218
+(note 182 178 183 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 183 182 184 15 (set (reg:SI 1 dx [213])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 184 183 185 15 (set (reg:DI 1 dx [orig:152 _66 ] [152])
+        (sign_extend:DI (reg:SI 1 dx [213]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 185 184 186 15 (parallel [
+            (set (reg:DI 2 cx [orig:153 _67 ] [153])
+                (mult:DI (reg:DI 1 dx [orig:152 _66 ] [152])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 349 {*muldi3_1}
+     (nil))
+(insn 186 185 187 15 (set (reg:SI 1 dx [214])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 187 186 188 15 (set (reg:DI 1 dx [orig:154 _68 ] [154])
+        (sign_extend:DI (reg:SI 1 dx [214]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 188 187 189 15 (parallel [
+            (set (reg:DI 1 dx [orig:155 _69 ] [155])
+                (plus:DI (reg:DI 1 dx [orig:154 _68 ] [154])
+                    (reg:DI 2 cx [orig:153 _67 ] [153])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 189 188 190 15 (parallel [
+            (set (reg:DI 4 si [orig:156 _70 ] [156])
+                (plus:DI (reg:DI 1 dx [orig:155 _69 ] [155])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 190 189 191 15 (set (reg:SI 1 dx [215])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 191 190 192 15 (set (reg:DI 1 dx [orig:157 _71 ] [157])
+        (sign_extend:DI (reg:SI 1 dx [215]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 192 191 193 15 (parallel [
+            (set (reg:DI 2 cx [orig:158 _72 ] [158])
+                (mult:DI (reg:DI 1 dx [orig:157 _71 ] [157])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 349 {*muldi3_1}
+     (nil))
+(insn 193 192 194 15 (set (reg:SI 1 dx [216])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALDWP2.f":84 86 {*movsi_internal}
+     (nil))
+(insn 194 193 195 15 (set (reg:DI 1 dx [orig:159 _73 ] [159])
+        (sign_extend:DI (reg:SI 1 dx [216]))) "CALDWP2.f":84 149 {*extendsidi2_rex64}
+     (nil))
+(insn 195 194 196 15 (parallel [
+            (set (reg:DI 1 dx [orig:160 _74 ] [160])
+                (plus:DI (reg:DI 1 dx [orig:159 _73 ] [159])
+                    (reg:DI 2 cx [orig:158 _72 ] [158])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 196 195 197 15 (parallel [
+            (set (reg:DI 2 cx [orig:161 _75 ] [161])
+                (plus:DI (reg:DI 1 dx [orig:160 _74 ] [160])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":84 222 {*adddi_1}
+     (nil))
+(insn 197 196 198 15 (set (reg/f:DI 1 dx [217])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [2 t1d+0 S8 A64])) "CALDWP2.f":84 85 {*movdi_internal}
+     (nil))
+(insn 198 197 199 15 (set (reg:SF 21 xmm0 [orig:162 _76 ] [162])
+        (mem:SF (plus:DI (mult:DI (reg:DI 4 si [orig:156 _70 ] [156])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [217])) [4 *t1d_112(D) S4 A32])) "CALDWP2.f":84 131 {*movsf_internal}
+     (nil))
+(insn 199 198 200 15 (set (reg/f:DI 1 dx [218])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [2 tdwp+0 S8 A64])) "CALDWP2.f":84 85 {*movdi_internal}
+     (nil))
+(insn 200 199 201 15 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:161 _75 ] [161])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [218])) [4 *tdwp_104(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:162 _76 ] [162])) "CALDWP2.f":84 131 {*movsf_internal}
+     (nil))
+;;  succ:       16 (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 16, loop depth 0, maybe hot
+;;  prev block 15, next block 22, flags: (RTL, MODIFIED)
+;;  pred:       15 (FALLTHRU)
+;;              14
+;; bb 16 artificial_defs: { }
+;; bb 16 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags]
+(code_label 201 200 202 16 9 (nil) [1 uses])
+(note 202 201 203 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 203 202 227 16 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":83 221 {*addsi_1}
+     (nil))
+(jump_insn 227 203 228 16 (set (pc)
+        (label_ref 204)) "CALDWP2.f":83 683 {jump}
+     (nil)
+ -> 204)
+;;  succ:       13 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+(barrier 228 227 241)
+;; basic block 22, loop depth 0, maybe hot
+;;  prev block 16, next block 17, flags: (RTL, MODIFIED)
+;;  pred:       13
+;; bb 22 artificial_defs: { }
+;; bb 22 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 241 228 240 22 18 (nil) [1 uses])
+(note 240 241 242 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 242 240 207 22 (const_int 0 [0]) "CALDWP2.f":84 718 {nop}
+     (nil))
+;;  succ:       17 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+;; basic block 17, loop depth 0, maybe hot
+;;  prev block 22, next block 21, flags: (RTL, MODIFIED)
+;;  pred:       22 [always]  (FALLTHRU)
+;; bb 17 artificial_defs: { }
+;; bb 17 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	 17 [flags]
+(code_label 207 242 208 17 8 (nil) [0 uses])
+(note 208 207 209 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 209 208 229 17 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALDWP2.f":82 221 {*addsi_1}
+     (nil))
+(jump_insn 229 209 230 17 (set (pc)
+        (label_ref 210)) "CALDWP2.f":82 683 {jump}
+     (nil)
+ -> 210)
+;;  succ:       11 [always] 
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame] 170
+
+(barrier 230 229 238)
+;; basic block 21, loop depth 0, maybe hot
+;;  prev block 17, next block 18, flags: (RTL, MODIFIED)
+;;  pred:       11
+;; bb 21 artificial_defs: { }
+;; bb 21 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 238 230 237 21 17 (nil) [1 uses])
+(note 237 238 239 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 239 237 213 21 (const_int 0 [0]) "CALDWP2.f":83 718 {nop}
+     (nil))
+;;  succ:       18 [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+;; basic block 18, loop depth 0, maybe hot
+;;  prev block 21, next block 1, flags: (RTL, MODIFIED)
+;;  pred:       21 [always]  (FALLTHRU)
+;; bb 18 artificial_defs: { }
+;; bb 18 artificial_uses: { u-1(6){ }u-1(7){ }}
+;; lr  in  	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  use 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;; lr  def 	
+(code_label 213 239 214 18 7 (nil) [0 uses])
+(note 214 213 222 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 222 214 243 18 (const_int 0 [0]) "CALDWP2.f":90 718 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+;; lr  out 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+
+(note 243 222 0 NOTE_INSN_DELETED)

@@ -1,4 +1,4 @@
-#!/bin/ksh -x
+#!/bin/bash -x
 #
 # Verifica se foi passado algum parametro
 

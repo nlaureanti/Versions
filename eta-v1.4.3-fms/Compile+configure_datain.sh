@@ -59,19 +59,22 @@ else
    echo "Note: Case sensitive option!"
 fi
 done
+
+echo +
 cd libraries
-make_all_libs ${Machine}
+make_all_libs ${Machine} || exit
+
 pwd
 cd ../datain/dprep/install
-build_dprep ${Machine}
+build_dprep ${Machine} || exit
 cd ../../scripts/BAMCLIMT126
-configure
-cd ../CFS 
-configure ${Machine}
-cd ../BESMT062
-configure
-cd ../gfs2gr0.25
-configure ${Machine}
+#configure
+#cd ../CFS 
+#configure ${Machine}
+#cd ../BESMT062
+#configure
+#cd ../gfs2gr0.25
+#configure ${Machine}
 cd ../ERA5 
-configure ${Machine}
+configure ${Machine} || exit
 

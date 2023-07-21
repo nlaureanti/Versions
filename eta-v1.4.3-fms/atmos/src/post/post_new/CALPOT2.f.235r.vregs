@@ -1,0 +1,812 @@
+
+;; Function calpot2 (calpot2_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 8 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 8 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 8 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])
+        (reg:DI 5 di [ p1d ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -80 [0xffffffffffffffb0])) [4 t1d+0 S8 A64])
+        (reg:DI 4 si [ t1d ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])
+        (reg:DI 1 dx [ theta ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])
+        (reg:DI 2 cx [ im ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 6 5 7 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])
+        (reg:DI 37 r8 [ jm ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(note 7 6 10 2 NOTE_INSN_FUNCTION_BEG)
+(insn 10 7 11 2 (set (reg/f:DI 163)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 87 [ _1 ])
+        (mem:SI (reg/f:DI 163) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:DI 164)
+        (sign_extend:DI (reg:SI 87 [ _1 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 13 12 14 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])
+        (reg:DI 164)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 14 13 16 2 (set (reg:DI 133 [ stride.2_55 ])
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 ubound.0+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 16 14 15 2 (set (reg:DI 165)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 15 16 17 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 133 [ stride.2_55 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 17 15 18 2 (set (reg:DI 134 [ stride.2_56 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 133 [ stride.2_55 ])
+            (reg:DI 165))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 18 17 19 2 (set (reg/f:DI 166)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 19 18 20 2 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 166) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 20 19 21 2 (set (reg:DI 167)
+        (sign_extend:DI (reg:SI 88 [ _2 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 21 20 22 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])
+        (reg:DI 167)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 22 21 24 2 (parallel [
+            (set (reg:DI 135 [ size.4_59 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -24 [0xffffffffffffffe8])) [2 ubound.1+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 349 {*muldi3_1}
+     (nil))
+(insn 24 22 23 2 (set (reg:DI 168)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 23 24 25 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 135 [ size.4_59 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 25 23 26 2 (set (reg:DI 136 [ size.4_60 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 135 [ size.4_59 ])
+            (reg:DI 168))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 26 25 27 2 (parallel [
+            (set (reg:DI 137 [ _61 ])
+                (plus:DI (reg:DI 136 [ size.4_60 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 222 {*adddi_1}
+     (nil))
+(insn 27 26 28 2 (set (reg:DI 89 [ size.15_3 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 28 27 29 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 0)
+        (reg:DI 89 [ size.15_3 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 29 28 30 2 (set (subreg:DI (reg:TI 90 [ _4 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 30 29 31 2 (parallel [
+            (set (reg:TI 138 [ _62 ])
+                (ashift:TI (reg:TI 90 [ _4 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 541 {*ashlti3_doubleword}
+     (nil))
+(insn 31 30 32 2 (set (reg:DI 91 [ size.16_5 ])
+        (reg:DI 136 [ size.4_60 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 32 31 33 2 (parallel [
+            (set (reg:DI 139 [ _63 ])
+                (ashift:DI (reg:DI 91 [ size.16_5 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 551 {*ashldi3_1}
+     (nil))
+(insn 33 32 34 2 (set (reg:DI 140 [ offset.3_64 ])
+        (not:DI (reg:DI 134 [ stride.2_56 ]))) "CALPOT2.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 34 33 35 2 (set (reg/f:DI 169)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 35 34 36 2 (set (reg:SI 92 [ _6 ])
+        (mem:SI (reg/f:DI 169) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 36 35 37 2 (set (reg:DI 170)
+        (sign_extend:DI (reg:SI 92 [ _6 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 37 36 38 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])
+        (reg:DI 170)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 38 37 40 2 (set (reg:DI 141 [ stride.12_66 ])
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [2 ubound.10+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 40 38 39 2 (set (reg:DI 171)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 39 40 41 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 141 [ stride.12_66 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 41 39 42 2 (set (reg:DI 142 [ stride.12_67 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 141 [ stride.12_66 ])
+            (reg:DI 171))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 42 41 43 2 (set (reg/f:DI 172)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 43 42 44 2 (set (reg:SI 93 [ _7 ])
+        (mem:SI (reg/f:DI 172) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 44 43 45 2 (set (reg:DI 173)
+        (sign_extend:DI (reg:SI 93 [ _7 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 45 44 46 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])
+        (reg:DI 173)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 46 45 48 2 (parallel [
+            (set (reg:DI 143 [ size.14_69 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -40 [0xffffffffffffffd8])) [2 ubound.11+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 349 {*muldi3_1}
+     (nil))
+(insn 48 46 47 2 (set (reg:DI 174)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 47 48 49 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 143 [ size.14_69 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 49 47 50 2 (set (reg:DI 144 [ size.14_70 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 143 [ size.14_69 ])
+            (reg:DI 174))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 50 49 51 2 (parallel [
+            (set (reg:DI 145 [ _71 ])
+                (plus:DI (reg:DI 144 [ size.14_70 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 222 {*adddi_1}
+     (nil))
+(insn 51 50 52 2 (set (reg:DI 94 [ size.17_8 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 52 51 53 2 (set (subreg:DI (reg:TI 95 [ _9 ]) 0)
+        (reg:DI 94 [ size.17_8 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 53 52 54 2 (set (subreg:DI (reg:TI 95 [ _9 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 54 53 55 2 (parallel [
+            (set (reg:TI 146 [ _72 ])
+                (ashift:TI (reg:TI 95 [ _9 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 541 {*ashlti3_doubleword}
+     (nil))
+(insn 55 54 56 2 (set (reg:DI 96 [ size.18_10 ])
+        (reg:DI 144 [ size.14_70 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 56 55 57 2 (parallel [
+            (set (reg:DI 147 [ _73 ])
+                (ashift:DI (reg:DI 96 [ size.18_10 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 551 {*ashldi3_1}
+     (nil))
+(insn 57 56 58 2 (set (reg:DI 148 [ offset.13_74 ])
+        (not:DI (reg:DI 142 [ stride.12_67 ]))) "CALPOT2.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 58 57 59 2 (set (reg/f:DI 175)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 59 58 60 2 (set (reg:SI 97 [ _11 ])
+        (mem:SI (reg/f:DI 175) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 60 59 61 2 (set (reg:DI 176)
+        (sign_extend:DI (reg:SI 97 [ _11 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 61 60 62 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])
+        (reg:DI 176)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 62 61 64 2 (set (reg:DI 149 [ stride.7_76 ])
+        (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [2 ubound.5+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 64 62 63 2 (set (reg:DI 177)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 63 64 65 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 149 [ stride.7_76 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 65 63 66 2 (set (reg:DI 150 [ stride.7_77 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 149 [ stride.7_76 ])
+            (reg:DI 177))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 66 65 67 2 (set (reg/f:DI 178)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -104 [0xffffffffffffff98])) [5 jm+0 S8 A64])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 67 66 68 2 (set (reg:SI 98 [ _12 ])
+        (mem:SI (reg/f:DI 178) [1 *jm_57(D)+0 S4 A32])) "CALPOT2.f":1 86 {*movsi_internal}
+     (nil))
+(insn 68 67 69 2 (set (reg:DI 179)
+        (sign_extend:DI (reg:SI 98 [ _12 ]))) "CALPOT2.f":1 149 {*extendsidi2_rex64}
+     (nil))
+(insn 69 68 70 2 (set (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])
+        (reg:DI 179)) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 70 69 72 2 (parallel [
+            (set (reg:DI 151 [ size.9_79 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (mem/c:DI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -56 [0xffffffffffffffc8])) [2 ubound.6+0 S8 A64])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 349 {*muldi3_1}
+     (nil))
+(insn 72 70 71 2 (set (reg:DI 180)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 71 72 73 2 (set (reg:CCGOC 17 flags)
+        (compare:CCGOC (reg:DI 151 [ size.9_79 ])
+            (const_int 0 [0]))) "CALPOT2.f":1 8 {*cmpdi_ccno_1}
+     (nil))
+(insn 73 71 74 2 (set (reg:DI 152 [ size.9_80 ])
+        (if_then_else:DI (ge (reg:CCGOC 17 flags)
+                (const_int 0 [0]))
+            (reg:DI 151 [ size.9_79 ])
+            (reg:DI 180))) "CALPOT2.f":1 1003 {*movdicc_noc}
+     (nil))
+(insn 74 73 75 2 (parallel [
+            (set (reg:DI 153 [ _81 ])
+                (plus:DI (reg:DI 152 [ size.9_80 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 222 {*adddi_1}
+     (nil))
+(insn 75 74 76 2 (set (reg:DI 99 [ size.19_13 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 76 75 77 2 (set (subreg:DI (reg:TI 100 [ _14 ]) 0)
+        (reg:DI 99 [ size.19_13 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 77 76 78 2 (set (subreg:DI (reg:TI 100 [ _14 ]) 8)
+        (const_int 0 [0])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 78 77 79 2 (parallel [
+            (set (reg:TI 154 [ _82 ])
+                (ashift:TI (reg:TI 100 [ _14 ])
+                    (const_int 5 [0x5])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 541 {*ashlti3_doubleword}
+     (nil))
+(insn 79 78 80 2 (set (reg:DI 101 [ size.20_15 ])
+        (reg:DI 152 [ size.9_80 ])) "CALPOT2.f":1 85 {*movdi_internal}
+     (nil))
+(insn 80 79 81 2 (parallel [
+            (set (reg:DI 155 [ _83 ])
+                (ashift:DI (reg:DI 101 [ size.20_15 ])
+                    (const_int 2 [0x2])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":1 551 {*ashldi3_1}
+     (nil))
+(insn 81 80 82 2 (set (reg:DI 156 [ offset.8_84 ])
+        (not:DI (reg:DI 150 [ stride.7_77 ]))) "CALPOT2.f":1 532 {*one_cmpldi2_1}
+     (nil))
+(insn 82 81 83 2 (set (reg:SI 157 [ _85 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALPOT2.f":55 86 {*movsi_internal}
+     (nil))
+(insn 83 82 84 2 (set (reg:SI 158 [ _86 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f9ef44b8870 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALPOT2.f":55 86 {*movsi_internal}
+     (nil))
+(insn 84 83 179 2 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+        (reg:SI 157 [ _85 ])) "CALPOT2.f":55 86 {*movsi_internal}
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              13 (DFS_BACK)
+(code_label 179 84 85 4 8 (nil) [1 uses])
+(note 85 179 86 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 86 85 87 4 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (reg:SI 158 [ _86 ]))) "CALPOT2.f":55 11 {*cmpsi_1}
+     (nil))
+(insn 87 86 88 4 (set (reg:QI 181)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":55 678 {*setcc_qi}
+     (nil))
+(insn 88 87 89 4 (set (reg:SI 159 [ _88 ])
+        (zero_extend:SI (reg:QI 181))) "CALPOT2.f":55 140 {*zero_extendqisi2}
+     (nil))
+(insn 89 88 90 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 159 [ _88 ])
+            (const_int 0 [0]))) "CALPOT2.f":55 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 90 89 91 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 182)
+            (pc))) "CALPOT2.f":55 682 {*jcc}
+     (nil)
+ -> 182)
+;;  succ:       14
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 91 90 92 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 92 91 93 5 (set (reg/f:DI 182)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -96 [0xffffffffffffffa0])) [5 im+0 S8 A64])) "CALPOT2.f":56 85 {*movdi_internal}
+     (nil))
+(insn 93 92 94 5 (set (reg:SI 160 [ _89 ])
+        (mem:SI (reg/f:DI 182) [1 *im_53(D)+0 S4 A32])) "CALPOT2.f":56 86 {*movsi_internal}
+     (nil))
+(insn 94 93 173 5 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALPOT2.f":56 86 {*movsi_internal}
+     (nil))
+;;  succ:       6 (FALLTHRU)
+
+;; basic block 6, loop depth 2, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+;;              12 (DFS_BACK)
+(code_label 173 94 95 6 7 (nil) [1 uses])
+(note 95 173 96 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 96 95 97 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+            (reg:SI 160 [ _89 ]))) "CALPOT2.f":56 11 {*cmpsi_1}
+     (nil))
+(insn 97 96 98 6 (set (reg:QI 183)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALPOT2.f":56 678 {*setcc_qi}
+     (nil))
+(insn 98 97 99 6 (set (reg:SI 161 [ _91 ])
+        (zero_extend:SI (reg:QI 183))) "CALPOT2.f":56 140 {*zero_extendqisi2}
+     (nil))
+(insn 99 98 100 6 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 161 [ _91 ])
+            (const_int 0 [0]))) "CALPOT2.f":56 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 100 99 101 6 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 176)
+            (pc))) "CALPOT2.f":56 682 {*jcc}
+     (nil)
+ -> 176)
+;;  succ:       13
+;;              7 (FALLTHRU)
+
+;; basic block 7, loop depth 2, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+(note 101 100 102 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 7 (set (reg:SI 184)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":57 86 {*movsi_internal}
+     (nil))
+(insn 103 102 104 7 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 184))) "CALPOT2.f":57 149 {*extendsidi2_rex64}
+     (nil))
+(insn 104 103 105 7 (parallel [
+            (set (reg:DI 103 [ _17 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 349 {*muldi3_1}
+     (nil))
+(insn 105 104 106 7 (parallel [
+            (set (reg:DI 104 [ _18 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 103 [ _17 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 222 {*adddi_1}
+     (nil))
+(insn 106 105 107 7 (set (reg:SI 185)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":57 86 {*movsi_internal}
+     (nil))
+(insn 107 106 108 7 (set (reg:DI 105 [ _19 ])
+        (sign_extend:DI (reg:SI 185))) "CALPOT2.f":57 149 {*extendsidi2_rex64}
+     (nil))
+(insn 108 107 109 7 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (plus:DI (reg:DI 104 [ _18 ])
+                    (reg:DI 105 [ _19 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 222 {*adddi_1}
+     (nil))
+(insn 109 108 110 7 (set (reg/f:DI 186)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":57 85 {*movdi_internal}
+     (nil))
+(insn 110 109 111 7 (set (reg:SF 107 [ _21 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 106 [ _20 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 186)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":57 131 {*movsf_internal}
+     (nil))
+(insn 111 110 112 7 (set (reg:V4SF 187)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S16 A128])) "CALPOT2.f":57 1282 {movv4sf_internal}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF +QNaN [+QNaN])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 112 111 113 7 (parallel [
+            (set (reg:SF 108 [ _22 ])
+                (abs:SF (reg:SF 107 [ _21 ])))
+            (use (reg:V4SF 187))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":57 507 {*absnegsf2}
+     (expr_list:REG_EQUAL (abs:SF (reg:SF 107 [ _21 ]))
+        (nil)))
+(insn 113 112 114 7 (set (reg:SF 188)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":57 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 114 113 115 7 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 108 [ _22 ])
+            (reg:SF 188))) "CALPOT2.f":57 53 {*cmpisf}
+     (nil))
+(jump_insn 115 114 188 7 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 190)
+            (pc))) "CALPOT2.f":57 682 {*jcc}
+     (nil)
+ -> 190)
+;;  succ:       10
+;;              8 (FALLTHRU)
+
+;; basic block 8, loop depth 2, maybe hot
+;;  prev block 7, next block 10, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+(note 188 115 116 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 116 188 117 8 (set (pc)
+        (label_ref 158)) "CALPOT2.f":57 683 {jump}
+     (nil)
+ -> 158)
+;;  succ:       11
+
+(barrier 117 116 190)
+;; basic block 10, loop depth 2, maybe hot
+;;  prev block 8, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       7
+(code_label 190 117 119 10 10 (nil) [1 uses])
+(note 119 190 120 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 120 119 121 10 (set (reg:SI 189)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":58 86 {*movsi_internal}
+     (nil))
+(insn 121 120 122 10 (set (reg:DI 109 [ _23 ])
+        (sign_extend:DI (reg:SI 189))) "CALPOT2.f":58 149 {*extendsidi2_rex64}
+     (nil))
+(insn 122 121 123 10 (parallel [
+            (set (reg:DI 110 [ _24 ])
+                (mult:DI (reg:DI 134 [ stride.2_56 ])
+                    (reg:DI 109 [ _23 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 349 {*muldi3_1}
+     (nil))
+(insn 123 122 124 10 (parallel [
+            (set (reg:DI 111 [ _25 ])
+                (plus:DI (reg:DI 140 [ offset.3_64 ])
+                    (reg:DI 110 [ _24 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 222 {*adddi_1}
+     (nil))
+(insn 124 123 125 10 (set (reg:SI 190)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":58 86 {*movsi_internal}
+     (nil))
+(insn 125 124 126 10 (set (reg:DI 112 [ _26 ])
+        (sign_extend:DI (reg:SI 190))) "CALPOT2.f":58 149 {*extendsidi2_rex64}
+     (nil))
+(insn 126 125 127 10 (parallel [
+            (set (reg:DI 113 [ _27 ])
+                (plus:DI (reg:DI 111 [ _25 ])
+                    (reg:DI 112 [ _26 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":58 222 {*adddi_1}
+     (nil))
+(insn 127 126 128 10 (set (reg/f:DI 191)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -72 [0xffffffffffffffb8])) [4 p1d+0 S8 A64])) "CALPOT2.f":58 85 {*movdi_internal}
+     (nil))
+(insn 128 127 129 10 (set (reg:SF 114 [ _28 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 113 [ _27 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 191)) [3 *p1d_92(D) S4 A32])) "CALPOT2.f":58 131 {*movsf_internal}
+     (nil))
+(insn 129 128 130 10 (set (reg:SF 192)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+5 [0x0.c35p+17])
+        (nil)))
+(insn 130 129 131 10 (set (reg:SF 115 [ _29 ])
+        (div:SF (reg:SF 192)
+            (reg:SF 114 [ _28 ]))) "CALPOT2.f":58 841 {*fop_sf_1}
+     (nil))
+(insn 131 130 132 10 (set (reg:SF 162 [ _93 ])
+        (reg:SF 115 [ _29 ])) "CALPOT2.f":58 131 {*movsf_internal}
+     (nil))
+(insn 132 131 133 10 (set (reg:SF 22 xmm1)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":58 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.8589642047882080078125e-1 [0x0.926104p-1])
+        (nil)))
+(insn 133 132 134 10 (set (reg:SF 21 xmm0)
+        (reg:SF 162 [ _93 ])) "CALPOT2.f":58 131 {*movsf_internal}
+     (nil))
+(call_insn/u 134 133 135 10 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("powf") [flags 0x41]  <function_decl 0x7f9ef4336100 __builtin_powf>) [0 __builtin_powf S1 A8])
+            (const_int 0 [0]))) "CALPOT2.f":58 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (expr_list:SF (use (reg:SF 22 xmm1))
+            (nil))))
+(insn 135 134 136 10 (set (reg:SF 193)
+        (reg:SF 21 xmm0)) "CALPOT2.f":58 131 {*movsf_internal}
+     (nil))
+(insn 136 135 137 10 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32])
+        (reg:SF 193)) "CALPOT2.f":58 131 {*movsf_internal}
+     (nil))
+(insn 137 136 138 10 (set (reg:SI 194)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 86 {*movsi_internal}
+     (nil))
+(insn 138 137 139 10 (set (reg:DI 116 [ _30 ])
+        (sign_extend:DI (reg:SI 194))) "CALPOT2.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 139 138 140 10 (parallel [
+            (set (reg:DI 117 [ _31 ])
+                (mult:DI (reg:DI 150 [ stride.7_77 ])
+                    (reg:DI 116 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 349 {*muldi3_1}
+     (nil))
+(insn 140 139 141 10 (parallel [
+            (set (reg:DI 118 [ _32 ])
+                (plus:DI (reg:DI 156 [ offset.8_84 ])
+                    (reg:DI 117 [ _31 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 222 {*adddi_1}
+     (nil))
+(insn 141 140 142 10 (set (reg:SI 195)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 86 {*movsi_internal}
+     (nil))
+(insn 142 141 143 10 (set (reg:DI 119 [ _33 ])
+        (sign_extend:DI (reg:SI 195))) "CALPOT2.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 143 142 144 10 (parallel [
+            (set (reg:DI 120 [ _34 ])
+                (plus:DI (reg:DI 118 [ _32 ])
+                    (reg:DI 119 [ _33 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 222 {*adddi_1}
+     (nil))
+(insn 144 143 145 10 (set (reg/f:DI 196)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -80 [0xffffffffffffffb0])) [4 t1d+0 S8 A64])) "CALPOT2.f":59 85 {*movdi_internal}
+     (nil))
+(insn 145 144 146 10 (set (reg:SF 121 [ _35 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 120 [ _34 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 196)) [3 *t1d_95(D) S4 A32])) "CALPOT2.f":59 131 {*movsf_internal}
+     (nil))
+(insn 146 145 147 10 (set (reg:SI 197)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":59 86 {*movsi_internal}
+     (nil))
+(insn 147 146 148 10 (set (reg:DI 122 [ _36 ])
+        (sign_extend:DI (reg:SI 197))) "CALPOT2.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 148 147 149 10 (parallel [
+            (set (reg:DI 123 [ _37 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 122 [ _36 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 349 {*muldi3_1}
+     (nil))
+(insn 149 148 150 10 (parallel [
+            (set (reg:DI 124 [ _38 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 123 [ _37 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 222 {*adddi_1}
+     (nil))
+(insn 150 149 151 10 (set (reg:SI 198)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":59 86 {*movsi_internal}
+     (nil))
+(insn 151 150 152 10 (set (reg:DI 125 [ _39 ])
+        (sign_extend:DI (reg:SI 198))) "CALPOT2.f":59 149 {*extendsidi2_rex64}
+     (nil))
+(insn 152 151 153 10 (parallel [
+            (set (reg:DI 126 [ _40 ])
+                (plus:DI (reg:DI 124 [ _38 ])
+                    (reg:DI 125 [ _39 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":59 222 {*adddi_1}
+     (nil))
+(insn 153 152 154 10 (set (reg:SF 127 [ _41 ])
+        (mult:SF (reg:SF 121 [ _35 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -60 [0xffffffffffffffc4])) [3 fac+0 S4 A32]))) "CALPOT2.f":59 838 {*fop_sf_comm}
+     (nil))
+(insn 154 153 155 10 (set (reg/f:DI 199)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":59 85 {*movdi_internal}
+     (nil))
+(insn 155 154 156 10 (set (mem:SF (plus:DI (mult:DI (reg:DI 126 [ _40 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 199)) [3 *theta_96(D) S4 A32])
+        (reg:SF 127 [ _41 ])) "CALPOT2.f":59 131 {*movsf_internal}
+     (nil))
+(jump_insn 156 155 157 10 (set (pc)
+        (label_ref 170)) 683 {jump}
+     (nil)
+ -> 170)
+;;  succ:       12
+
+(barrier 157 156 158)
+;; basic block 11, loop depth 2, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8
+(code_label 158 157 159 11 4 (nil) [1 uses])
+(note 159 158 160 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 160 159 161 11 (set (reg:SI 200)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])) "CALPOT2.f":61 86 {*movsi_internal}
+     (nil))
+(insn 161 160 162 11 (set (reg:DI 128 [ _42 ])
+        (sign_extend:DI (reg:SI 200))) "CALPOT2.f":61 149 {*extendsidi2_rex64}
+     (nil))
+(insn 162 161 163 11 (parallel [
+            (set (reg:DI 129 [ _43 ])
+                (mult:DI (reg:DI 142 [ stride.12_67 ])
+                    (reg:DI 128 [ _42 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 349 {*muldi3_1}
+     (nil))
+(insn 163 162 164 11 (parallel [
+            (set (reg:DI 130 [ _44 ])
+                (plus:DI (reg:DI 148 [ offset.13_74 ])
+                    (reg:DI 129 [ _43 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 222 {*adddi_1}
+     (nil))
+(insn 164 163 165 11 (set (reg:SI 201)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])) "CALPOT2.f":61 86 {*movsi_internal}
+     (nil))
+(insn 165 164 166 11 (set (reg:DI 131 [ _45 ])
+        (sign_extend:DI (reg:SI 201))) "CALPOT2.f":61 149 {*extendsidi2_rex64}
+     (nil))
+(insn 166 165 167 11 (parallel [
+            (set (reg:DI 132 [ _46 ])
+                (plus:DI (reg:DI 130 [ _44 ])
+                    (reg:DI 131 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":61 222 {*adddi_1}
+     (nil))
+(insn 167 166 168 11 (set (reg/f:DI 202)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -88 [0xffffffffffffffa8])) [4 theta+0 S8 A64])) "CALPOT2.f":61 85 {*movdi_internal}
+     (nil))
+(insn 168 167 169 11 (set (reg:SF 203)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "CALPOT2.f":61 131 {*movsf_internal}
+     (nil))
+(insn 169 168 170 11 (set (mem:SF (plus:DI (mult:DI (reg:DI 132 [ _46 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 202)) [3 *theta_96(D) S4 A32])
+        (reg:SF 203)) "CALPOT2.f":61 131 {*movsf_internal}
+     (nil))
+;;  succ:       12 (FALLTHRU)
+
+;; basic block 12, loop depth 2, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10
+;;              11 (FALLTHRU)
+(code_label 170 169 171 12 6 (nil) [1 uses])
+(note 171 170 172 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 172 171 174 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":56 221 {*addsi_1}
+     (nil))
+(jump_insn 174 172 175 12 (set (pc)
+        (label_ref 173)) "CALPOT2.f":56 683 {jump}
+     (nil)
+ -> 173)
+;;  succ:       6 (DFS_BACK)
+
+(barrier 175 174 176)
+;; basic block 13, loop depth 1, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6
+(code_label 176 175 177 13 3 (nil) [1 uses])
+(note 177 176 178 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 178 177 180 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALPOT2.f":55 221 {*addsi_1}
+     (nil))
+(jump_insn 180 178 181 13 (set (pc)
+        (label_ref 179)) "CALPOT2.f":55 683 {jump}
+     (nil)
+ -> 179)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 181 180 182)
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 182 181 183 14 2 (nil) [1 uses])
+(note 183 182 191 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 191 183 0 14 (const_int 0 [0]) "CALPOT2.f":73 718 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

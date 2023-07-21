@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cd ../
-DPREP=`pwd`
+DPREP=$(pwd)
 cd $DPREP/install
 
 cat Makefile.in | sed s:root:$DPREP: > Makefile

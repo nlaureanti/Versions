@@ -1,0 +1,2264 @@
+
+;; Function calmxw (calmxw_, funcdef_no=0, decl_uid=3772, cgraph_uid=0, symbol_order=0)
+
+
+
+calmxw
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 3 [bx] 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 3 [bx] 4 [si] 5 [di] 6 [bp] 7 [sp] 17 [flags] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3]
+;;  ref usage 	r0={215d,212u} r1={107d,105u,2e} r2={11d,9u} r3={3d,3u} r4={3d,1u} r5={3d,1u} r6={3d,148u} r7={7d,31u} r8={2d} r9={2d} r10={2d} r11={2d} r12={2d} r13={2d} r14={2d} r15={2d} r17={134d,12u} r18={2d} r19={2d} r20={1d,1u,13e} r21={43d,44u} r22={24d,21u} r23={5d,2u} r24={5d,2u} r25={3d} r26={3d} r27={3d} r28={3d} r29={2d} r30={2d} r31={2d} r32={2d} r33={2d} r34={2d} r35={2d} r36={2d} r37={3d} r38={3d} r39={2d} r40={2d} r45={2d} r46={2d} r47={2d} r48={2d} r49={2d} r50={2d} r51={2d} r52={2d} r53={2d} r54={2d} r55={2d} r56={2d} r57={2d} r58={2d} r59={2d} r60={2d} r61={2d} r62={2d} r63={2d} r64={2d} r65={2d} r66={2d} r67={2d} r68={2d} r69={2d} r70={2d} r71={2d} r72={2d} r73={2d} r74={2d} r75={2d} r76={2d} r77={2d} r78={2d} r79={2d} r80={2d} 
+;;    total ref usage 1301{694d,592u,15e} in 463{461 regular + 2 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 573 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 573 7 574 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "CALMXW.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 574 573 575 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "CALMXW.f":1 85 {*movdi_internal}
+     (nil))
+(insn/f 575 574 576 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg:DI 3 bx)) "CALMXW.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 576 575 577 2 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int -104 [0xffffffffffffff98])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALMXW.f":1 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(note 577 576 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 577 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 mxwp+0 S8 A64])
+        (reg:DI 5 di [ mxwp ])) "CALMXW.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [3 mxwz+0 S8 A64])
+        (reg:DI 4 si [ mxwz ])) "CALMXW.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -88 [0xffffffffffffffa8])) [3 mxwu+0 S8 A64])
+        (reg:DI 1 dx [ mxwu ])) "CALMXW.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -96 [0xffffffffffffffa0])) [3 mxwv+0 S8 A64])
+        (reg:DI 2 cx [ mxwv ])) "CALMXW.f":1 85 {*movdi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SF 21 xmm0 [340])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALMXW.f":72 131 {*movsf_internal}
+     (nil))
+(insn 10 9 11 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 critp+0 S4 A32])
+        (reg:SF 21 xmm0 [340])) "CALMXW.f":72 131 {*movsf_internal}
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 1 dx [orig:326 _255 ] [326])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f8a2981a630 parallel>)
+                    (const_int 8 [0x8]))) [1 parallel.jsta+0 S4 A64])) "CALMXW.f":74 86 {*movsi_internal}
+     (nil))
+(insn 12 11 13 2 (set (reg:SI 0 ax [orig:327 _256 ] [327])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f8a2981a630 parallel>)
+                    (const_int 12 [0xc]))) [1 parallel.jend+0 S4 A32])) "CALMXW.f":74 86 {*movsi_internal}
+     (nil))
+(insn 13 12 76 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 1 dx [orig:326 _255 ] [326])) "CALMXW.f":74 86 {*movsi_internal}
+     (nil))
+(code_label 76 13 14 3 5 (nil) [1 uses])
+(note 14 76 15 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 15 14 16 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 0 ax [orig:327 _256 ] [327]))) "CALMXW.f":74 11 {*cmpsi_1}
+     (nil))
+(insn 16 15 17 3 (set (reg:QI 1 dx [341])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMXW.f":74 678 {*setcc_qi}
+     (nil))
+(insn 17 16 18 3 (set (reg:SI 1 dx [orig:328 _258 ] [328])
+        (zero_extend:SI (reg:QI 1 dx [341]))) "CALMXW.f":74 140 {*zero_extendqisi2}
+     (nil))
+(insn 18 17 19 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:328 _258 ] [328])
+            (const_int 0 [0]))) "CALMXW.f":74 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 19 18 20 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 522)
+            (pc))) "CALMXW.f":74 682 {*jcc}
+     (nil)
+ -> 522)
+(note 20 19 21 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 21 20 70 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALMXW.f":75 86 {*movsi_internal}
+     (nil))
+(code_label 70 21 22 5 4 (nil) [1 uses])
+(note 22 70 23 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 23 22 24 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALMXW.f":75 11 {*cmpsi_1}
+     (nil))
+(insn 24 23 25 5 (set (reg:QI 1 dx [342])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMXW.f":75 678 {*setcc_qi}
+     (nil))
+(insn 25 24 26 5 (set (reg:SI 1 dx [orig:329 _260 ] [329])
+        (zero_extend:SI (reg:QI 1 dx [342]))) "CALMXW.f":75 140 {*zero_extendqisi2}
+     (nil))
+(insn 26 25 27 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 1 dx [orig:329 _260 ] [329])
+            (const_int 0 [0]))) "CALMXW.f":75 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 27 26 28 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 525)
+            (pc))) "CALMXW.f":75 682 {*jcc}
+     (nil)
+ -> 525)
+(note 28 27 29 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 29 28 30 6 (set (reg:SI 1 dx [343])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":76 86 {*movsi_internal}
+     (nil))
+(insn 30 29 31 6 (set (reg:DI 1 dx [orig:87 _1 ] [87])
+        (sign_extend:DI (reg:SI 1 dx [343]))) "CALMXW.f":76 149 {*extendsidi2_rex64}
+     (nil))
+(insn 31 30 32 6 (parallel [
+            (set (reg:DI 2 cx [orig:88 _2 ] [88])
+                (mult:DI (reg:DI 1 dx [orig:87 _1 ] [87])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":76 349 {*muldi3_1}
+     (nil))
+(insn 32 31 33 6 (set (reg:SI 1 dx [344])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":76 86 {*movsi_internal}
+     (nil))
+(insn 33 32 34 6 (set (reg:DI 1 dx [orig:89 _3 ] [89])
+        (sign_extend:DI (reg:SI 1 dx [344]))) "CALMXW.f":76 149 {*extendsidi2_rex64}
+     (nil))
+(insn 34 33 569 6 (parallel [
+            (set (reg:DI 1 dx [orig:90 _4 ] [90])
+                (plus:DI (reg:DI 1 dx [orig:89 _3 ] [89])
+                    (reg:DI 2 cx [orig:88 _2 ] [88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":76 222 {*adddi_1}
+     (nil))
+(insn 569 34 36 6 (set (reg:DI 2 cx [orig:91 _5 ] [91])
+        (plus:DI (reg:DI 1 dx [orig:90 _4 ] [90])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":76 218 {*leadi}
+     (nil))
+(insn 36 569 37 6 (set (reg:SF 21 xmm0 [orig:92 _6 ] [92])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f8a2981a240 options>) [2 options.spval+0 S4 A128])) "CALMXW.f":1 131 {*movsf_internal}
+     (nil))
+(insn 37 36 38 6 (set (reg/f:DI 1 dx [345])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -88 [0xffffffffffffffa8])) [3 mxwu+0 S8 A64])) "CALMXW.f":76 85 {*movdi_internal}
+     (nil))
+(insn 38 37 39 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:91 _5 ] [91])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [345])) [2 *mxwu_261(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:92 _6 ] [92])) "CALMXW.f":76 131 {*movsf_internal}
+     (nil))
+(insn 39 38 40 6 (set (reg:SI 1 dx [346])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":77 86 {*movsi_internal}
+     (nil))
+(insn 40 39 41 6 (set (reg:DI 1 dx [orig:93 _7 ] [93])
+        (sign_extend:DI (reg:SI 1 dx [346]))) "CALMXW.f":77 149 {*extendsidi2_rex64}
+     (nil))
+(insn 41 40 42 6 (parallel [
+            (set (reg:DI 2 cx [orig:94 _8 ] [94])
+                (mult:DI (reg:DI 1 dx [orig:93 _7 ] [93])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":77 349 {*muldi3_1}
+     (nil))
+(insn 42 41 43 6 (set (reg:SI 1 dx [347])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":77 86 {*movsi_internal}
+     (nil))
+(insn 43 42 44 6 (set (reg:DI 1 dx [orig:95 _9 ] [95])
+        (sign_extend:DI (reg:SI 1 dx [347]))) "CALMXW.f":77 149 {*extendsidi2_rex64}
+     (nil))
+(insn 44 43 570 6 (parallel [
+            (set (reg:DI 1 dx [orig:96 _10 ] [96])
+                (plus:DI (reg:DI 1 dx [orig:95 _9 ] [95])
+                    (reg:DI 2 cx [orig:94 _8 ] [94])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":77 222 {*adddi_1}
+     (nil))
+(insn 570 44 46 6 (set (reg:DI 2 cx [orig:97 _11 ] [97])
+        (plus:DI (reg:DI 1 dx [orig:96 _10 ] [96])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":77 218 {*leadi}
+     (nil))
+(insn 46 570 47 6 (set (reg:SF 21 xmm0 [orig:98 _12 ] [98])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f8a2981a240 options>) [2 options.spval+0 S4 A128])) "CALMXW.f":1 131 {*movsf_internal}
+     (nil))
+(insn 47 46 48 6 (set (reg/f:DI 1 dx [348])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -96 [0xffffffffffffffa0])) [3 mxwv+0 S8 A64])) "CALMXW.f":77 85 {*movdi_internal}
+     (nil))
+(insn 48 47 49 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:97 _11 ] [97])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [348])) [2 *mxwv_263(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:98 _12 ] [98])) "CALMXW.f":77 131 {*movsf_internal}
+     (nil))
+(insn 49 48 50 6 (set (reg:SI 1 dx [349])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":78 86 {*movsi_internal}
+     (nil))
+(insn 50 49 51 6 (set (reg:DI 1 dx [orig:99 _13 ] [99])
+        (sign_extend:DI (reg:SI 1 dx [349]))) "CALMXW.f":78 149 {*extendsidi2_rex64}
+     (nil))
+(insn 51 50 52 6 (parallel [
+            (set (reg:DI 2 cx [orig:100 _14 ] [100])
+                (mult:DI (reg:DI 1 dx [orig:99 _13 ] [99])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":78 349 {*muldi3_1}
+     (nil))
+(insn 52 51 53 6 (set (reg:SI 1 dx [350])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":78 86 {*movsi_internal}
+     (nil))
+(insn 53 52 54 6 (set (reg:DI 1 dx [orig:101 _15 ] [101])
+        (sign_extend:DI (reg:SI 1 dx [350]))) "CALMXW.f":78 149 {*extendsidi2_rex64}
+     (nil))
+(insn 54 53 571 6 (parallel [
+            (set (reg:DI 1 dx [orig:102 _16 ] [102])
+                (plus:DI (reg:DI 1 dx [orig:101 _15 ] [101])
+                    (reg:DI 2 cx [orig:100 _14 ] [100])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":78 222 {*adddi_1}
+     (nil))
+(insn 571 54 56 6 (set (reg:DI 2 cx [orig:103 _17 ] [103])
+        (plus:DI (reg:DI 1 dx [orig:102 _16 ] [102])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":78 218 {*leadi}
+     (nil))
+(insn 56 571 57 6 (set (reg:SF 21 xmm0 [orig:104 _18 ] [104])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f8a2981a240 options>) [2 options.spval+0 S4 A128])) "CALMXW.f":1 131 {*movsf_internal}
+     (nil))
+(insn 57 56 58 6 (set (reg/f:DI 1 dx [351])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 mxwp+0 S8 A64])) "CALMXW.f":78 85 {*movdi_internal}
+     (nil))
+(insn 58 57 59 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:103 _17 ] [103])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [351])) [2 *mxwp_265(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:104 _18 ] [104])) "CALMXW.f":78 131 {*movsf_internal}
+     (nil))
+(insn 59 58 60 6 (set (reg:SI 1 dx [352])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":79 86 {*movsi_internal}
+     (nil))
+(insn 60 59 61 6 (set (reg:DI 1 dx [orig:105 _19 ] [105])
+        (sign_extend:DI (reg:SI 1 dx [352]))) "CALMXW.f":79 149 {*extendsidi2_rex64}
+     (nil))
+(insn 61 60 62 6 (parallel [
+            (set (reg:DI 2 cx [orig:106 _20 ] [106])
+                (mult:DI (reg:DI 1 dx [orig:105 _19 ] [105])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":79 349 {*muldi3_1}
+     (nil))
+(insn 62 61 63 6 (set (reg:SI 1 dx [353])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":79 86 {*movsi_internal}
+     (nil))
+(insn 63 62 64 6 (set (reg:DI 1 dx [orig:107 _21 ] [107])
+        (sign_extend:DI (reg:SI 1 dx [353]))) "CALMXW.f":79 149 {*extendsidi2_rex64}
+     (nil))
+(insn 64 63 572 6 (parallel [
+            (set (reg:DI 1 dx [orig:108 _22 ] [108])
+                (plus:DI (reg:DI 1 dx [orig:107 _21 ] [107])
+                    (reg:DI 2 cx [orig:106 _20 ] [106])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":79 222 {*adddi_1}
+     (nil))
+(insn 572 64 66 6 (set (reg:DI 2 cx [orig:109 _23 ] [109])
+        (plus:DI (reg:DI 1 dx [orig:108 _22 ] [108])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":79 218 {*leadi}
+     (nil))
+(insn 66 572 67 6 (set (reg:SF 21 xmm0 [orig:110 _24 ] [110])
+        (mem/c:SF (symbol_ref:DI ("options_") [flags 0x2]  <var_decl 0x7f8a2981a240 options>) [2 options.spval+0 S4 A128])) "CALMXW.f":1 131 {*movsf_internal}
+     (nil))
+(insn 67 66 68 6 (set (reg/f:DI 1 dx [354])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [3 mxwz+0 S8 A64])) "CALMXW.f":79 85 {*movdi_internal}
+     (nil))
+(insn 68 67 69 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 2 cx [orig:109 _23 ] [109])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 1 dx [354])) [2 *mxwz_267(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:110 _24 ] [110])) "CALMXW.f":79 131 {*movsf_internal}
+     (nil))
+(insn 69 68 511 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":75 221 {*addsi_1}
+     (nil))
+(jump_insn 511 69 512 6 (set (pc)
+        (label_ref 70)) "CALMXW.f":75 683 {jump}
+     (nil)
+ -> 70)
+(barrier 512 511 525)
+(code_label 525 512 524 7 19 (nil) [1 uses])
+(note 524 525 526 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 526 524 75 7 (const_int 0 [0]) "CALMXW.f":79 718 {nop}
+     (nil))
+(insn 75 526 513 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":74 221 {*addsi_1}
+     (nil))
+(jump_insn 513 75 514 7 (set (pc)
+        (label_ref 76)) "CALMXW.f":74 683 {jump}
+     (nil)
+ -> 76)
+(barrier 514 513 522)
+(code_label 522 514 521 8 18 (nil) [1 uses])
+(note 521 522 523 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 523 521 81 8 (const_int 0 [0]) "CALMXW.f":75 718 {nop}
+     (nil))
+(insn 81 523 82 8 (set (reg:SI 0 ax [orig:330 _271 ] [330])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f8a2981a630 parallel>)
+                    (const_int 16 [0x10]))) [1 parallel.jsta_m+0 S4 A128])) "CALMXW.f":87 86 {*movsi_internal}
+     (nil))
+(insn 82 81 83 8 (set (reg:SI 3 bx [orig:331 _272 ] [331])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f8a2981a630 parallel>)
+                    (const_int 20 [0x14]))) [1 parallel.jend_m+0 S4 A32])) "CALMXW.f":87 86 {*movsi_internal}
+     (nil))
+(insn 83 82 495 8 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+        (reg:SI 0 ax [orig:330 _271 ] [330])) "CALMXW.f":87 86 {*movsi_internal}
+     (nil))
+(code_label 495 83 84 9 14 (nil) [1 uses])
+(note 84 495 85 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 85 84 86 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+            (reg:SI 3 bx [orig:331 _272 ] [331]))) "CALMXW.f":87 11 {*cmpsi_1}
+     (nil))
+(insn 86 85 87 9 (set (reg:QI 0 ax [355])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMXW.f":87 678 {*setcc_qi}
+     (nil))
+(insn 87 86 88 9 (set (reg:SI 0 ax [orig:332 _274 ] [332])
+        (zero_extend:SI (reg:QI 0 ax [355]))) "CALMXW.f":87 140 {*zero_extendqisi2}
+     (nil))
+(insn 88 87 89 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:332 _274 ] [332])
+            (const_int 0 [0]))) "CALMXW.f":87 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 89 88 90 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 528)
+            (pc))) "CALMXW.f":87 682 {*jcc}
+     (nil)
+ -> 528)
+(note 90 89 91 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 91 90 489 10 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+        (const_int 2 [0x2])) "CALMXW.f":88 86 {*movsi_internal}
+     (nil))
+(code_label 489 91 92 11 13 (nil) [1 uses])
+(note 92 489 93 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 93 92 94 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+            (const_int 118 [0x76]))) "CALMXW.f":88 11 {*cmpsi_1}
+     (nil))
+(insn 94 93 95 11 (set (reg:QI 0 ax [356])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALMXW.f":88 678 {*setcc_qi}
+     (nil))
+(insn 95 94 96 11 (set (reg:SI 0 ax [orig:333 _276 ] [333])
+        (zero_extend:SI (reg:QI 0 ax [356]))) "CALMXW.f":88 140 {*zero_extendqisi2}
+     (nil))
+(insn 96 95 97 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:333 _276 ] [333])
+            (const_int 0 [0]))) "CALMXW.f":88 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 97 96 98 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 531)
+            (pc))) "CALMXW.f":88 682 {*jcc}
+     (nil)
+ -> 531)
+(note 98 97 99 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 99 98 100 12 (set (reg:SI 0 ax [357])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":89 86 {*movsi_internal}
+     (nil))
+(insn 100 99 101 12 (set (reg:DI 0 ax [orig:111 _25 ] [111])
+        (sign_extend:DI (reg:SI 0 ax [357]))) "CALMXW.f":89 149 {*extendsidi2_rex64}
+     (nil))
+(insn 101 100 102 12 (parallel [
+            (set (reg:DI 0 ax [orig:112 _26 ] [112])
+                (plus:DI (reg:DI 0 ax [orig:111 _25 ] [111])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":89 222 {*adddi_1}
+     (nil))
+(insn 102 101 106 12 (set (reg:SI 1 dx [orig:113 _27 ] [113])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [orig:112 _26 ] [112])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f8a29813630 indx>)) [1 indx.ihe S4 A32])) "CALMXW.f":89 86 {*movsi_internal}
+     (nil))
+(insn 106 102 107 12 (set (reg:SI 0 ax [361])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":89 86 {*movsi_internal}
+     (nil))
+(insn 107 106 108 12 (parallel [
+            (set (reg:SI 0 ax [360])
+                (plus:SI (reg:SI 0 ax [361])
+                    (reg:SI 1 dx [orig:113 _27 ] [113])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":89 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 1 dx [orig:113 _27 ] [113])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 108 107 109 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 ie+0 S4 A32])
+        (reg:SI 0 ax [360])) "CALMXW.f":89 86 {*movsi_internal}
+     (nil))
+(insn 109 108 110 12 (set (reg:SI 0 ax [362])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":90 86 {*movsi_internal}
+     (nil))
+(insn 110 109 111 12 (set (reg:DI 0 ax [orig:114 _28 ] [114])
+        (sign_extend:DI (reg:SI 0 ax [362]))) "CALMXW.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 111 110 112 12 (parallel [
+            (set (reg:DI 0 ax [orig:115 _29 ] [115])
+                (plus:DI (reg:DI 0 ax [orig:114 _28 ] [114])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":90 222 {*adddi_1}
+     (nil))
+(insn 112 111 113 12 (parallel [
+            (set (reg:DI 0 ax [363])
+                (plus:DI (reg:DI 0 ax [orig:115 _29 ] [115])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":90 222 {*adddi_1}
+     (nil))
+(insn 113 112 117 12 (set (reg:SI 1 dx [orig:116 _30 ] [116])
+        (mem:SI (plus:DI (mult:DI (reg:DI 0 ax [363])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f8a29813630 indx>)) [1 indx.ihw S4 A32])) "CALMXW.f":90 86 {*movsi_internal}
+     (nil))
+(insn 117 113 118 12 (set (reg:SI 0 ax [367])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":90 86 {*movsi_internal}
+     (nil))
+(insn 118 117 119 12 (parallel [
+            (set (reg:SI 0 ax [366])
+                (plus:SI (reg:SI 0 ax [367])
+                    (reg:SI 1 dx [orig:116 _30 ] [116])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":90 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 1 dx [orig:116 _30 ] [116])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 i+0 S4 A32]))
+        (nil)))
+(insn 119 118 120 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [1 iw+0 S4 A32])
+        (reg:SI 0 ax [366])) "CALMXW.f":90 86 {*movsi_internal}
+     (nil))
+(insn 120 119 121 12 (set (reg:SF 21 xmm0 [368])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALMXW.f":91 131 {*movsf_internal}
+     (nil))
+(insn 121 120 122 12 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 mxww+0 S4 A32])
+        (reg:SF 21 xmm0 [368])) "CALMXW.f":91 131 {*movsf_internal}
+     (nil))
+(insn 122 121 123 12 (set (reg:SI 0 ax [369])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":92 86 {*movsi_internal}
+     (nil))
+(insn 123 122 124 12 (set (reg:DI 0 ax [orig:117 _31 ] [117])
+        (sign_extend:DI (reg:SI 0 ax [369]))) "CALMXW.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 124 123 125 12 (parallel [
+            (set (reg:DI 1 dx [orig:118 _32 ] [118])
+                (mult:DI (reg:DI 0 ax [orig:117 _31 ] [117])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":92 349 {*muldi3_1}
+     (nil))
+(insn 125 124 126 12 (set (reg:SI 0 ax [370])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":92 86 {*movsi_internal}
+     (nil))
+(insn 126 125 127 12 (set (reg:DI 0 ax [orig:119 _33 ] [119])
+        (sign_extend:DI (reg:SI 0 ax [370]))) "CALMXW.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 127 126 568 12 (parallel [
+            (set (reg:DI 0 ax [orig:120 _34 ] [120])
+                (plus:DI (reg:DI 0 ax [orig:119 _33 ] [119])
+                    (reg:DI 1 dx [orig:118 _32 ] [118])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":92 222 {*adddi_1}
+     (nil))
+(insn 568 127 129 12 (set (reg:DI 1 dx [orig:121 _35 ] [121])
+        (plus:DI (reg:DI 0 ax [orig:120 _34 ] [120])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":92 218 {*leadi}
+     (nil))
+(insn 129 568 130 12 (set (reg/f:DI 0 ax [371])
+        (symbol_ref:DI ("loops_") [flags 0x202]  <var_decl 0x7f8a29813900 loops>)) "CALMXW.f":92 85 {*movdi_internal}
+     (nil))
+(insn 130 129 131 12 (parallel [
+            (set (reg:DI 1 dx [372])
+                (plus:DI (reg:DI 1 dx [orig:121 _35 ] [121])
+                    (const_int 2420 [0x974])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":92 222 {*adddi_1}
+     (nil))
+(insn 131 130 132 12 (set (reg:SI 0 ax [373])
+        (mem:SI (plus:DI (mult:DI (reg:DI 1 dx [372])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [371])) [1 loops.lmh S4 A32])) "CALMXW.f":92 86 {*movsi_internal}
+     (nil))
+(insn 132 131 133 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [1 llmh+0 S4 A32])
+        (reg:SI 0 ax [373])) "CALMXW.f":92 86 {*movsi_internal}
+     (nil))
+(insn 133 132 134 12 (set (reg:SI 0 ax [374])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [1 llmh+0 S4 A32])) "CALMXW.f":94 86 {*movsi_internal}
+     (nil))
+(insn 134 133 135 12 (parallel [
+            (set (reg:SI 0 ax [orig:334 _281 ] [334])
+                (plus:SI (reg:SI 0 ax [374])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":94 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -32 [0xffffffffffffffe0])) [1 llmh+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 135 134 483 12 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+        (reg:SI 0 ax [orig:334 _281 ] [334])) "CALMXW.f":94 86 {*movsi_internal}
+     (nil))
+(code_label 483 135 136 13 12 (nil) [1 uses])
+(note 136 483 137 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 137 136 138 13 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+            (const_int 0 [0]))) "CALMXW.f":94 7 {*cmpsi_ccno_1}
+     (nil))
+(insn 138 137 139 13 (set (reg:QI 0 ax [375])
+        (le:QI (reg:CCNO 17 flags)
+            (const_int 0 [0]))) "CALMXW.f":94 678 {*setcc_qi}
+     (nil))
+(insn 139 138 140 13 (set (reg:SI 0 ax [orig:335 _283 ] [335])
+        (zero_extend:SI (reg:QI 0 ax [375]))) "CALMXW.f":94 140 {*zero_extendqisi2}
+     (nil))
+(insn 140 139 141 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:335 _283 ] [335])
+            (const_int 0 [0]))) "CALMXW.f":94 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 141 140 142 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 534)
+            (pc))) "CALMXW.f":94 682 {*jcc}
+     (nil)
+ -> 534)
+(note 142 141 143 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 143 142 144 14 (set (reg:SI 0 ax [376])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 144 143 145 14 (set (reg:DI 0 ax [orig:122 _36 ] [122])
+        (sign_extend:DI (reg:SI 0 ax [376]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 145 144 146 14 (parallel [
+            (set (reg:DI 1 dx [orig:123 _37 ] [123])
+                (mult:DI (reg:DI 0 ax [orig:122 _36 ] [122])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 146 145 147 14 (set (reg:SI 0 ax [377])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 147 146 148 14 (parallel [
+            (set (reg:SI 0 ax [orig:124 _38 ] [124])
+                (plus:SI (reg:SI 0 ax [377])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 148 147 149 14 (set (reg:DI 0 ax [orig:125 _39 ] [125])
+        (sign_extend:DI (reg:SI 0 ax [orig:124 _38 ] [124]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 149 148 150 14 (parallel [
+            (set (reg:DI 0 ax [orig:126 _40 ] [126])
+                (mult:DI (reg:DI 0 ax [orig:125 _39 ] [125])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 150 149 151 14 (parallel [
+            (set (reg:DI 1 dx [orig:127 _41 ] [127])
+                (plus:DI (reg:DI 1 dx [orig:123 _37 ] [123])
+                    (reg:DI 0 ax [orig:126 _40 ] [126])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 151 150 152 14 (set (reg:SI 0 ax [378])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 152 151 153 14 (set (reg:DI 0 ax [orig:128 _42 ] [128])
+        (sign_extend:DI (reg:SI 0 ax [378]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 153 152 560 14 (parallel [
+            (set (reg:DI 0 ax [orig:129 _43 ] [129])
+                (plus:DI (reg:DI 0 ax [orig:128 _42 ] [128])
+                    (reg:DI 1 dx [orig:127 _41 ] [127])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 560 153 155 14 (set (reg:DI 1 dx [orig:130 _44 ] [130])
+        (plus:DI (reg:DI 0 ax [orig:129 _43 ] [129])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":96 218 {*leadi}
+     (nil))
+(insn 155 560 156 14 (set (reg/f:DI 0 ax [379])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":96 85 {*movdi_internal}
+     (nil))
+(insn 156 155 157 14 (parallel [
+            (set (reg:DI 1 dx [380])
+                (plus:DI (reg:DI 1 dx [orig:130 _44 ] [130])
+                    (const_int 88893 [0x15b3d])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 157 156 158 14 (set (reg:SF 22 xmm1 [orig:131 _45 ] [131])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [380])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [379])) [2 vrbls.u S4 A32])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 158 157 159 14 (set (reg:SI 0 ax [381])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 159 158 160 14 (set (reg:DI 0 ax [orig:132 _46 ] [132])
+        (sign_extend:DI (reg:SI 0 ax [381]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 160 159 161 14 (parallel [
+            (set (reg:DI 1 dx [orig:133 _47 ] [133])
+                (mult:DI (reg:DI 0 ax [orig:132 _46 ] [132])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 161 160 162 14 (set (reg:SI 0 ax [382])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 162 161 163 14 (set (reg:DI 0 ax [orig:134 _48 ] [134])
+        (sign_extend:DI (reg:SI 0 ax [382]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 163 162 164 14 (parallel [
+            (set (reg:DI 0 ax [orig:135 _49 ] [135])
+                (mult:DI (reg:DI 0 ax [orig:134 _48 ] [134])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 164 163 165 14 (parallel [
+            (set (reg:DI 1 dx [orig:136 _50 ] [136])
+                (plus:DI (reg:DI 1 dx [orig:133 _47 ] [133])
+                    (reg:DI 0 ax [orig:135 _49 ] [135])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 165 164 166 14 (set (reg:SI 0 ax [383])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [1 iw+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 166 165 167 14 (set (reg:DI 0 ax [orig:137 _51 ] [137])
+        (sign_extend:DI (reg:SI 0 ax [383]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 167 166 561 14 (parallel [
+            (set (reg:DI 0 ax [orig:138 _52 ] [138])
+                (plus:DI (reg:DI 0 ax [orig:137 _51 ] [137])
+                    (reg:DI 1 dx [orig:136 _50 ] [136])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 561 167 169 14 (set (reg:DI 1 dx [orig:139 _53 ] [139])
+        (plus:DI (reg:DI 0 ax [orig:138 _52 ] [138])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":96 218 {*leadi}
+     (nil))
+(insn 169 561 170 14 (set (reg/f:DI 0 ax [384])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":96 85 {*movdi_internal}
+     (nil))
+(insn 170 169 171 14 (parallel [
+            (set (reg:DI 1 dx [385])
+                (plus:DI (reg:DI 1 dx [orig:139 _53 ] [139])
+                    (const_int 88893 [0x15b3d])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 171 170 172 14 (set (reg:SF 21 xmm0 [orig:140 _54 ] [140])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [385])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [384])) [2 vrbls.u S4 A32])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 172 171 173 14 (set (reg:SF 22 xmm1 [orig:141 _55 ] [141])
+        (plus:SF (reg:SF 22 xmm1 [orig:131 _45 ] [131])
+            (reg:SF 21 xmm0 [orig:140 _54 ] [140]))) "CALMXW.f":96 838 {*fop_sf_comm}
+     (nil))
+(insn 173 172 174 14 (set (reg:SI 0 ax [386])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 174 173 175 14 (set (reg:DI 0 ax [orig:142 _56 ] [142])
+        (sign_extend:DI (reg:SI 0 ax [386]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 175 174 176 14 (parallel [
+            (set (reg:DI 1 dx [orig:143 _57 ] [143])
+                (mult:DI (reg:DI 0 ax [orig:142 _56 ] [142])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 176 175 177 14 (set (reg:SI 0 ax [387])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 177 176 178 14 (set (reg:DI 0 ax [orig:144 _58 ] [144])
+        (sign_extend:DI (reg:SI 0 ax [387]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 178 177 179 14 (parallel [
+            (set (reg:DI 0 ax [orig:145 _59 ] [145])
+                (mult:DI (reg:DI 0 ax [orig:144 _58 ] [144])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 179 178 180 14 (parallel [
+            (set (reg:DI 1 dx [orig:146 _60 ] [146])
+                (plus:DI (reg:DI 1 dx [orig:143 _57 ] [143])
+                    (reg:DI 0 ax [orig:145 _59 ] [145])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 180 179 181 14 (set (reg:SI 0 ax [388])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 ie+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 181 180 182 14 (set (reg:DI 0 ax [orig:147 _61 ] [147])
+        (sign_extend:DI (reg:SI 0 ax [388]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 182 181 562 14 (parallel [
+            (set (reg:DI 0 ax [orig:148 _62 ] [148])
+                (plus:DI (reg:DI 0 ax [orig:147 _61 ] [147])
+                    (reg:DI 1 dx [orig:146 _60 ] [146])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 562 182 184 14 (set (reg:DI 1 dx [orig:149 _63 ] [149])
+        (plus:DI (reg:DI 0 ax [orig:148 _62 ] [148])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":96 218 {*leadi}
+     (nil))
+(insn 184 562 185 14 (set (reg/f:DI 0 ax [389])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":96 85 {*movdi_internal}
+     (nil))
+(insn 185 184 186 14 (parallel [
+            (set (reg:DI 1 dx [390])
+                (plus:DI (reg:DI 1 dx [orig:149 _63 ] [149])
+                    (const_int 88893 [0x15b3d])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 186 185 187 14 (set (reg:SF 21 xmm0 [orig:150 _64 ] [150])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [390])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [389])) [2 vrbls.u S4 A32])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 187 186 188 14 (set (reg:SF 22 xmm1 [orig:151 _65 ] [151])
+        (plus:SF (reg:SF 22 xmm1 [orig:141 _55 ] [141])
+            (reg:SF 21 xmm0 [orig:150 _64 ] [150]))) "CALMXW.f":96 838 {*fop_sf_comm}
+     (nil))
+(insn 188 187 189 14 (set (reg:SI 0 ax [391])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 189 188 190 14 (set (reg:DI 0 ax [orig:152 _66 ] [152])
+        (sign_extend:DI (reg:SI 0 ax [391]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 190 189 191 14 (parallel [
+            (set (reg:DI 1 dx [orig:153 _67 ] [153])
+                (mult:DI (reg:DI 0 ax [orig:152 _66 ] [152])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 191 190 192 14 (set (reg:SI 0 ax [392])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 192 191 193 14 (parallel [
+            (set (reg:SI 0 ax [orig:154 _68 ] [154])
+                (plus:SI (reg:SI 0 ax [392])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 193 192 194 14 (set (reg:DI 0 ax [orig:155 _69 ] [155])
+        (sign_extend:DI (reg:SI 0 ax [orig:154 _68 ] [154]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 194 193 195 14 (parallel [
+            (set (reg:DI 0 ax [orig:156 _70 ] [156])
+                (mult:DI (reg:DI 0 ax [orig:155 _69 ] [155])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 349 {*muldi3_1}
+     (nil))
+(insn 195 194 196 14 (parallel [
+            (set (reg:DI 1 dx [orig:157 _71 ] [157])
+                (plus:DI (reg:DI 1 dx [orig:153 _67 ] [153])
+                    (reg:DI 0 ax [orig:156 _70 ] [156])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 196 195 197 14 (set (reg:SI 0 ax [393])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":96 86 {*movsi_internal}
+     (nil))
+(insn 197 196 198 14 (set (reg:DI 0 ax [orig:158 _72 ] [158])
+        (sign_extend:DI (reg:SI 0 ax [393]))) "CALMXW.f":96 149 {*extendsidi2_rex64}
+     (nil))
+(insn 198 197 563 14 (parallel [
+            (set (reg:DI 0 ax [orig:159 _73 ] [159])
+                (plus:DI (reg:DI 0 ax [orig:158 _72 ] [158])
+                    (reg:DI 1 dx [orig:157 _71 ] [157])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 563 198 200 14 (set (reg:DI 1 dx [orig:160 _74 ] [160])
+        (plus:DI (reg:DI 0 ax [orig:159 _73 ] [159])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":96 218 {*leadi}
+     (nil))
+(insn 200 563 201 14 (set (reg/f:DI 0 ax [394])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":96 85 {*movdi_internal}
+     (nil))
+(insn 201 200 202 14 (parallel [
+            (set (reg:DI 1 dx [395])
+                (plus:DI (reg:DI 1 dx [orig:160 _74 ] [160])
+                    (const_int 88893 [0x15b3d])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":96 222 {*adddi_1}
+     (nil))
+(insn 202 201 203 14 (set (reg:SF 21 xmm0 [orig:161 _75 ] [161])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [395])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [394])) [2 vrbls.u S4 A32])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 203 202 204 14 (set (reg:SF 21 xmm0 [orig:162 _76 ] [162])
+        (plus:SF (reg:SF 21 xmm0 [orig:161 _75 ] [161])
+            (reg:SF 22 xmm1 [orig:151 _65 ] [151]))) "CALMXW.f":96 838 {*fop_sf_comm}
+     (nil))
+(insn 204 203 205 14 (set (reg:SF 22 xmm1 [orig:163 _77 ] [163])
+        (reg:SF 21 xmm0 [orig:162 _76 ] [162])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 205 204 206 14 (set (reg:SF 21 xmm0 [397])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALMXW.f":96 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.5e-1 [0x0.8p-1])
+        (nil)))
+(insn 206 205 207 14 (set (reg:SF 21 xmm0 [396])
+        (mult:SF (reg:SF 21 xmm0 [397])
+            (reg:SF 22 xmm1 [orig:163 _77 ] [163]))) "CALMXW.f":96 838 {*fop_sf_comm}
+     (nil))
+(insn 207 206 208 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 u0+0 S4 A32])
+        (reg:SF 21 xmm0 [396])) "CALMXW.f":96 131 {*movsf_internal}
+     (nil))
+(insn 208 207 209 14 (set (reg:SI 0 ax [398])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 209 208 210 14 (set (reg:DI 0 ax [orig:164 _78 ] [164])
+        (sign_extend:DI (reg:SI 0 ax [398]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 210 209 211 14 (parallel [
+            (set (reg:DI 1 dx [orig:165 _79 ] [165])
+                (mult:DI (reg:DI 0 ax [orig:164 _78 ] [164])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 211 210 212 14 (set (reg:SI 0 ax [399])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 212 211 213 14 (parallel [
+            (set (reg:SI 0 ax [orig:166 _80 ] [166])
+                (plus:SI (reg:SI 0 ax [399])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 213 212 214 14 (set (reg:DI 0 ax [orig:167 _81 ] [167])
+        (sign_extend:DI (reg:SI 0 ax [orig:166 _80 ] [166]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 214 213 215 14 (parallel [
+            (set (reg:DI 0 ax [orig:168 _82 ] [168])
+                (mult:DI (reg:DI 0 ax [orig:167 _81 ] [167])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 215 214 216 14 (parallel [
+            (set (reg:DI 1 dx [orig:169 _83 ] [169])
+                (plus:DI (reg:DI 1 dx [orig:165 _79 ] [165])
+                    (reg:DI 0 ax [orig:168 _82 ] [168])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 216 215 217 14 (set (reg:SI 0 ax [400])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 217 216 218 14 (set (reg:DI 0 ax [orig:170 _84 ] [170])
+        (sign_extend:DI (reg:SI 0 ax [400]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 218 217 564 14 (parallel [
+            (set (reg:DI 0 ax [orig:171 _85 ] [171])
+                (plus:DI (reg:DI 0 ax [orig:170 _84 ] [170])
+                    (reg:DI 1 dx [orig:169 _83 ] [169])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 564 218 220 14 (set (reg:DI 1 dx [orig:172 _86 ] [172])
+        (plus:DI (reg:DI 0 ax [orig:171 _85 ] [171])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":98 218 {*leadi}
+     (nil))
+(insn 220 564 221 14 (set (reg/f:DI 0 ax [401])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":98 85 {*movdi_internal}
+     (nil))
+(insn 221 220 222 14 (parallel [
+            (set (reg:DI 1 dx [402])
+                (plus:DI (reg:DI 1 dx [orig:172 _86 ] [172])
+                    (const_int 1214871 [0x128997])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 222 221 223 14 (set (reg:SF 22 xmm1 [orig:173 _87 ] [173])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [402])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [401])) [2 vrbls.v S4 A32])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 223 222 224 14 (set (reg:SI 0 ax [403])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 224 223 225 14 (set (reg:DI 0 ax [orig:174 _88 ] [174])
+        (sign_extend:DI (reg:SI 0 ax [403]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 225 224 226 14 (parallel [
+            (set (reg:DI 1 dx [orig:175 _89 ] [175])
+                (mult:DI (reg:DI 0 ax [orig:174 _88 ] [174])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 226 225 227 14 (set (reg:SI 0 ax [404])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 227 226 228 14 (set (reg:DI 0 ax [orig:176 _90 ] [176])
+        (sign_extend:DI (reg:SI 0 ax [404]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 228 227 229 14 (parallel [
+            (set (reg:DI 0 ax [orig:177 _91 ] [177])
+                (mult:DI (reg:DI 0 ax [orig:176 _90 ] [176])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 229 228 230 14 (parallel [
+            (set (reg:DI 1 dx [orig:178 _92 ] [178])
+                (plus:DI (reg:DI 1 dx [orig:175 _89 ] [175])
+                    (reg:DI 0 ax [orig:177 _91 ] [177])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 230 229 231 14 (set (reg:SI 0 ax [405])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -44 [0xffffffffffffffd4])) [1 iw+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 231 230 232 14 (set (reg:DI 0 ax [orig:179 _93 ] [179])
+        (sign_extend:DI (reg:SI 0 ax [405]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 232 231 565 14 (parallel [
+            (set (reg:DI 0 ax [orig:180 _94 ] [180])
+                (plus:DI (reg:DI 0 ax [orig:179 _93 ] [179])
+                    (reg:DI 1 dx [orig:178 _92 ] [178])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 565 232 234 14 (set (reg:DI 1 dx [orig:181 _95 ] [181])
+        (plus:DI (reg:DI 0 ax [orig:180 _94 ] [180])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":98 218 {*leadi}
+     (nil))
+(insn 234 565 235 14 (set (reg/f:DI 0 ax [406])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":98 85 {*movdi_internal}
+     (nil))
+(insn 235 234 236 14 (parallel [
+            (set (reg:DI 1 dx [407])
+                (plus:DI (reg:DI 1 dx [orig:181 _95 ] [181])
+                    (const_int 1214871 [0x128997])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 236 235 237 14 (set (reg:SF 21 xmm0 [orig:182 _96 ] [182])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [407])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [406])) [2 vrbls.v S4 A32])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 237 236 238 14 (set (reg:SF 22 xmm1 [orig:183 _97 ] [183])
+        (plus:SF (reg:SF 22 xmm1 [orig:173 _87 ] [173])
+            (reg:SF 21 xmm0 [orig:182 _96 ] [182]))) "CALMXW.f":98 838 {*fop_sf_comm}
+     (nil))
+(insn 238 237 239 14 (set (reg:SI 0 ax [408])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 239 238 240 14 (set (reg:DI 0 ax [orig:184 _98 ] [184])
+        (sign_extend:DI (reg:SI 0 ax [408]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 240 239 241 14 (parallel [
+            (set (reg:DI 1 dx [orig:185 _99 ] [185])
+                (mult:DI (reg:DI 0 ax [orig:184 _98 ] [184])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 241 240 242 14 (set (reg:SI 0 ax [409])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 242 241 243 14 (set (reg:DI 0 ax [orig:186 _100 ] [186])
+        (sign_extend:DI (reg:SI 0 ax [409]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 243 242 244 14 (parallel [
+            (set (reg:DI 0 ax [orig:187 _101 ] [187])
+                (mult:DI (reg:DI 0 ax [orig:186 _100 ] [186])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 244 243 245 14 (parallel [
+            (set (reg:DI 1 dx [orig:188 _102 ] [188])
+                (plus:DI (reg:DI 1 dx [orig:185 _99 ] [185])
+                    (reg:DI 0 ax [orig:187 _101 ] [187])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 245 244 246 14 (set (reg:SI 0 ax [410])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [1 ie+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 246 245 247 14 (set (reg:DI 0 ax [orig:189 _103 ] [189])
+        (sign_extend:DI (reg:SI 0 ax [410]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 247 246 566 14 (parallel [
+            (set (reg:DI 0 ax [orig:190 _104 ] [190])
+                (plus:DI (reg:DI 0 ax [orig:189 _103 ] [189])
+                    (reg:DI 1 dx [orig:188 _102 ] [188])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 566 247 249 14 (set (reg:DI 1 dx [orig:191 _105 ] [191])
+        (plus:DI (reg:DI 0 ax [orig:190 _104 ] [190])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":98 218 {*leadi}
+     (nil))
+(insn 249 566 250 14 (set (reg/f:DI 0 ax [411])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":98 85 {*movdi_internal}
+     (nil))
+(insn 250 249 251 14 (parallel [
+            (set (reg:DI 1 dx [412])
+                (plus:DI (reg:DI 1 dx [orig:191 _105 ] [191])
+                    (const_int 1214871 [0x128997])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 251 250 252 14 (set (reg:SF 21 xmm0 [orig:192 _106 ] [192])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [412])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [411])) [2 vrbls.v S4 A32])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 252 251 253 14 (set (reg:SF 22 xmm1 [orig:193 _107 ] [193])
+        (plus:SF (reg:SF 22 xmm1 [orig:183 _97 ] [183])
+            (reg:SF 21 xmm0 [orig:192 _106 ] [192]))) "CALMXW.f":98 838 {*fop_sf_comm}
+     (nil))
+(insn 253 252 254 14 (set (reg:SI 0 ax [413])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 254 253 255 14 (set (reg:DI 0 ax [orig:194 _108 ] [194])
+        (sign_extend:DI (reg:SI 0 ax [413]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 255 254 256 14 (parallel [
+            (set (reg:DI 1 dx [orig:195 _109 ] [195])
+                (mult:DI (reg:DI 0 ax [orig:194 _108 ] [194])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 256 255 257 14 (set (reg:SI 0 ax [414])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 257 256 258 14 (parallel [
+            (set (reg:SI 0 ax [orig:196 _110 ] [196])
+                (plus:SI (reg:SI 0 ax [414])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [1 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 258 257 259 14 (set (reg:DI 0 ax [orig:197 _111 ] [197])
+        (sign_extend:DI (reg:SI 0 ax [orig:196 _110 ] [196]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 259 258 260 14 (parallel [
+            (set (reg:DI 0 ax [orig:198 _112 ] [198])
+                (mult:DI (reg:DI 0 ax [orig:197 _111 ] [197])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 349 {*muldi3_1}
+     (nil))
+(insn 260 259 261 14 (parallel [
+            (set (reg:DI 1 dx [orig:199 _113 ] [199])
+                (plus:DI (reg:DI 1 dx [orig:195 _109 ] [195])
+                    (reg:DI 0 ax [orig:198 _112 ] [198])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 261 260 262 14 (set (reg:SI 0 ax [415])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":98 86 {*movsi_internal}
+     (nil))
+(insn 262 261 263 14 (set (reg:DI 0 ax [orig:200 _114 ] [200])
+        (sign_extend:DI (reg:SI 0 ax [415]))) "CALMXW.f":98 149 {*extendsidi2_rex64}
+     (nil))
+(insn 263 262 567 14 (parallel [
+            (set (reg:DI 0 ax [orig:201 _115 ] [201])
+                (plus:DI (reg:DI 0 ax [orig:200 _114 ] [200])
+                    (reg:DI 1 dx [orig:199 _113 ] [199])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 567 263 265 14 (set (reg:DI 1 dx [orig:202 _116 ] [202])
+        (plus:DI (reg:DI 0 ax [orig:201 _115 ] [201])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":98 218 {*leadi}
+     (nil))
+(insn 265 567 266 14 (set (reg/f:DI 0 ax [416])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":98 85 {*movdi_internal}
+     (nil))
+(insn 266 265 267 14 (parallel [
+            (set (reg:DI 1 dx [417])
+                (plus:DI (reg:DI 1 dx [orig:202 _116 ] [202])
+                    (const_int 1214871 [0x128997])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":98 222 {*adddi_1}
+     (nil))
+(insn 267 266 268 14 (set (reg:SF 21 xmm0 [orig:203 _117 ] [203])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [417])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [416])) [2 vrbls.v S4 A32])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 268 267 269 14 (set (reg:SF 21 xmm0 [orig:204 _118 ] [204])
+        (plus:SF (reg:SF 21 xmm0 [orig:203 _117 ] [203])
+            (reg:SF 22 xmm1 [orig:193 _107 ] [193]))) "CALMXW.f":98 838 {*fop_sf_comm}
+     (nil))
+(insn 269 268 270 14 (set (reg:SF 22 xmm1 [orig:205 _119 ] [205])
+        (reg:SF 21 xmm0 [orig:204 _118 ] [204])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 270 269 271 14 (set (reg:SF 21 xmm0 [419])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "CALMXW.f":98 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.5e-1 [0x0.8p-1])
+        (nil)))
+(insn 271 270 272 14 (set (reg:SF 21 xmm0 [418])
+        (mult:SF (reg:SF 21 xmm0 [419])
+            (reg:SF 22 xmm1 [orig:205 _119 ] [205]))) "CALMXW.f":98 838 {*fop_sf_comm}
+     (nil))
+(insn 272 271 273 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 v0+0 S4 A32])
+        (reg:SF 21 xmm0 [418])) "CALMXW.f":98 131 {*movsf_internal}
+     (nil))
+(insn 273 272 537 14 (set (reg:SF 21 xmm0 [orig:336 _286 ] [336])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 u0+0 S4 A32])) "CALMXW.f":99 131 {*movsf_internal}
+     (nil))
+(insn 537 273 274 14 (set (reg:SF 22 xmm1 [orig:336 _286 ] [336])
+        (reg:SF 21 xmm0 [orig:336 _286 ] [336])) "CALMXW.f":99 131 {*movsf_internal}
+     (nil))
+(insn 274 537 275 14 (set (reg:SF 22 xmm1 [orig:336 _286 ] [336])
+        (mult:SF (reg:SF 22 xmm1 [orig:336 _286 ] [336])
+            (reg:SF 21 xmm0 [orig:336 _286 ] [336]))) "CALMXW.f":99 838 {*fop_sf_comm}
+     (nil))
+(insn 275 274 276 14 (set (reg:SF 21 xmm0 [orig:338 _288 ] [338])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 v0+0 S4 A32])) "CALMXW.f":99 131 {*movsf_internal}
+     (nil))
+(insn 276 275 277 14 (set (reg:SF 21 xmm0 [orig:339 _289 ] [339])
+        (mult:SF (reg:SF 21 xmm0 [orig:338 _288 ] [338])
+            (reg:SF 21 xmm0 [orig:338 _288 ] [338]))) "CALMXW.f":99 838 {*fop_sf_comm}
+     (nil))
+(insn 277 276 278 14 (set (reg:SF 21 xmm0 [orig:206 _120 ] [206])
+        (plus:SF (reg:SF 21 xmm0 [orig:339 _289 ] [339])
+            (reg:SF 22 xmm1 [orig:337 _287 ] [337]))) "CALMXW.f":99 838 {*fop_sf_comm}
+     (nil))
+(insn 278 277 279 14 (set (reg:SF 21 xmm0 [420])
+        (sqrt:SF (reg:SF 21 xmm0 [orig:206 _120 ] [206]))) "CALMXW.f":99 872 {*sqrtsf2_sse}
+     (nil))
+(insn 279 278 280 14 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [2 wind+0 S4 A32])
+        (reg:SF 21 xmm0 [420])) "CALMXW.f":99 131 {*movsf_internal}
+     (nil))
+(insn 280 279 281 14 (set (reg:SF 21 xmm0 [421])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [2 wind+0 S4 A32])) "CALMXW.f":107 131 {*movsf_internal}
+     (nil))
+(insn 281 280 282 14 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [421])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -32 [0xffffffffffffffe0])) [2 mxww+0 S4 A32]))) "CALMXW.f":107 53 {*cmpisf}
+     (nil))
+(jump_insn 282 281 286 14 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 480)
+            (pc))) "CALMXW.f":107 682 {*jcc}
+     (nil)
+ -> 480)
+(note 286 282 287 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 287 286 288 15 (set (reg:SI 0 ax [422])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":107 86 {*movsi_internal}
+     (nil))
+(insn 288 287 289 15 (set (reg:DI 0 ax [orig:207 _121 ] [207])
+        (sign_extend:DI (reg:SI 0 ax [422]))) "CALMXW.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 289 288 290 15 (parallel [
+            (set (reg:DI 1 dx [orig:208 _122 ] [208])
+                (mult:DI (reg:DI 0 ax [orig:207 _121 ] [207])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":107 349 {*muldi3_1}
+     (nil))
+(insn 290 289 291 15 (set (reg:SI 0 ax [423])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":107 86 {*movsi_internal}
+     (nil))
+(insn 291 290 292 15 (set (reg:DI 0 ax [orig:209 _123 ] [209])
+        (sign_extend:DI (reg:SI 0 ax [423]))) "CALMXW.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 292 291 293 15 (parallel [
+            (set (reg:DI 0 ax [orig:210 _124 ] [210])
+                (mult:DI (reg:DI 0 ax [orig:209 _123 ] [209])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":107 349 {*muldi3_1}
+     (nil))
+(insn 293 292 294 15 (parallel [
+            (set (reg:DI 1 dx [orig:211 _125 ] [211])
+                (plus:DI (reg:DI 1 dx [orig:208 _122 ] [208])
+                    (reg:DI 0 ax [orig:210 _124 ] [210])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":107 222 {*adddi_1}
+     (nil))
+(insn 294 293 295 15 (set (reg:SI 0 ax [424])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":107 86 {*movsi_internal}
+     (nil))
+(insn 295 294 296 15 (set (reg:DI 0 ax [orig:212 _126 ] [212])
+        (sign_extend:DI (reg:SI 0 ax [424]))) "CALMXW.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 296 295 559 15 (parallel [
+            (set (reg:DI 0 ax [orig:213 _127 ] [213])
+                (plus:DI (reg:DI 0 ax [orig:212 _126 ] [212])
+                    (reg:DI 1 dx [orig:211 _125 ] [211])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":107 222 {*adddi_1}
+     (nil))
+(insn 559 296 298 15 (set (reg:DI 1 dx [orig:214 _128 ] [214])
+        (plus:DI (reg:DI 0 ax [orig:213 _127 ] [213])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":107 218 {*leadi}
+     (nil))
+(insn 298 559 299 15 (set (reg/f:DI 0 ax [425])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f8a2980b870 extra>)) "CALMXW.f":107 85 {*movdi_internal}
+     (nil))
+(insn 299 298 300 15 (set (reg:SF 22 xmm1 [orig:215 _129 ] [215])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:214 _128 ] [214])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [425])) [2 extra.pint S4 A32])) "CALMXW.f":107 131 {*movsf_internal}
+     (nil))
+(insn 300 299 301 15 (set (reg:SF 21 xmm0 [426])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -36 [0xffffffffffffffdc])) [2 critp+0 S4 A32])) "CALMXW.f":107 131 {*movsf_internal}
+     (nil))
+(insn 301 300 302 15 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 21 xmm0 [426])
+            (reg:SF 22 xmm1 [orig:215 _129 ] [215]))) "CALMXW.f":107 53 {*cmpisf}
+     (nil))
+(jump_insn 302 301 306 15 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 480)
+            (pc))) "CALMXW.f":107 682 {*jcc}
+     (nil)
+ -> 480)
+(note 306 302 307 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 307 306 308 16 (set (reg:SI 0 ax [427])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":108 86 {*movsi_internal}
+     (nil))
+(insn 308 307 309 16 (set (reg:DI 0 ax [orig:216 _130 ] [216])
+        (sign_extend:DI (reg:SI 0 ax [427]))) "CALMXW.f":108 149 {*extendsidi2_rex64}
+     (nil))
+(insn 309 308 310 16 (parallel [
+            (set (reg:DI 1 dx [orig:217 _131 ] [217])
+                (mult:DI (reg:DI 0 ax [orig:216 _130 ] [216])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":108 349 {*muldi3_1}
+     (nil))
+(insn 310 309 311 16 (set (reg:SI 0 ax [428])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":108 86 {*movsi_internal}
+     (nil))
+(insn 311 310 312 16 (set (reg:DI 0 ax [orig:218 _132 ] [218])
+        (sign_extend:DI (reg:SI 0 ax [428]))) "CALMXW.f":108 149 {*extendsidi2_rex64}
+     (nil))
+(insn 312 311 547 16 (parallel [
+            (set (reg:DI 0 ax [orig:219 _133 ] [219])
+                (plus:DI (reg:DI 0 ax [orig:218 _132 ] [218])
+                    (reg:DI 1 dx [orig:217 _131 ] [217])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":108 222 {*adddi_1}
+     (nil))
+(insn 547 312 314 16 (set (reg:DI 1 dx [orig:220 _134 ] [220])
+        (plus:DI (reg:DI 0 ax [orig:219 _133 ] [219])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":108 218 {*leadi}
+     (nil))
+(insn 314 547 315 16 (set (reg/f:DI 0 ax [429])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -88 [0xffffffffffffffa8])) [3 mxwu+0 S8 A64])) "CALMXW.f":108 85 {*movdi_internal}
+     (nil))
+(insn 315 314 316 16 (set (reg:SF 21 xmm0 [430])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -52 [0xffffffffffffffcc])) [2 u0+0 S4 A32])) "CALMXW.f":108 131 {*movsf_internal}
+     (nil))
+(insn 316 315 317 16 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:220 _134 ] [220])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [429])) [2 *mxwu_261(D) S4 A32])
+        (reg:SF 21 xmm0 [430])) "CALMXW.f":108 131 {*movsf_internal}
+     (nil))
+(insn 317 316 318 16 (set (reg:SI 0 ax [431])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":109 86 {*movsi_internal}
+     (nil))
+(insn 318 317 319 16 (set (reg:DI 0 ax [orig:221 _135 ] [221])
+        (sign_extend:DI (reg:SI 0 ax [431]))) "CALMXW.f":109 149 {*extendsidi2_rex64}
+     (nil))
+(insn 319 318 320 16 (parallel [
+            (set (reg:DI 1 dx [orig:222 _136 ] [222])
+                (mult:DI (reg:DI 0 ax [orig:221 _135 ] [221])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":109 349 {*muldi3_1}
+     (nil))
+(insn 320 319 321 16 (set (reg:SI 0 ax [432])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":109 86 {*movsi_internal}
+     (nil))
+(insn 321 320 322 16 (set (reg:DI 0 ax [orig:223 _137 ] [223])
+        (sign_extend:DI (reg:SI 0 ax [432]))) "CALMXW.f":109 149 {*extendsidi2_rex64}
+     (nil))
+(insn 322 321 548 16 (parallel [
+            (set (reg:DI 0 ax [orig:224 _138 ] [224])
+                (plus:DI (reg:DI 0 ax [orig:223 _137 ] [223])
+                    (reg:DI 1 dx [orig:222 _136 ] [222])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":109 222 {*adddi_1}
+     (nil))
+(insn 548 322 324 16 (set (reg:DI 1 dx [orig:225 _139 ] [225])
+        (plus:DI (reg:DI 0 ax [orig:224 _138 ] [224])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":109 218 {*leadi}
+     (nil))
+(insn 324 548 325 16 (set (reg/f:DI 0 ax [433])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -96 [0xffffffffffffffa0])) [3 mxwv+0 S8 A64])) "CALMXW.f":109 85 {*movdi_internal}
+     (nil))
+(insn 325 324 326 16 (set (reg:SF 21 xmm0 [434])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [2 v0+0 S4 A32])) "CALMXW.f":109 131 {*movsf_internal}
+     (nil))
+(insn 326 325 327 16 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:225 _139 ] [225])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [433])) [2 *mxwv_263(D) S4 A32])
+        (reg:SF 21 xmm0 [434])) "CALMXW.f":109 131 {*movsf_internal}
+     (nil))
+(insn 327 326 328 16 (set (reg:SF 21 xmm0 [435])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -60 [0xffffffffffffffc4])) [2 wind+0 S4 A32])) "CALMXW.f":110 131 {*movsf_internal}
+     (nil))
+(insn 328 327 329 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -32 [0xffffffffffffffe0])) [2 mxww+0 S4 A32])
+        (reg:SF 21 xmm0 [435])) "CALMXW.f":110 131 {*movsf_internal}
+     (nil))
+(insn 329 328 330 16 (set (reg:SI 0 ax [436])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 330 329 331 16 (set (reg:DI 0 ax [orig:226 _140 ] [226])
+        (sign_extend:DI (reg:SI 0 ax [436]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 331 330 332 16 (parallel [
+            (set (reg:DI 1 dx [orig:227 _141 ] [227])
+                (mult:DI (reg:DI 0 ax [orig:226 _140 ] [226])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 349 {*muldi3_1}
+     (nil))
+(insn 332 331 333 16 (set (reg:SI 0 ax [437])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 333 332 334 16 (set (reg:DI 0 ax [orig:228 _142 ] [228])
+        (sign_extend:DI (reg:SI 0 ax [437]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 334 333 335 16 (parallel [
+            (set (reg:DI 0 ax [orig:229 _143 ] [229])
+                (mult:DI (reg:DI 0 ax [orig:228 _142 ] [228])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 349 {*muldi3_1}
+     (nil))
+(insn 335 334 336 16 (parallel [
+            (set (reg:DI 1 dx [orig:230 _144 ] [230])
+                (plus:DI (reg:DI 1 dx [orig:227 _141 ] [227])
+                    (reg:DI 0 ax [orig:229 _143 ] [229])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 222 {*adddi_1}
+     (nil))
+(insn 336 335 337 16 (set (reg:SI 0 ax [438])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 337 336 338 16 (set (reg:DI 0 ax [orig:231 _145 ] [231])
+        (sign_extend:DI (reg:SI 0 ax [438]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 338 337 549 16 (parallel [
+            (set (reg:DI 0 ax [orig:232 _146 ] [232])
+                (plus:DI (reg:DI 0 ax [orig:231 _145 ] [231])
+                    (reg:DI 1 dx [orig:230 _144 ] [230])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 222 {*adddi_1}
+     (nil))
+(insn 549 338 340 16 (set (reg:DI 1 dx [orig:233 _147 ] [233])
+        (plus:DI (reg:DI 0 ax [orig:232 _146 ] [232])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":111 218 {*leadi}
+     (nil))
+(insn 340 549 341 16 (set (reg/f:DI 0 ax [439])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f8a2980b870 extra>)) "CALMXW.f":111 85 {*movdi_internal}
+     (nil))
+(insn 341 340 342 16 (set (reg:SF 22 xmm1 [orig:234 _148 ] [234])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:233 _147 ] [233])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [439])) [2 extra.pint S4 A32])) "CALMXW.f":111 131 {*movsf_internal}
+     (nil))
+(insn 342 341 343 16 (set (reg:SI 0 ax [440])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 343 342 344 16 (parallel [
+            (set (reg:SI 0 ax [orig:235 _149 ] [235])
+                (plus:SI (reg:SI 0 ax [440])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 344 343 345 16 (set (reg:DI 0 ax [orig:236 _150 ] [236])
+        (sign_extend:DI (reg:SI 0 ax [orig:235 _149 ] [235]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 345 344 346 16 (parallel [
+            (set (reg:DI 1 dx [orig:237 _151 ] [237])
+                (mult:DI (reg:DI 0 ax [orig:236 _150 ] [236])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 349 {*muldi3_1}
+     (nil))
+(insn 346 345 347 16 (set (reg:SI 0 ax [441])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 347 346 348 16 (set (reg:DI 0 ax [orig:238 _152 ] [238])
+        (sign_extend:DI (reg:SI 0 ax [441]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 348 347 349 16 (parallel [
+            (set (reg:DI 0 ax [orig:239 _153 ] [239])
+                (mult:DI (reg:DI 0 ax [orig:238 _152 ] [238])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 349 {*muldi3_1}
+     (nil))
+(insn 349 348 350 16 (parallel [
+            (set (reg:DI 1 dx [orig:240 _154 ] [240])
+                (plus:DI (reg:DI 1 dx [orig:237 _151 ] [237])
+                    (reg:DI 0 ax [orig:239 _153 ] [239])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 222 {*adddi_1}
+     (nil))
+(insn 350 349 351 16 (set (reg:SI 0 ax [442])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 351 350 352 16 (set (reg:DI 0 ax [orig:241 _155 ] [241])
+        (sign_extend:DI (reg:SI 0 ax [442]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 352 351 550 16 (parallel [
+            (set (reg:DI 0 ax [orig:242 _156 ] [242])
+                (plus:DI (reg:DI 0 ax [orig:241 _155 ] [241])
+                    (reg:DI 1 dx [orig:240 _154 ] [240])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 222 {*adddi_1}
+     (nil))
+(insn 550 352 354 16 (set (reg:DI 1 dx [orig:243 _157 ] [243])
+        (plus:DI (reg:DI 0 ax [orig:242 _156 ] [242])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":111 218 {*leadi}
+     (nil))
+(insn 354 550 355 16 (set (reg/f:DI 0 ax [443])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f8a2980b870 extra>)) "CALMXW.f":111 85 {*movdi_internal}
+     (nil))
+(insn 355 354 356 16 (set (reg:SF 21 xmm0 [orig:244 _158 ] [244])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:243 _157 ] [243])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [443])) [2 extra.pint S4 A32])) "CALMXW.f":111 131 {*movsf_internal}
+     (nil))
+(insn 356 355 357 16 (set (reg:SF 21 xmm0 [orig:245 _159 ] [245])
+        (plus:SF (reg:SF 21 xmm0 [orig:244 _158 ] [244])
+            (reg:SF 22 xmm1 [orig:234 _148 ] [234]))) "CALMXW.f":111 838 {*fop_sf_comm}
+     (nil))
+(insn 357 356 358 16 (set (reg:SF 22 xmm1 [orig:246 _160 ] [246])
+        (reg:SF 21 xmm0 [orig:245 _159 ] [245])) "CALMXW.f":111 131 {*movsf_internal}
+     (nil))
+(insn 358 357 359 16 (set (reg:SI 0 ax [444])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 359 358 360 16 (set (reg:DI 0 ax [orig:247 _161 ] [247])
+        (sign_extend:DI (reg:SI 0 ax [444]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 360 359 361 16 (parallel [
+            (set (reg:DI 1 dx [orig:248 _162 ] [248])
+                (mult:DI (reg:DI 0 ax [orig:247 _161 ] [247])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 349 {*muldi3_1}
+     (nil))
+(insn 361 360 362 16 (set (reg:SI 0 ax [445])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":111 86 {*movsi_internal}
+     (nil))
+(insn 362 361 363 16 (set (reg:DI 0 ax [orig:249 _163 ] [249])
+        (sign_extend:DI (reg:SI 0 ax [445]))) "CALMXW.f":111 149 {*extendsidi2_rex64}
+     (nil))
+(insn 363 362 551 16 (parallel [
+            (set (reg:DI 0 ax [orig:250 _164 ] [250])
+                (plus:DI (reg:DI 0 ax [orig:249 _163 ] [249])
+                    (reg:DI 1 dx [orig:248 _162 ] [248])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":111 222 {*adddi_1}
+     (nil))
+(insn 551 363 365 16 (set (reg:DI 1 dx [orig:251 _165 ] [251])
+        (plus:DI (reg:DI 0 ax [orig:250 _164 ] [250])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":111 218 {*leadi}
+     (nil))
+(insn 365 551 366 16 (set (reg:SF 21 xmm0 [446])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALMXW.f":111 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 5.0e-1 [0x0.8p+0])
+        (nil)))
+(insn 366 365 367 16 (set (reg:SF 21 xmm0 [orig:252 _166 ] [252])
+        (mult:SF (reg:SF 21 xmm0 [446])
+            (reg:SF 22 xmm1 [orig:246 _160 ] [246]))) "CALMXW.f":111 838 {*fop_sf_comm}
+     (nil))
+(insn 367 366 368 16 (set (reg/f:DI 0 ax [447])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 mxwp+0 S8 A64])) "CALMXW.f":111 85 {*movdi_internal}
+     (nil))
+(insn 368 367 369 16 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:251 _165 ] [251])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [447])) [2 *mxwp_265(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:252 _166 ] [252])) "CALMXW.f":111 131 {*movsf_internal}
+     (nil))
+(insn 369 368 370 16 (set (reg:SI 0 ax [448])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 370 369 371 16 (parallel [
+            (set (reg:SI 0 ax [orig:253 _167 ] [253])
+                (plus:SI (reg:SI 0 ax [448])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 371 370 372 16 (set (reg:DI 0 ax [orig:254 _168 ] [254])
+        (sign_extend:DI (reg:SI 0 ax [orig:253 _167 ] [253]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 372 371 373 16 (parallel [
+            (set (reg:DI 1 dx [orig:255 _169 ] [255])
+                (mult:DI (reg:DI 0 ax [orig:254 _168 ] [254])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 373 372 374 16 (set (reg:SI 0 ax [449])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 374 373 375 16 (set (reg:DI 0 ax [orig:256 _170 ] [256])
+        (sign_extend:DI (reg:SI 0 ax [449]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 375 374 376 16 (parallel [
+            (set (reg:DI 0 ax [orig:257 _171 ] [257])
+                (mult:DI (reg:DI 0 ax [orig:256 _170 ] [256])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 376 375 377 16 (parallel [
+            (set (reg:DI 1 dx [orig:258 _172 ] [258])
+                (plus:DI (reg:DI 1 dx [orig:255 _169 ] [255])
+                    (reg:DI 0 ax [orig:257 _171 ] [257])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 377 376 378 16 (set (reg:SI 0 ax [450])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 378 377 379 16 (set (reg:DI 0 ax [orig:259 _173 ] [259])
+        (sign_extend:DI (reg:SI 0 ax [450]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 379 378 552 16 (parallel [
+            (set (reg:DI 0 ax [orig:260 _174 ] [260])
+                (plus:DI (reg:DI 0 ax [orig:259 _173 ] [259])
+                    (reg:DI 1 dx [orig:258 _172 ] [258])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 552 379 381 16 (set (reg:DI 1 dx [orig:261 _175 ] [261])
+        (plus:DI (reg:DI 0 ax [orig:260 _174 ] [260])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 381 552 382 16 (set (reg/f:DI 0 ax [451])
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f8a29813d80 masks>)) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 382 381 383 16 (parallel [
+            (set (reg:DI 1 dx [452])
+                (plus:DI (reg:DI 1 dx [orig:261 _175 ] [261])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 383 382 384 16 (set (reg:SF 22 xmm1 [orig:262 _176 ] [262])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [452])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [451])) [2 masks.htm S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 384 383 385 16 (set (reg:SI 0 ax [453])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 385 384 386 16 (parallel [
+            (set (reg:SI 0 ax [orig:263 _177 ] [263])
+                (plus:SI (reg:SI 0 ax [453])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 386 385 387 16 (set (reg:DI 0 ax [orig:264 _178 ] [264])
+        (sign_extend:DI (reg:SI 0 ax [orig:263 _177 ] [263]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 387 386 388 16 (parallel [
+            (set (reg:DI 1 dx [orig:265 _179 ] [265])
+                (mult:DI (reg:DI 0 ax [orig:264 _178 ] [264])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 388 387 389 16 (set (reg:SI 0 ax [454])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 389 388 390 16 (set (reg:DI 0 ax [orig:266 _180 ] [266])
+        (sign_extend:DI (reg:SI 0 ax [454]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 390 389 391 16 (parallel [
+            (set (reg:DI 0 ax [orig:267 _181 ] [267])
+                (mult:DI (reg:DI 0 ax [orig:266 _180 ] [266])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 391 390 392 16 (parallel [
+            (set (reg:DI 1 dx [orig:268 _182 ] [268])
+                (plus:DI (reg:DI 1 dx [orig:265 _179 ] [265])
+                    (reg:DI 0 ax [orig:267 _181 ] [267])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 392 391 393 16 (set (reg:SI 0 ax [455])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 393 392 394 16 (set (reg:DI 0 ax [orig:269 _183 ] [269])
+        (sign_extend:DI (reg:SI 0 ax [455]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 394 393 553 16 (parallel [
+            (set (reg:DI 0 ax [orig:270 _184 ] [270])
+                (plus:DI (reg:DI 0 ax [orig:269 _183 ] [269])
+                    (reg:DI 1 dx [orig:268 _182 ] [268])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 553 394 396 16 (set (reg:DI 1 dx [orig:271 _185 ] [271])
+        (plus:DI (reg:DI 0 ax [orig:270 _184 ] [270])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 396 553 397 16 (set (reg/f:DI 0 ax [456])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 397 396 398 16 (parallel [
+            (set (reg:DI 1 dx [457])
+                (plus:DI (reg:DI 1 dx [orig:271 _185 ] [271])
+                    (const_int 2340849 [0x23b7f1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 398 397 399 16 (set (reg:SF 21 xmm0 [orig:272 _186 ] [272])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [457])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [456])) [2 vrbls.t S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 399 398 400 16 (set (reg:SF 21 xmm0 [orig:273 _187 ] [273])
+        (mult:SF (reg:SF 21 xmm0 [orig:272 _186 ] [272])
+            (reg:SF 22 xmm1 [orig:262 _176 ] [262]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 400 399 401 16 (set (reg:SI 0 ax [458])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 401 400 402 16 (parallel [
+            (set (reg:SI 0 ax [orig:274 _188 ] [274])
+                (plus:SI (reg:SI 0 ax [458])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 402 401 403 16 (set (reg:DI 0 ax [orig:275 _189 ] [275])
+        (sign_extend:DI (reg:SI 0 ax [orig:274 _188 ] [274]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 403 402 404 16 (parallel [
+            (set (reg:DI 1 dx [orig:276 _190 ] [276])
+                (mult:DI (reg:DI 0 ax [orig:275 _189 ] [275])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 404 403 405 16 (set (reg:SI 0 ax [459])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 405 404 406 16 (set (reg:DI 0 ax [orig:277 _191 ] [277])
+        (sign_extend:DI (reg:SI 0 ax [459]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 406 405 407 16 (parallel [
+            (set (reg:DI 0 ax [orig:278 _192 ] [278])
+                (mult:DI (reg:DI 0 ax [orig:277 _191 ] [277])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 407 406 408 16 (parallel [
+            (set (reg:DI 1 dx [orig:279 _193 ] [279])
+                (plus:DI (reg:DI 1 dx [orig:276 _190 ] [276])
+                    (reg:DI 0 ax [orig:278 _192 ] [278])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 408 407 409 16 (set (reg:SI 0 ax [460])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 409 408 410 16 (set (reg:DI 0 ax [orig:280 _194 ] [280])
+        (sign_extend:DI (reg:SI 0 ax [460]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 410 409 554 16 (parallel [
+            (set (reg:DI 0 ax [orig:281 _195 ] [281])
+                (plus:DI (reg:DI 0 ax [orig:280 _194 ] [280])
+                    (reg:DI 1 dx [orig:279 _193 ] [279])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 554 410 412 16 (set (reg:DI 1 dx [orig:282 _196 ] [282])
+        (plus:DI (reg:DI 0 ax [orig:281 _195 ] [281])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 412 554 413 16 (set (reg/f:DI 0 ax [461])
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f8a2981aea0 vrbls>)) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 413 412 414 16 (parallel [
+            (set (reg:DI 1 dx [462])
+                (plus:DI (reg:DI 1 dx [orig:282 _196 ] [282])
+                    (const_int 3466827 [0x34e64b])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 414 413 415 16 (set (reg:SF 23 xmm2 [orig:283 _197 ] [283])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [462])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [461])) [2 vrbls.q S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 415 414 416 16 (set (reg:SF 22 xmm1 [463])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 6.07999980449676513671875e-1 [0x0.9ba5e3p+0])
+        (nil)))
+(insn 416 415 417 16 (set (reg:SF 23 xmm2 [orig:284 _198 ] [284])
+        (mult:SF (reg:SF 23 xmm2 [orig:283 _197 ] [283])
+            (reg:SF 22 xmm1 [463]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 417 416 418 16 (set (reg:SF 22 xmm1 [464])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 418 417 420 16 (set (reg:SF 22 xmm1 [orig:285 _199 ] [285])
+        (plus:SF (reg:SF 22 xmm1 [464])
+            (reg:SF 23 xmm2 [orig:284 _198 ] [284]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 420 418 421 16 (set (reg:SF 22 xmm1 [orig:287 _201 ] [287])
+        (mult:SF (reg:SF 22 xmm1 [orig:286 _200 ] [286])
+            (reg:SF 21 xmm0 [orig:273 _187 ] [273]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 421 420 422 16 (set (reg:SF 21 xmm0 [465])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC6") [flags 0x2]) [0  S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 2.92897968292236328125e+1 [0x0.ea5181p+5])
+        (nil)))
+(insn 422 421 540 16 (set (reg:SF 22 xmm1 [orig:287 _201 ] [287])
+        (mult:SF (reg:SF 22 xmm1 [orig:287 _201 ] [287])
+            (reg:SF 21 xmm0 [465]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 540 422 546 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -100 [0xffffffffffffff9c])) [11 %sfp+-84 S4 A32])
+        (reg:SF 22 xmm1 [orig:287 _201 ] [287])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(note 546 540 423 16 NOTE_INSN_DELETED)
+(insn 423 546 424 16 (set (reg:SI 0 ax [466])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 424 423 425 16 (parallel [
+            (set (reg:SI 0 ax [orig:289 _203 ] [289])
+                (plus:SI (reg:SI 0 ax [466])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 425 424 426 16 (set (reg:DI 0 ax [orig:290 _204 ] [290])
+        (sign_extend:DI (reg:SI 0 ax [orig:289 _203 ] [289]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 426 425 427 16 (parallel [
+            (set (reg:DI 1 dx [orig:291 _205 ] [291])
+                (mult:DI (reg:DI 0 ax [orig:290 _204 ] [290])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 427 426 428 16 (set (reg:SI 0 ax [467])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 428 427 429 16 (set (reg:DI 0 ax [orig:292 _206 ] [292])
+        (sign_extend:DI (reg:SI 0 ax [467]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 429 428 430 16 (parallel [
+            (set (reg:DI 0 ax [orig:293 _207 ] [293])
+                (mult:DI (reg:DI 0 ax [orig:292 _206 ] [292])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 430 429 431 16 (parallel [
+            (set (reg:DI 1 dx [orig:294 _208 ] [294])
+                (plus:DI (reg:DI 1 dx [orig:291 _205 ] [291])
+                    (reg:DI 0 ax [orig:293 _207 ] [293])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 431 430 432 16 (set (reg:SI 0 ax [468])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 432 431 433 16 (set (reg:DI 0 ax [orig:295 _209 ] [295])
+        (sign_extend:DI (reg:SI 0 ax [468]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 433 432 555 16 (parallel [
+            (set (reg:DI 0 ax [orig:296 _210 ] [296])
+                (plus:DI (reg:DI 0 ax [orig:295 _209 ] [295])
+                    (reg:DI 1 dx [orig:294 _208 ] [294])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 555 433 435 16 (set (reg:DI 1 dx [orig:297 _211 ] [297])
+        (plus:DI (reg:DI 0 ax [orig:296 _210 ] [296])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 435 555 436 16 (set (reg/f:DI 0 ax [469])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f8a2980b870 extra>)) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 436 435 438 16 (set (reg:SF 21 xmm0 [orig:298 _212 ] [298])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:297 _211 ] [297])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [469])) [2 extra.pint S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(call_insn/u 438 436 439 16 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("logf") [flags 0x41]  <function_decl 0x7f8a2967b900 __builtin_logf>) [0 __builtin_logf S1 A8])
+            (const_int 0 [0]))) "CALMXW.f":113 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 439 438 545 16 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [11 %sfp+-88 S4 A32])
+        (reg:SF 21 xmm0)) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(note 545 439 440 16 NOTE_INSN_DELETED)
+(insn 440 545 441 16 (set (reg:SI 0 ax [470])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 441 440 442 16 (set (reg:DI 0 ax [orig:300 _214 ] [300])
+        (sign_extend:DI (reg:SI 0 ax [470]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 442 441 443 16 (parallel [
+            (set (reg:DI 1 dx [orig:301 _215 ] [301])
+                (mult:DI (reg:DI 0 ax [orig:300 _214 ] [300])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 443 442 444 16 (set (reg:SI 0 ax [471])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 444 443 445 16 (set (reg:DI 0 ax [orig:302 _216 ] [302])
+        (sign_extend:DI (reg:SI 0 ax [471]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 445 444 556 16 (parallel [
+            (set (reg:DI 0 ax [orig:303 _217 ] [303])
+                (plus:DI (reg:DI 0 ax [orig:302 _216 ] [302])
+                    (reg:DI 1 dx [orig:301 _215 ] [301])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 556 445 447 16 (set (reg:DI 1 dx [orig:304 _218 ] [304])
+        (plus:DI (reg:DI 0 ax [orig:303 _217 ] [303])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 447 556 448 16 (set (reg/f:DI 0 ax [472])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -72 [0xffffffffffffffb8])) [3 mxwp+0 S8 A64])) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 448 447 450 16 (set (reg:SF 21 xmm0 [orig:305 _219 ] [305])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:304 _218 ] [304])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [472])) [2 *mxwp_265(D) S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(call_insn/u 450 448 541 16 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("logf") [flags 0x41]  <function_decl 0x7f8a2967b900 __builtin_logf>) [0 __builtin_logf S1 A8])
+            (const_int 0 [0]))) "CALMXW.f":113 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 541 450 452 16 (set (reg:SF 24 xmm3 [orig:299 _213 ] [299])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -104 [0xffffffffffffff98])) [11 %sfp+-88 S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 452 541 542 16 (set (reg:SF 24 xmm3 [orig:299 _213 ] [299])
+        (minus:SF (reg:SF 24 xmm3 [orig:299 _213 ] [299])
+            (reg:SF 21 xmm0 [orig:306 _220 ] [306]))) "CALMXW.f":113 841 {*fop_sf_1}
+     (nil))
+(insn 542 452 543 16 (set (reg:SF 21 xmm0 [orig:307 _221 ] [307])
+        (reg:SF 24 xmm3 [orig:299 _213 ] [299])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 543 542 454 16 (set (reg:SF 22 xmm1 [orig:288 _202 ] [288])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -100 [0xffffffffffffff9c])) [11 %sfp+-84 S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 454 543 455 16 (set (reg:SF 22 xmm1 [orig:288 _202 ] [288])
+        (mult:SF (reg:SF 22 xmm1 [orig:288 _202 ] [288])
+            (reg:SF 21 xmm0 [orig:308 _222 ] [308]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 455 454 456 16 (set (reg:SI 0 ax [473])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 456 455 457 16 (parallel [
+            (set (reg:SI 0 ax [orig:310 _224 ] [310])
+                (plus:SI (reg:SI 0 ax [473])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [1 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 457 456 458 16 (set (reg:DI 0 ax [orig:311 _225 ] [311])
+        (sign_extend:DI (reg:SI 0 ax [orig:310 _224 ] [310]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 458 457 459 16 (parallel [
+            (set (reg:DI 1 dx [orig:312 _226 ] [312])
+                (mult:DI (reg:DI 0 ax [orig:311 _225 ] [311])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 459 458 460 16 (set (reg:SI 0 ax [474])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 460 459 461 16 (set (reg:DI 0 ax [orig:313 _227 ] [313])
+        (sign_extend:DI (reg:SI 0 ax [474]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 461 460 462 16 (parallel [
+            (set (reg:DI 0 ax [orig:314 _228 ] [314])
+                (mult:DI (reg:DI 0 ax [orig:313 _227 ] [313])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 462 461 463 16 (parallel [
+            (set (reg:DI 1 dx [orig:315 _229 ] [315])
+                (plus:DI (reg:DI 1 dx [orig:312 _226 ] [312])
+                    (reg:DI 0 ax [orig:314 _228 ] [314])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 463 462 464 16 (set (reg:SI 0 ax [475])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 464 463 465 16 (set (reg:DI 0 ax [orig:316 _230 ] [316])
+        (sign_extend:DI (reg:SI 0 ax [475]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 465 464 557 16 (parallel [
+            (set (reg:DI 0 ax [orig:317 _231 ] [317])
+                (plus:DI (reg:DI 0 ax [orig:316 _230 ] [316])
+                    (reg:DI 1 dx [orig:315 _229 ] [315])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 557 465 467 16 (set (reg:DI 1 dx [orig:318 _232 ] [318])
+        (plus:DI (reg:DI 0 ax [orig:317 _231 ] [317])
+            (const_int -29751 [0xffffffffffff8bc9]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 467 557 468 16 (set (reg/f:DI 0 ax [476])
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f8a2980b870 extra>)) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 468 467 469 16 (parallel [
+            (set (reg:DI 1 dx [477])
+                (plus:DI (reg:DI 1 dx [orig:318 _232 ] [318])
+                    (const_int 2311218 [0x234432])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 469 468 470 16 (set (reg:SF 21 xmm0 [orig:319 _233 ] [319])
+        (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [477])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [476])) [2 extra.zint S4 A32])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(insn 470 469 471 16 (set (reg:SI 0 ax [478])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 471 470 472 16 (set (reg:DI 0 ax [orig:320 _234 ] [320])
+        (sign_extend:DI (reg:SI 0 ax [478]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 472 471 473 16 (parallel [
+            (set (reg:DI 1 dx [orig:321 _235 ] [321])
+                (mult:DI (reg:DI 0 ax [orig:320 _234 ] [320])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 349 {*muldi3_1}
+     (nil))
+(insn 473 472 474 16 (set (reg:SI 0 ax [479])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])) "CALMXW.f":113 86 {*movsi_internal}
+     (nil))
+(insn 474 473 475 16 (set (reg:DI 0 ax [orig:322 _236 ] [322])
+        (sign_extend:DI (reg:SI 0 ax [479]))) "CALMXW.f":113 149 {*extendsidi2_rex64}
+     (nil))
+(insn 475 474 558 16 (parallel [
+            (set (reg:DI 0 ax [orig:323 _237 ] [323])
+                (plus:DI (reg:DI 0 ax [orig:322 _236 ] [322])
+                    (reg:DI 1 dx [orig:321 _235 ] [321])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":113 222 {*adddi_1}
+     (nil))
+(insn 558 475 477 16 (set (reg:DI 1 dx [orig:324 _238 ] [324])
+        (plus:DI (reg:DI 0 ax [orig:323 _237 ] [323])
+            (const_int -120 [0xffffffffffffff88]))) "CALMXW.f":113 218 {*leadi}
+     (nil))
+(insn 477 558 478 16 (set (reg:SF 21 xmm0 [orig:325 _239 ] [325])
+        (plus:SF (reg:SF 21 xmm0 [orig:319 _233 ] [319])
+            (reg:SF 22 xmm1 [orig:309 _223 ] [309]))) "CALMXW.f":113 838 {*fop_sf_comm}
+     (nil))
+(insn 478 477 479 16 (set (reg/f:DI 0 ax [480])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -80 [0xffffffffffffffb0])) [3 mxwz+0 S8 A64])) "CALMXW.f":113 85 {*movdi_internal}
+     (nil))
+(insn 479 478 480 16 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:324 _238 ] [324])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [480])) [2 *mxwz_267(D) S4 A32])
+        (reg:SF 21 xmm0 [orig:325 _239 ] [325])) "CALMXW.f":113 131 {*movsf_internal}
+     (nil))
+(code_label 480 479 481 17 9 (nil) [2 uses])
+(note 481 480 482 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 482 481 515 17 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -28 [0xffffffffffffffe4])) [1 l+0 S4 A32])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":94 221 {*addsi_1}
+     (nil))
+(jump_insn 515 482 516 17 (set (pc)
+        (label_ref 483)) "CALMXW.f":94 683 {jump}
+     (nil)
+ -> 483)
+(barrier 516 515 534)
+(code_label 534 516 533 18 22 (nil) [1 uses])
+(note 533 534 535 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 535 533 488 18 (const_int 0 [0]) "CALMXW.f":107 718 {nop}
+     (nil))
+(insn 488 535 517 18 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -20 [0xffffffffffffffec])) [1 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":88 221 {*addsi_1}
+     (nil))
+(jump_insn 517 488 518 18 (set (pc)
+        (label_ref 489)) "CALMXW.f":88 683 {jump}
+     (nil)
+ -> 489)
+(barrier 518 517 531)
+(code_label 531 518 530 19 21 (nil) [1 uses])
+(note 530 531 532 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 532 530 494 19 (const_int 0 [0]) "CALMXW.f":94 718 {nop}
+     (nil))
+(insn 494 532 519 19 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -24 [0xffffffffffffffe8])) [1 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALMXW.f":87 221 {*addsi_1}
+     (nil))
+(jump_insn 519 494 520 19 (set (pc)
+        (label_ref 495)) "CALMXW.f":87 683 {jump}
+     (nil)
+ -> 495)
+(barrier 520 519 528)
+(code_label 528 520 527 20 20 (nil) [1 uses])
+(note 527 528 529 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 529 527 510 20 (const_int 0 [0]) "CALMXW.f":88 718 {nop}
+     (nil))
+(insn 510 529 578 20 (const_int 0 [0]) "CALMXW.f":121 718 {nop}
+     (nil))
+(note 578 510 579 20 NOTE_INSN_EPILOGUE_BEG)
+(insn 579 578 580 20 (parallel [
+            (set (reg/f:DI 7 sp)
+                (plus:DI (reg/f:DI 7 sp)
+                    (const_int 104 [0x68])))
+            (clobber (reg:CC 17 flags))
+            (clobber (mem:BLK (scratch) [0  A8]))
+        ]) "CALMXW.f":122 1020 {pro_epilogue_adjust_stack_di_add}
+     (nil))
+(insn 580 579 581 20 (set (reg:DI 3 bx)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "CALMXW.f":122 71 {*popdi1}
+     (nil))
+(insn/f 581 580 582 20 (set (reg/f:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "CALMXW.f":122 71 {*popdi1}
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 582 581 583 20 (simple_return) "CALMXW.f":122 713 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 583 582 536)
+(note 536 583 0 NOTE_INSN_DELETED)

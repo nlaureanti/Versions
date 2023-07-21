@@ -1,0 +1,331 @@
+ 
+Making library from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/util
+
+Compiling conv_index.f
+Adding conv_index.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libetautil.a archive HERE.
+
+Compiling ecommons.f
+Adding ecommons.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libetautil.a archive HERE.
+
+Compiling pqk.f
+Adding pqk.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libetautil.a archive HERE.
+
+Compiling rtll.f
+Adding rtll.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libetautil.a archive HERE.
+
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libetautil.a up-to-date
+
+ 
+Making library from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/initbc
+
+Compiling boco.f
+Adding boco.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling const.f
+Adding const.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling TABLE.f
+Adding TABLE.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling TABLEQ.f
+Adding TABLEQ.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling dutil.f
+Adding dutil.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling interp.f
+Adding interp.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling GRIBST.f
+Adding GRIBST.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling GRIDST.f
+Adding GRIDST.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling VFRAC.f
+Adding VFRAC.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling SSTHIRES.f
+Adding SSTHIRES.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling SST14K.f
+Adding SST14K.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling C2K.f
+Adding C2K.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling ZTERPG.f
+Adding ZTERPG.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling PRINTAF.f
+Adding PRINTAF.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling PRINTETA.f
+Adding PRINTETA.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling SNOHIRES.f
+Adding SNOHIRES.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling SNO16GET.f
+Adding SNO16GET.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling SNO8GET.f
+Adding SNO8GET.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling PRINTIMS.f
+Adding PRINTIMS.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling PUTVEG.f
+Adding PUTVEG.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling PUTEM.f
+Adding PUTEM.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling GAULAT.f
+Adding GAULAT.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling GAUTOETA.f
+Adding GAUTOETA.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling GAUTOICE.f
+Adding GAUTOICE.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling BSSLZ1.f
+Adding BSSLZ1.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling READSFC.f
+Adding READSFC.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling coastal.f
+Adding coastal.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling pusi.f
+Adding pusi.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling gausslat.f
+Adding gausslat.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling process_gaus.f
+Adding process_gaus.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling FILL.f
+Adding FILL.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling snowsoilsst.f
+Adding snowsoilsst.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+Compiling gauss_ij_onetime.f
+Adding gauss_ij_onetime.o to /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a archive.
+
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/lib/libinitbc.a up-to-date
+
+ 
+Making executable from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/topo
+ 
+Making executable from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/initbc
+ 
+Making executable from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/vgreen
+Compiling MODULE_F77KINDS.f90
+Compiling MODULE_PARMCONF.f90
+Compiling MODULE_CONSTANTS.f90
+Compiling MODULE_DIAGNOSTIC.f90
+Compiling GEOGRAPHIC.f90
+Compiling PUTVEG.f90
+Compiling VFRAC.f90
+ 
+Making executable from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/prep/sst
+ 
+Making executable from directory /home/nicole/workdir/Versions/eta-v1.4.3-fms/atmos/src/etafcst
+Compiling MODULE_F77KINDS.f90
+Compiling MODULE_PARMEXCH.f90
+Compiling MODULE_CUINIT.f90
+Compiling MODULE_TIMMING.f90
+Compiling MODULE_TIMCHK.f90
+Compiling MODULE_PARMETA.f90
+Compiling MODULE_MPPCOM.f90
+Compiling MODULE_GLB_TABLE.f90
+Compiling MODULE_TEMPCOM.f90
+Compiling MODULE_TOPO.f90
+Compiling MODULE_MAPPINGS.f90
+Compiling MODULE_EXCH_BUF_INTEGER.f90
+Compiling MODULE_EXCH_BUF_REAL.f90
+Compiling MODULE_EXCHM.f90
+Compiling MODULE_RDPARM.f90
+Compiling MODULE_BANDTA.f90
+Compiling MODULE_BDWIDE.f90
+Compiling MODULE_BDCOMB.f90
+Compiling MODULE_RNDDTA.f90
+Compiling MODULE_TEMPV.f90
+Compiling MODULE_SLOPES.f90
+Compiling MODULE_PRFHLD.f90
+Compiling MODULE_ACMCLD.f90
+Compiling MODULE_ACMPRE.f90
+Compiling MODULE_ACMSFC.f90
+Compiling MODULE_CNVCLD.f90
+Compiling MODULE_PARMSOIL.f90
+Compiling MODULE_ACMRDL.f90
+Compiling MODULE_ACMRDS.f90
+Compiling MODULE_ACMCLH.f90
+Compiling MODULE_BOCO.f90
+Compiling MODULE_NHYDRO.f90
+Compiling MODULE_CLDWTR.f90
+Compiling MODULE_LOOPS.f90
+Compiling MODULE_CONTIN.f90
+Compiling MODULE_INDX.f90
+Compiling MODULE_PVRBLS.f90
+Compiling MODULE_PARM_TBL.f90
+Compiling MODULE_CUPARM.f90
+Compiling MODULE_MASKS.f90
+Compiling MODULE_SOIL.f90
+Compiling MODULE_VRBLS.f90
+Compiling MODULE_INPUT.f90
+Compiling MODULE_CTLBLK.f90
+Compiling MODULE_MAPOT.f90
+Compiling MODULE_PHYS.f90
+Compiling MODULE_DYNAM.f90
+Compiling MODULE_RD1TIM.f90
+Compiling MODULE_SWRSAV.f90
+Compiling MODULE_TBLTMP.f90
+Compiling MODULE_DIUCON.f90
+Compiling MODULE_SSALB.f90
+Compiling MODULE_RDFSAV.f90
+Compiling MODULE_SAVMEM.f90
+Compiling MODULE_SCRTCH.f90
+Compiling MODULE_CMICRO_STATS.f90
+Compiling MODULE_CMY600.f90
+Compiling MODULE_CMICRO_CONS.f90
+Compiling MODULE_IACCR_TABLES.f90
+Compiling MODULE_IMASS_TABLES.f90
+Compiling MODULE_IVENT_TABLES.f90
+Compiling MODULE_IRATE_TABLES.f90
+Compiling MODULE_IRIME_TABLES.f90
+Compiling MODULE_RACCR_TABLES.f90
+Compiling MODULE_SDENS_TABLES.f90
+Compiling MODULE_RMASS_TABLES.f90
+Compiling MODULE_RRATE_TABLES.f90
+Compiling MODULE_RVELR_TABLES.f90
+Compiling MODULE_RVENT_TABLES.f90
+Compiling MODULE_COMPVS0.f90
+Compiling MODULE_COMPVS.f90
+Compiling MODULE_CMICRO_START.f90
+Compiling MODULE_ASTSAV.f90
+Compiling MODULE_MOMENTO.f90
+Compiling MODULE_RITE.f90
+Compiling MODULE_ABCI.f90
+Compiling MODULE_UPDATE_FLDS.f90
+Compiling MODULE_Z0_DATA.f90
+Compiling MODULE_HCON.f90
+Compiling MODULE_PHYCON.f90
+Compiling BOCOH.f90
+Compiling BOCOHF.f90
+Compiling BOCOV.f90
+Compiling MODULE_PARMBUF.f90
+Compiling MODULE_BUFFER.f90
+Compiling MODULE_NSOILTYPE.f90
+Compiling MODULE_O3DATA.f90
+Compiling MODULE_SEASO3.f90
+Compiling MODULE_OUTFIL.f90
+Compiling CHKOUT.f90
+Compiling MODULE_C_TADJ.f90
+Compiling CLTEND.f90
+Compiling MODULE_Z0EFFT.f90
+Compiling MODULE_PARA.f90
+Compiling CLO89.f90
+Compiling COLLECT.f90
+Compiling MODULE_CO2BD2.f90
+Compiling MODULE_CO2BD3.f90
+Compiling MODULE_CO2BD4.f90
+Compiling MODULE_CO2BD5.f90
+Compiling MODULE_CO2DTA.f90
+Compiling CONRAD.f90
+Compiling CONRAD2.f90
+Compiling MODULE_PPTASM.f90
+Compiling CUCNVC.f90
+Compiling CUCNVC_SHALLOW.f90
+Compiling DDAMP.f90
+Compiling DIFCOF.f90
+Compiling DIGFLT.f90
+Compiling DIST.f90
+Compiling DSTRB.f90
+Compiling MODULE_TABCOM.f90
+Compiling E1E290.f90
+Compiling E290.f90
+Compiling E2SPEC.f90
+Compiling E3V88.f90
+Compiling EBU.f90
+Compiling EPS.f90
+Compiling FILT25.f90
+Compiling FST88.f90
+Compiling GFDLRD.f90
+Compiling GOSSIP.f90
+Compiling GRADFS.f90
+Compiling GSMCOLUMN.f90
+Compiling GSMCONST.f90
+Compiling MODULE_C_FRACN.f90
+Compiling GSMDRIVE.f90
+Compiling GSCOND.f90
+Compiling HADZ.f90
+Compiling HCONST.f90
+Compiling IDSTRB.f90
+Compiling INIT.f90
+Compiling INITS.f90
+Compiling LOC2GLB.f90
+Compiling LWR88.f90
+Compiling MIXLEN.f90
+Compiling MPI_FIRST.f90
+Compiling MPPINIT.f90
+Compiling O3CLIM.f90
+Compiling O3INT.f90
+Compiling OZON2D.f90
+Compiling PARA_RANGE.f90
+Compiling PDNEW.f90
+Compiling PDTEDT.f90
+Compiling PGCOR.f90
+Compiling PRECPD.f90
+Compiling PRODQ2.f90
+Compiling QUILT.f90
+Compiling RADFS.f90
+Compiling RDTEMP.f90
+Compiling READ_NHB.f90
+Compiling READ_RESTRT.f90
+Compiling READ_RESTRT2.f90
+Compiling SETUP_SERVERS.f90
+Compiling SFCDIF.f90
+Compiling SFLX.f90
+Compiling SGETMO.f90
+Compiling SLP.f90
+Compiling SOLARD.f90
+Compiling SPA88.f90
+Compiling MODULE_OPTIONS.f90
+Compiling SURFCE.f90
+Compiling SWR93.f90
+Compiling TABLE.f90
+Compiling TTBLEX.f90
+Compiling UPDATE.f90
+Compiling VADZ.f90
+Compiling VDIFH.f90
+Compiling VDIFQ.f90
+Compiling VDIFV.f90
+Compiling VTADV.f90
+Compiling VTADVF.f90
+Compiling ZENITH.f90
+Compiling ZERO2.f90
+Compiling ZERO3.f90
+Compiling ZERO3_T.f90
+Compiling TWR.f90
+Compiling SLPSIG.f90
+Compiling SLPSIGSPLINE.f90
+Compiling VWR.f90
+Compiling READ_OUT2RESTRT.f90
+Compiling OUT2RESTRT.f90
+Compiling DIVHOA.f90
+Compiling DIVHOAST.f90
+Compiling DIVHOASTQL.f90
+Compiling HDIFF.f90
+Compiling HDIFFS.f90
+Compiling HZADV.f90
+Compiling HZADV_LM1.f90
+Compiling HZADVS.f90
+Compiling HZADV2.f90
+Compiling RADTN.f90
+Compiling TURBL.f90

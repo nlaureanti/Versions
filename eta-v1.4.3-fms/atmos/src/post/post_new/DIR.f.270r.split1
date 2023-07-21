@@ -1,0 +1,386 @@
+
+;; Function dir (dir_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+(note 1 0 5 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])
+        (reg:DI 5 di [ x ])) "DIR.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])
+        (reg:DI 4 si [ y ])) "DIR.f":1 85 {*movdi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":41 85 {*movdi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:SF 87 [ _1 ])
+        (mem:SF (reg/f:DI 104) [1 *x_20(D)+0 S4 A32])) "DIR.f":41 131 {*movsf_internal}
+     (nil))
+(insn 9 8 10 2 (set (reg:SF 105)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 10 9 11 2 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 105))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 54 {*cmpiusf}
+     (nil))
+(jump_insn 11 10 112 2 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "DIR.f":41 682 {*jcc}
+     (nil)
+ -> 58)
+;;  succ:       10
+;;              3 (FALLTHRU)
+
+;; basic block 3, loop depth 0, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 112 11 12 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 12 112 13 3 (set (reg:SF 106)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 13 12 14 3 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 106))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 54 {*cmpiusf}
+     (nil))
+(jump_insn 14 13 18 3 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 58)
+            (pc))) "DIR.f":41 682 {*jcc}
+     (nil)
+ -> 58)
+;;  succ:       4 (FALLTHRU)
+;;              10
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       3 (FALLTHRU)
+(note 18 14 19 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 4 (set (reg/f:DI 107)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":42 85 {*movdi_internal}
+     (nil))
+(insn 20 19 21 4 (set (reg:SF 88 [ _2 ])
+        (mem:SF (reg/f:DI 107) [1 *y_21(D)+0 S4 A32])) "DIR.f":42 131 {*movsf_internal}
+     (nil))
+(insn 21 20 22 4 (set (reg:SF 108)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":42 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 22 21 23 4 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 88 [ _2 ])
+            (reg:SF 108))) "DIR.f":42 53 {*cmpisf}
+     (nil))
+(jump_insn 23 22 27 4 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 129)
+            (pc))) "DIR.f":42 682 {*jcc}
+     (nil)
+ -> 129)
+;;  succ:       5 (FALLTHRU)
+;;              6
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+(note 27 23 28 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 5 (set (reg:SF 109)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "DIR.f":43 131 {*movsf_internal}
+     (nil))
+(insn 29 28 130 5 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 109)) "DIR.f":43 131 {*movsf_internal}
+     (nil))
+(jump_insn 130 29 131 5 (set (pc)
+        (label_ref 100)) -1
+     (nil)
+ -> 100)
+;;  succ:       14 [always] 
+
+(barrier 131 130 129)
+;; basic block 6, loop depth 0, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4
+(code_label 129 131 33 6 19 (nil) [1 uses])
+(note 33 129 34 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 6 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":44 85 {*movdi_internal}
+     (nil))
+(insn 35 34 36 6 (set (reg:SF 89 [ _3 ])
+        (mem:SF (reg/f:DI 110) [1 *x_20(D)+0 S4 A32])) "DIR.f":44 131 {*movsf_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:SF 111)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 37 36 38 6 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 111))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 54 {*cmpiusf}
+     (nil))
+(jump_insn 38 37 117 6 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "DIR.f":44 682 {*jcc}
+     (nil)
+ -> 50)
+;;  succ:       9
+;;              7 (FALLTHRU)
+
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6 (FALLTHRU)
+(note 117 38 39 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 39 117 40 7 (set (reg:SF 112)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 40 39 41 7 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 112))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 54 {*cmpiusf}
+     (nil))
+(jump_insn 41 40 45 7 (set (pc)
+        (if_then_else (ltgt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 50)
+            (pc))) "DIR.f":44 682 {*jcc}
+     (nil)
+ -> 50)
+;;  succ:       8 (FALLTHRU)
+;;              9
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+(note 45 41 46 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 8 (set (reg:SF 113)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":45 131 {*movsf_internal}
+     (nil))
+(insn 47 46 132 8 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 113)) "DIR.f":45 131 {*movsf_internal}
+     (nil))
+(jump_insn 132 47 133 8 (set (pc)
+        (label_ref 100)) -1
+     (nil)
+ -> 100)
+;;  succ:       14 [always] 
+
+(barrier 133 132 50)
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       6
+;;              7
+(code_label 50 133 51 9 7 (nil) [2 uses])
+(note 51 50 52 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 9 (set (reg:SF 114)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "DIR.f":47 131 {*movsf_internal}
+     (nil))
+(insn 53 52 134 9 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 114)) "DIR.f":47 131 {*movsf_internal}
+     (nil))
+(jump_insn 134 53 135 9 (set (pc)
+        (label_ref 100)) -1
+     (nil)
+ -> 100)
+;;  succ:       14 [always] 
+
+(barrier 135 134 58)
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2
+;;              3
+(code_label 58 135 59 10 2 (nil) [2 uses])
+(note 59 58 60 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 10 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":50 85 {*movdi_internal}
+     (nil))
+(insn 61 60 62 10 (set (reg:SF 90 [ _4 ])
+        (mem:SF (reg/f:DI 115) [1 *y_21(D)+0 S4 A32])) "DIR.f":50 131 {*movsf_internal}
+     (nil))
+(insn 62 61 63 10 (set (reg/f:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":50 85 {*movdi_internal}
+     (nil))
+(insn 63 62 64 10 (set (reg:SF 91 [ _5 ])
+        (mem:SF (reg/f:DI 116) [1 *x_20(D)+0 S4 A32])) "DIR.f":50 131 {*movsf_internal}
+     (nil))
+(insn 64 63 65 10 (set (reg:SF 92 [ _6 ])
+        (div:SF (reg:SF 90 [ _4 ])
+            (reg:SF 91 [ _5 ]))) "DIR.f":50 841 {*fop_sf_1}
+     (nil))
+(insn 65 64 66 10 (set (reg:SF 21 xmm0)
+        (reg:SF 92 [ _6 ])) "DIR.f":50 131 {*movsf_internal}
+     (nil))
+(call_insn/u 66 65 67 10 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("atanf") [flags 0x41]  <function_decl 0x7f4276c49800 __builtin_atanf>) [0 __builtin_atanf S1 A8])
+            (const_int 0 [0]))) "DIR.f":50 700 {*call_value}
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 67 66 68 10 (set (reg:SF 93 [ _7 ])
+        (reg:SF 21 xmm0)) "DIR.f":50 131 {*movsf_internal}
+     (nil))
+(insn 68 67 69 10 (set (reg:SF 117)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":50 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+(insn 69 68 70 10 (set (reg:SF 94 [ _8 ])
+        (mult:SF (reg:SF 93 [ _7 ])
+            (reg:SF 117))) "DIR.f":50 838 {*fop_sf_comm}
+     (nil))
+(insn 70 69 71 10 (set (reg:SF 118)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "DIR.f":50 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 3.141590118408203125e+0 [0x0.c90fdp+2])
+        (nil)))
+(insn 71 70 72 10 (set (reg:SF 95 [ _9 ])
+        (div:SF (reg:SF 94 [ _8 ])
+            (reg:SF 118))) "DIR.f":50 841 {*fop_sf_1}
+     (nil))
+(insn 72 71 73 10 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 95 [ _9 ])) "DIR.f":50 131 {*movsf_internal}
+     (nil))
+(insn 73 72 74 10 (set (reg/f:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":51 85 {*movdi_internal}
+     (nil))
+(insn 74 73 75 10 (set (reg:SF 96 [ _10 ])
+        (mem:SF (reg/f:DI 119) [1 *x_20(D)+0 S4 A32])) "DIR.f":51 131 {*movsf_internal}
+     (nil))
+(insn 75 74 76 10 (set (reg:SF 120)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":51 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 76 75 77 10 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 120)
+            (reg:SF 96 [ _10 ]))) "DIR.f":51 53 {*cmpisf}
+     (nil))
+(jump_insn 77 76 81 10 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 86)
+            (pc))) "DIR.f":51 682 {*jcc}
+     (nil)
+ -> 86)
+;;  succ:       11 (FALLTHRU)
+;;              12
+
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10 (FALLTHRU)
+(note 81 77 82 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 11 (set (reg:SF 97 [ __result_dir.0_11 ])
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":52 131 {*movsf_internal}
+     (nil))
+(insn 83 82 84 11 (set (reg:SF 121)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":52 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+(insn 84 83 85 11 (set (reg:SF 98 [ _12 ])
+        (plus:SF (reg:SF 97 [ __result_dir.0_11 ])
+            (reg:SF 121))) "DIR.f":52 838 {*fop_sf_comm}
+     (nil))
+(insn 85 84 86 11 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 98 [ _12 ])) "DIR.f":52 131 {*movsf_internal}
+     (nil))
+;;  succ:       12 (FALLTHRU)
+
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       11 (FALLTHRU)
+;;              10
+(code_label 86 85 87 12 10 (nil) [1 uses])
+(note 87 86 88 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 88 87 89 12 (set (reg:SF 99 [ __result_dir.1_13 ])
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":54 131 {*movsf_internal}
+     (nil))
+(insn 89 88 90 12 (set (reg:SF 122)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":54 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 90 89 91 12 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 122)
+            (reg:SF 99 [ __result_dir.1_13 ]))) "DIR.f":54 53 {*cmpisf}
+     (nil))
+(jump_insn 91 90 95 12 (set (pc)
+        (if_then_else (unle (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 100)
+            (pc))) "DIR.f":54 682 {*jcc}
+     (nil)
+ -> 100)
+;;  succ:       13 (FALLTHRU)
+;;              14
+
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12 (FALLTHRU)
+(note 95 91 96 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 96 95 97 13 (set (reg:SF 100 [ __result_dir.2_14 ])
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":55 131 {*movsf_internal}
+     (nil))
+(insn 97 96 98 13 (set (reg:SF 123)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":55 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 3.6e+2 [0x0.b4p+9])
+        (nil)))
+(insn 98 97 99 13 (set (reg:SF 101 [ _15 ])
+        (plus:SF (reg:SF 100 [ __result_dir.2_14 ])
+            (reg:SF 123))) "DIR.f":55 838 {*fop_sf_comm}
+     (nil))
+(insn 99 98 100 13 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 101 [ _15 ])) "DIR.f":55 131 {*movsf_internal}
+     (nil))
+;;  succ:       14 (FALLTHRU)
+
+;; basic block 14, loop depth 0, maybe hot
+;;  prev block 13, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8 [always] 
+;;              13 (FALLTHRU)
+;;              12
+;;              5 [always] 
+;;              9 [always] 
+(code_label 100 99 101 14 9 (nil) [4 uses])
+(note 101 100 102 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 105 14 (set (reg:SF 102 [ _28 ])
+        (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":58 131 {*movsf_internal}
+     (nil))
+(insn 105 102 109 14 (set (reg:SF 103 [ <retval> ])
+        (reg:SF 102 [ _28 ])) 131 {*movsf_internal}
+     (nil))
+(insn 109 105 110 14 (set (reg/i:SF 21 xmm0)
+        (reg:SF 103 [ <retval> ])) "DIR.f":59 131 {*movsf_internal}
+     (nil))
+(insn 110 109 0 14 (use (reg/i:SF 21 xmm0)) "DIR.f":59 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

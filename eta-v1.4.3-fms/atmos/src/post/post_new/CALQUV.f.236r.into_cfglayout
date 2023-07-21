@@ -1,0 +1,3798 @@
+
+;; Function calquv (calquv_, funcdef_no=0, decl_uid=3770, cgraph_uid=0, symbol_order=0)
+
+
+
+try_optimize_cfg iteration 1
+
+Removing jump 47.
+Removing jump 53.
+Removing jump 131.
+Removing jump 137.
+Redirecting fallthru edge 20->21 to 23
+deleting block 21
+Removing jump 247.
+Deleted label in block 23.
+Removing jump 753.
+Removing jump 759.
+Removing jump 765.
+
+
+try_optimize_cfg iteration 2
+
+
+
+try_optimize_cfg iteration 1
+
+fix_loop_structure: fixing up loops for function
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 3, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 5 0 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [3 quint+0 S8 A64])
+        (reg:DI 5 di [ quint ])) "CALQUV.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [3 qvint+0 S8 A64])
+        (reg:DI 4 si [ qvint ])) "CALQUV.f":1 85 {*movdi_internal}
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg:SI 511 [ _441 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 8 [0x8]))) [2 parallel.jsta+0 S4 A64])) "CALQUV.f":69 86 {*movsi_internal}
+     (nil))
+(insn 8 7 9 2 (set (reg:SI 512 [ _442 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 12 [0xc]))) [2 parallel.jend+0 S4 A32])) "CALQUV.f":69 86 {*movsi_internal}
+     (nil))
+(insn 9 8 52 2 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (reg:SI 511 [ _441 ])) "CALQUV.f":69 86 {*movsi_internal}
+     (nil))
+;;  succ:       3 (FALLTHRU)
+
+;; basic block 3, loop depth 1, maybe hot
+;;  prev block 2, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              7 [always]  (FALLTHRU)
+(code_label 52 9 10 3 5 (nil) [0 uses])
+(note 10 52 11 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 11 10 12 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (reg:SI 512 [ _442 ]))) "CALQUV.f":69 11 {*cmpsi_1}
+     (nil))
+(insn 12 11 13 3 (set (reg:QI 524)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":69 678 {*setcc_qi}
+     (nil))
+(insn 13 12 14 3 (set (reg:SI 513 [ _444 ])
+        (zero_extend:SI (reg:QI 524))) "CALQUV.f":69 140 {*zero_extendqisi2}
+     (nil))
+(insn 14 13 15 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 513 [ _444 ])
+            (const_int 0 [0]))) "CALQUV.f":69 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 15 14 16 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 55)
+            (pc))) "CALQUV.f":69 682 {*jcc}
+     (nil)
+ -> 55)
+;;  succ:       8
+;;              4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 3, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       3 (FALLTHRU)
+(note 16 15 17 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 17 16 46 4 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALQUV.f":70 86 {*movsi_internal}
+     (nil))
+;;  succ:       5 (FALLTHRU)
+
+;; basic block 5, loop depth 2, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+;;              6 [always]  (FALLTHRU)
+(code_label 46 17 18 5 4 (nil) [0 uses])
+(note 18 46 19 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALQUV.f":70 11 {*cmpsi_1}
+     (nil))
+(insn 20 19 21 5 (set (reg:QI 525)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":70 678 {*setcc_qi}
+     (nil))
+(insn 21 20 22 5 (set (reg:SI 514 [ _446 ])
+        (zero_extend:SI (reg:QI 525))) "CALQUV.f":70 140 {*zero_extendqisi2}
+     (nil))
+(insn 22 21 23 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 514 [ _446 ])
+            (const_int 0 [0]))) "CALQUV.f":70 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 23 22 24 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 49)
+            (pc))) "CALQUV.f":70 682 {*jcc}
+     (nil)
+ -> 49)
+;;  succ:       7
+;;              6 (FALLTHRU)
+
+;; basic block 6, loop depth 2, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 24 23 25 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 6 (set (reg:SI 526)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":71 86 {*movsi_internal}
+     (nil))
+(insn 26 25 27 6 (set (reg:DI 87 [ _1 ])
+        (sign_extend:DI (reg:SI 526))) "CALQUV.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 27 26 28 6 (parallel [
+            (set (reg:DI 88 [ _2 ])
+                (mult:DI (reg:DI 87 [ _1 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":71 349 {*muldi3_1}
+     (nil))
+(insn 28 27 29 6 (set (reg:SI 527)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":71 86 {*movsi_internal}
+     (nil))
+(insn 29 28 30 6 (set (reg:DI 89 [ _3 ])
+        (sign_extend:DI (reg:SI 527))) "CALQUV.f":71 149 {*extendsidi2_rex64}
+     (nil))
+(insn 30 29 31 6 (parallel [
+            (set (reg:DI 90 [ _4 ])
+                (plus:DI (reg:DI 88 [ _2 ])
+                    (reg:DI 89 [ _3 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":71 222 {*adddi_1}
+     (nil))
+(insn 31 30 32 6 (parallel [
+            (set (reg:DI 91 [ _5 ])
+                (plus:DI (reg:DI 90 [ _4 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":71 222 {*adddi_1}
+     (nil))
+(insn 32 31 33 6 (set (reg/f:DI 528)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [3 quint+0 S8 A64])) "CALQUV.f":71 85 {*movdi_internal}
+     (nil))
+(insn 33 32 34 6 (set (reg:SF 529)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALQUV.f":71 131 {*movsf_internal}
+     (nil))
+(insn 34 33 35 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 91 [ _5 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 528)) [1 *quint_447(D) S4 A32])
+        (reg:SF 529)) "CALQUV.f":71 131 {*movsf_internal}
+     (nil))
+(insn 35 34 36 6 (set (reg:SI 530)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":72 86 {*movsi_internal}
+     (nil))
+(insn 36 35 37 6 (set (reg:DI 92 [ _6 ])
+        (sign_extend:DI (reg:SI 530))) "CALQUV.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 37 36 38 6 (parallel [
+            (set (reg:DI 93 [ _7 ])
+                (mult:DI (reg:DI 92 [ _6 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":72 349 {*muldi3_1}
+     (nil))
+(insn 38 37 39 6 (set (reg:SI 531)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":72 86 {*movsi_internal}
+     (nil))
+(insn 39 38 40 6 (set (reg:DI 94 [ _8 ])
+        (sign_extend:DI (reg:SI 531))) "CALQUV.f":72 149 {*extendsidi2_rex64}
+     (nil))
+(insn 40 39 41 6 (parallel [
+            (set (reg:DI 95 [ _9 ])
+                (plus:DI (reg:DI 93 [ _7 ])
+                    (reg:DI 94 [ _8 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":72 222 {*adddi_1}
+     (nil))
+(insn 41 40 42 6 (parallel [
+            (set (reg:DI 96 [ _10 ])
+                (plus:DI (reg:DI 95 [ _9 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":72 222 {*adddi_1}
+     (nil))
+(insn 42 41 43 6 (set (reg/f:DI 532)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [3 qvint+0 S8 A64])) "CALQUV.f":72 85 {*movdi_internal}
+     (nil))
+(insn 43 42 44 6 (set (reg:SF 533)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALQUV.f":72 131 {*movsf_internal}
+     (nil))
+(insn 44 43 45 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 96 [ _10 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 532)) [1 *qvint_449(D) S4 A32])
+        (reg:SF 533)) "CALQUV.f":72 131 {*movsf_internal}
+     (nil))
+(insn 45 44 49 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":70 221 {*addsi_1}
+     (nil))
+;;  succ:       5 [always]  (FALLTHRU)
+
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+(code_label 49 45 50 7 3 (nil) [1 uses])
+(note 50 49 51 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 51 50 55 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":69 221 {*addsi_1}
+     (nil))
+;;  succ:       3 [always]  (FALLTHRU)
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       3
+(code_label 55 51 56 8 2 (nil) [1 uses])
+(note 56 55 57 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 764 8 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])
+        (const_int 1 [0x1])) "CALQUV.f":76 86 {*movsi_internal}
+     (nil))
+;;  succ:       9 (FALLTHRU)
+
+;; basic block 9, loop depth 1, maybe hot
+;;  prev block 8, next block 10, flags: (NEW, REACHABLE, RTL)
+;;  pred:       8 (FALLTHRU)
+;;              26 [always]  (FALLTHRU)
+(code_label 764 57 58 9 18 (nil) [0 uses])
+(note 58 764 59 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 59 58 60 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])
+            (const_int 38 [0x26]))) "CALQUV.f":76 11 {*cmpsi_1}
+     (nil))
+(insn 60 59 61 9 (set (reg:QI 534)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":76 678 {*setcc_qi}
+     (nil))
+(insn 61 60 62 9 (set (reg:SI 515 [ _454 ])
+        (zero_extend:SI (reg:QI 534))) "CALQUV.f":76 140 {*zero_extendqisi2}
+     (nil))
+(insn 62 61 63 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 515 [ _454 ])
+            (const_int 0 [0]))) "CALQUV.f":76 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 63 62 64 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 767)
+            (pc))) "CALQUV.f":76 682 {*jcc}
+     (nil)
+ -> 767)
+;;  succ:       27
+;;              10 (FALLTHRU)
+
+;; basic block 10, loop depth 1, maybe hot
+;;  prev block 9, next block 11, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9 (FALLTHRU)
+(note 64 63 65 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 65 64 66 10 (set (reg:SI 516 [ _455 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 8 [0x8]))) [2 parallel.jsta+0 S4 A64])) "CALQUV.f":78 86 {*movsi_internal}
+     (nil))
+(insn 66 65 67 10 (set (reg:SI 517 [ _456 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 12 [0xc]))) [2 parallel.jend+0 S4 A32])) "CALQUV.f":78 86 {*movsi_internal}
+     (nil))
+(insn 67 66 136 10 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (reg:SI 516 [ _455 ])) "CALQUV.f":78 86 {*movsi_internal}
+     (nil))
+;;  succ:       11 (FALLTHRU)
+
+;; basic block 11, loop depth 2, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL)
+;;  pred:       10 (FALLTHRU)
+;;              15 [always]  (FALLTHRU)
+(code_label 136 67 68 11 10 (nil) [0 uses])
+(note 68 136 69 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 69 68 70 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (reg:SI 517 [ _456 ]))) "CALQUV.f":78 11 {*cmpsi_1}
+     (nil))
+(insn 70 69 71 11 (set (reg:QI 535)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":78 678 {*setcc_qi}
+     (nil))
+(insn 71 70 72 11 (set (reg:SI 518 [ _458 ])
+        (zero_extend:SI (reg:QI 535))) "CALQUV.f":78 140 {*zero_extendqisi2}
+     (nil))
+(insn 72 71 73 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 518 [ _458 ])
+            (const_int 0 [0]))) "CALQUV.f":78 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 73 72 74 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 139)
+            (pc))) "CALQUV.f":78 682 {*jcc}
+     (nil)
+ -> 139)
+;;  succ:       16
+;;              12 (FALLTHRU)
+
+;; basic block 12, loop depth 2, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL)
+;;  pred:       11 (FALLTHRU)
+(note 74 73 75 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 75 74 130 12 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "CALQUV.f":79 86 {*movsi_internal}
+     (nil))
+;;  succ:       13 (FALLTHRU)
+
+;; basic block 13, loop depth 3, maybe hot
+;;  prev block 12, next block 14, flags: (NEW, REACHABLE, RTL)
+;;  pred:       12 (FALLTHRU)
+;;              14 [always]  (FALLTHRU)
+(code_label 130 75 76 13 9 (nil) [0 uses])
+(note 76 130 77 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 77 76 78 13 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "CALQUV.f":79 11 {*cmpsi_1}
+     (nil))
+(insn 78 77 79 13 (set (reg:QI 536)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":79 678 {*setcc_qi}
+     (nil))
+(insn 79 78 80 13 (set (reg:SI 519 [ _460 ])
+        (zero_extend:SI (reg:QI 536))) "CALQUV.f":79 140 {*zero_extendqisi2}
+     (nil))
+(insn 80 79 81 13 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 519 [ _460 ])
+            (const_int 0 [0]))) "CALQUV.f":79 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 81 80 82 13 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 133)
+            (pc))) "CALQUV.f":79 682 {*jcc}
+     (nil)
+ -> 133)
+;;  succ:       15
+;;              14 (FALLTHRU)
+
+;; basic block 14, loop depth 3, maybe hot
+;;  prev block 13, next block 15, flags: (NEW, REACHABLE, RTL)
+;;  pred:       13 (FALLTHRU)
+(note 82 81 83 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 83 82 84 14 (set (reg:SI 537)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":80 86 {*movsi_internal}
+     (nil))
+(insn 84 83 85 14 (set (reg:DI 97 [ _11 ])
+        (sign_extend:DI (reg:SI 537))) "CALQUV.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 85 84 86 14 (parallel [
+            (set (reg:DI 98 [ _12 ])
+                (mult:DI (reg:DI 97 [ _11 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 349 {*muldi3_1}
+     (nil))
+(insn 86 85 87 14 (set (reg:SI 538)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":80 86 {*movsi_internal}
+     (nil))
+(insn 87 86 88 14 (set (reg:DI 99 [ _13 ])
+        (sign_extend:DI (reg:SI 538))) "CALQUV.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 88 87 89 14 (parallel [
+            (set (reg:DI 100 [ _14 ])
+                (mult:DI (reg:DI 99 [ _13 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 349 {*muldi3_1}
+     (nil))
+(insn 89 88 90 14 (parallel [
+            (set (reg:DI 101 [ _15 ])
+                (plus:DI (reg:DI 98 [ _12 ])
+                    (reg:DI 100 [ _14 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 90 89 91 14 (set (reg:SI 539)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":80 86 {*movsi_internal}
+     (nil))
+(insn 91 90 92 14 (set (reg:DI 102 [ _16 ])
+        (sign_extend:DI (reg:SI 539))) "CALQUV.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 92 91 93 14 (parallel [
+            (set (reg:DI 103 [ _17 ])
+                (plus:DI (reg:DI 101 [ _15 ])
+                    (reg:DI 102 [ _16 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 93 92 94 14 (parallel [
+            (set (reg:DI 104 [ _18 ])
+                (plus:DI (reg:DI 103 [ _17 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 94 93 95 14 (set (reg:SI 540)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":80 86 {*movsi_internal}
+     (nil))
+(insn 95 94 96 14 (set (reg:DI 105 [ _19 ])
+        (sign_extend:DI (reg:SI 540))) "CALQUV.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 96 95 97 14 (parallel [
+            (set (reg:DI 106 [ _20 ])
+                (mult:DI (reg:DI 105 [ _19 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 349 {*muldi3_1}
+     (nil))
+(insn 97 96 98 14 (set (reg:SI 541)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":80 86 {*movsi_internal}
+     (nil))
+(insn 98 97 99 14 (set (reg:DI 107 [ _21 ])
+        (sign_extend:DI (reg:SI 541))) "CALQUV.f":80 149 {*extendsidi2_rex64}
+     (nil))
+(insn 99 98 100 14 (parallel [
+            (set (reg:DI 108 [ _22 ])
+                (plus:DI (reg:DI 106 [ _20 ])
+                    (reg:DI 107 [ _21 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 100 99 101 14 (parallel [
+            (set (reg:DI 109 [ _23 ])
+                (plus:DI (reg:DI 108 [ _22 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 101 100 102 14 (set (reg/f:DI 542)
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f51c60b7d80 vrbls>)) "CALQUV.f":80 85 {*movdi_internal}
+     (nil))
+(insn 102 101 103 14 (parallel [
+            (set (reg:DI 543)
+                (plus:DI (reg:DI 104 [ _18 ])
+                    (const_int 88893 [0x15b3d])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":80 222 {*adddi_1}
+     (nil))
+(insn 103 102 104 14 (set (reg:SF 110 [ _24 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 543)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 542)) [1 vrbls.u S4 A32])) "CALQUV.f":80 131 {*movsf_internal}
+     (nil))
+(insn 104 103 105 14 (set (reg/f:DI 544)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":80 85 {*movdi_internal}
+     (nil))
+(insn 105 104 106 14 (set (mem:SF (plus:DI (mult:DI (reg:DI 109 [ _23 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 544)) [1 u1d S4 A32])
+        (reg:SF 110 [ _24 ])) "CALQUV.f":80 131 {*movsf_internal}
+     (nil))
+(insn 106 105 107 14 (set (reg:SI 545)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":81 86 {*movsi_internal}
+     (nil))
+(insn 107 106 108 14 (set (reg:DI 111 [ _25 ])
+        (sign_extend:DI (reg:SI 545))) "CALQUV.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 108 107 109 14 (parallel [
+            (set (reg:DI 112 [ _26 ])
+                (mult:DI (reg:DI 111 [ _25 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 349 {*muldi3_1}
+     (nil))
+(insn 109 108 110 14 (set (reg:SI 546)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":81 86 {*movsi_internal}
+     (nil))
+(insn 110 109 111 14 (set (reg:DI 113 [ _27 ])
+        (sign_extend:DI (reg:SI 546))) "CALQUV.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 111 110 112 14 (parallel [
+            (set (reg:DI 114 [ _28 ])
+                (mult:DI (reg:DI 113 [ _27 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 349 {*muldi3_1}
+     (nil))
+(insn 112 111 113 14 (parallel [
+            (set (reg:DI 115 [ _29 ])
+                (plus:DI (reg:DI 112 [ _26 ])
+                    (reg:DI 114 [ _28 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 113 112 114 14 (set (reg:SI 547)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":81 86 {*movsi_internal}
+     (nil))
+(insn 114 113 115 14 (set (reg:DI 116 [ _30 ])
+        (sign_extend:DI (reg:SI 547))) "CALQUV.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 115 114 116 14 (parallel [
+            (set (reg:DI 117 [ _31 ])
+                (plus:DI (reg:DI 115 [ _29 ])
+                    (reg:DI 116 [ _30 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 116 115 117 14 (parallel [
+            (set (reg:DI 118 [ _32 ])
+                (plus:DI (reg:DI 117 [ _31 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 117 116 118 14 (set (reg:SI 548)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":81 86 {*movsi_internal}
+     (nil))
+(insn 118 117 119 14 (set (reg:DI 119 [ _33 ])
+        (sign_extend:DI (reg:SI 548))) "CALQUV.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 119 118 120 14 (parallel [
+            (set (reg:DI 120 [ _34 ])
+                (mult:DI (reg:DI 119 [ _33 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 349 {*muldi3_1}
+     (nil))
+(insn 120 119 121 14 (set (reg:SI 549)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":81 86 {*movsi_internal}
+     (nil))
+(insn 121 120 122 14 (set (reg:DI 121 [ _35 ])
+        (sign_extend:DI (reg:SI 549))) "CALQUV.f":81 149 {*extendsidi2_rex64}
+     (nil))
+(insn 122 121 123 14 (parallel [
+            (set (reg:DI 122 [ _36 ])
+                (plus:DI (reg:DI 120 [ _34 ])
+                    (reg:DI 121 [ _35 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 123 122 124 14 (parallel [
+            (set (reg:DI 123 [ _37 ])
+                (plus:DI (reg:DI 122 [ _36 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 124 123 125 14 (set (reg/f:DI 550)
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f51c60b7d80 vrbls>)) "CALQUV.f":81 85 {*movdi_internal}
+     (nil))
+(insn 125 124 126 14 (parallel [
+            (set (reg:DI 551)
+                (plus:DI (reg:DI 118 [ _32 ])
+                    (const_int 1214871 [0x128997])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":81 222 {*adddi_1}
+     (nil))
+(insn 126 125 127 14 (set (reg:SF 124 [ _38 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 551)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 550)) [1 vrbls.v S4 A32])) "CALQUV.f":81 131 {*movsf_internal}
+     (nil))
+(insn 127 126 128 14 (set (reg/f:DI 552)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":81 85 {*movdi_internal}
+     (nil))
+(insn 128 127 129 14 (set (mem:SF (plus:DI (mult:DI (reg:DI 123 [ _37 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 552)) [1 v1d S4 A32])
+        (reg:SF 124 [ _38 ])) "CALQUV.f":81 131 {*movsf_internal}
+     (nil))
+(insn 129 128 133 14 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":79 221 {*addsi_1}
+     (nil))
+;;  succ:       13 [always]  (FALLTHRU)
+
+;; basic block 15, loop depth 2, maybe hot
+;;  prev block 14, next block 16, flags: (NEW, REACHABLE, RTL)
+;;  pred:       13
+(code_label 133 129 134 15 8 (nil) [1 uses])
+(note 134 133 135 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 135 134 139 15 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":78 221 {*addsi_1}
+     (nil))
+;;  succ:       11 [always]  (FALLTHRU)
+
+;; basic block 16, loop depth 1, maybe hot
+;;  prev block 15, next block 17, flags: (NEW, REACHABLE, RTL)
+;;  pred:       11
+(code_label 139 135 140 16 7 (nil) [1 uses])
+(note 140 139 141 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 141 140 142 16 (set (reg:DI 5 di)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":85 85 {*movdi_internal}
+     (nil))
+(insn 142 141 143 16 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALQUV.f":85 88 {*movqi_internal}
+     (nil))
+(call_insn 143 142 144 16 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f51c609b600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALQUV.f":85 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 144 143 145 16 (set (reg:DI 5 di)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":86 85 {*movdi_internal}
+     (nil))
+(insn 145 144 146 16 (set (reg:QI 0 ax)
+        (const_int 0 [0])) "CALQUV.f":86 88 {*movqi_internal}
+     (nil))
+(call_insn 146 145 147 16 (call (mem:QI (symbol_ref:DI ("exch_") [flags 0x41]  <function_decl 0x7f51c609b600 exch>) [0 exch S1 A8])
+        (const_int 0 [0])) "CALQUV.f":86 689 {*call}
+     (nil)
+    (expr_list (use (reg:QI 0 ax))
+        (expr_list:DI (use (reg:DI 5 di))
+            (nil))))
+(insn 147 146 148 16 (set (reg:SI 520 [ _467 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 16 [0x10]))) [2 parallel.jsta_m+0 S4 A128])) "CALQUV.f":89 86 {*movsi_internal}
+     (nil))
+(insn 148 147 149 16 (set (reg:SI 521 [ _468 ])
+        (mem/c:SI (const:DI (plus:DI (symbol_ref:DI ("parallel_") [flags 0x2]  <var_decl 0x7f51c60b7510 parallel>)
+                    (const_int 20 [0x14]))) [2 parallel.jend_m+0 S4 A32])) "CALQUV.f":89 86 {*movsi_internal}
+     (nil))
+(insn 149 148 758 16 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (reg:SI 520 [ _467 ])) "CALQUV.f":89 86 {*movsi_internal}
+     (nil))
+;;  succ:       17 (FALLTHRU)
+
+;; basic block 17, loop depth 2, maybe hot
+;;  prev block 16, next block 18, flags: (NEW, REACHABLE, RTL)
+;;  pred:       16 (FALLTHRU)
+;;              25 [always]  (FALLTHRU)
+(code_label 758 149 150 17 17 (nil) [0 uses])
+(note 150 758 151 17 [bb 17] NOTE_INSN_BASIC_BLOCK)
+(insn 151 150 152 17 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (reg:SI 521 [ _468 ]))) "CALQUV.f":89 11 {*cmpsi_1}
+     (nil))
+(insn 152 151 153 17 (set (reg:QI 553)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":89 678 {*setcc_qi}
+     (nil))
+(insn 153 152 154 17 (set (reg:SI 522 [ _470 ])
+        (zero_extend:SI (reg:QI 553))) "CALQUV.f":89 140 {*zero_extendqisi2}
+     (nil))
+(insn 154 153 155 17 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 522 [ _470 ])
+            (const_int 0 [0]))) "CALQUV.f":89 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 155 154 156 17 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 761)
+            (pc))) "CALQUV.f":89 682 {*jcc}
+     (nil)
+ -> 761)
+;;  succ:       26
+;;              18 (FALLTHRU)
+
+;; basic block 18, loop depth 2, maybe hot
+;;  prev block 17, next block 19, flags: (NEW, REACHABLE, RTL)
+;;  pred:       17 (FALLTHRU)
+(note 156 155 157 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 157 156 752 18 (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 2 [0x2])) "CALQUV.f":90 86 {*movsi_internal}
+     (nil))
+;;  succ:       19 (FALLTHRU)
+
+;; basic block 19, loop depth 3, maybe hot
+;;  prev block 18, next block 20, flags: (NEW, REACHABLE, RTL)
+;;  pred:       18 (FALLTHRU)
+;;              24 [always]  (FALLTHRU)
+(code_label 752 157 158 19 16 (nil) [0 uses])
+(note 158 752 159 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(insn 159 158 160 19 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 118 [0x76]))) "CALQUV.f":90 11 {*cmpsi_1}
+     (nil))
+(insn 160 159 161 19 (set (reg:QI 554)
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "CALQUV.f":90 678 {*setcc_qi}
+     (nil))
+(insn 161 160 162 19 (set (reg:SI 523 [ _472 ])
+        (zero_extend:SI (reg:QI 554))) "CALQUV.f":90 140 {*zero_extendqisi2}
+     (nil))
+(insn 162 161 163 19 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 523 [ _472 ])
+            (const_int 0 [0]))) "CALQUV.f":90 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 163 162 164 19 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 755)
+            (pc))) "CALQUV.f":90 682 {*jcc}
+     (nil)
+ -> 755)
+;;  succ:       25
+;;              20 (FALLTHRU)
+
+;; basic block 20, loop depth 3, maybe hot
+;;  prev block 19, next block 22, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       19 (FALLTHRU)
+(note 164 163 165 20 [bb 20] NOTE_INSN_BASIC_BLOCK)
+(insn 165 164 166 20 (set (reg:SI 555)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 166 165 167 20 (set (reg:DI 125 [ _39 ])
+        (sign_extend:DI (reg:SI 555))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 167 166 168 20 (parallel [
+            (set (reg:DI 126 [ _40 ])
+                (mult:DI (reg:DI 125 [ _39 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 168 167 169 20 (set (reg:SI 556)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 169 168 170 20 (parallel [
+            (set (reg:SI 127 [ _41 ])
+                (plus:SI (reg:SI 556)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 170 169 171 20 (set (reg:DI 128 [ _42 ])
+        (sign_extend:DI (reg:SI 127 [ _41 ]))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 171 170 172 20 (parallel [
+            (set (reg:DI 129 [ _43 ])
+                (mult:DI (reg:DI 128 [ _42 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 172 171 173 20 (parallel [
+            (set (reg:DI 130 [ _44 ])
+                (plus:DI (reg:DI 126 [ _40 ])
+                    (reg:DI 129 [ _43 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 173 172 174 20 (set (reg:SI 557)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 174 173 175 20 (set (reg:DI 131 [ _45 ])
+        (sign_extend:DI (reg:SI 557))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 175 174 176 20 (parallel [
+            (set (reg:DI 132 [ _46 ])
+                (plus:DI (reg:DI 130 [ _44 ])
+                    (reg:DI 131 [ _45 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 176 175 177 20 (parallel [
+            (set (reg:DI 133 [ _47 ])
+                (plus:DI (reg:DI 132 [ _46 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 177 176 178 20 (set (reg/f:DI 558)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":92 85 {*movdi_internal}
+     (nil))
+(insn 178 177 179 20 (parallel [
+            (set (reg:DI 559)
+                (plus:DI (reg:DI 133 [ _47 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 179 178 180 20 (set (reg:SF 134 [ _48 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 559)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 558)) [1 masks.vtm S4 A32])) "CALQUV.f":92 131 {*movsf_internal}
+     (nil))
+(insn 180 179 181 20 (set (reg:SI 560)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 181 180 182 20 (set (reg:DI 135 [ _49 ])
+        (sign_extend:DI (reg:SI 560))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 182 181 183 20 (parallel [
+            (set (reg:DI 136 [ _50 ])
+                (mult:DI (reg:DI 135 [ _49 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 183 182 184 20 (set (reg:SI 561)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 184 183 185 20 (set (reg:DI 137 [ _51 ])
+        (sign_extend:DI (reg:SI 561))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 185 184 186 20 (parallel [
+            (set (reg:DI 138 [ _52 ])
+                (mult:DI (reg:DI 137 [ _51 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 186 185 187 20 (parallel [
+            (set (reg:DI 139 [ _53 ])
+                (plus:DI (reg:DI 136 [ _50 ])
+                    (reg:DI 138 [ _52 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 187 186 188 20 (set (reg:SI 562)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 188 187 189 20 (set (reg:DI 140 [ _54 ])
+        (sign_extend:DI (reg:SI 562))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 189 188 190 20 (parallel [
+            (set (reg:DI 141 [ _55 ])
+                (plus:DI (reg:DI 140 [ _54 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 190 189 191 20 (parallel [
+            (set (reg:DI 563)
+                (plus:DI (reg:DI 141 [ _55 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 191 190 192 20 (set (reg:SI 142 [ _56 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 563)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 192 191 193 20 (set (reg:SI 564)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 193 192 194 20 (parallel [
+            (set (reg:SI 143 [ _57 ])
+                (plus:SI (reg:SI 142 [ _56 ])
+                    (reg:SI 564)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 142 [ _56 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 194 193 195 20 (set (reg:DI 144 [ _58 ])
+        (sign_extend:DI (reg:SI 143 [ _57 ]))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 195 194 196 20 (parallel [
+            (set (reg:DI 145 [ _59 ])
+                (plus:DI (reg:DI 139 [ _53 ])
+                    (reg:DI 144 [ _58 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 196 195 197 20 (parallel [
+            (set (reg:DI 146 [ _60 ])
+                (plus:DI (reg:DI 145 [ _59 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 197 196 198 20 (set (reg/f:DI 565)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":92 85 {*movdi_internal}
+     (nil))
+(insn 198 197 199 20 (parallel [
+            (set (reg:DI 566)
+                (plus:DI (reg:DI 146 [ _60 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 199 198 200 20 (set (reg:SF 147 [ _61 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 566)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 565)) [1 masks.vtm S4 A32])) "CALQUV.f":92 131 {*movsf_internal}
+     (nil))
+(insn 200 199 201 20 (set (reg:SF 148 [ _62 ])
+        (plus:SF (reg:SF 134 [ _48 ])
+            (reg:SF 147 [ _61 ]))) "CALQUV.f":92 838 {*fop_sf_comm}
+     (nil))
+(insn 201 200 202 20 (set (reg:SI 567)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 202 201 203 20 (set (reg:DI 149 [ _63 ])
+        (sign_extend:DI (reg:SI 567))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 203 202 204 20 (parallel [
+            (set (reg:DI 150 [ _64 ])
+                (mult:DI (reg:DI 149 [ _63 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 204 203 205 20 (set (reg:SI 568)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 205 204 206 20 (set (reg:DI 151 [ _65 ])
+        (sign_extend:DI (reg:SI 568))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 206 205 207 20 (parallel [
+            (set (reg:DI 152 [ _66 ])
+                (mult:DI (reg:DI 151 [ _65 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 207 206 208 20 (parallel [
+            (set (reg:DI 153 [ _67 ])
+                (plus:DI (reg:DI 150 [ _64 ])
+                    (reg:DI 152 [ _66 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 208 207 209 20 (set (reg:SI 569)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 209 208 210 20 (set (reg:DI 154 [ _68 ])
+        (sign_extend:DI (reg:SI 569))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 210 209 211 20 (parallel [
+            (set (reg:DI 155 [ _69 ])
+                (plus:DI (reg:DI 154 [ _68 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 211 210 212 20 (set (reg:SI 156 [ _70 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 155 [ _69 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 212 211 213 20 (set (reg:SI 570)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 213 212 214 20 (parallel [
+            (set (reg:SI 157 [ _71 ])
+                (plus:SI (reg:SI 156 [ _70 ])
+                    (reg:SI 570)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 156 [ _70 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 214 213 215 20 (set (reg:DI 158 [ _72 ])
+        (sign_extend:DI (reg:SI 157 [ _71 ]))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 215 214 216 20 (parallel [
+            (set (reg:DI 159 [ _73 ])
+                (plus:DI (reg:DI 153 [ _67 ])
+                    (reg:DI 158 [ _72 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 216 215 217 20 (parallel [
+            (set (reg:DI 160 [ _74 ])
+                (plus:DI (reg:DI 159 [ _73 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 217 216 218 20 (set (reg/f:DI 571)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":92 85 {*movdi_internal}
+     (nil))
+(insn 218 217 219 20 (parallel [
+            (set (reg:DI 572)
+                (plus:DI (reg:DI 160 [ _74 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 219 218 220 20 (set (reg:SF 161 [ _75 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 572)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 571)) [1 masks.vtm S4 A32])) "CALQUV.f":92 131 {*movsf_internal}
+     (nil))
+(insn 220 219 221 20 (set (reg:SF 162 [ _76 ])
+        (plus:SF (reg:SF 148 [ _62 ])
+            (reg:SF 161 [ _75 ]))) "CALQUV.f":92 838 {*fop_sf_comm}
+     (nil))
+(insn 221 220 222 20 (set (reg:SI 573)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 222 221 223 20 (set (reg:DI 163 [ _77 ])
+        (sign_extend:DI (reg:SI 573))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 223 222 224 20 (parallel [
+            (set (reg:DI 164 [ _78 ])
+                (mult:DI (reg:DI 163 [ _77 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 224 223 225 20 (set (reg:SI 574)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 225 224 226 20 (parallel [
+            (set (reg:SI 165 [ _79 ])
+                (plus:SI (reg:SI 574)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 226 225 227 20 (set (reg:DI 166 [ _80 ])
+        (sign_extend:DI (reg:SI 165 [ _79 ]))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 227 226 228 20 (parallel [
+            (set (reg:DI 167 [ _81 ])
+                (mult:DI (reg:DI 166 [ _80 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 349 {*muldi3_1}
+     (nil))
+(insn 228 227 229 20 (parallel [
+            (set (reg:DI 168 [ _82 ])
+                (plus:DI (reg:DI 164 [ _78 ])
+                    (reg:DI 167 [ _81 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 229 228 230 20 (set (reg:SI 575)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":92 86 {*movsi_internal}
+     (nil))
+(insn 230 229 231 20 (set (reg:DI 169 [ _83 ])
+        (sign_extend:DI (reg:SI 575))) "CALQUV.f":92 149 {*extendsidi2_rex64}
+     (nil))
+(insn 231 230 232 20 (parallel [
+            (set (reg:DI 170 [ _84 ])
+                (plus:DI (reg:DI 168 [ _82 ])
+                    (reg:DI 169 [ _83 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 232 231 233 20 (parallel [
+            (set (reg:DI 171 [ _85 ])
+                (plus:DI (reg:DI 170 [ _84 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 233 232 234 20 (set (reg/f:DI 576)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":92 85 {*movdi_internal}
+     (nil))
+(insn 234 233 235 20 (parallel [
+            (set (reg:DI 577)
+                (plus:DI (reg:DI 171 [ _85 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":92 222 {*adddi_1}
+     (nil))
+(insn 235 234 236 20 (set (reg:SF 172 [ _86 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 577)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 576)) [1 masks.vtm S4 A32])) "CALQUV.f":92 131 {*movsf_internal}
+     (nil))
+(insn 236 235 237 20 (set (reg:SF 173 [ _87 ])
+        (plus:SF (reg:SF 162 [ _76 ])
+            (reg:SF 172 [ _86 ]))) "CALQUV.f":92 838 {*fop_sf_comm}
+     (nil))
+(insn 237 236 238 20 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32])
+        (reg:SF 173 [ _87 ])) "CALQUV.f":92 131 {*movsf_internal}
+     (nil))
+(insn 238 237 239 20 (set (reg:SF 578)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALQUV.f":93 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 239 238 240 20 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 578)
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32]))) "CALQUV.f":93 53 {*cmpisf}
+     (nil))
+(jump_insn 240 239 775 20 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 775)
+            (pc))) "CALQUV.f":93 682 {*jcc}
+     (nil)
+ -> 775)
+;;  succ:       22
+;;              23 (FALLTHRU)
+
+;; basic block 22, loop depth 3, maybe hot
+;;  prev block 20, next block 23, flags: (NEW, REACHABLE, RTL)
+;;  pred:       20
+(code_label 775 240 244 22 20 (nil) [1 uses])
+(note 244 775 245 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 245 244 246 22 (set (reg:SF 579)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "CALQUV.f":94 131 {*movsf_internal}
+     (nil))
+(insn 246 245 250 22 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32])
+        (reg:SF 579)) "CALQUV.f":94 131 {*movsf_internal}
+     (nil))
+;;  succ:       24 [always]  (FALLTHRU)
+
+;; basic block 23, loop depth 3, maybe hot
+;;  prev block 22, next block 24, flags: (NEW, REACHABLE, RTL)
+;;  pred:       20 (FALLTHRU)
+(note 250 246 251 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(insn 251 250 252 23 (set (reg:SI 580)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 252 251 253 23 (set (reg:DI 174 [ _88 ])
+        (sign_extend:DI (reg:SI 580))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 253 252 254 23 (parallel [
+            (set (reg:DI 175 [ _89 ])
+                (mult:DI (reg:DI 174 [ _88 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 254 253 255 23 (set (reg:SI 581)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 255 254 256 23 (parallel [
+            (set (reg:SI 176 [ _90 ])
+                (plus:SI (reg:SI 581)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 256 255 257 23 (set (reg:DI 177 [ _91 ])
+        (sign_extend:DI (reg:SI 176 [ _90 ]))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 257 256 258 23 (parallel [
+            (set (reg:DI 178 [ _92 ])
+                (mult:DI (reg:DI 177 [ _91 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 258 257 259 23 (parallel [
+            (set (reg:DI 179 [ _93 ])
+                (plus:DI (reg:DI 175 [ _89 ])
+                    (reg:DI 178 [ _92 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 259 258 260 23 (set (reg:SI 582)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 260 259 261 23 (set (reg:DI 180 [ _94 ])
+        (sign_extend:DI (reg:SI 582))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 261 260 262 23 (parallel [
+            (set (reg:DI 181 [ _95 ])
+                (plus:DI (reg:DI 179 [ _93 ])
+                    (reg:DI 180 [ _94 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 262 261 263 23 (parallel [
+            (set (reg:DI 182 [ _96 ])
+                (plus:DI (reg:DI 181 [ _95 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 263 262 264 23 (set (reg/f:DI 583)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":97 85 {*movdi_internal}
+     (nil))
+(insn 264 263 265 23 (parallel [
+            (set (reg:DI 584)
+                (plus:DI (reg:DI 182 [ _96 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 265 264 266 23 (set (reg:SF 183 [ _97 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 584)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 583)) [1 masks.vtm S4 A32])) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+(insn 266 265 267 23 (set (reg:SI 585)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 267 266 268 23 (set (reg:DI 184 [ _98 ])
+        (sign_extend:DI (reg:SI 585))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 268 267 269 23 (parallel [
+            (set (reg:DI 185 [ _99 ])
+                (mult:DI (reg:DI 184 [ _98 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 269 268 270 23 (set (reg:SI 586)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 270 269 271 23 (set (reg:DI 186 [ _100 ])
+        (sign_extend:DI (reg:SI 586))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 271 270 272 23 (parallel [
+            (set (reg:DI 187 [ _101 ])
+                (mult:DI (reg:DI 186 [ _100 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 272 271 273 23 (parallel [
+            (set (reg:DI 188 [ _102 ])
+                (plus:DI (reg:DI 185 [ _99 ])
+                    (reg:DI 187 [ _101 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 273 272 274 23 (set (reg:SI 587)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 274 273 275 23 (set (reg:DI 189 [ _103 ])
+        (sign_extend:DI (reg:SI 587))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 275 274 276 23 (parallel [
+            (set (reg:DI 190 [ _104 ])
+                (plus:DI (reg:DI 189 [ _103 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 276 275 277 23 (parallel [
+            (set (reg:DI 588)
+                (plus:DI (reg:DI 190 [ _104 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 277 276 278 23 (set (reg:SI 191 [ _105 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 588)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 278 277 279 23 (set (reg:SI 589)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 279 278 280 23 (parallel [
+            (set (reg:SI 192 [ _106 ])
+                (plus:SI (reg:SI 191 [ _105 ])
+                    (reg:SI 589)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 191 [ _105 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 280 279 281 23 (set (reg:DI 193 [ _107 ])
+        (sign_extend:DI (reg:SI 192 [ _106 ]))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 281 280 282 23 (parallel [
+            (set (reg:DI 194 [ _108 ])
+                (plus:DI (reg:DI 188 [ _102 ])
+                    (reg:DI 193 [ _107 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 282 281 283 23 (parallel [
+            (set (reg:DI 195 [ _109 ])
+                (plus:DI (reg:DI 194 [ _108 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 283 282 284 23 (set (reg/f:DI 590)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":97 85 {*movdi_internal}
+     (nil))
+(insn 284 283 285 23 (parallel [
+            (set (reg:DI 591)
+                (plus:DI (reg:DI 195 [ _109 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 285 284 286 23 (set (reg:SF 196 [ _110 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 591)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 590)) [1 masks.vtm S4 A32])) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+(insn 286 285 287 23 (set (reg:SF 197 [ _111 ])
+        (plus:SF (reg:SF 183 [ _97 ])
+            (reg:SF 196 [ _110 ]))) "CALQUV.f":97 838 {*fop_sf_comm}
+     (nil))
+(insn 287 286 288 23 (set (reg:SI 592)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 288 287 289 23 (set (reg:DI 198 [ _112 ])
+        (sign_extend:DI (reg:SI 592))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 289 288 290 23 (parallel [
+            (set (reg:DI 199 [ _113 ])
+                (mult:DI (reg:DI 198 [ _112 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 290 289 291 23 (set (reg:SI 593)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 291 290 292 23 (set (reg:DI 200 [ _114 ])
+        (sign_extend:DI (reg:SI 593))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 292 291 293 23 (parallel [
+            (set (reg:DI 201 [ _115 ])
+                (mult:DI (reg:DI 200 [ _114 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 293 292 294 23 (parallel [
+            (set (reg:DI 202 [ _116 ])
+                (plus:DI (reg:DI 199 [ _113 ])
+                    (reg:DI 201 [ _115 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 294 293 295 23 (set (reg:SI 594)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 295 294 296 23 (set (reg:DI 203 [ _117 ])
+        (sign_extend:DI (reg:SI 594))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 296 295 297 23 (parallel [
+            (set (reg:DI 204 [ _118 ])
+                (plus:DI (reg:DI 203 [ _117 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 297 296 298 23 (set (reg:SI 205 [ _119 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 204 [ _118 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 298 297 299 23 (set (reg:SI 595)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 299 298 300 23 (parallel [
+            (set (reg:SI 206 [ _120 ])
+                (plus:SI (reg:SI 205 [ _119 ])
+                    (reg:SI 595)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 205 [ _119 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 300 299 301 23 (set (reg:DI 207 [ _121 ])
+        (sign_extend:DI (reg:SI 206 [ _120 ]))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 301 300 302 23 (parallel [
+            (set (reg:DI 208 [ _122 ])
+                (plus:DI (reg:DI 202 [ _116 ])
+                    (reg:DI 207 [ _121 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 302 301 303 23 (parallel [
+            (set (reg:DI 209 [ _123 ])
+                (plus:DI (reg:DI 208 [ _122 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 303 302 304 23 (set (reg/f:DI 596)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":97 85 {*movdi_internal}
+     (nil))
+(insn 304 303 305 23 (parallel [
+            (set (reg:DI 597)
+                (plus:DI (reg:DI 209 [ _123 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 305 304 306 23 (set (reg:SF 210 [ _124 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 597)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 596)) [1 masks.vtm S4 A32])) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+(insn 306 305 307 23 (set (reg:SF 211 [ _125 ])
+        (plus:SF (reg:SF 197 [ _111 ])
+            (reg:SF 210 [ _124 ]))) "CALQUV.f":97 838 {*fop_sf_comm}
+     (nil))
+(insn 307 306 308 23 (set (reg:SI 598)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 308 307 309 23 (set (reg:DI 212 [ _126 ])
+        (sign_extend:DI (reg:SI 598))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 309 308 310 23 (parallel [
+            (set (reg:DI 213 [ _127 ])
+                (mult:DI (reg:DI 212 [ _126 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 310 309 311 23 (set (reg:SI 599)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 311 310 312 23 (parallel [
+            (set (reg:SI 214 [ _128 ])
+                (plus:SI (reg:SI 599)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 312 311 313 23 (set (reg:DI 215 [ _129 ])
+        (sign_extend:DI (reg:SI 214 [ _128 ]))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 313 312 314 23 (parallel [
+            (set (reg:DI 216 [ _130 ])
+                (mult:DI (reg:DI 215 [ _129 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 349 {*muldi3_1}
+     (nil))
+(insn 314 313 315 23 (parallel [
+            (set (reg:DI 217 [ _131 ])
+                (plus:DI (reg:DI 213 [ _127 ])
+                    (reg:DI 216 [ _130 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 315 314 316 23 (set (reg:SI 600)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":97 86 {*movsi_internal}
+     (nil))
+(insn 316 315 317 23 (set (reg:DI 218 [ _132 ])
+        (sign_extend:DI (reg:SI 600))) "CALQUV.f":97 149 {*extendsidi2_rex64}
+     (nil))
+(insn 317 316 318 23 (parallel [
+            (set (reg:DI 219 [ _133 ])
+                (plus:DI (reg:DI 217 [ _131 ])
+                    (reg:DI 218 [ _132 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 318 317 319 23 (parallel [
+            (set (reg:DI 220 [ _134 ])
+                (plus:DI (reg:DI 219 [ _133 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 319 318 320 23 (set (reg/f:DI 601)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":97 85 {*movdi_internal}
+     (nil))
+(insn 320 319 321 23 (parallel [
+            (set (reg:DI 602)
+                (plus:DI (reg:DI 220 [ _134 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":97 222 {*adddi_1}
+     (nil))
+(insn 321 320 322 23 (set (reg:SF 221 [ _135 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 602)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 601)) [1 masks.vtm S4 A32])) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+(insn 322 321 323 23 (set (reg:SF 222 [ _136 ])
+        (plus:SF (reg:SF 211 [ _125 ])
+            (reg:SF 221 [ _135 ]))) "CALQUV.f":97 838 {*fop_sf_comm}
+     (nil))
+(insn 323 322 324 23 (set (reg:SF 223 [ _137 ])
+        (reg:SF 222 [ _136 ])) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+(insn 324 323 325 23 (set (reg:SF 604)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "CALQUV.f":97 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0e+0 [0x0.8p+1])
+        (nil)))
+(insn 325 324 326 23 (set (reg:SF 603)
+        (div:SF (reg:SF 604)
+            (reg:SF 223 [ _137 ]))) "CALQUV.f":97 841 {*fop_sf_1}
+     (nil))
+(insn 326 325 327 23 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32])
+        (reg:SF 603)) "CALQUV.f":97 131 {*movsf_internal}
+     (nil))
+;;  succ:       24 (FALLTHRU)
+
+;; basic block 24, loop depth 3, maybe hot
+;;  prev block 23, next block 25, flags: (NEW, REACHABLE, RTL)
+;;  pred:       22 [always]  (FALLTHRU)
+;;              23 (FALLTHRU)
+(code_label 327 326 328 24 15 (nil) [0 uses])
+(note 328 327 329 24 [bb 24] NOTE_INSN_BASIC_BLOCK)
+(insn 329 328 330 24 (set (reg:SI 605)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 330 329 331 24 (set (reg:DI 224 [ _138 ])
+        (sign_extend:DI (reg:SI 605))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 331 330 332 24 (parallel [
+            (set (reg:DI 225 [ _139 ])
+                (mult:DI (reg:DI 224 [ _138 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 349 {*muldi3_1}
+     (nil))
+(insn 332 331 333 24 (set (reg:SI 606)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 333 332 334 24 (set (reg:DI 226 [ _140 ])
+        (sign_extend:DI (reg:SI 606))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 334 333 335 24 (parallel [
+            (set (reg:DI 227 [ _141 ])
+                (mult:DI (reg:DI 226 [ _140 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 349 {*muldi3_1}
+     (nil))
+(insn 335 334 336 24 (parallel [
+            (set (reg:DI 228 [ _142 ])
+                (plus:DI (reg:DI 225 [ _139 ])
+                    (reg:DI 227 [ _141 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 336 335 337 24 (set (reg:SI 607)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 337 336 338 24 (set (reg:DI 229 [ _143 ])
+        (sign_extend:DI (reg:SI 607))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 338 337 339 24 (parallel [
+            (set (reg:DI 230 [ _144 ])
+                (plus:DI (reg:DI 228 [ _142 ])
+                    (reg:DI 229 [ _143 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 339 338 340 24 (parallel [
+            (set (reg:DI 231 [ _145 ])
+                (plus:DI (reg:DI 230 [ _144 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 340 339 341 24 (set (reg/f:DI 608)
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f51c60adbd0 extra>)) "CALQUV.f":100 85 {*movdi_internal}
+     (nil))
+(insn 341 340 342 24 (set (reg:SF 232 [ _146 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 231 [ _145 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 608)) [1 extra.pint S4 A32])) "CALQUV.f":100 131 {*movsf_internal}
+     (nil))
+(insn 342 341 343 24 (set (reg:SI 609)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 343 342 344 24 (parallel [
+            (set (reg:SI 233 [ _147 ])
+                (plus:SI (reg:SI 609)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 344 343 345 24 (set (reg:DI 234 [ _148 ])
+        (sign_extend:DI (reg:SI 233 [ _147 ]))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 345 344 346 24 (parallel [
+            (set (reg:DI 235 [ _149 ])
+                (mult:DI (reg:DI 234 [ _148 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 349 {*muldi3_1}
+     (nil))
+(insn 346 345 347 24 (set (reg:SI 610)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 347 346 348 24 (set (reg:DI 236 [ _150 ])
+        (sign_extend:DI (reg:SI 610))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 348 347 349 24 (parallel [
+            (set (reg:DI 237 [ _151 ])
+                (mult:DI (reg:DI 236 [ _150 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 349 {*muldi3_1}
+     (nil))
+(insn 349 348 350 24 (parallel [
+            (set (reg:DI 238 [ _152 ])
+                (plus:DI (reg:DI 235 [ _149 ])
+                    (reg:DI 237 [ _151 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 350 349 351 24 (set (reg:SI 611)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":100 86 {*movsi_internal}
+     (nil))
+(insn 351 350 352 24 (set (reg:DI 239 [ _153 ])
+        (sign_extend:DI (reg:SI 611))) "CALQUV.f":100 149 {*extendsidi2_rex64}
+     (nil))
+(insn 352 351 353 24 (parallel [
+            (set (reg:DI 240 [ _154 ])
+                (plus:DI (reg:DI 238 [ _152 ])
+                    (reg:DI 239 [ _153 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 353 352 354 24 (parallel [
+            (set (reg:DI 241 [ _155 ])
+                (plus:DI (reg:DI 240 [ _154 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 222 {*adddi_1}
+     (nil))
+(insn 354 353 355 24 (set (reg/f:DI 612)
+        (symbol_ref:DI ("extra_") [flags 0x202]  <var_decl 0x7f51c60adbd0 extra>)) "CALQUV.f":100 85 {*movdi_internal}
+     (nil))
+(insn 355 354 356 24 (set (reg:SF 242 [ _156 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 241 [ _155 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 612)) [1 extra.pint S4 A32])) "CALQUV.f":100 131 {*movsf_internal}
+     (nil))
+(insn 356 355 357 24 (set (reg:SF 243 [ _157 ])
+        (minus:SF (reg:SF 232 [ _146 ])
+            (reg:SF 242 [ _156 ]))) "CALQUV.f":100 841 {*fop_sf_1}
+     (nil))
+(insn 357 356 358 24 (set (reg:SF 244 [ _158 ])
+        (reg:SF 243 [ _157 ])) "CALQUV.f":100 131 {*movsf_internal}
+     (nil))
+(insn 358 357 359 24 (set (reg:V4SF 614)
+        (mem/u/c:V4SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S16 A128])) "CALQUV.f":100 1282 {movv4sf_internal}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 359 358 360 24 (parallel [
+            (set (reg:SF 613)
+                (neg:SF (reg:SF 244 [ _158 ])))
+            (use (reg:V4SF 614))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":100 507 {*absnegsf2}
+     (expr_list:REG_EQUAL (neg:SF (reg:SF 244 [ _158 ]))
+        (nil)))
+(insn 360 359 361 24 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -20 [0xffffffffffffffec])) [1 dp+0 S4 A32])
+        (reg:SF 613)) "CALQUV.f":100 131 {*movsf_internal}
+     (nil))
+(insn 361 360 362 24 (set (reg:SI 615)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 362 361 363 24 (parallel [
+            (set (reg:SI 245 [ _159 ])
+                (plus:SI (reg:SI 615)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 363 362 364 24 (set (reg:DI 246 [ _160 ])
+        (sign_extend:DI (reg:SI 245 [ _159 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 364 363 365 24 (parallel [
+            (set (reg:DI 247 [ _161 ])
+                (mult:DI (reg:DI 246 [ _160 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 365 364 366 24 (set (reg:SI 616)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 366 365 367 24 (set (reg:DI 248 [ _162 ])
+        (sign_extend:DI (reg:SI 616))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 367 366 368 24 (parallel [
+            (set (reg:DI 249 [ _163 ])
+                (plus:DI (reg:DI 247 [ _161 ])
+                    (reg:DI 248 [ _162 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 368 367 369 24 (parallel [
+            (set (reg:DI 250 [ _164 ])
+                (plus:DI (reg:DI 249 [ _163 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 369 368 370 24 (set (reg/f:DI 617)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 370 369 371 24 (set (reg:SF 251 [ _165 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 250 [ _164 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 617)) [1 u1d S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 371 370 372 24 (set (reg:SI 618)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 372 371 373 24 (set (reg:DI 252 [ _166 ])
+        (sign_extend:DI (reg:SI 618))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 373 372 374 24 (parallel [
+            (set (reg:DI 253 [ _167 ])
+                (mult:DI (reg:DI 252 [ _166 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 374 373 375 24 (set (reg:SI 619)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 375 374 376 24 (parallel [
+            (set (reg:SI 254 [ _168 ])
+                (plus:SI (reg:SI 619)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 376 375 377 24 (set (reg:DI 255 [ _169 ])
+        (sign_extend:DI (reg:SI 254 [ _168 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 377 376 378 24 (parallel [
+            (set (reg:DI 256 [ _170 ])
+                (mult:DI (reg:DI 255 [ _169 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 378 377 379 24 (parallel [
+            (set (reg:DI 257 [ _171 ])
+                (plus:DI (reg:DI 253 [ _167 ])
+                    (reg:DI 256 [ _170 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 379 378 380 24 (set (reg:SI 620)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 380 379 381 24 (set (reg:DI 258 [ _172 ])
+        (sign_extend:DI (reg:SI 620))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 381 380 382 24 (parallel [
+            (set (reg:DI 259 [ _173 ])
+                (plus:DI (reg:DI 257 [ _171 ])
+                    (reg:DI 258 [ _172 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 382 381 383 24 (parallel [
+            (set (reg:DI 260 [ _174 ])
+                (plus:DI (reg:DI 259 [ _173 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 383 382 384 24 (set (reg/f:DI 621)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 384 383 385 24 (parallel [
+            (set (reg:DI 622)
+                (plus:DI (reg:DI 260 [ _174 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 385 384 386 24 (set (reg:SF 261 [ _175 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 622)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 621)) [1 masks.vtm S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 386 385 387 24 (set (reg:SF 262 [ _176 ])
+        (mult:SF (reg:SF 251 [ _165 ])
+            (reg:SF 261 [ _175 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 387 386 388 24 (set (reg:SI 623)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 388 387 389 24 (set (reg:DI 263 [ _177 ])
+        (sign_extend:DI (reg:SI 623))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 389 388 390 24 (parallel [
+            (set (reg:DI 264 [ _178 ])
+                (mult:DI (reg:DI 263 [ _177 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 390 389 391 24 (set (reg:SI 624)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 391 390 392 24 (set (reg:DI 265 [ _179 ])
+        (sign_extend:DI (reg:SI 624))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 392 391 393 24 (parallel [
+            (set (reg:DI 266 [ _180 ])
+                (plus:DI (reg:DI 265 [ _179 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 393 392 394 24 (parallel [
+            (set (reg:DI 625)
+                (plus:DI (reg:DI 266 [ _180 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 394 393 395 24 (set (reg:SI 267 [ _181 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 625)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 395 394 396 24 (set (reg:SI 626)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 396 395 397 24 (parallel [
+            (set (reg:SI 268 [ _182 ])
+                (plus:SI (reg:SI 267 [ _181 ])
+                    (reg:SI 626)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 267 [ _181 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 397 396 398 24 (set (reg:DI 269 [ _183 ])
+        (sign_extend:DI (reg:SI 268 [ _182 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 398 397 399 24 (parallel [
+            (set (reg:DI 270 [ _184 ])
+                (plus:DI (reg:DI 264 [ _178 ])
+                    (reg:DI 269 [ _183 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 399 398 400 24 (parallel [
+            (set (reg:DI 271 [ _185 ])
+                (plus:DI (reg:DI 270 [ _184 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 400 399 401 24 (set (reg/f:DI 627)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 401 400 402 24 (set (reg:SF 272 [ _186 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 271 [ _185 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 627)) [1 u1d S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 402 401 403 24 (set (reg:SI 628)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 403 402 404 24 (set (reg:DI 273 [ _187 ])
+        (sign_extend:DI (reg:SI 628))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 404 403 405 24 (parallel [
+            (set (reg:DI 274 [ _188 ])
+                (mult:DI (reg:DI 273 [ _187 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 405 404 406 24 (set (reg:SI 629)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 406 405 407 24 (set (reg:DI 275 [ _189 ])
+        (sign_extend:DI (reg:SI 629))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 407 406 408 24 (parallel [
+            (set (reg:DI 276 [ _190 ])
+                (mult:DI (reg:DI 275 [ _189 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 408 407 409 24 (parallel [
+            (set (reg:DI 277 [ _191 ])
+                (plus:DI (reg:DI 274 [ _188 ])
+                    (reg:DI 276 [ _190 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 409 408 410 24 (set (reg:SI 630)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 410 409 411 24 (set (reg:DI 278 [ _192 ])
+        (sign_extend:DI (reg:SI 630))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 411 410 412 24 (parallel [
+            (set (reg:DI 279 [ _193 ])
+                (plus:DI (reg:DI 278 [ _192 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 412 411 413 24 (parallel [
+            (set (reg:DI 631)
+                (plus:DI (reg:DI 279 [ _193 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 413 412 414 24 (set (reg:SI 280 [ _194 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 631)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 414 413 415 24 (set (reg:SI 632)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 415 414 416 24 (parallel [
+            (set (reg:SI 281 [ _195 ])
+                (plus:SI (reg:SI 280 [ _194 ])
+                    (reg:SI 632)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 280 [ _194 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 416 415 417 24 (set (reg:DI 282 [ _196 ])
+        (sign_extend:DI (reg:SI 281 [ _195 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 417 416 418 24 (parallel [
+            (set (reg:DI 283 [ _197 ])
+                (plus:DI (reg:DI 277 [ _191 ])
+                    (reg:DI 282 [ _196 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 418 417 419 24 (parallel [
+            (set (reg:DI 284 [ _198 ])
+                (plus:DI (reg:DI 283 [ _197 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 419 418 420 24 (set (reg/f:DI 633)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 420 419 421 24 (parallel [
+            (set (reg:DI 634)
+                (plus:DI (reg:DI 284 [ _198 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 421 420 422 24 (set (reg:SF 285 [ _199 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 634)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 633)) [1 masks.vtm S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 422 421 423 24 (set (reg:SF 286 [ _200 ])
+        (mult:SF (reg:SF 272 [ _186 ])
+            (reg:SF 285 [ _199 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 423 422 424 24 (set (reg:SF 287 [ _201 ])
+        (plus:SF (reg:SF 262 [ _176 ])
+            (reg:SF 286 [ _200 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 424 423 425 24 (set (reg:SI 635)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 425 424 426 24 (set (reg:DI 288 [ _202 ])
+        (sign_extend:DI (reg:SI 635))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 426 425 427 24 (parallel [
+            (set (reg:DI 289 [ _203 ])
+                (mult:DI (reg:DI 288 [ _202 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 427 426 428 24 (set (reg:SI 636)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 428 427 429 24 (set (reg:DI 290 [ _204 ])
+        (sign_extend:DI (reg:SI 636))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 429 428 430 24 (parallel [
+            (set (reg:DI 291 [ _205 ])
+                (plus:DI (reg:DI 290 [ _204 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 430 429 431 24 (set (reg:SI 292 [ _206 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 291 [ _205 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 431 430 432 24 (set (reg:SI 637)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 432 431 433 24 (parallel [
+            (set (reg:SI 293 [ _207 ])
+                (plus:SI (reg:SI 292 [ _206 ])
+                    (reg:SI 637)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 292 [ _206 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 433 432 434 24 (set (reg:DI 294 [ _208 ])
+        (sign_extend:DI (reg:SI 293 [ _207 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 434 433 435 24 (parallel [
+            (set (reg:DI 295 [ _209 ])
+                (plus:DI (reg:DI 289 [ _203 ])
+                    (reg:DI 294 [ _208 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 435 434 436 24 (parallel [
+            (set (reg:DI 296 [ _210 ])
+                (plus:DI (reg:DI 295 [ _209 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 436 435 437 24 (set (reg/f:DI 638)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 437 436 438 24 (set (reg:SF 297 [ _211 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 296 [ _210 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 638)) [1 u1d S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 438 437 439 24 (set (reg:SI 639)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 439 438 440 24 (set (reg:DI 298 [ _212 ])
+        (sign_extend:DI (reg:SI 639))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 440 439 441 24 (parallel [
+            (set (reg:DI 299 [ _213 ])
+                (mult:DI (reg:DI 298 [ _212 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 441 440 442 24 (set (reg:SI 640)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 442 441 443 24 (set (reg:DI 300 [ _214 ])
+        (sign_extend:DI (reg:SI 640))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 443 442 444 24 (parallel [
+            (set (reg:DI 301 [ _215 ])
+                (mult:DI (reg:DI 300 [ _214 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 444 443 445 24 (parallel [
+            (set (reg:DI 302 [ _216 ])
+                (plus:DI (reg:DI 299 [ _213 ])
+                    (reg:DI 301 [ _215 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 445 444 446 24 (set (reg:SI 641)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 446 445 447 24 (set (reg:DI 303 [ _217 ])
+        (sign_extend:DI (reg:SI 641))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 447 446 448 24 (parallel [
+            (set (reg:DI 304 [ _218 ])
+                (plus:DI (reg:DI 303 [ _217 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 448 447 449 24 (set (reg:SI 305 [ _219 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 304 [ _218 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 449 448 450 24 (set (reg:SI 642)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 450 449 451 24 (parallel [
+            (set (reg:SI 306 [ _220 ])
+                (plus:SI (reg:SI 305 [ _219 ])
+                    (reg:SI 642)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 305 [ _219 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 451 450 452 24 (set (reg:DI 307 [ _221 ])
+        (sign_extend:DI (reg:SI 306 [ _220 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 452 451 453 24 (parallel [
+            (set (reg:DI 308 [ _222 ])
+                (plus:DI (reg:DI 302 [ _216 ])
+                    (reg:DI 307 [ _221 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 453 452 454 24 (parallel [
+            (set (reg:DI 309 [ _223 ])
+                (plus:DI (reg:DI 308 [ _222 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 454 453 455 24 (set (reg/f:DI 643)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 455 454 456 24 (parallel [
+            (set (reg:DI 644)
+                (plus:DI (reg:DI 309 [ _223 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 456 455 457 24 (set (reg:SF 310 [ _224 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 644)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 643)) [1 masks.vtm S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 457 456 458 24 (set (reg:SF 311 [ _225 ])
+        (mult:SF (reg:SF 297 [ _211 ])
+            (reg:SF 310 [ _224 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 458 457 459 24 (set (reg:SF 312 [ _226 ])
+        (plus:SF (reg:SF 287 [ _201 ])
+            (reg:SF 311 [ _225 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 459 458 460 24 (set (reg:SI 645)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 460 459 461 24 (parallel [
+            (set (reg:SI 313 [ _227 ])
+                (plus:SI (reg:SI 645)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 461 460 462 24 (set (reg:DI 314 [ _228 ])
+        (sign_extend:DI (reg:SI 313 [ _227 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 462 461 463 24 (parallel [
+            (set (reg:DI 315 [ _229 ])
+                (mult:DI (reg:DI 314 [ _228 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 463 462 464 24 (set (reg:SI 646)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 464 463 465 24 (set (reg:DI 316 [ _230 ])
+        (sign_extend:DI (reg:SI 646))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 465 464 466 24 (parallel [
+            (set (reg:DI 317 [ _231 ])
+                (plus:DI (reg:DI 315 [ _229 ])
+                    (reg:DI 316 [ _230 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 466 465 467 24 (parallel [
+            (set (reg:DI 318 [ _232 ])
+                (plus:DI (reg:DI 317 [ _231 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 467 466 468 24 (set (reg/f:DI 647)
+        (symbol_ref:DI ("u1d.4086") [flags 0x202]  <var_decl 0x7f51c60bd510 u1d>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 468 467 469 24 (set (reg:SF 319 [ _233 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 318 [ _232 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 647)) [1 u1d S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 469 468 470 24 (set (reg:SI 648)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 470 469 471 24 (set (reg:DI 320 [ _234 ])
+        (sign_extend:DI (reg:SI 648))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 471 470 472 24 (parallel [
+            (set (reg:DI 321 [ _235 ])
+                (mult:DI (reg:DI 320 [ _234 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 472 471 473 24 (set (reg:SI 649)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 473 472 474 24 (parallel [
+            (set (reg:SI 322 [ _236 ])
+                (plus:SI (reg:SI 649)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 474 473 475 24 (set (reg:DI 323 [ _237 ])
+        (sign_extend:DI (reg:SI 322 [ _236 ]))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 475 474 476 24 (parallel [
+            (set (reg:DI 324 [ _238 ])
+                (mult:DI (reg:DI 323 [ _237 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 349 {*muldi3_1}
+     (nil))
+(insn 476 475 477 24 (parallel [
+            (set (reg:DI 325 [ _239 ])
+                (plus:DI (reg:DI 321 [ _235 ])
+                    (reg:DI 324 [ _238 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 477 476 478 24 (set (reg:SI 650)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":107 86 {*movsi_internal}
+     (nil))
+(insn 478 477 479 24 (set (reg:DI 326 [ _240 ])
+        (sign_extend:DI (reg:SI 650))) "CALQUV.f":107 149 {*extendsidi2_rex64}
+     (nil))
+(insn 479 478 480 24 (parallel [
+            (set (reg:DI 327 [ _241 ])
+                (plus:DI (reg:DI 325 [ _239 ])
+                    (reg:DI 326 [ _240 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 480 479 481 24 (parallel [
+            (set (reg:DI 328 [ _242 ])
+                (plus:DI (reg:DI 327 [ _241 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 481 480 482 24 (set (reg/f:DI 651)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":107 85 {*movdi_internal}
+     (nil))
+(insn 482 481 483 24 (parallel [
+            (set (reg:DI 652)
+                (plus:DI (reg:DI 328 [ _242 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":107 222 {*adddi_1}
+     (nil))
+(insn 483 482 484 24 (set (reg:SF 329 [ _243 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 652)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 651)) [1 masks.vtm S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 484 483 485 24 (set (reg:SF 330 [ _244 ])
+        (mult:SF (reg:SF 319 [ _233 ])
+            (reg:SF 329 [ _243 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 485 484 486 24 (set (reg:SF 331 [ _245 ])
+        (plus:SF (reg:SF 312 [ _226 ])
+            (reg:SF 330 [ _244 ]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 486 485 487 24 (set (reg:SF 332 [ _246 ])
+        (reg:SF 331 [ _245 ])) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 487 486 488 24 (set (reg:SF 333 [ _247 ])
+        (mult:SF (reg:SF 332 [ _246 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 488 487 489 24 (set (reg:SF 334 [ _248 ])
+        (mult:SF (reg:SF 333 [ _247 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -20 [0xffffffffffffffec])) [1 dp+0 S4 A32]))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 489 488 490 24 (set (reg:SF 654)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALQUV.f":107 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0204081237316131591796875e-1 [0x0.d0fac6p-3])
+        (nil)))
+(insn 490 489 491 24 (set (reg:SF 653)
+        (mult:SF (reg:SF 334 [ _248 ])
+            (reg:SF 654))) "CALQUV.f":107 838 {*fop_sf_comm}
+     (nil))
+(insn 491 490 492 24 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -24 [0xffffffffffffffe8])) [1 umdp+0 S4 A32])
+        (reg:SF 653)) "CALQUV.f":107 131 {*movsf_internal}
+     (nil))
+(insn 492 491 493 24 (set (reg:SI 655)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 493 492 494 24 (parallel [
+            (set (reg:SI 335 [ _249 ])
+                (plus:SI (reg:SI 655)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 494 493 495 24 (set (reg:DI 336 [ _250 ])
+        (sign_extend:DI (reg:SI 335 [ _249 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 495 494 496 24 (parallel [
+            (set (reg:DI 337 [ _251 ])
+                (mult:DI (reg:DI 336 [ _250 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 496 495 497 24 (set (reg:SI 656)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 497 496 498 24 (set (reg:DI 338 [ _252 ])
+        (sign_extend:DI (reg:SI 656))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 498 497 499 24 (parallel [
+            (set (reg:DI 339 [ _253 ])
+                (plus:DI (reg:DI 337 [ _251 ])
+                    (reg:DI 338 [ _252 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 499 498 500 24 (parallel [
+            (set (reg:DI 340 [ _254 ])
+                (plus:DI (reg:DI 339 [ _253 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 500 499 501 24 (set (reg/f:DI 657)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 501 500 502 24 (set (reg:SF 341 [ _255 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 340 [ _254 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 657)) [1 v1d S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 502 501 503 24 (set (reg:SI 658)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 503 502 504 24 (set (reg:DI 342 [ _256 ])
+        (sign_extend:DI (reg:SI 658))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 504 503 505 24 (parallel [
+            (set (reg:DI 343 [ _257 ])
+                (mult:DI (reg:DI 342 [ _256 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 505 504 506 24 (set (reg:SI 659)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 506 505 507 24 (parallel [
+            (set (reg:SI 344 [ _258 ])
+                (plus:SI (reg:SI 659)
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 507 506 508 24 (set (reg:DI 345 [ _259 ])
+        (sign_extend:DI (reg:SI 344 [ _258 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 508 507 509 24 (parallel [
+            (set (reg:DI 346 [ _260 ])
+                (mult:DI (reg:DI 345 [ _259 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 509 508 510 24 (parallel [
+            (set (reg:DI 347 [ _261 ])
+                (plus:DI (reg:DI 343 [ _257 ])
+                    (reg:DI 346 [ _260 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 510 509 511 24 (set (reg:SI 660)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 511 510 512 24 (set (reg:DI 348 [ _262 ])
+        (sign_extend:DI (reg:SI 660))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 512 511 513 24 (parallel [
+            (set (reg:DI 349 [ _263 ])
+                (plus:DI (reg:DI 347 [ _261 ])
+                    (reg:DI 348 [ _262 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 513 512 514 24 (parallel [
+            (set (reg:DI 350 [ _264 ])
+                (plus:DI (reg:DI 349 [ _263 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 514 513 515 24 (set (reg/f:DI 661)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 515 514 516 24 (parallel [
+            (set (reg:DI 662)
+                (plus:DI (reg:DI 350 [ _264 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 516 515 517 24 (set (reg:SF 351 [ _265 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 662)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 661)) [1 masks.vtm S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 517 516 518 24 (set (reg:SF 352 [ _266 ])
+        (mult:SF (reg:SF 341 [ _255 ])
+            (reg:SF 351 [ _265 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 518 517 519 24 (set (reg:SI 663)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 519 518 520 24 (set (reg:DI 353 [ _267 ])
+        (sign_extend:DI (reg:SI 663))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 520 519 521 24 (parallel [
+            (set (reg:DI 354 [ _268 ])
+                (mult:DI (reg:DI 353 [ _267 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 521 520 522 24 (set (reg:SI 664)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 522 521 523 24 (set (reg:DI 355 [ _269 ])
+        (sign_extend:DI (reg:SI 664))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 523 522 524 24 (parallel [
+            (set (reg:DI 356 [ _270 ])
+                (plus:DI (reg:DI 355 [ _269 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 524 523 525 24 (parallel [
+            (set (reg:DI 665)
+                (plus:DI (reg:DI 356 [ _270 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 525 524 526 24 (set (reg:SI 357 [ _271 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 665)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 526 525 527 24 (set (reg:SI 666)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 527 526 528 24 (parallel [
+            (set (reg:SI 358 [ _272 ])
+                (plus:SI (reg:SI 357 [ _271 ])
+                    (reg:SI 666)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 357 [ _271 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 528 527 529 24 (set (reg:DI 359 [ _273 ])
+        (sign_extend:DI (reg:SI 358 [ _272 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 529 528 530 24 (parallel [
+            (set (reg:DI 360 [ _274 ])
+                (plus:DI (reg:DI 354 [ _268 ])
+                    (reg:DI 359 [ _273 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 530 529 531 24 (parallel [
+            (set (reg:DI 361 [ _275 ])
+                (plus:DI (reg:DI 360 [ _274 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 531 530 532 24 (set (reg/f:DI 667)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 532 531 533 24 (set (reg:SF 362 [ _276 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 361 [ _275 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 667)) [1 v1d S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 533 532 534 24 (set (reg:SI 668)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 534 533 535 24 (set (reg:DI 363 [ _277 ])
+        (sign_extend:DI (reg:SI 668))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 535 534 536 24 (parallel [
+            (set (reg:DI 364 [ _278 ])
+                (mult:DI (reg:DI 363 [ _277 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 536 535 537 24 (set (reg:SI 669)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 537 536 538 24 (set (reg:DI 365 [ _279 ])
+        (sign_extend:DI (reg:SI 669))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 538 537 539 24 (parallel [
+            (set (reg:DI 366 [ _280 ])
+                (mult:DI (reg:DI 365 [ _279 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 539 538 540 24 (parallel [
+            (set (reg:DI 367 [ _281 ])
+                (plus:DI (reg:DI 364 [ _278 ])
+                    (reg:DI 366 [ _280 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 540 539 541 24 (set (reg:SI 670)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 541 540 542 24 (set (reg:DI 368 [ _282 ])
+        (sign_extend:DI (reg:SI 670))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 542 541 543 24 (parallel [
+            (set (reg:DI 369 [ _283 ])
+                (plus:DI (reg:DI 368 [ _282 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 543 542 544 24 (parallel [
+            (set (reg:DI 671)
+                (plus:DI (reg:DI 369 [ _283 ])
+                    (const_int 249 [0xf9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 544 543 545 24 (set (reg:SI 370 [ _284 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 671)
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihw S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 545 544 546 24 (set (reg:SI 672)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 546 545 547 24 (parallel [
+            (set (reg:SI 371 [ _285 ])
+                (plus:SI (reg:SI 370 [ _284 ])
+                    (reg:SI 672)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 370 [ _284 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 547 546 548 24 (set (reg:DI 372 [ _286 ])
+        (sign_extend:DI (reg:SI 371 [ _285 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 548 547 549 24 (parallel [
+            (set (reg:DI 373 [ _287 ])
+                (plus:DI (reg:DI 367 [ _281 ])
+                    (reg:DI 372 [ _286 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 549 548 550 24 (parallel [
+            (set (reg:DI 374 [ _288 ])
+                (plus:DI (reg:DI 373 [ _287 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 550 549 551 24 (set (reg/f:DI 673)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 551 550 552 24 (parallel [
+            (set (reg:DI 674)
+                (plus:DI (reg:DI 374 [ _288 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 552 551 553 24 (set (reg:SF 375 [ _289 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 674)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 673)) [1 masks.vtm S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 553 552 554 24 (set (reg:SF 376 [ _290 ])
+        (mult:SF (reg:SF 362 [ _276 ])
+            (reg:SF 375 [ _289 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 554 553 555 24 (set (reg:SF 377 [ _291 ])
+        (plus:SF (reg:SF 352 [ _266 ])
+            (reg:SF 376 [ _290 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 555 554 556 24 (set (reg:SI 675)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 556 555 557 24 (set (reg:DI 378 [ _292 ])
+        (sign_extend:DI (reg:SI 675))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 557 556 558 24 (parallel [
+            (set (reg:DI 379 [ _293 ])
+                (mult:DI (reg:DI 378 [ _292 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 558 557 559 24 (set (reg:SI 676)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 559 558 560 24 (set (reg:DI 380 [ _294 ])
+        (sign_extend:DI (reg:SI 676))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 560 559 561 24 (parallel [
+            (set (reg:DI 381 [ _295 ])
+                (plus:DI (reg:DI 380 [ _294 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 561 560 562 24 (set (reg:SI 382 [ _296 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 381 [ _295 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 562 561 563 24 (set (reg:SI 677)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 563 562 564 24 (parallel [
+            (set (reg:SI 383 [ _297 ])
+                (plus:SI (reg:SI 382 [ _296 ])
+                    (reg:SI 677)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 382 [ _296 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 564 563 565 24 (set (reg:DI 384 [ _298 ])
+        (sign_extend:DI (reg:SI 383 [ _297 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 565 564 566 24 (parallel [
+            (set (reg:DI 385 [ _299 ])
+                (plus:DI (reg:DI 379 [ _293 ])
+                    (reg:DI 384 [ _298 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 566 565 567 24 (parallel [
+            (set (reg:DI 386 [ _300 ])
+                (plus:DI (reg:DI 385 [ _299 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 567 566 568 24 (set (reg/f:DI 678)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 568 567 569 24 (set (reg:SF 387 [ _301 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 386 [ _300 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 678)) [1 v1d S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 569 568 570 24 (set (reg:SI 679)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 570 569 571 24 (set (reg:DI 388 [ _302 ])
+        (sign_extend:DI (reg:SI 679))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 571 570 572 24 (parallel [
+            (set (reg:DI 389 [ _303 ])
+                (mult:DI (reg:DI 388 [ _302 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 572 571 573 24 (set (reg:SI 680)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 573 572 574 24 (set (reg:DI 390 [ _304 ])
+        (sign_extend:DI (reg:SI 680))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 574 573 575 24 (parallel [
+            (set (reg:DI 391 [ _305 ])
+                (mult:DI (reg:DI 390 [ _304 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 575 574 576 24 (parallel [
+            (set (reg:DI 392 [ _306 ])
+                (plus:DI (reg:DI 389 [ _303 ])
+                    (reg:DI 391 [ _305 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 576 575 577 24 (set (reg:SI 681)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 577 576 578 24 (set (reg:DI 393 [ _307 ])
+        (sign_extend:DI (reg:SI 681))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 578 577 579 24 (parallel [
+            (set (reg:DI 394 [ _308 ])
+                (plus:DI (reg:DI 393 [ _307 ])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 579 578 580 24 (set (reg:SI 395 [ _309 ])
+        (mem:SI (plus:DI (mult:DI (reg:DI 394 [ _308 ])
+                    (const_int 4 [0x4]))
+                (symbol_ref:DI ("indx_") [flags 0x2]  <var_decl 0x7f51c60b3990 indx>)) [2 indx.ihe S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 580 579 581 24 (set (reg:SI 682)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 581 580 582 24 (parallel [
+            (set (reg:SI 396 [ _310 ])
+                (plus:SI (reg:SI 395 [ _309 ])
+                    (reg:SI 682)))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (reg:SI 395 [ _309 ])
+            (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32]))
+        (nil)))
+(insn 582 581 583 24 (set (reg:DI 397 [ _311 ])
+        (sign_extend:DI (reg:SI 396 [ _310 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 583 582 584 24 (parallel [
+            (set (reg:DI 398 [ _312 ])
+                (plus:DI (reg:DI 392 [ _306 ])
+                    (reg:DI 397 [ _311 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 584 583 585 24 (parallel [
+            (set (reg:DI 399 [ _313 ])
+                (plus:DI (reg:DI 398 [ _312 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 585 584 586 24 (set (reg/f:DI 683)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 586 585 587 24 (parallel [
+            (set (reg:DI 684)
+                (plus:DI (reg:DI 399 [ _313 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 587 586 588 24 (set (reg:SF 400 [ _314 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 684)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 683)) [1 masks.vtm S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 588 587 589 24 (set (reg:SF 401 [ _315 ])
+        (mult:SF (reg:SF 387 [ _301 ])
+            (reg:SF 400 [ _314 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 589 588 590 24 (set (reg:SF 402 [ _316 ])
+        (plus:SF (reg:SF 377 [ _291 ])
+            (reg:SF 401 [ _315 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 590 589 591 24 (set (reg:SI 685)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 591 590 592 24 (parallel [
+            (set (reg:SI 403 [ _317 ])
+                (plus:SI (reg:SI 685)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 592 591 593 24 (set (reg:DI 404 [ _318 ])
+        (sign_extend:DI (reg:SI 403 [ _317 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 593 592 594 24 (parallel [
+            (set (reg:DI 405 [ _319 ])
+                (mult:DI (reg:DI 404 [ _318 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 594 593 595 24 (set (reg:SI 686)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 595 594 596 24 (set (reg:DI 406 [ _320 ])
+        (sign_extend:DI (reg:SI 686))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 596 595 597 24 (parallel [
+            (set (reg:DI 407 [ _321 ])
+                (plus:DI (reg:DI 405 [ _319 ])
+                    (reg:DI 406 [ _320 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 597 596 598 24 (parallel [
+            (set (reg:DI 408 [ _322 ])
+                (plus:DI (reg:DI 407 [ _321 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 598 597 599 24 (set (reg/f:DI 687)
+        (symbol_ref:DI ("v1d.4089") [flags 0x202]  <var_decl 0x7f51c60bd630 v1d>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 599 598 600 24 (set (reg:SF 409 [ _323 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 408 [ _322 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 687)) [1 v1d S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 600 599 601 24 (set (reg:SI 688)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 601 600 602 24 (set (reg:DI 410 [ _324 ])
+        (sign_extend:DI (reg:SI 688))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 602 601 603 24 (parallel [
+            (set (reg:DI 411 [ _325 ])
+                (mult:DI (reg:DI 410 [ _324 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 603 602 604 24 (set (reg:SI 689)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 604 603 605 24 (parallel [
+            (set (reg:SI 412 [ _326 ])
+                (plus:SI (reg:SI 689)
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 1 [0x1]))
+        (nil)))
+(insn 605 604 606 24 (set (reg:DI 413 [ _327 ])
+        (sign_extend:DI (reg:SI 412 [ _326 ]))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 606 605 607 24 (parallel [
+            (set (reg:DI 414 [ _328 ])
+                (mult:DI (reg:DI 413 [ _327 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 349 {*muldi3_1}
+     (nil))
+(insn 607 606 608 24 (parallel [
+            (set (reg:DI 415 [ _329 ])
+                (plus:DI (reg:DI 411 [ _325 ])
+                    (reg:DI 414 [ _328 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 608 607 609 24 (set (reg:SI 690)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":112 86 {*movsi_internal}
+     (nil))
+(insn 609 608 610 24 (set (reg:DI 416 [ _330 ])
+        (sign_extend:DI (reg:SI 690))) "CALQUV.f":112 149 {*extendsidi2_rex64}
+     (nil))
+(insn 610 609 611 24 (parallel [
+            (set (reg:DI 417 [ _331 ])
+                (plus:DI (reg:DI 415 [ _329 ])
+                    (reg:DI 416 [ _330 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 611 610 612 24 (parallel [
+            (set (reg:DI 418 [ _332 ])
+                (plus:DI (reg:DI 417 [ _331 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 612 611 613 24 (set (reg/f:DI 691)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":112 85 {*movdi_internal}
+     (nil))
+(insn 613 612 614 24 (parallel [
+            (set (reg:DI 692)
+                (plus:DI (reg:DI 418 [ _332 ])
+                    (const_int 1274133 [0x137115])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":112 222 {*adddi_1}
+     (nil))
+(insn 614 613 615 24 (set (reg:SF 419 [ _333 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 692)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 691)) [1 masks.vtm S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 615 614 616 24 (set (reg:SF 420 [ _334 ])
+        (mult:SF (reg:SF 409 [ _323 ])
+            (reg:SF 419 [ _333 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 616 615 617 24 (set (reg:SF 421 [ _335 ])
+        (plus:SF (reg:SF 402 [ _316 ])
+            (reg:SF 420 [ _334 ]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 617 616 618 24 (set (reg:SF 422 [ _336 ])
+        (reg:SF 421 [ _335 ])) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 618 617 619 24 (set (reg:SF 423 [ _337 ])
+        (mult:SF (reg:SF 422 [ _336 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -4 [0xfffffffffffffffc])) [1 dmean+0 S4 A32]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 619 618 620 24 (set (reg:SF 424 [ _338 ])
+        (mult:SF (reg:SF 423 [ _337 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -20 [0xffffffffffffffec])) [1 dp+0 S4 A32]))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 620 619 621 24 (set (reg:SF 694)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "CALQUV.f":112 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.0204081237316131591796875e-1 [0x0.d0fac6p-3])
+        (nil)))
+(insn 621 620 622 24 (set (reg:SF 693)
+        (mult:SF (reg:SF 424 [ _338 ])
+            (reg:SF 694))) "CALQUV.f":112 838 {*fop_sf_comm}
+     (nil))
+(insn 622 621 623 24 (set (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                (const_int -28 [0xffffffffffffffe4])) [1 vmdp+0 S4 A32])
+        (reg:SF 693)) "CALQUV.f":112 131 {*movsf_internal}
+     (nil))
+(insn 623 622 624 24 (set (reg:SI 695)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 624 623 625 24 (set (reg:DI 425 [ _339 ])
+        (sign_extend:DI (reg:SI 695))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 625 624 626 24 (parallel [
+            (set (reg:DI 426 [ _340 ])
+                (mult:DI (reg:DI 425 [ _339 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 626 625 627 24 (set (reg:SI 696)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 627 626 628 24 (set (reg:DI 427 [ _341 ])
+        (sign_extend:DI (reg:SI 696))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 628 627 629 24 (parallel [
+            (set (reg:DI 428 [ _342 ])
+                (plus:DI (reg:DI 426 [ _340 ])
+                    (reg:DI 427 [ _341 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 629 628 630 24 (parallel [
+            (set (reg:DI 429 [ _343 ])
+                (plus:DI (reg:DI 428 [ _342 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 630 629 631 24 (set (reg/f:DI 697)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [3 quint+0 S8 A64])) "CALQUV.f":116 85 {*movdi_internal}
+     (nil))
+(insn 631 630 632 24 (set (reg:SF 430 [ _344 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 429 [ _343 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 697)) [1 *quint_447(D) S4 A32])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 632 631 633 24 (set (reg:SI 698)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 633 632 634 24 (set (reg:DI 431 [ _345 ])
+        (sign_extend:DI (reg:SI 698))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 634 633 635 24 (parallel [
+            (set (reg:DI 432 [ _346 ])
+                (mult:DI (reg:DI 431 [ _345 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 635 634 636 24 (set (reg:SI 699)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 636 635 637 24 (set (reg:DI 433 [ _347 ])
+        (sign_extend:DI (reg:SI 699))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 637 636 638 24 (parallel [
+            (set (reg:DI 434 [ _348 ])
+                (mult:DI (reg:DI 433 [ _347 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 638 637 639 24 (parallel [
+            (set (reg:DI 435 [ _349 ])
+                (plus:DI (reg:DI 432 [ _346 ])
+                    (reg:DI 434 [ _348 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 639 638 640 24 (set (reg:SI 700)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 640 639 641 24 (set (reg:DI 436 [ _350 ])
+        (sign_extend:DI (reg:SI 700))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 641 640 642 24 (parallel [
+            (set (reg:DI 437 [ _351 ])
+                (plus:DI (reg:DI 435 [ _349 ])
+                    (reg:DI 436 [ _350 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 642 641 643 24 (parallel [
+            (set (reg:DI 438 [ _352 ])
+                (plus:DI (reg:DI 437 [ _351 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 643 642 644 24 (set (reg/f:DI 701)
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f51c60b7d80 vrbls>)) "CALQUV.f":116 85 {*movdi_internal}
+     (nil))
+(insn 644 643 645 24 (parallel [
+            (set (reg:DI 702)
+                (plus:DI (reg:DI 438 [ _352 ])
+                    (const_int 3466827 [0x34e64b])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 645 644 646 24 (set (reg:SF 439 [ _353 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 702)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 701)) [1 vrbls.q S4 A32])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 646 645 647 24 (set (reg:SI 703)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 647 646 648 24 (set (reg:DI 440 [ _354 ])
+        (sign_extend:DI (reg:SI 703))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 648 647 649 24 (parallel [
+            (set (reg:DI 441 [ _355 ])
+                (mult:DI (reg:DI 440 [ _354 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 649 648 650 24 (set (reg:SI 704)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 650 649 651 24 (set (reg:DI 442 [ _356 ])
+        (sign_extend:DI (reg:SI 704))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 651 650 652 24 (parallel [
+            (set (reg:DI 443 [ _357 ])
+                (mult:DI (reg:DI 442 [ _356 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 652 651 653 24 (parallel [
+            (set (reg:DI 444 [ _358 ])
+                (plus:DI (reg:DI 441 [ _355 ])
+                    (reg:DI 443 [ _357 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 653 652 654 24 (set (reg:SI 705)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 654 653 655 24 (set (reg:DI 445 [ _359 ])
+        (sign_extend:DI (reg:SI 705))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 655 654 656 24 (parallel [
+            (set (reg:DI 446 [ _360 ])
+                (plus:DI (reg:DI 444 [ _358 ])
+                    (reg:DI 445 [ _359 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 656 655 657 24 (parallel [
+            (set (reg:DI 447 [ _361 ])
+                (plus:DI (reg:DI 446 [ _360 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 657 656 658 24 (set (reg/f:DI 706)
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f51cd10eab0 cldwtr>)) "CALQUV.f":116 85 {*movdi_internal}
+     (nil))
+(insn 658 657 659 24 (set (reg:SF 448 [ _362 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 447 [ _361 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 706)) [1 cldwtr.cwm S4 A32])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 659 658 660 24 (set (reg:SF 449 [ _363 ])
+        (plus:SF (reg:SF 439 [ _353 ])
+            (reg:SF 448 [ _362 ]))) "CALQUV.f":116 838 {*fop_sf_comm}
+     (nil))
+(insn 660 659 661 24 (set (reg:SF 450 [ _364 ])
+        (reg:SF 449 [ _363 ])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 661 660 662 24 (set (reg:SF 451 [ _365 ])
+        (mult:SF (reg:SF 450 [ _364 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -24 [0xffffffffffffffe8])) [1 umdp+0 S4 A32]))) "CALQUV.f":116 838 {*fop_sf_comm}
+     (nil))
+(insn 662 661 663 24 (set (reg:SI 707)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 663 662 664 24 (set (reg:DI 452 [ _366 ])
+        (sign_extend:DI (reg:SI 707))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 664 663 665 24 (parallel [
+            (set (reg:DI 453 [ _367 ])
+                (mult:DI (reg:DI 452 [ _366 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 665 664 666 24 (set (reg:SI 708)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 666 665 667 24 (set (reg:DI 454 [ _368 ])
+        (sign_extend:DI (reg:SI 708))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 667 666 668 24 (parallel [
+            (set (reg:DI 455 [ _369 ])
+                (mult:DI (reg:DI 454 [ _368 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 668 667 669 24 (parallel [
+            (set (reg:DI 456 [ _370 ])
+                (plus:DI (reg:DI 453 [ _367 ])
+                    (reg:DI 455 [ _369 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 669 668 670 24 (set (reg:SI 709)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 670 669 671 24 (set (reg:DI 457 [ _371 ])
+        (sign_extend:DI (reg:SI 709))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 671 670 672 24 (parallel [
+            (set (reg:DI 458 [ _372 ])
+                (plus:DI (reg:DI 456 [ _370 ])
+                    (reg:DI 457 [ _371 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 672 671 673 24 (parallel [
+            (set (reg:DI 459 [ _373 ])
+                (plus:DI (reg:DI 458 [ _372 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 673 672 674 24 (set (reg/f:DI 710)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":116 85 {*movdi_internal}
+     (nil))
+(insn 674 673 675 24 (parallel [
+            (set (reg:DI 711)
+                (plus:DI (reg:DI 459 [ _373 ])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 675 674 676 24 (set (reg:SF 460 [ _374 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 711)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 710)) [1 masks.htm S4 A32])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 676 675 677 24 (set (reg:SF 461 [ _375 ])
+        (mult:SF (reg:SF 451 [ _365 ])
+            (reg:SF 460 [ _374 ]))) "CALQUV.f":116 838 {*fop_sf_comm}
+     (nil))
+(insn 677 676 678 24 (set (reg:SI 712)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 678 677 679 24 (set (reg:DI 462 [ _376 ])
+        (sign_extend:DI (reg:SI 712))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 679 678 680 24 (parallel [
+            (set (reg:DI 463 [ _377 ])
+                (mult:DI (reg:DI 462 [ _376 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 349 {*muldi3_1}
+     (nil))
+(insn 680 679 681 24 (set (reg:SI 713)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":116 86 {*movsi_internal}
+     (nil))
+(insn 681 680 682 24 (set (reg:DI 464 [ _378 ])
+        (sign_extend:DI (reg:SI 713))) "CALQUV.f":116 149 {*extendsidi2_rex64}
+     (nil))
+(insn 682 681 683 24 (parallel [
+            (set (reg:DI 465 [ _379 ])
+                (plus:DI (reg:DI 463 [ _377 ])
+                    (reg:DI 464 [ _378 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 683 682 684 24 (parallel [
+            (set (reg:DI 466 [ _380 ])
+                (plus:DI (reg:DI 465 [ _379 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":116 222 {*adddi_1}
+     (nil))
+(insn 684 683 685 24 (set (reg:SF 467 [ _381 ])
+        (plus:SF (reg:SF 430 [ _344 ])
+            (reg:SF 461 [ _375 ]))) "CALQUV.f":116 838 {*fop_sf_comm}
+     (nil))
+(insn 685 684 686 24 (set (reg/f:DI 714)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -40 [0xffffffffffffffd8])) [3 quint+0 S8 A64])) "CALQUV.f":116 85 {*movdi_internal}
+     (nil))
+(insn 686 685 687 24 (set (mem:SF (plus:DI (mult:DI (reg:DI 466 [ _380 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 714)) [1 *quint_447(D) S4 A32])
+        (reg:SF 467 [ _381 ])) "CALQUV.f":116 131 {*movsf_internal}
+     (nil))
+(insn 687 686 688 24 (set (reg:SI 715)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 688 687 689 24 (set (reg:DI 468 [ _382 ])
+        (sign_extend:DI (reg:SI 715))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 689 688 690 24 (parallel [
+            (set (reg:DI 469 [ _383 ])
+                (mult:DI (reg:DI 468 [ _382 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 690 689 691 24 (set (reg:SI 716)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 691 690 692 24 (set (reg:DI 470 [ _384 ])
+        (sign_extend:DI (reg:SI 716))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 692 691 693 24 (parallel [
+            (set (reg:DI 471 [ _385 ])
+                (plus:DI (reg:DI 469 [ _383 ])
+                    (reg:DI 470 [ _384 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 693 692 694 24 (parallel [
+            (set (reg:DI 472 [ _386 ])
+                (plus:DI (reg:DI 471 [ _385 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 694 693 695 24 (set (reg/f:DI 717)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [3 qvint+0 S8 A64])) "CALQUV.f":117 85 {*movdi_internal}
+     (nil))
+(insn 695 694 696 24 (set (reg:SF 473 [ _387 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 472 [ _386 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 717)) [1 *qvint_449(D) S4 A32])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 696 695 697 24 (set (reg:SI 718)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 697 696 698 24 (set (reg:DI 474 [ _388 ])
+        (sign_extend:DI (reg:SI 718))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 698 697 699 24 (parallel [
+            (set (reg:DI 475 [ _389 ])
+                (mult:DI (reg:DI 474 [ _388 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 699 698 700 24 (set (reg:SI 719)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 700 699 701 24 (set (reg:DI 476 [ _390 ])
+        (sign_extend:DI (reg:SI 719))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 701 700 702 24 (parallel [
+            (set (reg:DI 477 [ _391 ])
+                (mult:DI (reg:DI 476 [ _390 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 702 701 703 24 (parallel [
+            (set (reg:DI 478 [ _392 ])
+                (plus:DI (reg:DI 475 [ _389 ])
+                    (reg:DI 477 [ _391 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 703 702 704 24 (set (reg:SI 720)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 704 703 705 24 (set (reg:DI 479 [ _393 ])
+        (sign_extend:DI (reg:SI 720))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 705 704 706 24 (parallel [
+            (set (reg:DI 480 [ _394 ])
+                (plus:DI (reg:DI 478 [ _392 ])
+                    (reg:DI 479 [ _393 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 706 705 707 24 (parallel [
+            (set (reg:DI 481 [ _395 ])
+                (plus:DI (reg:DI 480 [ _394 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 707 706 708 24 (set (reg/f:DI 721)
+        (symbol_ref:DI ("vrbls_") [flags 0x202]  <var_decl 0x7f51c60b7d80 vrbls>)) "CALQUV.f":117 85 {*movdi_internal}
+     (nil))
+(insn 708 707 709 24 (parallel [
+            (set (reg:DI 722)
+                (plus:DI (reg:DI 481 [ _395 ])
+                    (const_int 3466827 [0x34e64b])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 709 708 710 24 (set (reg:SF 482 [ _396 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 722)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 721)) [1 vrbls.q S4 A32])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 710 709 711 24 (set (reg:SI 723)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 711 710 712 24 (set (reg:DI 483 [ _397 ])
+        (sign_extend:DI (reg:SI 723))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 712 711 713 24 (parallel [
+            (set (reg:DI 484 [ _398 ])
+                (mult:DI (reg:DI 483 [ _397 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 713 712 714 24 (set (reg:SI 724)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 714 713 715 24 (set (reg:DI 485 [ _399 ])
+        (sign_extend:DI (reg:SI 724))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 715 714 716 24 (parallel [
+            (set (reg:DI 486 [ _400 ])
+                (mult:DI (reg:DI 485 [ _399 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 716 715 717 24 (parallel [
+            (set (reg:DI 487 [ _401 ])
+                (plus:DI (reg:DI 484 [ _398 ])
+                    (reg:DI 486 [ _400 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 717 716 718 24 (set (reg:SI 725)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 718 717 719 24 (set (reg:DI 488 [ _402 ])
+        (sign_extend:DI (reg:SI 725))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 719 718 720 24 (parallel [
+            (set (reg:DI 489 [ _403 ])
+                (plus:DI (reg:DI 487 [ _401 ])
+                    (reg:DI 488 [ _402 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 720 719 721 24 (parallel [
+            (set (reg:DI 490 [ _404 ])
+                (plus:DI (reg:DI 489 [ _403 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 721 720 722 24 (set (reg/f:DI 726)
+        (symbol_ref:DI ("cldwtr_") [flags 0x202]  <var_decl 0x7f51cd10eab0 cldwtr>)) "CALQUV.f":117 85 {*movdi_internal}
+     (nil))
+(insn 722 721 723 24 (set (reg:SF 491 [ _405 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 490 [ _404 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 726)) [1 cldwtr.cwm S4 A32])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 723 722 724 24 (set (reg:SF 492 [ _406 ])
+        (plus:SF (reg:SF 482 [ _396 ])
+            (reg:SF 491 [ _405 ]))) "CALQUV.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 724 723 725 24 (set (reg:SF 493 [ _407 ])
+        (reg:SF 492 [ _406 ])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 725 724 726 24 (set (reg:SF 494 [ _408 ])
+        (mult:SF (reg:SF 493 [ _407 ])
+            (mem/c:SF (plus:DI (reg/f:DI 20 frame)
+                    (const_int -28 [0xffffffffffffffe4])) [1 vmdp+0 S4 A32]))) "CALQUV.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 726 725 727 24 (set (reg:SI 727)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 727 726 728 24 (set (reg:DI 495 [ _409 ])
+        (sign_extend:DI (reg:SI 727))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 728 727 729 24 (parallel [
+            (set (reg:DI 496 [ _410 ])
+                (mult:DI (reg:DI 495 [ _409 ])
+                    (const_int 29631 [0x73bf])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 729 728 730 24 (set (reg:SI 728)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 730 729 731 24 (set (reg:DI 497 [ _411 ])
+        (sign_extend:DI (reg:SI 728))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 731 730 732 24 (parallel [
+            (set (reg:DI 498 [ _412 ])
+                (mult:DI (reg:DI 497 [ _411 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 732 731 733 24 (parallel [
+            (set (reg:DI 499 [ _413 ])
+                (plus:DI (reg:DI 496 [ _410 ])
+                    (reg:DI 498 [ _412 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 733 732 734 24 (set (reg:SI 729)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 734 733 735 24 (set (reg:DI 500 [ _414 ])
+        (sign_extend:DI (reg:SI 729))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 735 734 736 24 (parallel [
+            (set (reg:DI 501 [ _415 ])
+                (plus:DI (reg:DI 499 [ _413 ])
+                    (reg:DI 500 [ _414 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 736 735 737 24 (parallel [
+            (set (reg:DI 502 [ _416 ])
+                (plus:DI (reg:DI 501 [ _415 ])
+                    (const_int -29751 [0xffffffffffff8bc9])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 737 736 738 24 (set (reg/f:DI 730)
+        (symbol_ref:DI ("masks_") [flags 0x202]  <var_decl 0x7f51c60b3c60 masks>)) "CALQUV.f":117 85 {*movdi_internal}
+     (nil))
+(insn 738 737 739 24 (parallel [
+            (set (reg:DI 731)
+                (plus:DI (reg:DI 502 [ _416 ])
+                    (const_int 148155 [0x242bb])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 739 738 740 24 (set (reg:SF 503 [ _417 ])
+        (mem:SF (plus:DI (mult:DI (reg:DI 731)
+                    (const_int 4 [0x4]))
+                (reg/f:DI 730)) [1 masks.htm S4 A32])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 740 739 741 24 (set (reg:SF 504 [ _418 ])
+        (mult:SF (reg:SF 494 [ _408 ])
+            (reg:SF 503 [ _417 ]))) "CALQUV.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 741 740 742 24 (set (reg:SI 732)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 742 741 743 24 (set (reg:DI 505 [ _419 ])
+        (sign_extend:DI (reg:SI 732))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 743 742 744 24 (parallel [
+            (set (reg:DI 506 [ _420 ])
+                (mult:DI (reg:DI 505 [ _419 ])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 349 {*muldi3_1}
+     (nil))
+(insn 744 743 745 24 (set (reg:SI 733)
+        (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "CALQUV.f":117 86 {*movsi_internal}
+     (nil))
+(insn 745 744 746 24 (set (reg:DI 507 [ _421 ])
+        (sign_extend:DI (reg:SI 733))) "CALQUV.f":117 149 {*extendsidi2_rex64}
+     (nil))
+(insn 746 745 747 24 (parallel [
+            (set (reg:DI 508 [ _422 ])
+                (plus:DI (reg:DI 506 [ _420 ])
+                    (reg:DI 507 [ _421 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 747 746 748 24 (parallel [
+            (set (reg:DI 509 [ _423 ])
+                (plus:DI (reg:DI 508 [ _422 ])
+                    (const_int -120 [0xffffffffffffff88])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":117 222 {*adddi_1}
+     (nil))
+(insn 748 747 749 24 (set (reg:SF 510 [ _424 ])
+        (plus:SF (reg:SF 473 [ _387 ])
+            (reg:SF 504 [ _418 ]))) "CALQUV.f":117 838 {*fop_sf_comm}
+     (nil))
+(insn 749 748 750 24 (set (reg/f:DI 734)
+        (mem/f/c:DI (plus:DI (reg/f:DI 20 frame)
+                (const_int -48 [0xffffffffffffffd0])) [3 qvint+0 S8 A64])) "CALQUV.f":117 85 {*movdi_internal}
+     (nil))
+(insn 750 749 751 24 (set (mem:SF (plus:DI (mult:DI (reg:DI 509 [ _423 ])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 734)) [1 *qvint_449(D) S4 A32])
+        (reg:SF 510 [ _424 ])) "CALQUV.f":117 131 {*movsf_internal}
+     (nil))
+(insn 751 750 755 24 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":90 221 {*addsi_1}
+     (nil))
+;;  succ:       19 [always]  (FALLTHRU)
+
+;; basic block 25, loop depth 2, maybe hot
+;;  prev block 24, next block 26, flags: (NEW, REACHABLE, RTL)
+;;  pred:       19
+(code_label 755 751 756 25 12 (nil) [1 uses])
+(note 756 755 757 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 757 756 761 25 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":89 221 {*addsi_1}
+     (nil))
+;;  succ:       17 [always]  (FALLTHRU)
+
+;; basic block 26, loop depth 1, maybe hot
+;;  prev block 25, next block 27, flags: (NEW, REACHABLE, RTL)
+;;  pred:       17
+(code_label 761 757 762 26 11 (nil) [1 uses])
+(note 762 761 763 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 763 762 767 26 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                        (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                            (const_int -16 [0xfffffffffffffff0])) [2 l+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "CALQUV.f":76 221 {*addsi_1}
+     (nil))
+;;  succ:       9 [always]  (FALLTHRU)
+
+;; basic block 27, loop depth 0, maybe hot
+;;  prev block 26, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       9
+(code_label 767 763 768 27 6 (nil) [1 uses])
+(note 768 767 776 27 [bb 27] NOTE_INSN_BASIC_BLOCK)
+(insn 776 768 0 27 (const_int 0 [0]) "CALQUV.f":128 718 {nop}
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

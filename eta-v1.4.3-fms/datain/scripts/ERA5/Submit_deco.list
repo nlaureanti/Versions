@@ -1,0 +1,22 @@
+#!/bin/bash -x
+#SBATCH -n 1
+#SBATCH --time=30:50:00
+#SBATCH -p triton16
+#SBATCH -V
+#SBATCH -J ERA52Eta
+#SBATCH --output=ERA5_ETAwrk.out
+######################
+
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070100/Submit_deco2023070100
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070106/Submit_deco2023070106
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070112/Submit_deco2023070112
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070118/Submit_deco2023070118
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070200/Submit_deco2023070200
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070206/Submit_deco2023070206
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070212/Submit_deco2023070212
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070218/Submit_deco2023070218
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070300/Submit_deco2023070300
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070306/Submit_deco2023070306
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070312/Submit_deco2023070312
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070318/Submit_deco2023070318
+/home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/atmos/ERA5/2023070400/Submit_deco2023070400

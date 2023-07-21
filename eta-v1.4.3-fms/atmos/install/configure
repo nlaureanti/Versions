@@ -2,6 +2,18 @@
 
 confin=$1
 Machine=$2
+
+# Define os diretorios raizes de home e saida
+export DIRINSTALL=`pwd`
+export DIREta=`dirname ${DIRINSTALL}`
+export DIRMODEL=`dirname ${DIREta}`
+export DIRMODELSCR=${DIREta}/scripts
+export DIREtaSRC=${DIREta}/src
+export DIRCONF=`dirname ${DIRMODEL}`/Eta_install
+export DIRDATAIN=${DIRMODEL}/datain
+export DIRSUPPORT=${DIRMODEL}/Eta_support_data
+
+
 rm -f ${DIREta}/exe/*
 rm -f ${DIREta}/lib/*.a
 

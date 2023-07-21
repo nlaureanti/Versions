@@ -1,0 +1,879 @@
+
+;; Function chr2int (chr2int_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+chr2int (character(kind=1)[1:10] & restrict chr, integer(kind=4) & restrict ilen, integer(kind=4) & restrict ival, integer(kind=8) _chr)
+{
+  integer(kind=8) D.3784;
+  integer(kind=8) D.3783;
+  logical(kind=4) D.3782;
+  integer(kind=4) D.3779;
+  integer(kind=4) isum;
+  integer(kind=4) ipower;
+  integer(kind=4) ipos;
+  integer(kind=4) intval;
+  integer(kind=4) icval;
+  character(kind=1) _1;
+  integer(kind=4) _2;
+  integer(kind=4) _3;
+  integer(kind=4) _4;
+  integer(kind=4) _11;
+  logical(kind=4) _13;
+  integer(kind=8) _14;
+  integer(kind=8) _15;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  isum_8 = 0;
+  _11 = *ilen_10(D);
+  ipos_12 = _11;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                7
+  # ipos_5 = PHI <ipos_12(2), ipos_21(7)>
+  # isum_6 = PHI <isum_8(2), isum_7(7)>
+  _13 = ipos_5 <= 0;
+  if (_13 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       8
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _14 = (integer(kind=8)) ipos_5;
+  _15 = (integer(kind=8)) ipos_5;
+  _1 = *chr_16(D)[_14]{lb: 1 sz: 1};
+  icval_17 = (integer(kind=4)) _1;
+  _2 = *ilen_10(D);
+  ipower_18 = _2 - ipos_5;
+  if (icval_17 > 47)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       5
+;;                7
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  if (icval_17 <= 57)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 1
+;;    pred:       5
+  intval_19 = icval_17 + -48;
+  _3 = _gfortran_pow_i4_i4 (10, ipower_18);
+  _4 = intval_19 * _3;
+  isum_20 = isum_6 + _4;
+;;    succ:       7
+
+;;   basic block 7, loop depth 1
+;;    pred:       4
+;;                5
+;;                6
+  # isum_7 = PHI <isum_6(4), isum_6(5), isum_20(6)>
+  ipos_21 = ipos_5 + -1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 8, loop depth 0
+;;    pred:       3
+  *ival_22(D) = isum_6;
+;;    succ:       9
+
+;;   basic block 9, loop depth 0
+;;    pred:       8
+<L11>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (ipos_5 - 5 )
+Partition 6 (isum_6 - 6 )
+Partition 7 (isum_7 - 7 )
+Partition 8 (isum_8 - 8 )
+Partition 10 (ilen_10(D) - 10 )
+Partition 11 (_11 - 11 )
+Partition 12 (ipos_12 - 12 )
+Partition 13 (_13 - 13 )
+Partition 14 (_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 16 (chr_16(D) - 16 )
+Partition 17 (icval_17 - 17 )
+Partition 18 (ipower_18 - 18 )
+Partition 19 (intval_19 - 19 )
+Partition 20 (isum_20 - 20 )
+Partition 21 (ipos_21 - 21 )
+Partition 22 (ival_22(D) - 22 )
+Partition 24 (_chr_24(D) - 24 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (ipos_5 - 5 12 21 )
+Partition 1, base 1 (isum_6 - 6 7 8 20 )
+Partition 4, base 2 (ilen_10(D) - 10 )
+Partition 6, base 3 (chr_16(D) - 16 )
+Partition 9, base 4 (ival_22(D) - 22 )
+Partition 10, base 5 (_chr_24(D) - 24 )
+
+
+Partition map 
+
+Partition 0 (ipos_5 - 5 )
+Partition 1 (isum_6 - 6 )
+Partition 2 (isum_7 - 7 )
+Partition 3 (isum_8 - 8 )
+Partition 4 (ilen_10(D) - 10 )
+Partition 5 (ipos_12 - 12 )
+Partition 6 (chr_16(D) - 16 )
+Partition 7 (isum_20 - 20 )
+Partition 8 (ipos_21 - 21 )
+Partition 9 (ival_22(D) - 22 )
+Partition 10 (_chr_24(D) - 24 )
+
+
+Conflict graph:
+
+After sorting:
+Sorted Coalesce list:
+(2147483646, 0) ipos_5 <-> ipos_12
+(2147483646, 0) ipos_5 <-> ipos_21
+(2147483646, 0) isum_6 <-> isum_8
+(2147483646, 0) isum_6 <-> isum_7
+(2147483646, 0) isum_6 <-> isum_20
+(10000, 0) isum_7 <-> isum_20
+
+Partition map 
+
+Partition 0 (ipos_5 - 5 )
+Partition 1 (isum_6 - 6 )
+Partition 2 (isum_7 - 7 )
+Partition 3 (isum_8 - 8 )
+Partition 4 (ilen_10(D) - 10 )
+Partition 5 (ipos_12 - 12 )
+Partition 6 (chr_16(D) - 16 )
+Partition 7 (isum_20 - 20 )
+Partition 8 (ipos_21 - 21 )
+Partition 9 (ival_22(D) - 22 )
+Partition 10 (_chr_24(D) - 24 )
+
+Coalesce list: (5)ipos_5 & (12)ipos_12 [map: 0, 5] : Success -> 0
+Coalesce list: (5)ipos_5 & (21)ipos_21 [map: 0, 8] : Success -> 0
+Coalesce list: (6)isum_6 & (8)isum_8 [map: 1, 3] : Success -> 1
+Coalesce list: (6)isum_6 & (7)isum_7 [map: 1, 2] : Success -> 1
+Coalesce list: (6)isum_6 & (20)isum_20 [map: 1, 7] : Success -> 1
+Coalesce list: (7)isum_6 & (20)isum_6: Already Coalesced.
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (ipos_5 - 5 12 21 )
+Partition 5 (isum_6 - 6 7 8 20 )
+Partition 6 (ilen_10(D) - 10 )
+Partition 7 (_11 - 11 )
+Partition 8 (_13 - 13 )
+Partition 9 (_14 - 14 )
+Partition 10 (_15 - 15 )
+Partition 11 (chr_16(D) - 16 )
+Partition 12 (icval_17 - 17 )
+Partition 13 (ipower_18 - 18 )
+Partition 14 (intval_19 - 19 )
+Partition 15 (ival_22(D) - 22 )
+Partition 16 (_chr_24(D) - 24 )
+
+chr2int (character(kind=1)[1:10] & restrict chr, integer(kind=4) & restrict ilen, integer(kind=4) & restrict ival, integer(kind=8) _chr)
+{
+  integer(kind=8) D.3784;
+  integer(kind=8) D.3783;
+  logical(kind=4) D.3782;
+  integer(kind=4) D.3779;
+  integer(kind=4) isum;
+  integer(kind=4) ipower;
+  integer(kind=4) ipos;
+  integer(kind=4) intval;
+  integer(kind=4) icval;
+  character(kind=1) _1;
+  integer(kind=4) _2;
+  integer(kind=4) _3;
+  integer(kind=4) _4;
+  integer(kind=4) _11;
+  logical(kind=4) _13;
+  integer(kind=8) _14;
+  integer(kind=8) _15;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  isum_8 = 0;
+  _11 = *ilen_10(D);
+  ipos_12 = _11;
+;;    succ:       3
+
+;;   basic block 3, loop depth 1
+;;    pred:       2
+;;                7
+  # ipos_5 = PHI <ipos_12(2), ipos_21(7)>
+  # isum_6 = PHI <isum_8(2), isum_7(7)>
+  _13 = ipos_5 <= 0;
+  if (_13 != 0)
+    goto <bb 8>; [INV]
+  else
+    goto <bb 4>; [INV]
+;;    succ:       8
+;;                4
+
+;;   basic block 4, loop depth 1
+;;    pred:       3
+  _14 = (integer(kind=8)) ipos_5;
+  _15 = (integer(kind=8)) ipos_5;
+  _1 = *chr_16(D)[_14]{lb: 1 sz: 1};
+  icval_17 = (integer(kind=4)) _1;
+  _2 = *ilen_10(D);
+  ipower_18 = _2 - ipos_5;
+  if (icval_17 > 47)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       5
+;;                7
+
+;;   basic block 5, loop depth 1
+;;    pred:       4
+  if (icval_17 <= 57)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 1
+;;    pred:       5
+  intval_19 = icval_17 + -48;
+  _3 = _gfortran_pow_i4_i4 (10, ipower_18);
+  _4 = intval_19 * _3;
+  isum_20 = isum_6 + _4;
+;;    succ:       7
+
+;;   basic block 7, loop depth 1
+;;    pred:       4
+;;                5
+;;                6
+  # isum_7 = PHI <isum_6(4), isum_6(5), isum_20(6)>
+  ipos_21 = ipos_5 + -1;
+  goto <bb 3>; [INV]
+;;    succ:       3
+
+;;   basic block 8, loop depth 0
+;;    pred:       3
+  *ival_22(D) = isum_6;
+;;    succ:       9
+
+;;   basic block 9, loop depth 0
+;;    pred:       8
+<L11>:
+  return;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; isum_8 = 0;
+
+(insn 9 8 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+        (const_int 0 [0])) "CHR2INT.f":57 -1
+     (nil))
+
+;; _11 = *ilen_10(D);
+
+(insn 10 9 11 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 ilen+0 S8 A64])) "CHR2INT.f":58 -1
+     (nil))
+
+(insn 11 10 0 (set (reg:SI 91 [ _11 ])
+        (mem:SI (reg/f:DI 95) [1 *ilen_10(D)+0 S4 A32])) "CHR2INT.f":58 -1
+     (nil))
+
+;; ipos_12 = _11;
+
+(insn 12 11 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+        (reg:SI 91 [ _11 ])) "CHR2INT.f":58 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 3
+
+;; _13 = ipos_5 <= 0;
+
+(insn 14 13 15 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+
+(insn 15 14 16 (set (reg:QI 96)
+        (le:QI (reg:CCNO 17 flags)
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+
+(insn 16 15 0 (set (reg:SI 92 [ _13 ])
+        (zero_extend:SI (reg:QI 96))) "CHR2INT.f":58 -1
+     (nil))
+
+;; if (_13 != 0)
+
+(insn 17 16 18 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 92 [ _13 ])
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+
+(jump_insn 18 17 0 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "CHR2INT.f":58 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 4
+
+;; _14 = (integer(kind=8)) ipos_5;
+
+(insn 20 19 21 (set (reg:SI 97)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])) "CHR2INT.f":59 -1
+     (nil))
+
+(insn 21 20 0 (set (reg:DI 93 [ _14 ])
+        (sign_extend:DI (reg:SI 97))) "CHR2INT.f":59 -1
+     (nil))
+
+;; _15 = (integer(kind=8)) ipos_5;
+
+(insn 22 21 23 (set (reg:SI 98)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])) "CHR2INT.f":59 -1
+     (nil))
+
+(insn 23 22 0 (set (reg:DI 94 [ _15 ])
+        (sign_extend:DI (reg:SI 98))) "CHR2INT.f":59 -1
+     (nil))
+
+;; _1 = *chr_16(D)[_14]{lb: 1 sz: 1};
+
+(insn 24 23 25 (set (reg/f:DI 99)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [2 chr+0 S8 A64])) "CHR2INT.f":59 -1
+     (nil))
+
+(insn 25 24 0 (set (reg:QI 87 [ _1 ])
+        (mem:QI (plus:DI (plus:DI (reg/f:DI 99)
+                    (reg:DI 93 [ _14 ]))
+                (const_int -1 [0xffffffffffffffff])) [5 *chr_16(D) S1 A8])) "CHR2INT.f":59 -1
+     (nil))
+
+;; icval_17 = (integer(kind=4)) _1;
+
+(insn 26 25 27 (set (reg:SI 100)
+        (zero_extend:SI (reg:QI 87 [ _1 ]))) "CHR2INT.f":59 -1
+     (nil))
+
+(insn 27 26 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+        (reg:SI 100)) "CHR2INT.f":59 -1
+     (nil))
+
+;; _2 = *ilen_10(D);
+
+(insn 28 27 29 (set (reg/f:DI 101)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 ilen+0 S8 A64])) "CHR2INT.f":60 -1
+     (nil))
+
+(insn 29 28 0 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 101) [1 *ilen_10(D)+0 S4 A32])) "CHR2INT.f":60 -1
+     (nil))
+
+;; ipower_18 = _2 - ipos_5;
+
+(insn 32 29 33 (parallel [
+            (set (reg:SI 103)
+                (minus:SI (reg:SI 88 [ _2 ])
+                    (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":60 -1
+     (nil))
+
+(insn 33 32 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 ipower+0 S4 A32])
+        (reg:SI 103)) "CHR2INT.f":60 -1
+     (nil))
+
+;; if (icval_17 > 47)
+
+(insn 34 33 35 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int 47 [0x2f]))) "CHR2INT.f":61 -1
+     (nil))
+
+(jump_insn 35 34 0 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "CHR2INT.f":61 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; if (icval_17 <= 57)
+
+(insn 37 36 38 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int 57 [0x39]))) "CHR2INT.f":61 -1
+     (nil))
+
+(jump_insn 38 37 0 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "CHR2INT.f":61 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 6
+
+;; intval_19 = icval_17 + -48;
+
+(insn 43 39 44 (set (reg:SI 107)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])) "CHR2INT.f":62 -1
+     (nil))
+
+(insn 44 43 45 (parallel [
+            (set (reg:SI 106)
+                (plus:SI (reg:SI 107)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":62 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int -48 [0xffffffffffffffd0]))
+        (nil)))
+
+(insn 45 44 0 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 intval+0 S4 A32])
+        (reg:SI 106)) "CHR2INT.f":62 -1
+     (nil))
+
+;; _3 = _gfortran_pow_i4_i4 (10, ipower_18);
+
+(insn 46 45 47 (set (reg:SI 108)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 ipower+0 S4 A32])) "CHR2INT.f":63 -1
+     (nil))
+
+(insn 47 46 48 (set (reg:SI 4 si)
+        (reg:SI 108)) "CHR2INT.f":63 -1
+     (nil))
+
+(insn 48 47 49 (set (reg:SI 5 di)
+        (const_int 10 [0xa])) "CHR2INT.f":63 -1
+     (nil))
+
+(call_insn/u 49 48 50 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_gfortran_pow_i4_i4") [flags 0x41]  <function_decl 0x7f3cb52c2100 _gfortran_pow_i4_i4>) [0 _gfortran_pow_i4_i4 S1 A8])
+            (const_int 0 [0]))) "CHR2INT.f":63 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+
+(insn 50 49 0 (set (reg:SI 89 [ _3 ])
+        (reg:SI 0 ax)) "CHR2INT.f":63 -1
+     (nil))
+
+;; _4 = intval_19 * _3;
+
+(insn 51 50 0 (parallel [
+            (set (reg:SI 90 [ _4 ])
+                (mult:SI (reg:SI 89 [ _3 ])
+                    (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -20 [0xffffffffffffffec])) [1 intval+0 S4 A32])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":63 -1
+     (nil))
+
+;; isum_20 = isum_6 + _4;
+
+(insn 52 51 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+                    (reg:SI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":63 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 53 52 54 3 (nil) [0 uses])
+
+(note 54 53 0 NOTE_INSN_BASIC_BLOCK)
+
+;; ipos_21 = ipos_5 + -1;
+
+(insn 55 54 0 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":58 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 59 58 60 2 (nil) [0 uses])
+
+(note 60 59 0 NOTE_INSN_BASIC_BLOCK)
+
+;; *ival_22(D) = isum_6;
+
+(insn 61 60 62 (set (reg/f:DI 109)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 ival+0 S8 A64])) "CHR2INT.f":69 -1
+     (nil))
+
+(insn 62 61 63 (set (reg:SI 110)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])) "CHR2INT.f":69 -1
+     (nil))
+
+(insn 63 62 0 (set (mem:SI (reg/f:DI 109) [1 *ival_22(D)+0 S4 A32])
+        (reg:SI 110)) "CHR2INT.f":69 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 9
+
+;; <L11>:
+
+(code_label 64 63 65 5 (nil) [0 uses])
+
+(note 65 64 0 NOTE_INSN_BASIC_BLOCK)
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Merging block 10 into block 9...
+Merged blocks 9 and 10.
+Merged 9 and 10 without moving.
+Merging block 11 into block 9...
+Merged blocks 9 and 11.
+Merged 9 and 11 without moving.
+
+
+try_optimize_cfg iteration 2
+
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 7 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL)
+;;  pred:       ENTRY (FALLTHRU)
+(note 7 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 7 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [2 chr+0 S8 A64])
+        (reg:DI 5 di [ chr ])) "CHR2INT.f":1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 ilen+0 S8 A64])
+        (reg:DI 4 si [ ilen ])) "CHR2INT.f":1 -1
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 ival+0 S8 A64])
+        (reg:DI 1 dx [ ival ])) "CHR2INT.f":1 -1
+     (nil))
+(insn 5 4 6 2 (set (mem/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -64 [0xffffffffffffffc0])) [4 _chr+0 S8 A64])
+        (reg:DI 2 cx [ _chr ])) "CHR2INT.f":1 -1
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+        (const_int 0 [0])) "CHR2INT.f":57 -1
+     (nil))
+(insn 10 9 11 2 (set (reg/f:DI 95)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 ilen+0 S8 A64])) "CHR2INT.f":58 -1
+     (nil))
+(insn 11 10 12 2 (set (reg:SI 91 [ _11 ])
+        (mem:SI (reg/f:DI 95) [1 *ilen_10(D)+0 S4 A32])) "CHR2INT.f":58 -1
+     (nil))
+(insn 12 11 56 2 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+        (reg:SI 91 [ _11 ])) "CHR2INT.f":58 -1
+     (nil))
+;;  succ:       4 (FALLTHRU)
+
+;; basic block 4, loop depth 1, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL)
+;;  pred:       2 (FALLTHRU)
+;;              8 (DFS_BACK)
+(code_label 56 12 13 4 4 (nil) [1 uses])
+(note 13 56 14 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 14 13 15 4 (set (reg:CCNO 17 flags)
+        (compare:CCNO (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+(insn 15 14 16 4 (set (reg:QI 96)
+        (le:QI (reg:CCNO 17 flags)
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+(insn 16 15 17 4 (set (reg:SI 92 [ _13 ])
+        (zero_extend:SI (reg:QI 96))) "CHR2INT.f":58 -1
+     (nil))
+(insn 17 16 18 4 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 92 [ _13 ])
+            (const_int 0 [0]))) "CHR2INT.f":58 -1
+     (nil))
+(jump_insn 18 17 19 4 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref 59)
+            (pc))) "CHR2INT.f":58 -1
+     (nil)
+ -> 59)
+;;  succ:       9
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 1, maybe hot
+;;  prev block 4, next block 6, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4 (FALLTHRU)
+(note 19 18 20 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 20 19 21 5 (set (reg:SI 97)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])) "CHR2INT.f":59 -1
+     (nil))
+(insn 21 20 22 5 (set (reg:DI 93 [ _14 ])
+        (sign_extend:DI (reg:SI 97))) "CHR2INT.f":59 -1
+     (nil))
+(insn 22 21 23 5 (set (reg:SI 98)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])) "CHR2INT.f":59 -1
+     (nil))
+(insn 23 22 24 5 (set (reg:DI 94 [ _15 ])
+        (sign_extend:DI (reg:SI 98))) "CHR2INT.f":59 -1
+     (nil))
+(insn 24 23 25 5 (set (reg/f:DI 99)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -40 [0xffffffffffffffd8])) [2 chr+0 S8 A64])) "CHR2INT.f":59 -1
+     (nil))
+(insn 25 24 26 5 (set (reg:QI 87 [ _1 ])
+        (mem:QI (plus:DI (plus:DI (reg/f:DI 99)
+                    (reg:DI 93 [ _14 ]))
+                (const_int -1 [0xffffffffffffffff])) [5 *chr_16(D) S1 A8])) "CHR2INT.f":59 -1
+     (nil))
+(insn 26 25 27 5 (set (reg:SI 100)
+        (zero_extend:SI (reg:QI 87 [ _1 ]))) "CHR2INT.f":59 -1
+     (nil))
+(insn 27 26 28 5 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+        (reg:SI 100)) "CHR2INT.f":59 -1
+     (nil))
+(insn 28 27 29 5 (set (reg/f:DI 101)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -48 [0xffffffffffffffd0])) [3 ilen+0 S8 A64])) "CHR2INT.f":60 -1
+     (nil))
+(insn 29 28 32 5 (set (reg:SI 88 [ _2 ])
+        (mem:SI (reg/f:DI 101) [1 *ilen_10(D)+0 S4 A32])) "CHR2INT.f":60 -1
+     (nil))
+(insn 32 29 33 5 (parallel [
+            (set (reg:SI 103)
+                (minus:SI (reg:SI 88 [ _2 ])
+                    (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":60 -1
+     (nil))
+(insn 33 32 34 5 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 ipower+0 S4 A32])
+        (reg:SI 103)) "CHR2INT.f":60 -1
+     (nil))
+(insn 34 33 35 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int 47 [0x2f]))) "CHR2INT.f":61 -1
+     (nil))
+(jump_insn 35 34 36 5 (set (pc)
+        (if_then_else (le (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) "CHR2INT.f":61 -1
+     (nil)
+ -> 53)
+;;  succ:       6 (FALLTHRU)
+;;              8
+
+;; basic block 6, loop depth 1, maybe hot
+;;  prev block 5, next block 7, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5 (FALLTHRU)
+(note 36 35 37 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 37 36 38 6 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int 57 [0x39]))) "CHR2INT.f":61 -1
+     (nil))
+(jump_insn 38 37 39 6 (set (pc)
+        (if_then_else (gt (reg:CCGC 17 flags)
+                (const_int 0 [0]))
+            (label_ref 53)
+            (pc))) "CHR2INT.f":61 -1
+     (nil)
+ -> 53)
+;;  succ:       7 (FALLTHRU)
+;;              8
+
+;; basic block 7, loop depth 1, maybe hot
+;;  prev block 6, next block 8, flags: (NEW, REACHABLE, RTL)
+;;  pred:       6 (FALLTHRU)
+(note 39 38 43 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 43 39 44 7 (set (reg:SI 107)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])) "CHR2INT.f":62 -1
+     (nil))
+(insn 44 43 45 7 (parallel [
+            (set (reg:SI 106)
+                (plus:SI (reg:SI 107)
+                    (const_int -48 [0xffffffffffffffd0])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":62 -1
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                    (const_int -12 [0xfffffffffffffff4])) [1 icval+0 S4 A32])
+            (const_int -48 [0xffffffffffffffd0]))
+        (nil)))
+(insn 45 44 46 7 (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -20 [0xffffffffffffffec])) [1 intval+0 S4 A32])
+        (reg:SI 106)) "CHR2INT.f":62 -1
+     (nil))
+(insn 46 45 47 7 (set (reg:SI 108)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -16 [0xfffffffffffffff0])) [1 ipower+0 S4 A32])) "CHR2INT.f":63 -1
+     (nil))
+(insn 47 46 48 7 (set (reg:SI 4 si)
+        (reg:SI 108)) "CHR2INT.f":63 -1
+     (nil))
+(insn 48 47 49 7 (set (reg:SI 5 di)
+        (const_int 10 [0xa])) "CHR2INT.f":63 -1
+     (nil))
+(call_insn/u 49 48 50 7 (set (reg:SI 0 ax)
+        (call (mem:QI (symbol_ref:DI ("_gfortran_pow_i4_i4") [flags 0x41]  <function_decl 0x7f3cb52c2100 _gfortran_pow_i4_i4>) [0 _gfortran_pow_i4_i4 S1 A8])
+            (const_int 0 [0]))) "CHR2INT.f":63 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SI (use (reg:SI 5 di))
+        (expr_list:SI (use (reg:SI 4 si))
+            (nil))))
+(insn 50 49 51 7 (set (reg:SI 89 [ _3 ])
+        (reg:SI 0 ax)) "CHR2INT.f":63 -1
+     (nil))
+(insn 51 50 52 7 (parallel [
+            (set (reg:SI 90 [ _4 ])
+                (mult:SI (reg:SI 89 [ _3 ])
+                    (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -20 [0xffffffffffffffec])) [1 intval+0 S4 A32])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":63 -1
+     (nil))
+(insn 52 51 53 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])
+                    (reg:SI 90 [ _4 ])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":63 -1
+     (nil))
+;;  succ:       8 (FALLTHRU)
+
+;; basic block 8, loop depth 1, maybe hot
+;;  prev block 7, next block 9, flags: (NEW, REACHABLE, RTL)
+;;  pred:       5
+;;              6
+;;              7 (FALLTHRU)
+(code_label 53 52 54 8 3 (nil) [2 uses])
+(note 54 53 55 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 55 54 57 8 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                        (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                            (const_int -4 [0xfffffffffffffffc])) [1 ipos+0 S4 A32])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "CHR2INT.f":58 -1
+     (nil))
+(jump_insn 57 55 58 8 (set (pc)
+        (label_ref 56)) "CHR2INT.f":58 -1
+     (nil)
+ -> 56)
+;;  succ:       4 (DFS_BACK)
+
+(barrier 58 57 59)
+;; basic block 9, loop depth 0, maybe hot
+;;  prev block 8, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       4
+(code_label 59 58 60 9 2 (nil) [1 uses])
+(note 60 59 61 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 61 60 62 9 (set (reg/f:DI 109)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -56 [0xffffffffffffffc8])) [3 ival+0 S8 A64])) "CHR2INT.f":69 -1
+     (nil))
+(insn 62 61 63 9 (set (reg:SI 110)
+        (mem/c:SI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -8 [0xfffffffffffffff8])) [1 isum+0 S4 A32])) "CHR2INT.f":69 -1
+     (nil))
+(insn 63 62 68 9 (set (mem:SI (reg/f:DI 109) [1 *ival_22(D)+0 S4 A32])
+        (reg:SI 110)) "CHR2INT.f":69 -1
+     (nil))
+(insn 68 63 0 9 (const_int 0 [0]) "CHR2INT.f":73 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

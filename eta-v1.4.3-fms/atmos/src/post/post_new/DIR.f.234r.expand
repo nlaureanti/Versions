@@ -1,0 +1,1328 @@
+
+;; Function dir (dir_, funcdef_no=0, decl_uid=3768, cgraph_uid=0, symbol_order=0)
+
+dir (real(kind=4) & restrict x, real(kind=4) & restrict y)
+{
+  real(kind=4) __result_dir;
+  real(kind=4) D.3792;
+  real(kind=4) _1;
+  real(kind=4) _2;
+  real(kind=4) _3;
+  real(kind=4) _4;
+  real(kind=4) _5;
+  real(kind=4) _6;
+  real(kind=4) _7;
+  real(kind=4) _8;
+  real(kind=4) _9;
+  real(kind=4) _10;
+  real(kind=4) __result_dir.0_11;
+  real(kind=4) _12;
+  real(kind=4) __result_dir.1_13;
+  real(kind=4) __result_dir.2_14;
+  real(kind=4) _15;
+  real(kind=4) _28;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = *x_20(D);
+  if (_1 == 0.0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+;;    succ:       3
+;;                9
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  _2 = *y_21(D);
+  if (_2 > 0.0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       4
+;;                5
+
+;;   basic block 4, loop depth 0
+;;    pred:       3
+  __result_dir = 9.0e+1;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 5, loop depth 0
+;;    pred:       3
+  _3 = *x_20(D);
+  if (_3 == 0.0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 0
+;;    pred:       5
+  __result_dir = 3.6e+2;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 7, loop depth 0
+;;    pred:       5
+  __result_dir = 2.7e+2;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       4
+;;                6
+;;                7
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 9, loop depth 0
+;;    pred:       2
+  _4 = *y_21(D);
+  _5 = *x_20(D);
+  _6 = _4 / _5;
+  _7 = __builtin_atanf (_6);
+  _8 = _7 * 1.8e+2;
+  _9 = _8 / 3.141590118408203125e+0;
+  __result_dir = _9;
+  _10 = *x_20(D);
+  if (_10 < 0.0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+;;    succ:       10
+;;                11
+
+;;   basic block 10, loop depth 0
+;;    pred:       9
+  __result_dir.0_11 = __result_dir;
+  _12 = __result_dir.0_11 + 1.8e+2;
+  __result_dir = _12;
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       9
+;;                10
+  __result_dir.1_13 = __result_dir;
+  if (__result_dir.1_13 < 0.0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+;;    succ:       12
+;;                13
+
+;;   basic block 12, loop depth 0
+;;    pred:       11
+  __result_dir.2_14 = __result_dir;
+  _15 = __result_dir.2_14 + 3.6e+2;
+  __result_dir = _15;
+;;    succ:       13
+
+;;   basic block 13, loop depth 0
+;;    pred:       8
+;;                11
+;;                12
+  _28 = __result_dir;
+  __result_dir ={v} {CLOBBER};
+;;    succ:       14
+
+;;   basic block 14, loop depth 0
+;;    pred:       13
+<L20>:
+  return _28;
+;;    succ:       EXIT
+
+}
+
+
+
+Partition map 
+
+Partition 1 (_1 - 1 )
+Partition 2 (_2 - 2 )
+Partition 3 (_3 - 3 )
+Partition 4 (_4 - 4 )
+Partition 5 (_5 - 5 )
+Partition 6 (_6 - 6 )
+Partition 7 (_7 - 7 )
+Partition 8 (_8 - 8 )
+Partition 9 (_9 - 9 )
+Partition 10 (_10 - 10 )
+Partition 11 (__result_dir.0_11 - 11 )
+Partition 12 (_12 - 12 )
+Partition 13 (__result_dir.1_13 - 13 )
+Partition 14 (__result_dir.2_14 - 14 )
+Partition 15 (_15 - 15 )
+Partition 20 (x_20(D) - 20 )
+Partition 21 (y_21(D) - 21 )
+Partition 28 (_28 - 28 )
+Partition 30 (_30(D) - 30 )
+
+
+Coalescible Partition map 
+
+Partition 0, base 0 (x_20(D) - 20 )
+Partition 1, base 1 (y_21(D) - 21 )
+Partition 2, base 2 (_30(D) - 30 )
+
+
+Partition map 
+
+Partition 0 (x_20(D) - 20 )
+Partition 1 (y_21(D) - 21 )
+Partition 2 (_30(D) - 30 )
+
+
+Conflict graph:
+
+After sorting:
+Coalesce List:
+
+Partition map 
+
+Partition 0 (x_20(D) - 20 )
+Partition 1 (y_21(D) - 21 )
+Partition 2 (_30(D) - 30 )
+
+After Coalescing:
+
+Partition map 
+
+Partition 0 (_1 - 1 )
+Partition 1 (_2 - 2 )
+Partition 2 (_3 - 3 )
+Partition 3 (_4 - 4 )
+Partition 4 (_5 - 5 )
+Partition 5 (_6 - 6 )
+Partition 6 (_7 - 7 )
+Partition 7 (_8 - 8 )
+Partition 8 (_9 - 9 )
+Partition 9 (_10 - 10 )
+Partition 10 (__result_dir.0_11 - 11 )
+Partition 11 (_12 - 12 )
+Partition 12 (__result_dir.1_13 - 13 )
+Partition 13 (__result_dir.2_14 - 14 )
+Partition 14 (_15 - 15 )
+Partition 15 (x_20(D) - 20 )
+Partition 16 (y_21(D) - 21 )
+Partition 17 (_28 - 28 )
+Partition 18 (_30(D) - 30 )
+
+dir (real(kind=4) & restrict x, real(kind=4) & restrict y)
+{
+  real(kind=4) __result_dir;
+  real(kind=4) D.3792;
+  real(kind=4) _1;
+  real(kind=4) _2;
+  real(kind=4) _3;
+  real(kind=4) _4;
+  real(kind=4) _5;
+  real(kind=4) _6;
+  real(kind=4) _7;
+  real(kind=4) _8;
+  real(kind=4) _9;
+  real(kind=4) _10;
+  real(kind=4) __result_dir.0_11;
+  real(kind=4) _12;
+  real(kind=4) __result_dir.1_13;
+  real(kind=4) __result_dir.2_14;
+  real(kind=4) _15;
+  real(kind=4) _28;
+
+;;   basic block 2, loop depth 0
+;;    pred:       ENTRY
+  _1 = *x_20(D);
+  if (_1 == 0.0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 9>; [INV]
+;;    succ:       3
+;;                9
+
+;;   basic block 3, loop depth 0
+;;    pred:       2
+  _2 = *y_21(D);
+  if (_2 > 0.0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+;;    succ:       4
+;;                5
+
+;;   basic block 4, loop depth 0
+;;    pred:       3
+  __result_dir = 9.0e+1;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 5, loop depth 0
+;;    pred:       3
+  _3 = *x_20(D);
+  if (_3 == 0.0)
+    goto <bb 6>; [INV]
+  else
+    goto <bb 7>; [INV]
+;;    succ:       6
+;;                7
+
+;;   basic block 6, loop depth 0
+;;    pred:       5
+  __result_dir = 3.6e+2;
+  goto <bb 8>; [INV]
+;;    succ:       8
+
+;;   basic block 7, loop depth 0
+;;    pred:       5
+  __result_dir = 2.7e+2;
+;;    succ:       8
+
+;;   basic block 8, loop depth 0
+;;    pred:       4
+;;                6
+;;                7
+  goto <bb 13>; [INV]
+;;    succ:       13
+
+;;   basic block 9, loop depth 0
+;;    pred:       2
+  _4 = *y_21(D);
+  _5 = *x_20(D);
+  _6 = _4 / _5;
+  _7 = __builtin_atanf (_6);
+  _8 = _7 * 1.8e+2;
+  _9 = _8 / 3.141590118408203125e+0;
+  __result_dir = _9;
+  _10 = *x_20(D);
+  if (_10 < 0.0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+;;    succ:       10
+;;                11
+
+;;   basic block 10, loop depth 0
+;;    pred:       9
+  __result_dir.0_11 = __result_dir;
+  _12 = __result_dir.0_11 + 1.8e+2;
+  __result_dir = _12;
+;;    succ:       11
+
+;;   basic block 11, loop depth 0
+;;    pred:       9
+;;                10
+  __result_dir.1_13 = __result_dir;
+  if (__result_dir.1_13 < 0.0)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+;;    succ:       12
+;;                13
+
+;;   basic block 12, loop depth 0
+;;    pred:       11
+  __result_dir.2_14 = __result_dir;
+  _15 = __result_dir.2_14 + 3.6e+2;
+  __result_dir = _15;
+;;    succ:       13
+
+;;   basic block 13, loop depth 0
+;;    pred:       8
+;;                11
+;;                12
+  _28 = __result_dir;
+  __result_dir ={v} {CLOBBER};
+;;    succ:       14
+
+;;   basic block 14, loop depth 0
+;;    pred:       13
+<L20>:
+  return _28;
+;;    succ:       EXIT
+
+}
+
+
+
+;; Generating RTL for gimple basic block 2
+
+;; _1 = *x_20(D);
+
+(insn 7 6 8 (set (reg/f:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":41 -1
+     (nil))
+
+(insn 8 7 0 (set (reg:SF 87 [ _1 ])
+        (mem:SF (reg/f:DI 104) [1 *x_20(D)+0 S4 A32])) "DIR.f":41 -1
+     (nil))
+
+;; if (_1 == 0.0)
+
+(insn 9 8 10 (set (reg:SF 105)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 10 9 11 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 105))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 -1
+     (nil))
+
+(jump_insn 11 10 12 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "DIR.f":41 -1
+     (nil))
+
+(insn 12 11 13 (set (reg:SF 106)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 13 12 14 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 106))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 -1
+     (nil))
+
+(jump_insn 14 13 15 (set (pc)
+        (if_then_else (uneq (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 17)
+            (pc))) "DIR.f":41 -1
+     (nil))
+
+(jump_insn 15 14 16 (set (pc)
+        (label_ref 0)) "DIR.f":41 -1
+     (nil))
+
+(barrier 16 15 17)
+
+(code_label 17 16 0 3 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 3
+
+;; _2 = *y_21(D);
+
+(insn 19 18 20 (set (reg/f:DI 107)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":42 -1
+     (nil))
+
+(insn 20 19 0 (set (reg:SF 88 [ _2 ])
+        (mem:SF (reg/f:DI 107) [1 *y_21(D)+0 S4 A32])) "DIR.f":42 -1
+     (nil))
+
+;; if (_2 > 0.0)
+
+(insn 21 20 22 (set (reg:SF 108)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":42 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 22 21 23 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 88 [ _2 ])
+            (reg:SF 108))) "DIR.f":42 -1
+     (nil))
+
+(jump_insn 23 22 24 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 26)
+            (pc))) "DIR.f":42 -1
+     (nil))
+
+(jump_insn 24 23 25 (set (pc)
+        (label_ref 0)) "DIR.f":42 -1
+     (nil))
+
+(barrier 25 24 26)
+
+(code_label 26 25 0 5 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 4
+
+;; __result_dir = 9.0e+1;
+
+(insn 28 27 29 (set (reg:SF 109)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "DIR.f":43 -1
+     (nil))
+
+(insn 29 28 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 109)) "DIR.f":43 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 5
+
+;; 
+
+(code_label 32 31 33 4 (nil) [0 uses])
+
+(note 33 32 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _3 = *x_20(D);
+
+(insn 34 33 35 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":44 -1
+     (nil))
+
+(insn 35 34 0 (set (reg:SF 89 [ _3 ])
+        (mem:SF (reg/f:DI 110) [1 *x_20(D)+0 S4 A32])) "DIR.f":44 -1
+     (nil))
+
+;; if (_3 == 0.0)
+
+(insn 36 35 37 (set (reg:SF 111)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 37 36 38 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 111))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 -1
+     (nil))
+
+(jump_insn 38 37 39 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 0)
+            (pc))) "DIR.f":44 -1
+     (nil))
+
+(insn 39 38 40 (set (reg:SF 112)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 40 39 41 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 112))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 -1
+     (nil))
+
+(jump_insn 41 40 42 (set (pc)
+        (if_then_else (uneq (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 44)
+            (pc))) "DIR.f":44 -1
+     (nil))
+
+(jump_insn 42 41 43 (set (pc)
+        (label_ref 0)) "DIR.f":44 -1
+     (nil))
+
+(barrier 43 42 44)
+
+(code_label 44 43 0 8 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 6
+
+;; __result_dir = 3.6e+2;
+
+(insn 46 45 47 (set (reg:SF 113)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":45 -1
+     (nil))
+
+(insn 47 46 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 113)) "DIR.f":45 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 7
+
+;; 
+
+(code_label 50 49 51 7 (nil) [0 uses])
+
+(note 51 50 0 NOTE_INSN_BASIC_BLOCK)
+
+;; __result_dir = 2.7e+2;
+
+(insn 52 51 53 (set (reg:SF 114)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "DIR.f":47 -1
+     (nil))
+
+(insn 53 52 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 114)) "DIR.f":47 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 8
+
+;; 
+
+(code_label 54 53 55 6 (nil) [0 uses])
+
+(note 55 54 0 NOTE_INSN_BASIC_BLOCK)
+
+;; Generating RTL for gimple basic block 9
+
+;; 
+
+(code_label 58 57 59 2 (nil) [0 uses])
+
+(note 59 58 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _4 = *y_21(D);
+
+(insn 60 59 61 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":50 -1
+     (nil))
+
+(insn 61 60 0 (set (reg:SF 90 [ _4 ])
+        (mem:SF (reg/f:DI 115) [1 *y_21(D)+0 S4 A32])) "DIR.f":50 -1
+     (nil))
+
+;; _5 = *x_20(D);
+
+(insn 62 61 63 (set (reg/f:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":50 -1
+     (nil))
+
+(insn 63 62 0 (set (reg:SF 91 [ _5 ])
+        (mem:SF (reg/f:DI 116) [1 *x_20(D)+0 S4 A32])) "DIR.f":50 -1
+     (nil))
+
+;; _6 = _4 / _5;
+
+(insn 64 63 0 (set (reg:SF 92 [ _6 ])
+        (div:SF (reg:SF 90 [ _4 ])
+            (reg:SF 91 [ _5 ]))) "DIR.f":50 -1
+     (nil))
+
+;; _7 = __builtin_atanf (_6);
+
+(insn 65 64 66 (set (reg:SF 21 xmm0)
+        (reg:SF 92 [ _6 ])) "DIR.f":50 -1
+     (nil))
+
+(call_insn/u 66 65 67 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("atanf") [flags 0x41]  <function_decl 0x7f4276c49800 __builtin_atanf>) [0 __builtin_atanf S1 A8])
+            (const_int 0 [0]))) "DIR.f":50 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+
+(insn 67 66 0 (set (reg:SF 93 [ _7 ])
+        (reg:SF 21 xmm0)) "DIR.f":50 -1
+     (nil))
+
+;; _8 = _7 * 1.8e+2;
+
+(insn 68 67 69 (set (reg:SF 117)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":50 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+
+(insn 69 68 0 (set (reg:SF 94 [ _8 ])
+        (mult:SF (reg:SF 93 [ _7 ])
+            (reg:SF 117))) "DIR.f":50 -1
+     (nil))
+
+;; _9 = _8 / 3.141590118408203125e+0;
+
+(insn 70 69 71 (set (reg:SF 118)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "DIR.f":50 -1
+     (expr_list:REG_EQUAL (const_double:SF 3.141590118408203125e+0 [0x0.c90fdp+2])
+        (nil)))
+
+(insn 71 70 0 (set (reg:SF 95 [ _9 ])
+        (div:SF (reg:SF 94 [ _8 ])
+            (reg:SF 118))) "DIR.f":50 -1
+     (nil))
+
+;; __result_dir = _9;
+
+(insn 72 71 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 95 [ _9 ])) "DIR.f":50 -1
+     (nil))
+
+;; _10 = *x_20(D);
+
+(insn 73 72 74 (set (reg/f:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":51 -1
+     (nil))
+
+(insn 74 73 0 (set (reg:SF 96 [ _10 ])
+        (mem:SF (reg/f:DI 119) [1 *x_20(D)+0 S4 A32])) "DIR.f":51 -1
+     (nil))
+
+;; if (_10 < 0.0)
+
+(insn 75 74 76 (set (reg:SF 120)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":51 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 76 75 77 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 120)
+            (reg:SF 96 [ _10 ]))) "DIR.f":51 -1
+     (nil))
+
+(jump_insn 77 76 78 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 80)
+            (pc))) "DIR.f":51 -1
+     (nil))
+
+(jump_insn 78 77 79 (set (pc)
+        (label_ref 0)) "DIR.f":51 -1
+     (nil))
+
+(barrier 79 78 80)
+
+(code_label 80 79 0 11 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 10
+
+;; __result_dir.0_11 = __result_dir;
+
+(insn 82 81 0 (set (reg:SF 97 [ __result_dir.0_11 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":52 -1
+     (nil))
+
+;; _12 = __result_dir.0_11 + 1.8e+2;
+
+(insn 83 82 84 (set (reg:SF 121)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":52 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+
+(insn 84 83 0 (set (reg:SF 98 [ _12 ])
+        (plus:SF (reg:SF 97 [ __result_dir.0_11 ])
+            (reg:SF 121))) "DIR.f":52 -1
+     (nil))
+
+;; __result_dir = _12;
+
+(insn 85 84 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 98 [ _12 ])) "DIR.f":52 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 11
+
+;; 
+
+(code_label 86 85 87 10 (nil) [0 uses])
+
+(note 87 86 0 NOTE_INSN_BASIC_BLOCK)
+
+;; __result_dir.1_13 = __result_dir;
+
+(insn 88 87 0 (set (reg:SF 99 [ __result_dir.1_13 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":54 -1
+     (nil))
+
+;; if (__result_dir.1_13 < 0.0)
+
+(insn 89 88 90 (set (reg:SF 122)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":54 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+
+(insn 90 89 91 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 122)
+            (reg:SF 99 [ __result_dir.1_13 ]))) "DIR.f":54 -1
+     (nil))
+
+(jump_insn 91 90 92 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 94)
+            (pc))) "DIR.f":54 -1
+     (nil))
+
+(jump_insn 92 91 93 (set (pc)
+        (label_ref 0)) "DIR.f":54 -1
+     (nil))
+
+(barrier 93 92 94)
+
+(code_label 94 93 0 12 (nil) [0 uses])
+
+;; Generating RTL for gimple basic block 12
+
+;; __result_dir.2_14 = __result_dir;
+
+(insn 96 95 0 (set (reg:SF 100 [ __result_dir.2_14 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":55 -1
+     (nil))
+
+;; _15 = __result_dir.2_14 + 3.6e+2;
+
+(insn 97 96 98 (set (reg:SF 123)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":55 -1
+     (expr_list:REG_EQUAL (const_double:SF 3.6e+2 [0x0.b4p+9])
+        (nil)))
+
+(insn 98 97 0 (set (reg:SF 101 [ _15 ])
+        (plus:SF (reg:SF 100 [ __result_dir.2_14 ])
+            (reg:SF 123))) "DIR.f":55 -1
+     (nil))
+
+;; __result_dir = _15;
+
+(insn 99 98 0 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 101 [ _15 ])) "DIR.f":55 -1
+     (nil))
+
+;; Generating RTL for gimple basic block 13
+
+;; 
+
+(code_label 100 99 101 9 (nil) [0 uses])
+
+(note 101 100 0 NOTE_INSN_BASIC_BLOCK)
+
+;; _28 = __result_dir;
+
+(insn 102 101 0 (set (reg:SF 102 [ _28 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":58 -1
+     (nil))
+
+;; __result_dir ={v} {CLOBBER};
+
+(nil)
+
+;; Generating RTL for gimple basic block 14
+
+;; <L20>:
+
+(code_label 103 102 104 13 (nil) [0 uses])
+
+(note 104 103 0 NOTE_INSN_BASIC_BLOCK)
+
+;; return _28;
+
+(insn 105 104 106 (set (reg:SF 103 [ <retval> ])
+        (reg:SF 102 [ _28 ])) -1
+     (nil))
+
+(jump_insn 106 105 107 (set (pc)
+        (label_ref 0)) -1
+     (nil))
+
+(barrier 107 106 0)
+Purged non-fallthru edges from bb 19
+Purged non-fallthru edges from bb 21
+Purged non-fallthru edges from bb 24
+Purged non-fallthru edges from bb 26
+Purged non-fallthru edges from bb 28
+
+
+try_optimize_cfg iteration 1
+
+Merging block 3 into block 2...
+Merged blocks 2 and 3.
+Merged 2 and 3 without moving.
+Edge 4->6 redirected to 7
+Forwarding edge 4->5 to 18 failed.
+Forwarding edge 4->5 to 18 failed.
+deleting block 6
+Edge 7->9 redirected to 10
+Forwarding edge 7->8 to 11 failed.
+Forwarding edge 7->8 to 11 failed.
+deleting block 9
+Redirecting jump 30 from 17 to 26.
+Edge 12->14 redirected to 15
+Forwarding edge 12->13 to 16 failed.
+Forwarding edge 12->13 to 16 failed.
+deleting block 14
+Redirecting jump 48 from 17 to 26.
+Merging block 17 into block 16...
+Merged blocks 16 and 17.
+Merged 16 and 17 without moving.
+Edge 18->20 redirected to 21
+Forwarding edge 18->19 to 22 failed.
+Forwarding edge 18->19 to 22 failed.
+deleting block 20
+Edge 22->24 redirected to 25
+Forwarding edge 22->23 to 26 failed.
+Forwarding edge 22->23 to 26 failed.
+deleting block 24
+Merging block 27 into block 26...
+Merged blocks 26 and 27.
+Merged 26 and 27 without moving.
+Removing jump 106.
+Merging block 28 into block 26...
+Merged blocks 26 and 28.
+Merged 26 and 28 without moving.
+
+
+try_optimize_cfg iteration 2
+
+Forwarding edge 4->5 to 18 failed.
+Forwarding edge 7->8 to 11 failed.
+Forwarding edge 12->13 to 16 failed.
+Forwarding edge 18->19 to 22 failed.
+Forwarding edge 22->23 to 26 failed.
+fix_loop_structure: fixing up loops for function
+
+
+;;
+;; Full RTL generated for this function:
+;;
+(note 1 0 5 NOTE_INSN_DELETED)
+;; basic block 2, loop depth 0, maybe hot
+;;  prev block 0, next block 4, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       ENTRY (FALLTHRU)
+(note 5 1 2 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn 2 5 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])
+        (reg:DI 5 di [ x ])) "DIR.f":1 -1
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])
+        (reg:DI 4 si [ y ])) "DIR.f":1 -1
+     (nil))
+(note 4 3 7 2 NOTE_INSN_FUNCTION_BEG)
+(insn 7 4 8 2 (set (reg/f:DI 104)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":41 -1
+     (nil))
+(insn 8 7 9 2 (set (reg:SF 87 [ _1 ])
+        (mem:SF (reg/f:DI 104) [1 *x_20(D)+0 S4 A32])) "DIR.f":41 -1
+     (nil))
+(insn 9 8 10 2 (set (reg:SF 105)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 10 9 11 2 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 105))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 -1
+     (nil))
+(jump_insn 11 10 112 2 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 58)
+            (pc))) "DIR.f":41 -1
+     (nil)
+ -> 58)
+;;  succ:       18
+;;              4 (FALLTHRU)
+
+;; basic block 4, loop depth 0, maybe hot
+;;  prev block 2, next block 5, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2 (FALLTHRU)
+(note 112 11 12 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 12 112 13 4 (set (reg:SF 106)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":41 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 13 12 14 4 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 87 [ _1 ])
+                    (reg:SF 106))
+            ] UNSPEC_NOTRAP)) "DIR.f":41 -1
+     (nil))
+(jump_insn 14 13 113 4 (set (pc)
+        (if_then_else (uneq (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 124)
+            (pc))) "DIR.f":41 682 {*jcc}
+     (nil)
+ -> 124)
+;;  succ:       7
+;;              5 (FALLTHRU)
+
+;; basic block 5, loop depth 0, maybe hot
+;;  prev block 4, next block 7, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4 (FALLTHRU)
+(note 113 14 15 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 15 113 16 5 (set (pc)
+        (label_ref 58)) "DIR.f":41 -1
+     (nil)
+ -> 58)
+;;  succ:       18
+
+(barrier 16 15 124)
+;; basic block 7, loop depth 0, maybe hot
+;;  prev block 5, next block 8, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       4
+(code_label 124 16 18 7 14 (nil) [1 uses])
+(note 18 124 19 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 19 18 20 7 (set (reg/f:DI 107)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":42 -1
+     (nil))
+(insn 20 19 21 7 (set (reg:SF 88 [ _2 ])
+        (mem:SF (reg/f:DI 107) [1 *y_21(D)+0 S4 A32])) "DIR.f":42 -1
+     (nil))
+(insn 21 20 22 7 (set (reg:SF 108)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":42 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 22 21 23 7 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 88 [ _2 ])
+            (reg:SF 108))) "DIR.f":42 -1
+     (nil))
+(jump_insn 23 22 115 7 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 125)
+            (pc))) "DIR.f":42 682 {*jcc}
+     (nil)
+ -> 125)
+;;  succ:       10
+;;              8 (FALLTHRU)
+
+;; basic block 8, loop depth 0, maybe hot
+;;  prev block 7, next block 10, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       7 (FALLTHRU)
+(note 115 23 24 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 24 115 25 8 (set (pc)
+        (label_ref 32)) "DIR.f":42 -1
+     (nil)
+ -> 32)
+;;  succ:       11
+
+(barrier 25 24 125)
+;; basic block 10, loop depth 0, maybe hot
+;;  prev block 8, next block 11, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       7
+(code_label 125 25 27 10 15 (nil) [1 uses])
+(note 27 125 28 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 28 27 29 10 (set (reg:SF 109)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A32])) "DIR.f":43 -1
+     (nil))
+(insn 29 28 30 10 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 109)) "DIR.f":43 -1
+     (nil))
+(jump_insn 30 29 31 10 (set (pc)
+        (label_ref:DI 100)) 683 {jump}
+     (nil)
+ -> 100)
+;;  succ:       26 [always] 
+
+(barrier 31 30 32)
+;; basic block 11, loop depth 0, maybe hot
+;;  prev block 10, next block 12, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       8
+(code_label 32 31 33 11 4 (nil) [1 uses])
+(note 33 32 34 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 34 33 35 11 (set (reg/f:DI 110)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":44 -1
+     (nil))
+(insn 35 34 36 11 (set (reg:SF 89 [ _3 ])
+        (mem:SF (reg/f:DI 110) [1 *x_20(D)+0 S4 A32])) "DIR.f":44 -1
+     (nil))
+(insn 36 35 37 11 (set (reg:SF 111)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 37 36 38 11 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 111))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 -1
+     (nil))
+(jump_insn 38 37 117 11 (set (pc)
+        (if_then_else (unordered (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref 50)
+            (pc))) "DIR.f":44 -1
+     (nil)
+ -> 50)
+;;  succ:       16
+;;              12 (FALLTHRU)
+
+;; basic block 12, loop depth 0, maybe hot
+;;  prev block 11, next block 13, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       11 (FALLTHRU)
+(note 117 38 39 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 39 117 40 12 (set (reg:SF 112)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":44 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 40 39 41 12 (set (reg:CCFP 17 flags)
+        (unspec:CCFP [
+                (compare:CCFP (reg:SF 89 [ _3 ])
+                    (reg:SF 112))
+            ] UNSPEC_NOTRAP)) "DIR.f":44 -1
+     (nil))
+(jump_insn 41 40 118 12 (set (pc)
+        (if_then_else (uneq (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 126)
+            (pc))) "DIR.f":44 682 {*jcc}
+     (nil)
+ -> 126)
+;;  succ:       15
+;;              13 (FALLTHRU)
+
+;; basic block 13, loop depth 0, maybe hot
+;;  prev block 12, next block 15, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       12 (FALLTHRU)
+(note 118 41 42 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 42 118 43 13 (set (pc)
+        (label_ref 50)) "DIR.f":44 -1
+     (nil)
+ -> 50)
+;;  succ:       16
+
+(barrier 43 42 126)
+;; basic block 15, loop depth 0, maybe hot
+;;  prev block 13, next block 16, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       12
+(code_label 126 43 45 15 16 (nil) [1 uses])
+(note 45 126 46 15 [bb 15] NOTE_INSN_BASIC_BLOCK)
+(insn 46 45 47 15 (set (reg:SF 113)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":45 -1
+     (nil))
+(insn 47 46 48 15 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 113)) "DIR.f":45 -1
+     (nil))
+(jump_insn 48 47 49 15 (set (pc)
+        (label_ref:DI 100)) 683 {jump}
+     (nil)
+ -> 100)
+;;  succ:       26 [always] 
+
+(barrier 49 48 50)
+;; basic block 16, loop depth 0, maybe hot
+;;  prev block 15, next block 18, flags: (NEW, REACHABLE, RTL)
+;;  pred:       11
+;;              13
+(code_label 50 49 51 16 7 (nil) [2 uses])
+(note 51 50 52 16 [bb 16] NOTE_INSN_BASIC_BLOCK)
+(insn 52 51 53 16 (set (reg:SF 114)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC3") [flags 0x2]) [0  S4 A32])) "DIR.f":47 -1
+     (nil))
+(insn 53 52 56 16 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 114)) "DIR.f":47 -1
+     (nil))
+(jump_insn 56 53 57 16 (set (pc)
+        (label_ref 100)) -1
+     (nil)
+ -> 100)
+;;  succ:       26
+
+(barrier 57 56 58)
+;; basic block 18, loop depth 0, maybe hot
+;;  prev block 16, next block 19, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       2
+;;              5
+(code_label 58 57 59 18 2 (nil) [2 uses])
+(note 59 58 60 18 [bb 18] NOTE_INSN_BASIC_BLOCK)
+(insn 60 59 61 18 (set (reg/f:DI 115)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -32 [0xffffffffffffffe0])) [2 y+0 S8 A64])) "DIR.f":50 -1
+     (nil))
+(insn 61 60 62 18 (set (reg:SF 90 [ _4 ])
+        (mem:SF (reg/f:DI 115) [1 *y_21(D)+0 S4 A32])) "DIR.f":50 -1
+     (nil))
+(insn 62 61 63 18 (set (reg/f:DI 116)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":50 -1
+     (nil))
+(insn 63 62 64 18 (set (reg:SF 91 [ _5 ])
+        (mem:SF (reg/f:DI 116) [1 *x_20(D)+0 S4 A32])) "DIR.f":50 -1
+     (nil))
+(insn 64 63 65 18 (set (reg:SF 92 [ _6 ])
+        (div:SF (reg:SF 90 [ _4 ])
+            (reg:SF 91 [ _5 ]))) "DIR.f":50 -1
+     (nil))
+(insn 65 64 66 18 (set (reg:SF 21 xmm0)
+        (reg:SF 92 [ _6 ])) "DIR.f":50 -1
+     (nil))
+(call_insn/u 66 65 67 18 (set (reg:SF 21 xmm0)
+        (call (mem:QI (symbol_ref:DI ("atanf") [flags 0x41]  <function_decl 0x7f4276c49800 __builtin_atanf>) [0 __builtin_atanf S1 A8])
+            (const_int 0 [0]))) "DIR.f":50 -1
+     (expr_list:REG_EH_REGION (const_int 0 [0])
+        (nil))
+    (expr_list:SF (use (reg:SF 21 xmm0))
+        (nil)))
+(insn 67 66 68 18 (set (reg:SF 93 [ _7 ])
+        (reg:SF 21 xmm0)) "DIR.f":50 -1
+     (nil))
+(insn 68 67 69 18 (set (reg:SF 117)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":50 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+(insn 69 68 70 18 (set (reg:SF 94 [ _8 ])
+        (mult:SF (reg:SF 93 [ _7 ])
+            (reg:SF 117))) "DIR.f":50 -1
+     (nil))
+(insn 70 69 71 18 (set (reg:SF 118)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC5") [flags 0x2]) [0  S4 A32])) "DIR.f":50 -1
+     (expr_list:REG_EQUAL (const_double:SF 3.141590118408203125e+0 [0x0.c90fdp+2])
+        (nil)))
+(insn 71 70 72 18 (set (reg:SF 95 [ _9 ])
+        (div:SF (reg:SF 94 [ _8 ])
+            (reg:SF 118))) "DIR.f":50 -1
+     (nil))
+(insn 72 71 73 18 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 95 [ _9 ])) "DIR.f":50 -1
+     (nil))
+(insn 73 72 74 18 (set (reg/f:DI 119)
+        (mem/f/c:DI (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -24 [0xffffffffffffffe8])) [2 x+0 S8 A64])) "DIR.f":51 -1
+     (nil))
+(insn 74 73 75 18 (set (reg:SF 96 [ _10 ])
+        (mem:SF (reg/f:DI 119) [1 *x_20(D)+0 S4 A32])) "DIR.f":51 -1
+     (nil))
+(insn 75 74 76 18 (set (reg:SF 120)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":51 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 76 75 77 18 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 120)
+            (reg:SF 96 [ _10 ]))) "DIR.f":51 -1
+     (nil))
+(jump_insn 77 76 120 18 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 127)
+            (pc))) "DIR.f":51 682 {*jcc}
+     (nil)
+ -> 127)
+;;  succ:       21
+;;              19 (FALLTHRU)
+
+;; basic block 19, loop depth 0, maybe hot
+;;  prev block 18, next block 21, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       18 (FALLTHRU)
+(note 120 77 78 19 [bb 19] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 78 120 79 19 (set (pc)
+        (label_ref 86)) "DIR.f":51 -1
+     (nil)
+ -> 86)
+;;  succ:       22
+
+(barrier 79 78 127)
+;; basic block 21, loop depth 0, maybe hot
+;;  prev block 19, next block 22, flags: (NEW, REACHABLE, RTL)
+;;  pred:       18
+(code_label 127 79 81 21 17 (nil) [1 uses])
+(note 81 127 82 21 [bb 21] NOTE_INSN_BASIC_BLOCK)
+(insn 82 81 83 21 (set (reg:SF 97 [ __result_dir.0_11 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":52 -1
+     (nil))
+(insn 83 82 84 21 (set (reg:SF 121)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC4") [flags 0x2]) [0  S4 A32])) "DIR.f":52 -1
+     (expr_list:REG_EQUAL (const_double:SF 1.8e+2 [0x0.b4p+8])
+        (nil)))
+(insn 84 83 85 21 (set (reg:SF 98 [ _12 ])
+        (plus:SF (reg:SF 97 [ __result_dir.0_11 ])
+            (reg:SF 121))) "DIR.f":52 -1
+     (nil))
+(insn 85 84 86 21 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 98 [ _12 ])) "DIR.f":52 -1
+     (nil))
+;;  succ:       22 (FALLTHRU)
+
+;; basic block 22, loop depth 0, maybe hot
+;;  prev block 21, next block 23, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       21 (FALLTHRU)
+;;              19
+(code_label 86 85 87 22 10 (nil) [1 uses])
+(note 87 86 88 22 [bb 22] NOTE_INSN_BASIC_BLOCK)
+(insn 88 87 89 22 (set (reg:SF 99 [ __result_dir.1_13 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":54 -1
+     (nil))
+(insn 89 88 90 22 (set (reg:SF 122)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "DIR.f":54 -1
+     (expr_list:REG_EQUAL (const_double:SF 0.0 [0x0.0p+0])
+        (nil)))
+(insn 90 89 91 22 (set (reg:CCFP 17 flags)
+        (compare:CCFP (reg:SF 122)
+            (reg:SF 99 [ __result_dir.1_13 ]))) "DIR.f":54 -1
+     (nil))
+(jump_insn 91 90 122 22 (set (pc)
+        (if_then_else (gt (reg:CCFP 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 128)
+            (pc))) "DIR.f":54 682 {*jcc}
+     (nil)
+ -> 128)
+;;  succ:       25
+;;              23 (FALLTHRU)
+
+;; basic block 23, loop depth 0, maybe hot
+;;  prev block 22, next block 25, flags: (NEW, REACHABLE, RTL, MODIFIED)
+;;  pred:       22 (FALLTHRU)
+(note 122 91 92 23 [bb 23] NOTE_INSN_BASIC_BLOCK)
+(jump_insn 92 122 93 23 (set (pc)
+        (label_ref 100)) "DIR.f":54 -1
+     (nil)
+ -> 100)
+;;  succ:       26
+
+(barrier 93 92 128)
+;; basic block 25, loop depth 0, maybe hot
+;;  prev block 23, next block 26, flags: (NEW, REACHABLE, RTL)
+;;  pred:       22
+(code_label 128 93 95 25 18 (nil) [1 uses])
+(note 95 128 96 25 [bb 25] NOTE_INSN_BASIC_BLOCK)
+(insn 96 95 97 25 (set (reg:SF 100 [ __result_dir.2_14 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":55 -1
+     (nil))
+(insn 97 96 98 25 (set (reg:SF 123)
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "DIR.f":55 -1
+     (expr_list:REG_EQUAL (const_double:SF 3.6e+2 [0x0.b4p+9])
+        (nil)))
+(insn 98 97 99 25 (set (reg:SF 101 [ _15 ])
+        (plus:SF (reg:SF 100 [ __result_dir.2_14 ])
+            (reg:SF 123))) "DIR.f":55 -1
+     (nil))
+(insn 99 98 100 25 (set (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])
+        (reg:SF 101 [ _15 ])) "DIR.f":55 -1
+     (nil))
+;;  succ:       26 (FALLTHRU)
+
+;; basic block 26, loop depth 0, maybe hot
+;;  prev block 25, next block 1, flags: (NEW, REACHABLE, RTL)
+;;  pred:       16
+;;              25 (FALLTHRU)
+;;              23
+;;              10 [always] 
+;;              15 [always] 
+(code_label 100 99 101 26 9 (nil) [4 uses])
+(note 101 100 102 26 [bb 26] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 105 26 (set (reg:SF 102 [ _28 ])
+        (mem/c:SF (plus:DI (reg/f:DI 82 virtual-stack-vars)
+                (const_int -4 [0xfffffffffffffffc])) [1 __result_dir+0 S4 A32])) "DIR.f":58 -1
+     (nil))
+(insn 105 102 109 26 (set (reg:SF 103 [ <retval> ])
+        (reg:SF 102 [ _28 ])) -1
+     (nil))
+(insn 109 105 110 26 (set (reg/i:SF 21 xmm0)
+        (reg:SF 103 [ <retval> ])) "DIR.f":59 -1
+     (nil))
+(insn 110 109 0 26 (use (reg/i:SF 21 xmm0)) "DIR.f":59 -1
+     (nil))
+;;  succ:       EXIT [always]  (FALLTHRU)
+

@@ -1,7 +1,7 @@
 
 .SILENT:
 
-ROOT   = /lustre_xc50/jorge_gomes/unified/branches/jorge.gomes/eta-v1.4.3-desenv/datain/dprep
+ROOT   = /home/nicole/workdir/Versions/eta-v1.4.3-fms/datain/dprep
 SRC    = $(ROOT)/src
 EXEDIR = $(ROOT)/exe
 

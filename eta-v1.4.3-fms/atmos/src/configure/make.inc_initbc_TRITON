@@ -1,0 +1,4 @@
+FC = nvfortran
+CC = /lib/cpp -traditional-cpp
+FFLAGS = -0fast -DLITTLE
+CFLAGS = 

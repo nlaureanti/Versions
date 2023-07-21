@@ -1,0 +1,794 @@
+
+;; Function e2tll (e2tll_, funcdef_no=0, decl_uid=3772, cgraph_uid=0, symbol_order=0)
+
+
+
+e2tll
+
+Dataflow summary:
+;;  invalidated by call 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 8 [st] 9 [st(1)] 10 [st(2)] 11 [st(3)] 12 [st(4)] 13 [st(5)] 14 [st(6)] 15 [st(7)] 17 [flags] 18 [fpsr] 19 [fpcr] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 29 [mm0] 30 [mm1] 31 [mm2] 32 [mm3] 33 [mm4] 34 [mm5] 35 [mm6] 36 [mm7] 37 [r8] 38 [r9] 39 [r10] 40 [r11] 45 [xmm8] 46 [xmm9] 47 [xmm10] 48 [xmm11] 49 [xmm12] 50 [xmm13] 51 [xmm14] 52 [xmm15] 53 [] 54 [] 55 [] 56 [] 57 [] 58 [] 59 [] 60 [] 61 [] 62 [] 63 [] 64 [] 65 [] 66 [] 67 [] 68 [] 69 [] 70 [] 71 [] 72 [] 73 [] 74 [] 75 [] 76 [] 77 [] 78 [] 79 [] 80 []
+;;  hardware regs used 	 7 [sp]
+;;  regular block artificial uses 	 6 [bp] 7 [sp]
+;;  eh block artificial uses 	 6 [bp] 7 [sp] 16 [argp] 20 [frame]
+;;  entry block defs 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 7 [sp] 20 [frame] 21 [xmm0] 22 [xmm1] 23 [xmm2] 24 [xmm3] 25 [xmm4] 26 [xmm5] 27 [xmm6] 28 [xmm7] 37 [r8] 38 [r9]
+;;  exit block uses 	 6 [bp] 7 [sp] 20 [frame]
+;;  regs ever live 	 0 [ax] 1 [dx] 2 [cx] 4 [si] 5 [di] 6 [bp] 17 [flags] 21 [xmm0] 22 [xmm1]
+;;  ref usage 	r0={46d,47u} r1={15d,17u} r2={1d,1u} r4={1d,1u} r5={1d,1u} r6={3d,69u} r7={3d,17u} r17={32d,8u} r20={1d,1u,2e} r21={35d,38u} r22={19d,18u} r23={1d} r24={1d} r25={1d} r26={1d} r27={1d} r28={1d} r37={1d} r38={1d} 
+;;    total ref usage 385{165d,218u,2e} in 162{162 regular + 0 call} insns.
+(note 1 0 7 NOTE_INSN_DELETED)
+(note 7 1 223 2 [bb 2] NOTE_INSN_BASIC_BLOCK)
+(insn/f 223 7 224 2 (set (mem:DI (pre_dec:DI (reg/f:DI 7 sp)) [0  S8 A8])
+        (reg/f:DI 6 bp)) "E2TLL.f":1 61 {*pushdi2_rex64}
+     (nil))
+(insn/f 224 223 225 2 (set (reg/f:DI 6 bp)
+        (reg/f:DI 7 sp)) "E2TLL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 225 224 226 2 (set (mem/v:BLK (scratch:DI) [0  A8])
+        (unspec:BLK [
+                (mem/v:BLK (scratch:DI) [0  A8])
+            ] UNSPEC_MEMORY_BLOCKAGE)) "E2TLL.f":1 711 {*memory_blockage}
+     (nil))
+(note 226 225 2 2 NOTE_INSN_PROLOGUE_END)
+(insn 2 226 3 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 htlat+0 S8 A64])
+        (reg:DI 5 di [ htlat ])) "E2TLL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 3 2 4 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 htlon+0 S8 A64])
+        (reg:DI 4 si [ htlon ])) "E2TLL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 4 3 5 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 vtlat+0 S8 A64])
+        (reg:DI 1 dx [ vtlat ])) "E2TLL.f":1 85 {*movdi_internal}
+     (nil))
+(insn 5 4 6 2 (set (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [3 vtlon+0 S8 A64])
+        (reg:DI 2 cx [ vtlon ])) "E2TLL.f":1 85 {*movdi_internal}
+     (nil))
+(note 6 5 9 2 NOTE_INSN_FUNCTION_BEG)
+(insn 9 6 10 2 (set (reg:SF 22 xmm1 [orig:87 _1 ] [87])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 10 9 11 2 (set (reg:SF 21 xmm0 [144])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC0") [flags 0x2]) [0  S4 A32])) "E2TLL.f":66 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.18e+2 [0x0.ecp+7])
+        (nil)))
+(insn 11 10 12 2 (set (reg:SF 21 xmm0 [orig:88 _2 ] [88])
+        (mult:SF (reg:SF 21 xmm0 [144])
+            (reg:SF 22 xmm1 [orig:87 _1 ] [87]))) "E2TLL.f":66 838 {*fop_sf_comm}
+     (nil))
+(insn 12 11 219 2 (set (reg:SF 22 xmm1 [orig:89 _3 ] [89])
+        (reg:SF 21 xmm0 [orig:88 _2 ] [88])) "E2TLL.f":66 131 {*movsf_internal}
+     (nil))
+(insn 219 12 220 2 (set (reg:V4SF 21 xmm0 [146])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "E2TLL.f":66 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 220 219 15 2 (set (reg:V4SF 21 xmm0 [145])
+        (xor:V4SF (reg:V4SF 21 xmm0 [146])
+            (reg:V4SF 22 xmm1 [orig:89 _3 ] [89]))) "E2TLL.f":66 1820 {*xorv4sf3}
+     (nil))
+(insn 15 220 16 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32])
+        (reg:SF 21 xmm0 [145])) "E2TLL.f":66 131 {*movsf_internal}
+     (nil))
+(insn 16 15 17 2 (set (reg:SF 22 xmm1 [orig:90 _4 ] [90])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 17 16 18 2 (set (reg:SF 21 xmm0 [147])
+        (mem/u/c:SF (symbol_ref/u:DI ("*.LC2") [flags 0x2]) [0  S4 A32])) "E2TLL.f":67 131 {*movsf_internal}
+     (expr_list:REG_EQUAL (const_double:SF 1.24e+2 [0x0.f8p+7])
+        (nil)))
+(insn 18 17 19 2 (set (reg:SF 21 xmm0 [orig:91 _5 ] [91])
+        (mult:SF (reg:SF 21 xmm0 [147])
+            (reg:SF 22 xmm1 [orig:90 _4 ] [90]))) "E2TLL.f":67 838 {*fop_sf_comm}
+     (nil))
+(insn 19 18 221 2 (set (reg:SF 22 xmm1 [orig:92 _6 ] [92])
+        (reg:SF 21 xmm0 [orig:91 _5 ] [91])) "E2TLL.f":67 131 {*movsf_internal}
+     (nil))
+(insn 221 19 222 2 (set (reg:V4SF 21 xmm0 [149])
+        (vec_merge:V4SF (vec_duplicate:V4SF (mem/u/c:SF (symbol_ref/u:DI ("*.LC1") [flags 0x2]) [0  S4 A128]))
+            (const_vector:V4SF [
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                    (const_double:SF 0.0 [0x0.0p+0])
+                ])
+            (const_int 1 [0x1]))) "E2TLL.f":67 2520 {vec_setv4sf_0}
+     (expr_list:REG_EQUAL (const_vector:V4SF [
+                (const_double:SF -0.0 [-0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+                (const_double:SF 0.0 [0x0.0p+0])
+            ])
+        (nil)))
+(insn 222 221 22 2 (set (reg:V4SF 21 xmm0 [148])
+        (xor:V4SF (reg:V4SF 21 xmm0 [149])
+            (reg:V4SF 22 xmm1 [orig:92 _6 ] [92]))) "E2TLL.f":67 1820 {*xorv4sf3}
+     (nil))
+(insn 22 222 23 2 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])
+        (reg:SF 21 xmm0 [148])) "E2TLL.f":67 131 {*movsf_internal}
+     (nil))
+(insn 23 22 95 2 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":72 86 {*movsi_internal}
+     (nil))
+(code_label 95 23 24 3 5 (nil) [1 uses])
+(note 24 95 25 3 [bb 3] NOTE_INSN_BASIC_BLOCK)
+(insn 25 24 26 3 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":72 11 {*cmpsi_1}
+     (nil))
+(insn 26 25 27 3 (set (reg:QI 0 ax [150])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":72 678 {*setcc_qi}
+     (nil))
+(insn 27 26 28 3 (set (reg:SI 0 ax [orig:140 _68 ] [140])
+        (zero_extend:SI (reg:QI 0 ax [150]))) "E2TLL.f":72 140 {*zero_extendqisi2}
+     (nil))
+(insn 28 27 29 3 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:140 _68 ] [140])
+            (const_int 0 [0]))) "E2TLL.f":72 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 29 28 30 3 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 190)
+            (pc))) "E2TLL.f":72 682 {*jcc}
+     (nil)
+ -> 190)
+(note 30 29 31 4 [bb 4] NOTE_INSN_BASIC_BLOCK)
+(insn 31 30 218 4 (set (reg:SI 0 ax [151])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":73 86 {*movsi_internal}
+     (nil))
+(insn 218 31 202 4 (set (reg:SI 1 dx [orig:93 _7 ] [93])
+        (plus:SI (reg:SI 0 ax [151])
+            (const_int 1 [0x1]))) "E2TLL.f":73 217 {*leasi}
+     (nil))
+(insn 202 218 33 4 (set (reg:SI 0 ax [152])
+        (reg:SI 1 dx [orig:93 _7 ] [93])) "E2TLL.f":73 86 {*movsi_internal}
+     (nil))
+(insn 33 202 34 4 (parallel [
+            (set (reg:SI 0 ax [152])
+                (ashiftrt:SI (reg:SI 0 ax [152])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 582 {ashrsi3_cvt}
+     (nil))
+(insn 34 33 35 4 (parallel [
+            (set (reg:SI 0 ax [153])
+                (lshiftrt:SI (reg:SI 0 ax [152])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 587 {*lshrsi3_1}
+     (nil))
+(insn 35 34 36 4 (parallel [
+            (set (reg:SI 1 dx [154])
+                (plus:SI (reg:SI 1 dx [orig:93 _7 ] [93])
+                    (reg:SI 0 ax [153])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 221 {*addsi_1}
+     (nil))
+(insn 36 35 37 4 (parallel [
+            (set (reg:SI 1 dx [155])
+                (and:SI (reg:SI 1 dx [154])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 426 {*andsi_1}
+     (nil))
+(insn 37 36 205 4 (parallel [
+            (set (reg:SI 1 dx [155])
+                (minus:SI (reg:SI 1 dx [155])
+                    (reg:SI 0 ax [153])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":73 277 {*subsi_1}
+     (nil))
+(insn 205 37 39 4 (set (reg:SI 0 ax [156])
+        (reg:SI 1 dx [155])) "E2TLL.f":73 86 {*movsi_internal}
+     (nil))
+(insn 39 205 40 4 (set (reg:SF 22 xmm1 [orig:95 _9 ] [95])
+        (float:SF (reg:SI 0 ax [orig:94 _8 ] [94]))) "E2TLL.f":73 203 {*floatsisf2_mixed}
+     (nil))
+(insn 40 39 41 4 (set (reg:SF 21 xmm0 [orig:96 _10 ] [96])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 41 40 206 4 (set (reg:SF 21 xmm0 [orig:97 _11 ] [97])
+        (mult:SF (reg:SF 21 xmm0 [orig:96 _10 ] [96])
+            (reg:SF 22 xmm1 [orig:95 _9 ] [95]))) "E2TLL.f":73 838 {*fop_sf_comm}
+     (nil))
+(insn 206 41 42 4 (set (reg:SF 22 xmm1 [orig:97 _11 ] [97])
+        (reg:SF 21 xmm0 [orig:97 _11 ] [97])) "E2TLL.f":73 131 {*movsf_internal}
+     (nil))
+(insn 42 206 43 4 (set (reg:SF 22 xmm1 [orig:97 _11 ] [97])
+        (plus:SF (reg:SF 22 xmm1 [orig:97 _11 ] [97])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":73 838 {*fop_sf_comm}
+     (nil))
+(insn 43 42 44 4 (set (reg:SF 21 xmm0 [orig:99 _13 ] [99])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 44 43 45 4 (set (reg:SF 21 xmm0 [orig:100 _14 ] [100])
+        (plus:SF (reg:SF 21 xmm0 [orig:99 _13 ] [99])
+            (reg:SF 21 xmm0 [orig:99 _13 ] [99]))) "E2TLL.f":73 838 {*fop_sf_comm}
+     (nil))
+(insn 45 44 209 4 (set (reg:SF 22 xmm1 [orig:98 _12 ] [98])
+        (minus:SF (reg:SF 22 xmm1 [orig:98 _12 ] [98])
+            (reg:SF 21 xmm0 [orig:100 _14 ] [100]))) "E2TLL.f":73 841 {*fop_sf_1}
+     (nil))
+(insn 209 45 46 4 (set (reg:SF 21 xmm0 [157])
+        (reg:SF 22 xmm1 [orig:98 _12 ] [98])) "E2TLL.f":73 131 {*movsf_internal}
+     (nil))
+(insn 46 209 47 4 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 21 xmm0 [157])) "E2TLL.f":73 131 {*movsf_internal}
+     (nil))
+(insn 47 46 48 4 (set (reg:SI 0 ax [158])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":74 86 {*movsi_internal}
+     (nil))
+(insn 48 47 49 4 (parallel [
+            (set (reg:SI 0 ax [orig:101 _15 ] [101])
+                (plus:SI (reg:SI 0 ax [158])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":74 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 49 48 50 4 (set (reg:SF 22 xmm1 [orig:102 _16 ] [102])
+        (float:SF (reg:SI 0 ax [orig:101 _15 ] [101]))) "E2TLL.f":74 203 {*floatsisf2_mixed}
+     (nil))
+(insn 50 49 51 4 (set (reg:SF 21 xmm0 [orig:103 _17 ] [103])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 51 50 52 4 (set (reg:SF 21 xmm0 [orig:104 _18 ] [104])
+        (mult:SF (reg:SF 21 xmm0 [orig:103 _17 ] [103])
+            (reg:SF 22 xmm1 [orig:102 _16 ] [102]))) "E2TLL.f":74 838 {*fop_sf_comm}
+     (nil))
+(insn 52 51 53 4 (set (reg:SF 22 xmm1 [160])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":74 131 {*movsf_internal}
+     (nil))
+(insn 53 52 54 4 (set (reg:SF 21 xmm0 [159])
+        (plus:SF (reg:SF 21 xmm0 [orig:104 _18 ] [104])
+            (reg:SF 22 xmm1 [160]))) "E2TLL.f":74 838 {*fop_sf_comm}
+     (nil))
+(insn 54 53 55 4 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 21 xmm0 [159])) "E2TLL.f":74 131 {*movsf_internal}
+     (nil))
+(insn 55 54 89 4 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":75 86 {*movsi_internal}
+     (nil))
+(code_label 89 55 56 5 4 (nil) [1 uses])
+(note 56 89 57 5 [bb 5] NOTE_INSN_BASIC_BLOCK)
+(insn 57 56 58 5 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":75 11 {*cmpsi_1}
+     (nil))
+(insn 58 57 59 5 (set (reg:QI 0 ax [161])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":75 678 {*setcc_qi}
+     (nil))
+(insn 59 58 60 5 (set (reg:SI 0 ax [orig:141 _72 ] [141])
+        (zero_extend:SI (reg:QI 0 ax [161]))) "E2TLL.f":75 140 {*zero_extendqisi2}
+     (nil))
+(insn 60 59 61 5 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:141 _72 ] [141])
+            (const_int 0 [0]))) "E2TLL.f":75 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 61 60 62 5 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 193)
+            (pc))) "E2TLL.f":75 682 {*jcc}
+     (nil)
+ -> 193)
+(note 62 61 63 6 [bb 6] NOTE_INSN_BASIC_BLOCK)
+(insn 63 62 64 6 (set (reg:SF 21 xmm0 [orig:105 _19 ] [105])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 64 63 65 6 (set (reg:SF 21 xmm0 [orig:106 _20 ] [106])
+        (plus:SF (reg:SF 21 xmm0 [orig:105 _19 ] [105])
+            (reg:SF 21 xmm0 [orig:105 _19 ] [105]))) "E2TLL.f":76 838 {*fop_sf_comm}
+     (nil))
+(insn 65 64 66 6 (set (reg:SF 22 xmm1 [163])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":76 131 {*movsf_internal}
+     (nil))
+(insn 66 65 67 6 (set (reg:SF 21 xmm0 [162])
+        (plus:SF (reg:SF 21 xmm0 [orig:106 _20 ] [106])
+            (reg:SF 22 xmm1 [163]))) "E2TLL.f":76 838 {*fop_sf_comm}
+     (nil))
+(insn 67 66 68 6 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 21 xmm0 [162])) "E2TLL.f":76 131 {*movsf_internal}
+     (nil))
+(insn 68 67 69 6 (set (reg:SI 0 ax [164])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":77 86 {*movsi_internal}
+     (nil))
+(insn 69 68 70 6 (set (reg:DI 0 ax [orig:107 _21 ] [107])
+        (sign_extend:DI (reg:SI 0 ax [164]))) "E2TLL.f":77 149 {*extendsidi2_rex64}
+     (nil))
+(insn 70 69 71 6 (parallel [
+            (set (reg:DI 1 dx [orig:108 _22 ] [108])
+                (mult:DI (reg:DI 0 ax [orig:107 _21 ] [107])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 349 {*muldi3_1}
+     (nil))
+(insn 71 70 72 6 (set (reg:SI 0 ax [165])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":77 86 {*movsi_internal}
+     (nil))
+(insn 72 71 73 6 (set (reg:DI 0 ax [orig:109 _23 ] [109])
+        (sign_extend:DI (reg:SI 0 ax [165]))) "E2TLL.f":77 149 {*extendsidi2_rex64}
+     (nil))
+(insn 73 72 216 6 (parallel [
+            (set (reg:DI 0 ax [orig:110 _24 ] [110])
+                (plus:DI (reg:DI 0 ax [orig:109 _23 ] [109])
+                    (reg:DI 1 dx [orig:108 _22 ] [108])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":77 222 {*adddi_1}
+     (nil))
+(insn 216 73 75 6 (set (reg:DI 1 dx [orig:111 _25 ] [111])
+        (plus:DI (reg:DI 0 ax [orig:110 _24 ] [110])
+            (const_int -120 [0xffffffffffffff88]))) "E2TLL.f":77 218 {*leadi}
+     (nil))
+(insn 75 216 76 6 (set (reg/f:DI 0 ax [166])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -48 [0xffffffffffffffd0])) [3 htlon+0 S8 A64])) "E2TLL.f":77 85 {*movdi_internal}
+     (nil))
+(insn 76 75 77 6 (set (reg:SF 21 xmm0 [167])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":77 131 {*movsf_internal}
+     (nil))
+(insn 77 76 78 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:111 _25 ] [111])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [166])) [1 *htlon_74(D) S4 A32])
+        (reg:SF 21 xmm0 [167])) "E2TLL.f":77 131 {*movsf_internal}
+     (nil))
+(insn 78 77 79 6 (set (reg:SI 0 ax [168])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":78 86 {*movsi_internal}
+     (nil))
+(insn 79 78 80 6 (set (reg:DI 0 ax [orig:112 _26 ] [112])
+        (sign_extend:DI (reg:SI 0 ax [168]))) "E2TLL.f":78 149 {*extendsidi2_rex64}
+     (nil))
+(insn 80 79 81 6 (parallel [
+            (set (reg:DI 1 dx [orig:113 _27 ] [113])
+                (mult:DI (reg:DI 0 ax [orig:112 _26 ] [112])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 349 {*muldi3_1}
+     (nil))
+(insn 81 80 82 6 (set (reg:SI 0 ax [169])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":78 86 {*movsi_internal}
+     (nil))
+(insn 82 81 83 6 (set (reg:DI 0 ax [orig:114 _28 ] [114])
+        (sign_extend:DI (reg:SI 0 ax [169]))) "E2TLL.f":78 149 {*extendsidi2_rex64}
+     (nil))
+(insn 83 82 217 6 (parallel [
+            (set (reg:DI 0 ax [orig:115 _29 ] [115])
+                (plus:DI (reg:DI 0 ax [orig:114 _28 ] [114])
+                    (reg:DI 1 dx [orig:113 _27 ] [113])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":78 222 {*adddi_1}
+     (nil))
+(insn 217 83 85 6 (set (reg:DI 1 dx [orig:116 _30 ] [116])
+        (plus:DI (reg:DI 0 ax [orig:115 _29 ] [115])
+            (const_int -120 [0xffffffffffffff88]))) "E2TLL.f":78 218 {*leadi}
+     (nil))
+(insn 85 217 86 6 (set (reg/f:DI 0 ax [170])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -40 [0xffffffffffffffd8])) [3 htlat+0 S8 A64])) "E2TLL.f":78 85 {*movdi_internal}
+     (nil))
+(insn 86 85 87 6 (set (reg:SF 21 xmm0 [171])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":78 131 {*movsf_internal}
+     (nil))
+(insn 87 86 88 6 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:116 _30 ] [116])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [170])) [1 *htlat_76(D) S4 A32])
+        (reg:SF 21 xmm0 [171])) "E2TLL.f":78 131 {*movsf_internal}
+     (nil))
+(insn 88 87 181 6 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":75 221 {*addsi_1}
+     (nil))
+(jump_insn 181 88 182 6 (set (pc)
+        (label_ref 89)) "E2TLL.f":75 683 {jump}
+     (nil)
+ -> 89)
+(barrier 182 181 193)
+(code_label 193 182 192 7 12 (nil) [1 uses])
+(note 192 193 194 7 [bb 7] NOTE_INSN_BASIC_BLOCK)
+(insn 194 192 94 7 (const_int 0 [0]) "E2TLL.f":78 718 {nop}
+     (nil))
+(insn 94 194 183 7 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":72 221 {*addsi_1}
+     (nil))
+(jump_insn 183 94 184 7 (set (pc)
+        (label_ref 95)) "E2TLL.f":72 683 {jump}
+     (nil)
+ -> 95)
+(barrier 184 183 190)
+(code_label 190 184 189 8 11 (nil) [1 uses])
+(note 189 190 191 8 [bb 8] NOTE_INSN_BASIC_BLOCK)
+(insn 191 189 100 8 (const_int 0 [0]) "E2TLL.f":75 718 {nop}
+     (nil))
+(insn 100 191 171 8 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":85 86 {*movsi_internal}
+     (nil))
+(code_label 171 100 101 9 9 (nil) [1 uses])
+(note 101 171 102 9 [bb 9] NOTE_INSN_BASIC_BLOCK)
+(insn 102 101 103 9 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int 249 [0xf9]))) "E2TLL.f":85 11 {*cmpsi_1}
+     (nil))
+(insn 103 102 104 9 (set (reg:QI 0 ax [172])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":85 678 {*setcc_qi}
+     (nil))
+(insn 104 103 105 9 (set (reg:SI 0 ax [orig:142 _81 ] [142])
+        (zero_extend:SI (reg:QI 0 ax [172]))) "E2TLL.f":85 140 {*zero_extendqisi2}
+     (nil))
+(insn 105 104 106 9 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:142 _81 ] [142])
+            (const_int 0 [0]))) "E2TLL.f":85 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 106 105 107 9 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 196)
+            (pc))) "E2TLL.f":85 682 {*jcc}
+     (nil)
+ -> 196)
+(note 107 106 108 10 [bb 10] NOTE_INSN_BASIC_BLOCK)
+(insn 108 107 109 10 (set (reg:SI 0 ax [173])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":86 86 {*movsi_internal}
+     (nil))
+(insn 109 108 110 10 (parallel [
+            (set (reg:SI 1 dx [174])
+                (ashiftrt:SI (reg:SI 0 ax [173])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 582 {ashrsi3_cvt}
+     (nil))
+(insn 110 109 111 10 (parallel [
+            (set (reg:SI 1 dx [175])
+                (lshiftrt:SI (reg:SI 1 dx [174])
+                    (const_int 31 [0x1f])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 587 {*lshrsi3_1}
+     (nil))
+(insn 111 110 112 10 (parallel [
+            (set (reg:SI 0 ax [176])
+                (plus:SI (reg:SI 0 ax [173])
+                    (reg:SI 1 dx [175])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 221 {*addsi_1}
+     (nil))
+(insn 112 111 113 10 (parallel [
+            (set (reg:SI 0 ax [177])
+                (and:SI (reg:SI 0 ax [176])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 426 {*andsi_1}
+     (nil))
+(insn 113 112 115 10 (parallel [
+            (set (reg:SI 0 ax [178])
+                (minus:SI (reg:SI 0 ax [177])
+                    (reg:SI 1 dx [175])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":86 277 {*subsi_1}
+     (nil))
+(insn 115 113 116 10 (set (reg:SF 22 xmm1 [orig:118 _32 ] [118])
+        (float:SF (reg:SI 0 ax [orig:117 _31 ] [117]))) "E2TLL.f":86 203 {*floatsisf2_mixed}
+     (nil))
+(insn 116 115 117 10 (set (reg:SF 21 xmm0 [orig:119 _33 ] [119])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 117 116 210 10 (set (reg:SF 21 xmm0 [orig:120 _34 ] [120])
+        (mult:SF (reg:SF 21 xmm0 [orig:119 _33 ] [119])
+            (reg:SF 22 xmm1 [orig:118 _32 ] [118]))) "E2TLL.f":86 838 {*fop_sf_comm}
+     (nil))
+(insn 210 117 118 10 (set (reg:SF 22 xmm1 [orig:120 _34 ] [120])
+        (reg:SF 21 xmm0 [orig:120 _34 ] [120])) "E2TLL.f":86 131 {*movsf_internal}
+     (nil))
+(insn 118 210 119 10 (set (reg:SF 22 xmm1 [orig:120 _34 ] [120])
+        (plus:SF (reg:SF 22 xmm1 [orig:120 _34 ] [120])
+            (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                    (const_int -16 [0xfffffffffffffff0])) [1 wbd+0 S4 A32]))) "E2TLL.f":86 838 {*fop_sf_comm}
+     (nil))
+(insn 119 118 120 10 (set (reg:SF 21 xmm0 [orig:122 _36 ] [122])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 120 119 121 10 (set (reg:SF 21 xmm0 [orig:123 _37 ] [123])
+        (plus:SF (reg:SF 21 xmm0 [orig:122 _36 ] [122])
+            (reg:SF 21 xmm0 [orig:122 _36 ] [122]))) "E2TLL.f":86 838 {*fop_sf_comm}
+     (nil))
+(insn 121 120 213 10 (set (reg:SF 22 xmm1 [orig:121 _35 ] [121])
+        (minus:SF (reg:SF 22 xmm1 [orig:121 _35 ] [121])
+            (reg:SF 21 xmm0 [orig:123 _37 ] [123]))) "E2TLL.f":86 841 {*fop_sf_1}
+     (nil))
+(insn 213 121 122 10 (set (reg:SF 21 xmm0 [179])
+        (reg:SF 22 xmm1 [orig:121 _35 ] [121])) "E2TLL.f":86 131 {*movsf_internal}
+     (nil))
+(insn 122 213 123 10 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 21 xmm0 [179])) "E2TLL.f":86 131 {*movsf_internal}
+     (nil))
+(insn 123 122 124 10 (set (reg:SI 0 ax [180])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":87 86 {*movsi_internal}
+     (nil))
+(insn 124 123 125 10 (parallel [
+            (set (reg:SI 0 ax [orig:124 _38 ] [124])
+                (plus:SI (reg:SI 0 ax [180])
+                    (const_int -1 [0xffffffffffffffff])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":87 221 {*addsi_1}
+     (expr_list:REG_EQUAL (plus:SI (mem/c:SI (plus:DI (reg/f:DI 20 frame)
+                    (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+            (const_int -1 [0xffffffffffffffff]))
+        (nil)))
+(insn 125 124 126 10 (set (reg:SF 22 xmm1 [orig:125 _39 ] [125])
+        (float:SF (reg:SI 0 ax [orig:124 _38 ] [124]))) "E2TLL.f":87 203 {*floatsisf2_mixed}
+     (nil))
+(insn 126 125 127 10 (set (reg:SF 21 xmm0 [orig:126 _40 ] [126])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 8 [0x8]))) [4 egrid.dphi+0 S4 A64])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 127 126 128 10 (set (reg:SF 21 xmm0 [orig:127 _41 ] [127])
+        (mult:SF (reg:SF 21 xmm0 [orig:126 _40 ] [126])
+            (reg:SF 22 xmm1 [orig:125 _39 ] [125]))) "E2TLL.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 128 127 129 10 (set (reg:SF 22 xmm1 [182])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -20 [0xffffffffffffffec])) [1 sbd+0 S4 A32])) "E2TLL.f":87 131 {*movsf_internal}
+     (nil))
+(insn 129 128 130 10 (set (reg:SF 21 xmm0 [181])
+        (plus:SF (reg:SF 21 xmm0 [orig:127 _41 ] [127])
+            (reg:SF 22 xmm1 [182]))) "E2TLL.f":87 838 {*fop_sf_comm}
+     (nil))
+(insn 130 129 131 10 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])
+        (reg:SF 21 xmm0 [181])) "E2TLL.f":87 131 {*movsf_internal}
+     (nil))
+(insn 131 130 165 10 (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+        (const_int 1 [0x1])) "E2TLL.f":88 86 {*movsi_internal}
+     (nil))
+(code_label 165 131 132 11 8 (nil) [1 uses])
+(note 132 165 133 11 [bb 11] NOTE_INSN_BASIC_BLOCK)
+(insn 133 132 134 11 (set (reg:CCGC 17 flags)
+        (compare:CCGC (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                    (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+            (const_int 119 [0x77]))) "E2TLL.f":88 11 {*cmpsi_1}
+     (nil))
+(insn 134 133 135 11 (set (reg:QI 0 ax [183])
+        (gt:QI (reg:CCGC 17 flags)
+            (const_int 0 [0]))) "E2TLL.f":88 678 {*setcc_qi}
+     (nil))
+(insn 135 134 136 11 (set (reg:SI 0 ax [orig:143 _85 ] [143])
+        (zero_extend:SI (reg:QI 0 ax [183]))) "E2TLL.f":88 140 {*zero_extendqisi2}
+     (nil))
+(insn 136 135 137 11 (set (reg:CCZ 17 flags)
+        (compare:CCZ (reg:SI 0 ax [orig:143 _85 ] [143])
+            (const_int 0 [0]))) "E2TLL.f":88 7 {*cmpsi_ccno_1}
+     (nil))
+(jump_insn 137 136 138 11 (set (pc)
+        (if_then_else (ne (reg:CCZ 17 flags)
+                (const_int 0 [0]))
+            (label_ref:DI 199)
+            (pc))) "E2TLL.f":88 682 {*jcc}
+     (nil)
+ -> 199)
+(note 138 137 139 12 [bb 12] NOTE_INSN_BASIC_BLOCK)
+(insn 139 138 140 12 (set (reg:SF 21 xmm0 [orig:128 _42 ] [128])
+        (mem/j/c:SF (const:DI (plus:DI (symbol_ref:DI ("egrid_") [flags 0x2]  <var_decl 0x7f1b50931ab0 egrid>)
+                    (const_int 16 [0x10]))) [4 egrid.dlam+0 S4 A128])) "E2TLL.f":1 131 {*movsf_internal}
+     (nil))
+(insn 140 139 141 12 (set (reg:SF 21 xmm0 [orig:129 _43 ] [129])
+        (plus:SF (reg:SF 21 xmm0 [orig:128 _42 ] [128])
+            (reg:SF 21 xmm0 [orig:128 _42 ] [128]))) "E2TLL.f":89 838 {*fop_sf_comm}
+     (nil))
+(insn 141 140 142 12 (set (reg:SF 22 xmm1 [185])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":89 131 {*movsf_internal}
+     (nil))
+(insn 142 141 143 12 (set (reg:SF 21 xmm0 [184])
+        (plus:SF (reg:SF 21 xmm0 [orig:129 _43 ] [129])
+            (reg:SF 22 xmm1 [185]))) "E2TLL.f":89 838 {*fop_sf_comm}
+     (nil))
+(insn 143 142 144 12 (set (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])
+        (reg:SF 21 xmm0 [184])) "E2TLL.f":89 131 {*movsf_internal}
+     (nil))
+(insn 144 143 145 12 (set (reg:SI 0 ax [186])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":90 86 {*movsi_internal}
+     (nil))
+(insn 145 144 146 12 (set (reg:DI 0 ax [orig:130 _44 ] [130])
+        (sign_extend:DI (reg:SI 0 ax [186]))) "E2TLL.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 146 145 147 12 (parallel [
+            (set (reg:DI 1 dx [orig:131 _45 ] [131])
+                (mult:DI (reg:DI 0 ax [orig:130 _44 ] [130])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 349 {*muldi3_1}
+     (nil))
+(insn 147 146 148 12 (set (reg:SI 0 ax [187])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":90 86 {*movsi_internal}
+     (nil))
+(insn 148 147 149 12 (set (reg:DI 0 ax [orig:132 _46 ] [132])
+        (sign_extend:DI (reg:SI 0 ax [187]))) "E2TLL.f":90 149 {*extendsidi2_rex64}
+     (nil))
+(insn 149 148 214 12 (parallel [
+            (set (reg:DI 0 ax [orig:133 _47 ] [133])
+                (plus:DI (reg:DI 0 ax [orig:132 _46 ] [132])
+                    (reg:DI 1 dx [orig:131 _45 ] [131])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":90 222 {*adddi_1}
+     (nil))
+(insn 214 149 151 12 (set (reg:DI 1 dx [orig:134 _48 ] [134])
+        (plus:DI (reg:DI 0 ax [orig:133 _47 ] [133])
+            (const_int -120 [0xffffffffffffff88]))) "E2TLL.f":90 218 {*leadi}
+     (nil))
+(insn 151 214 152 12 (set (reg/f:DI 0 ax [188])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -64 [0xffffffffffffffc0])) [3 vtlon+0 S8 A64])) "E2TLL.f":90 85 {*movdi_internal}
+     (nil))
+(insn 152 151 153 12 (set (reg:SF 21 xmm0 [189])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -4 [0xfffffffffffffffc])) [1 elon+0 S4 A32])) "E2TLL.f":90 131 {*movsf_internal}
+     (nil))
+(insn 153 152 154 12 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:134 _48 ] [134])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [188])) [1 *vtlon_87(D) S4 A32])
+        (reg:SF 21 xmm0 [189])) "E2TLL.f":90 131 {*movsf_internal}
+     (nil))
+(insn 154 153 155 12 (set (reg:SI 0 ax [190])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])) "E2TLL.f":91 86 {*movsi_internal}
+     (nil))
+(insn 155 154 156 12 (set (reg:DI 0 ax [orig:135 _49 ] [135])
+        (sign_extend:DI (reg:SI 0 ax [190]))) "E2TLL.f":91 149 {*extendsidi2_rex64}
+     (nil))
+(insn 156 155 157 12 (parallel [
+            (set (reg:DI 1 dx [orig:136 _50 ] [136])
+                (mult:DI (reg:DI 0 ax [orig:135 _49 ] [135])
+                    (const_int 119 [0x77])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 349 {*muldi3_1}
+     (nil))
+(insn 157 156 158 12 (set (reg:SI 0 ax [191])
+        (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])) "E2TLL.f":91 86 {*movsi_internal}
+     (nil))
+(insn 158 157 159 12 (set (reg:DI 0 ax [orig:137 _51 ] [137])
+        (sign_extend:DI (reg:SI 0 ax [191]))) "E2TLL.f":91 149 {*extendsidi2_rex64}
+     (nil))
+(insn 159 158 215 12 (parallel [
+            (set (reg:DI 0 ax [orig:138 _52 ] [138])
+                (plus:DI (reg:DI 0 ax [orig:137 _51 ] [137])
+                    (reg:DI 1 dx [orig:136 _50 ] [136])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":91 222 {*adddi_1}
+     (nil))
+(insn 215 159 161 12 (set (reg:DI 1 dx [orig:139 _53 ] [139])
+        (plus:DI (reg:DI 0 ax [orig:138 _52 ] [138])
+            (const_int -120 [0xffffffffffffff88]))) "E2TLL.f":91 218 {*leadi}
+     (nil))
+(insn 161 215 162 12 (set (reg/f:DI 0 ax [192])
+        (mem/f/c:DI (plus:DI (reg/f:DI 6 bp)
+                (const_int -56 [0xffffffffffffffc8])) [3 vtlat+0 S8 A64])) "E2TLL.f":91 85 {*movdi_internal}
+     (nil))
+(insn 162 161 163 12 (set (reg:SF 21 xmm0 [193])
+        (mem/c:SF (plus:DI (reg/f:DI 6 bp)
+                (const_int -24 [0xffffffffffffffe8])) [1 elat+0 S4 A32])) "E2TLL.f":91 131 {*movsf_internal}
+     (nil))
+(insn 163 162 164 12 (set (mem:SF (plus:DI (mult:DI (reg:DI 1 dx [orig:139 _53 ] [139])
+                    (const_int 4 [0x4]))
+                (reg/f:DI 0 ax [192])) [1 *vtlat_89(D) S4 A32])
+        (reg:SF 21 xmm0 [193])) "E2TLL.f":91 131 {*movsf_internal}
+     (nil))
+(insn 164 163 185 12 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -8 [0xfffffffffffffff8])) [2 i+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":88 221 {*addsi_1}
+     (nil))
+(jump_insn 185 164 186 12 (set (pc)
+        (label_ref 165)) "E2TLL.f":88 683 {jump}
+     (nil)
+ -> 165)
+(barrier 186 185 199)
+(code_label 199 186 198 13 14 (nil) [1 uses])
+(note 198 199 200 13 [bb 13] NOTE_INSN_BASIC_BLOCK)
+(insn 200 198 170 13 (const_int 0 [0]) "E2TLL.f":91 718 {nop}
+     (nil))
+(insn 170 200 187 13 (parallel [
+            (set (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                        (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                (plus:SI (mem/c:SI (plus:DI (reg/f:DI 6 bp)
+                            (const_int -12 [0xfffffffffffffff4])) [2 j+0 S4 A32])
+                    (const_int 1 [0x1])))
+            (clobber (reg:CC 17 flags))
+        ]) "E2TLL.f":85 221 {*addsi_1}
+     (nil))
+(jump_insn 187 170 188 13 (set (pc)
+        (label_ref 171)) "E2TLL.f":85 683 {jump}
+     (nil)
+ -> 171)
+(barrier 188 187 196)
+(code_label 196 188 195 14 13 (nil) [1 uses])
+(note 195 196 197 14 [bb 14] NOTE_INSN_BASIC_BLOCK)
+(insn 197 195 180 14 (const_int 0 [0]) "E2TLL.f":88 718 {nop}
+     (nil))
+(insn 180 197 227 14 (const_int 0 [0]) "E2TLL.f":97 718 {nop}
+     (nil))
+(note 227 180 228 14 NOTE_INSN_EPILOGUE_BEG)
+(insn 228 227 229 14 (set (mem/v:BLK (scratch:DI) [0  A8])
+        (unspec:BLK [
+                (mem/v:BLK (scratch:DI) [0  A8])
+            ] UNSPEC_MEMORY_BLOCKAGE)) "E2TLL.f":98 711 {*memory_blockage}
+     (nil))
+(insn/f 229 228 230 14 (set (reg/f:DI 6 bp)
+        (mem:DI (post_inc:DI (reg/f:DI 7 sp)) [0  S8 A8])) "E2TLL.f":98 71 {*popdi1}
+     (expr_list:REG_CFA_DEF_CFA (plus:DI (reg/f:DI 7 sp)
+            (const_int 8 [0x8]))
+        (nil)))
+(jump_insn 230 229 231 14 (simple_return) "E2TLL.f":98 713 {simple_return_internal}
+     (nil)
+ -> simple_return)
+(barrier 231 230 201)
+(note 201 231 0 NOTE_INSN_DELETED)

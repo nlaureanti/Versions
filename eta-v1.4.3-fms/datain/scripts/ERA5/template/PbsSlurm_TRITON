@@ -1,0 +1,12 @@
+cat <<EOF> ${Dir_scr}/Submit_deco.list
+#!/bin/bash -x
+#SBATCH -n 1
+#SBATCH --time=30:50:00
+#SBATCH -p triton16
+#SBATCH -V
+#SBATCH -J ERA52Eta
+#SBATCH --output=ERA5_ETAwrk.out
+######################
+
+EOF
+
